@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Publisher>
+   <PublisherInfo>
+      <PublisherName>Springer Berlin Heidelberg</PublisherName>
+      <PublisherLocation>Berlin/Heidelberg</PublisherLocation>
+      <PublisherImprintName>Springer</PublisherImprintName>
+   </PublisherInfo>
+   <Journal OutputMedium="Online">
+      <JournalInfo JournalProductType="ArchiveJournal" NumberingStyle="Unnumbered" OutputMedium="Online">
+         <JournalID>13130</JournalID>
+         <JournalDOI>10.1007/13130.1029-8479</JournalDOI>
+         <JournalElectronicISSN>1029-8479</JournalElectronicISSN>
+         <JournalSPIN>32745009</JournalSPIN>
+         <JournalTitle>Journal of High Energy Physics</JournalTitle>
+         <JournalAbbreviatedTitle>J. High Energ. Phys.</JournalAbbreviatedTitle>
+         <JournalSubjectGroup>
+            <JournalSubject Code="SCP" Type="Primary">Physics</JournalSubject>
+            <JournalSubject Code="SCP23029" Priority="1" Type="Secondary">Elementary Particles, Quantum Field Theory</JournalSubject>
+            <JournalSubject Code="SCP19048" Priority="2" Type="Secondary">Quantum Field Theories, String Theory</JournalSubject>
+            <JournalSubject Code="SCP19070" Priority="3" Type="Secondary">Classical and Quantum Gravitation, Relativity Theory</JournalSubject>
+            <JournalSubject Code="SCP19080" Priority="4" Type="Secondary">Quantum Physics</JournalSubject>
+            <SubjectCollection Code="SC12">Physics and Astronomy</SubjectCollection>
+         </JournalSubjectGroup>
+      </JournalInfo>
+      <Volume OutputMedium="Online">
+         <VolumeInfo OutputMedium="Online" TocLevels="0" VolumeType="Regular">
+            <VolumeIDStart>2019</VolumeIDStart>
+            <VolumeIDEnd>2019</VolumeIDEnd>
+            <VolumeIssueCount>12</VolumeIssueCount>
+         </VolumeInfo>
+         <Issue IssueType="Regular" OutputMedium="Online">
+            <IssueInfo IssueType="Regular" OutputMedium="Online" TocLevels="0">
+               <IssueIDStart>10</IssueIDStart>
+               <IssueIDEnd>10</IssueIDEnd>
+               <IssueArticleCount>248</IssueArticleCount>
+               <IssueHistory>
+                  <OnlineDate>
+                     <Year>2020</Year>
+                     <Month>1</Month>
+                     <Day>24</Day>
+                  </OnlineDate>
+                  <CoverDate>
+                     <Year>2019</Year>
+                     <Month>10</Month>
+                  </CoverDate>
+                  <PricelistYear>2019</PricelistYear>
+               </IssueHistory>
+               <IssueCopyright>
+                  <CopyrightHolderName>The Author(s)</CopyrightHolderName>
+                  <CopyrightYear>2019</CopyrightYear>
+               </IssueCopyright>
+            </IssueInfo>
+            <Article ID="JHEP10(2019)044">
+               <ArticleInfo ArticleType="OriginalPaper" ContainsESM="No" Language="En" NumberingStyle="ContentOnly" OutputMedium="Online" TocLevels="0">
+                  <ArticleID>11348</ArticleID>
+                  <ArticleExternalID Type="arXiv">1905.00045</ArticleExternalID>
+                  <ArticleDOI>10.1007/JHEP10(2019)044</ArticleDOI>
+                  <ArticleCitationID>44</ArticleCitationID>
+                  <ArticleSequenceNumber>44</ArticleSequenceNumber>
+                  <ArticleTitle Language="En">Dark energy without fine tuning</ArticleTitle>
+                  <ArticleCategory>Regular Article - Theoretical Physics</ArticleCategory>
+                  <ArticleFirstPage>1</ArticleFirstPage>
+                  <ArticleLastPage>14</ArticleLastPage>
+                  <ArticleHistory>
+                     <RegistrationDate>
+                        <Year>2019</Year>
+                        <Month>10</Month>
+                        <Day>4</Day>
+                     </RegistrationDate>
+                     <Received>
+                        <Year>2019</Year>
+                        <Month>7</Month>
+                        <Day>24</Day>
+                     </Received>
+                     <Revised>
+                        <Year>2019</Year>
+                        <Month>8</Month>
+                        <Day>30</Day>
+                     </Revised>
+                     <Accepted>
+                        <Year>2019</Year>
+                        <Month>9</Month>
+                        <Day>16</Day>
+                     </Accepted>
+                     <OnlineDate>
+                        <Year>2019</Year>
+                        <Month>10</Month>
+                        <Day>4</Day>
+                     </OnlineDate>
+                  </ArticleHistory>
+                  <ArticleCopyright>
+                     <CopyrightHolderName>The Author(s)</CopyrightHolderName>
+                     <CopyrightYear>2019</CopyrightYear>
+                  </ArticleCopyright>
+                  <ArticleGrants Type="OpenChoice">
+                     <MetadataGrant Grant="OpenAccess"/>
+                     <AbstractGrant Grant="OpenAccess"/>
+                     <BodyPDFGrant Grant="OpenAccess"/>
+                     <BodyHTMLGrant Grant="OpenAccess"/>
+                     <BibliographyGrant Grant="OpenAccess"/>
+                     <ESMGrant Grant="OpenAccess"/>
+                  </ArticleGrants>
+                  <ArticleContext>
+                     <JournalID>13130</JournalID>
+                     <VolumeIDStart>2019</VolumeIDStart>
+                     <VolumeIDEnd>2019</VolumeIDEnd>
+                     <IssueIDStart>10</IssueIDStart>
+                     <IssueIDEnd>10</IssueIDEnd>
+                  </ArticleContext>
+               </ArticleInfo>
+               <ArticleHeader>
+                  <AuthorGroup>
+                     <Author AffiliationIDS="Aff1" ID="Au1">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>José</GivenName>
+                           <GivenName>Eliel</GivenName>
+                           <FamilyName>Camargo-Molina</FamilyName>
+                        </AuthorName>
+                        <Contact>
+                           <Email>j.camargo-molina@imperial.ac.uk</Email>
+                        </Contact>
+                     </Author>
+                     <Author AffiliationIDS="Aff1 Aff2" CorrespondingAffiliationID="Aff1" ID="Au2" ORCID="http://orcid.org/0000-0002-1157-5091">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Tommi</GivenName>
+                           <FamilyName>Markkanen</FamilyName>
+                        </AuthorName>
+                        <Contact>
+                           <Email>tommi.markkanen@kbfi.ee</Email>
+                        </Contact>
+                     </Author>
+                     <Author AffiliationIDS="Aff1" ID="Au3">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Pat</GivenName>
+                           <FamilyName>Scott</FamilyName>
+                        </AuthorName>
+                        <Contact>
+                           <Email>p.scott@imperial.ac.uk</Email>
+                        </Contact>
+                     </Author>
+                     <Affiliation ID="Aff1">
+                        <OrgID Level="Institution" Type="GRID">grid.7445.2</OrgID>
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2113 8111</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Imperial College London, Blackett Laboratory</OrgName>
+                        <OrgAddress>
+                           <City>London</City>
+                           <Postcode>SW7 2AZ</Postcode>
+                           <Country Code="GB">U.K.</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff2">
+                        <OrgID Level="Institution" Type="GRID">grid.177284.f</OrgID>
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 0410 6208</OrgID>
+                        <OrgName>National Institute of Chemical Physics and Biophysics</OrgName>
+                        <OrgAddress>
+                           <Street>Rävala 10</Street>
+                           <Postcode>10143</Postcode>
+                           <City>Tallinn</City>
+                           <Country Code="EE">Estonia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                  </AuthorGroup>
+                  <Abstract ID="Abs1" Language="En" OutputMedium="All">
+                     <Heading>A<Emphasis Type="SmallCaps">bstract</Emphasis>
+                     </Heading>
+                     <Para ID="Par1">We present a two-field model that realises inflation and the observed density of dark energy today, whilst solving the fine-tuning problems inherent in quintessence models. One field acts as the inflaton, generically driving the other to a saddle-point of the potential, from which it acts as a quintessence field following electroweak symmetry breaking. The model exhibits essentially no sensitivity to the initial value of the quintessence field, naturally suppresses its interactions with other fields, and automatically endows it with a small effective mass in the late Universe. The magnitude of dark energy today is fixed by the height of the saddle point in the potential, which is dictated entirely by the scale of electroweak symmetry breaking.</Para>
+                  </Abstract>
+                  <KeywordGroup Language="En" OutputMedium="All" Source="Author">
+                     <Heading>K<Emphasis Type="SmallCaps">eywords</Emphasis>
+                     </Heading>
+                     <Keyword>Classical Theories of Gravity</Keyword>
+                     <Keyword>Cosmology of Theories beyond the SM</Keyword>
+                  </KeywordGroup>
+                  <ArticleNote Type="Misc">
+                     <SimplePara>A<Emphasis Type="SmallCaps">r</Emphasis>X<Emphasis Type="SmallCaps">iv e</Emphasis>P<Emphasis Type="SmallCaps">rint</Emphasis>: <ExternalRef>
+                           <RefSource>1905.00045</RefSource>
+                           <RefTarget Address="https://arxiv.org/abs/1905.00045" TargetType="URL"/>
+                        </ExternalRef>
+                     </SimplePara>
+                  </ArticleNote>
+               </ArticleHeader>
+               <NoBody/><BodyRef TargetType="sissa.ft.xml" FileRef="http://stheno.sissa.it/scoap/JHEP102019044.ft.xml"/>
+            </Article>
+         </Issue>
+      </Volume>
+   </Journal>
+</Publisher>

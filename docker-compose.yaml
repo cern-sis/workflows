@@ -75,6 +75,10 @@ services:
       POSTGRES_DB: airflow
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
+    expose:
+      - 5432
+    ports:
+      - 5432:5432
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "airflow"]
       interval: 5s
@@ -85,11 +89,24 @@ services:
     image: docker.io/library/redis:latest
     expose:
       - 6379
+    ports:
+      - 6379:6379
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 5s
       timeout: 30s
       retries: 50
+    restart: always
+  
+  sftp:
+    image: atmoz/sftp
+    expose: 
+      - 22
+    ports:
+      - 22:2222
+    volumes:
+      - ./data:/home/airflow/upload
+    command: airflow:airflow:::upload
     restart: always
 
   airflow-webserver:
