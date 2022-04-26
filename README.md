@@ -1,6 +1,10 @@
 [![codecov](https://codecov.io/gh/cern-sis/workflows/branch/main/graph/badge.svg?token=00LZLXO5OD)](https://codecov.io/gh/cern-sis/workflows)
 
-# workflows
+# Workflows
+
+The following image describes the process for each publishers. Please note that the number of tasks is the minimum, more tasks can be implemented if the need raises.
+
+![DAG Architecture](./airflow_workflows.png)
 
 ## Run with docker-compose
 
