@@ -42,10 +42,12 @@ def test_migrate_from_ftp(
     )
 
 
+@patch("common.pull_ftp.trigger_dag.trigger_dag")
+@patch.object(IRepository, attribute="find_by_id", return_value=io.BytesIO())
 @patch.object(
     IRepository, attribute="find_all", return_value=REPO_FIND_ALL_RETURN_VALUE
 )
 def test_trigger_file_processing(*args):
     repo = IRepository()
-    files = trigger_file_processing(repo)
+    files = trigger_file_processing("test", repo)
     assert files == REPO_FIND_ALL_RETURN_VALUE

@@ -37,10 +37,10 @@ compose:
 
 stop:
 	docker-compose down
-	cat $(WEBSERVER_PID) | xargs kill
-	cat $(TRIGGERER_PID) | xargs kill
-	cat $(SCHEDULER_PID) | xargs kill
-	cat $(WORKER_PID) | xargs kill
-	cat $(FLOWER_PID) | xargs kill
+	cat $(WEBSERVER_PID) | xargs kill  -9
+	cat $(TRIGGERER_PID) | xargs kill -9
+	cat $(SCHEDULER_PID) | xargs kill -9
+	cat $(WORKER_PID) | xargs kill -9
+	cat $(FLOWER_PID) | xargs kill -9
 	rm *.out *.err *.log
 	echo -e "\033[0;32m Airflow Stoped. \033[0m"

@@ -18,7 +18,7 @@ def springer_pull_ftp():
 
     @task()
     def trigger_file_processing(repo: IRepository = SpringerRepository()):
-        return pull_ftp.trigger_file_processing(repo)
+        return pull_ftp.trigger_file_processing("springer", repo)
 
     migrate_from_ftp() >> trigger_file_processing()
 
