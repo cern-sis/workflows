@@ -1,4 +1,4 @@
-import io
+from io import BytesIO
 from unittest.mock import MagicMock, patch
 
 import pytest
@@ -56,7 +56,7 @@ def test_find_all_extracted_files(boto3_fixture):
 
 def test_save_zip_file(boto3_fixture: MagicMock):
     upload_mock = boto3_fixture.resource.return_value.Bucket.return_value.upload_fileobj
-    file = io.BytesIO()
+    file = BytesIO()
     filename = "test.zip"
     repo = SpringerRepository()
     repo.save(filename, file)
@@ -65,7 +65,7 @@ def test_save_zip_file(boto3_fixture: MagicMock):
 
 def test_save_file(boto3_fixture: MagicMock):
     upload_mock = boto3_fixture.resource.return_value.Bucket.return_value.upload_fileobj
-    file = io.BytesIO()
+    file = BytesIO()
     filename = "test.pdf"
     repo = SpringerRepository()
     repo.save(filename, file)

@@ -43,4 +43,6 @@ stop:
 	cat $(WORKER_PID) | xargs kill -9
 	cat $(FLOWER_PID) | xargs kill -9
 	rm *.out *.err *.log
+	kill -9 $(lsof -ti:8080)
+	rm *.out *.err
 	echo -e "\033[0;32m Airflow Stoped. \033[0m"

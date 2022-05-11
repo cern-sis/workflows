@@ -1,5 +1,5 @@
-import io
 import os
+from io import BytesIO
 from typing import IO
 
 from common.repository import IRepository
@@ -29,7 +29,7 @@ class SpringerRepository(IRepository):
         return list(ret_dict.values())
 
     def find_by_id(self, id: str):
-        retfile = io.BytesIO()
+        retfile = BytesIO()
         self.s3.download_fileobj(id, retfile)
         return retfile
 

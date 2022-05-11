@@ -1,3 +1,6 @@
 pytest==7.1.0
 coverage==6.3.2
 pytest-cov
+pytest-vcr==1.0.2
+pytest-datadir==1.3.1
+freezegun==1.2.1

@@ -131,6 +131,7 @@ services:
       sleep 10;
       /usr/bin/mc alias set airflow http://s3:9000 airflow Airflow01;
       /usr/bin/mc mb airflow/springer;
+      /usr/bin/mc mb airflow/aps;
       exit 0;
       "
 

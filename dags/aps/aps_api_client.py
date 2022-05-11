@@ -1,0 +1,55 @@
+from os import getenv
+
+from common.request import Request
+
+
+class APSApiClient:
+    def __init__(
+        self,
+        base_url=None,
+        path_segments=None,
+    ):
+        self.base_url = base_url or getenv("APS_BASE_URL", "http://harvest.aps.org")
+        self.path_segments = path_segments or ["v2", "journals", "articles"]
+
+    def get_articles_metadata(self, parameters, doi=None):
+        all_path_segments = self.path_segments
+        if doi is not None:
+            all_path_segments = self.path_segments + [doi]
+        request = Request(
+            base_url=self.base_url,
+            path_segments=all_path_segments,
+            parameters=parameters,
+        )
+        response_content = request.get_response_json()
+        if len(response_content["data"]) > 0:
+            return response_content
+
+    def get_pdf_file(self, doi, parameters):
+        all_path_segments = self.path_segments + [doi]
+        headers = {"Accept": "application/pdf"}
+        request = Request(
+            base_url=self.base_url,
+            path_segments=all_path_segments,
+            parameters=parameters,
+            headers=headers,
+        )
+        response_content = request.get_response_bytes()
+        return response_content
+
+    def get_xml_file(self, doi, parameters):
+        all_path_segments = self.path_segments + [doi]
+        headers = {"Accept": "text/xml"}
+        request = Request(
+            base_url=self.base_url,
+            path_segments=all_path_segments,
+            parameters=parameters,
+            headers=headers,
+        )
+        response_content = request.get_response_bytes()
+        return response_content
+
+    def __repr__(self) -> str:
+        return f"<APSApiClient base_url={self.base_url}, \
+                    path_segments={self.path_segments}, \
+                    parameters={self.parameters}>"

@@ -12,6 +12,8 @@ def migrate_from_ftp(sftp: SFTPService, repo: IRepository):
     filenames = sftp.list_files()
     for file in filenames:
         file_bytes = sftp.get_file(file)
+        if not zipfile.is_zipfile(file_bytes):
+            continue
         with zipfile.ZipFile(file_bytes) as zip:
             for zip_filename in zip.namelist():
                 file_prefix = file.split(".")[0]

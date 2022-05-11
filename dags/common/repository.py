@@ -8,6 +8,9 @@ class IRepository:
     def find_by_id(self, id: str):
         raise NotImplementedError
 
+    def find_the_last_uploaded_file_date(self):
+        raise NotImplementedError
+
     def save(self, filename: str, obj: IO):
         raise NotImplementedError
 

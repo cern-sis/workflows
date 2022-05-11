@@ -1,6 +1,6 @@
-import io
 import os
 import pathlib
+from io import open
 
 import pytest
 from common.sftp_service import SFTPService
@@ -20,5 +20,5 @@ def test_get_file(client_fixture: SFTPService):
     data_path = pathlib.Path().resolve().__str__() + "/data"
     data_files = os.listdir(data_path)
     filename = data_files[0]
-    with io.open(data_path + "/" + data_files[0], "rb") as file:
+    with open(data_path + "/" + data_files[0], "rb") as file:
         assert file.read() == client_fixture.get_file(filename).read()

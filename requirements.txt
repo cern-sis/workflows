@@ -9,3 +9,4 @@ mypy_boto3_s3==1.21.34
 pysftp==0.2.9
 pytest==7.1.0
 PyYAML==6.0
+furl==2.1.3

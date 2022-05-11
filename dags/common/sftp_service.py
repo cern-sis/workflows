@@ -1,16 +1,10 @@
-import io
+from io import BytesIO
 from typing import List
 
 import pysftp
 
 
 class SFTPService:
-    host: str
-    username: str
-    password: str
-    port: int
-    dir: str
-
     def __init__(
         self,
         host: str = "localhost",
@@ -29,10 +23,10 @@ class SFTPService:
         with self.__connect() as sftp:
             return sftp.listdir()
 
-    def get_file(self, file) -> io.BytesIO:
+    def get_file(self, file) -> BytesIO:
         with self.__connect() as sftp:
             with sftp.open(file, "rb") as fl:
-                return io.BytesIO(fl.read())
+                return BytesIO(fl.read())
 
     def __connect(self) -> pysftp.Connection:
         cnopts = pysftp.CnOpts()

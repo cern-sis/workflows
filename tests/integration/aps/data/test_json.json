@@ -1,0 +1,141 @@
+{
+  "data": [
+    {
+      "abstract": {
+        "value": "<p>We propose and theoretically analyze the use of coherent population trapping of a single diamond nitrogen-vacancy (NV) center for continuous real-time sensing. The formation of the dark state in coherent population trapping prevents optical emissions from the NV center. Fluctuating magnetic fields, however, can kick the NV center out of the dark state, leading to a sequence of single-photon emissions. A time series of the photon counts detected can be used for magnetic field estimations, even when the average photon count per update time interval is much smaller than 1. For a theoretical demonstration, the nuclear spin bath in a diamond lattice is used as a model fluctuating magnetic environment. For fluctuations with known statistical properties, such as an Ornstein-Uhlenbeck process, Bayesian inference-based estimators can lead to an estimation variance that approaches the classical Cramer-Rao lower bound and can update dynamical information in real time with the detection of just a single photon. Real-time sensing using coherent population trapping adds a powerful tool to the emerging technology of quantum sensing.</p>",
+        "format": "html"
+      },
+      "articleType": "article",
+      "authors": [
+        {
+          "type": "Person",
+          "name": "Shu-Hao Wu",
+          "firstname": "Shu-Hao",
+          "surname": "Wu",
+          "affiliationIds": ["a1"]
+        },
+        {
+          "type": "Person",
+          "name": "Ethan Turner",
+          "firstname": "Ethan",
+          "surname": "Turner",
+          "affiliationIds": ["a1"]
+        },
+        {
+          "type": "Person",
+          "name": "Hailin Wang",
+          "firstname": "Hailin",
+          "surname": "Wang",
+          "affiliationIds": ["a1"]
+        }
+      ],
+      "affiliations": [
+        {
+          "name": "Department of Physics, University of Oregon, Eugene, Oregon 97403, USA",
+          "id": "a1"
+        }
+      ],
+      "date": "2021-04-12",
+      "fundings": [
+        {
+          "funderId": "http://dx.doi.org/10.13039/100000183",
+          "funderName": "Army Research Office",
+          "awards": ["W911NF-18-1-0218"]
+        }
+      ],
+      "type": "article",
+      "metadata_last_modified_at": "2021-04-12T14:02:31+0000",
+      "last_modified_at": "2021-04-12T14:02:31+0000",
+      "id": "10.1103/PhysRevA.103.042607",
+      "identifiers": {
+        "doi": "10.1103/PhysRevA.103.042607",
+        "arxiv": "arXiv:2102.07212"
+      },
+      "issue": {
+        "number": "4"
+      },
+      "pageStart": "042607",
+      "hasArticleId": true,
+      "numPages": 10,
+      "classificationSchemes": {
+        "physh": {
+          "concepts": [
+            {
+              "id": "65920eff-f184-41cd-9ec0-b33bb0679565",
+              "facet": {
+                "id": "f45b3c40-959c-4e90-ba0e-38232980802a"
+              },
+              "primary": false
+            },
+            {
+              "id": "2c0e953d-44fd-4611-bfb0-3e39cfb9374a",
+              "facet": {
+                "id": "bdb1ef91-b776-4e36-8f8f-3e93666bac1e"
+              },
+              "primary": false
+            },
+            {
+              "id": "1fa8daba-8a48-4d9f-ada9-03a9d3259ca3",
+              "facet": {
+                "id": "bdb1ef91-b776-4e36-8f8f-3e93666bac1e"
+              },
+              "primary": false
+            },
+            {
+              "id": "9b6aaf50-04bd-4aaa-b4c3-d6fa9b7f7303",
+              "facet": {
+                "id": "bdb1ef91-b776-4e36-8f8f-3e93666bac1e"
+              },
+              "primary": true
+            },
+            {
+              "id": "632f74d1-d16b-4b92-a295-b24729a93d8d",
+              "facet": {
+                "id": "bdb1ef91-b776-4e36-8f8f-3e93666bac1e"
+              },
+              "primary": false
+            }
+          ],
+          "disciplines": [
+            "510fc218-8774-4547-ab09-fc6cef0c9a03",
+            "8ab3d2b7-b50b-460e-b086-8990cfcbd350",
+            "a48f173e-6459-4642-a711-a6e731807625"
+          ]
+        }
+      },
+      "publisher": {
+        "name": "APS"
+      },
+      "rights": {
+        "rightsStatement": "©2021 American Physical Society",
+        "copyrightYear": 2021,
+        "copyrightHolders": [
+          {
+            "name": "American Physical Society"
+          }
+        ],
+        "creativeCommons": false,
+        "licenses": [
+          {
+            "url": "http://link.aps.org/licenses/aps-default-license"
+          }
+        ]
+      },
+      "journal": {
+        "id": "PRA",
+        "abbreviatedName": "Phys. Rev. A",
+        "name": "Physical Review A"
+      },
+      "title": {
+        "value": "Continuous real-time sensing with a nitrogen-vacancy center via coherent population trapping",
+        "format": "html"
+      },
+      "tocSection": {
+        "label": "Quantum technologies"
+      },
+      "volume": {
+        "number": "103"
+      }
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import io
+from io import BytesIO
 
 from common.repository import IRepository
 from pytest import fixture, raises
@@ -18,7 +18,7 @@ def test_test_find_by_id(repo: IRepository):
 
 
 def test_save(repo: IRepository):
-    raises(NotImplementedError, repo.save, filename="", obj=io.BytesIO())
+    raises(NotImplementedError, repo.save, filename="", obj=BytesIO())
 
 
 def test_delete_all(repo: IRepository):
