@@ -8,11 +8,12 @@ from common.parsing.xml_extractors import (
     CustomExtractor,
     TextExtractor,
 )
+from structlog import get_logger
 
 
 class SpringerParser(IParser):
     def __init__(self) -> None:
-
+        self.logger = get_logger().bind(class_name=type(self).__name__)
         article_type_mapping = {
             "OriginalPaper": "article",
             "ReviewPaper": "review",
@@ -176,6 +177,7 @@ class SpringerParser(IParser):
         referred_id = contrib.get("AffiliationIDS")
 
         if not referred_id:
+            self.logger.msg("No referred id linked to this article.")
             return affiliations
 
         for ref in referred_id.split():
@@ -223,11 +225,12 @@ class SpringerParser(IParser):
         last_page_node = article.find(
             "./Journal/Volume/Issue/Article/ArticleInfo/ArticleLastPage"
         )
-        return (
-            [int(last_page_node.text) - int(first_page_node.text) + 1]
-            if first_page_node is not None and last_page_node is not None
-            else []
-        )
+
+        if first_page_node is not None and last_page_node is not None:
+            return [int(last_page_node.text) - int(first_page_node.text) + 1]
+
+        self.logger.warning("No first/last page found. Returning empty page_nrs.")
+        return []
 
     def _get_license(self, article: ET.Element):
         license_node = article.find(
@@ -249,6 +252,7 @@ class SpringerParser(IParser):
                 }
             ]
 
+        self.logger.warning("Licence not found, returning default licence.")
         return [
             {
                 "license": "CC-BY-3.0",
