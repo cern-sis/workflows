@@ -3,3 +3,7 @@ def take_first(arr):
         return next(filter(None, arr))
     except StopIteration:
         return None
+
+
+def list_to_value_dict(arr, key="value"):
+    return [{key: val} for val in arr if val]

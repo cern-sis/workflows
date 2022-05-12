@@ -1,4 +1,4 @@
-from common.parsing.generic_parsing import take_first
+from common.parsing.generic_parsing import list_to_value_dict, take_first
 from pytest import mark, param
 
 take_first_expected = "TestValue"
@@ -8,12 +8,32 @@ take_first_expected = "TestValue"
     "test_input, expected",
     [
         param([None, "TestValue"], take_first_expected, id="Array contains None"),
-        param(
-            ["", "TestValue"], take_first_expected, id="Array contains empty string."
-        ),
+        param(["", "TestValue"], take_first_expected, id="Array contains empty string"),
         param(["TestValue"], take_first_expected, id="Array correct value"),
         param([None, ""], None, id="Array is incorrect"),
     ],
 )
 def test_take_first(test_input, expected):
     assert expected == take_first(test_input)
+
+
+@mark.parametrize(
+    "test_input, expected",
+    [
+        param([], [], id="Array is empty"),
+        param(
+            [1, "TestValue", None, ""],
+            [{"value": 1}, {"value": "TestValue"}],
+            id="Array contains multiple values",
+        ),
+    ],
+)
+def test_list_to_value_dict(test_input, expected):
+    assert expected == list_to_value_dict(test_input)
+
+
+def test_list_to_value_dict_with_custom_key():
+    assert [
+        {"my_key": 1},
+        {"my_key": "TestValue"},
+    ] == list_to_value_dict([1, "TestValue", None], "my_key")
