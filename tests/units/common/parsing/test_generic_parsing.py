@@ -1,4 +1,4 @@
-from common.parsing.generic_parsing import list_to_value_dict, take_first
+from common.parsing.generic_parsing import join, list_to_value_dict, take_first
 from pytest import mark, param
 
 take_first_expected = "TestValue"
@@ -37,3 +37,22 @@ def test_list_to_value_dict_with_custom_key():
         {"my_key": 1},
         {"my_key": "TestValue"},
     ] == list_to_value_dict([1, "TestValue", None], "my_key")
+
+
+@mark.parametrize(
+    "test_input, expected",
+    [
+        param([], "", id="Array is empty"),
+        param(
+            ["", "TestValue", "Test"],
+            "TestValue Test",
+            id="Array contains multiple values",
+        ),
+    ],
+)
+def test_join(test_input, expected):
+    assert expected == join(test_input)
+
+
+def test_join_with_custom_separator():
+    assert "TestValue,Test" == join(["", "TestValue", "Test"], ",")
