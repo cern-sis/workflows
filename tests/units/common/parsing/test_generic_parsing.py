@@ -1,5 +1,6 @@
 from common.parsing.generic_parsing import (
     classification_numbers,
+    free_keywords,
     join,
     list_to_value_dict,
     take_first,
@@ -85,3 +86,27 @@ def test_classification_numbers_with_custom_standard():
     assert [
         {"standard": "test_standard", "classification_number": "TestValue"}
     ] == classification_numbers(["", "TestValue"], "test_standard")
+
+
+@mark.parametrize(
+    "test_input, expected",
+    [
+        param([], [], id="Array is empty"),
+        param(
+            ["", "TestValue", "Test"],
+            [
+                {"source": "author", "value": "TestValue"},
+                {"source": "author", "value": "Test"},
+            ],
+            id="Array contains multiple values",
+        ),
+    ],
+)
+def test_free_keywords(test_input, expected):
+    assert expected == free_keywords(test_input)
+
+
+def test_free_keywords_with_custom_source():
+    assert [{"source": "test_source", "value": "TestValue"}] == free_keywords(
+        ["", "TestValue"], "test_source"
+    )

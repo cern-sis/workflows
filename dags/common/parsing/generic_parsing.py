@@ -15,3 +15,7 @@ def join(arr, separator=" "):
 
 def classification_numbers(arr, standard="PACS"):
     return [{"standard": standard, "classification_number": val} for val in arr if val]
+
+
+def free_keywords(arr, source="author"):
+    return [{"source": source, "value": val} for val in arr if val]
