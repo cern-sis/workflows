@@ -11,3 +11,7 @@ def list_to_value_dict(arr, key="value"):
 
 def join(arr, separator=" "):
     return separator.join(filter(None, arr))
+
+
+def classification_numbers(arr, standard="PACS"):
+    return [{"standard": standard, "classification_number": val} for val in arr if val]

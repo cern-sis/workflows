@@ -1,4 +1,9 @@
-from common.parsing.generic_parsing import join, list_to_value_dict, take_first
+from common.parsing.generic_parsing import (
+    classification_numbers,
+    join,
+    list_to_value_dict,
+    take_first,
+)
 from pytest import mark, param
 
 take_first_expected = "TestValue"
@@ -56,3 +61,27 @@ def test_join(test_input, expected):
 
 def test_join_with_custom_separator():
     assert "TestValue,Test" == join(["", "TestValue", "Test"], ",")
+
+
+@mark.parametrize(
+    "test_input, expected",
+    [
+        param([], [], id="Array is empty"),
+        param(
+            ["", "TestValue", "Test"],
+            [
+                {"standard": "PACS", "classification_number": "TestValue"},
+                {"standard": "PACS", "classification_number": "Test"},
+            ],
+            id="Array contains multiple values",
+        ),
+    ],
+)
+def test_classification_numbers(test_input, expected):
+    assert expected == classification_numbers(test_input)
+
+
+def test_classification_numbers_with_custom_standard():
+    assert [
+        {"standard": "test_standard", "classification_number": "TestValue"}
+    ] == classification_numbers(["", "TestValue"], "test_standard")
