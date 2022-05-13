@@ -1,5 +1,6 @@
 from common.parsing.generic_parsing import (
     classification_numbers,
+    fix_publication_date,
     free_keywords,
     join,
     list_to_value_dict,
@@ -110,3 +111,16 @@ def test_free_keywords_with_custom_source():
     assert [{"source": "test_source", "value": "TestValue"}] == free_keywords(
         ["", "TestValue"], "test_source"
     )
+
+
+@mark.parametrize(
+    "test_input, expected",
+    [
+        param("", "", id="Publication date is empty"),
+        param("3", "0003-01-01", id="Publication date contains one value"),
+        param("3-2", "0003-02-01", id="Publication date contains two values"),
+        param("1999-10-05", "1999-10-05", id="Publication date is correct"),
+    ],
+)
+def test_fix_publication_date(test_input, expected):
+    assert expected == fix_publication_date(test_input)
