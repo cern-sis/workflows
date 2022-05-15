@@ -1,9 +1,12 @@
 from common.parsing.generic_parsing import (
     classification_numbers,
+    collapse_initials,
     fix_publication_date,
     free_keywords,
     join,
     list_to_value_dict,
+    parse_authors,
+    split_fullname,
     take_first,
 )
 from pytest import mark, param
@@ -124,3 +127,45 @@ def test_free_keywords_with_custom_source():
 )
 def test_fix_publication_date(test_input, expected):
     assert expected == fix_publication_date(test_input)
+
+
+@mark.parametrize(
+    "test_input, expected",
+    [
+        param("Doe, John Magic", ("Doe", "John Magic")),
+        param("Doe Boe, John Magic", ("Doe Boe", "John Magic")),
+        param("John Magic Doe", ("Doe", "John Magic")),
+        param("John Magic Doe Boe", ("Boe", "John Magic Doe")),
+        param("", ("", ""), id="Author is empty"),
+    ],
+)
+def test_split_fullname(test_input, expected):
+    assert expected == split_fullname(test_input)
+
+
+def test_collapse_initials():
+    assert "F.M. Lastname" == collapse_initials("F. M. Lastname")
+
+
+@mark.parametrize(
+    "test_input, expected",
+    [
+        param(
+            {"surname": "Test Surname"},
+            {"full_name": "Test Surname", "surname": "Test Surname"},
+            id="Only surname is present",
+        ),
+        param(
+            {"raw_name": "Firstname Lastname"},
+            {
+                "full_name": "Lastname, Firstname",
+                "raw_name": "Firstname Lastname",
+                "given_names": "Firstname",
+                "surname": "Lastname",
+            },
+            id="Only raw_name is present",
+        ),
+    ],
+)
+def test_parse_authors(test_input, expected):
+    assert expected == parse_authors(test_input)
