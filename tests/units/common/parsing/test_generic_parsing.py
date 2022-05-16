@@ -6,6 +6,7 @@ from common.parsing.generic_parsing import (
     join,
     list_to_value_dict,
     parse_authors,
+    parse_thesis_supervisors,
     split_fullname,
     take_first,
 )
@@ -169,3 +170,22 @@ def test_collapse_initials():
 )
 def test_parse_authors(test_input, expected):
     assert expected == parse_authors(test_input)
+
+
+@mark.parametrize(
+    "test_input, expected",
+    [
+        param(
+            {"surname": "Test Surname", "affiliation": "Test Affiliation"},
+            {"full_name": "Test Surname", "affiliation": "Test Affiliation"},
+            id="Only surname is present",
+        ),
+        param(
+            {"raw_name": "Firstname Lastname", "affiliation": "Test Affiliation"},
+            {"full_name": "Lastname, Firstname", "affiliation": "Test Affiliation"},
+            id="Only raw_name is present",
+        ),
+    ],
+)
+def test_parse_thesis_supervisors(test_input, expected):
+    assert expected == parse_thesis_supervisors(test_input)

@@ -69,3 +69,11 @@ def parse_authors(author):
         author["full_name"] = author["surname"]
 
     return author
+
+
+def parse_thesis_supervisors(value):
+    value = parse_authors(value)
+    return {
+        "full_name": value.get("full_name"),
+        "affiliation": value.get("affiliation"),
+    }
