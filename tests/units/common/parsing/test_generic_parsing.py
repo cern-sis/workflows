@@ -7,6 +7,7 @@ from common.parsing.generic_parsing import (
     list_to_value_dict,
     parse_authors,
     parse_thesis_supervisors,
+    publication_info,
     split_fullname,
     take_first,
 )
@@ -189,3 +190,91 @@ def test_parse_authors(test_input, expected):
 )
 def test_parse_thesis_supervisors(test_input, expected):
     assert expected == parse_thesis_supervisors(test_input)
+
+
+@mark.parametrize(
+    "test_input, expected",
+    [
+        param(
+            {
+                "journal_title": "Test Value",
+                "journal_volume": "Test Value",
+                "journal_year": "2022",
+                "journal_issue": "Test Value",
+                "journal_artid": "",
+                "journal_fpage": "",
+                "journal_lpage": "",
+                "journal_doctype": "",
+                "pubinfo_freetext": "",
+                "another_field": "Test Another Field",
+            },
+            [
+                {
+                    "journal_title": "Test Value",
+                    "journal_volume": "Test Value",
+                    "year": 2022,
+                    "journal_issue": "Test Value",
+                    "artid": "",
+                    "page_start": "",
+                    "page_end": "",
+                    "material": "",
+                    "pubinfo_freetext": "",
+                }
+            ],
+            id="Some values populated",
+        ),
+        param(
+            {
+                "journal_title": "Test Value",
+                "journal_volume": "Test Value",
+                "journal_year": "2022",
+                "journal_issue": "Test Value",
+                "another_field": "Test Another Field",
+            },
+            [
+                {
+                    "journal_title": "Test Value",
+                    "journal_volume": "Test Value",
+                    "year": 2022,
+                    "journal_issue": "Test Value",
+                    "artid": "",
+                    "page_start": "",
+                    "page_end": "",
+                    "material": "",
+                    "pubinfo_freetext": "",
+                }
+            ],
+            id="Some values missing",
+        ),
+        param(
+            {
+                "journal_title": "Test Value",
+                "journal_volume": "Test Value",
+                "journal_year": "2022",
+                "journal_issue": "Test Value",
+                "journal_artid": "Test Value",
+                "journal_fpage": 1,
+                "journal_lpage": 25,
+                "journal_doctype": "Test Value",
+                "pubinfo_freetext": "Test Value",
+                "another_field": "Test Another Field",
+            },
+            [
+                {
+                    "journal_title": "Test Value",
+                    "journal_volume": "Test Value",
+                    "year": 2022,
+                    "journal_issue": "Test Value",
+                    "artid": "Test Value",
+                    "page_start": 1,
+                    "page_end": 25,
+                    "material": "Test Value",
+                    "pubinfo_freetext": "Test Value",
+                }
+            ],
+            id="All values populated",
+        ),
+    ],
+)
+def test_publication_info(test_input, expected):
+    assert expected == publication_info(test_input)

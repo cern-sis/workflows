@@ -77,3 +77,19 @@ def parse_thesis_supervisors(value):
         "full_name": value.get("full_name"),
         "affiliation": value.get("affiliation"),
     }
+
+
+def publication_info(article):
+    return [
+        {
+            "journal_title": article.pop("journal_title", ""),
+            "journal_volume": article.pop("journal_volume", ""),
+            "year": int(article.pop("journal_year", 0)) or "",
+            "journal_issue": article.pop("journal_issue", ""),
+            "artid": article.pop("journal_artid", ""),
+            "page_start": article.pop("journal_fpage", ""),
+            "page_end": article.pop("journal_lpage", ""),
+            "material": article.pop("journal_doctype", ""),
+            "pubinfo_freetext": article.pop("pubinfo_freetext", ""),
+        }
+    ]
