@@ -82,14 +82,36 @@ def parse_thesis_supervisors(value):
 def publication_info(article):
     return [
         {
-            "journal_title": article.pop("journal_title", ""),
-            "journal_volume": article.pop("journal_volume", ""),
-            "year": int(article.pop("journal_year", 0)) or "",
-            "journal_issue": article.pop("journal_issue", ""),
-            "artid": article.pop("journal_artid", ""),
-            "page_start": article.pop("journal_fpage", ""),
-            "page_end": article.pop("journal_lpage", ""),
-            "material": article.pop("journal_doctype", ""),
-            "pubinfo_freetext": article.pop("pubinfo_freetext", ""),
+            "journal_title": article.get("journal_title", ""),
+            "journal_volume": article.get("journal_volume", ""),
+            "year": int(article.get("journal_year", 0)) or "",
+            "journal_issue": article.get("journal_issue", ""),
+            "artid": article.get("journal_artid", ""),
+            "page_start": article.get("journal_fpage", ""),
+            "page_end": article.get("journal_lpage", ""),
+            "material": article.get("journal_doctype", ""),
+            "pubinfo_freetext": article.get("pubinfo_freetext", ""),
         }
     ]
+
+
+def merge_dois(article):
+    return article["dois"] + article.get("related_article_doi", [])
+
+
+def clear_unnecessary_fields(article):
+    new_article = article.copy()
+    field_list = [
+        "journal_title",
+        "journal_volume",
+        "journal_year",
+        "journal_issue",
+        "journal_artid",
+        "journal_fpage",
+        "journal_lpage",
+        "journal_doctype",
+        "pubinfo_freetext",
+        "related_article_doi",
+    ]
+    [new_article.pop(field_name, "") for field_name in field_list]
+    return new_article

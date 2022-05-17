@@ -1,10 +1,12 @@
 from common.parsing.generic_parsing import (
     classification_numbers,
+    clear_unnecessary_fields,
     collapse_initials,
     fix_publication_date,
     free_keywords,
     join,
     list_to_value_dict,
+    merge_dois,
     parse_authors,
     parse_thesis_supervisors,
     publication_info,
@@ -278,3 +280,53 @@ def test_parse_thesis_supervisors(test_input, expected):
 )
 def test_publication_info(test_input, expected):
     assert expected == publication_info(test_input)
+
+
+@mark.parametrize(
+    "test_input, expected",
+    [
+        param(
+            {"dois": ["test_doi_1"], "related_article_doi": ["test_doi_2"]},
+            ["test_doi_1", "test_doi_2"],
+            id="Both fields contain values",
+        ),
+        param(
+            {"dois": ["test_doi_1"], "related_article_doi": []},
+            ["test_doi_1"],
+            id="Only dois contains values",
+        ),
+        param(
+            {"dois": [], "related_article_doi": ["test_doi_2"]},
+            ["test_doi_2"],
+            id="Only related_article_doi contains values",
+        ),
+        param(
+            {"dois": [], "related_article_doi": []},
+            [],
+            id="None contains values",
+        ),
+        param(
+            {"dois": ["test_doi_1"]},
+            ["test_doi_1"],
+            id="related_article_doi is missing",
+        ),
+    ],
+)
+def test_merge_dois(test_input, expected):
+    assert expected == merge_dois(test_input)
+
+
+def test_clear_unnecessary_fields():
+    article = {
+        "journal_title": "Test Value",
+        "journal_volume": "Test Value",
+        "journal_year": "Test Value",
+        "journal_issue": "Test Value",
+        "journal_artid": "Test Value",
+        "journal_fpage": "Test Value",
+        "journal_lpage": "Test Value",
+        "journal_doctype": "Test Value",
+        "pubinfo_freetext": "Test Value",
+        "related_article_doi": "Test Value",
+    }
+    assert {} == clear_unnecessary_fields(article)
