@@ -1,5 +1,10 @@
 import pytest
-from common.cleanup import clean_whitespace_characters, convert_html_subsripts_to_latex
+from common.cleanup import (
+    clean_whitespace_characters,
+    convert_html_subsripts_to_latex,
+    remove_specific_tags,
+)
+from common.mappings import MATHML_ELEMENTS
 
 expected_string = "Simple input with spaces"
 string = " Simple input with spaces "
@@ -24,8 +29,8 @@ string_with_new_lines = " Simple   input  \n  with  \n spaces "
     ],
 )
 def test_clean_whitespace_characters(test_input, expected):
-    output = clean_whitespace_characters(test_input)
-    assert output == expected
+    assert clean_whitespace_characters(test_input) == expected
+
 
 expected_string_sup = "$^{3}$"
 sup = "<sup>3</sup>"
@@ -34,29 +39,98 @@ sub = "<sub>3</sub>"
 expected_string_inf = "$_{3}$"
 inf = "<inf>3</inf>"
 
-expected_string_sup_extended = '<p content-type="scoap3">Article funded by SCOAP$^{3}$</p>'
-sup_extended  = '<p content-type="scoap3">Article funded by SCOAP<sup>3</sup></p>'
-expected_string_sub_extended  = '<p content-type="scoap3">Article funded by SCOAP$_{3}$</p>'
-sub_extended  = '<p content-type="scoap3">Article funded by SCOAP<sub>3</sub></p>'
-expected_string_inf_extended  = '<p content-type="scoap3">Article funded by SCOAP$_{3}$</p>'
-inf_extended  = '<p content-type="scoap3">Article funded by SCOAP<inf>3</inf></p>'
+expected_string_sup_extended = (
+    '<p content-type="scoap3">Article funded by SCOAP$^{3}$</p>'
+)
+sup_extended = '<p content-type="scoap3">Article funded by SCOAP<sup>3</sup></p>'
+expected_string_sub_extended = (
+    '<p content-type="scoap3">Article funded by SCOAP$_{3}$</p>'
+)
+sub_extended = '<p content-type="scoap3">Article funded by SCOAP<sub>3</sub></p>'
+expected_string_inf_extended = (
+    '<p content-type="scoap3">Article funded by SCOAP$_{3}$</p>'
+)
+inf_extended = '<p content-type="scoap3">Article funded by SCOAP<inf>3</inf></p>'
 
 no_tags = '<p content-type="scoap3">Article funded by SCOAP</p>'
+
 
 @pytest.mark.parametrize(
     "test_input, expected",
     [
-        pytest.param(sup, expected_string_sup, id="test_convert_html_subsripts_to_latex_sup"),
-        pytest.param(sub, expected_string_sub, id="test_convert_html_subsripts_to_latex_sub"),
-        pytest.param(inf, expected_string_inf, id="test_convert_html_subsripts_to_latex_inf"),
-        pytest.param(sup_extended, expected_string_sup_extended, id="test_convert_html_subsripts_to_latex_sup_extended"),
-        pytest.param(sub_extended, expected_string_sub_extended, id="test_convert_html_subsripts_to_latex_sub_extended"),
-        pytest.param(inf_extended, expected_string_inf_extended, id="test_convert_html_subsripts_to_latex_inf_extended"),
-        pytest.param(no_tags, no_tags, id="test_convert_html_subsripts_to_latex_no_tags"),
+        pytest.param(
+            sup, expected_string_sup, id="test_convert_html_subsripts_to_latex_sup"
+        ),
+        pytest.param(
+            sub, expected_string_sub, id="test_convert_html_subsripts_to_latex_sub"
+        ),
+        pytest.param(
+            inf, expected_string_inf, id="test_convert_html_subsripts_to_latex_inf"
+        ),
+        pytest.param(
+            sup_extended,
+            expected_string_sup_extended,
+            id="test_convert_html_subsripts_to_latex_sup_extended",
+        ),
+        pytest.param(
+            sub_extended,
+            expected_string_sub_extended,
+            id="test_convert_html_subsripts_to_latex_sub_extended",
+        ),
+        pytest.param(
+            inf_extended,
+            expected_string_inf_extended,
+            id="test_convert_html_subsripts_to_latex_inf_extended",
+        ),
+        pytest.param(
+            no_tags, no_tags, id="test_convert_html_subsripts_to_latex_no_tags"
+        ),
     ],
 )
 def test_convert_html_subsripts_to_latex(test_input, expected):
-    output = convert_html_subsripts_to_latex(test_input)
-    assert output == expected
+    assert convert_html_subsripts_to_latex(test_input) == expected
 
 
+xml = "<div><p>example<h1> h1 example</h1></p></div>"
+xml_just_p = "<p>example h1 example</p>"
+xml_just_div = "<div>example h1 example</div>"
+xml_div_and_h1 = "<div>example<h1> h1 example</h1></div>"
+xml_title = "<article-title id='1'><label>example</label></article-title>"
+xml_just_title = "<article-title>example</article-title>"
+xml_just_title_with_id = '<article-title id="1">example</article-title>'
+
+
+@pytest.mark.parametrize(
+    "test_input, expected, tags, attributes",
+    [
+        pytest.param(xml, xml_just_p, ["p"], [], id="test_keep_p"),
+        pytest.param(xml, xml_just_div, ["div"], [], id="test_keep_div"),
+        pytest.param(xml, xml_div_and_h1, ["div", "h1"], [], id="test_keep_div_and_h1"),
+        pytest.param(
+            xml_title, xml_just_title, ["article-title"], [], id="test_keep_just_title"
+        ),
+        pytest.param(
+            xml_title,
+            xml_just_title_with_id,
+            ["article-title"],
+            ["id"],
+            id="test_keep_just_title_with_id",
+        ),
+    ],
+)
+def test_remove_specific_tags(test_input, expected, tags, attributes):
+    assert (
+        remove_specific_tags(test_input, tags=tags, attributes=attributes) == expected
+    )
+
+
+def test_remove_specific_tags_with_mathML(shared_datadir):
+    file_with_mathML = (shared_datadir / "file_with_mathML.xml").read_text()
+    cleaned_file_with_mathML = (
+        shared_datadir / "cleaned_file_with_mathML.xml"
+    ).read_text()
+
+    output = remove_specific_tags(file_with_mathML, tags=MATHML_ELEMENTS)
+    assert clean_whitespace_characters(output) == clean_whitespace_characters(
+        cleaned_file_with_mathML
+    )
