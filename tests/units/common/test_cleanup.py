@@ -3,7 +3,9 @@ from common.cleanup import (
     clean_collaboration,
     clean_whitespace_characters,
     convert_html_subsripts_to_latex,
-)
+    remove_specific_tags)
+from common.mappings import MATHML_ELEMENTS
+
 
 expected_string = "Simple input with spaces"
 string = " Simple input with spaces "
@@ -89,6 +91,48 @@ no_tags = '<p content-type="scoap3">Article funded by SCOAP</p>'
 def test_convert_html_subsripts_to_latex(test_input, expected):
     assert convert_html_subsripts_to_latex(test_input) == expected
 
+    
+xml = "<div><p>example<h1> h1 example</h1></p></div>"
+xml_just_p = "<p>example h1 example</p>"
+xml_just_div = "<div>example h1 example</div>"
+xml_div_and_h1 = "<div>example<h1> h1 example</h1></div>"
+xml_title = "<article-title id='1'><label>example</label></article-title>"
+xml_just_title = "<article-title>example</article-title>"
+xml_just_title_with_id = '<article-title id="1">example</article-title>'
+
+
+@pytest.mark.parametrize(
+    "test_input, expected, tags, attributes",
+    [
+        pytest.param(xml, xml_just_p, ["p"], [], id="test_keep_p"),
+        pytest.param(xml, xml_just_div, ["div"], [], id="test_keep_div"),
+        pytest.param(xml, xml_div_and_h1, ["div", "h1"], [], id="test_keep_div_and_h1"),
+        pytest.param(
+            xml_title, xml_just_title, ["article-title"], [], id="test_keep_just_title"
+        ),
+        pytest.param(
+            xml_title,
+            xml_just_title_with_id,
+            ["article-title"],
+            ["id"],
+            id="test_keep_just_title_with_id",
+        ),
+    ],
+)
+def test_remove_specific_tags(test_input, expected, tags, attributes):
+    assert (
+        remove_specific_tags(test_input, tags=tags, attributes=attributes) == expected
+    )
+
+def test_remove_specific_tags_with_mathML(shared_datadir):
+    file_with_mathML = (shared_datadir / "file_with_mathML.xml").read_text()
+    cleaned_file_with_mathML = (
+        shared_datadir / "cleaned_file_with_mathML.xml"
+    ).read_text()
+    output = remove_specific_tags(file_with_mathML, tags=MATHML_ELEMENTS)
+    assert clean_whitespace_characters(output) == clean_whitespace_characters(
+        cleaned_file_with_mathML)
+    
 
 collaboration_string = (
     "Kavli Institute for the Physics and Mathematics of the Universe (WPI)"
@@ -124,3 +168,4 @@ collaboration_string_cleaned = (
 )
 def test_clean_collaboration(test_input, expected):
     assert clean_collaboration(test_input) == expected
+

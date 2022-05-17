@@ -1,3 +1,6 @@
+from bleach import clean
+
+
 def clean_whitespace_characters(input):
     return " ".join(input.split())
 
@@ -14,3 +17,8 @@ def convert_html_subsripts_to_latex(input):
 
 def clean_collaboration(input):
     return clean_whitespace_characters(input.replace("for the", ""))
+
+def remove_specific_tags(value, tags=None, attributes=None):
+    tags = tags or []
+    attributes = attributes or []
+    return clean(value, tags=tags, attributes=attributes, strip=True)

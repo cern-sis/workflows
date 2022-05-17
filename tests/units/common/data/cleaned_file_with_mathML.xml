@@ -1,0 +1,62 @@
+    <math>
+		<mrow>
+			<mi>A</mi>
+			<mo>=</mo>
+
+			<mfenced>
+
+				<mtable>
+					<mtr>
+						<mtd>
+							<mi>a</mi>
+						</mtd>
+						<mtd>
+							<mi>b</mi>
+						</mtd>
+					</mtr>
+
+					<mtr>
+						<mtd>
+							<mi>x</mi>
+						</mtd>
+						<mtd>
+							<mi>y</mi>
+						</mtd>
+					</mtr>
+
+				</mtable>
+
+			</mfenced>
+		</mrow>
+		<msub>
+			<mi>Geeks</mi>
+			<mn>4</mn>
+		</msub>
+		<mo>+</mo>
+		<mn>Geeks</mn>
+		<mo>=</mo>
+		<msub>
+			<mi>G</mi>
+		</msub>
+		<mo>→</mo>
+		<msub>
+			<mi>e</mi>
+			<mn>2</mn>
+		</msub>
+		<mo>→</mo>
+		<mi>k</mi>
+		<mi>s</mi>
+		<mn>4
+		</mn>
+		<msub>
+			<mi>G</mi>
+		</msub>
+		<mo>→</mo>
+		<msub>
+			<mi>e</mi>
+			<mn>2</mn>
+		</msub>
+		<mo>→</mo>
+		<mi>k</mi>
+		<mi>s</mi>
+	</math>
