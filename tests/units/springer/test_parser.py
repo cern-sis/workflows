@@ -11,8 +11,7 @@ def parser():
 
 
 @fixture
-def articles():
-    data_dir = "./data/"
+def articles(datadir):
     test_files = (
         "ftp_PUB_19-01-29_20-02-10_JHEP.zip",
         "ftp_PUB_19-01-29_20-02-10_EPJC.zip",
@@ -28,7 +27,7 @@ def articles():
             ][0]
 
     articles = [
-        ET.fromstring(extract_zip_to_article(data_dir + zip_filename))
+        ET.fromstring(extract_zip_to_article(datadir / zip_filename))
         for zip_filename in test_files
     ]
 
@@ -37,7 +36,7 @@ def articles():
 
 @fixture()
 def parsed_articles(parser, articles):
-    return [parser.parse(article) for article in articles]
+    return [parser._publisher_specific_parsing(article) for article in articles]
 
 
 def test_authors(parsed_articles):
@@ -98,52 +97,52 @@ def test_authors(parsed_articles):
             {
                 "affiliations": [
                     {
-                        "organization": "Universit\u00e9 Paris-Saclay",
-                        "value": "Centre de Physique Th\u00e9orique, \u00c9cole polytechnique, CNRS, "
-                        "Universit\u00e9 Paris-Saclay, Palaiseau, 91128, France",
+                        "organization": "Université Paris-Saclay",
+                        "value": "Centre de Physique Théorique, École polytechnique, CNRS, "
+                        "Université Paris-Saclay, Palaiseau, 91128, France",
                         "country": "France",
                     }
                 ],
-                "surname": "Lorc\u00e9",
-                "given_names": "C\u00e9dric",
+                "surname": "Lorcé",
+                "given_names": "Cédric",
             },
             {
                 "affiliations": [
                     {
-                        "organization": "Universit\u00e9 Paris-Saclay",
-                        "value": "IRFU, CEA, Universit\u00e9 Paris-Saclay, Gif-sur-Yvette, 91191, France",
+                        "organization": "Université Paris-Saclay",
+                        "value": "IRFU, CEA, Université Paris-Saclay, Gif-sur-Yvette, 91191, France",
                         "country": "France",
                     }
                 ],
                 "surname": "Moutarde",
-                "given_names": "Herv\u00e9",
+                "given_names": "Hervé",
             },
             {
                 "affiliations": [
                     {
-                        "organization": "Universit\u00e9 Paris-Saclay",
-                        "value": "Centre de Physique Th\u00e9orique, \u00c9cole polytechnique, CNRS, "
-                        "Universit\u00e9 Paris-Saclay, Palaiseau, 91128, France",
+                        "organization": "Université Paris-Saclay",
+                        "value": "Centre de Physique Théorique, École polytechnique, CNRS, "
+                        "Université Paris-Saclay, Palaiseau, 91128, France",
                         "country": "France",
                     },
                     {
-                        "organization": "Universit\u00e9 Paris-Saclay",
-                        "value": "IRFU, CEA, Universit\u00e9 Paris-Saclay, Gif-sur-Yvette, 91191, France",
+                        "organization": "Université Paris-Saclay",
+                        "value": "IRFU, CEA, Université Paris-Saclay, Gif-sur-Yvette, 91191, France",
                         "country": "France",
                     },
                 ],
-                "surname": "Trawi\u0144ski",
+                "surname": "Trawiński",
                 "given_names": "Arkadiusz",
                 "email": "Arkadiusz.Trawinski@cea.fr",
             },
         ],
     )
+
     for authors, parsed_article in zip(expected_results, parsed_articles):
         assert authors == parsed_article["authors"]
 
 
 def test_title(parsed_articles):
-    """Test extracting title."""
     titles = (
         "Symmetry breaking in quantum curves and super Chern-Simons matrix models",
         "Revisiting the mechanical properties of the nucleon",
@@ -156,7 +155,6 @@ def test_title(parsed_articles):
 
 
 def test_date_published(parsed_articles):
-    """Test extracting date_published."""
     dates_published = ("2019-01-28", "2019-01-29", "2019-02-06")
     for date_published, article in zip(dates_published, parsed_articles):
         assert "date_published" in article
@@ -164,7 +162,6 @@ def test_date_published(parsed_articles):
 
 
 def test_license(parsed_articles):
-    """Test extracting license information."""
     expected_licenses = (
         [
             {
@@ -191,7 +188,6 @@ def test_license(parsed_articles):
 
 
 def test_dois(parsed_articles):
-    """Test extracting dois."""
     dois = (
         "10.1007/JHEP01(2019)210",
         "10.1140/epjc/s10052-019-6572-3",
@@ -199,11 +195,10 @@ def test_dois(parsed_articles):
     )
     for doi, article in zip(dois, parsed_articles):
         assert "dois" in article
-        assert article["dois"] == doi
+        assert article["dois"] == [doi]
 
 
 def test_collections(parsed_articles):
-    """Test extracting collections."""
     collections = (
         ["Journal of High Energy Physics"],
         ["European Physical Journal C"],
@@ -216,7 +211,6 @@ def test_collections(parsed_articles):
 
 
 def test_collaborations(parsed_articles):
-    """Test extracting collaboration."""
     collaborations = ([], [], ["ATLAS Collaboration"])
     for collaboration, article in zip(collaborations, parsed_articles):
         if collaboration:
@@ -227,7 +221,6 @@ def test_collaborations(parsed_articles):
 
 
 def test_publication_info(parsed_articles):
-    """Test extracting dois."""
     expected_results = (
         dict(
             journal_title="Journal of High Energy Physics",
@@ -264,7 +257,6 @@ def test_publication_info(parsed_articles):
 
 
 def test_page_nr(parsed_articles):
-    """Test extracting copyright."""
     expected_results = ([29], [25], [45])
     for expected, article in zip(expected_results, parsed_articles):
         assert "page_nr" in article
@@ -272,7 +264,6 @@ def test_page_nr(parsed_articles):
 
 
 def test_copyrights(parsed_articles):
-    """Test extracting copyright."""
     expected_results = (
         dict(copyright_holder="SISSA, Trieste, Italy", copyright_year="2019"),
         dict(copyright_holder="The Author(s)", copyright_year="2019"),
@@ -288,7 +279,6 @@ def test_copyrights(parsed_articles):
 
 
 def test_arxiv(parsed_articles):
-    """Text extracting arXiv eprints."""
     expected_results = (
         [dict(value="1811.06048")],
         [dict(value="1810.09837")],
@@ -313,7 +303,6 @@ def test_doctype(parsed_articles):
 
 
 def test_abstract(parsed_articles):
-    """Test extracting abstract."""
     abstracts = (
         "It was known that quantum curves and super Chern-Simons matrix models correspond to each other. "
         "From the viewpoint of symmetry, the algebraic curve of genus one, called the del Pezzo curve, enjoys "
@@ -336,8 +325,8 @@ def test_abstract(parsed_articles):
         "analysis with an improved background expectation. The analysis of the data-derived signal regions on a new dataset "
         "allows a statistical interpretation without the large look-elsewhere effect. The sensitivity of the approach is "
         "discussed using Standard Model processes and benchmark signals of new physics. As an example, results are shown "
-        "for 3.2 fb of proton–proton collision data at a centre-of-mass energy of 13 collected with the ATLAS detector "
-        "at the LHC in 2015, in which more than 700 event classes and more than regions have been analysed. No significant "
+        "for 3.2 fb $$^{-1}$$ of proton–proton collision data at a centre-of-mass energy of 13 $$\\text {TeV}$$ collected with the ATLAS detector "
+        "at the LHC in 2015, in which more than 700 event classes and more than $$10^5$$ regions have been analysed. No significant "
         "deviations are found and consequently no data-derived signal regions for a follow-up analysis have been defined.",
     )
     for abstract, article in zip(abstracts, parsed_articles):

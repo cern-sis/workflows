@@ -7,9 +7,10 @@ from common.parsing.generic_parsing import (
     join,
     list_to_value_dict,
     merge_dois,
-    parse_authors,
+    parse_author,
     parse_thesis_supervisors,
     publication_info,
+    remove_empty_values,
     split_fullname,
     take_first,
 )
@@ -171,21 +172,21 @@ def test_collapse_initials():
         ),
     ],
 )
-def test_parse_authors(test_input, expected):
-    assert expected == parse_authors(test_input)
+def test_parse_author(test_input, expected):
+    assert expected == parse_author(test_input)
 
 
 @mark.parametrize(
     "test_input, expected",
     [
         param(
-            {"surname": "Test Surname", "affiliation": "Test Affiliation"},
-            {"full_name": "Test Surname", "affiliation": "Test Affiliation"},
+            {"surname": "Test Surname", "affiliations": "Test Affiliation"},
+            {"full_name": "Test Surname", "affiliations": "Test Affiliation"},
             id="Only surname is present",
         ),
         param(
-            {"raw_name": "Firstname Lastname", "affiliation": "Test Affiliation"},
-            {"full_name": "Lastname, Firstname", "affiliation": "Test Affiliation"},
+            {"raw_name": "Firstname Lastname", "affiliations": "Test Affiliation"},
+            {"full_name": "Lastname, Firstname", "affiliations": "Test Affiliation"},
             id="Only raw_name is present",
         ),
     ],
@@ -330,3 +331,27 @@ def test_clear_unnecessary_fields():
         "related_article_doi": "Test Value",
     }
     assert {} == clear_unnecessary_fields(article)
+
+
+def test_remove_empty_values():
+    article = {
+        "dict_full": {"key": "value"},
+        "array_full": ["value"],
+        "dict_half_empty": {
+            "key": "value",
+            "empty": None,
+            "empty_array": [],
+            "empty_dict": {},
+        },
+        "array_half_empty": [["value"], [], "test", {}],
+        "empty_array": [],
+        "empty_dict": [],
+        "empty_value": None,
+        "empty_nested_dicts": {"key": {"key": {"key": None}}},
+    }
+    assert {
+        "dict_full": {"key": "value"},
+        "array_full": ["value"],
+        "dict_half_empty": {"key": "value"},
+        "array_half_empty": [["value"], "test"],
+    } == remove_empty_values(article)

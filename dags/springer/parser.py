@@ -45,7 +45,9 @@ class SpringerParser(IParser):
                 extra_function=lambda x: article_type_mapping[x],
             ),
             TextExtractor(
-                "dois", "./Journal/Volume/Issue/Article/ArticleInfo/ArticleDOI"
+                "dois",
+                "./Journal/Volume/Issue/Article/ArticleInfo/ArticleDOI",
+                extra_function=lambda x: [x],
             ),
             CustomExtractor("arxiv_eprints", self._get_arxiv_eprints),
             CustomExtractor("page_nr", self._get_page_nrs),
@@ -110,21 +112,23 @@ class SpringerParser(IParser):
         super().__init__(extractors)
 
     def _get_abstract(self, article: ET.Element):
+        def is_latex_node(node: ET.Element):
+            return node.tag == "EquationSource" and node.attrib["Format"] == "TEX"
+
         paragraph = article.find(
             "./Journal/Volume/Issue/Article/ArticleHeader/Abstract/Para"
         )
 
-        text_to_skip_arrays = [
-            [child_text for child_text in child.itertext()] for child in paragraph
-        ]
         text_to_skip_flatten = [
-            item for sublist in text_to_skip_arrays for item in sublist
+            child_node.text
+            for child in paragraph
+            for child_node in child.iter()
+            if not is_latex_node(child_node)
         ]
 
         abstract = " ".join(
             [text for text in paragraph.itertext() if text not in text_to_skip_flatten]
         )
-
         return re.sub("\\s+", " ", abstract)
 
     def _get_arxiv_eprints(self, article: ET.Element):

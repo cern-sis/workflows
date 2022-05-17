@@ -1,3 +1,4 @@
+import json
 import xml.etree.ElementTree as ET
 
 from common.parsing.parser import IParser
@@ -22,11 +23,21 @@ TEST_XML_STRING = """
 
 
 @fixture
+def publisher_parsed_article(datadir):
+    return json.loads((datadir / "input.json").read_text())
+
+
+@fixture
+def expected_generic_parsing_output(datadir):
+    return json.loads((datadir / "expected.json").read_text())
+
+
+@fixture
 def xml_node():
     return ET.fromstring(TEST_XML_STRING)
 
 
-def test_parser(xml_node: ET.Element):
+def test_publisher_parsing(xml_node: ET.Element):
     def extract_and_cast(article: ET.Element):
         value = article.find("./FieldOne/FieldInt").text
         return int(value)
@@ -40,9 +51,16 @@ def test_parser(xml_node: ET.Element):
             ConstantExtractor("constant_value", "Constant"),
         ]
     )
-    assert parser.parse(xml_node) == {
+    assert parser._publisher_specific_parsing(xml_node) == {
         "text_value": "Value Field Two",
         "attribute_value": "TagOneValue",
         "custom_value": 5,
         "constant_value": "Constant",
     }
+
+
+def test_generic_parsing(publisher_parsed_article, expected_generic_parsing_output):
+    parser = IParser([])
+    assert expected_generic_parsing_output == parser._generic_parsing(
+        publisher_parsed_article
+    )

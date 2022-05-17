@@ -57,7 +57,7 @@ def split_fullname(author):
     )
 
 
-def parse_authors(author):
+def parse_author(author):
     if "raw_name" in author and "surname" not in author:
         author["surname"], author["given_names"] = split_fullname(author["raw_name"])
     if "given_names" in author and author["given_names"]:
@@ -72,10 +72,10 @@ def parse_authors(author):
 
 
 def parse_thesis_supervisors(value):
-    value = parse_authors(value)
+    value = parse_author(value)
     return {
         "full_name": value.get("full_name"),
-        "affiliation": value.get("affiliation"),
+        "affiliations": value.get("affiliations"),
     }
 
 
@@ -115,3 +115,19 @@ def clear_unnecessary_fields(article):
     ]
     [new_article.pop(field_name, "") for field_name in field_list]
     return new_article
+
+
+def remove_empty_values(obj):
+    if isinstance(obj, dict):
+        return {
+            key: new_val
+            for (key, val) in obj.items()
+            if (new_val := remove_empty_values(val)) is not None
+        } or None
+    elif isinstance(obj, (list, tuple, set)):
+        return [
+            new_val for val in obj if (new_val := remove_empty_values(val)) is not None
+        ] or None
+    elif obj or obj is False or obj == 0:
+        return obj
+    return None
