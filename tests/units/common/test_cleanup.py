@@ -1,5 +1,7 @@
 import pytest
 from common.cleanup import (
+    clean_affiliation_for_author,
+    clean_all_affiliations_for_author,
     clean_collaboration,
     clean_whitespace_characters,
     convert_html_subsripts_to_latex,
@@ -131,8 +133,19 @@ def test_remove_specific_tags_with_mathML(shared_datadir):
     ).read_text()
     output = remove_specific_tags(file_with_mathML, tags=MATHML_ELEMENTS)
     assert clean_whitespace_characters(output) == clean_whitespace_characters(
-        cleaned_file_with_mathML)
-    
+        cleaned_file_with_mathML
+    )
+
+
+xml_with_label = "<aff>Affiliation<label>Label</label><aff/>"
+xml_with_label_and_spaces = "<aff>  Affiliation  <label>La bel </label><aff/>"
+xml_no_label = "<aff>Affiliation<sup>1</sup><aff/>"
+just_label = "<label>Label</label>"
+
+xml_no_label_expected_value = "Affiliation1"
+expected_output = "Affiliation"
+expected_value_just_label = ""
+
 
 collaboration_string = (
     "Kavli Institute for the Physics and Mathematics of the Universe (WPI)"
@@ -169,3 +182,69 @@ collaboration_string_cleaned = (
 def test_clean_collaboration(test_input, expected):
     assert clean_collaboration(test_input) == expected
 
+
+@pytest.mark.parametrize(
+    "test_input, expected",
+    [
+        pytest.param(
+            xml_with_label,
+            expected_output,
+            id="test_clean_tags_from_affiliations_for_author",
+        ),
+        pytest.param(
+            xml_with_label_and_spaces,
+            expected_output,
+            id="test_clean_tags_from_affiliations_for_author_with_spaces",
+        ),
+        pytest.param(
+            xml_no_label,
+            xml_no_label_expected_value,
+            id="test_clean_tags_from_affiliations_for_author_no_label",
+        ),
+        pytest.param(
+            just_label,
+            expected_value_just_label,
+            id="test_clean_tags_from_affiliations_for_author_just_label",
+        ),
+    ],
+)
+def test_clean_affiliation_for_author(test_input, expected):
+    assert clean_affiliation_for_author(test_input) == expected
+
+
+affiliations = [
+    {"value": xml_with_label},
+    {"value": xml_with_label_and_spaces},
+    {"value": xml_no_label},
+    {"value": just_label},
+]
+test_object = {"affiliations": affiliations}
+
+expected_affiliations = [
+    {"value": expected_output},
+    {"value": expected_output},
+    {"value": xml_no_label_expected_value},
+    {"value": expected_value_just_label},
+]
+exptected_test_object = {"affiliations": expected_affiliations}
+
+empty = {"affiliations": []}
+
+
+@pytest.mark.parametrize(
+    "test_input, expected",
+    [
+        pytest.param(
+            test_object,
+            exptected_test_object,
+            id="test_clean_affiliations_for_author",
+        ),
+        pytest.param(
+            empty,
+            empty,
+            id="test_clean_empty_affiliations_for_author",
+        ),
+    ],
+)
+def test_clean_all_affiliations_for_author(test_input, expected):
+    assert clean_all_affiliations_for_author(test_input) == expected
