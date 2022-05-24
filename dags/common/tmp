@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <link href="http://arxiv.org/api/query?search_query%3Did%3A2112.01211%26id_list%3D%26start%3D0%26max_results%3D10" rel="self" type="application/atom+xml" />
+    <title type="html">ArXiv Query: search_query=id:2112.01211&amp;id_list=&amp;start=0&amp;max_results=10</title>
+    <id>http://arxiv.org/api/Xr7i3CC80vRjSfSVgjTrT5GYkFo</id>
+    <updated>2022-05-23T00:00:00-04:00</updated>
+    <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">1
+	</opensearch:totalResults>
+    <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0
+	</opensearch:startIndex>
+    <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">10
+	</opensearch:itemsPerPage>
+    <entry>
+        <id>http://arxiv.org/abs/2112.01211v1</id>
+        <updated>2021-12-02T13:25:53Z</updated>
+        <published>2021-12-02T13:25:53Z</published>
+        <title>Particle physics and cosmology of the string derived no-scale flipped $SU(5)$</title>
+        <summary>  In a recent paper, we identified a cosmological sector of a flipped $SU(5)$
+            model derived in the free fermionic formulation of the heterotic superstring,
+            containing the inflaton and the goldstino superfields with a superpotential
+            leading to Starobinsky type inflation, while $SU(5){\times}U(1)$ is still
+            unbroken. Here, we study the properties and phenomenology of the vacuum after
+            the end of inflation, where the gauge group is broken to the Standard Model. We
+            identify a set of vacuum expectation values, triggered by the breaking of an
+            anomalous $U(1)_A$ gauge symmetry at roughly an order of magnitude below the
+            string scale, that solve the F and D-flatness supersymmetric conditions up to
+            6th order in the superpotential which is explicitly computed, leading to a
+            successful particle phenomenology. In particular, all extra colour triplets
+            become superheavy guaranteeing observable proton stability, while the Higgs
+            doublet mass matrix has a massless pair eigenstate with realistic hierarchical
+            Yukawa couplings to quarks and leptons. The supersymmetry breaking scale is
+            constrained to be high, consistent with the non observation of supersymmetric
+            signals at the LHC.
+        </summary>
+        <author>
+            <name>Ignatios Antoniadis</name>
+        </author>
+        <author>
+            <name>Dimitri V. Nanopoulos</name>
+        </author>
+        <author>
+            <name>John Rizos</name>
+        </author>
+        <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1140/epjc/s10052-022-10353-6
+		</arxiv:doi>
+        <link title="doi" href="http://dx.doi.org/10.1140/epjc/s10052-022-10353-6" rel="related" />
+        <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">47 pages, no figures
+		</arxiv:comment>
+        <link href="http://arxiv.org/abs/2112.01211v1" rel="alternate" type="text/html" />
+        <link title="pdf" href="http://arxiv.org/pdf/2112.01211v1" rel="related" type="application/pdf" />
+        <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="hep-th" scheme="http://arxiv.org/schemas/atom" />
+        <category term="hep-th" scheme="http://arxiv.org/schemas/atom" />
+        <category term="hep-ph" scheme="http://arxiv.org/schemas/atom" />
+    </entry>
+</feed>
