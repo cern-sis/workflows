@@ -13,14 +13,12 @@ def convert_html_subsripts_to_latex(input):
     input = sub("<sub>(.*?)</sub>", r"$_{\1}$", input)
     input = sub("<inf>(.*?)</inf>", r"$_{\1}$", input)
     input = sub("<sup>(.*?)</sup>", r"$^{\1}$", input)
-    return input 
-    
-def clean_collaboration(input):
-    return clean_whitespace_characters(input.replace("for the", ""))
+    return input
 
 
 def clean_collaboration(input):
     return clean_whitespace_characters(input.replace("for the", ""))
+
 
 def remove_specific_tags(value, tags=None, attributes=None):
     tags = tags or []
@@ -47,7 +45,6 @@ def clean_affiliation_for_author(input):
     )
     cleaned_label_content = cleaner.clean(input)
     return clean_whitespace_characters(remove_specific_tags(cleaned_label_content))
-
 
 
 def clean_all_affiliations_for_author(input):

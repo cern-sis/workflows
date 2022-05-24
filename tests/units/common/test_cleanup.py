@@ -5,9 +5,9 @@ from common.cleanup import (
     clean_collaboration,
     clean_whitespace_characters,
     convert_html_subsripts_to_latex,
-    remove_specific_tags)
+    remove_specific_tags,
+)
 from common.mappings import MATHML_ELEMENTS
-
 
 expected_string = "Simple input with spaces"
 string = " Simple input with spaces "
@@ -93,7 +93,7 @@ no_tags = '<p content-type="scoap3">Article funded by SCOAP</p>'
 def test_convert_html_subsripts_to_latex(test_input, expected):
     assert convert_html_subsripts_to_latex(test_input) == expected
 
-    
+
 xml = "<div><p>example<h1> h1 example</h1></p></div>"
 xml_just_p = "<p>example h1 example</p>"
 xml_just_div = "<div>example h1 example</div>"
@@ -125,6 +125,7 @@ def test_remove_specific_tags(test_input, expected, tags, attributes):
     assert (
         remove_specific_tags(test_input, tags=tags, attributes=attributes) == expected
     )
+
 
 def test_remove_specific_tags_with_mathML(shared_datadir):
     file_with_mathML = (shared_datadir / "file_with_mathML.xml").read_text()
