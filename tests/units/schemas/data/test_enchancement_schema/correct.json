@@ -1,0 +1,20 @@
+{
+  "abstracts": [{ "value": "this is abstracts", "source": "Springer" }],
+  "acquisition_source": {
+    "source": "Springer",
+    "method": "Springer",
+    "date": "2022-05-20T00:00:00",
+    "submission_number": "path/to/the/file"
+  },
+  "copyright": [
+    {
+      "holder": "copyright_holder",
+      "year": "2020",
+      "statement": "copyright_statement",
+      "material": "copyright_material"
+    }
+  ],
+  "imprints": [{ "date": "2022-05-20", "publisher": "Springer" }],
+  "record_creation_date": "2022-05-20T00:00:00",
+  "titles": [{ "title": "title", "subtitle": "subtitle", "source": "Springer" }]
+}

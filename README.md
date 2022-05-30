@@ -59,3 +59,9 @@ A Makefile has been created to ease this process. The available targets are the 
 
 Airflow UI will be rinning on localhost:8080.
 More details about Airflow installation and running can be found [here](https://airflow.apache.org/docs/apache-airflow/stable/start/local.html)
+
+## Schemas
+
+1. Parser schema - describes the structure of the output of publisher parser, and input for generic parser
+2. Generic parser schema - describes the structure of the output of generic parser, and input for enhancer
+3. Enhancer schema - describes the structure of the output of enhancer
