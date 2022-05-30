@@ -1,0 +1,108 @@
+{
+  "abstract": "Test abstract",
+  "arxiv_eprints": [
+    {
+      "value": "Test Eprint"
+    }
+  ],
+  "authors": [
+    {
+      "affiliations": [
+        {
+          "country": "Test country",
+          "organization": "Test org",
+          "value": "Test affiliation"
+        }
+      ],
+      "email": "test@email.com",
+      "full_name": "Test Surname, Test names",
+      "given_names": "Test names",
+      "surname": "Test Surname"
+    }
+  ],
+  "classification_numbers": [
+    {
+      "classification_number": "Test classification 1",
+      "standard": "PACS"
+    },
+    {
+      "classification_number": "Test classification 2",
+      "standard": "PACS"
+    }
+  ],
+  "collaborations": [
+    {
+      "value": "Test collaboration"
+    }
+  ],
+  "collections": [
+    {
+      "primary": "Test Collection"
+    }
+  ],
+  "control_field": "Test control field",
+  "copyright_holder": "Test Copyright",
+  "copyright_year": "2019",
+  "date_published": "2019-02-06",
+  "dois": [
+    {
+      "value": "Test dois"
+    },
+    {
+      "value": "Test related article doi"
+    }
+  ],
+  "free_keywords": [
+    {
+      "source": "author",
+      "value": "Test free 1"
+    },
+    {
+      "source": "author",
+      "value": "Test free 2"
+    }
+  ],
+  "license": [
+    {
+      "license": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses//by/4.0"
+    }
+  ],
+  "local_files": [
+    {
+      "value": "Test local file"
+    }
+  ],
+  "page_nr": [45],
+  "publication_info": [
+    {
+      "artid": "Test art-id",
+      "journal_issue": "2",
+      "journal_title": "Test title",
+      "journal_volume": "79",
+      "material": "article",
+      "page_end": "45",
+      "page_start": "1",
+      "year": 2019
+    }
+  ],
+  "thesis": "Test thesis",
+  "thesis_supervisor": [
+    {
+      "affiliations": [
+        {
+          "country": "Test country",
+          "organization": "Test org",
+          "value": "Test affiliation"
+        }
+      ],
+      "full_name": "Test Surname, Test names"
+    }
+  ],
+  "title": "Test title",
+  "urls": [
+    {
+      "value": "test.com"
+    }
+  ]
+}
