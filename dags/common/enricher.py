@@ -5,6 +5,8 @@ from typing import Dict
 
 import backoff
 import requests
+from common.cleanup import remove_unnecessary_fields
+from common.parsing.generic_parsing import remove_empty_values
 from structlog import get_logger
 
 
@@ -106,4 +108,6 @@ class Enricher(object):
                 ],
             }
         )
+        enriched_article = remove_empty_values(enriched_article)
+        enriched_article = remove_unnecessary_fields(enriched_article)
         return enriched_article

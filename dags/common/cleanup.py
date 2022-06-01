@@ -51,3 +51,24 @@ def clean_all_affiliations_for_author(input):
     for affiliation in input.get("affiliations", []):
         affiliation["value"] = clean_affiliation_for_author(affiliation["value"])
     return input
+
+
+def remove_unnecessary_fields(obj):
+    fieldnames = [
+        "curated",
+        "citeable",
+        "files",
+    ]
+    [obj.pop(field, None) for field in fieldnames]
+    return obj
+
+
+def remove_orcid_prefix(obj):
+    orcid_prefixes = ("orcid:", "https://orcid.org/", "http://orcid.org/")
+    for author in obj.get("authors", ()):
+        if "orcid" not in author:
+            continue
+        for orcid_prefix in orcid_prefixes:
+            if author["orcid"].lower().startswith(orcid_prefix):
+                author["orcid"] = author["orcid"][len(orcid_prefix) :]
+    return obj

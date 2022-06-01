@@ -4,7 +4,6 @@ import string
 from io import BytesIO
 from unittest.mock import patch
 
-from airflow import AirflowException
 from airflow.models import DagBag
 from airflow.models.dagrun import DagRun
 from aps.utils import split_json, trigger_file_processing
@@ -40,9 +39,7 @@ TRIGGERED_DAG_NAME = "aps_process_file"
 def get_dag_runs(dag_id, states=[]):
     dagbag = DagBag()
     # Check DAG exists.
-    if dag_id not in dagbag.dags:
-        error_message = "Dag id {} not found".format(dag_id)
-        raise AirflowException(error_message)
+    assert dag_id in dagbag.dags
 
     dag_runs = list()
     for state in states:
@@ -50,10 +47,6 @@ def get_dag_runs(dag_id, states=[]):
         for run in DagRun.find(dag_id=dag_id, state=state):
             dag_runs.append(run.run_id)
     return dag_runs
-
-
-def return_runs_ids(ids_and_articles):
-    return [data["id"] for data in ids_and_articles]
 
 
 def generate_pesudo_dois():

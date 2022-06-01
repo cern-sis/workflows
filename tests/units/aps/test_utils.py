@@ -1,19 +1,10 @@
 from datetime import date, datetime
 from io import BytesIO
 
-import pytest
-from airflow.models import DagBag
 from aps.utils import save_file_in_s3, set_APS_harvesting_interval, split_json
 
 DAG_NAME = "aps_fetch_api"
 TRIGGERED_DAG_NAME = "aps_process_file"
-
-
-@pytest.fixture
-def dag():
-    dagbag = DagBag(dag_folder="dags/", include_examples=False)
-    assert dagbag.import_errors.get(f"dags/{DAG_NAME}.py") is None
-    return dagbag.get_dag(dag_id=DAG_NAME)
 
 
 class MockedRepo:

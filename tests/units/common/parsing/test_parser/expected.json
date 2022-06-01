@@ -13,7 +13,8 @@
       "email": "test@email.com",
       "full_name": "Test Surname, Test names",
       "given_names": "Test names",
-      "surname": "Test Surname"
+      "surname": "Test Surname",
+      "orcid": "Test Id"
     }
   ],
   "classification_numbers": [

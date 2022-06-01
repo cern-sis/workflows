@@ -25,7 +25,12 @@ def test_get_arxiv_categories_title(enricher, assertListEqual):
 
 
 def test_enricher(enricher: Enricher, assertListEqual):
-    input_article = {"arxiv_eprints": [{"value": "2112.01211"}]}
+    input_article = {
+        "arxiv_eprints": [{"value": "2112.01211"}],
+        "curated": "Test Value",
+        "citeable": "Test Value",
+        "files": "Test Value",
+    }
     assertListEqual(
         {
             "arxiv_eprints": [

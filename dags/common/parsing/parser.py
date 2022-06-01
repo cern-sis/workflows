@@ -1,7 +1,11 @@
 import xml.etree.ElementTree as ET
 from typing import Dict, List
 
-from common.cleanup import clean_collaboration, clean_whitespace_characters
+from common.cleanup import (
+    clean_collaboration,
+    clean_whitespace_characters,
+    remove_orcid_prefix,
+)
 from common.parsing.extractor import IExtractor
 from common.parsing.generic_parsing import (
     classification_numbers,
@@ -83,7 +87,8 @@ class IParser:
 
         parsed_article["dois"] = merge_dois(parsed_article)
         parsed_article = pipe_functions(
-            [clear_unnecessary_fields, remove_empty_values], parsed_article
+            [clear_unnecessary_fields, remove_empty_values, remove_orcid_prefix],
+            parsed_article,
         )
 
         return parsed_article

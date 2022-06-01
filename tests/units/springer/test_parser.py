@@ -172,13 +172,13 @@ def test_license(parsed_articles):
         [
             {
                 "license": "CC-BY-4.0",
-                "url": "https://creativecommons.org/licenses//by/4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0",
             }
         ],
         [
             {
                 "license": "CC-BY-4.0",
-                "url": "https://creativecommons.org/licenses//by/4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0",
             }
         ],
     )
@@ -265,12 +265,12 @@ def test_page_nr(parsed_articles):
 
 def test_copyrights(parsed_articles):
     expected_results = (
-        dict(copyright_holder="SISSA, Trieste, Italy", copyright_year="2019"),
-        dict(copyright_holder="The Author(s)", copyright_year="2019"),
-        dict(
-            copyright_holder="CERN for the benefit of the ATLAS collaboration",
-            copyright_year="2019",
-        ),
+        {"copyright_holder": "SISSA, Trieste, Italy", "copyright_year": 2019},
+        {"copyright_holder": "The Author(s)", "copyright_year": 2019},
+        {
+            "copyright_holder": "CERN for the benefit of the ATLAS collaboration",
+            "copyright_year": 2019,
+        },
     )
     for expected, article in zip(expected_results, parsed_articles):
         for k, v in expected.items():

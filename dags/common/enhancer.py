@@ -3,14 +3,13 @@ import datetime
 
 class Enhancer:
     def __constuct_abstracts(self, item, publisher):
-        item["abstracts"] = [{"value": item.pop("abstracts", ""), "source": publisher}]
+        item["abstracts"] = [{"value": item.pop("abstract", ""), "source": publisher}]
 
     def __construct_acquisition_source(self, item, creation_date, publisher):
         item["acquisition_source"] = {
             "source": publisher,
             "method": publisher,
             "date": creation_date,
-            "submission_number": "path/to/the/file",
         }
 
     def __construct_copyright(self, item):

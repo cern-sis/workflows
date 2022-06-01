@@ -46,7 +46,6 @@ def test_dag_migrate_from_FTP():
 
 
 def test_dag_trigger_file_processing():
-    # TODO: Change this when implemented
     repo = SpringerRepository()
     assert repo.find_all() == trigger_file_processing("springer", repo)
 

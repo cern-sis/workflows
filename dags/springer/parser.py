@@ -96,6 +96,7 @@ class SpringerParser(IParser):
             TextExtractor(
                 "copyright_year",
                 "./Journal/Volume/Issue/Article/ArticleInfo/ArticleCopyright/CopyrightYear",
+                extra_function=lambda x: int(x),
             ),
             TextExtractor(
                 "copyright_statement",
@@ -243,7 +244,7 @@ class SpringerParser(IParser):
         version_node = article.find(
             "./Journal/Volume/Issue/Article/ArticleInfo/ArticleCopyright/License"
         )
-        text = "https://creativecommons.org/licenses/"
+        base_url = "https://creativecommons.org/licenses"
 
         if license_node is not None:
             license_type = license_node.get("SubType")
@@ -252,7 +253,7 @@ class SpringerParser(IParser):
             return [
                 {
                     "license": "CC-" + license_type.upper() + "-" + version,
-                    "url": f"{text}/{license_type}/{version}",
+                    "url": f"{base_url}/{license_type}/{version}",
                 }
             ]
 

@@ -18,7 +18,8 @@
           "country": "Test country"
         }
       ],
-      "full_name": "Test, Name"
+      "full_name": "Test, Name",
+      "orcid": "orcid:Test Id"
     }
   ],
   "collaborations": ["Test collaboration"],

@@ -5,7 +5,9 @@ from common.cleanup import (
     clean_collaboration,
     clean_whitespace_characters,
     convert_html_subsripts_to_latex,
+    remove_orcid_prefix,
     remove_specific_tags,
+    remove_unnecessary_fields,
 )
 from common.mappings import MATHML_ELEMENTS
 
@@ -249,3 +251,47 @@ empty = {"affiliations": []}
 )
 def test_clean_all_affiliations_for_author(test_input, expected):
     assert clean_all_affiliations_for_author(test_input) == expected
+
+
+@pytest.mark.parametrize(
+    "test_input, expected",
+    [
+        pytest.param(
+            {"curated": "Test Value", "citeable": "Test Value", "files": "Test Value"},
+            {},
+            id="Fields exist",
+        ),
+        pytest.param(
+            {},
+            {},
+            id="Fields don't exist",
+        ),
+    ],
+)
+def test_remove_unnecessary_fields(test_input, expected):
+    assert expected == remove_unnecessary_fields(test_input)
+
+
+@pytest.mark.parametrize(
+    "test_input, expected",
+    [
+        pytest.param(
+            {
+                "authors": [
+                    {"orcid": "orcid:test"},
+                    {"orcid": "https://orcid.org/test"},
+                    {"orcid": "http://orcid.org/test"},
+                ]
+            },
+            {"authors": [{"orcid": "test"}, {"orcid": "test"}, {"orcid": "test"}]},
+            id="Authors contain orcid",
+        ),
+        pytest.param(
+            {},
+            {},
+            id="Fields don't exist",
+        ),
+    ],
+)
+def test_remove_orcid_prefixes(test_input, expected):
+    assert expected == remove_orcid_prefix(test_input)

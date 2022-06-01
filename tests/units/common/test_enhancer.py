@@ -5,7 +5,7 @@ from freezegun import freeze_time
 publisher = "Springer"
 
 generic_pseudo_parser_output = {
-    "abstracts": "this is abstracts",
+    "abstract": "this is abstracts",
     "copyright_holder": "copyright_holder",
     "copyright_year": "2020",
     "copyright_statement": "copyright_statement",
@@ -22,7 +22,6 @@ expected_output = {
         "source": publisher,
         "method": publisher,
         "date": "2022-05-20T00:00:00",
-        "submission_number": "path/to/the/file",
     },
     "copyright": [
         {
@@ -38,7 +37,7 @@ expected_output = {
 }
 
 empty_generic_pseudo_parser_output = {
-    "abstracts": "",
+    "abstract": "",
     "copyright_holder": "",
     "copyright_year": "",
     "copyright_statement": "",
@@ -55,7 +54,6 @@ expected_output_from_empty_input = {
         "source": publisher,
         "method": publisher,
         "date": "2022-05-20T00:00:00",
-        "submission_number": "path/to/the/file",
     },
     "copyright": [{"holder": "", "year": "", "statement": "", "material": ""}],
     "imprints": [{"date": "", "publisher": publisher}],

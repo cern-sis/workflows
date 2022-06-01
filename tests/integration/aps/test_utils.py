@@ -2,7 +2,7 @@ import json
 from datetime import datetime
 
 import pytest
-from airflow import DAG, AirflowException
+from airflow import DAG
 from airflow.models import DagBag
 from airflow.models.dagrun import DagRun
 from airflow.utils.state import DagRunState
@@ -66,17 +66,3 @@ def __test_dagrun_state(dagrun: DagRun):
         not dagrun.get_state() == DagRunState.QUEUED
         and not dagrun.get_state() == DagRunState.RUNNING
     )
-
-
-def get_dag_runs_amount(dag_id, state=None):
-    dagbag = DagBag()
-    # Check DAG exists.
-    if dag_id not in dagbag.dags:
-        error_message = "Dag id {} not found".format(dag_id)
-        raise AirflowException(error_message)
-
-    dag_runs = list()
-    state = state.lower() if state else None
-    for run in DagRun.find(dag_id=dag_id, state=state):
-        dag_runs.append(run)
-    return len(dag_runs)
