@@ -9,7 +9,7 @@ from common.s3_service import S3Service
 class APSRepository(IRepository):
     def __init__(self) -> None:
         super().__init__()
-        self.s3_bucket = S3Service(os.getenv("BUCKET_NAME_APS", "aps"))
+        self.s3_bucket = S3Service(os.getenv("APS_BUCKET_NAME", "aps"))
 
     def find_all(self):
         files = []

@@ -6,7 +6,7 @@ from common.request import Request
 
 parameters = APSParams().get_params()
 exptected_params = {
-    "base_url": os.getenv("APS_BASE_URL", "http://harvest.aps.org"),
+    "base_url": os.getenv("APS_API_BASE_URL", "http://harvest.aps.org"),
     "parameters": parameters,
 }
 
@@ -14,7 +14,7 @@ exptected_params = {
 @pytest.fixture
 def rest_api_fixture():
     return Request(
-        base_url=os.getenv("APS_BASE_URL", "http://harvest.aps.org"),
+        base_url=os.getenv("APS_API_BASE_URL", "http://harvest.aps.org"),
         parameters=parameters,
     )
 

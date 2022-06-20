@@ -12,7 +12,7 @@ class SpringerRepository(IRepository):
 
     def __init__(self) -> None:
         super().__init__()
-        self.s3 = S3Service(os.getenv("SPRINGER_REPO_BUCKET", "springer"))
+        self.s3 = S3Service(os.getenv("SPRINGER_BUCKET_NAME", "springer"))
 
     def find_all(self):
         ret_dict = {}

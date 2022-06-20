@@ -59,3 +59,27 @@ A Makefile has been created to ease this process. The available targets are the 
 
 Airflow UI will be rinning on localhost:8080.
 More details about Airflow installation and running can be found [here](https://airflow.apache.org/docs/apache-airflow/stable/start/local.html)
+
+## Environment Variables
+
+### Publisher Specific
+
+| Name                      | Description                                                |
+| ------------------------- | ---------------------------------------------------------- |
+| {PUBLISHER}\_API_BASE_URL | Base URL for the API to call to get the articles metadata. |
+| {PUBLISHER}\_BUCKET_NAME  | S3 Bucket name                                             |
+| {PUBLISHER}\_FTP_HOST     | FTP Host                                                   |
+| {PUBLISHER}\_FTP_USERNAME | FTP Username                                               |
+| {PUBLISHER}\_FTP_PASSWORD | FTP Password                                               |
+| {PUBLISHER}\_FTP_PORT     | FTP Port                                                   |
+| {PUBLISHER}\_FTP_DIR      | FTP Base directory                                         |
+
+### Global
+
+| Name        | Description                     |
+| ----------- | ------------------------------- |
+| REPO_URL    | URL for the SCOAP3 repo schema. |
+| S3_ENDPOINT | Endpoint of the S3 server.      |
+| S3_USERNAME | Username of the S3 server.      |
+| S3_PASSWORD | Password of the S3 server.      |
+| S3_REGION   | Username of the S3 server.      |

@@ -25,7 +25,7 @@ def aps_fetch_api():
             until_date=dates["aps_fetching_until_date"],
         ).get_params()
         rest_api = APSApiClient(
-            base_url=os.getenv("APS_BASE_URL", "http://harvest.aps.org")
+            base_url=os.getenv("APS_API_BASE_URL", "http://harvest.aps.org")
         )
         articles_metadata = str.encode(
             json.dumps(rest_api.get_articles_metadata(parameters))
