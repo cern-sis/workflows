@@ -64,15 +64,15 @@ More details about Airflow installation and running can be found [here](https://
 
 ### Publisher Specific
 
-| Name                      | Description                                                |
-| ------------------------- | ---------------------------------------------------------- |
-| {PUBLISHER}\_API_BASE_URL | Base URL for the API to call to get the articles metadata. |
-| {PUBLISHER}\_BUCKET_NAME  | S3 Bucket name                                             |
-| {PUBLISHER}\_FTP_HOST     | FTP Host                                                   |
-| {PUBLISHER}\_FTP_USERNAME | FTP Username                                               |
-| {PUBLISHER}\_FTP_PASSWORD | FTP Password                                               |
-| {PUBLISHER}\_FTP_PORT     | FTP Port                                                   |
-| {PUBLISHER}\_FTP_DIR      | FTP Base directory                                         |
+| Name                      | Description                                                | Affected Publishers |
+| ------------------------- | ---------------------------------------------------------- | ------------------- |
+| {PUBLISHER}\_API_BASE_URL | Base URL for the API to call to get the articles metadata. | APS                 |
+| {PUBLISHER}\_BUCKET_NAME  | S3 Bucket name                                             | APS                 |
+| {PUBLISHER}\_FTP_HOST     | FTP Host                                                   | Springer            |
+| {PUBLISHER}\_FTP_USERNAME | FTP Username                                               | Springer            |
+| {PUBLISHER}\_FTP_PASSWORD | FTP Password                                               | Springer            |
+| {PUBLISHER}\_FTP_PORT     | FTP Port                                                   | Springer            |
+| {PUBLISHER}\_FTP_DIR      | FTP Base directory                                         | Springer            |
 
 ### Global
 
