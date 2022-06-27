@@ -1,7 +1,8 @@
 from datetime import date, datetime
 from io import BytesIO
 
-from aps.utils import save_file_in_s3, set_APS_harvesting_interval, split_json
+from aps.utils import save_file_in_s3, split_json
+from common.utils import set_harvesting_interval
 
 DAG_NAME = "aps_fetch_api"
 TRIGGERED_DAG_NAME = "aps_process_file"
@@ -38,19 +39,19 @@ class MockedAPSApiClient:
 
 
 def test_set_APS_harvesting_interval(repo=MockedRepo()):
-    today = date.today()
+    today = date.today().strftime("%Y-%m-%d")
     expected_days = {
-        "aps_fetching_from_date": today.strftime("%Y-%m-%d"),
-        "aps_fetching_until_date": today.strftime("%Y-%m-%d"),
+        "start_date": today,
+        "until_date": today,
     }
-    dates = set_APS_harvesting_interval(repo)
+    dates = set_harvesting_interval(repo)
     assert dates == expected_days
 
 
 def test_save_file_in_s3():
     today = date.today()
     repo = MockedRepo()
-    exptected_key = f'{today.strftime("%Y-%m-%d")}/{ datetime.now().strftime("%Y-%m-%dT%H:%M")}.json'
+    exptected_key = f'{today}/{ datetime.now().strftime("%Y-%m-%dT%H:%M")}.json'
     data = str.encode('{"data": ["abstracts": "abstract value"]}')
     key = save_file_in_s3(data, repo)
     assert key == exptected_key

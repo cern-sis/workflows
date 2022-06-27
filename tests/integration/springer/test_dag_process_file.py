@@ -9,7 +9,7 @@ from airflow.models import DagBag
 from airflow.utils.state import DagRunState
 from busypie import SECOND, wait
 from freezegun import freeze_time
-from pytest import fail, fixture, raises
+from pytest import fixture, raises
 from springer.dag_process_file import (
     springer_enhance_file,
     springer_enrich_file,
@@ -267,10 +267,7 @@ def test_dag_validate_file_pass(article):
         ],
         "$schema": "http://repo.qa.scoap3.org/schemas/hep.json",
     }
-    try:
-        springer_validate_record(article)
-    except Exception:
-        fail()
+    springer_validate_record(article)
 
 
 def test_dag_validate_file_fails(article):

@@ -3,21 +3,6 @@ from datetime import date, datetime
 from io import BytesIO
 
 from airflow.api.common import trigger_dag
-from airflow.models import Variable
-
-
-def set_APS_harvesting_interval(repo):
-    today = date.today()
-    aps_fetching_from_date = repo.find_the_last_uploaded_file_date()
-    aps_fetching_until_date = today.strftime("%Y-%m-%d")
-    Variable.set(
-        "aps_fetching_from_date", aps_fetching_from_date or aps_fetching_until_date
-    )
-    Variable.set("aps_fetching_until_date", aps_fetching_until_date)
-    return {
-        "aps_fetching_from_date": Variable.get("aps_fetching_from_date"),
-        "aps_fetching_until_date": Variable.get("aps_fetching_until_date"),
-    }
 
 
 def save_file_in_s3(data, repo):
@@ -43,12 +28,12 @@ def split_json(repo, key):
     return ids_and_articles
 
 
-def trigger_file_processing(ids_and_articles):
+def trigger_file_processing_DAG(ids_and_articles):
     for data in ids_and_articles:
         trigger_dag.trigger_dag(
             dag_id="aps_process_file",
             run_id=data["id"],
-            conf=json.dumps(data["article"]),
+            conf={"article": json.dumps(data["article"])},
             replace_microseconds=False,
         )
-    return ids_and_articles
+    return data

@@ -94,7 +94,8 @@ class Enricher(object):
         return categories
 
     def _set_categories(self, eprint: Dict):
-        eprint["categories"] = self._get_arxiv_categories(eprint["value"])
+        if eprint["value"]:
+            eprint["categories"] = self._get_arxiv_categories(eprint["value"])
         return eprint
 
     def __call__(self, article: Dict):

@@ -31,15 +31,15 @@ def test_dag_loaded(dag: DAG):
 @pytest.mark.vcr
 def test_aps_fetch_api():
     dates = {
-        "aps_fetching_from_date": "2022-02-05",
-        "aps_fetching_until_date": "2022-03-05",
+        "start_date": "2022-02-05",
+        "until_date": "2022-03-05",
     }
     repo = APSRepository()
     repo.delete_all()
     assert len(repo.find_all()) == 0
     parameters = APSParams(
-        from_date=dates["aps_fetching_from_date"],
-        until_date=dates["aps_fetching_until_date"],
+        from_date=dates["start_date"],
+        until_date=dates["until_date"],
     ).get_params()
     aps_api_client = APSApiClient()
     articles_metadata = str.encode(
@@ -49,13 +49,16 @@ def test_aps_fetch_api():
     assert len(repo.find_all()) == 1
 
 
-@pytest.mark.vcr
 def test_dag_run(dag: DAG):
     repo = APSRepository()
     repo.delete_all()
     assert len(repo.find_all()) == 0
     id = datetime.utcnow().strftime("test_aps_fetch_api_%Y-%m-%dT%H:%M:%S.%f")
-    dagrun = dag.create_dagrun(DagRunState.QUEUED, run_id=id)
+    dagrun = dag.create_dagrun(
+        DagRunState.QUEUED,
+        run_id=id,
+        conf={"start_date": "2022-06-17", "until_date": "2022-06-21"},
+    )
     wait().at_most(60, SECOND).until(lambda: __test_dagrun_state(dagrun))
     assert len(repo.find_all()) == 1
 

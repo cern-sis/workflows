@@ -6,7 +6,7 @@ from unittest.mock import patch
 
 from airflow.models import DagBag
 from airflow.models.dagrun import DagRun
-from aps.utils import split_json, trigger_file_processing
+from aps.utils import split_json, trigger_file_processing_DAG
 from common.repository import IRepository
 
 
@@ -64,7 +64,7 @@ def test_trigger_file_processing():
             "id": f"APS_{generate_pesudo_dois()}__2022-04-29T15:38:32.871047",
         },
     ]
-    trigger_file_processing(id_and_articles)
+    trigger_file_processing_DAG(id_and_articles)
 
     runs_ids = get_dag_runs(
         TRIGGERED_DAG_NAME, states=["success", "running", "queued", "failed"]

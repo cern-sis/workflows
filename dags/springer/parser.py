@@ -257,7 +257,7 @@ class SpringerParser(IParser):
                 }
             ]
 
-        self.logger.warning("Licence not found, returning default licence.")
+        self.logger.warning("License not found, returning default license.")
         return [
             {
                 "license": "CC-BY-3.0",

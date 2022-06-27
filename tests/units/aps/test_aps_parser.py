@@ -24,14 +24,14 @@ def parsed_articles(parser, articles):
     "expected, key",
     [
         pytest.param(
-            ["10.1103/PhysRevA.103.042607", "10.1103/PhysRevB.103.165408"],
+            [["10.1103/PhysRevA.103.042607"], ["10.1103/PhysRevB.103.165408"]],
             "dois",
             id="test_dois",
         ),
         pytest.param(["article", "article"], "journal_doctype", id="test_articleType"),
-        pytest.param([10, 11], "page_nr", id="test_page_nr"),
+        pytest.param([[10], [11]], "page_nr", id="test_page_nr"),
         pytest.param(
-            [{"value": "2102.07212"}, {"value": "2012.07847"}],
+            [[{"value": "2102.07212"}], [{"value": "2012.07847"}]],
             "arxiv_eprints",
             id="test_arxiv_eprints",
         ),
@@ -51,89 +51,85 @@ def parsed_articles(parser, articles):
             "title",
             id="test_title",
         ),
-        pytest.param([10, 11], "page_nr", id="test_page_nr"),
+        pytest.param([[10], [11]], "page_nr", id="test_page_nr"),
         pytest.param(
             [
-                {
-                    "authors": [
-                        {
-                            "full_name": "Shu-Hao Wu",
-                            "given_names": "Shu-Hao",
-                            "surname": "Wu",
-                            "affiliations": [
-                                {
-                                    "value": "Department of Physics, University of Oregon, Eugene, Oregon 97403, USA",
-                                    "organization": "Department of Physics, University of Oregon, Eugene, Oregon 97403",
-                                    "country": ["USA"],
-                                }
-                            ],
-                        },
-                        {
-                            "full_name": "Ethan Turner",
-                            "given_names": "Ethan",
-                            "surname": "Turner",
-                            "affiliations": [
-                                {
-                                    "value": "Department of Physics, University of Oregon, Eugene, Oregon 97403, USA",
-                                    "organization": "Department of Physics, University of Oregon, Eugene, Oregon 97403",
-                                    "country": ["USA"],
-                                }
-                            ],
-                        },
-                        {
-                            "full_name": "Hailin Wang",
-                            "given_names": "Hailin",
-                            "surname": "Wang",
-                            "affiliations": [
-                                {
-                                    "value": "Department of Physics, University of Oregon, Eugene, Oregon 97403, USA",
-                                    "organization": "Department of Physics, University of Oregon, Eugene, Oregon 97403",
-                                    "country": ["USA"],
-                                }
-                            ],
-                        },
-                    ]
-                },
-                {
-                    "authors": [
-                        {
-                            "full_name": "Nazim Boudjada",
-                            "given_names": "Nazim",
-                            "surname": "Boudjada",
-                            "affiliations": [
-                                {
-                                    "value": "Department of Physics, University of Toronto, Toronto, Ontario, Canada M5S1A7",
-                                    "organization": "Department of Physics, University of Toronto, Toronto, Ontario",
-                                    "country": ["Canada M5S1A7"],
-                                }
-                            ],
-                        },
-                        {
-                            "full_name": "Finn Lasse Buessen",
-                            "given_names": "Finn Lasse",
-                            "surname": "Buessen",
-                            "affiliations": [
-                                {
-                                    "value": "Department of Physics, University of Toronto, Toronto, Ontario, Canada M5S1A7",
-                                    "organization": "Department of Physics, University of Toronto, Toronto, Ontario",
-                                    "country": ["Canada M5S1A7"],
-                                }
-                            ],
-                        },
-                        {
-                            "full_name": "Arun Paramekanti",
-                            "given_names": "Arun",
-                            "surname": "Paramekanti",
-                            "affiliations": [
-                                {
-                                    "value": "Department of Physics, University of Toronto, Toronto, Ontario, Canada M5S1A7",
-                                    "organization": "Department of Physics, University of Toronto, Toronto, Ontario",
-                                    "country": ["Canada M5S1A7"],
-                                }
-                            ],
-                        },
-                    ]
-                },
+                [
+                    {
+                        "full_name": "Shu-Hao Wu",
+                        "given_names": "Shu-Hao",
+                        "surname": "Wu",
+                        "affiliations": [
+                            {
+                                "value": "Department of Physics, University of Oregon, Eugene, Oregon 97403, USA",
+                                "organization": "Department of Physics, University of Oregon, Eugene, Oregon 97403",
+                                "country": "USA",
+                            }
+                        ],
+                    },
+                    {
+                        "full_name": "Ethan Turner",
+                        "given_names": "Ethan",
+                        "surname": "Turner",
+                        "affiliations": [
+                            {
+                                "value": "Department of Physics, University of Oregon, Eugene, Oregon 97403, USA",
+                                "organization": "Department of Physics, University of Oregon, Eugene, Oregon 97403",
+                                "country": "USA",
+                            }
+                        ],
+                    },
+                    {
+                        "full_name": "Hailin Wang",
+                        "given_names": "Hailin",
+                        "surname": "Wang",
+                        "affiliations": [
+                            {
+                                "value": "Department of Physics, University of Oregon, Eugene, Oregon 97403, USA",
+                                "organization": "Department of Physics, University of Oregon, Eugene, Oregon 97403",
+                                "country": "USA",
+                            }
+                        ],
+                    },
+                ],
+                [
+                    {
+                        "full_name": "Nazim Boudjada",
+                        "given_names": "Nazim",
+                        "surname": "Boudjada",
+                        "affiliations": [
+                            {
+                                "value": "Department of Physics, University of Toronto, Toronto, Ontario, Canada M5S1A7",
+                                "organization": "Department of Physics, University of Toronto, Toronto, Ontario",
+                                "country": "Canada M5S1A7",
+                            }
+                        ],
+                    },
+                    {
+                        "full_name": "Finn Lasse Buessen",
+                        "given_names": "Finn Lasse",
+                        "surname": "Buessen",
+                        "affiliations": [
+                            {
+                                "value": "Department of Physics, University of Toronto, Toronto, Ontario, Canada M5S1A7",
+                                "organization": "Department of Physics, University of Toronto, Toronto, Ontario",
+                                "country": "Canada M5S1A7",
+                            }
+                        ],
+                    },
+                    {
+                        "full_name": "Arun Paramekanti",
+                        "given_names": "Arun",
+                        "surname": "Paramekanti",
+                        "affiliations": [
+                            {
+                                "value": "Department of Physics, University of Toronto, Toronto, Ontario, Canada M5S1A7",
+                                "organization": "Department of Physics, University of Toronto, Toronto, Ontario",
+                                "country": "Canada M5S1A7",
+                            }
+                        ],
+                    },
+                ],
             ],
             "authors",
             id="test_authors",
@@ -154,9 +150,6 @@ def parsed_articles(parser, articles):
             "copyright_holder",
             id="test_copyright_holderd",
         ),
-        pytest.param(
-            ["2021-04-12", "2021-04-12"], "date_published", id="test_date_published"
-        ),
         pytest.param([2021, 2021], "copyright_year", id="test_copyright_year"),
         pytest.param(
             ["©2021 American Physical Society", "©2021 American Physical Society"],
@@ -165,58 +158,55 @@ def parsed_articles(parser, articles):
         ),
         pytest.param(
             [
-                "http://link.aps.org/licenses/aps-default-license",
-                "http://link.aps.org/licenses/aps-default-license",
+                [{"url": "http://link.aps.org/licenses/aps-default-license"}],
+                [{"url": "http://link.aps.org/licenses/aps-default-license"}],
             ],
-            "licenses",
-            id="test_licenses",
+            "license",
+            id="test_license",
         ),
         pytest.param([[], []], "field_categories", id="test_field_categories"),
+        # THIS IS A TEST FOR EXTRA DATA
         pytest.param(
             [
-                {
-                    "files": [
-                        {
-                            "url": "http://harvest.aps.org/v2/journals/articles/{0}".format(
-                                "10.1103/PhysRevA.103.042607"
-                            ),
-                            "headers": {"Accept": "application/pdf"},
-                            "name": "{0}.pdf".format("10.1103/PhysRevA.103.042607"),
-                            "filetype": "pdf",
-                        },
-                        {
-                            "url": "http://harvest.aps.org/v2/journals/articles/{0}".format(
-                                "10.1103/PhysRevA.103.042607"
-                            ),
-                            "headers": {"Accept": "text/xml"},
-                            "name": "{0}.xml".format("10.1103/PhysRevA.103.042607"),
-                            "filetype": "xml",
-                        },
-                    ]
-                },
-                {
-                    "files": [
-                        {
-                            "url": "http://harvest.aps.org/v2/journals/articles/{0}".format(
-                                "10.1103/PhysRevB.103.165408"
-                            ),
-                            "headers": {"Accept": "application/pdf"},
-                            "name": "{0}.pdf".format("10.1103/PhysRevB.103.165408"),
-                            "filetype": "pdf",
-                        },
-                        {
-                            "url": "http://harvest.aps.org/v2/journals/articles/{0}".format(
-                                "10.1103/PhysRevB.103.165408"
-                            ),
-                            "headers": {"Accept": "text/xml"},
-                            "name": "{0}.xml".format("10.1103/PhysRevB.103.165408"),
-                            "filetype": "xml",
-                        },
-                    ]
-                },
+                [
+                    {
+                        "url": "http://harvest.aps.org/v2/journals/articles/{0}".format(
+                            "10.1103/PhysRevA.103.042607"
+                        ),
+                        "headers": {"Accept": "application/pdf"},
+                        "name": "{0}.pdf".format("10.1103/PhysRevA.103.042607"),
+                        "filetype": "pdf",
+                    },
+                    {
+                        "url": "http://harvest.aps.org/v2/journals/articles/{0}".format(
+                            "10.1103/PhysRevA.103.042607"
+                        ),
+                        "headers": {"Accept": "text/xml"},
+                        "name": "{0}.xml".format("10.1103/PhysRevA.103.042607"),
+                        "filetype": "xml",
+                    },
+                ],
+                [
+                    {
+                        "url": "http://harvest.aps.org/v2/journals/articles/{0}".format(
+                            "10.1103/PhysRevB.103.165408"
+                        ),
+                        "headers": {"Accept": "application/pdf"},
+                        "name": "{0}.pdf".format("10.1103/PhysRevB.103.165408"),
+                        "filetype": "pdf",
+                    },
+                    {
+                        "url": "http://harvest.aps.org/v2/journals/articles/{0}".format(
+                            "10.1103/PhysRevB.103.165408"
+                        ),
+                        "headers": {"Accept": "text/xml"},
+                        "name": "{0}.xml".format("10.1103/PhysRevB.103.165408"),
+                        "filetype": "xml",
+                    },
+                ],
             ],
-            "extra_data",
-            id="test_extra_data",
+            "files",
+            id="test_files",
         ),
     ],
 )
