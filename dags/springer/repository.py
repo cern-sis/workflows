@@ -14,9 +14,20 @@ class SpringerRepository(IRepository):
         super().__init__()
         self.s3 = S3Service(os.getenv("SPRINGER_BUCKET_NAME", "springer"))
 
-    def find_all(self):
+    def get_all_raw_filenames(self):
+        return [
+            f.key.split("/")[-1]
+            for f in self.s3.objects.filter(Prefix=self.ZIPED_DIR).all()
+        ]
+
+    def find_all(self, filenames_to_process=None):
         ret_dict = {}
-        filenames = self.__find_all_extracted_files()
+        filenames = []
+        filenames = (
+            filenames_to_process
+            if filenames_to_process
+            else self.__find_all_extracted_files()
+        )
         for file in filenames:
             file_parts = file.split("/")
             last_part = file_parts[-1]
@@ -24,7 +35,7 @@ class SpringerRepository(IRepository):
             if filename_without_extension not in ret_dict.keys():
                 ret_dict[filename_without_extension] = dict()
             ret_dict[filename_without_extension][
-                "xml" if self.__file_is_meta(last_part) else "pdf"
+                "xml" if self.is_meta(last_part) else "pdf"
             ] = file
         return list(ret_dict.values())
 
@@ -44,8 +55,8 @@ class SpringerRepository(IRepository):
         return [
             f.key
             for f in self.s3.objects.filter(Prefix=self.EXTRACTED_DIR).all()
-            if self.__file_is_meta(f.key) or ".pdf" in f.key
+            if self.is_meta(f.key) or ".pdf" in f.key
         ]
 
-    def __file_is_meta(self, filename: str):
+    def is_meta(self, filename: str):
         return ".Meta" in filename or ".scoap" in filename

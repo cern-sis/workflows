@@ -5,22 +5,37 @@ from common.repository import IRepository
 from common.sftp_service import SFTPService
 from springer.repository import SpringerRepository
 from springer.sftp_service import SpringerSFTPService
+from structlog import get_logger
 
 
-@dag(start_date=airflow.utils.dates.days_ago(0))
+@dag(
+    start_date=airflow.utils.dates.days_ago(0),
+    params={
+        "force_pull": False,
+        "filenames_pull": {"enabled": False, "filenames": [], "force_from_ftp": False},
+    },
+)
 def springer_pull_ftp():
+    logger = get_logger().bind(class_name="springer_pull_ftp")
+
     @task()
     def migrate_from_ftp(
         sftp: SFTPService = SpringerSFTPService(),
         repo: IRepository = SpringerRepository(),
+        **kwargs
     ):
-        pull_ftp.migrate_from_ftp(sftp, repo)
+        return pull_ftp.migrate_from_ftp(sftp, repo, logger, **kwargs)
 
     @task()
-    def trigger_file_processing(repo: IRepository = SpringerRepository()):
-        return pull_ftp.trigger_file_processing("springer", repo)
+    def trigger_file_processing(
+        filenames=None, repo: IRepository = SpringerRepository()
+    ):
+        return pull_ftp.trigger_file_processing(
+            "springer", repo, logger, filenames or []
+        )
 
-    migrate_from_ftp() >> trigger_file_processing()
+    filenames = migrate_from_ftp()
+    trigger_file_processing(filenames)
 
 
 dag_taskflow = springer_pull_ftp()

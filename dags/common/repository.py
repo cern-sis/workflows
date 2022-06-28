@@ -2,6 +2,9 @@ from typing import IO
 
 
 class IRepository:
+    def get_all_raw_filenames(self):
+        raise NotImplementedError
+
     def find_all(self):
         raise NotImplementedError
 
@@ -15,4 +18,7 @@ class IRepository:
         raise NotImplementedError
 
     def delete_all(self):
+        raise NotImplementedError
+
+    def is_meta(self, filename):
         raise NotImplementedError

@@ -9,6 +9,7 @@ from busypie import SECOND, wait
 from common.pull_ftp import migrate_from_ftp, trigger_file_processing
 from springer.repository import SpringerRepository
 from springer.sftp_service import SpringerSFTPService
+from structlog import get_logger
 
 DAG_NAME = "springer_pull_ftp"
 
@@ -41,13 +42,20 @@ def test_dag_migrate_from_FTP():
     repo = SpringerRepository()
     repo.delete_all()
     assert len(repo.find_all()) == 0
-    migrate_from_ftp(SpringerSFTPService(), repo)
+    migrate_from_ftp(
+        SpringerSFTPService(),
+        repo,
+        get_logger().bind(class_name="test_logger"),
+        **{"params": {}},
+    )
     assert len(repo.find_all()) == 3
 
 
 def test_dag_trigger_file_processing():
     repo = SpringerRepository()
-    assert repo.find_all() == trigger_file_processing("springer", repo)
+    assert list(map(lambda x: x["xml"], repo.find_all())) == trigger_file_processing(
+        "springer", repo, get_logger().bind(class_name="test_logger")
+    )
 
 
 def __test_dagrun_state(dagrun: DagRun):

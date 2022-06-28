@@ -74,6 +74,6 @@ def test_save_file(boto3_fixture: MagicMock):
 
 def test_file_is_meta():
     repo = SpringerRepository()
-    assert repo._SpringerRepository__file_is_meta("test.scoap")
-    assert repo._SpringerRepository__file_is_meta("test.Meta")
-    assert not repo._SpringerRepository__file_is_meta("test.test")
+    assert repo.is_meta("test.scoap")
+    assert repo.is_meta("test.Meta")
+    assert not repo.is_meta("test.test")
