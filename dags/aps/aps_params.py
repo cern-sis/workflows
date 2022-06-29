@@ -6,10 +6,10 @@ class APSParams:
         self,
         from_date: str = (date.today() - timedelta(days=1)).strftime("%Y-%m-%d"),
         until_date: str = date.today().strftime("%Y-%m-%d"),
-        date: str = "published",
+        date: str = "modified",
         journals: str = "",
-        sets: str = "",
-        per_page: int = 100,
+        sets: str = "scoap3",
+        per_page:int = 100,
     ):
         self.from_date = from_date
         self.until_date = until_date
@@ -25,6 +25,7 @@ class APSParams:
             "date": self.date,
             "journals": self.journals,
             "sets": self.sets,
-            "per_page": self.per_page,
+            "per_page": self.per_page
+
         }
         return {key: value for key, value in params.items() if value}
