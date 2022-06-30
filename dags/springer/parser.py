@@ -207,6 +207,7 @@ class SpringerParser(IParser):
             author = ObjectExtractor(
                 None,
                 [
+                    AttributeExtractor("orcid", ".", "ORCID"),
                     TextExtractor("surname", "./AuthorName/FamilyName"),
                     TextExtractor("given_names", "./AuthorName/GivenName"),
                     TextExtractor("email", "./Contact/Email", False),

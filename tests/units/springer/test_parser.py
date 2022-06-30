@@ -1,5 +1,5 @@
 import xml.etree.ElementTree as ET
-from zipfile import ZipFile
+from os import listdir
 
 from pytest import fixture
 from springer.parser import SpringerParser
@@ -12,24 +12,11 @@ def parser():
 
 @fixture
 def articles(datadir):
-    test_files = (
-        "ftp_PUB_19-01-29_20-02-10_JHEP.zip",
-        "ftp_PUB_19-01-29_20-02-10_EPJC.zip",
-        "ftp_PUB_19-02-06_16-01-13_EPJC_stripped.zip",
-    )
 
-    def extract_zip_to_article(zip_filename):
-        with ZipFile(zip_filename, "r") as zip_file:
-            return [
-                zip_file.read(filename)
-                for filename in map(lambda x: x.filename, zip_file.filelist)
-                if ".Meta" in filename or ".scoap" in filename
-            ][0]
-
-    articles = [
-        ET.fromstring(extract_zip_to_article(datadir / zip_filename))
-        for zip_filename in test_files
-    ]
+    articles = []
+    for filename in sorted(listdir(datadir)):
+        with open(datadir / filename) as file:
+            articles.append(ET.fromstring(file.read()))
 
     return articles
 
@@ -76,6 +63,7 @@ def test_authors(parsed_articles):
                         "country": "Japan",
                     },
                 ],
+                "orcid": "my-test-orcid",
                 "surname": "Moriyama",
                 "given_names": "Sanefumi",
                 "email": "moriyama@sci.osaka-cu.ac.jp",

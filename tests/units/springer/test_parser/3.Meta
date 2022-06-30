@@ -1,0 +1,2467 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Publisher PUBLIC "-//Springer-Verlag//DTD A++ V2.4//EN" "http://devel.springer.de/A++/V2.4/DTD/A++V2.4.dtd">
+<Publisher>
+   <PublisherInfo>
+      <PublisherName>Springer Berlin Heidelberg</PublisherName>
+      <PublisherLocation>Berlin/Heidelberg</PublisherLocation>
+      <PublisherImprintName>Springer</PublisherImprintName>
+   </PublisherInfo>
+   <Journal OutputMedium="All">
+      <JournalInfo JournalProductType="NonStandardArchiveJournal" NumberingStyle="ContentOnly">
+         <JournalID>10052</JournalID>
+         <JournalDOI>10.1007/10052.1434-6052</JournalDOI>
+         <JournalPrintISSN>1434-6044</JournalPrintISSN>
+         <JournalElectronicISSN>1434-6052</JournalElectronicISSN>
+         <JournalSPIN>30312819</JournalSPIN>
+         <JournalTitle>The European Physical Journal C</JournalTitle>
+         <JournalSubTitle>Particles and Fields</JournalSubTitle>
+         <JournalAbbreviatedTitle>Eur. Phys. J. C</JournalAbbreviatedTitle>
+         <JournalSubjectGroup>
+            <JournalSubject Code="SCP" Type="Primary">Physics</JournalSubject>
+            <JournalSubject Code="SCP23029" Priority="1" Type="Secondary">Elementary Particles, Quantum Field Theory</JournalSubject>
+            <JournalSubject Code="SCP23010" Priority="2" Type="Secondary">Nuclear Physics, Heavy Ions, Hadrons</JournalSubject>
+            <JournalSubject Code="SCP19048" Priority="3" Type="Secondary">Quantum Field Theories, String Theory</JournalSubject>
+            <JournalSubject Code="SCP31040" Priority="4" Type="Secondary">Measurement Science and Instrumentation</JournalSubject>
+            <JournalSubject Code="SCP22006" Priority="5" Type="Secondary">Astronomy, Astrophysics and Cosmology</JournalSubject>
+            <JournalSubject Code="SC113000" Priority="6" Type="Secondary">Nuclear Energy</JournalSubject>
+            <SubjectCollection Code="SC12">Physics and Astronomy</SubjectCollection>
+         </JournalSubjectGroup>
+      </JournalInfo>
+      <Volume OutputMedium="All">
+         <VolumeInfo TocLevels="0" VolumeType="Regular">
+            <VolumeIDStart>79</VolumeIDStart>
+            <VolumeIDEnd>79</VolumeIDEnd>
+            <VolumeIssueCount>12</VolumeIssueCount>
+         </VolumeInfo>
+         <Issue IssueType="Regular" OutputMedium="All">
+            <IssueInfo IssueType="Regular" TocLevels="0">
+               <IssueIDStart>2</IssueIDStart>
+               <IssueIDEnd>2</IssueIDEnd>
+               <IssueArticleCount>0</IssueArticleCount>
+               <IssueHistory>
+                  <CoverDate>
+                     <Year>2019</Year>
+                     <Month>2</Month>
+                  </CoverDate>
+                  <PricelistYear>2019</PricelistYear>
+               </IssueHistory>
+               <IssueCopyright>
+                  <CopyrightHolderName>The Author(s)</CopyrightHolderName>
+                  <CopyrightYear>2019</CopyrightYear>
+               </IssueCopyright>
+            </IssueInfo>
+            <Article ID="s10052-019-6540-y" OutputMedium="All">
+               <ArticleInfo ArticleType="OriginalPaper" ContainsESM="No" Language="En" NumberingStyle="ContentOnly" TocLevels="0">
+                  <ArticleID>6540</ArticleID>
+                  <ArticleExternalID Type="arXiv">1807.07447v1</ArticleExternalID>
+                  <ArticleDOI>10.1140/epjc/s10052-019-6540-y</ArticleDOI>
+                  <ArticleCitationID>120</ArticleCitationID>
+                  <ArticleSequenceNumber>31</ArticleSequenceNumber>
+                  <ArticleTitle Language="En" OutputMedium="All">A strategy for a general search for new phenomena using data-derived signal regions and its application within the ATLAS experiment</ArticleTitle>
+                  <ArticleCategory>Regular Article - Experimental Physics</ArticleCategory>
+                  <ArticleFirstPage>1</ArticleFirstPage>
+                  <ArticleLastPage>45</ArticleLastPage>
+                  <ArticleHistory>
+                     <RegistrationDate>
+                        <Year>2019</Year>
+                        <Month>1</Month>
+                        <Day>9</Day>
+                     </RegistrationDate>
+                     <Received>
+                        <Year>2018</Year>
+                        <Month>7</Month>
+                        <Day>20</Day>
+                     </Received>
+                     <Accepted>
+                        <Year>2018</Year>
+                        <Month>12</Month>
+                        <Day>21</Day>
+                     </Accepted>
+                     <OnlineDate>
+                        <Year>2019</Year>
+                        <Month>2</Month>
+                        <Day>6</Day>
+                     </OnlineDate>
+                  </ArticleHistory>
+                  <ArticleCopyright>
+                     <CopyrightHolderName>CERN for the benefit of the ATLAS collaboration</CopyrightHolderName>
+                     <CopyrightYear>2019</CopyrightYear>
+                     <License SubType="CC BY" Type="OpenAccess" Version="4.0">
+                        <SimplePara>
+                           <Emphasis Type="Bold">Open Access</Emphasis>This article is distributed under the terms of the Creative Commons Attribution 4.0 International License (<ExternalRef><RefSource>http://creativecommons.org/licenses/by/4.0/</RefSource><RefTarget Address="http://creativecommons.org/licenses/by/4.0/" TargetType="URL" /></ExternalRef>), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made.</SimplePara>
+                        <SimplePara>Funded by SCOAP<Superscript>3</Superscript>
+                        </SimplePara>
+                     </License>
+                  </ArticleCopyright>
+                  <ArticleGrants Type="OpenChoice">
+                     <MetadataGrant Grant="OpenAccess" />
+                     <AbstractGrant Grant="OpenAccess" />
+                     <BodyPDFGrant Grant="OpenAccess" />
+                     <BodyHTMLGrant Grant="OpenAccess" />
+                     <BibliographyGrant Grant="OpenAccess" />
+                     <ESMGrant Grant="OpenAccess" />
+                  </ArticleGrants>
+               </ArticleInfo>
+               <ArticleHeader>
+                  <AuthorGroup>
+                     <InstitutionalAuthor AffiliationIDS="Aff40 Aff52 Aff188 Aff238" CorrespondingAffiliationID="Aff238">
+                        <InstitutionalAuthorName>ATLAS Collaboration</InstitutionalAuthorName>
+                        <Contact>
+                           <Email>atlas.publications@cern.ch</Email>
+                        </Contact>
+                     </InstitutionalAuthor>
+                     <Affiliation ID="Aff1">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 7304</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.1010.0</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>University of Adelaide</OrgName>
+                        <OrgAddress>
+                           <City>Adelaide</City>
+                           <Country Code="AU">Australia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff2">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2151 7947</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.265850.c</OrgID>
+                        <OrgDivision>Physics Department</OrgDivision>
+                        <OrgName>SUNY Albany</OrgName>
+                        <OrgAddress>
+                           <City>Albany</City>
+                           <State>NY</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff3">
+                        <OrgID Level="Institution" Type="GRID">grid.17089.37</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>University of Alberta</OrgName>
+                        <OrgAddress>
+                           <City>Edmonton</City>
+                           <State>AB</State>
+                           <Country Code="CA">Canada</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff4">
+                        <OrgID Level="Institution" Type="ISNI">0000000109409118</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.7256.6</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Ankara University</OrgName>
+                        <OrgAddress>
+                           <City>Ankara</City>
+                           <Country Code="TR">Turkey</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff5">
+                        <OrgID Level="Institution" Type="GRID">grid.449300.a</OrgID>
+                        <OrgName>Istanbul Aydin University</OrgName>
+                        <OrgAddress>
+                           <City>Istanbul</City>
+                           <Country Code="TR">Turkey</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff6">
+                        <OrgID Level="Institution" Type="ISNI">0000 0000 9058 8063</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.412749.d</OrgID>
+                        <OrgDivision>Division of Physics</OrgDivision>
+                        <OrgName>TOBB University of Economics and Technology</OrgName>
+                        <OrgAddress>
+                           <City>Ankara</City>
+                           <Country Code="TR">Turkey</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff7">
+                        <OrgName>LAPP, Université Grenoble Alpes, Université Savoie Mont Blanc, CNRS/IN2P3</OrgName>
+                        <OrgAddress>
+                           <City>Annecy</City>
+                           <Country Code="FR">France</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff8">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 1939 4845</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.187073.a</OrgID>
+                        <OrgDivision>High Energy Physics Division</OrgDivision>
+                        <OrgName>Argonne National Laboratory</OrgName>
+                        <OrgAddress>
+                           <City>Argonne</City>
+                           <State>IL</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff9">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2168 186X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.134563.6</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>University of Arizona</OrgName>
+                        <OrgAddress>
+                           <City>Tucson</City>
+                           <State>AZ</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff10">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2181 9515</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.267315.4</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>University of Texas at Arlington</OrgName>
+                        <OrgAddress>
+                           <City>Arlington</City>
+                           <State>TX</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff11">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2155 0800</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.5216.0</OrgID>
+                        <OrgDivision>Physics Department</OrgDivision>
+                        <OrgName>National and Kapodistrian University of Athens</OrgName>
+                        <OrgAddress>
+                           <City>Athens</City>
+                           <Country Code="GR">Greece</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff12">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2185 9808</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.4241.3</OrgID>
+                        <OrgDivision>Physics Department</OrgDivision>
+                        <OrgName>National Technical University of Athens</OrgName>
+                        <OrgAddress>
+                           <City>Zografou</City>
+                           <Country Code="GR">Greece</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff13">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 9924</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.89336.37</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>University of Texas at Austin</OrgName>
+                        <OrgAddress>
+                           <City>Austin</City>
+                           <State>TX</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff14">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2331 4764</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.10359.3e</OrgID>
+                        <OrgDivision>Faculty of Engineering and Natural Sciences</OrgDivision>
+                        <OrgName>Bahcesehir University</OrgName>
+                        <OrgAddress>
+                           <City>Istanbul</City>
+                           <Country Code="TR">Turkey</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff15">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0671 7131</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.24956.3c</OrgID>
+                        <OrgDivision>Faculty of Engineering and Natural Sciences</OrgDivision>
+                        <OrgName>Istanbul Bilgi University</OrgName>
+                        <OrgAddress>
+                           <City>Istanbul</City>
+                           <Country Code="TR">Turkey</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff16">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2253 9056</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.11220.30</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Bogazici University</OrgName>
+                        <OrgAddress>
+                           <City>Istanbul</City>
+                           <Country Code="TR">Turkey</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff17">
+                        <OrgID Level="Institution" Type="ISNI">0000000107049315</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.411549.c</OrgID>
+                        <OrgDivision>Department of Physics Engineering</OrgDivision>
+                        <OrgName>Gaziantep University</OrgName>
+                        <OrgAddress>
+                           <City>Gaziantep</City>
+                           <Country Code="TR">Turkey</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff18">
+                        <OrgDivision>Institute of Physics</OrgDivision>
+                        <OrgName>Azerbaijan Academy of Sciences</OrgName>
+                        <OrgAddress>
+                           <City>Baku</City>
+                           <Country Code="AZ">Azerbaijan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff19">
+                        <OrgID Level="Institution" Type="GRID">grid.473715.3</OrgID>
+                        <OrgDivision>Institut de Física d’Altes Energies (IFAE)</OrgDivision>
+                        <OrgName>Barcelona Institute of Science and Technology</OrgName>
+                        <OrgAddress>
+                           <City>Barcelona</City>
+                           <Country Code="ES">Spain</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff20">
+                        <OrgID Level="Institution" Type="ISNI">0000000119573309</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.9227.e</OrgID>
+                        <OrgDivision>Institute of High Energy Physics</OrgDivision>
+                        <OrgName>Chinese Academy of Sciences</OrgName>
+                        <OrgAddress>
+                           <City>Beijing</City>
+                           <Country Code="CN">China</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff21">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0662 3178</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.12527.33</OrgID>
+                        <OrgDivision>Physics Department</OrgDivision>
+                        <OrgName>Tsinghua University</OrgName>
+                        <OrgAddress>
+                           <City>Beijing</City>
+                           <Country Code="CN">China</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff22">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2314 964X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.41156.37</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Nanjing University</OrgName>
+                        <OrgAddress>
+                           <City>Nanjing</City>
+                           <Country Code="CN">China</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff23">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1797 8419</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.410726.6</OrgID>
+                        <OrgName>University of Chinese Academy of Science (UCAS)</OrgName>
+                        <OrgAddress>
+                           <City>Beijing</City>
+                           <Country Code="CN">China</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff24">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2166 9385</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.7149.b</OrgID>
+                        <OrgDivision>Institute of Physics</OrgDivision>
+                        <OrgName>University of Belgrade</OrgName>
+                        <OrgAddress>
+                           <City>Belgrade</City>
+                           <Country Code="RS">Serbia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff25">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 7443</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.7914.b</OrgID>
+                        <OrgDivision>Department for Physics and Technology</OrgDivision>
+                        <OrgName>University of Bergen</OrgName>
+                        <OrgAddress>
+                           <City>Bergen</City>
+                           <Country Code="NO">Norway</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff26">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2231 4551</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.184769.5</OrgID>
+                        <OrgDivision>Physics Division</OrgDivision>
+                        <OrgName>Lawrence Berkeley National Laboratory and University of California</OrgName>
+                        <OrgAddress>
+                           <City>Berkeley</City>
+                           <State>CA</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff27">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2248 7639</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.7468.d</OrgID>
+                        <OrgDivision>Institut für Physik</OrgDivision>
+                        <OrgName>Humboldt Universität zu Berlin</OrgName>
+                        <OrgAddress>
+                           <City>Berlin</City>
+                           <Country Code="DE">Germany</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff28">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0726 5157</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.5734.5</OrgID>
+                        <OrgDivision>Albert Einstein Center for Fundamental Physics and Laboratory for High Energy Physics</OrgDivision>
+                        <OrgName>University of Bern</OrgName>
+                        <OrgAddress>
+                           <City>Bern</City>
+                           <Country Code="CH">Switzerland</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff29">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 7486</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.6572.6</OrgID>
+                        <OrgDivision>School of Physics and Astronomy</OrgDivision>
+                        <OrgName>University of Birmingham</OrgName>
+                        <OrgAddress>
+                           <City>Birmingham</City>
+                           <Country Code="GB">UK</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff30">
+                        <OrgID Level="Institution" Type="GRID">grid.440783.c</OrgID>
+                        <OrgDivision>Centro de Investigaciónes</OrgDivision>
+                        <OrgName>Universidad Antonio Nariño</OrgName>
+                        <OrgAddress>
+                           <City>Bogota</City>
+                           <Country Code="CO">Colombia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff31">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1757 1758</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.6292.f</OrgID>
+                        <OrgDivision>Dipartimento di Fisica e Astronomia</OrgDivision>
+                        <OrgName>Università di Bologna</OrgName>
+                        <OrgAddress>
+                           <City>Bologna</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff32">
+                        <OrgID Level="Institution" Type="GRID">grid.470193.8</OrgID>
+                        <OrgName>INFN Sezione di Bologna</OrgName>
+                        <OrgAddress>
+                           <City>Bologna</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff33">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2240 3300</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.10388.32</OrgID>
+                        <OrgDivision>Physikalisches Institut</OrgDivision>
+                        <OrgName>Universität Bonn</OrgName>
+                        <OrgAddress>
+                           <City>Bonn</City>
+                           <Country Code="DE">Germany</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff34">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 7558</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.189504.1</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Boston University</OrgName>
+                        <OrgAddress>
+                           <City>Boston</City>
+                           <State>MA</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff35">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 9473</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.253264.4</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Brandeis University</OrgName>
+                        <OrgAddress>
+                           <City>Waltham</City>
+                           <State>MA</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff36">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2159 8361</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.5120.6</OrgID>
+                        <OrgName>Transilvania University of Brasov</OrgName>
+                        <OrgAddress>
+                           <City>Brasov</City>
+                           <Country Code="RO">Romania</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff37">
+                        <OrgID Level="Institution" Type="ISNI">0000 0000 9463 5349</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.443874.8</OrgID>
+                        <OrgName>Horia Hulubei National Institute of Physics and Nuclear Engineering</OrgName>
+                        <OrgAddress>
+                           <City>Bucharest</City>
+                           <Country Code="RO">Romania</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff38">
+                        <OrgID Level="Institution" Type="ISNI">0000000419371784</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.8168.7</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Alexandru Ioan Cuza University of Iasi</OrgName>
+                        <OrgAddress>
+                           <City>Iasi</City>
+                           <Country Code="RO">Romania</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff39">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 0634 1551</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.435410.7</OrgID>
+                        <OrgDivision>Physics Department</OrgDivision>
+                        <OrgName>National Institute for Research and Development of Isotopic and Molecular Technologies</OrgName>
+                        <OrgAddress>
+                           <City>Cluj-Napoca</City>
+                           <Country Code="RO">Romania</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff40">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2109 901X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.4551.5</OrgID>
+                        <OrgName>University Politehnica Bucharest</OrgName>
+                        <OrgAddress>
+                           <City>Bucharest</City>
+                           <Country Code="RO">Romania</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff41">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2182 0073</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.14004.31</OrgID>
+                        <OrgName>West University in Timisoara</OrgName>
+                        <OrgAddress>
+                           <City>Timisoara</City>
+                           <Country Code="RO">Romania</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff42">
+                        <OrgID Level="Institution" Type="ISNI">0000000109409708</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.7634.6</OrgID>
+                        <OrgDivision>Faculty of Mathematics, Physics and Informatics</OrgDivision>
+                        <OrgName>Comenius University</OrgName>
+                        <OrgAddress>
+                           <City>Bratislava</City>
+                           <Country Code="SK">Slovakia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff43">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 0488 9791</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.435184.f</OrgID>
+                        <OrgDivision>Department of Subnuclear Physics</OrgDivision>
+                        <OrgName>Institute of Experimental Physics of the Slovak Academy of Sciences</OrgName>
+                        <OrgAddress>
+                           <City>Kosice</City>
+                           <Country Code="SK">Slovak Republic</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff44">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2188 4229</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.202665.5</OrgID>
+                        <OrgDivision>Physics Department</OrgDivision>
+                        <OrgName>Brookhaven National Laboratory</OrgName>
+                        <OrgAddress>
+                           <City>Upton</City>
+                           <State>NY</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff45">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0056 1981</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.7345.5</OrgID>
+                        <OrgDivision>Departamento de Física</OrgDivision>
+                        <OrgName>Universidad de Buenos Aires</OrgName>
+                        <OrgAddress>
+                           <City>Buenos Aires</City>
+                           <Country Code="AR">Argentina</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff46">
+                        <OrgID Level="Institution" Type="ISNI">0000000121885934</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.5335.0</OrgID>
+                        <OrgDivision>Cavendish Laboratory</OrgDivision>
+                        <OrgName>University of Cambridge</OrgName>
+                        <OrgAddress>
+                           <City>Cambridge</City>
+                           <Country Code="GB">UK</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff47">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1937 1151</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.7836.a</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>University of Cape Town</OrgName>
+                        <OrgAddress>
+                           <City>Cape Town</City>
+                           <Country Code="ZA">South Africa</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff48">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0109 131X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.412988.e</OrgID>
+                        <OrgDivision>Department of Mechanical Engineering Science</OrgDivision>
+                        <OrgName>University of Johannesburg</OrgName>
+                        <OrgAddress>
+                           <City>Johannesburg</City>
+                           <Country Code="ZA">South Africa</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff49">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1937 1135</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.11951.3d</OrgID>
+                        <OrgDivision>School of Physics</OrgDivision>
+                        <OrgName>University of the Witwatersrand</OrgName>
+                        <OrgAddress>
+                           <City>Johannesburg</City>
+                           <Country Code="ZA">South Africa</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff50">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 893X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.34428.39</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Carleton University</OrgName>
+                        <OrgAddress>
+                           <City>Ottawa</City>
+                           <State>ON</State>
+                           <Country Code="CA">Canada</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff51">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2180 2473</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.412148.a</OrgID>
+                        <OrgDivision>Faculté des Sciences Ain Chock</OrgDivision>
+                        <OrgName>Réseau Universitaire de Physique des Hautes Energies-Université Hassan II</OrgName>
+                        <OrgAddress>
+                           <City>Casablanca</City>
+                           <Country Code="MA">Morocco</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff52">
+                        <OrgID Level="Institution" Type="GRID">grid.450269.c</OrgID>
+                        <OrgName>Centre National de l’Energie des Sciences Techniques Nucleaires (CNESTEN)</OrgName>
+                        <OrgAddress>
+                           <City>Rabat</City>
+                           <Country Code="MA">Morocco</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff53">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0664 9298</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.411840.8</OrgID>
+                        <OrgDivision>Faculté des Sciences Semlalia</OrgDivision>
+                        <OrgName>Université Cadi Ayyad, LPHEA-Marrakech</OrgName>
+                        <OrgAddress>
+                           <City>Marrakech</City>
+                           <Country Code="MA">Morocco</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff54">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1772 8348</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.410890.4</OrgID>
+                        <OrgDivision>Faculté des Sciences</OrgDivision>
+                        <OrgName>Université Mohamed Premier and LPTPM</OrgName>
+                        <OrgAddress>
+                           <City>Oujda</City>
+                           <Country Code="MA">Morocco</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff55">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2168 4024</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.31143.34</OrgID>
+                        <OrgDivision>Faculté des sciences</OrgDivision>
+                        <OrgName>Université Mohammed V</OrgName>
+                        <OrgAddress>
+                           <City>Rabat</City>
+                           <Country Code="MA">Morocco</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff56">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2156 142X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.9132.9</OrgID>
+                        <OrgName>CERN</OrgName>
+                        <OrgAddress>
+                           <City>Geneva</City>
+                           <Country Code="CH">Switzerland</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff57">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 7822</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.170205.1</OrgID>
+                        <OrgDivision>Enrico Fermi Institute</OrgDivision>
+                        <OrgName>University of Chicago</OrgName>
+                        <OrgAddress>
+                           <City>Chicago</City>
+                           <State>IL</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff58">
+                        <OrgID Level="Institution" Type="ISNI">0000000115480420</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.494717.8</OrgID>
+                        <OrgName>LPC, Université Clermont Auvergne, CNRS/IN2P3</OrgName>
+                        <OrgAddress>
+                           <City>Clermont-Ferrand</City>
+                           <Country Code="FR">France</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff59">
+                        <OrgID Level="Institution" Type="ISNI">0000000419368729</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.21729.3f</OrgID>
+                        <OrgName>Nevis Laboratory, Columbia University</OrgName>
+                        <OrgAddress>
+                           <City>Irvington</City>
+                           <State>NY</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff60">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0674 042X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.5254.6</OrgID>
+                        <OrgDivision>Niels Bohr Institute</OrgDivision>
+                        <OrgName>University of Copenhagen</OrgName>
+                        <OrgAddress>
+                           <City>Copenhagen</City>
+                           <Country Code="DK">Denmark</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff61">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1937 0319</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.7778.f</OrgID>
+                        <OrgDivision>Dipartimento di Fisica</OrgDivision>
+                        <OrgName>Università della Calabria</OrgName>
+                        <OrgAddress>
+                           <City>Rende</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff62">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 0648 0236</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.463190.9</OrgID>
+                        <OrgName>INFN Gruppo Collegato di Cosenza, Laboratori Nazionali di Frascati</OrgName>
+                        <OrgAddress>
+                           <City>Frascati</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff63">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 7929</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.263864.d</OrgID>
+                        <OrgDivision>Physics Department</OrgDivision>
+                        <OrgName>Southern Methodist University</OrgName>
+                        <OrgAddress>
+                           <City>Dallas</City>
+                           <State>TX</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff64">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2151 7939</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.267323.1</OrgID>
+                        <OrgDivision>Physics Department</OrgDivision>
+                        <OrgName>University of Texas at Dallas</OrgName>
+                        <OrgAddress>
+                           <City>Richardson</City>
+                           <State>TX</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff65">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 9377</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.10548.38</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Stockholm University</OrgName>
+                        <OrgAddress>
+                           <City>Stockholm</City>
+                           <Country Code="SE">Sweden</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff66">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 9377</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.10548.38</OrgID>
+                        <OrgName>Oskar Klein Centre</OrgName>
+                        <OrgAddress>
+                           <City>Stockholm</City>
+                           <Country Code="SE">Sweden</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff67">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 0492 0453</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.7683.a</OrgID>
+                        <OrgName>Deutsches Elektronen-Synchrotron DESY</OrgName>
+                        <OrgAddress>
+                           <City>Hamburg and Zeuthen</City>
+                           <Country Code="DE">Germany</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff68">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0416 9637</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.5675.1</OrgID>
+                        <OrgDivision>Lehrstuhl für Experimentelle Physik IV</OrgDivision>
+                        <OrgName>Technische Universität Dortmund</OrgName>
+                        <OrgAddress>
+                           <City>Dortmund</City>
+                           <Country Code="DE">Germany</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff69">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2111 7257</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.4488.0</OrgID>
+                        <OrgDivision>Institut für Kern- und Teilchenphysik</OrgDivision>
+                        <OrgName>Technische Universität Dresden</OrgName>
+                        <OrgAddress>
+                           <City>Dresden</City>
+                           <Country Code="DE">Germany</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff70">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 7961</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.26009.3d</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Duke University</OrgName>
+                        <OrgAddress>
+                           <City>Durham</City>
+                           <State>NC</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff71">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 7988</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.4305.2</OrgID>
+                        <OrgDivision>SUPA-School of Physics and Astronomy</OrgDivision>
+                        <OrgName>University of Edinburgh</OrgName>
+                        <OrgAddress>
+                           <City>Edinburgh</City>
+                           <Country Code="GB">UK</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff72">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 0648 0236</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.463190.9</OrgID>
+                        <OrgName>INFN e Laboratori Nazionali di Frascati</OrgName>
+                        <OrgAddress>
+                           <City>Frascati</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff73">
+                        <OrgID Level="Institution" Type="GRID">grid.5963.9</OrgID>
+                        <OrgDivision>Physikalisches Institut</OrgDivision>
+                        <OrgName>Albert-Ludwigs-Universität Freiburg</OrgName>
+                        <OrgAddress>
+                           <City>Freiburg</City>
+                           <Country Code="DE">Germany</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff74">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2364 4210</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.7450.6</OrgID>
+                        <OrgDivision>II. Physikalisches Institut</OrgDivision>
+                        <OrgName>Georg-August-Universität Göttingen</OrgName>
+                        <OrgAddress>
+                           <City>Göttingen</City>
+                           <Country Code="DE">Germany</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff75">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2322 4988</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.8591.5</OrgID>
+                        <OrgDivision>Département de Physique Nucléaire et Corpusculaire</OrgDivision>
+                        <OrgName>Université de Genève</OrgName>
+                        <OrgAddress>
+                           <City>Geneva</City>
+                           <Country Code="CH">Switzerland</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff76">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2151 3065</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.5606.5</OrgID>
+                        <OrgDivision>Dipartimento di Fisica</OrgDivision>
+                        <OrgName>Università di Genova</OrgName>
+                        <OrgAddress>
+                           <City>Genoa</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff77">
+                        <OrgID Level="Institution" Type="GRID">grid.470205.4</OrgID>
+                        <OrgName>INFN Sezione di Genova</OrgName>
+                        <OrgAddress>
+                           <City>Genoa</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff78">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2165 8627</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.8664.c</OrgID>
+                        <OrgDivision>II. Physikalisches Institut</OrgDivision>
+                        <OrgName>Justus-Liebig-Universität Giessen</OrgName>
+                        <OrgAddress>
+                           <City>Giessen</City>
+                           <Country Code="DE">Germany</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff79">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2193 314X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.8756.c</OrgID>
+                        <OrgDivision>SUPA-School of Physics and Astronomy</OrgDivision>
+                        <OrgName>University of Glasgow</OrgName>
+                        <OrgAddress>
+                           <City>Glasgow</City>
+                           <Country Code="GB">UK</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff80">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2295 5578</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.472561.3</OrgID>
+                        <OrgName>LPSC, Université Grenoble Alpes, CNRS/IN2P3, Grenoble INP</OrgName>
+                        <OrgAddress>
+                           <City>Grenoble</City>
+                           <Country Code="FR">France</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff81">
+                        <OrgID Level="Institution" Type="ISNI">000000041936754X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.38142.3c</OrgID>
+                        <OrgDivision>Laboratory for Particle Physics and Cosmology</OrgDivision>
+                        <OrgName>Harvard University</OrgName>
+                        <OrgAddress>
+                           <City>Cambridge</City>
+                           <State>MA</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff82">
+                        <OrgID Level="Institution" Type="ISNI">0000000121679639</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.59053.3a</OrgID>
+                        <OrgDivision>Department of Modern Physics and State Key Laboratory of Particle Detection and Electronics</OrgDivision>
+                        <OrgName>University of Science and Technology of China</OrgName>
+                        <OrgAddress>
+                           <City>Hefei</City>
+                           <Country Code="CN">China</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff83">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1761 1174</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.27255.37</OrgID>
+                        <OrgDivision>Institute of Frontier and Interdisciplinary Science and Key Laboratory of Particle Physics and Particle Irradiation (MOE)</OrgDivision>
+                        <OrgName>Shandong University</OrgName>
+                        <OrgAddress>
+                           <City>Qingdao</City>
+                           <Country Code="CN">China</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff84">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 0368 8293</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.16821.3c</OrgID>
+                        <OrgDivision>School of Physics and Astronomy</OrgDivision>
+                        <OrgName>Shanghai Jiao Tong University, KLPPAC-MoE, SKLPPC</OrgName>
+                        <OrgAddress>
+                           <City>Shanghai</City>
+                           <Country Code="CN">China</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff85">
+                        <OrgName>Tsung-Dao Lee Institute</OrgName>
+                        <OrgAddress>
+                           <City>Shanghai</City>
+                           <Country Code="CN">China</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff86">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2190 4373</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.7700.0</OrgID>
+                        <OrgDivision>Kirchhoff-Institut für Physik</OrgDivision>
+                        <OrgName>Ruprecht-Karls-Universität Heidelberg</OrgName>
+                        <OrgAddress>
+                           <City>Heidelberg</City>
+                           <Country Code="DE">Germany</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff87">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2190 4373</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.7700.0</OrgID>
+                        <OrgDivision>Physikalisches Institut</OrgDivision>
+                        <OrgName>Ruprecht-Karls-Universität Heidelberg</OrgName>
+                        <OrgAddress>
+                           <City>Heidelberg</City>
+                           <Country Code="DE">Germany</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff88">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0665 883X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.417545.6</OrgID>
+                        <OrgDivision>Faculty of Applied Information Science</OrgDivision>
+                        <OrgName>Hiroshima Institute of Technology</OrgName>
+                        <OrgAddress>
+                           <City>Hiroshima</City>
+                           <Country Code="JP">Japan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff89">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1937 0482</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.10784.3a</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Chinese University of Hong Kong</OrgName>
+                        <OrgAddress>
+                           <City>Shatin</City>
+                           <State>NT</State>
+                           <Country Code="HK">Hong Kong</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff90">
+                        <OrgID Level="Institution" Type="ISNI">0000000121742757</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.194645.b</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>University of Hong Kong</OrgName>
+                        <OrgAddress>
+                           <City>Hong Kong</City>
+                           <Country Code="CN">China</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff91">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1937 1450</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.24515.37</OrgID>
+                        <OrgDivision>Department of Physics and Institute for Advanced Study</OrgDivision>
+                        <OrgName>Hong Kong University of Science and Technology</OrgName>
+                        <OrgAddress>
+                           <Street>Clear Water Bay, Kowloon</Street>
+                           <City>Hong Kong</City>
+                           <Country Code="CN">China</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff92">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 0532 0580</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.38348.34</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>National Tsing Hua University</OrgName>
+                        <OrgAddress>
+                           <City>Hsinchu</City>
+                           <Country Code="TW">Taiwan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff93">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0790 959X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.411377.7</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Indiana University</OrgName>
+                        <OrgAddress>
+                           <City>Bloomington</City>
+                           <State>IN</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff94">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1760 7175</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.470223.0</OrgID>
+                        <OrgName>INFN Gruppo Collegato di Udine, Sezione di Trieste</OrgName>
+                        <OrgAddress>
+                           <City>Udine</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff95">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2184 9917</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.419330.c</OrgID>
+                        <OrgName>ICTP</OrgName>
+                        <OrgAddress>
+                           <City>Trieste</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff96">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2113 062X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.5390.f</OrgID>
+                        <OrgDivision>Dipartimento di Chimica, Fisica e Ambiente</OrgDivision>
+                        <OrgName>Università di Udine</OrgName>
+                        <OrgAddress>
+                           <City>Udine</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff97">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1761 7699</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.470680.d</OrgID>
+                        <OrgName>INFN Sezione di Lecce</OrgName>
+                        <OrgAddress>
+                           <City>Lecce</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff98">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2289 7785</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.9906.6</OrgID>
+                        <OrgDivision>Dipartimento di Matematica e Fisica</OrgDivision>
+                        <OrgName>Università del Salento</OrgName>
+                        <OrgAddress>
+                           <City>Lecce</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff99">
+                        <OrgID Level="Institution" Type="GRID">grid.470206.7</OrgID>
+                        <OrgName>INFN Sezione di Milano</OrgName>
+                        <OrgAddress>
+                           <City>Milan</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff100">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1757 2822</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.4708.b</OrgID>
+                        <OrgDivision>Dipartimento di Fisica</OrgDivision>
+                        <OrgName>Università di Milano</OrgName>
+                        <OrgAddress>
+                           <City>Milan</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff101">
+                        <OrgID Level="Institution" Type="GRID">grid.470211.1</OrgID>
+                        <OrgName>INFN Sezione di Napoli</OrgName>
+                        <OrgAddress>
+                           <City>Naples</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff102">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0790 385X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.4691.a</OrgID>
+                        <OrgDivision>Dipartimento di Fisica</OrgDivision>
+                        <OrgName>Università di Napoli</OrgName>
+                        <OrgAddress>
+                           <City>Naples</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff103">
+                        <OrgID Level="Institution" Type="GRID">grid.470213.3</OrgID>
+                        <OrgName>INFN Sezione di Pavia</OrgName>
+                        <OrgAddress>
+                           <City>Pavia</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff104">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1762 5736</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.8982.b</OrgID>
+                        <OrgDivision>Dipartimento di Fisica</OrgDivision>
+                        <OrgName>Università di Pavia</OrgName>
+                        <OrgAddress>
+                           <City>Pavia</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff105">
+                        <OrgID Level="Institution" Type="GRID">grid.470216.6</OrgID>
+                        <OrgName>INFN Sezione di Pisa</OrgName>
+                        <OrgAddress>
+                           <City>Pisa</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff106">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1757 3729</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.5395.a</OrgID>
+                        <OrgDivision>Dipartimento di Fisica E. Fermi</OrgDivision>
+                        <OrgName>Università di Pisa</OrgName>
+                        <OrgAddress>
+                           <City>Pisa</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff107">
+                        <OrgID Level="Institution" Type="GRID">grid.470218.8</OrgID>
+                        <OrgName>INFN Sezione di Roma</OrgName>
+                        <OrgAddress>
+                           <City>Rome</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff108">
+                        <OrgID Level="Institution" Type="GRID">grid.7841.a</OrgID>
+                        <OrgDivision>Dipartimento di Fisica</OrgDivision>
+                        <OrgName>Sapienza Università di Roma</OrgName>
+                        <OrgAddress>
+                           <City>Rome</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff109">
+                        <OrgID Level="Institution" Type="GRID">grid.470219.9</OrgID>
+                        <OrgName>INFN Sezione di Roma Tor Vergata</OrgName>
+                        <OrgAddress>
+                           <City>Rome</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff110">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2300 0941</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.6530.0</OrgID>
+                        <OrgDivision>Dipartimento di Fisica</OrgDivision>
+                        <OrgName>Università di Roma Tor Vergata</OrgName>
+                        <OrgAddress>
+                           <City>Rome</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff111">
+                        <OrgID Level="Institution" Type="GRID">grid.470220.3</OrgID>
+                        <OrgName>INFN Sezione di Roma Tre</OrgName>
+                        <OrgAddress>
+                           <City>Rome</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff112">
+                        <OrgID Level="Institution" Type="ISNI">0000000121622106</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.8509.4</OrgID>
+                        <OrgDivision>Dipartimento di Matematica e Fisica</OrgDivision>
+                        <OrgName>Università Roma Tre</OrgName>
+                        <OrgAddress>
+                           <City>Rome</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff113">
+                        <OrgName>INFN-TIFPA</OrgName>
+                        <OrgAddress>
+                           <City>Povo</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff114">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1937 0351</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.11696.39</OrgID>
+                        <OrgName>Università degli Studi di Trento</OrgName>
+                        <OrgAddress>
+                           <City>Trento</City>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff115">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2151 8122</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.5771.4</OrgID>
+                        <OrgDivision>Institut für Astro- und Teilchenphysik</OrgDivision>
+                        <OrgName>Leopold-Franzens-Universität</OrgName>
+                        <OrgAddress>
+                           <City>Innsbruck</City>
+                           <Country Code="AT">Austria</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff116">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 8294</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.214572.7</OrgID>
+                        <OrgName>University of Iowa</OrgName>
+                        <OrgAddress>
+                           <City>Iowa City</City>
+                           <State>IA</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff117">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 7312</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.34421.30</OrgID>
+                        <OrgDivision>Department of Physics and Astronomy</OrgDivision>
+                        <OrgName>Iowa State University</OrgName>
+                        <OrgAddress>
+                           <City>Ames</City>
+                           <State>IA</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff118">
+                        <OrgID Level="Institution" Type="ISNI">0000000406204119</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.33762.33</OrgID>
+                        <OrgName>Joint Institute for Nuclear Research</OrgName>
+                        <OrgAddress>
+                           <City>Dubna</City>
+                           <Country Code="RU">Russia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff119">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2170 9332</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.411198.4</OrgID>
+                        <OrgDivision>Departamento de Engenharia Elétrica</OrgDivision>
+                        <OrgName>Universidade Federal de Juiz de Fora (UFJF)</OrgName>
+                        <OrgAddress>
+                           <City>Juiz de Fora</City>
+                           <Country Code="BR">Brazil</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff120">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2294 473X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.8536.8</OrgID>
+                        <OrgName>Universidade Federal do Rio De Janeiro COPPE/EE/IF</OrgName>
+                        <OrgAddress>
+                           <City>Rio de Janeiro</City>
+                           <Country Code="BR">Brazil</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff121">
+                        <OrgID Level="Institution" Type="GRID">grid.428481.3</OrgID>
+                        <OrgName>Universidade Federal de São João del Rei (UFSJ)</OrgName>
+                        <OrgAddress>
+                           <City>São João del Rei</City>
+                           <Country Code="BR">Brazil</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff122">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1937 0722</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.11899.38</OrgID>
+                        <OrgDivision>Instituto de Física</OrgDivision>
+                        <OrgName>Universidade de São Paulo</OrgName>
+                        <OrgAddress>
+                           <City>São Paulo</City>
+                           <Country Code="BR">Brazil</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff123">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2155 959X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.410794.f</OrgID>
+                        <OrgName>KEK, High Energy Accelerator Research Organization</OrgName>
+                        <OrgAddress>
+                           <City>Tsukuba</City>
+                           <Country Code="JP">Japan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff124">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 1092 3077</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.31432.37</OrgID>
+                        <OrgDivision>Graduate School of Science</OrgDivision>
+                        <OrgName>Kobe University</OrgName>
+                        <OrgAddress>
+                           <City>Kobe</City>
+                           <Country Code="JP">Japan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff125">
+                        <OrgID Level="Institution" Type="ISNI">0000 0000 9174 1488</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.9922.0</OrgID>
+                        <OrgDivision>Faculty of Physics and Applied Computer Science</OrgDivision>
+                        <OrgName>AGH University of Science and Technology</OrgName>
+                        <OrgAddress>
+                           <City>Kraków</City>
+                           <Country Code="PL">Poland</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff126">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2162 9631</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.5522.0</OrgID>
+                        <OrgDivision>Marian Smoluchowski Institute of Physics</OrgDivision>
+                        <OrgName>Jagiellonian University</OrgName>
+                        <OrgAddress>
+                           <City>Kraków</City>
+                           <Country Code="PL">Poland</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff127">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0942 8941</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.418860.3</OrgID>
+                        <OrgName>Institute of Nuclear Physics Polish Academy of Sciences</OrgName>
+                        <OrgAddress>
+                           <City>Kraków</City>
+                           <Country Code="PL">Poland</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff128">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 0372 2033</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.258799.8</OrgID>
+                        <OrgDivision>Faculty of Science</OrgDivision>
+                        <OrgName>Kyoto University</OrgName>
+                        <OrgAddress>
+                           <City>Kyoto</City>
+                           <Country Code="JP">Japan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff129">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0671 9823</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.411219.e</OrgID>
+                        <OrgName>Kyoto University of Education</OrgName>
+                        <OrgAddress>
+                           <City>Kyoto</City>
+                           <Country Code="JP">Japan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff130">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2242 4849</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.177174.3</OrgID>
+                        <OrgDivision>Research Center for Advanced Particle Physics and Department of Physics</OrgDivision>
+                        <OrgName>Kyushu University</OrgName>
+                        <OrgAddress>
+                           <City>Fukuoka</City>
+                           <Country Code="JP">Japan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff131">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2097 3940</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.9499.d</OrgID>
+                        <OrgDivision>Instituto de Física La Plata</OrgDivision>
+                        <OrgName>Universidad Nacional de La Plata and CONICET</OrgName>
+                        <OrgAddress>
+                           <City>La Plata</City>
+                           <Country Code="AR">Argentina</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff132">
+                        <OrgID Level="Institution" Type="ISNI">0000 0000 8190 6402</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.9835.7</OrgID>
+                        <OrgDivision>Physics Department</OrgDivision>
+                        <OrgName>Lancaster University</OrgName>
+                        <OrgAddress>
+                           <City>Lancaster</City>
+                           <Country Code="GB">UK</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff133">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 8470</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.10025.36</OrgID>
+                        <OrgDivision>Oliver Lodge Laboratory</OrgDivision>
+                        <OrgName>University of Liverpool</OrgName>
+                        <OrgAddress>
+                           <City>Liverpool</City>
+                           <Country Code="GB">UK</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff134">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0721 6013</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.8954.0</OrgID>
+                        <OrgDivision>Department of Experimental Particle Physics, Jožef Stefan Institute and Department of Physics</OrgDivision>
+                        <OrgName>University of Ljubljana</OrgName>
+                        <OrgAddress>
+                           <City>Ljubljana</City>
+                           <Country Code="SI">Slovenia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff135">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2171 1133</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.4868.2</OrgID>
+                        <OrgDivision>School of Physics and Astronomy</OrgDivision>
+                        <OrgName>Queen Mary University of London</OrgName>
+                        <OrgAddress>
+                           <City>London</City>
+                           <Country Code="GB">UK</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff136">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2188 881X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.4970.a</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Royal Holloway University of London</OrgName>
+                        <OrgAddress>
+                           <City>Egham</City>
+                           <Country Code="GB">UK</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff137">
+                        <OrgID Level="Institution" Type="ISNI">0000000121901201</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.83440.3b</OrgID>
+                        <OrgDivision>Department of Physics and Astronomy</OrgDivision>
+                        <OrgName>University College London</OrgName>
+                        <OrgAddress>
+                           <City>London</City>
+                           <Country Code="GB">UK</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff138">
+                        <OrgID Level="Institution" Type="ISNI">0000000121506076</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.259237.8</OrgID>
+                        <OrgName>Louisiana Tech University</OrgName>
+                        <OrgAddress>
+                           <City>Ruston</City>
+                           <State>LA</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff139">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0930 2361</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.4514.4</OrgID>
+                        <OrgDivision>Fysiska institutionen</OrgDivision>
+                        <OrgName>Lunds universitet</OrgName>
+                        <OrgAddress>
+                           <City>Lund</City>
+                           <Country Code="SE">Sweden</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff140">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0664 3574</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.433124.3</OrgID>
+                        <OrgName>Centre de Calcul de l’Institut National de Physique Nucléaire et de Physique des Particules (IN2P3)</OrgName>
+                        <OrgAddress>
+                           <City>Villeurbanne</City>
+                           <Country Code="FR">France</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff141">
+                        <OrgID Level="Institution" Type="ISNI">0000000119578126</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.5515.4</OrgID>
+                        <OrgDivision>Departamento de Física Teorica C-15 and CIAFF</OrgDivision>
+                        <OrgName>Universidad Autónoma de Madrid</OrgName>
+                        <OrgAddress>
+                           <City>Madrid</City>
+                           <Country Code="ES">Spain</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff142">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 1941 7111</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.5802.f</OrgID>
+                        <OrgDivision>Institut für Physik</OrgDivision>
+                        <OrgName>Universität Mainz</OrgName>
+                        <OrgAddress>
+                           <City>Mainz</City>
+                           <Country Code="DE">Germany</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff143">
+                        <OrgID Level="Institution" Type="ISNI">0000000121662407</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.5379.8</OrgID>
+                        <OrgDivision>School of Physics and Astronomy</OrgDivision>
+                        <OrgName>University of Manchester</OrgName>
+                        <OrgAddress>
+                           <City>Manchester</City>
+                           <Country Code="GB">UK</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff144">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 0452 0652</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.470046.1</OrgID>
+                        <OrgName>CPPM, Aix-Marseille Université, CNRS/IN2P3</OrgName>
+                        <OrgAddress>
+                           <City>Marseille</City>
+                           <Country Code="FR">France</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff145">
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>University of Massachusetts</OrgName>
+                        <OrgAddress>
+                           <City>Amherst</City>
+                           <State>MA</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff146">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 8649</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.14709.3b</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>McGill University</OrgName>
+                        <OrgAddress>
+                           <City>Montreal</City>
+                           <State>QC</State>
+                           <Country Code="CA">Canada</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff147">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2179 088X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.1008.9</OrgID>
+                        <OrgDivision>School of Physics</OrgDivision>
+                        <OrgName>University of Melbourne</OrgName>
+                        <OrgAddress>
+                           <City>Parkville</City>
+                           <State>VIC</State>
+                           <Country Code="AU">Australia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff148">
+                        <OrgID Level="Institution" Type="ISNI">0000000086837370</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.214458.e</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>University of Michigan</OrgName>
+                        <OrgAddress>
+                           <City>Ann Arbor</City>
+                           <State>MI</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff149">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2150 1785</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.17088.36</OrgID>
+                        <OrgDivision>Department of Physics and Astronomy</OrgDivision>
+                        <OrgName>Michigan State University</OrgName>
+                        <OrgAddress>
+                           <City>East Lansing</City>
+                           <State>MI</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff150">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2271 2138</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.410300.6</OrgID>
+                        <OrgDivision>B.I. Stepanov Institute of Physics</OrgDivision>
+                        <OrgName>National Academy of Sciences of Belarus</OrgName>
+                        <OrgAddress>
+                           <City>Minsk</City>
+                           <Country Code="BY">Belarus</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff151">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 1092 255X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.17678.3f</OrgID>
+                        <OrgName>Research Institute for Nuclear Problems of Byelorussian State University</OrgName>
+                        <OrgAddress>
+                           <City>Minsk</City>
+                           <Country Code="BY">Belarus</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff152">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2292 3357</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.14848.31</OrgID>
+                        <OrgDivision>Group of Particle Physics</OrgDivision>
+                        <OrgName>University of Montreal</OrgName>
+                        <OrgAddress>
+                           <City>Montreal</City>
+                           <State>QC</State>
+                           <Country Code="CA">Canada</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff153">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0656 6476</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.425806.d</OrgID>
+                        <OrgName>P.N. Lebedev Physical Institute of the Russian Academy of Sciences</OrgName>
+                        <OrgAddress>
+                           <City>Moscow</City>
+                           <Country Code="RU">Russia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff154">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0125 8159</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.21626.31</OrgID>
+                        <OrgName>Institute for Theoretical and Experimental Physics (ITEP)</OrgName>
+                        <OrgAddress>
+                           <City>Moscow</City>
+                           <Country Code="RU">Russia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff155">
+                        <OrgID Level="Institution" Type="ISNI">0000 0000 8868 5198</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.183446.c</OrgID>
+                        <OrgName>National Research Nuclear University MEPhI</OrgName>
+                        <OrgAddress>
+                           <City>Moscow</City>
+                           <Country Code="RU">Russia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff156">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2342 9668</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.14476.30</OrgID>
+                        <OrgDivision>D.V. Skobeltsyn Institute of Nuclear Physics</OrgDivision>
+                        <OrgName>M.V. Lomonosov Moscow State University</OrgName>
+                        <OrgAddress>
+                           <City>Moscow</City>
+                           <Country Code="RU">Russia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff157">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 973X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.5252.0</OrgID>
+                        <OrgDivision>Fakultät für Physik</OrgDivision>
+                        <OrgName>Ludwig-Maximilians-Universität München</OrgName>
+                        <OrgAddress>
+                           <City>Munich</City>
+                           <Country Code="DE">Germany</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff158">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2375 0603</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.435824.c</OrgID>
+                        <OrgName>Max-Planck-Institut für Physik (Werner-Heisenberg-Institut)</OrgName>
+                        <OrgAddress>
+                           <City>Munich</City>
+                           <Country Code="DE">Germany</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff159">
+                        <OrgID Level="Institution" Type="ISNI">0000 0000 9853 5396</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.444367.6</OrgID>
+                        <OrgName>Nagasaki Institute of Applied Science</OrgName>
+                        <OrgAddress>
+                           <City>Nagasaki</City>
+                           <Country Code="JP">Japan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff160">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0943 978X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.27476.30</OrgID>
+                        <OrgDivision>Graduate School of Science and Kobayashi-Maskawa Institute</OrgDivision>
+                        <OrgName>Nagoya University</OrgName>
+                        <OrgAddress>
+                           <City>Nagoya</City>
+                           <Country Code="JP">Japan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff161">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2188 8502</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.266832.b</OrgID>
+                        <OrgDivision>Department of Physics and Astronomy</OrgDivision>
+                        <OrgName>University of New Mexico</OrgName>
+                        <OrgAddress>
+                           <City>Albuquerque</City>
+                           <State>NM</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff162">
+                        <OrgID Level="Institution" Type="ISNI">0000000122931605</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.5590.9</OrgID>
+                        <OrgDivision>Institute for Mathematics, Astrophysics and Particle Physics</OrgDivision>
+                        <OrgName>Radboud University Nijmegen/Nikhef</OrgName>
+                        <OrgAddress>
+                           <City>Nijmegen</City>
+                           <Country Code="NL">The Netherlands</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff163">
+                        <OrgID Level="Institution" Type="ISNI">0000000084992262</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.7177.6</OrgID>
+                        <OrgDivision>Nikhef National Institute for Subatomic Physics</OrgDivision>
+                        <OrgName>University of Amsterdam</OrgName>
+                        <OrgAddress>
+                           <City>Amsterdam</City>
+                           <Country Code="NL">The Netherlands</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff164">
+                        <OrgID Level="Institution" Type="ISNI">0000 0000 9003 8934</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.261128.e</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Northern Illinois University</OrgName>
+                        <OrgAddress>
+                           <City>De Kalb</City>
+                           <State>IL</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff165">
+                        <OrgID Level="Institution" Type="GRID">grid.418495.5</OrgID>
+                        <OrgName>Budker Institute of Nuclear Physics, SB RAS</OrgName>
+                        <OrgAddress>
+                           <City>Novosibirsk</City>
+                           <Country Code="RU">Russia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff166">
+                        <OrgID Level="Institution" Type="ISNI">0000000121896553</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.4605.7</OrgID>
+                        <OrgName>Novosibirsk State University</OrgName>
+                        <OrgAddress>
+                           <City>Novosibirsk</City>
+                           <Country Code="RU">Russia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff167">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 8753</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.137628.9</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>New York University</OrgName>
+                        <OrgAddress>
+                           <City>New York</City>
+                           <State>NY</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff168">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2285 7943</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.261331.4</OrgID>
+                        <OrgName>Ohio State University</OrgName>
+                        <OrgAddress>
+                           <City>Columbus</City>
+                           <State>OH</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff169">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 1302 4472</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.261356.5</OrgID>
+                        <OrgDivision>Faculty of Science</OrgDivision>
+                        <OrgName>Okayama University</OrgName>
+                        <OrgAddress>
+                           <City>Okayama</City>
+                           <Country Code="JP">Japan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff170">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 0447 0018</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.266900.b</OrgID>
+                        <OrgDivision>Homer L. Dodge Department of Physics and Astronomy</OrgDivision>
+                        <OrgName>University of Oklahoma</OrgName>
+                        <OrgAddress>
+                           <City>Norman</City>
+                           <State>OK</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff171">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0721 7331</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.65519.3e</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Oklahoma State University</OrgName>
+                        <OrgAddress>
+                           <City>Stillwater</City>
+                           <State>OK</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff172">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 1245 3953</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.10979.36</OrgID>
+                        <OrgName>Palacký University, RCPTM, Joint Laboratory of Optics</OrgName>
+                        <OrgAddress>
+                           <City>Olomouc</City>
+                           <Country Code="CZ">Czech Republic</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff173">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 8008</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.170202.6</OrgID>
+                        <OrgDivision>Center for High Energy Physics</OrgDivision>
+                        <OrgName>University of Oregon</OrgName>
+                        <OrgAddress>
+                           <City>Eugene</City>
+                           <State>OR</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff174">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0278 4900</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.462450.1</OrgID>
+                        <OrgName>LAL, Université Paris-Sud, CNRS/IN2P3, Université Paris-Saclay</OrgName>
+                        <OrgAddress>
+                           <City>Orsay</City>
+                           <Country Code="FR">France</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff175">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 0373 3971</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.136593.b</OrgID>
+                        <OrgDivision>Graduate School of Science</OrgDivision>
+                        <OrgName>Osaka University</OrgName>
+                        <OrgAddress>
+                           <City>Osaka</City>
+                           <Country Code="JP">Japan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff176">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 8921</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.5510.1</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>University of Oslo</OrgName>
+                        <OrgAddress>
+                           <City>Oslo</City>
+                           <Country Code="NO">Norway</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff177">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 8948</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.4991.5</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Oxford University</OrgName>
+                        <OrgAddress>
+                           <City>Oxford</City>
+                           <Country Code="GB">UK</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff178">
+                        <OrgID Level="Institution" Type="ISNI">0000 0000 9463 7096</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.463935.e</OrgID>
+                        <OrgName>LPNHE, Sorbonne Université, Paris Diderot Sorbonne Paris Cité, CNRS/IN2P3</OrgName>
+                        <OrgAddress>
+                           <City>Paris</City>
+                           <Country Code="FR">France</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff179">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 8972</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.25879.31</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>University of Pennsylvania</OrgName>
+                        <OrgAddress>
+                           <City>Philadelphia</City>
+                           <State>PA</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff180">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 0619 3376</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.430219.d</OrgID>
+                        <OrgName>Konstantinov Nuclear Physics Institute of National Research Centre “Kurchatov Institute”, PNPI</OrgName>
+                        <OrgAddress>
+                           <City>St. Petersburg</City>
+                           <Country Code="RU">Russia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff181">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 9000</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.21925.3d</OrgID>
+                        <OrgDivision>Department of Physics and Astronomy</OrgDivision>
+                        <OrgName>University of Pittsburgh</OrgName>
+                        <OrgAddress>
+                           <City>Pittsburgh</City>
+                           <State>PA</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff182">
+                        <OrgID Level="Institution" Type="GRID">grid.420929.4</OrgID>
+                        <OrgName>Laboratório de Instrumentação e Física Experimental de Partículas-LIP</OrgName>
+                        <OrgAddress>
+                           <City>Lisbon</City>
+                           <Country Code="PT">Portugal</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff183">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2181 4263</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.9983.b</OrgID>
+                        <OrgDivision>Departamento de Física, Faculdade de Ciências</OrgDivision>
+                        <OrgName>Universidade de Lisboa</OrgName>
+                        <OrgAddress>
+                           <City>Lisbon</City>
+                           <Country Code="PT">Portugal</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff184">
+                        <OrgID Level="Institution" Type="ISNI">0000 0000 9511 4342</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.8051.c</OrgID>
+                        <OrgDivision>Departamento de Física</OrgDivision>
+                        <OrgName>Universidade de Coimbra</OrgName>
+                        <OrgAddress>
+                           <City>Coimbra</City>
+                           <Country Code="PT">Portugal</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff185">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2181 4263</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.9983.b</OrgID>
+                        <OrgName>Centro de Física Nuclear da Universidade de Lisboa</OrgName>
+                        <OrgAddress>
+                           <City>Lisbon</City>
+                           <Country Code="PT">Portugal</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff186">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2159 175X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.10328.38</OrgID>
+                        <OrgDivision>Departamento de Física</OrgDivision>
+                        <OrgName>Universidade do Minho</OrgName>
+                        <OrgAddress>
+                           <City>Braga</City>
+                           <Country Code="PT">Portugal</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff187">
+                        <OrgID Level="Institution" Type="ISNI">0000000121678994</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.4489.1</OrgID>
+                        <OrgDivision>Departamento de Física Teorica y del Cosmos</OrgDivision>
+                        <OrgName>Universidad de Granada</OrgName>
+                        <OrgAddress>
+                           <City>Granada</City>
+                           <Country Code="ES">Spain</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff188">
+                        <OrgID Level="Institution" Type="ISNI">0000000121511713</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.10772.33</OrgID>
+                        <OrgDivision>Dep Física and CEFITEC of Faculdade de Ciências e Tecnologia</OrgDivision>
+                        <OrgName>Universidade Nova de Lisboa</OrgName>
+                        <OrgAddress>
+                           <City>Caparica</City>
+                           <Country Code="PT">Portugal</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff189">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 1015 3316</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.418095.1</OrgID>
+                        <OrgDivision>Institute of Physics</OrgDivision>
+                        <OrgName>Academy of Sciences of the Czech Republic</OrgName>
+                        <OrgAddress>
+                           <City>Prague</City>
+                           <Country Code="CZ">Czech Republic</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff190">
+                        <OrgID Level="Institution" Type="ISNI">0000000121738213</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.6652.7</OrgID>
+                        <OrgName>Czech Technical University in Prague</OrgName>
+                        <OrgAddress>
+                           <City>Prague</City>
+                           <Country Code="CZ">Czech Republic</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff191">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1937 116X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.4491.8</OrgID>
+                        <OrgDivision>Faculty of Mathematics and Physics</OrgDivision>
+                        <OrgName>Charles University</OrgName>
+                        <OrgAddress>
+                           <City>Prague</City>
+                           <Country Code="CZ">Czech Republic</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff192">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 0620 440X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.424823.b</OrgID>
+                        <OrgName>State Research Center Institute for High Energy Physics, NRC KI</OrgName>
+                        <OrgAddress>
+                           <City>Protvino</City>
+                           <Country Code="RU">Russia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff193">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2296 6998</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.76978.37</OrgID>
+                        <OrgDivision>Particle Physics Department</OrgDivision>
+                        <OrgName>Rutherford Appleton Laboratory</OrgName>
+                        <OrgAddress>
+                           <City>Didcot</City>
+                           <Country Code="GB">UK</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff194">
+                        <OrgName>IRFU, CEA, Université Paris-Saclay</OrgName>
+                        <OrgAddress>
+                           <City>Gif-sur-Yvette</City>
+                           <Country Code="FR">France</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff195">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0740 6917</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.205975.c</OrgID>
+                        <OrgDivision>Santa Cruz Institute for Particle Physics</OrgDivision>
+                        <OrgName>University of California Santa Cruz</OrgName>
+                        <OrgAddress>
+                           <City>Santa Cruz</City>
+                           <State>CA</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff196">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2157 0406</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.7870.8</OrgID>
+                        <OrgDivision>Departamento de Física</OrgDivision>
+                        <OrgName>Pontificia Universidad Católica de Chile</OrgName>
+                        <OrgAddress>
+                           <City>Santiago</City>
+                           <Country Code="CL">Chile</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff197">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 1958 645X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.12148.3e</OrgID>
+                        <OrgDivision>Departamento de Física</OrgDivision>
+                        <OrgName>Universidad Técnica Federico Santa María</OrgName>
+                        <OrgAddress>
+                           <City>Valparaíso</City>
+                           <Country Code="CL">Chile</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff198">
+                        <OrgID Level="Institution" Type="ISNI">0000000122986657</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.34477.33</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>University of Washington</OrgName>
+                        <OrgAddress>
+                           <City>Seattle</City>
+                           <State>WA</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff199">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 9262</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.11835.3e</OrgID>
+                        <OrgDivision>Department of Physics and Astronomy</OrgDivision>
+                        <OrgName>University of Sheffield</OrgName>
+                        <OrgAddress>
+                           <City>Sheffield</City>
+                           <Country Code="GB">UK</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff200">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 1507 4692</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.263518.b</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Shinshu University</OrgName>
+                        <OrgAddress>
+                           <City>Nagano</City>
+                           <Country Code="JP">Japan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff201">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2242 8751</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.5836.8</OrgID>
+                        <OrgDivision>Department Physik</OrgDivision>
+                        <OrgName>Universität Siegen</OrgName>
+                        <OrgAddress>
+                           <City>Siegen</City>
+                           <Country Code="DE">Germany</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff202">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 7494</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.61971.38</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Simon Fraser University</OrgName>
+                        <OrgAddress>
+                           <City>Burnaby</City>
+                           <State>BC</State>
+                           <Country Code="CA">Canada</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff203">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0725 7771</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.445003.6</OrgID>
+                        <OrgName>SLAC National Accelerator Laboratory</OrgName>
+                        <OrgAddress>
+                           <City>Stanford</City>
+                           <State>CA</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff204">
+                        <OrgID Level="Institution" Type="ISNI">0000000121581746</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.5037.1</OrgID>
+                        <OrgDivision>Physics Department</OrgDivision>
+                        <OrgName>Royal Institute of Technology</OrgName>
+                        <OrgAddress>
+                           <City>Stockholm</City>
+                           <Country Code="SE">Sweden</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff205">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2216 9681</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.36425.36</OrgID>
+                        <OrgDivision>Departments of Physics and Astronomy</OrgDivision>
+                        <OrgName>Stony Brook University</OrgName>
+                        <OrgAddress>
+                           <City>Stony Brook</City>
+                           <State>NY</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff206">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 7590</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.12082.39</OrgID>
+                        <OrgDivision>Department of Physics and Astronomy</OrgDivision>
+                        <OrgName>University of Sussex</OrgName>
+                        <OrgAddress>
+                           <City>Brighton</City>
+                           <Country Code="GB">UK</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff207">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 834X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.1013.3</OrgID>
+                        <OrgDivision>School of Physics</OrgDivision>
+                        <OrgName>University of Sydney</OrgName>
+                        <OrgAddress>
+                           <City>Sydney</City>
+                           <Country Code="AU">Australia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff208">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2287 1366</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.28665.3f</OrgID>
+                        <OrgDivision>Institute of Physics</OrgDivision>
+                        <OrgName>Academia Sinica</OrgName>
+                        <OrgAddress>
+                           <City>Taipei</City>
+                           <Country Code="TW">Taiwan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff209">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2287 1366</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.28665.3f</OrgID>
+                        <OrgName>Academia Sinica Grid Computing, Institute of Physics, Academia Sinica</OrgName>
+                        <OrgAddress>
+                           <City>Taipei</City>
+                           <Country Code="TW">Taiwan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff210">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2034 6082</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.26193.3f</OrgID>
+                        <OrgDivision>E. Andronikashvili Institute of Physics</OrgDivision>
+                        <OrgName>Iv. Javakhishvili Tbilisi State University</OrgName>
+                        <OrgAddress>
+                           <City>Tbilisi</City>
+                           <Country Code="GE">Georgia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff211">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2034 6082</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.26193.3f</OrgID>
+                        <OrgDivision>High Energy Physics Institute</OrgDivision>
+                        <OrgName>Tbilisi State University</OrgName>
+                        <OrgAddress>
+                           <City>Tbilisi</City>
+                           <Country Code="GE">Georgia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff212">
+                        <OrgID Level="Institution" Type="ISNI">0000000121102151</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.6451.6</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Technion, Israel Institute of Technology</OrgName>
+                        <OrgAddress>
+                           <City>Haifa</City>
+                           <Country Code="IL">Israel</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff213">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1937 0546</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.12136.37</OrgID>
+                        <OrgDivision>Raymond and Beverly Sackler School of Physics and Astronomy</OrgDivision>
+                        <OrgName>Tel Aviv University</OrgName>
+                        <OrgAddress>
+                           <City>Tel Aviv</City>
+                           <Country Code="IL">Israel</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff214">
+                        <OrgID Level="Institution" Type="ISNI">0000000109457005</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.4793.9</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Aristotle University of Thessaloniki</OrgName>
+                        <OrgAddress>
+                           <City>Thessaloniki</City>
+                           <Country Code="GR">Greece</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff215">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2151 536X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.26999.3d</OrgID>
+                        <OrgDivision>International Center for Elementary Particle Physics and Department of Physics</OrgDivision>
+                        <OrgName>University of Tokyo</OrgName>
+                        <OrgAddress>
+                           <City>Tokyo</City>
+                           <Country Code="JP">Japan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff216">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 1090 2030</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.265074.2</OrgID>
+                        <OrgDivision>Graduate School of Science and Technology</OrgDivision>
+                        <OrgName>Tokyo Metropolitan University</OrgName>
+                        <OrgAddress>
+                           <City>Tokyo</City>
+                           <Country Code="JP">Japan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff217">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2179 2105</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.32197.3e</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Tokyo Institute of Technology</OrgName>
+                        <OrgAddress>
+                           <City>Tokyo</City>
+                           <Country Code="JP">Japan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff218">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 1088 3909</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.77602.34</OrgID>
+                        <OrgName>Tomsk State University</OrgName>
+                        <OrgAddress>
+                           <City>Tomsk</City>
+                           <Country Code="RU">Russia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff219">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2157 2938</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.17063.33</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>University of Toronto</OrgName>
+                        <OrgAddress>
+                           <City>Toronto</City>
+                           <State>ON</State>
+                           <Country Code="CA">Canada</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff220">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0705 9791</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.232474.4</OrgID>
+                        <OrgName>TRIUMF</OrgName>
+                        <OrgAddress>
+                           <City>Vancouver</City>
+                           <State>BC</State>
+                           <Country Code="CA">Canada</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff221">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 9430</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.21100.32</OrgID>
+                        <OrgDivision>Department of Physics and Astronomy</OrgDivision>
+                        <OrgName>York University</OrgName>
+                        <OrgAddress>
+                           <City>Toronto</City>
+                           <State>ON</State>
+                           <Country Code="CA">Canada</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff222">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2369 4728</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.20515.33</OrgID>
+                        <OrgDivision>Division of Physics and Tomonaga Center for the History of the Universe, Faculty of Pure and Applied Sciences</OrgDivision>
+                        <OrgName>University of Tsukuba</OrgName>
+                        <OrgAddress>
+                           <City>Tsukuba</City>
+                           <Country Code="JP">Japan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff223">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 7531</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.429997.8</OrgID>
+                        <OrgDivision>Department of Physics and Astronomy</OrgDivision>
+                        <OrgName>Tufts University</OrgName>
+                        <OrgAddress>
+                           <City>Medford</City>
+                           <State>MA</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff224">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0668 7243</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.266093.8</OrgID>
+                        <OrgDivision>Department of Physics and Astronomy</OrgDivision>
+                        <OrgName>University of California Irvine</OrgName>
+                        <OrgAddress>
+                           <City>Irvine</City>
+                           <State>CA</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff225">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 9457</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.8993.b</OrgID>
+                        <OrgDivision>Department of Physics and Astronomy</OrgDivision>
+                        <OrgName>University of Uppsala</OrgName>
+                        <OrgAddress>
+                           <City>Uppsala</City>
+                           <Country Code="SE">Sweden</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff226">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 9991</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.35403.31</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>University of Illinois</OrgName>
+                        <OrgAddress>
+                           <City>Urbana</City>
+                           <State>IL</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff227">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2183 4846</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.4711.3</OrgID>
+                        <OrgDivision>Instituto de Física Corpuscular (IFIC)</OrgDivision>
+                        <OrgName>Centro Mixto Universidad de Valencia, CSIC</OrgName>
+                        <OrgAddress>
+                           <City>Valencia</City>
+                           <Country Code="ES">Spain</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff228">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2288 9830</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.17091.3e</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>University of British Columbia</OrgName>
+                        <OrgAddress>
+                           <City>Vancouver</City>
+                           <State>BC</State>
+                           <Country Code="CA">Canada</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff229">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 9465</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.143640.4</OrgID>
+                        <OrgDivision>Department of Physics and Astronomy</OrgDivision>
+                        <OrgName>University of Victoria</OrgName>
+                        <OrgAddress>
+                           <City>Victoria</City>
+                           <State>BC</State>
+                           <Country Code="CA">Canada</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff230">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 1958 8658</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.8379.5</OrgID>
+                        <OrgDivision>Fakultät für Physik und Astronomie</OrgDivision>
+                        <OrgName>Julius-Maximilians-Universität Würzburg</OrgName>
+                        <OrgAddress>
+                           <City>Würzburg</City>
+                           <Country Code="DE">Germany</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff231">
+                        <OrgID Level="Institution" Type="ISNI">0000 0000 8809 1613</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.7372.1</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>University of Warwick</OrgName>
+                        <OrgAddress>
+                           <City>Coventry</City>
+                           <Country Code="GB">UK</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff232">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 1936 9975</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.5290.e</OrgID>
+                        <OrgName>Waseda University</OrgName>
+                        <OrgAddress>
+                           <City>Tokyo</City>
+                           <Country Code="JP">Japan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff233">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 0604 7563</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.13992.30</OrgID>
+                        <OrgDivision>Department of Particle Physics</OrgDivision>
+                        <OrgName>Weizmann Institute of Science</OrgName>
+                        <OrgAddress>
+                           <City>Rehovot</City>
+                           <Country Code="IL">Israel</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff234">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0701 8607</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.28803.31</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>University of Wisconsin</OrgName>
+                        <OrgAddress>
+                           <City>Madison</City>
+                           <State>WI</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff235">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2364 5811</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.7787.f</OrgID>
+                        <OrgDivision>Fakultät für Mathematik und Naturwissenschaften, Fachgruppe Physik</OrgDivision>
+                        <OrgName>Bergische Universität Wuppertal</OrgName>
+                        <OrgAddress>
+                           <City>Wuppertal</City>
+                           <Country Code="DE">Germany</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff236">
+                        <OrgID Level="Institution" Type="ISNI">0000000419368710</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.47100.32</OrgID>
+                        <OrgDivision>Department of Physics</OrgDivision>
+                        <OrgName>Yale University</OrgName>
+                        <OrgAddress>
+                           <City>New Haven</City>
+                           <State>CT</State>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff237">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 0482 7128</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.48507.3e</OrgID>
+                        <OrgName>Yerevan Physics Institute</OrgName>
+                        <OrgAddress>
+                           <City>Yerevan</City>
+                           <Country Code="AM">Armenia</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff238">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2156 142X</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.9132.9</OrgID>
+                        <OrgName>CERN</OrgName>
+                        <OrgAddress>
+                           <Postcode>1211</Postcode>
+                           <City>Geneva 23</City>
+                           <Country Code="CH">Switzerland</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                  </AuthorGroup>
+                  <Abstract ID="Abs1" Language="En" OutputMedium="All">
+                     <Heading>Abstract</Heading>
+                     <Para ID="Par1">This paper describes a strategy for a general search used by the ATLAS Collaboration to find potential indications of new physics. Events are classified according to their final state into many event classes. For each event class an automated search algorithm tests whether the data are compatible with the Monte Carlo simulated expectation in several distributions sensitive to the effects of new physics. The significance of a deviation is quantified using pseudo-experiments. A data selection with a significant deviation defines a signal region for a dedicated follow-up analysis with an improved background expectation. The analysis of the data-derived signal regions on a new dataset allows a statistical interpretation without the large look-elsewhere effect. The sensitivity of the approach is discussed using Standard Model processes and benchmark signals of new physics. As an example, results are shown for 3.2 fb<InlineEquation ID="IEq1"><InlineMediaObject><ImageObject Color="BlackWhite" FileRef="10052_2019_6540_Article_IEq1.gif" Format="GIF" Rendition="HTML" Type="Linedraw" /></InlineMediaObject><EquationSource Format="TEX"><![CDATA[$$^{-1}$$]]></EquationSource><EquationSource Format="MATHML"><![CDATA[
+                    ]]><math xmlns:xlink="http://www.w3.org/1999/xlink"><msup xmlns:xlink="http://www.w3.org/1999/xlink"><mrow xmlns:xlink="http://www.w3.org/1999/xlink" /><mrow xmlns:xlink="http://www.w3.org/1999/xlink"><mo xmlns:xlink="http://www.w3.org/1999/xlink">-</mo><mn xmlns:xlink="http://www.w3.org/1999/xlink">1</mn></mrow></msup></math><![CDATA[
+                  ]]></EquationSource></InlineEquation> of proton–proton collision data at a centre-of-mass energy of 13 <InlineEquation ID="IEq2"><InlineMediaObject><ImageObject Color="BlackWhite" FileRef="10052_2019_6540_Article_IEq2.gif" Format="GIF" Rendition="HTML" Type="Linedraw" /></InlineMediaObject><EquationSource Format="TEX"><![CDATA[$$\text {TeV}$$]]></EquationSource><EquationSource Format="MATHML"><![CDATA[
+                    ]]><math xmlns:xlink="http://www.w3.org/1999/xlink"><mtext xmlns:xlink="http://www.w3.org/1999/xlink">TeV</mtext></math><![CDATA[
+                  ]]></EquationSource></InlineEquation> collected with the ATLAS detector at the LHC in 2015, in which more than 700 event classes and more than <InlineEquation ID="IEq3"><InlineMediaObject><ImageObject Color="BlackWhite" FileRef="10052_2019_6540_Article_IEq3.gif" Format="GIF" Rendition="HTML" Type="Linedraw" /></InlineMediaObject><EquationSource Format="TEX"><![CDATA[$$10^5$$]]></EquationSource><EquationSource Format="MATHML"><![CDATA[
+                    ]]><math xmlns:xlink="http://www.w3.org/1999/xlink"><msup xmlns:xlink="http://www.w3.org/1999/xlink"><mn xmlns:xlink="http://www.w3.org/1999/xlink">10</mn><mn xmlns:xlink="http://www.w3.org/1999/xlink">5</mn></msup></math><![CDATA[
+                  ]]></EquationSource></InlineEquation> regions have been analysed. No significant deviations are found and consequently no data-derived signal regions for a follow-up analysis have been defined.</Para>
+                  </Abstract>
+               </ArticleHeader>
+               <NoBody />
+            </Article>
+         </Issue>
+      </Volume>
+   </Journal>
+</Publisher>
