@@ -25,25 +25,23 @@ class APSApiClient:
         if len(response_content["data"]) > 0:
             return response_content
 
-    def get_pdf_file(self, doi, parameters):
+    def get_pdf_file(self, doi):
         all_path_segments = self.path_segments + [doi]
         headers = {"Accept": "application/pdf"}
         request = Request(
             base_url=self.base_url,
             path_segments=all_path_segments,
-            parameters=parameters,
             headers=headers,
         )
         response_content = request.get_response_bytes()
         return response_content
 
-    def get_xml_file(self, doi, parameters):
+    def get_xml_file(self, doi):
         all_path_segments = self.path_segments + [doi]
         headers = {"Accept": "text/xml"}
         request = Request(
             base_url=self.base_url,
             path_segments=all_path_segments,
-            parameters=parameters,
             headers=headers,
         )
         response_content = request.get_response_bytes()

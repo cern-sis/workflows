@@ -10,7 +10,7 @@ TRIGGERED_DAG_NAME = "aps_process_file"
 
 class MockedRepo:
     def find_the_last_uploaded_file_date(self):
-        today = date.today()
+        today = date.today().strftime("%Y-%m-%d")
         return today
 
     def save(self, key, file):

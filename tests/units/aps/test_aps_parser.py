@@ -158,14 +158,28 @@ def parsed_articles(parser, articles):
         ),
         pytest.param(
             [
-                [{"url": "http://link.aps.org/licenses/aps-default-license"}],
-                [{"url": "http://link.aps.org/licenses/aps-default-license"}],
+                [
+                    {
+                        "license": "CC-LICENSES-aps-default-license",
+                        "url": "http://link.aps.org/licenses/aps-default-license",
+                    }
+                ],
+                [
+                    {
+                        "license": "CC-LICENSES-aps-default-license",
+                        "url": "http://link.aps.org/licenses/aps-default-license",
+                    }
+                ],
             ],
             "license",
             id="test_license",
         ),
         pytest.param([[], []], "field_categories", id="test_field_categories"),
-        # THIS IS A TEST FOR EXTRA DATA
+        pytest.param(
+            [["HEP", "Citeable", "Published"], ["HEP", "Citeable", "Published"]],
+            "collections",
+            id="test_collections",
+        ),
         pytest.param(
             [
                 [

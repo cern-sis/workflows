@@ -2,6 +2,7 @@ import re
 
 from common.parsing.json_extractors import CustomExtractor, NestedValueExtractor
 from common.parsing.parser import IParser
+from common.utils import construct_license
 from inspire_utils.record import get_value
 from structlog import get_logger
 
@@ -31,7 +32,7 @@ class APSParser(IParser):
             NestedValueExtractor(
                 "journal_doctype",
                 json_path="articleType",
-                extra_function=lambda x: article_type_mapping.get(x, 'other'),
+                extra_function=lambda x: article_type_mapping.get(x, "other"),
             ),
             NestedValueExtractor(
                 "page_nr", json_path="numPages", extra_function=lambda x: [x]
@@ -64,11 +65,14 @@ class APSParser(IParser):
             NestedValueExtractor(
                 "copyright_statement", json_path="rights.rightsStatement"
             ),
-            NestedValueExtractor(
+            CustomExtractor(
                 "license",
-                json_path="rights.licenses",
+                extraction_function=lambda x: self._get_licenses(x),
             ),
-            NestedValueExtractor("collections", json_path="HEP.Citeable.Published"),
+            CustomExtractor(
+                "collections",
+                extraction_function=lambda x: ["HEP", "Citeable", "Published"],
+            ),
             CustomExtractor("field_categories", self._get_field_categories),
             CustomExtractor("files", self._build_files_data),
         ]
@@ -84,7 +88,9 @@ class APSParser(IParser):
                 "surname": author["surname"],
                 "affiliations": self._get_affiliations(
                     article, author["affiliationIds"]
-                ) if "affiliationIds" in author else []
+                )
+                if "affiliationIds" in author
+                else [],
             }
             for author in authors
             if author["type"] == "Person"
@@ -103,7 +109,7 @@ class APSParser(IParser):
         return parsed_affiliations
 
     def _get_field_categories(self, article):
-        return [
+        categories = [
             {
                 "term": term.get("label"),
                 "scheme": "APS",
@@ -113,6 +119,7 @@ class APSParser(IParser):
                 article, "classificationSchemes.subjectAreas", default=""
             )
         ]
+        return sorted(categories, key=lambda x: x["term"])
 
     def _build_files_data(self, article):
         doi = get_value(article, "identifiers.doi")
@@ -130,3 +137,22 @@ class APSParser(IParser):
                 "filetype": "xml",
             },
         ]
+
+    def _get_licenses(self, x):
+        try:
+            rights = x["rights"]["licenses"]
+            licenses = []
+            for right in rights:
+                url = right["url"]
+                url_parts = url.split("/")
+                clean_url_parts = list(filter(bool, url_parts))
+                version = clean_url_parts.pop()
+                licencse_type = clean_url_parts.pop()
+                licenses.append(
+                    construct_license(
+                        url=url, license_type=licencse_type.upper(), version=version
+                    )
+                )
+            return licenses
+        except Exception as e:
+            self.logger.error("Error was raised while parsing licenses", e)
