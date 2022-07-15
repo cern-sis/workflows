@@ -29,8 +29,10 @@
         <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">47 pages, no figures</arxiv:comment>
         <link href="http://arxiv.org/abs/2112.01211v1" rel="alternate" type="text/html" />
         <link title="pdf" href="http://arxiv.org/pdf/2112.01211v1" rel="related" type="application/pdf" />
-        <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="hep-th" scheme="http://arxiv.org/schemas/atom" />
-        <category term="hep-th" scheme="http://arxiv.org/schemas/atom" />
+        <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="hep-ph" scheme="http://arxiv.org/schemas/atom" />
         <category term="hep-ph" scheme="http://arxiv.org/schemas/atom" />
+        <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom" />
+        <category term="astro-ph.IM" scheme="http://arxiv.org/schemas/atom" />
+        <category term="hep-ex" scheme="http://arxiv.org/schemas/atom" />
     </entry>
 </feed>

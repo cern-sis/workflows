@@ -109,7 +109,7 @@ class APSParser(IParser):
         return parsed_affiliations
 
     def _get_field_categories(self, article):
-        categories = [
+        return [
             {
                 "term": term.get("label"),
                 "scheme": "APS",
@@ -119,7 +119,6 @@ class APSParser(IParser):
                 article, "classificationSchemes.subjectAreas", default=""
             )
         ]
-        return sorted(categories, key=lambda x: x["term"])
 
     def _build_files_data(self, article):
         doi = get_value(article, "identifiers.doi")

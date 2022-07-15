@@ -55,8 +55,11 @@ class Enricher(object):
             node.attrib["term"]
             for node in entry.findall("./w3:category", namespaces=xml_namespaces)
         ]
+        for (index, secondary_category) in enumerate(secondary_categories):
+            if secondary_category == primary_category:
+                secondary_categories.pop(index)
 
-        return list(set([primary_category] + secondary_categories))
+        return list([primary_category] + secondary_categories)
 
     @backoff.on_exception(
         backoff.expo, requests.exceptions.RequestException, max_time=60, max_tries=3
