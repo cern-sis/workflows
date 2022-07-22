@@ -26,12 +26,28 @@ def get_affiliations(authors):
         )
 
     for countries in countries_per_author:
-        if "Palestine" in countries:
-            index = countries.index("Palestine")
-            countries[index] = "West Bank and Gaza"
-        if "HUMAN CHECK" in countries:
-            index = countries.index("HUMAN CHECK")
-            countries[index] = "UNKNOWN"
+        for country in countries:
+            if "Palestine" == country:
+                index = countries.index("Palestine")
+                countries[index] = "West Bank and Gaza"
+            elif "HUMAN CHECK" == country:
+                index = countries.index("HUMAN CHECK")
+                countries[index] = "UNKNOWN"
+            elif "United Kingdom" == country:
+                index = countries.index("United Kingdom")
+                countries[index] = "UK"
+            elif "Yemen" == country:
+                index = countries.index("Yemen")
+                countries[index] = "Yemen, Rep."
+            elif "México" == country:
+                index = countries.index("México")
+                countries[index] = "Mexico"
+            elif "Bahamas" == country:
+                index = countries.index("Bahamas")
+                countries[index] = "The Bahamas"
+            elif "United States of America" == country:
+                index = countries.index("United States of America")
+                countries[index] = "USA"
         if len(countries) == 0:
             countries = ["UNKNOWN"]
     return countries_per_author
@@ -79,7 +95,7 @@ def build_countries_list_values(countries, all_countries_list):
     ret_dict = {country: 0 for country in all_countries_list}
     for country in countries:
         if country not in ret_dict:
-            ret_dict["UNKNOWN"] += 1
+            ret_dict["UNKNOWN"] += 1 
         else:
             ret_dict[country] += 1
     ret_list = [value for value in ret_dict.items()]

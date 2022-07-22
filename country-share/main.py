@@ -61,7 +61,7 @@ if __name__ == "__main__":
     client = Elasticsearch(
         hosts=[
             {
-                "host": "es-scoap3-qa1.cern.ch",
+                "host": (host),
                 "http_auth": (username, password),
                 "http_compress": True,
                 "port": 443,
