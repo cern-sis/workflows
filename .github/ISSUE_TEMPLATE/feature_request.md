@@ -17,7 +17,7 @@
             <td rowspan=6>Determine assignees before the upcoming sprint</td>
         </tr>
         <tr>
-            <td>Proposed solution(s): describe technical solutions</td>
+            <td>Proposed solution(s)</td>
         </tr>
         <tr>
             <td>Expected behaviour</td>
@@ -26,7 +26,7 @@
             <td>Origin: where does the request come from? (Product owner, user feedback, etc)</td>
         </tr>
         <tr>
-            <td>Tests required? Remember to test new code to ensure the quality.</td>
+            <td>Tests required? Remember to test new code to ensure the quality. Mention any edge cases that will be useful for testing.</td>
         </tr>
     </tbody>
 </table>
