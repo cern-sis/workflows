@@ -68,7 +68,7 @@ jobs:
           registry: registry.cern.ch
           push: true
           tags: registry.cern.ch/cern-sis/workflows:latest,registry.cern.ch/cern-sis/workflows:${{ github.sha }}
-      
+
       - name: Deploy QA
         uses: peter-evans/repository-dispatch@v1
         if: ${{ github.event_name == 'push'}}
