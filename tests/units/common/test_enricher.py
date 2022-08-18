@@ -24,7 +24,8 @@ def test_get_arxiv_categories_arxiv_id(
         text=arxiv_output_content,
     )
     assertListEqual(
-        ["hep-ph", "hep-th"], enricher._get_arxiv_categories(arxiv_id="0000.00000")
+        ["hep-ph", "astro-ph.HE", "astro-ph.IM", "hep-ex"],
+        enricher._get_arxiv_categories(arxiv_id="0000.00000"),
     )
 
 
@@ -36,5 +37,6 @@ def test_get_arxiv_categories_title(
         text=arxiv_output_content,
     )
     assertListEqual(
-        ["hep-ph", "hep-th"], enricher._get_arxiv_categories(title="test title")
+        ["hep-ph", "astro-ph.HE", "astro-ph.IM", "hep-ex"],
+        enricher._get_arxiv_categories(title="test title"),
     )

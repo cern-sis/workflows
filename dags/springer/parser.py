@@ -8,6 +8,7 @@ from common.parsing.xml_extractors import (
     CustomExtractor,
     TextExtractor,
 )
+from common.utils import construct_license
 from structlog import get_logger
 
 
@@ -249,13 +250,14 @@ class SpringerParser(IParser):
 
         if license_node is not None:
             license_type = license_node.get("SubType")
-            version = version_node.get("Version")
             license_type = license_type.lower().lstrip("cc ").replace(" ", "-")
+
+            version = version_node.get("Version")
+            url = f"{base_url}/{license_type}/{version}"
             return [
-                {
-                    "license": "CC-" + license_type.upper() + "-" + version,
-                    "url": f"{base_url}/{license_type}/{version}",
-                }
+                construct_license(
+                    url=url, license_type=license_type.upper(), version=version
+                )
             ]
 
         self.logger.warning("License not found, returning default license.")

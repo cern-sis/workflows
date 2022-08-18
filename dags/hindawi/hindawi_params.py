@@ -1,30 +1,27 @@
 from datetime import date, timedelta
 
 
-class APSParams:
+class HindawiParams:
     def __init__(
         self,
         from_date: str = (date.today() - timedelta(days=1)).strftime("%Y-%m-%d"),
         until_date: str = date.today().strftime("%Y-%m-%d"),
-        date: str = "modified",
-        journals: str = "",
-        set: str = "scoap3",
-        per_page: int = 100,
+        verb: str = "listrecords",
+        set: str = "HINDAWI.AA",
+        metadataprefix: str = "marc21",
     ):
         self.from_date = from_date
         self.until_date = until_date
-        self.date = date
-        self.journals = journals
+        self.verb = verb
         self.set = set
-        self.per_page = per_page
+        self.metadataprefix = metadataprefix
 
     def get_params(self) -> dict:
         params = {
             "from": self.from_date,
             "until": self.until_date,
-            "date": self.date,
-            "journals": self.journals,
+            "verb": self.verb,
             "set": self.set,
-            "per_page": self.per_page,
+            "metadataprefix": self.metadataprefix,
         }
         return {key: value for key, value in params.items() if value}

@@ -1,962 +1,963 @@
 interactions:
-- request:
-    body: null
-    headers:
-      Accept:
-      - text/xml
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - python-requests/2.27.1
-    method: GET
-    uri: http://harvest.aps.org/v2/journals/articles/10.1103%2FPhysRevLett.126.153601?from=2021-04-10&until=2022-04-10&date=modified&sets=scoap3&per_page=100
-  response:
-    body:
-      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<!DOCTYPE article PUBLIC\
-        \ \"-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with OASIS Tables with\
-        \ MathML3 v1.2 20190208//EN\" \"JATS-journalpublishing-oasis-article1-mathml3.dtd\"\
-        >\r\n<article article-type=\"research-article\" xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"\
-        \ xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:oasis=\"http://www.niso.org/standards/z39-96/ns/oasis-exchange/table\"\
-        ><front><journal-meta><journal-id journal-id-type=\"publisher-id\">PRL</journal-id><journal-id\
-        \ journal-id-type=\"coden\">PRLTAO</journal-id><journal-title-group><journal-title>Physical\
-        \ Review Letters</journal-title><abbrev-journal-title>Phys. Rev. Lett.</abbrev-journal-title></journal-title-group><issn\
-        \ pub-type=\"ppub\">0031-9007</issn><issn pub-type=\"epub\">1079-7114</issn><publisher><publisher-name>American\
-        \ Physical Society</publisher-name></publisher></journal-meta><article-meta><article-id\
-        \ pub-id-type=\"doi\">10.1103/PhysRevLett.126.153601</article-id><article-categories><subj-group\
-        \ subj-group-type=\"toc-major\"><subject>LETTERS</subject></subj-group><subj-group\
-        \ subj-group-type=\"toc-minor\"><subject>Atomic, Molecular, and Optical Physics</subject></subj-group></article-categories><title-group><article-title>Observation\
-        \ of Microcanonical Atom Number Fluctuations in a Bose-Einstein Condensate</article-title></title-group><contrib-group><contrib\
-        \ contrib-type=\"author\"><contrib-id contrib-id-type=\"orcid\">https://orcid.org/0000-0002-7355-8107</contrib-id><name><surname>Christensen</surname><given-names>M.\u2009\
-        B.</given-names></name><xref ref-type=\"aff\" rid=\"a1\"><sup>1</sup></xref></contrib><contrib\
-        \ contrib-type=\"author\"><contrib-id contrib-id-type=\"orcid\">https://orcid.org/0000-0001-7116-4983</contrib-id><name><surname>Vibel</surname><given-names>T.</given-names></name><xref\
-        \ ref-type=\"aff\" rid=\"a1\"><sup>1</sup></xref></contrib><contrib contrib-type=\"\
-        author\"><contrib-id contrib-id-type=\"orcid\">https://orcid.org/0000-0002-4512-5355</contrib-id><name><surname>Hilliard</surname><given-names>A.\u2009\
-        J.</given-names></name><xref ref-type=\"aff\" rid=\"a1\"><sup>1</sup></xref></contrib><contrib\
-        \ contrib-type=\"author\"><contrib-id contrib-id-type=\"orcid\">https://orcid.org/0000-0002-9868-4310</contrib-id><name><surname>Kruk</surname><given-names>M.\u2009\
-        B.</given-names></name><xref ref-type=\"aff\" rid=\"a2 a3\"><sup>2,3</sup></xref></contrib><contrib\
-        \ contrib-type=\"author\"><contrib-id contrib-id-type=\"orcid\">https://orcid.org/0000-0001-6412-4457</contrib-id><name><surname>Paw\u0142\
-        owski</surname><given-names>K.</given-names></name><xref ref-type=\"aff\"\
-        \ rid=\"a2\"><sup>2</sup></xref></contrib><contrib contrib-type=\"author\"\
-        ><name><surname>Hryniuk</surname><given-names>D.</given-names></name><xref\
-        \ ref-type=\"aff\" rid=\"a2\"><sup>2</sup></xref></contrib><contrib contrib-type=\"\
-        author\"><name><surname>Rz\u0105\u017Cewski</surname><given-names>K.</given-names></name><xref\
-        \ ref-type=\"aff\" rid=\"a2\"><sup>2</sup></xref></contrib><contrib contrib-type=\"\
-        author\"><contrib-id contrib-id-type=\"orcid\">https://orcid.org/0000-0002-9667-2789</contrib-id><name><surname>Kristensen</surname><given-names>M.\u2009\
-        A.</given-names></name><xref ref-type=\"aff\" rid=\"a1\"><sup>1</sup></xref></contrib><contrib\
-        \ contrib-type=\"author\"><contrib-id contrib-id-type=\"orcid\">https://orcid.org/0000-0002-5782-3927</contrib-id><name><surname>Arlt</surname><given-names>J.\u2009\
-        J.</given-names></name><xref ref-type=\"aff\" rid=\"a1\"><sup>1</sup></xref></contrib><aff\
-        \ id=\"a1\"><label><sup>1</sup></label>Center for Complex Quantum Systems,\
-        \ Department of Physics and Astronomy, <institution>Aarhus University</institution>,\
-        \ Ny Munkegade 120, DK-8000 Aarhus C, Denmark</aff><aff id=\"a2\"><label><sup>2</sup></label>Center\
-        \ for Theoretical Physics, <institution>Polish Academy of Sciences</institution>,\
-        \ Al. Lotnik\xF3w 32/46, 02-668 Warsaw, Poland</aff><aff id=\"a3\"><label><sup>3</sup></label>Institute\
-        \ of Physics, <institution>Polish Academy of Sciences</institution>, Al. Lotnik\xF3\
-        w 32/46, 02-668 Warsaw, Poland</aff></contrib-group><pub-date iso-8601-date=\"\
-        2021-04-12\" date-type=\"pub\" publication-format=\"electronic\"><day>12</day><month>April</month><year>2021</year></pub-date><pub-date\
-        \ iso-8601-date=\"2021-04-16\" date-type=\"pub\" publication-format=\"print\"\
-        ><day>16</day><month>April</month><year>2021</year></pub-date><volume>126</volume><issue>15</issue><elocation-id>153601</elocation-id><pub-history><event><date\
-        \ iso-8601-date=\"2020-11-24\" date-type=\"received\"><day>24</day><month>November</month><year>2020</year></date></event><event><date\
-        \ iso-8601-date=\"2021-03-11\" date-type=\"accepted\"><day>11</day><month>March</month><year>2021</year></date></event></pub-history><permissions><copyright-statement>Published\
-        \ by the American Physical Society</copyright-statement><copyright-year>2021</copyright-year><copyright-holder>authors</copyright-holder><license\
-        \ license-type=\"creative-commons\" xlink:href=\"https://creativecommons.org/licenses/by/4.0/\"\
-        ><license-p content-type=\"usage-statement\">Published by the American Physical\
-        \ Society under the terms of the <ext-link ext-link-type=\"uri\" xlink:href=\"\
-        https://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution\
-        \ 4.0 International</ext-link> license. Further distribution of this work\
-        \ must maintain attribution to the author(s) and the published article\u2019\
-        s title, journal citation, and DOI.</license-p></license></permissions><abstract><p>Quantum\
-        \ systems are typically characterized by the inherent fluctuation of their\
-        \ physical observables. Despite this fundamental importance, the investigation\
-        \ of the fluctuations in interacting quantum systems at finite temperature\
-        \ continues to pose considerable theoretical and experimental challenges.\
-        \ Here we report the characterization of atom number fluctuations in weakly\
-        \ interacting Bose-Einstein condensates. Technical fluctuations are mitigated\
-        \ through a combination of nondestructive detection and active stabilization\
-        \ of the cooling sequence. We observe fluctuations reduced by 27% below the\
-        \ canonical expectation for a noninteracting gas, revealing the microcanonical\
-        \ nature of our system. The peak fluctuations have near linear scaling with\
-        \ atom number <inline-formula><mml:math display=\"inline\"><mml:mi mathvariant=\"\
-        normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mrow><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>p</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:msubsup><mml:mo>\u221D\
-        </mml:mo><mml:msup><mml:mi>N</mml:mi><mml:mn>1.134</mml:mn></mml:msup></mml:math></inline-formula>\
-        \ in an experimentally accessible transition region outside the thermodynamic\
-        \ limit. Our experimental results thus set a benchmark for theoretical calculations\
-        \ under typical experimental conditions.</p></abstract><funding-group><award-group\
-        \ award-type=\"unspecified\"><funding-source country=\"DK\"><institution-wrap><institution>Villum\
-        \ Fonden</institution><institution-id institution-id-type=\"doi\" vocab=\"\
-        open-funder-registry\" vocab-identifier=\"10.13039/open-funder-registry\"\
-        >10.13039/100008398</institution-id></institution-wrap></funding-source></award-group><award-group\
-        \ award-type=\"unspecified\"><funding-source country=\"DK\"><institution-wrap><institution>Carlsbergfondet</institution><institution-id\
-        \ institution-id-type=\"doi\" vocab=\"open-funder-registry\" vocab-identifier=\"\
-        10.13039/open-funder-registry\">10.13039/501100002808</institution-id></institution-wrap></funding-source></award-group><award-group\
-        \ award-type=\"grant\"><funding-source country=\"DK\"><institution-wrap><institution>Danmarks\
-        \ Grundforskningsfond</institution><institution-id institution-id-type=\"\
-        doi\" vocab=\"open-funder-registry\" vocab-identifier=\"10.13039/open-funder-registry\"\
-        >10.13039/501100001732</institution-id></institution-wrap></funding-source><award-id>DNRF156</award-id></award-group><award-group\
-        \ award-type=\"grant\"><funding-source country=\"PL\"><institution-wrap><institution>Narodowe\
-        \ Centrum Nauki</institution><institution-id institution-id-type=\"doi\" vocab=\"\
-        open-funder-registry\" vocab-identifier=\"10.13039/open-funder-registry\"\
-        >10.13039/501100004281</institution-id></institution-wrap></funding-source><award-id>2018/29/B/ST2/01308</award-id><award-id>2019/34/E/ST2/00289</award-id><award-id>2018/31/B/ST2/01871</award-id></award-group><award-group\
-        \ award-type=\"grant\"><funding-source country=\"PL\"><institution-wrap><institution>Narodowa\
-        \ Agencja Wymiany Akademickiej</institution><institution-id institution-id-type=\"\
-        doi\" vocab=\"open-funder-registry\" vocab-identifier=\"10.13039/open-funder-registry\"\
-        >10.13039/501100014434</institution-id></institution-wrap></funding-source><award-id>PPI/PZA/2019/1/00094/U/00001</award-id></award-group></funding-group><counts><page-count\
-        \ count=\"6\"/></counts></article-meta></front><body><p>Bose-Einstein condensates\
-        \ (BECs) have become a cornerstone of current developments in quantum simulation\
-        \ <xref ref-type=\"bibr\" rid=\"c1\">[1]</xref>, and one would expect a complete\
-        \ description of their properties to be available. However, in spite of considerable\
-        \ theoretical effort, the atom number fluctuations between the thermal and\
-        \ condensed component of an interacting Bose gas at relevant atom densities\
-        \ are still not fully understood. In principle, such a quantum system can\
-        \ be described through all moments of its probability distribution, which\
-        \ have indeed not been obtained for large interacting BECs <xref ref-type=\"\
-        bibr\" rid=\"c2 c3 c4 c5 c6\">[2\u20136]</xref>. To date, experiments have\
-        \ been limited to the first moment corresponding to the condensate fraction\
-        \ <xref ref-type=\"bibr\" rid=\"c7 c8 c9\">[7\u20139]</xref> as well as the\
-        \ critical temperature indicating the onset of condensation <xref ref-type=\"\
-        bibr\" rid=\"c10 c11\">[10,11]</xref>. Only recently BEC atom number fluctuations\
-        \ corresponding to the second moment have become experimentally accessible\
-        \ <xref ref-type=\"bibr\" rid=\"c12\">[12]</xref>.</p><p>These fluctuations\
-        \ pose a subtle problem with surprising challenges and rich physics <xref\
-        \ ref-type=\"bibr\" rid=\"c6\">[6]</xref>. Historically, a description of\
-        \ the noninteracting Bose gas was developed within the grand canonical ensemble,\
-        \ which shows unphysically large fluctuations below the critical temperature\
-        \ <xref ref-type=\"bibr\" rid=\"c13\">[13]</xref>. This is referred to as\
-        \ the grand canonical catastrophe <xref ref-type=\"bibr\" rid=\"c14 c15\"\
-        >[14,15]</xref>, and is one of the few examples where the predictions of different\
-        \ statistical ensembles differ dramatically. Thus, any description of the\
-        \ fluctuations must be based on canonical or microcanonical approaches.</p><p>In\
-        \ the canonical ensemble, the asymptotic behavior of the condensate atom number\
-        \ variance in the noninteracting Bose gas was first obtained by Politzer <xref\
-        \ ref-type=\"bibr\" rid=\"c2\">[2]</xref>. Later, exact numerical recursion\
-        \ relations for this noninteracting case were found <xref ref-type=\"bibr\"\
-        \ rid=\"c16\">[16]</xref>, which recently allowed for an initial comparison\
-        \ with experimental results <xref ref-type=\"bibr\" rid=\"c12\">[12]</xref>.\
-        \ However, the canonical ensemble assumes the existence of an external reservoir\
-        \ exchanging energy with the system under investigation. This assumption is\
-        \ not met in the case of an ultracold gas isolated from the environment. Therefore,\
-        \ the microcanonical ensemble needs to be invoked, which is numerically demanding\
-        \ and currently does not allow for a full comparison at typical experimental\
-        \ parameters.</p><p>In the microcanonical ensemble the key quantity is the\
-        \ partition function <inline-formula><mml:math display=\"inline\"><mml:mi\
-        \ mathvariant=\"normal\">\u0393</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mi>E</mml:mi><mml:mo>,</mml:mo><mml:mi>N</mml:mi><mml:mo\
-        \ stretchy=\"false\">)</mml:mo></mml:math></inline-formula>, i.e., the number\
-        \ of ways to distribute the energy <inline-formula><mml:math display=\"inline\"\
-        ><mml:mi>E</mml:mi></mml:math></inline-formula> between <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi>N</mml:mi></mml:math></inline-formula> atoms.\
-        \ Calculation of <inline-formula><mml:math display=\"inline\"><mml:mi mathvariant=\"\
-        normal\">\u0393</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mi>E</mml:mi><mml:mo>,</mml:mo><mml:mi>N</mml:mi><mml:mo\
-        \ stretchy=\"false\">)</mml:mo></mml:math></inline-formula> for a noninteracting\
-        \ gas in a harmonic trap is closely related to the classic mathematical problem\
-        \ of partitions. Discussions between Leibniz and Bernoulli inspired intensive\
-        \ work on this topic <xref ref-type=\"bibr\" rid=\"c17\">[17]</xref>, with\
-        \ breakthroughs achieved a century ago by Ramanujan and Hardy <xref ref-type=\"\
-        bibr\" rid=\"c18\">[18]</xref>. In particular, it was shown that the canonical\
-        \ and microcanonical fluctuations agree for large atom number in the noninteracting\
-        \ 1D gas <xref ref-type=\"bibr\" rid=\"c19\">[19]</xref>.</p><p>The results\
-        \ for the 3D case in the microcanonical ensemble were not known until 1997\
-        \ <xref ref-type=\"bibr\" rid=\"c3\">[3]</xref>, when a fourth statistical\
-        \ ensemble, called the Maxwell\u2019s demon ensemble, was proposed. In this\
-        \ ensemble the system exchanges particles with the reservoir, without changing\
-        \ its energy. It is applied to the thermal cloud at sufficiently low temperatures,\
-        \ where the BEC comprises the reservoir. The ensemble yields an asymptotic\
-        \ expression for the microcanonical fluctuations in the noninteracting gas\
-        \ <xref ref-type=\"bibr\" rid=\"c20\">[20]</xref> <disp-formula id=\"d1\"\
-        ><mml:math display=\"block\"><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mn>0</mml:mn><mml:mn>2</mml:mn></mml:msubsup><mml:mo>=</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mfrac><mml:mrow><mml:mi>\u03B6\
-        </mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy=\"\
-        false\">)</mml:mo></mml:mrow><mml:mrow><mml:mi>\u03B6</mml:mi><mml:mo stretchy=\"\
-        false\">(</mml:mo><mml:mn>3</mml:mn><mml:mo stretchy=\"false\">)</mml:mo></mml:mrow></mml:mfrac><mml:mo>-</mml:mo><mml:mfrac><mml:mrow><mml:mn>3</mml:mn><mml:mi>\u03B6\
-        </mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mn>3</mml:mn><mml:mo stretchy=\"\
-        false\">)</mml:mo></mml:mrow><mml:mrow><mml:mn>4</mml:mn><mml:mi>\u03B6</mml:mi><mml:mo\
-        \ stretchy=\"false\">(</mml:mo><mml:mn>4</mml:mn><mml:mo stretchy=\"false\"\
-        >)</mml:mo></mml:mrow></mml:mfrac><mml:mo>)</mml:mo></mml:mrow><mml:mi>N</mml:mi><mml:msup><mml:mrow><mml:mo>(</mml:mo><mml:mfrac><mml:mi>T</mml:mi><mml:msubsup><mml:mi>T</mml:mi><mml:mi>c</mml:mi><mml:mn>0</mml:mn></mml:msubsup></mml:mfrac><mml:mo>)</mml:mo></mml:mrow><mml:mn>3</mml:mn></mml:msup><mml:mo>.</mml:mo></mml:math><label>(1)</label></disp-formula>Here\
-        \ <inline-formula><mml:math display=\"inline\"><mml:msubsup><mml:mi>T</mml:mi><mml:mi>c</mml:mi><mml:mn>0</mml:mn></mml:msubsup></mml:math></inline-formula>\
-        \ is the critical temperature of a noninteracting gas in a harmonic trap and\
-        \ <inline-formula><mml:math display=\"inline\"><mml:mi>\u03B6</mml:mi><mml:mo\
-        \ stretchy=\"false\">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy=\"false\"\
-        >)</mml:mo></mml:math></inline-formula> is the Riemann zeta function. In particular,\
-        \ the second term corresponds to the reduction in the number fluctuations\
-        \ in the microcanonical ensemble with respect to the canonical result given\
-        \ by the first term. Thus, the ratio between the canonical and microcanonical\
-        \ fluctuations in the 3D isotropic case is 0.39, corresponding to a reduction\
-        \ by 61%.</p><p>Importantly, interactions are expected to modify the fluctuations\
-        \ of the condensate atom number <inline-formula><mml:math display=\"inline\"\
-        ><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mn>0</mml:mn><mml:mn>2</mml:mn></mml:msubsup></mml:math></inline-formula>.\
-        \ In the homogeneous case, initial results showed that interactions suppress\
-        \ the fluctuations by a factor of 2 at very low temperatures due to a strong\
-        \ pair correlation of the atoms reducing the number of degrees of freedom\
-        \ <xref ref-type=\"bibr\" rid=\"c4 c5 c21\">[4,5,21]</xref>. Moreover, interactions\
-        \ have been included using numerous methods such as the aforementioned Maxwell\u2019\
-        s demon ensemble <xref ref-type=\"bibr\" rid=\"c22\">[22]</xref>, number-conserving\
-        \ quasiparticle methods <xref ref-type=\"bibr\" rid=\"c23 c24\">[23,24]</xref>,\
-        \ master-equation and hybrid quasiparticle approaches <xref ref-type=\"bibr\"\
-        \ rid=\"c25 c26\">[25,26]</xref>, and a correlated many-body approach <xref\
-        \ ref-type=\"bibr\" rid=\"c27\">[27]</xref>. However, only some of these methods\
-        \ are based on a microcanonical ensemble and none of them allow for the analysis\
-        \ of harmonically trapped interacting BECs at typical experimental atom numbers.\
-        \ Moreover, most approaches are only valid at low temperature and do not capture\
-        \ the peak fluctuations near <inline-formula><mml:math display=\"inline\"\
-        ><mml:msubsup><mml:mi>T</mml:mi><mml:mi>c</mml:mi><mml:mn>0</mml:mn></mml:msubsup></mml:math></inline-formula>.</p><p>Additionally,\
-        \ the fluctuations are expected to scale <italic>anomalously</italic> with\
-        \ atom number: <inline-formula><mml:math display=\"inline\"><mml:mi mathvariant=\"\
-        normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mn>0</mml:mn><mml:mn>2</mml:mn></mml:msubsup><mml:mo>\u221D\
-        </mml:mo><mml:msup><mml:mi>N</mml:mi><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mi>\u03B3\
-        </mml:mi></mml:mrow></mml:msup></mml:math></inline-formula>, with <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi>\u03B3</mml:mi><mml:mo>\u2260</mml:mo><mml:mn>0</mml:mn></mml:math></inline-formula>\
-        \ <xref ref-type=\"bibr\" rid=\"c4 c5\">[4,5]</xref>. This is in stark contrast\
-        \ to most classical systems where the central limit theorem ensures normal\
-        \ scaling of the fluctuations <inline-formula><mml:math display=\"inline\"\
-        ><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msup><mml:mi>N</mml:mi><mml:mn>2</mml:mn></mml:msup><mml:mo>\u221D\
-        </mml:mo><mml:mi>N</mml:mi></mml:math></inline-formula> due to the existence\
-        \ of a finite microscopic coherence length scale <xref ref-type=\"bibr\" rid=\"\
-        c21 c28\">[21,28]</xref>. The characterization of BEC atom number fluctuations\
-        \ is thus an important outstanding challenge that has been hindered by technical\
-        \ fluctuations of BEC experiments until recently. This technical limitation\
-        \ was mitigated in our recent experiments, enabling the current experimental\
-        \ characterization of BEC fluctuations.</p><p>In this Letter, we characterize\
-        \ the atom number fluctuations in a weakly interacting BEC as a function of\
-        \ atom number and trapping geometry. To avoid technical fluctuations, BECs\
-        \ with a well-controlled atom number and temperature are prepared through\
-        \ a combination of nondestructive detection and active stabilization of the\
-        \ cooling sequence. We quantitatively analyze the fluctuations in two ways.\
-        \ The fluctuations are compared to an exact canonical calculation for the\
-        \ noninteracting Bose gas, which shows fluctuations reduced by 27% with respect\
-        \ to the canonical expectation, indicating the microcanonical nature of the\
-        \ system. Second, the fluctuations are fitted with a phenomenological model\
-        \ showing anomalous atom number scaling with an exponent <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi>\u03B3</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mn>0.134</mml:mn><mml:mo>\xB1\
-        </mml:mo><mml:mn>0.005</mml:mn></mml:mrow></mml:math></inline-formula>, which\
-        \ we compare to the expectation in the thermodynamic limit.</p><p>In a first\
-        \ step, we theoretically estimate the importance of using an interacting microcanonical\
-        \ ensemble with respect to the more readily available canonical ensemble calculations.\
-        \ This is achieved for ensembles of up to <inline-formula><mml:math display=\"\
-        inline\"><mml:msup><mml:mn>10</mml:mn><mml:mn>5</mml:mn></mml:msup></mml:math></inline-formula>\
-        \ atoms using a new computational method. In brief, we apply the usual Metropolis\
-        \ algorithm but perform a random walk in the space of Fock states, accounting\
-        \ for Bose enhancement with perturbatively included interactions. The random\
-        \ walk results in the set of visited Fock states obeying canonical ensemble\
-        \ statistics. By postselecting samples according to their energy, we obtain\
-        \ representative \u201Cmicrostates\u201D of the microcanonical ensemble <xref\
-        \ ref-type=\"bibr\" rid=\"c29\">[29]</xref>. Figure\_<xref ref-type=\"fig\"\
-        \ rid=\"f1\">1(a)</xref> show the results for <inline-formula><mml:math display=\"\
-        inline\"><mml:mi>N</mml:mi><mml:mo>=</mml:mo><mml:mn>1000</mml:mn></mml:math></inline-formula>\
-        \ atoms for trap aspect ratio <inline-formula><mml:math display=\"inline\"\
-        ><mml:mi>\u03BB</mml:mi><mml:mo>=</mml:mo><mml:mn>10</mml:mn></mml:math></inline-formula>.\
-        \ Importantly, the microcanonical result lies clearly below the canonical\
-        \ expectation as indicated by Eq.\_<xref ref-type=\"disp-formula\" rid=\"\
-        d1\">(1)</xref>. In the elongated case shown here, the ratio <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi>S</mml:mi></mml:math></inline-formula> between\
-        \ the peak variance in the microcanonical and canonical ensembles is <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi>S</mml:mi><mml:mo>=</mml:mo><mml:mn>0.72</mml:mn></mml:math></inline-formula>,\
-        \ corresponding to a reduction by 28% for this atom number. Overall, it is\
-        \ evident from Fig.\_<xref ref-type=\"fig\" rid=\"f1\">1(a)</xref> that the\
-        \ effect of interactions is small and leads to a minor increase of the variance\
-        \ in both ensembles.</p><fig id=\"f1\"><object-id>1</object-id><object-id\
-        \ pub-id-type=\"doi\">10.1103/PhysRevLett.126.153601.f1</object-id><label>FIG.\
-        \ 1.</label><caption><p>Atom number fluctuations of a BEC. (a)\_Calculated\
-        \ variance of BEC atom number as a function of relative temperature in the\
-        \ canonical (red diamonds) and microcanonical (blue circles) ensembles, with\
-        \ (empty symbols) and without (filled symbols) interactions at a scattering\
-        \ length <inline-formula><mml:math display=\"inline\"><mml:mrow><mml:mi>a</mml:mi><mml:mo>=</mml:mo><mml:mn>100</mml:mn><mml:mtext>\u2009\
-        </mml:mtext><mml:mtext>\u2009</mml:mtext><mml:msub><mml:mrow><mml:mi mathvariant=\"\
-        normal\">a</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>\
-        \ for <inline-formula><mml:math display=\"inline\"><mml:mrow><mml:mi>N</mml:mi><mml:mo>=</mml:mo><mml:mn>1000</mml:mn></mml:mrow></mml:math></inline-formula>\
-        \ <inline-formula><mml:math display=\"inline\"><mml:mrow><mml:mmultiscripts><mml:mrow><mml:mi>Rb</mml:mi></mml:mrow><mml:mprescripts/><mml:none/><mml:mrow><mml:mn>87</mml:mn></mml:mrow></mml:mmultiscripts></mml:mrow></mml:math></inline-formula>\
-        \ atoms in a trap with <inline-formula><mml:math display=\"inline\"><mml:mrow><mml:msub><mml:mrow><mml:mi>\u03C9\
-        </mml:mi></mml:mrow><mml:mrow><mml:mi>a</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mi>\u03C0\
-        </mml:mi><mml:mo>\xD7</mml:mo><mml:mrow><mml:mn>20.0</mml:mn><mml:mtext>\u2009\
-        </mml:mtext><mml:mtext>\u2009</mml:mtext></mml:mrow><mml:mi>Hz</mml:mi></mml:mrow></mml:math></inline-formula>\
-        \ and <inline-formula><mml:math display=\"inline\"><mml:mi>\u03BB</mml:mi><mml:mo>=</mml:mo><mml:mn>10</mml:mn></mml:math></inline-formula>.\
-        \ (b)\_Experimental variance of BEC atom number as a function of temperature\
-        \ (blue points). The error bars represent statistical uncertainties of the\
-        \ variance (vertical) and <inline-formula><mml:math display=\"inline\"><mml:mrow><mml:mn>1</mml:mn><mml:mi>\u03C3\
-        </mml:mi></mml:mrow></mml:math></inline-formula> spread in temperature (horizontal).\
-        \ The dashed line is a fit (see text), where the blue band represents the\
-        \ uncertainty of the fit. The gray area indicates the offset due to technical\
-        \ fluctuations. The aspect ratio was <inline-formula><mml:math display=\"\
-        inline\"><mml:mi>\u03BB</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mn>7.28</mml:mn><mml:mo>\xB1\
-        </mml:mo><mml:mn>0.02</mml:mn></mml:mrow></mml:math></inline-formula> and\
-        \ the atom number at peak fluctuations was <inline-formula><mml:math display=\"\
-        inline\"><mml:msub><mml:mi>N</mml:mi><mml:mi>p</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:mo\
-        \ stretchy=\"false\">(</mml:mo><mml:mn>1.49</mml:mn><mml:mo>\xB1</mml:mo><mml:mn>0.06</mml:mn><mml:mo\
-        \ stretchy=\"false\">)</mml:mo><mml:mo>\xD7</mml:mo><mml:msup><mml:mn>10</mml:mn><mml:mn>5</mml:mn></mml:msup></mml:mrow></mml:math></inline-formula>.\
-        \ The results are plotted as a function of the temperature rescaled with the\
-        \ temperature at peak fluctuations. The solid black lines in both panels are\
-        \ exact canonical calculations for a noninteracting gas <xref ref-type=\"\
-        bibr\" rid=\"c16\">[16]</xref>.</p></caption><graphic xlink:href=\"e153601_1.eps\"\
-        /></fig><p>Given the small effect of interactions, we calculate <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi>S</mml:mi></mml:math></inline-formula> for a\
-        \ range of aspect ratios and atom numbers for the noninteracting case as shown\
-        \ in Fig.\_<xref ref-type=\"fig\" rid=\"f2\">2</xref>. For low aspect ratios\
-        \ <inline-formula><mml:math display=\"inline\"><mml:mi>\u03BB</mml:mi></mml:math></inline-formula>\
-        \ and large atom numbers the ratio <inline-formula><mml:math display=\"inline\"\
-        ><mml:mi>S</mml:mi></mml:math></inline-formula> tends towards the limiting\
-        \ value 0.39 given by Eq.\_<xref ref-type=\"disp-formula\" rid=\"d1\">(1)</xref>.\
-        \ In highly elongated traps with large aspect ratios, <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi>S</mml:mi></mml:math></inline-formula> tends\
-        \ towards 1, since microcanonical and canonical fluctuations are identical\
-        \ in the noninteracting 1D case. The dependence of <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi>S</mml:mi></mml:math></inline-formula> on the\
-        \ atom number is shown in Fig.\_<xref ref-type=\"fig\" rid=\"f2\">2</xref>\
-        \ (inset) for <inline-formula><mml:math display=\"inline\"><mml:mi>\u03BB\
-        </mml:mi><mml:mo>=</mml:mo><mml:mn>6</mml:mn></mml:math></inline-formula>.\
-        \ This indicates that the microcanonical and canonical results scale differently\
-        \ with atom number. In particular, we observe a roughly logarithmic dependence\
-        \ of <inline-formula><mml:math display=\"inline\"><mml:mi>S</mml:mi></mml:math></inline-formula>\
-        \ on <inline-formula><mml:math display=\"inline\"><mml:mi>N</mml:mi></mml:math></inline-formula>\
-        \ for atom numbers <inline-formula><mml:math display=\"inline\"><mml:msup><mml:mn>10</mml:mn><mml:mn>2</mml:mn></mml:msup><mml:mo>&lt;</mml:mo><mml:mi>N</mml:mi><mml:mo>&lt;</mml:mo><mml:msup><mml:mn>10</mml:mn><mml:mn>4</mml:mn></mml:msup></mml:math></inline-formula>.\
-        \ These results show that a clear reduction of the fluctuations below the\
-        \ canonical result is expected under realistic conditions and motivates the\
-        \ following experimental investigation.</p><fig id=\"f2\"><object-id>2</object-id><object-id\
-        \ pub-id-type=\"doi\">10.1103/PhysRevLett.126.153601.f2</object-id><label>FIG.\
-        \ 2.</label><caption><p>Ratio <inline-formula><mml:math display=\"inline\"\
-        ><mml:mi>S</mml:mi></mml:math></inline-formula> between the calculated peak\
-        \ variance of the noninteracting BEC in the microcanonical and canonical ensembles\
-        \ as a function of the trap aspect ratio <inline-formula><mml:math display=\"\
-        inline\"><mml:mi>\u03BB</mml:mi></mml:math></inline-formula> for <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi>N</mml:mi><mml:mo>=</mml:mo><mml:msup><mml:mn>10</mml:mn><mml:mn>2</mml:mn></mml:msup></mml:math></inline-formula>\
-        \ (blue points), <inline-formula><mml:math display=\"inline\"><mml:mi>N</mml:mi><mml:mo>=</mml:mo><mml:msup><mml:mn>10</mml:mn><mml:mn>3</mml:mn></mml:msup></mml:math></inline-formula>\
-        \ (green diamonds), <inline-formula><mml:math display=\"inline\"><mml:mi>N</mml:mi><mml:mo>=</mml:mo><mml:msup><mml:mn>10</mml:mn><mml:mn>4</mml:mn></mml:msup></mml:math></inline-formula>\
-        \ (red triangles), and <inline-formula><mml:math display=\"inline\"><mml:mi>N</mml:mi><mml:mo>=</mml:mo><mml:msup><mml:mn>10</mml:mn><mml:mn>5</mml:mn></mml:msup></mml:math></inline-formula>\
-        \ (purple square) atoms. The black dashed line corresponds to the asymptotic\
-        \ value estimated within the Maxwell\u2019s demon ensemble [see Eq.\_<xref\
-        \ ref-type=\"disp-formula\" rid=\"d1\">(1)</xref>]. The three experimental\
-        \ points with the lowest atom number <inline-formula><mml:math display=\"\
-        inline\"><mml:mrow><mml:msub><mml:mrow><mml:mi>N</mml:mi></mml:mrow><mml:mrow><mml:mi>p</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:mn>8.8</mml:mn><mml:mo>\xD7\
-        </mml:mo><mml:msup><mml:mrow><mml:mn>10</mml:mn></mml:mrow><mml:mrow><mml:mn>4</mml:mn></mml:mrow></mml:msup></mml:mrow><mml:mi>\u2013\
-        </mml:mi><mml:mrow><mml:mn>10.4</mml:mn><mml:mo>\xD7</mml:mo><mml:msup><mml:mrow><mml:mn>10</mml:mn></mml:mrow><mml:mrow><mml:mn>4</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:mrow></mml:math></inline-formula>\
-        \ are shown for comparison (open points). The typical error bar shown indicates\
-        \ the 68.2%\_confidence interval on the experimental value. (Inset) <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi>S</mml:mi></mml:math></inline-formula> as a function\
-        \ of the number of atoms for fixed aspect ratio <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi>\u03BB</mml:mi><mml:mo>=</mml:mo><mml:mn>6</mml:mn></mml:math></inline-formula>.</p></caption><graphic\
-        \ xlink:href=\"e153601_2.eps\"/></fig><p>The experimental apparatus used to\
-        \ produce BECs was previously described in detail in Ref.\_<xref ref-type=\"\
-        bibr\" rid=\"c30\">[30]</xref>. Briefly, around <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mrow><mml:msup><mml:mrow><mml:mn>10</mml:mn></mml:mrow><mml:mrow><mml:mn>9</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></inline-formula>\
-        \ <inline-formula><mml:math display=\"inline\"><mml:mrow><mml:mmultiscripts><mml:mrow><mml:mi>Rb</mml:mi></mml:mrow><mml:mprescripts/><mml:none/><mml:mrow><mml:mn>87</mml:mn></mml:mrow></mml:mmultiscripts></mml:mrow></mml:math></inline-formula>\
-        \ atoms are first captured and cooled in a magneto-optical trap. The cloud\
-        \ is then optically pumped to the <inline-formula><mml:math display=\"inline\"\
-        ><mml:mo stretchy=\"false\">|</mml:mo><mml:mi>F</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mo>,</mml:mo><mml:mspace\
-        \ linebreak=\"goodbreak\"/><mml:msub><mml:mi>m</mml:mi><mml:mi>F</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mo\
-        \ stretchy=\"false\">\u27E9</mml:mo></mml:math></inline-formula> state. Then\
-        \ it is transported into a cigar-shaped quadrupole-Ioffe-configuration magnetic\
-        \ trap with axial trapping frequency <inline-formula><mml:math display=\"\
-        inline\"><mml:msub><mml:mi>\u03C9</mml:mi><mml:mi>a</mml:mi></mml:msub></mml:math></inline-formula>\
-        \ and radial frequency <inline-formula><mml:math display=\"inline\"><mml:msub><mml:mi>\u03C9\
-        </mml:mi><mml:mi>\u03C1</mml:mi></mml:msub></mml:math></inline-formula> <xref\
-        \ ref-type=\"bibr\" rid=\"c29\">[29]</xref>, where it is cooled by radio-frequency\
-        \ (rf) forced evaporation.</p><p>The sequence outlined above is typically\
-        \ subject to technical fluctuations that prevent the observation of atom number\
-        \ fluctuations. To overcome this challenge, a stabilization procedure is initiated\
-        \ when the cloud contains <inline-formula><mml:math display=\"inline\"><mml:mo>\u223C\
-        </mml:mo><mml:mn>4</mml:mn><mml:mo>\xD7</mml:mo><mml:msup><mml:mn>10</mml:mn><mml:mn>6</mml:mn></mml:msup></mml:math></inline-formula>\
-        \ atoms at a temperature <inline-formula><mml:math display=\"inline\"><mml:mrow><mml:mn>14</mml:mn><mml:mtext>\u2009\
-        </mml:mtext><mml:mi>\u03BC</mml:mi><mml:mi mathvariant=\"normal\">K</mml:mi></mml:mrow></mml:math></inline-formula>.\
-        \ The cloud is probed using minimally destructive Faraday imaging, and the\
-        \ atom number is corrected using a weak rf pulse of controllable duration.\
-        \ The pulse removes excess atoms, and the outcome of the stabilization procedure\
-        \ is verified by a second Faraday measurement. This allows us to prepare a\
-        \ well-controlled number of atoms with a relative stability at the <inline-formula><mml:math\
-        \ display=\"inline\"><mml:msup><mml:mn>10</mml:mn><mml:mrow><mml:mo>-</mml:mo><mml:mn>4</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula>\
-        \ level <xref ref-type=\"bibr\" rid=\"c30 c31\">[30,31]</xref>.</p><p>For\
-        \ efficient cooling towards BEC, a tight magnetic trap and consequently large\
-        \ collision rate is desirable. In its most compressed configuration, our trap\
-        \ has an aspect ratio <inline-formula><mml:math display=\"inline\"><mml:mi>\u03BB\
-        </mml:mi><mml:mo>=</mml:mo><mml:mn>17</mml:mn></mml:math></inline-formula>.\
-        \ This can lead to significant phase fluctuations across the spatial extent\
-        \ of the cloud <xref ref-type=\"bibr\" rid=\"c32\">[32]</xref>, which evolve\
-        \ into density modulations during time of flight (TOF) and thus hinder the\
-        \ precise determination of atom number and temperature. We therefore decompress\
-        \ the magnetic trap for our measurements, limiting the aspect ratio to <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mn>4.5</mml:mn><mml:mo>&lt;</mml:mo><mml:mi>\u03BB\
-        </mml:mi><mml:mo>&lt;</mml:mo><mml:mn>10</mml:mn></mml:math></inline-formula>\
-        \ where the phase coherence length is larger than the condensate length in\
-        \ the long direction.</p><p>In the final step of the experimental sequence,\
-        \ BECs are produced by forced evaporation ending at a rf-frequency corresponding\
-        \ to the desired BEC temperature. To ensure proper thermal equilibrium, the\
-        \ BEC is first held at the final rf frequency for 800\_ms and a further 400\_\
-        ms without rf radiation before the trap is turned off.</p><p>The clouds are\
-        \ probed after 35\_ms TOF expansion using resonant absorption imaging on the\
-        \ <inline-formula><mml:math display=\"inline\"><mml:mi>F</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mo\
-        \ stretchy=\"false\">\u2192</mml:mo><mml:msup><mml:mi>F</mml:mi><mml:mo>\u2032\
-        </mml:mo></mml:msup><mml:mo>=</mml:mo><mml:mn>3</mml:mn></mml:math></inline-formula>\
-        \ cycling transition. Fringes in the processed image due to vibrations of\
-        \ optical components are mitigated by minimizing the time-delay between the\
-        \ absorption and reference image. Optical pumping is applied between these\
-        \ images to transfer the atoms to the transparent <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi>F</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:math></inline-formula>\
-        \ state. Thus, the atom and beam images can be taken only <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mn>340</mml:mn><mml:mtext>\u2009</mml:mtext><mml:mtext>\u2009\
-        </mml:mtext><mml:mi>\u03BC</mml:mi><mml:mi mathvariant=\"normal\">s</mml:mi></mml:math></inline-formula>\
-        \ apart, limited only by the camera shift speed.</p><p>For each experimental\
-        \ configuration corresponding to a chosen aspect ratio and atom number, the\
-        \ fluctuations were measured as a function of the temperature <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi>T</mml:mi></mml:math></inline-formula>. At every\
-        \ temperature (corresponding to a rf end frequency) a set of 60 measurements\
-        \ according to the experimental sequence outline above was taken <xref ref-type=\"\
-        bibr\" rid=\"c33\">[33]</xref>.</p><p>To determine the BEC atom number in\
-        \ each image, the wings of the cloud are fit with a Bose-enhanced thermal\
-        \ distribution from which the temperature is obtained. The fitted distribution\
-        \ is subtracted from the image, and the BEC atom number <inline-formula><mml:math\
-        \ display=\"inline\"><mml:msub><mml:mi>N</mml:mi><mml:mn>0</mml:mn></mml:msub></mml:math></inline-formula>\
-        \ is obtained by integration of the remaining density. However, the variance\
-        \ cannot be determined directly from <inline-formula><mml:math display=\"\
-        inline\"><mml:msub><mml:mi>N</mml:mi><mml:mn>0</mml:mn></mml:msub></mml:math></inline-formula>,\
-        \ since small remaining drifts of the magnetic offset field lead to minor\
-        \ temperature variations with a median standard deviation of <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mo>\u223C</mml:mo><mml:mn>3</mml:mn><mml:mtext>\u2009\
-        </mml:mtext><mml:mtext>\u2009</mml:mtext><mml:mi>nK</mml:mi></mml:math></inline-formula>.\
-        \ We eliminate this drift by subtracting a linear fit of the condensate number\
-        \ as a function of the total atom number <xref ref-type=\"bibr\" rid=\"c12\"\
-        >[12]</xref> and determine the residuals <inline-formula><mml:math display=\"\
-        inline\"><mml:msub><mml:mi>\u03B7</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:math></inline-formula>,\
-        \ where <inline-formula><mml:math display=\"inline\"><mml:mi>i</mml:mi></mml:math></inline-formula>\
-        \ indicates the order in time. The BEC atom number variance is then given\
-        \ by a two-sample variance of the residuals <disp-formula id=\"d2\"><mml:math\
-        \ display=\"block\"><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mn>0</mml:mn><mml:mn>2</mml:mn></mml:msubsup><mml:mo>=</mml:mo><mml:mfrac><mml:mn>1</mml:mn><mml:mn>2</mml:mn></mml:mfrac><mml:mrow><mml:mo\
-        \ stretchy=\"false\">\u27E8</mml:mo><mml:msup><mml:mrow><mml:mo stretchy=\"\
-        false\">(</mml:mo><mml:msub><mml:mi>\u03B7</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>-</mml:mo><mml:msub><mml:mi>\u03B7\
-        </mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy=\"false\">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mo\
-        \ stretchy=\"false\">\u27E9</mml:mo></mml:mrow><mml:mo>.</mml:mo></mml:math><label>(2)</label></disp-formula>Thus,\
-        \ this two-sample variance contains the BEC fluctuations and detection noise,\
-        \ but excludes slow technical drifts. Figure\_<xref ref-type=\"fig\" rid=\"\
-        f1\">1(b)</xref> shows this variance of the measurements as a function of\
-        \ <inline-formula><mml:math display=\"inline\"><mml:mi>T</mml:mi></mml:math></inline-formula>\
-        \ for a given configuration of the experiment.</p><p>The peak fluctuations\
-        \ are determined by a fit to <inline-formula><mml:math display=\"inline\"\
-        ><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mn>0</mml:mn><mml:mn>2</mml:mn></mml:msubsup></mml:math></inline-formula>\
-        \ also illustrated in Fig.\_<xref ref-type=\"fig\" rid=\"f1\">1(b)</xref>.\
-        \ The fit model is inspired by the asymptotic behavior of the fluctuations\
-        \ in a noninteracting gas <inline-formula><mml:math display=\"inline\"><mml:mrow><mml:mi\
-        \ mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mrow><mml:mi>N</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msubsup><mml:mo>=</mml:mo><mml:mi>\u03B6\
-        </mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy=\"\
-        false\">)</mml:mo><mml:msup><mml:mrow><mml:mo stretchy=\"false\">(</mml:mo><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi>B</mml:mi></mml:mrow></mml:msub><mml:mo>/</mml:mo><mml:mi>\u210F\
-        </mml:mi><mml:mover accent=\"true\"><mml:mrow><mml:mi>\u03C9</mml:mi></mml:mrow><mml:mrow><mml:mo\
-        \ stretchy=\"false\">\xAF</mml:mo></mml:mrow></mml:mover><mml:mo stretchy=\"\
-        false\">)</mml:mo></mml:mrow><mml:mrow><mml:mn>3</mml:mn></mml:mrow></mml:msup><mml:msup><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mn>3</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></inline-formula>,\
-        \ where <inline-formula><mml:math display=\"inline\"><mml:mover accent=\"\
-        true\"><mml:mi>\u03C9</mml:mi><mml:mo stretchy=\"false\">\xAF</mml:mo></mml:mover></mml:math></inline-formula>\
-        \ is the geometric mean of the trapping frequencies <xref ref-type=\"bibr\"\
-        \ rid=\"c2\">[2]</xref>. Moreover, the fluctuations decay in a near steplike\
-        \ manner close to the critical temperature, which we model with a Heaviside\
-        \ step function <inline-formula><mml:math display=\"inline\"><mml:mi mathvariant=\"\
-        normal\">\u0398</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>p</mml:mi></mml:msub><mml:mo>-</mml:mo><mml:mi>T</mml:mi><mml:mo\
-        \ stretchy=\"false\">)</mml:mo></mml:math></inline-formula>, where <inline-formula><mml:math\
-        \ display=\"inline\"><mml:msub><mml:mi>T</mml:mi><mml:mi>p</mml:mi></mml:msub></mml:math></inline-formula>\
-        \ is the temperature at the peak fluctuations. To account for small temperature\
-        \ drifts the expression is furthermore convolved with a normal distribution\
-        \ <inline-formula><mml:math display=\"inline\"><mml:mi mathvariant=\"script\"\
-        >N</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mi>T</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>\u03C3\
-        </mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo stretchy=\"false\">)</mml:mo></mml:math></inline-formula>\
-        \ centered on the temperature <inline-formula><mml:math display=\"inline\"\
-        ><mml:mi>T</mml:mi></mml:math></inline-formula> with a standard deviation\
-        \ <inline-formula><mml:math display=\"inline\"><mml:msub><mml:mi>\u03C3</mml:mi><mml:mi>T</mml:mi></mml:msub></mml:math></inline-formula>\
-        \ given by the median of the measured temperature variation. Thus, we fit\
-        \ the data with the model <disp-formula id=\"d3\"><mml:math display=\"block\"\
-        ><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mn>0</mml:mn><mml:mn>2</mml:mn></mml:msubsup><mml:mo\
-        \ stretchy=\"false\">(</mml:mo><mml:mi>T</mml:mi><mml:mo stretchy=\"false\"\
-        >)</mml:mo><mml:mo>=</mml:mo><mml:mrow><mml:mo stretchy=\"false\">(</mml:mo><mml:mi>f</mml:mi><mml:mo>*</mml:mo><mml:mi>g</mml:mi><mml:mo\
-        \ stretchy=\"false\">)</mml:mo></mml:mrow><mml:mo stretchy=\"false\">(</mml:mo><mml:mi>T</mml:mi><mml:mo\
-        \ stretchy=\"false\">)</mml:mo><mml:mo>+</mml:mo><mml:mi mathvariant=\"script\"\
-        >O</mml:mi><mml:mo>,</mml:mo></mml:math><label>(3)</label></disp-formula>where\
-        \ <inline-formula><mml:math display=\"inline\"><mml:mi>f</mml:mi></mml:math></inline-formula>\
-        \ and <inline-formula><mml:math display=\"inline\"><mml:mi>g</mml:mi></mml:math></inline-formula>\
-        \ are given by <disp-formula id=\"d4\"><mml:math display=\"block\"><mml:mi>f</mml:mi><mml:mo\
-        \ stretchy=\"false\">(</mml:mo><mml:mi>T</mml:mi><mml:mo stretchy=\"false\"\
-        >)</mml:mo><mml:mo>=</mml:mo><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mrow><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>p</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:msubsup><mml:msup><mml:mrow><mml:mo>(</mml:mo><mml:mfrac><mml:mi>T</mml:mi><mml:msub><mml:mi>T</mml:mi><mml:mi>p</mml:mi></mml:msub></mml:mfrac><mml:mo>)</mml:mo></mml:mrow><mml:mn>3</mml:mn></mml:msup><mml:mi\
-        \ mathvariant=\"normal\">\u0398</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>p</mml:mi></mml:msub><mml:mo>-</mml:mo><mml:mi>T</mml:mi><mml:mo\
-        \ stretchy=\"false\">)</mml:mo><mml:mo>,</mml:mo></mml:math><label>(4)</label></disp-formula><disp-formula\
-        \ id=\"d5\"><mml:math display=\"block\"><mml:mi>g</mml:mi><mml:mo stretchy=\"\
-        false\">(</mml:mo><mml:mi>T</mml:mi><mml:mo stretchy=\"false\">)</mml:mo><mml:mo>=</mml:mo><mml:mi\
-        \ mathvariant=\"script\">N</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mi>T</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>\u03C3\
-        </mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo stretchy=\"false\">)</mml:mo><mml:mo>.</mml:mo></mml:math><label>(5)</label></disp-formula>The\
-        \ three fit parameters are the peak atom number variance <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mrow><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>p</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:msubsup></mml:math></inline-formula>,\
-        \ <inline-formula><mml:math display=\"inline\"><mml:msub><mml:mi>T</mml:mi><mml:mi>p</mml:mi></mml:msub></mml:math></inline-formula>\
-        \ and an offset <inline-formula><mml:math display=\"inline\"><mml:mi mathvariant=\"\
-        script\">O</mml:mi></mml:math></inline-formula> which accounts for experimental\
-        \ noise <xref ref-type=\"bibr\" rid=\"c12\">[12]</xref>. Since the atom number\
-        \ varies as a consequence of the evaporation, we determine the atom number\
-        \ at peak fluctuations <inline-formula><mml:math display=\"inline\"><mml:msub><mml:mi>N</mml:mi><mml:mi>p</mml:mi></mml:msub></mml:math></inline-formula>\
-        \ from a spline interpolation of the atom number as a function of the temperature\
-        \ for all measurements in a given configuration, evaluated at <inline-formula><mml:math\
-        \ display=\"inline\"><mml:msub><mml:mi>T</mml:mi><mml:mi>p</mml:mi></mml:msub></mml:math></inline-formula>.\
-        \ Figure\_<xref ref-type=\"fig\" rid=\"f3\">3</xref> shows the measured peak\
-        \ atom number variance for all 13 experimental configurations of aspect ratio\
-        \ and atom number (for a tabular presentation of the data see Supplemental\
-        \ Material <xref ref-type=\"bibr\" rid=\"c29\">[29]</xref>). The three points\
-        \ at lowest atom number are also included in Fig.\_<xref ref-type=\"fig\"\
-        \ rid=\"f2\">2</xref>.</p><fig id=\"f3\"><object-id>3</object-id><object-id\
-        \ pub-id-type=\"doi\">10.1103/PhysRevLett.126.153601.f3</object-id><label>FIG.\
-        \ 3.</label><caption><p>Peak fluctuations of a BEC. (Data points) Observed\
-        \ peak variance of the BEC atom number as a function of the atom number at\
-        \ peak variance <inline-formula><mml:math display=\"inline\"><mml:msub><mml:mi>N</mml:mi><mml:mi>p</mml:mi></mml:msub></mml:math></inline-formula>\
-        \ and trap aspect ratio <inline-formula><mml:math display=\"inline\"><mml:mi>\u03BB\
-        </mml:mi></mml:math></inline-formula>. The thick black bars indicate the 68.2%\_\
-        confidence interval. Narrow stems connect the data points to the base to guide\
-        \ the eye. (Surface) Theoretical expectation for a noninteraction canonical\
-        \ ensemble scaled according to Eq.\_<xref ref-type=\"disp-formula\" rid=\"\
-        d6\">(6)</xref>.</p></caption><graphic xlink:href=\"e153601_3.eps\"/></fig><p>We\
-        \ quantitatively evaluate the peak fluctuations using two approaches. First,\
-        \ we compare the measured fluctuations to the expected fluctuations in a canonical\
-        \ noninteracting gas, which can be calculated under conditions comparable\
-        \ to the experiment. Second, the fluctuations are investigated using a phenomenological\
-        \ model to probe their dependence on atom number and trapping geometry.</p><p>To\
-        \ compare experiment and theory the average ratio <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi>S</mml:mi></mml:math></inline-formula> between\
-        \ the observed fluctuations and the exact theoretical result for the noninteracting\
-        \ canonical ensemble <inline-formula><mml:math display=\"inline\"><mml:mrow><mml:mi\
-        \ mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mrow><mml:mi>N</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>p</mml:mi><mml:mo>,</mml:mo><mml:mi>can</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msubsup></mml:mrow></mml:math></inline-formula>\
-        \ is evaluated. We obtain <inline-formula><mml:math display=\"inline\"><mml:mi>S</mml:mi></mml:math></inline-formula>\
-        \ from a fit of <disp-formula id=\"d6\"><mml:math display=\"block\"><mml:mrow><mml:mi\
-        \ mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mrow><mml:mi>N</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msubsup><mml:mo>=</mml:mo><mml:mi>S</mml:mi><mml:mo\
-        \ stretchy=\"false\">[</mml:mo><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mi>a</mml:mi><mml:mi>\u03B4\
-        </mml:mi><mml:mi>\u03BB</mml:mi><mml:mo>+</mml:mo><mml:mi>b</mml:mi><mml:mi>\u03B4\
-        </mml:mi><mml:mi>ln</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mi>N</mml:mi><mml:mo\
-        \ stretchy=\"false\">)</mml:mo><mml:mo stretchy=\"false\">]</mml:mo><mml:mi\
-        \ mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mrow><mml:mi>N</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>p</mml:mi><mml:mo>,</mml:mo><mml:mi>can</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msubsup><mml:mo>,</mml:mo></mml:mrow></mml:math><label>(6)</label></disp-formula>inspired\
-        \ by the scalings with atom number and aspect ratio in Fig.\_<xref ref-type=\"\
-        fig\" rid=\"f2\">2</xref>. The coefficients <inline-formula><mml:math display=\"\
-        inline\"><mml:mi>a</mml:mi></mml:math></inline-formula> and <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi>b</mml:mi></mml:math></inline-formula> allow\
-        \ for a linear scaling with the trap aspect ratio and the logarithm of the\
-        \ atom number, where <inline-formula><mml:math display=\"inline\"><mml:mi>\u03B4\
-        </mml:mi><mml:mi>x</mml:mi><mml:mo>=</mml:mo><mml:mi>x</mml:mi><mml:mo>-</mml:mo><mml:mo\
-        \ stretchy=\"false\">\u27E8</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy=\"\
-        false\">\u27E9</mml:mo></mml:math></inline-formula> denotes that the mean\
-        \ over the set of experimental parameters has been subtracted. This yields\
-        \ an average ratio <inline-formula><mml:math display=\"inline\"><mml:mi>S</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mn>0.73</mml:mn><mml:mo>\xB1\
-        </mml:mo><mml:mn>0.05</mml:mn></mml:mrow></mml:math></inline-formula> corresponding\
-        \ to a 27% reduction of the fluctuations and clearly reveals the microcanonical\
-        \ nature of our system with reduced fluctuations below the canonical ensemble\
-        \ expectation. The coefficients <inline-formula><mml:math display=\"inline\"\
-        ><mml:mi>a</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mn>0.04</mml:mn><mml:mo>\xB1\
-        </mml:mo><mml:mn>0.04</mml:mn></mml:mrow></mml:math></inline-formula> and\
-        \ <inline-formula><mml:math display=\"inline\"><mml:mi>b</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mn>0.24</mml:mn><mml:mo>\xB1\
-        </mml:mo><mml:mn>0.26</mml:mn></mml:mrow></mml:math></inline-formula> represent\
-        \ a correction to <inline-formula><mml:math display=\"inline\"><mml:mi>S</mml:mi></mml:math></inline-formula>\
-        \ which are barely resolved within our data range, supporting the interpretation\
-        \ that the microcanonical nature of the system constitutes the most important\
-        \ deviation from the canonical result.</p><p>We use a complementary approach\
-        \ to analyze the scaling of the fluctuations with atom number and aspect ratio\
-        \ <inline-formula><mml:math display=\"inline\"><mml:mi>\u03BB</mml:mi></mml:math></inline-formula>.\
-        \ Inspired by Eq.\_<xref ref-type=\"disp-formula\" rid=\"d1\">(1)</xref>,\
-        \ we use the phenomenological model <disp-formula id=\"d7\"><mml:math display=\"\
-        block\"><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mrow><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>p</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:msubsup><mml:mo\
-        \ stretchy=\"false\">/</mml:mo><mml:mi>N</mml:mi><mml:mo>=</mml:mo><mml:mi>a</mml:mi><mml:mo>+</mml:mo><mml:mi>b</mml:mi><mml:mi>\u03BB\
-        </mml:mi><mml:msup><mml:mi>N</mml:mi><mml:mi>\u03B3</mml:mi></mml:msup><mml:mo>,</mml:mo></mml:math><label>(7)</label></disp-formula>where\
-        \ <inline-formula><mml:math display=\"inline\"><mml:mi>a</mml:mi></mml:math></inline-formula>,\
-        \ <inline-formula><mml:math display=\"inline\"><mml:mi>b</mml:mi></mml:math></inline-formula>,\
-        \ and <inline-formula><mml:math display=\"inline\"><mml:mi>\u03B3</mml:mi></mml:math></inline-formula>\
-        \ are fit coefficients allowing for linear aspect ratio and a nonlinear number\
-        \ dependence. In particular, the exponent <inline-formula><mml:math display=\"\
-        inline\"><mml:mi>\u03B3</mml:mi></mml:math></inline-formula> quantifies the\
-        \ degree of anomalous atom number scaling.</p><p>We first fit the exact canonical\
-        \ result <inline-formula><mml:math display=\"inline\"><mml:mrow><mml:mi mathvariant=\"\
-        normal\">\u0394</mml:mi><mml:msubsup><mml:mrow><mml:mi>N</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>p</mml:mi><mml:mo>,</mml:mo><mml:mi>can</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msubsup></mml:mrow></mml:math></inline-formula>\
-        \ with this model which yields <inline-formula><mml:math display=\"inline\"\
-        ><mml:mi>a</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mn>1.327</mml:mn><mml:mo>\xB1\
-        </mml:mo><mml:mn>0.014</mml:mn></mml:mrow></mml:math></inline-formula>, <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi>b</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mn>1.5</mml:mn><mml:mo>\xB1\
-        </mml:mo><mml:mn>0.5</mml:mn></mml:mrow></mml:math></inline-formula>, and\
-        \ <inline-formula><mml:math display=\"inline\"><mml:mi>\u03B3</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mo>-</mml:mo><mml:mn>0.27</mml:mn><mml:mo>\xB1\
-        </mml:mo><mml:mn>0.03</mml:mn></mml:mrow></mml:math></inline-formula>. Thus,\
-        \ the coefficient <inline-formula><mml:math display=\"inline\"><mml:mi>a</mml:mi></mml:math></inline-formula>\
-        \ is close to its limiting value <inline-formula><mml:math display=\"inline\"\
-        ><mml:mi>\u03B6</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mn>2</mml:mn><mml:mo\
-        \ stretchy=\"false\">)</mml:mo><mml:mo stretchy=\"false\">/</mml:mo><mml:mi>\u03B6\
-        </mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mn>3</mml:mn><mml:mo stretchy=\"\
-        false\">)</mml:mo><mml:mo>=</mml:mo><mml:mn>1.37</mml:mn></mml:math></inline-formula>\
-        \ corresponding to the first term in Eq.\_<xref ref-type=\"disp-formula\"\
-        \ rid=\"d1\">(1)</xref>. More significantly, the negative sign of <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi>\u03B3</mml:mi></mml:math></inline-formula> combined\
-        \ with the relatively large value of <inline-formula><mml:math display=\"\
-        inline\"><mml:mi>b</mml:mi></mml:math></inline-formula> shows that even the\
-        \ exact theoretical result scales anomalously with <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi>N</mml:mi></mml:math></inline-formula>. This\
-        \ can be attributed to the transition from a system with reduced dimensionality\
-        \ at low atom numbers to the limiting 3D case <xref ref-type=\"bibr\" rid=\"\
-        c12\">[12]</xref>. Hence, we do not expect our experiment to reflect the thermodynamic\
-        \ limit, where the scaling has been investigated theoretically <xref ref-type=\"\
-        bibr\" rid=\"c4 c5 c22\">[4,5,22]</xref>.</p><p>Figure\_<xref ref-type=\"\
-        fig\" rid=\"f4\">4</xref> shows the experimental data and the fit according\
-        \ to Eq.\_<xref ref-type=\"disp-formula\" rid=\"d7\">(7)</xref> using a maximum\
-        \ likelihood method. Contrary to the noninteracting theoretical case, we find\
-        \ anomalous scaling with <inline-formula><mml:math display=\"inline\"><mml:mi>\u03B3\
-        </mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mn>0.134</mml:mn><mml:mo>\xB1</mml:mo><mml:mn>0.005</mml:mn></mml:mrow><mml:mo>&gt;</mml:mo><mml:mn>0</mml:mn></mml:math></inline-formula>.\
-        \ We interpret our result as being due to the interplay between the dimensionality\
-        \ effects in a microcanonical system and interaction effects, which are predicted\
-        \ to yield <inline-formula><mml:math display=\"inline\"><mml:mi>\u03B3</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo\
-        \ stretchy=\"false\">/</mml:mo><mml:mn>3</mml:mn></mml:math></inline-formula>\
-        \ in the thermodynamic limit <xref ref-type=\"bibr\" rid=\"c4 c5\">[4,5]</xref>.\
-        \ In particular, Fig.\_<xref ref-type=\"fig\" rid=\"f2\">2</xref> shows that\
-        \ a microcanonical system generally scales different from a canonical one\
-        \ in both <inline-formula><mml:math display=\"inline\"><mml:mi>\u03BB</mml:mi></mml:math></inline-formula>\
-        \ and <inline-formula><mml:math display=\"inline\"><mml:mi>N</mml:mi></mml:math></inline-formula>.\
-        \ Since <inline-formula><mml:math display=\"inline\"><mml:mi>\u03B3</mml:mi><mml:mo>&gt;</mml:mo><mml:mn>0</mml:mn></mml:math></inline-formula>,\
-        \ Eq.\_<xref ref-type=\"disp-formula\" rid=\"d7\">(7)</xref> diverges and\
-        \ the coefficient <inline-formula><mml:math display=\"inline\"><mml:mi>a</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mn>0.55</mml:mn><mml:mo>\xB1\
-        </mml:mo><mml:mn>0.04</mml:mn></mml:mrow></mml:math></inline-formula> cannot\
-        \ be interpreted as a limiting value. Moreover, <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi>b</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mn>0.020</mml:mn><mml:mo>\xB1\
-        </mml:mo><mml:mn>0.012</mml:mn></mml:mrow></mml:math></inline-formula> is\
-        \ very small due to the large value of <inline-formula><mml:math display=\"\
-        inline\"><mml:msup><mml:mi>N</mml:mi><mml:mi>\u03B3</mml:mi></mml:msup></mml:math></inline-formula>.\
-        \ This result thus provides a simple analytical model as a benchmark for future\
-        \ theoretical investigations.</p><fig id=\"f4\"><object-id>4</object-id><object-id\
-        \ pub-id-type=\"doi\">10.1103/PhysRevLett.126.153601.f4</object-id><label>FIG.\
-        \ 4.</label><caption><p>Scaling model for peak atom number fluctuations of\
-        \ a BEC. (Data points) Normalized peak variance of the BEC atom number as\
-        \ a function of <inline-formula><mml:math display=\"inline\"><mml:msub><mml:mi>N</mml:mi><mml:mi>p</mml:mi></mml:msub></mml:math></inline-formula>\
-        \ and aspect ratio <inline-formula><mml:math display=\"inline\"><mml:mi>\u03BB\
-        </mml:mi></mml:math></inline-formula>. The thick black bars indicate the 68.2%\_\
-        confidence interval. Narrow stems connect the data points to the base to guide\
-        \ the eye. (Surface) Phenomenological model given by Eq.\_<xref ref-type=\"\
-        disp-formula\" rid=\"d7\">(7)</xref> of the fluctuations.</p></caption><graphic\
-        \ xlink:href=\"e153601_4.eps\"/></fig><p>In conclusion, we have measured the\
-        \ peak fluctuations of a weakly interacting Bose-Einstein condensate as a\
-        \ function of atom number and trap aspect ratio. The significant differences\
-        \ between a canonical and microcanonical ensemble description of these fluctuations\
-        \ were investigated numerically by postprocessing ensembles generated via\
-        \ the quantum Metropolis algorithm. Experimentally the fluctuations were found\
-        \ to be reduced by 27% relative to the expectation for a canonical noninteracting\
-        \ gas, in qualitative agreement with our theoretical prediction. This clearly\
-        \ demonstrates the microcanonical nature of the system and thus guides future\
-        \ theoretical work. In addition, the peak fluctuations were found to follow\
-        \ a weakly anomalous scaling with the total atom number <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mrow><mml:mn>0</mml:mn><mml:mi>p</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:msubsup><mml:mo>\u221D\
-        </mml:mo><mml:msup><mml:mi>N</mml:mi><mml:mn>1.134</mml:mn></mml:msup></mml:math></inline-formula>.\
-        \ We interpret the scaling as an interplay between dimensional effects and\
-        \ the limiting case in the thermodynamic limit with <inline-formula><mml:math\
-        \ display=\"inline\"><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mrow><mml:mn>0</mml:mn><mml:mi>p</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:msubsup><mml:mo>\u221D\
-        </mml:mo><mml:msup><mml:mi>N</mml:mi><mml:mrow><mml:mn>4</mml:mn><mml:mo stretchy=\"\
-        false\">/</mml:mo><mml:mn>3</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula>.</p><p>Future\
-        \ experiments will aim to observe the slight increase of the fluctuations\
-        \ due to interactions, predicted by our theoretical calculation. To date,\
-        \ this effect is shrouded by measurement uncertainties and the dependence\
-        \ of the fluctuations on trapping geometry. Moreover, the use of larger atomic\
-        \ clouds will provide experimental insight in the fluctuations in the thermodynamic\
-        \ limit <xref ref-type=\"bibr\" rid=\"c4 c5\">[4,5]</xref>. Finally, technical\
-        \ improvements will allow for larger data sample sizes and enable the investigation\
-        \ of the time dependence and higher moments of the atom number distribution\
-        \ <xref ref-type=\"bibr\" rid=\"c34\">[34]</xref>.</p></body><back><ack><p>M.\u2009\
-        B.\u2009C., T.\u2009V., A.\u2009J.\u2009H., M.\u2009A.\u2009K., and J.\u2009\
-        J.\u2009A. acknowledge support by the Villum Foundation, the Carlsberg Foundation,\
-        \ and the Danish National Research Foundation through the Center of Excellence\
-        \ \u201CCCQ\u201D (Grant Agreement No.\_DNRF156). K.\u2009R., M.\u2009B.\u2009\
-        K., and D.\u2009H. acknowledge support from the (Polish) National Science\
-        \ Center Grant No.\_2018/29/B/ST2/01308. K.\u2009P. acknowledges support from\
-        \ the (Polish) National Science Center Grant No.\_2019/34/E/ST2/00289. This\
-        \ research was supported in part by PLGrid Infrastructure. Center for Theoretical\
-        \ Physics of the Polish Academy of Sciences is a member of the National Laboratory\
-        \ of Atomic, Molecular and Optical Physics (KL FAMO). M.\u2009B.\u2009K. acknowledges\
-        \ support from the (Polish) National Science Center Grant No.\_2018/31/B/ST2/01871.\
-        \ This article has been supported by the Polish National Agency for Academic\
-        \ Exchange under Grant No.\_PPI/PZA/2019/1/00094/U/00001.</p></ack><ref-list><ref\
-        \ id=\"c1\"><label>[1]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>1</object-id><person-group person-group-type=\"author\"><string-name>I.\
-        \ Bloch</string-name>, <string-name>J. Dalibard</string-name>, and <string-name>S.\
-        \ Nascimb\xE8ne</string-name></person-group>, <article-title>Quantum simulations\
-        \ with ultracold quantum gases</article-title>, <source>Nat. Phys.</source>\
-        \ <volume>8</volume>, <page-range>267</page-range> (<year>2012</year>).<pub-id\
-        \ pub-id-type=\"coden\">NPAHAX</pub-id><issn>1745-2473</issn><pub-id pub-id-type=\"\
-        doi\" specific-use=\"suppress-display\">10.1038/nphys2259</pub-id></mixed-citation></ref><ref\
-        \ id=\"c2\"><label>[2]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>2</object-id><person-group person-group-type=\"author\"><string-name>H.\u2009\
-        D. Politzer</string-name></person-group>, <article-title>Condensate fluctuations\
-        \ of a trapped, ideal Bose gas</article-title>, <source>Phys. Rev. A</source>\
-        \ <volume>54</volume>, <page-range>5048</page-range> (<year>1996</year>).<pub-id\
-        \ pub-id-type=\"coden\">PLRAAN</pub-id><issn>1050-2947</issn><pub-id pub-id-type=\"\
-        doi\" specific-use=\"suppress-display\">10.1103/PhysRevA.54.5048</pub-id></mixed-citation></ref><ref\
-        \ id=\"c3\"><label>[3]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>3</object-id><person-group person-group-type=\"author\"><string-name>P.\
-        \ Navez</string-name>, <string-name>D. Bitouk</string-name>, <string-name>M.\
-        \ Gajda</string-name>, <string-name>Z. Idziaszek</string-name>, and <string-name>K.\
-        \ Rz\u0105\u017Cewski</string-name></person-group>, <article-title>Fourth\
-        \ Statistical Ensemble for the Bose-Einstein Condensate</article-title>, <source>Phys.\
-        \ Rev. Lett.</source> <volume>79</volume>, <page-range>1789</page-range> (<year>1997</year>).<pub-id\
-        \ pub-id-type=\"coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id pub-id-type=\"\
-        doi\" specific-use=\"suppress-display\">10.1103/PhysRevLett.79.1789</pub-id></mixed-citation></ref><ref\
-        \ id=\"c4\"><label>[4]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>4</object-id><person-group person-group-type=\"author\"><string-name>S.\
-        \ Giorgini</string-name>, <string-name>L.\u2009P. Pitaevskii</string-name>,\
-        \ and <string-name>S. Stringari</string-name></person-group>, <article-title>Anomalous\
-        \ Fluctuations of the Condensate in Interacting Bose Gases</article-title>,\
-        \ <source>Phys. Rev. Lett.</source> <volume>80</volume>, <page-range>5040</page-range>\
-        \ (<year>1998</year>).<pub-id pub-id-type=\"coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id\
-        \ pub-id-type=\"doi\" specific-use=\"suppress-display\">10.1103/PhysRevLett.80.5040</pub-id></mixed-citation></ref><ref\
-        \ id=\"c5\"><label>[5]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>5</object-id><person-group person-group-type=\"author\"><string-name>F.\
-        \ Meier</string-name> and <string-name>W. Zwerger</string-name></person-group>,\
-        \ <article-title>Anomalous condensate fluctuations in strongly interacting\
-        \ superfluids</article-title>, <source>Phys. Rev. A</source> <volume>60</volume>,\
-        \ <page-range>5133</page-range> (<year>1999</year>).<pub-id pub-id-type=\"\
-        coden\">PLRAAN</pub-id><issn>1050-2947</issn><pub-id pub-id-type=\"doi\" specific-use=\"\
-        suppress-display\">10.1103/PhysRevA.60.5133</pub-id></mixed-citation></ref><ref\
-        \ id=\"c6\"><label>[6]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>6</object-id><person-group person-group-type=\"author\"><string-name>V.\u2009\
-        V. Kocharovsky</string-name>, <string-name>V.\u2009V. Kocharovsky</string-name>,\
-        \ <string-name>M. Holthaus</string-name>, <string-name>C.\u2009H. Raymond\
-        \ Ooi</string-name>, <string-name>A. Svidzinsky</string-name>, <string-name>W.\
-        \ Ketterle</string-name>, and <string-name>M.\u2009O. Scully</string-name></person-group>,\
-        \ <article-title>Fluctuations in ideal and interacting Bose-Einstein condensates:\
-        \ From the laser phase transition analogy to squeezed states and Bogoliubov\
-        \ quasiparticles</article-title>, <source>Adv. At. Mol. Opt. Phys.</source>\
-        \ <volume>53</volume>, <page-range>291</page-range> (<year>2006</year>).<pub-id\
-        \ pub-id-type=\"coden\">AAMPE9</pub-id><issn>1049-250X</issn><pub-id pub-id-type=\"\
-        doi\" specific-use=\"suppress-display\">10.1016/S1049-250X(06)53010-1</pub-id></mixed-citation></ref><ref\
-        \ id=\"c7\"><label>[7]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>7</object-id><person-group person-group-type=\"author\"><string-name>F.\
-        \ Gerbier</string-name>, <string-name>J.\u2009H. Thywissen</string-name>,\
-        \ <string-name>S. Richard</string-name>, <string-name>M. Hugbart</string-name>,\
-        \ <string-name>P. Bouyer</string-name>, and <string-name>A. Aspect</string-name></person-group>,\
-        \ <article-title>Experimental study of the thermodynamics of an interacting\
-        \ trapped Bose-Einstein condensed gas</article-title>, <source>Phys. Rev.\
-        \ A</source> <volume>70</volume>, <page-range>013607</page-range> (<year>2004</year>).<pub-id\
-        \ pub-id-type=\"coden\">PLRAAN</pub-id><issn>1050-2947</issn><pub-id pub-id-type=\"\
-        doi\" specific-use=\"suppress-display\">10.1103/PhysRevA.70.013607</pub-id></mixed-citation></ref><ref\
-        \ id=\"c8\"><label>[8]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>8</object-id><person-group person-group-type=\"author\"><string-name>R.\
-        \ Meppelink</string-name>, <string-name>R.\u2009A. Rozendaal</string-name>,\
-        \ <string-name>S.\u2009B. Koller</string-name>, <string-name>J.\u2009M. Vogels</string-name>,\
-        \ and <string-name>P. van der Straten</string-name></person-group>, <article-title>Thermodynamics\
-        \ of Bose-Einstein-condensed clouds using phase-contrast imaging</article-title>,\
-        \ <source>Phys. Rev. A</source> <volume>81</volume>, <page-range>053632</page-range>\
-        \ (<year>2010</year>).<pub-id pub-id-type=\"coden\">PLRAAN</pub-id><issn>1050-2947</issn><pub-id\
-        \ pub-id-type=\"doi\" specific-use=\"suppress-display\">10.1103/PhysRevA.81.053632</pub-id></mixed-citation></ref><ref\
-        \ id=\"c9\"><label>[9]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>9</object-id><person-group person-group-type=\"author\"><string-name>N.\
-        \ Tammuz</string-name>, <string-name>R.\u2009P. Smith</string-name>, <string-name>R.\u2009\
-        L.\u2009D. Campbell</string-name>, <string-name>S. Beattie</string-name>,\
-        \ <string-name>S. Moulder</string-name>, <string-name>J. Dalibard</string-name>,\
-        \ and <string-name>Z. Hadzibabic</string-name></person-group>, <article-title>Can\
-        \ a Bose Gas Be Saturated</article-title>, <source>Phys. Rev. Lett.</source>\
-        \ <volume>106</volume>, <page-range>230401</page-range> (<year>2011</year>).<pub-id\
-        \ pub-id-type=\"coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id pub-id-type=\"\
-        doi\" specific-use=\"suppress-display\">10.1103/PhysRevLett.106.230401</pub-id></mixed-citation></ref><ref\
-        \ id=\"c10\"><label>[10]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>10</object-id><person-group person-group-type=\"author\"><string-name>F.\
-        \ Gerbier</string-name>, <string-name>J.\u2009H. Thywissen</string-name>,\
-        \ <string-name>S. Richard</string-name>, <string-name>M. Hugbart</string-name>,\
-        \ <string-name>P. Bouyer</string-name>, and <string-name>A. Aspect</string-name></person-group>,\
-        \ <article-title>Critical Temperature of a Trapped, Weakly Interacting Bose\
-        \ Gas</article-title>, <source>Phys. Rev. Lett.</source> <volume>92</volume>,\
-        \ <page-range>030405</page-range> (<year>2004</year>).<pub-id pub-id-type=\"\
-        coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id pub-id-type=\"doi\" specific-use=\"\
-        suppress-display\">10.1103/PhysRevLett.92.030405</pub-id></mixed-citation></ref><ref\
-        \ id=\"c11\"><label>[11]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>11</object-id><person-group person-group-type=\"author\"><string-name>R.\u2009\
-        P. Smith</string-name>, <string-name>R.\u2009L.\u2009D. Campbell</string-name>,\
-        \ <string-name>N. Tammuz</string-name>, and <string-name>Z. Hadzibabic</string-name></person-group>,\
-        \ <article-title>Effects of Interactions on the Critical Temperature of a\
-        \ Trapped Bose Gas</article-title>, <source>Phys. Rev. Lett.</source> <volume>106</volume>,\
-        \ <page-range>250403</page-range> (<year>2011</year>).<pub-id pub-id-type=\"\
-        coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id pub-id-type=\"doi\" specific-use=\"\
-        suppress-display\">10.1103/PhysRevLett.106.250403</pub-id></mixed-citation></ref><ref\
-        \ id=\"c12\"><label>[12]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>12</object-id><person-group person-group-type=\"author\"><string-name>M.\u2009\
-        A. Kristensen</string-name>, <string-name>M.\u2009B. Christensen</string-name>,\
-        \ <string-name>M. Gajdacz</string-name>, <string-name>M. Iglicki</string-name>,\
-        \ <string-name>K. Paw\u0142owski</string-name>, <string-name>C. Klempt</string-name>,\
-        \ <string-name>J.\u2009F. Sherson</string-name>, <string-name>K. Rz\u0105\u017C\
-        ewski</string-name>, <string-name>A.\u2009J. Hilliard</string-name>, and <string-name>J.\u2009\
-        J. Arlt</string-name></person-group>, <article-title>Observation of Atom Number\
-        \ Fluctuations in a Bose-Einstein Condensate</article-title>, <source>Phys.\
-        \ Rev. Lett.</source> <volume>122</volume>, <page-range>163601</page-range>\
-        \ (<year>2019</year>).<pub-id pub-id-type=\"coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id\
-        \ pub-id-type=\"doi\" specific-use=\"suppress-display\">10.1103/PhysRevLett.122.163601</pub-id></mixed-citation></ref><ref\
-        \ id=\"c13\"><label>[13]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>13</object-id><person-group person-group-type=\"author\"><string-name>R.\u2009\
-        M. Ziff</string-name>, <string-name>G.\u2009E. Uhlenbeck</string-name>, and\
-        \ <string-name>M. Kac</string-name></person-group>, <article-title>The ideal\
-        \ Bose-Einstein gas, revisited</article-title>, <source>Phys. Rep.</source>\
-        \ <volume>32</volume>, <page-range>169</page-range> (<year>1977</year>).<pub-id\
-        \ pub-id-type=\"coden\">PRPLCM</pub-id><issn>0370-1573</issn><pub-id pub-id-type=\"\
-        doi\" specific-use=\"suppress-display\">10.1016/0370-1573(77)90052-7</pub-id></mixed-citation></ref><ref\
-        \ id=\"c14\"><label>[14]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>14</object-id><person-group person-group-type=\"author\"><string-name>S.\
-        \ Grossmann</string-name> and <string-name>M. Holthaus</string-name></person-group>,\
-        \ <article-title>Microcanonical fluctuations of a Bose system\u2019s ground\
-        \ state occupation number</article-title>, <source>Phys. Rev. E</source> <volume>54</volume>,\
-        \ <page-range>3495</page-range> (<year>1996</year>).<pub-id pub-id-type=\"\
-        coden\">PLEEE8</pub-id><issn>1063-651X</issn><pub-id pub-id-type=\"doi\" specific-use=\"\
-        suppress-display\">10.1103/PhysRevE.54.3495</pub-id></mixed-citation></ref><ref\
-        \ id=\"c15\"><label>[15]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>15</object-id><person-group person-group-type=\"author\"><string-name>M.\
-        \ Holthaus</string-name>, <string-name>E. Kalinowski</string-name>, and <string-name>K.\
-        \ Kirsten</string-name></person-group>, <article-title>Condensate fluctuations\
-        \ in trapped Bose gases: Canonical vs. microcanonical ensemble</article-title>,\
-        \ <source>Ann. Phys. (N.Y.)</source> <volume>270</volume>, <page-range>198</page-range>\
-        \ (<year>1998</year>).<pub-id pub-id-type=\"coden\">APNYA6</pub-id><issn>0003-4916</issn><pub-id\
-        \ pub-id-type=\"doi\" specific-use=\"suppress-display\">10.1006/aphy.1998.5852</pub-id></mixed-citation></ref><ref\
-        \ id=\"c16\"><label>[16]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>16</object-id><person-group person-group-type=\"author\"><string-name>C.\
-        \ Weiss</string-name> and <string-name>M. Wilkens</string-name></person-group>,\
-        \ <article-title>Particle number counting statistics in ideal Bose gases</article-title>,\
-        \ <source>Opt. Express</source> <volume>1</volume>, <page-range>272</page-range>\
-        \ (<year>1997</year>).<pub-id pub-id-type=\"coden\">OPEXFF</pub-id><issn>1094-4087</issn><pub-id\
-        \ pub-id-type=\"doi\" specific-use=\"suppress-display\">10.1364/OE.1.000272</pub-id></mixed-citation></ref><ref\
-        \ id=\"c17\"><label>[17]</label><mixed-citation publication-type=\"book\"\
-        ><object-id>17</object-id><person-group person-group-type=\"author\"><string-name>L.\u2009\
-        E. Dickson</string-name></person-group>, <source>History of the Theory of\
-        \ Numbers: Diophantine Analysis</source> (<publisher-name>Chelsea Publishing\
-        \ Co.</publisher-name>, New York, <year>1971</year>).</mixed-citation></ref><ref\
-        \ id=\"c18\"><label>[18]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>18</object-id><person-group person-group-type=\"author\"><string-name>G.\u2009\
-        H. Hardy</string-name> and <string-name>S. Ramanujan</string-name></person-group>,\
-        \ <article-title>Asymptotic formulae in combinatory analysis</article-title>,\
-        \ <source>Proc. London Math. Soc.</source> <volume>17</volume>, <page-range>75</page-range>\
-        \ (<year>1918</year>).<pub-id pub-id-type=\"coden\">PLMTAL</pub-id><issn>0024-6115</issn><pub-id\
-        \ pub-id-type=\"doi\" specific-use=\"suppress-display\">10.1112/plms/s2-17.1.75</pub-id></mixed-citation></ref><ref\
-        \ id=\"c19\"><label>[19]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>19</object-id><person-group person-group-type=\"author\"><string-name>S.\
-        \ Grossmann</string-name> and <string-name>M. Holthaus</string-name></person-group>,\
-        \ <article-title>Maxwell\u2019s demon at work: Two types of Bose condensate\
-        \ fluctuations in power-law traps</article-title>, <source>Opt. Express</source>\
-        \ <volume>1</volume>, <page-range>262</page-range> (<year>1997</year>).<pub-id\
-        \ pub-id-type=\"coden\">OPEXFF</pub-id><issn>1094-4087</issn><pub-id pub-id-type=\"\
-        doi\" specific-use=\"suppress-display\">10.1364/OE.1.000262</pub-id></mixed-citation></ref><ref\
-        \ id=\"c20\"><label>[20]</label><note content-type=\"endnote\"><p>The Maxwell\u2019\
-        s demon ensemble yields the variance of the number of atoms in the thermal\
-        \ cloud. Because of conservation of the total number of atoms, this also exactly\
-        \ corresponds to the variance of the number of atoms in the condensate.</p></note></ref><ref\
-        \ id=\"c21\"><label>[21]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>21</object-id><person-group person-group-type=\"author\"><string-name>W.\
-        \ Zwerger</string-name></person-group>, <article-title>Anomalous Fluctuations\
-        \ in Phases with a Broken Continuous Symmetry</article-title>, <source>Phys.\
-        \ Rev. Lett.</source> <volume>92</volume>, <page-range>027203</page-range>\
-        \ (<year>2004</year>).<pub-id pub-id-type=\"coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id\
-        \ pub-id-type=\"doi\" specific-use=\"suppress-display\">10.1103/PhysRevLett.92.027203</pub-id></mixed-citation></ref><ref\
-        \ id=\"c22\"><label>[22]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>22</object-id><person-group person-group-type=\"author\"><string-name>Z.\
-        \ Idziaszek</string-name>, <string-name>M. Gajda</string-name>, <string-name>P.\
-        \ Navez</string-name>, <string-name>M. Wilkens</string-name>, and <string-name>K.\
-        \ Rz\u0105\u017Cewski</string-name></person-group>, <article-title>Fluctuations\
-        \ of the Weakly Interacting Bose-Einstein Condensate</article-title>, <source>Phys.\
-        \ Rev. Lett.</source> <volume>82</volume>, <page-range>4376</page-range> (<year>1999</year>).<pub-id\
-        \ pub-id-type=\"coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id pub-id-type=\"\
-        doi\" specific-use=\"suppress-display\">10.1103/PhysRevLett.82.4376</pub-id></mixed-citation></ref><ref\
-        \ id=\"c23\"><label>[23]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>23</object-id><person-group person-group-type=\"author\"><string-name>V.\u2009\
-        V. Kocharovsky</string-name>, <string-name>V.\u2009V. Kocharovsky</string-name>,\
-        \ and <string-name>M.\u2009O. Scully</string-name></person-group>, <article-title>Condensate\
-        \ Statistics in Interacting and Ideal Dilute Bose Gases</article-title>, <source>Phys.\
-        \ Rev. Lett.</source> <volume>84</volume>, <page-range>2306</page-range> (<year>2000</year>).<pub-id\
-        \ pub-id-type=\"coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id pub-id-type=\"\
-        doi\" specific-use=\"suppress-display\">10.1103/PhysRevLett.84.2306</pub-id></mixed-citation></ref><ref\
-        \ id=\"c24\"><label>[24]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>24</object-id><person-group person-group-type=\"author\"><string-name>V.\u2009\
-        V. Kocharovsky</string-name>, <string-name>V.\u2009V. Kocharovsky</string-name>,\
-        \ and <string-name>M.\u2009O. Scully</string-name></person-group>, <article-title>Condensation\
-        \ of <inline-formula><mml:math display=\"inline\"><mml:mi>N</mml:mi></mml:math></inline-formula>\
-        \ bosons. III. analytical results for all higher moments of condensate fluctuations\
-        \ in interacting and ideal dilute Bose gases via the canonical ensemble quasiparticle\
-        \ formulation</article-title>, <source>Phys. Rev. A</source> <volume>61</volume>,\
-        \ <page-range>053606</page-range> (<year>2000</year>).<pub-id pub-id-type=\"\
-        coden\">PLRAAN</pub-id><issn>1050-2947</issn><pub-id pub-id-type=\"doi\" specific-use=\"\
-        suppress-display\">10.1103/PhysRevA.61.053606</pub-id></mixed-citation></ref><ref\
-        \ id=\"c25\"><label>[25]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>25</object-id><person-group person-group-type=\"author\"><string-name>A.\u2009\
-        A. Svidzinsky</string-name> and <string-name>M.\u2009O. Scully</string-name></person-group>,\
-        \ <article-title>Condensation of <inline-formula><mml:math display=\"inline\"\
-        ><mml:mi>N</mml:mi></mml:math></inline-formula> Interacting Bosons: A Hybrid\
-        \ Approach to Condensate Fluctuations</article-title>, <source>Phys. Rev.\
-        \ Lett.</source> <volume>97</volume>, <page-range>190402</page-range> (<year>2006</year>).<pub-id\
-        \ pub-id-type=\"coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id pub-id-type=\"\
-        doi\" specific-use=\"suppress-display\">10.1103/PhysRevLett.97.190402</pub-id></mixed-citation></ref><ref\
-        \ id=\"c26\"><label>[26]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>26</object-id><person-group person-group-type=\"author\"><string-name>A.\u2009\
-        A. Svidzinsky</string-name> and <string-name>M.\u2009O. Scully</string-name></person-group>,\
-        \ <article-title>Condensation of <inline-formula><mml:math display=\"inline\"\
-        ><mml:mi>N</mml:mi></mml:math></inline-formula> bosons: Microscopic approach\
-        \ to fluctuations in an interacting Bose gas</article-title>, <source>Phys.\
-        \ Rev. A</source> <volume>82</volume>, <page-range>063630</page-range> (<year>2010</year>).<pub-id\
-        \ pub-id-type=\"coden\">PLRAAN</pub-id><issn>1050-2947</issn><pub-id pub-id-type=\"\
-        doi\" specific-use=\"suppress-display\">10.1103/PhysRevA.82.063630</pub-id></mixed-citation></ref><ref\
-        \ id=\"c27\"><label>[27]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>27</object-id><person-group person-group-type=\"author\"><string-name>S.\
-        \ Bhattacharyya</string-name> and <string-name>B. Chakrabarti</string-name></person-group>,\
-        \ <article-title>Condensate fluctuation and thermodynamics of mesoscopic Bose-Einstein\
-        \ condensates: A correlated many-body approach</article-title>, <source>Phys.\
-        \ Rev. A</source> <volume>93</volume>, <page-range>023636</page-range> (<year>2016</year>).<pub-id\
-        \ pub-id-type=\"coden\">PLRAAN</pub-id><issn>2469-9926</issn><pub-id pub-id-type=\"\
-        doi\" specific-use=\"suppress-display\">10.1103/PhysRevA.93.023636</pub-id></mixed-citation></ref><ref\
-        \ id=\"c28\"><label>[28]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>28</object-id><person-group person-group-type=\"author\"><string-name>V.\u2009\
-        I. Yukalov</string-name></person-group>, <article-title>No anomalous fluctuations\
-        \ exist in stable equilibrium systems</article-title>, <source>Phys. Lett.\
-        \ A</source> <volume>340</volume>, <page-range>369</page-range> (<year>2005</year>).<pub-id\
-        \ pub-id-type=\"coden\">PYLAAG</pub-id><issn>0375-9601</issn><pub-id pub-id-type=\"\
-        doi\" specific-use=\"suppress-display\">10.1016/j.physleta.2005.04.035</pub-id></mixed-citation></ref><ref\
-        \ id=\"c29\"><label>[29]</label><mixed-citation publication-type=\"supplemental-material\"\
-        ><object-id>29</object-id>See Supplemental Material at <ext-link ext-link-type=\"\
-        uri\" xlink:href=\"http://link.aps.org/supplemental/10.1103/PhysRevLett.126.153601\"\
-        >http://link.aps.org/supplemental/10.1103/PhysRevLett.126.153601</ext-link>,\
-        \ which includes Refs.\_[7,16], for further details.</mixed-citation></ref><ref\
-        \ id=\"c30\"><label>[30]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>30</object-id><person-group person-group-type=\"author\"><string-name>M.\
-        \ Kristensen</string-name>, <string-name>M. Gajdacz</string-name>, <string-name>P.\u2009\
-        L. Pedersen</string-name>, <string-name>C. Klempt</string-name>, <string-name>J.\u2009\
-        F. Sherson</string-name>, <string-name>J.\u2009J. Arlt</string-name>, and\
-        \ <string-name>A.\u2009J. Hilliard</string-name></person-group>, <article-title>Sub-atom\
-        \ shot noise Faraday imaging of ultracold atom clouds</article-title>, <source>J.\
-        \ Phys. B</source> <volume>50</volume>, <page-range>034004</page-range> (<year>2017</year>).<pub-id\
-        \ pub-id-type=\"coden\">JPAPEH</pub-id><issn>0953-4075</issn><pub-id pub-id-type=\"\
-        doi\" specific-use=\"suppress-display\">10.1088/1361-6455/50/3/034004</pub-id></mixed-citation></ref><ref\
-        \ id=\"c31\"><label>[31]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>31</object-id><person-group person-group-type=\"author\"><string-name>M.\
-        \ Gajdacz</string-name>, <string-name>A.\u2009J. Hilliard</string-name>, <string-name>M.\u2009\
-        A. Kristensen</string-name>, <string-name>P.\u2009L. Pedersen</string-name>,\
-        \ <string-name>C. Klempt</string-name>, <string-name>J.\u2009J. Arlt</string-name>,\
-        \ and <string-name>J.\u2009F. Sherson</string-name></person-group>, <article-title>Preparation\
-        \ of Ultracold Atom Clouds at the Shot Noise Level</article-title>, <source>Phys.\
-        \ Rev. Lett.</source> <volume>117</volume>, <page-range>073604</page-range>\
-        \ (<year>2016</year>).<pub-id pub-id-type=\"coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id\
-        \ pub-id-type=\"doi\" specific-use=\"suppress-display\">10.1103/PhysRevLett.117.073604</pub-id></mixed-citation></ref><ref\
-        \ id=\"c32\"><label>[32]</label><mixed-citation publication-type=\"journal\"\
-        ><object-id>32</object-id><person-group person-group-type=\"author\"><string-name>D.\
-        \ Hellweg</string-name>, <string-name>L. Cacciapuoti</string-name>, <string-name>M.\
-        \ Kottke</string-name>, <string-name>T. Schulte</string-name>, <string-name>K.\
-        \ Sengstock</string-name>, <string-name>W. Ertmer</string-name>, and <string-name>J.\u2009\
-        J. Arlt</string-name></person-group>, <article-title>Measurement of the Spatial\
-        \ Correlation Function of Phase Fluctuating Bose-Einstein Condensates</article-title>,\
-        \ <source>Phys. Rev. Lett.</source> <volume>91</volume>, <page-range>010406</page-range>\
-        \ (<year>2003</year>).<pub-id pub-id-type=\"coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id\
-        \ pub-id-type=\"doi\" specific-use=\"suppress-display\">10.1103/PhysRevLett.91.010406</pub-id></mixed-citation></ref><ref\
-        \ id=\"c33\"><label>[33]</label><note content-type=\"endnote\"><p>Measurements\
-        \ for which the stabilization process failed were excluded, such that each\
-        \ set includes at least 45 measurements.</p></note></ref><ref id=\"c34\"><label>[34]</label><mixed-citation\
-        \ publication-type=\"eprint\"><object-id>34</object-id><person-group person-group-type=\"\
-        author\"><string-name>J. Zeiher</string-name>, <string-name>J. Wolf</string-name>,\
-        \ <string-name>J.\u2009A. Isaacs</string-name>, <string-name>J. Kohler</string-name>,\
-        \ and <string-name>D.\u2009M. Stamper-Kurn</string-name></person-group>, <article-title>Tracking\
-        \ evaporative cooling of a mesoscopic atomic quantum gas in real time</article-title>,\
-        \ <pub-id pub-id-type=\"arxiv\">arXiv:2012.01280</pub-id>.</mixed-citation></ref></ref-list></back></article>\r\
-        \n"
-    headers:
-      Connection:
-      - keep-alive
-      Content-Type:
-      - text/xml;charset=utf-8
-      Date:
-      - Wed, 29 Jun 2022 10:39:16 GMT
-      Server:
-      - nginx/1.21.6
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept-Encoding
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-XSS-Protection:
-      - 1; mode=block
-      content-length:
-      - '80949'
-    status:
-      code: 200
-      message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - text/xml
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.27.1
+      method: GET
+      uri: http://harvest.aps.org/v2/journals/articles/10.1103%2FPhysRevLett.126.153601
+    response:
+      body:
+        string:
+          "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<!DOCTYPE article PUBLIC\
+          \ \"-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with OASIS Tables with\
+          \ MathML3 v1.2 20190208//EN\" \"JATS-journalpublishing-oasis-article1-mathml3.dtd\"\
+          >\r\n<article article-type=\"research-article\" xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"\
+          \ xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:oasis=\"http://www.niso.org/standards/z39-96/ns/oasis-exchange/table\"\
+          ><front><journal-meta><journal-id journal-id-type=\"publisher-id\">PRL</journal-id><journal-id\
+          \ journal-id-type=\"coden\">PRLTAO</journal-id><journal-title-group><journal-title>Physical\
+          \ Review Letters</journal-title><abbrev-journal-title>Phys. Rev. Lett.</abbrev-journal-title></journal-title-group><issn\
+          \ pub-type=\"ppub\">0031-9007</issn><issn pub-type=\"epub\">1079-7114</issn><publisher><publisher-name>American\
+          \ Physical Society</publisher-name></publisher></journal-meta><article-meta><article-id\
+          \ pub-id-type=\"doi\">10.1103/PhysRevLett.126.153601</article-id><article-categories><subj-group\
+          \ subj-group-type=\"toc-major\"><subject>LETTERS</subject></subj-group><subj-group\
+          \ subj-group-type=\"toc-minor\"><subject>Atomic, Molecular, and Optical Physics</subject></subj-group></article-categories><title-group><article-title>Observation\
+          \ of Microcanonical Atom Number Fluctuations in a Bose-Einstein Condensate</article-title></title-group><contrib-group><contrib\
+          \ contrib-type=\"author\"><contrib-id contrib-id-type=\"orcid\">https://orcid.org/0000-0002-7355-8107</contrib-id><name><surname>Christensen</surname><given-names>M.\u2009\
+          B.</given-names></name><xref ref-type=\"aff\" rid=\"a1\"><sup>1</sup></xref></contrib><contrib\
+          \ contrib-type=\"author\"><contrib-id contrib-id-type=\"orcid\">https://orcid.org/0000-0001-7116-4983</contrib-id><name><surname>Vibel</surname><given-names>T.</given-names></name><xref\
+          \ ref-type=\"aff\" rid=\"a1\"><sup>1</sup></xref></contrib><contrib contrib-type=\"\
+          author\"><contrib-id contrib-id-type=\"orcid\">https://orcid.org/0000-0002-4512-5355</contrib-id><name><surname>Hilliard</surname><given-names>A.\u2009\
+          J.</given-names></name><xref ref-type=\"aff\" rid=\"a1\"><sup>1</sup></xref></contrib><contrib\
+          \ contrib-type=\"author\"><contrib-id contrib-id-type=\"orcid\">https://orcid.org/0000-0002-9868-4310</contrib-id><name><surname>Kruk</surname><given-names>M.\u2009\
+          B.</given-names></name><xref ref-type=\"aff\" rid=\"a2 a3\"><sup>2,3</sup></xref></contrib><contrib\
+          \ contrib-type=\"author\"><contrib-id contrib-id-type=\"orcid\">https://orcid.org/0000-0001-6412-4457</contrib-id><name><surname>Paw\u0142\
+          owski</surname><given-names>K.</given-names></name><xref ref-type=\"aff\"\
+          \ rid=\"a2\"><sup>2</sup></xref></contrib><contrib contrib-type=\"author\"\
+          ><name><surname>Hryniuk</surname><given-names>D.</given-names></name><xref\
+          \ ref-type=\"aff\" rid=\"a2\"><sup>2</sup></xref></contrib><contrib contrib-type=\"\
+          author\"><name><surname>Rz\u0105\u017Cewski</surname><given-names>K.</given-names></name><xref\
+          \ ref-type=\"aff\" rid=\"a2\"><sup>2</sup></xref></contrib><contrib contrib-type=\"\
+          author\"><contrib-id contrib-id-type=\"orcid\">https://orcid.org/0000-0002-9667-2789</contrib-id><name><surname>Kristensen</surname><given-names>M.\u2009\
+          A.</given-names></name><xref ref-type=\"aff\" rid=\"a1\"><sup>1</sup></xref></contrib><contrib\
+          \ contrib-type=\"author\"><contrib-id contrib-id-type=\"orcid\">https://orcid.org/0000-0002-5782-3927</contrib-id><name><surname>Arlt</surname><given-names>J.\u2009\
+          J.</given-names></name><xref ref-type=\"aff\" rid=\"a1\"><sup>1</sup></xref></contrib><aff\
+          \ id=\"a1\"><label><sup>1</sup></label>Center for Complex Quantum Systems,\
+          \ Department of Physics and Astronomy, <institution>Aarhus University</institution>,\
+          \ Ny Munkegade 120, DK-8000 Aarhus C, Denmark</aff><aff id=\"a2\"><label><sup>2</sup></label>Center\
+          \ for Theoretical Physics, <institution>Polish Academy of Sciences</institution>,\
+          \ Al. Lotnik\xF3w 32/46, 02-668 Warsaw, Poland</aff><aff id=\"a3\"><label><sup>3</sup></label>Institute\
+          \ of Physics, <institution>Polish Academy of Sciences</institution>, Al. Lotnik\xF3\
+          w 32/46, 02-668 Warsaw, Poland</aff></contrib-group><pub-date iso-8601-date=\"\
+          2021-04-12\" date-type=\"pub\" publication-format=\"electronic\"><day>12</day><month>April</month><year>2021</year></pub-date><pub-date\
+          \ iso-8601-date=\"2021-04-16\" date-type=\"pub\" publication-format=\"print\"\
+          ><day>16</day><month>April</month><year>2021</year></pub-date><volume>126</volume><issue>15</issue><elocation-id>153601</elocation-id><pub-history><event><date\
+          \ iso-8601-date=\"2020-11-24\" date-type=\"received\"><day>24</day><month>November</month><year>2020</year></date></event><event><date\
+          \ iso-8601-date=\"2021-03-11\" date-type=\"accepted\"><day>11</day><month>March</month><year>2021</year></date></event></pub-history><permissions><copyright-statement>Published\
+          \ by the American Physical Society</copyright-statement><copyright-year>2021</copyright-year><copyright-holder>authors</copyright-holder><license\
+          \ license-type=\"creative-commons\" xlink:href=\"https://creativecommons.org/licenses/by/4.0/\"\
+          ><license-p content-type=\"usage-statement\">Published by the American Physical\
+          \ Society under the terms of the <ext-link ext-link-type=\"uri\" xlink:href=\"\
+          https://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution\
+          \ 4.0 International</ext-link> license. Further distribution of this work\
+          \ must maintain attribution to the author(s) and the published article\u2019\
+          s title, journal citation, and DOI.</license-p></license></permissions><abstract><p>Quantum\
+          \ systems are typically characterized by the inherent fluctuation of their\
+          \ physical observables. Despite this fundamental importance, the investigation\
+          \ of the fluctuations in interacting quantum systems at finite temperature\
+          \ continues to pose considerable theoretical and experimental challenges.\
+          \ Here we report the characterization of atom number fluctuations in weakly\
+          \ interacting Bose-Einstein condensates. Technical fluctuations are mitigated\
+          \ through a combination of nondestructive detection and active stabilization\
+          \ of the cooling sequence. We observe fluctuations reduced by 27% below the\
+          \ canonical expectation for a noninteracting gas, revealing the microcanonical\
+          \ nature of our system. The peak fluctuations have near linear scaling with\
+          \ atom number <inline-formula><mml:math display=\"inline\"><mml:mi mathvariant=\"\
+          normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mrow><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>p</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:msubsup><mml:mo>\u221D\
+          </mml:mo><mml:msup><mml:mi>N</mml:mi><mml:mn>1.134</mml:mn></mml:msup></mml:math></inline-formula>\
+          \ in an experimentally accessible transition region outside the thermodynamic\
+          \ limit. Our experimental results thus set a benchmark for theoretical calculations\
+          \ under typical experimental conditions.</p></abstract><funding-group><award-group\
+          \ award-type=\"unspecified\"><funding-source country=\"DK\"><institution-wrap><institution>Villum\
+          \ Fonden</institution><institution-id institution-id-type=\"doi\" vocab=\"\
+          open-funder-registry\" vocab-identifier=\"10.13039/open-funder-registry\"\
+          >10.13039/100008398</institution-id></institution-wrap></funding-source></award-group><award-group\
+          \ award-type=\"unspecified\"><funding-source country=\"DK\"><institution-wrap><institution>Carlsbergfondet</institution><institution-id\
+          \ institution-id-type=\"doi\" vocab=\"open-funder-registry\" vocab-identifier=\"\
+          10.13039/open-funder-registry\">10.13039/501100002808</institution-id></institution-wrap></funding-source></award-group><award-group\
+          \ award-type=\"grant\"><funding-source country=\"DK\"><institution-wrap><institution>Danmarks\
+          \ Grundforskningsfond</institution><institution-id institution-id-type=\"\
+          doi\" vocab=\"open-funder-registry\" vocab-identifier=\"10.13039/open-funder-registry\"\
+          >10.13039/501100001732</institution-id></institution-wrap></funding-source><award-id>DNRF156</award-id></award-group><award-group\
+          \ award-type=\"grant\"><funding-source country=\"PL\"><institution-wrap><institution>Narodowe\
+          \ Centrum Nauki</institution><institution-id institution-id-type=\"doi\" vocab=\"\
+          open-funder-registry\" vocab-identifier=\"10.13039/open-funder-registry\"\
+          >10.13039/501100004281</institution-id></institution-wrap></funding-source><award-id>2018/29/B/ST2/01308</award-id><award-id>2019/34/E/ST2/00289</award-id><award-id>2018/31/B/ST2/01871</award-id></award-group><award-group\
+          \ award-type=\"grant\"><funding-source country=\"PL\"><institution-wrap><institution>Narodowa\
+          \ Agencja Wymiany Akademickiej</institution><institution-id institution-id-type=\"\
+          doi\" vocab=\"open-funder-registry\" vocab-identifier=\"10.13039/open-funder-registry\"\
+          >10.13039/501100014434</institution-id></institution-wrap></funding-source><award-id>PPI/PZA/2019/1/00094/U/00001</award-id></award-group></funding-group><counts><page-count\
+          \ count=\"6\"/></counts></article-meta></front><body><p>Bose-Einstein condensates\
+          \ (BECs) have become a cornerstone of current developments in quantum simulation\
+          \ <xref ref-type=\"bibr\" rid=\"c1\">[1]</xref>, and one would expect a complete\
+          \ description of their properties to be available. However, in spite of considerable\
+          \ theoretical effort, the atom number fluctuations between the thermal and\
+          \ condensed component of an interacting Bose gas at relevant atom densities\
+          \ are still not fully understood. In principle, such a quantum system can\
+          \ be described through all moments of its probability distribution, which\
+          \ have indeed not been obtained for large interacting BECs <xref ref-type=\"\
+          bibr\" rid=\"c2 c3 c4 c5 c6\">[2\u20136]</xref>. To date, experiments have\
+          \ been limited to the first moment corresponding to the condensate fraction\
+          \ <xref ref-type=\"bibr\" rid=\"c7 c8 c9\">[7\u20139]</xref> as well as the\
+          \ critical temperature indicating the onset of condensation <xref ref-type=\"\
+          bibr\" rid=\"c10 c11\">[10,11]</xref>. Only recently BEC atom number fluctuations\
+          \ corresponding to the second moment have become experimentally accessible\
+          \ <xref ref-type=\"bibr\" rid=\"c12\">[12]</xref>.</p><p>These fluctuations\
+          \ pose a subtle problem with surprising challenges and rich physics <xref\
+          \ ref-type=\"bibr\" rid=\"c6\">[6]</xref>. Historically, a description of\
+          \ the noninteracting Bose gas was developed within the grand canonical ensemble,\
+          \ which shows unphysically large fluctuations below the critical temperature\
+          \ <xref ref-type=\"bibr\" rid=\"c13\">[13]</xref>. This is referred to as\
+          \ the grand canonical catastrophe <xref ref-type=\"bibr\" rid=\"c14 c15\"\
+          >[14,15]</xref>, and is one of the few examples where the predictions of different\
+          \ statistical ensembles differ dramatically. Thus, any description of the\
+          \ fluctuations must be based on canonical or microcanonical approaches.</p><p>In\
+          \ the canonical ensemble, the asymptotic behavior of the condensate atom number\
+          \ variance in the noninteracting Bose gas was first obtained by Politzer <xref\
+          \ ref-type=\"bibr\" rid=\"c2\">[2]</xref>. Later, exact numerical recursion\
+          \ relations for this noninteracting case were found <xref ref-type=\"bibr\"\
+          \ rid=\"c16\">[16]</xref>, which recently allowed for an initial comparison\
+          \ with experimental results <xref ref-type=\"bibr\" rid=\"c12\">[12]</xref>.\
+          \ However, the canonical ensemble assumes the existence of an external reservoir\
+          \ exchanging energy with the system under investigation. This assumption is\
+          \ not met in the case of an ultracold gas isolated from the environment. Therefore,\
+          \ the microcanonical ensemble needs to be invoked, which is numerically demanding\
+          \ and currently does not allow for a full comparison at typical experimental\
+          \ parameters.</p><p>In the microcanonical ensemble the key quantity is the\
+          \ partition function <inline-formula><mml:math display=\"inline\"><mml:mi\
+          \ mathvariant=\"normal\">\u0393</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mi>E</mml:mi><mml:mo>,</mml:mo><mml:mi>N</mml:mi><mml:mo\
+          \ stretchy=\"false\">)</mml:mo></mml:math></inline-formula>, i.e., the number\
+          \ of ways to distribute the energy <inline-formula><mml:math display=\"inline\"\
+          ><mml:mi>E</mml:mi></mml:math></inline-formula> between <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi>N</mml:mi></mml:math></inline-formula> atoms.\
+          \ Calculation of <inline-formula><mml:math display=\"inline\"><mml:mi mathvariant=\"\
+          normal\">\u0393</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mi>E</mml:mi><mml:mo>,</mml:mo><mml:mi>N</mml:mi><mml:mo\
+          \ stretchy=\"false\">)</mml:mo></mml:math></inline-formula> for a noninteracting\
+          \ gas in a harmonic trap is closely related to the classic mathematical problem\
+          \ of partitions. Discussions between Leibniz and Bernoulli inspired intensive\
+          \ work on this topic <xref ref-type=\"bibr\" rid=\"c17\">[17]</xref>, with\
+          \ breakthroughs achieved a century ago by Ramanujan and Hardy <xref ref-type=\"\
+          bibr\" rid=\"c18\">[18]</xref>. In particular, it was shown that the canonical\
+          \ and microcanonical fluctuations agree for large atom number in the noninteracting\
+          \ 1D gas <xref ref-type=\"bibr\" rid=\"c19\">[19]</xref>.</p><p>The results\
+          \ for the 3D case in the microcanonical ensemble were not known until 1997\
+          \ <xref ref-type=\"bibr\" rid=\"c3\">[3]</xref>, when a fourth statistical\
+          \ ensemble, called the Maxwell\u2019s demon ensemble, was proposed. In this\
+          \ ensemble the system exchanges particles with the reservoir, without changing\
+          \ its energy. It is applied to the thermal cloud at sufficiently low temperatures,\
+          \ where the BEC comprises the reservoir. The ensemble yields an asymptotic\
+          \ expression for the microcanonical fluctuations in the noninteracting gas\
+          \ <xref ref-type=\"bibr\" rid=\"c20\">[20]</xref> <disp-formula id=\"d1\"\
+          ><mml:math display=\"block\"><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mn>0</mml:mn><mml:mn>2</mml:mn></mml:msubsup><mml:mo>=</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mfrac><mml:mrow><mml:mi>\u03B6\
+          </mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy=\"\
+          false\">)</mml:mo></mml:mrow><mml:mrow><mml:mi>\u03B6</mml:mi><mml:mo stretchy=\"\
+          false\">(</mml:mo><mml:mn>3</mml:mn><mml:mo stretchy=\"false\">)</mml:mo></mml:mrow></mml:mfrac><mml:mo>-</mml:mo><mml:mfrac><mml:mrow><mml:mn>3</mml:mn><mml:mi>\u03B6\
+          </mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mn>3</mml:mn><mml:mo stretchy=\"\
+          false\">)</mml:mo></mml:mrow><mml:mrow><mml:mn>4</mml:mn><mml:mi>\u03B6</mml:mi><mml:mo\
+          \ stretchy=\"false\">(</mml:mo><mml:mn>4</mml:mn><mml:mo stretchy=\"false\"\
+          >)</mml:mo></mml:mrow></mml:mfrac><mml:mo>)</mml:mo></mml:mrow><mml:mi>N</mml:mi><mml:msup><mml:mrow><mml:mo>(</mml:mo><mml:mfrac><mml:mi>T</mml:mi><mml:msubsup><mml:mi>T</mml:mi><mml:mi>c</mml:mi><mml:mn>0</mml:mn></mml:msubsup></mml:mfrac><mml:mo>)</mml:mo></mml:mrow><mml:mn>3</mml:mn></mml:msup><mml:mo>.</mml:mo></mml:math><label>(1)</label></disp-formula>Here\
+          \ <inline-formula><mml:math display=\"inline\"><mml:msubsup><mml:mi>T</mml:mi><mml:mi>c</mml:mi><mml:mn>0</mml:mn></mml:msubsup></mml:math></inline-formula>\
+          \ is the critical temperature of a noninteracting gas in a harmonic trap and\
+          \ <inline-formula><mml:math display=\"inline\"><mml:mi>\u03B6</mml:mi><mml:mo\
+          \ stretchy=\"false\">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy=\"false\"\
+          >)</mml:mo></mml:math></inline-formula> is the Riemann zeta function. In particular,\
+          \ the second term corresponds to the reduction in the number fluctuations\
+          \ in the microcanonical ensemble with respect to the canonical result given\
+          \ by the first term. Thus, the ratio between the canonical and microcanonical\
+          \ fluctuations in the 3D isotropic case is 0.39, corresponding to a reduction\
+          \ by 61%.</p><p>Importantly, interactions are expected to modify the fluctuations\
+          \ of the condensate atom number <inline-formula><mml:math display=\"inline\"\
+          ><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mn>0</mml:mn><mml:mn>2</mml:mn></mml:msubsup></mml:math></inline-formula>.\
+          \ In the homogeneous case, initial results showed that interactions suppress\
+          \ the fluctuations by a factor of 2 at very low temperatures due to a strong\
+          \ pair correlation of the atoms reducing the number of degrees of freedom\
+          \ <xref ref-type=\"bibr\" rid=\"c4 c5 c21\">[4,5,21]</xref>. Moreover, interactions\
+          \ have been included using numerous methods such as the aforementioned Maxwell\u2019\
+          s demon ensemble <xref ref-type=\"bibr\" rid=\"c22\">[22]</xref>, number-conserving\
+          \ quasiparticle methods <xref ref-type=\"bibr\" rid=\"c23 c24\">[23,24]</xref>,\
+          \ master-equation and hybrid quasiparticle approaches <xref ref-type=\"bibr\"\
+          \ rid=\"c25 c26\">[25,26]</xref>, and a correlated many-body approach <xref\
+          \ ref-type=\"bibr\" rid=\"c27\">[27]</xref>. However, only some of these methods\
+          \ are based on a microcanonical ensemble and none of them allow for the analysis\
+          \ of harmonically trapped interacting BECs at typical experimental atom numbers.\
+          \ Moreover, most approaches are only valid at low temperature and do not capture\
+          \ the peak fluctuations near <inline-formula><mml:math display=\"inline\"\
+          ><mml:msubsup><mml:mi>T</mml:mi><mml:mi>c</mml:mi><mml:mn>0</mml:mn></mml:msubsup></mml:math></inline-formula>.</p><p>Additionally,\
+          \ the fluctuations are expected to scale <italic>anomalously</italic> with\
+          \ atom number: <inline-formula><mml:math display=\"inline\"><mml:mi mathvariant=\"\
+          normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mn>0</mml:mn><mml:mn>2</mml:mn></mml:msubsup><mml:mo>\u221D\
+          </mml:mo><mml:msup><mml:mi>N</mml:mi><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mi>\u03B3\
+          </mml:mi></mml:mrow></mml:msup></mml:math></inline-formula>, with <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi>\u03B3</mml:mi><mml:mo>\u2260</mml:mo><mml:mn>0</mml:mn></mml:math></inline-formula>\
+          \ <xref ref-type=\"bibr\" rid=\"c4 c5\">[4,5]</xref>. This is in stark contrast\
+          \ to most classical systems where the central limit theorem ensures normal\
+          \ scaling of the fluctuations <inline-formula><mml:math display=\"inline\"\
+          ><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msup><mml:mi>N</mml:mi><mml:mn>2</mml:mn></mml:msup><mml:mo>\u221D\
+          </mml:mo><mml:mi>N</mml:mi></mml:math></inline-formula> due to the existence\
+          \ of a finite microscopic coherence length scale <xref ref-type=\"bibr\" rid=\"\
+          c21 c28\">[21,28]</xref>. The characterization of BEC atom number fluctuations\
+          \ is thus an important outstanding challenge that has been hindered by technical\
+          \ fluctuations of BEC experiments until recently. This technical limitation\
+          \ was mitigated in our recent experiments, enabling the current experimental\
+          \ characterization of BEC fluctuations.</p><p>In this Letter, we characterize\
+          \ the atom number fluctuations in a weakly interacting BEC as a function of\
+          \ atom number and trapping geometry. To avoid technical fluctuations, BECs\
+          \ with a well-controlled atom number and temperature are prepared through\
+          \ a combination of nondestructive detection and active stabilization of the\
+          \ cooling sequence. We quantitatively analyze the fluctuations in two ways.\
+          \ The fluctuations are compared to an exact canonical calculation for the\
+          \ noninteracting Bose gas, which shows fluctuations reduced by 27% with respect\
+          \ to the canonical expectation, indicating the microcanonical nature of the\
+          \ system. Second, the fluctuations are fitted with a phenomenological model\
+          \ showing anomalous atom number scaling with an exponent <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi>\u03B3</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mn>0.134</mml:mn><mml:mo>\xB1\
+          </mml:mo><mml:mn>0.005</mml:mn></mml:mrow></mml:math></inline-formula>, which\
+          \ we compare to the expectation in the thermodynamic limit.</p><p>In a first\
+          \ step, we theoretically estimate the importance of using an interacting microcanonical\
+          \ ensemble with respect to the more readily available canonical ensemble calculations.\
+          \ This is achieved for ensembles of up to <inline-formula><mml:math display=\"\
+          inline\"><mml:msup><mml:mn>10</mml:mn><mml:mn>5</mml:mn></mml:msup></mml:math></inline-formula>\
+          \ atoms using a new computational method. In brief, we apply the usual Metropolis\
+          \ algorithm but perform a random walk in the space of Fock states, accounting\
+          \ for Bose enhancement with perturbatively included interactions. The random\
+          \ walk results in the set of visited Fock states obeying canonical ensemble\
+          \ statistics. By postselecting samples according to their energy, we obtain\
+          \ representative \u201Cmicrostates\u201D of the microcanonical ensemble <xref\
+          \ ref-type=\"bibr\" rid=\"c29\">[29]</xref>. Figure\_<xref ref-type=\"fig\"\
+          \ rid=\"f1\">1(a)</xref> show the results for <inline-formula><mml:math display=\"\
+          inline\"><mml:mi>N</mml:mi><mml:mo>=</mml:mo><mml:mn>1000</mml:mn></mml:math></inline-formula>\
+          \ atoms for trap aspect ratio <inline-formula><mml:math display=\"inline\"\
+          ><mml:mi>\u03BB</mml:mi><mml:mo>=</mml:mo><mml:mn>10</mml:mn></mml:math></inline-formula>.\
+          \ Importantly, the microcanonical result lies clearly below the canonical\
+          \ expectation as indicated by Eq.\_<xref ref-type=\"disp-formula\" rid=\"\
+          d1\">(1)</xref>. In the elongated case shown here, the ratio <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi>S</mml:mi></mml:math></inline-formula> between\
+          \ the peak variance in the microcanonical and canonical ensembles is <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi>S</mml:mi><mml:mo>=</mml:mo><mml:mn>0.72</mml:mn></mml:math></inline-formula>,\
+          \ corresponding to a reduction by 28% for this atom number. Overall, it is\
+          \ evident from Fig.\_<xref ref-type=\"fig\" rid=\"f1\">1(a)</xref> that the\
+          \ effect of interactions is small and leads to a minor increase of the variance\
+          \ in both ensembles.</p><fig id=\"f1\"><object-id>1</object-id><object-id\
+          \ pub-id-type=\"doi\">10.1103/PhysRevLett.126.153601.f1</object-id><label>FIG.\
+          \ 1.</label><caption><p>Atom number fluctuations of a BEC. (a)\_Calculated\
+          \ variance of BEC atom number as a function of relative temperature in the\
+          \ canonical (red diamonds) and microcanonical (blue circles) ensembles, with\
+          \ (empty symbols) and without (filled symbols) interactions at a scattering\
+          \ length <inline-formula><mml:math display=\"inline\"><mml:mrow><mml:mi>a</mml:mi><mml:mo>=</mml:mo><mml:mn>100</mml:mn><mml:mtext>\u2009\
+          </mml:mtext><mml:mtext>\u2009</mml:mtext><mml:msub><mml:mrow><mml:mi mathvariant=\"\
+          normal\">a</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>\
+          \ for <inline-formula><mml:math display=\"inline\"><mml:mrow><mml:mi>N</mml:mi><mml:mo>=</mml:mo><mml:mn>1000</mml:mn></mml:mrow></mml:math></inline-formula>\
+          \ <inline-formula><mml:math display=\"inline\"><mml:mrow><mml:mmultiscripts><mml:mrow><mml:mi>Rb</mml:mi></mml:mrow><mml:mprescripts/><mml:none/><mml:mrow><mml:mn>87</mml:mn></mml:mrow></mml:mmultiscripts></mml:mrow></mml:math></inline-formula>\
+          \ atoms in a trap with <inline-formula><mml:math display=\"inline\"><mml:mrow><mml:msub><mml:mrow><mml:mi>\u03C9\
+          </mml:mi></mml:mrow><mml:mrow><mml:mi>a</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mi>\u03C0\
+          </mml:mi><mml:mo>\xD7</mml:mo><mml:mrow><mml:mn>20.0</mml:mn><mml:mtext>\u2009\
+          </mml:mtext><mml:mtext>\u2009</mml:mtext></mml:mrow><mml:mi>Hz</mml:mi></mml:mrow></mml:math></inline-formula>\
+          \ and <inline-formula><mml:math display=\"inline\"><mml:mi>\u03BB</mml:mi><mml:mo>=</mml:mo><mml:mn>10</mml:mn></mml:math></inline-formula>.\
+          \ (b)\_Experimental variance of BEC atom number as a function of temperature\
+          \ (blue points). The error bars represent statistical uncertainties of the\
+          \ variance (vertical) and <inline-formula><mml:math display=\"inline\"><mml:mrow><mml:mn>1</mml:mn><mml:mi>\u03C3\
+          </mml:mi></mml:mrow></mml:math></inline-formula> spread in temperature (horizontal).\
+          \ The dashed line is a fit (see text), where the blue band represents the\
+          \ uncertainty of the fit. The gray area indicates the offset due to technical\
+          \ fluctuations. The aspect ratio was <inline-formula><mml:math display=\"\
+          inline\"><mml:mi>\u03BB</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mn>7.28</mml:mn><mml:mo>\xB1\
+          </mml:mo><mml:mn>0.02</mml:mn></mml:mrow></mml:math></inline-formula> and\
+          \ the atom number at peak fluctuations was <inline-formula><mml:math display=\"\
+          inline\"><mml:msub><mml:mi>N</mml:mi><mml:mi>p</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:mo\
+          \ stretchy=\"false\">(</mml:mo><mml:mn>1.49</mml:mn><mml:mo>\xB1</mml:mo><mml:mn>0.06</mml:mn><mml:mo\
+          \ stretchy=\"false\">)</mml:mo><mml:mo>\xD7</mml:mo><mml:msup><mml:mn>10</mml:mn><mml:mn>5</mml:mn></mml:msup></mml:mrow></mml:math></inline-formula>.\
+          \ The results are plotted as a function of the temperature rescaled with the\
+          \ temperature at peak fluctuations. The solid black lines in both panels are\
+          \ exact canonical calculations for a noninteracting gas <xref ref-type=\"\
+          bibr\" rid=\"c16\">[16]</xref>.</p></caption><graphic xlink:href=\"e153601_1.eps\"\
+          /></fig><p>Given the small effect of interactions, we calculate <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi>S</mml:mi></mml:math></inline-formula> for a\
+          \ range of aspect ratios and atom numbers for the noninteracting case as shown\
+          \ in Fig.\_<xref ref-type=\"fig\" rid=\"f2\">2</xref>. For low aspect ratios\
+          \ <inline-formula><mml:math display=\"inline\"><mml:mi>\u03BB</mml:mi></mml:math></inline-formula>\
+          \ and large atom numbers the ratio <inline-formula><mml:math display=\"inline\"\
+          ><mml:mi>S</mml:mi></mml:math></inline-formula> tends towards the limiting\
+          \ value 0.39 given by Eq.\_<xref ref-type=\"disp-formula\" rid=\"d1\">(1)</xref>.\
+          \ In highly elongated traps with large aspect ratios, <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi>S</mml:mi></mml:math></inline-formula> tends\
+          \ towards 1, since microcanonical and canonical fluctuations are identical\
+          \ in the noninteracting 1D case. The dependence of <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi>S</mml:mi></mml:math></inline-formula> on the\
+          \ atom number is shown in Fig.\_<xref ref-type=\"fig\" rid=\"f2\">2</xref>\
+          \ (inset) for <inline-formula><mml:math display=\"inline\"><mml:mi>\u03BB\
+          </mml:mi><mml:mo>=</mml:mo><mml:mn>6</mml:mn></mml:math></inline-formula>.\
+          \ This indicates that the microcanonical and canonical results scale differently\
+          \ with atom number. In particular, we observe a roughly logarithmic dependence\
+          \ of <inline-formula><mml:math display=\"inline\"><mml:mi>S</mml:mi></mml:math></inline-formula>\
+          \ on <inline-formula><mml:math display=\"inline\"><mml:mi>N</mml:mi></mml:math></inline-formula>\
+          \ for atom numbers <inline-formula><mml:math display=\"inline\"><mml:msup><mml:mn>10</mml:mn><mml:mn>2</mml:mn></mml:msup><mml:mo>&lt;</mml:mo><mml:mi>N</mml:mi><mml:mo>&lt;</mml:mo><mml:msup><mml:mn>10</mml:mn><mml:mn>4</mml:mn></mml:msup></mml:math></inline-formula>.\
+          \ These results show that a clear reduction of the fluctuations below the\
+          \ canonical result is expected under realistic conditions and motivates the\
+          \ following experimental investigation.</p><fig id=\"f2\"><object-id>2</object-id><object-id\
+          \ pub-id-type=\"doi\">10.1103/PhysRevLett.126.153601.f2</object-id><label>FIG.\
+          \ 2.</label><caption><p>Ratio <inline-formula><mml:math display=\"inline\"\
+          ><mml:mi>S</mml:mi></mml:math></inline-formula> between the calculated peak\
+          \ variance of the noninteracting BEC in the microcanonical and canonical ensembles\
+          \ as a function of the trap aspect ratio <inline-formula><mml:math display=\"\
+          inline\"><mml:mi>\u03BB</mml:mi></mml:math></inline-formula> for <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi>N</mml:mi><mml:mo>=</mml:mo><mml:msup><mml:mn>10</mml:mn><mml:mn>2</mml:mn></mml:msup></mml:math></inline-formula>\
+          \ (blue points), <inline-formula><mml:math display=\"inline\"><mml:mi>N</mml:mi><mml:mo>=</mml:mo><mml:msup><mml:mn>10</mml:mn><mml:mn>3</mml:mn></mml:msup></mml:math></inline-formula>\
+          \ (green diamonds), <inline-formula><mml:math display=\"inline\"><mml:mi>N</mml:mi><mml:mo>=</mml:mo><mml:msup><mml:mn>10</mml:mn><mml:mn>4</mml:mn></mml:msup></mml:math></inline-formula>\
+          \ (red triangles), and <inline-formula><mml:math display=\"inline\"><mml:mi>N</mml:mi><mml:mo>=</mml:mo><mml:msup><mml:mn>10</mml:mn><mml:mn>5</mml:mn></mml:msup></mml:math></inline-formula>\
+          \ (purple square) atoms. The black dashed line corresponds to the asymptotic\
+          \ value estimated within the Maxwell\u2019s demon ensemble [see Eq.\_<xref\
+          \ ref-type=\"disp-formula\" rid=\"d1\">(1)</xref>]. The three experimental\
+          \ points with the lowest atom number <inline-formula><mml:math display=\"\
+          inline\"><mml:mrow><mml:msub><mml:mrow><mml:mi>N</mml:mi></mml:mrow><mml:mrow><mml:mi>p</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:mn>8.8</mml:mn><mml:mo>\xD7\
+          </mml:mo><mml:msup><mml:mrow><mml:mn>10</mml:mn></mml:mrow><mml:mrow><mml:mn>4</mml:mn></mml:mrow></mml:msup></mml:mrow><mml:mi>\u2013\
+          </mml:mi><mml:mrow><mml:mn>10.4</mml:mn><mml:mo>\xD7</mml:mo><mml:msup><mml:mrow><mml:mn>10</mml:mn></mml:mrow><mml:mrow><mml:mn>4</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:mrow></mml:math></inline-formula>\
+          \ are shown for comparison (open points). The typical error bar shown indicates\
+          \ the 68.2%\_confidence interval on the experimental value. (Inset) <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi>S</mml:mi></mml:math></inline-formula> as a function\
+          \ of the number of atoms for fixed aspect ratio <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi>\u03BB</mml:mi><mml:mo>=</mml:mo><mml:mn>6</mml:mn></mml:math></inline-formula>.</p></caption><graphic\
+          \ xlink:href=\"e153601_2.eps\"/></fig><p>The experimental apparatus used to\
+          \ produce BECs was previously described in detail in Ref.\_<xref ref-type=\"\
+          bibr\" rid=\"c30\">[30]</xref>. Briefly, around <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mrow><mml:msup><mml:mrow><mml:mn>10</mml:mn></mml:mrow><mml:mrow><mml:mn>9</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></inline-formula>\
+          \ <inline-formula><mml:math display=\"inline\"><mml:mrow><mml:mmultiscripts><mml:mrow><mml:mi>Rb</mml:mi></mml:mrow><mml:mprescripts/><mml:none/><mml:mrow><mml:mn>87</mml:mn></mml:mrow></mml:mmultiscripts></mml:mrow></mml:math></inline-formula>\
+          \ atoms are first captured and cooled in a magneto-optical trap. The cloud\
+          \ is then optically pumped to the <inline-formula><mml:math display=\"inline\"\
+          ><mml:mo stretchy=\"false\">|</mml:mo><mml:mi>F</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mo>,</mml:mo><mml:mspace\
+          \ linebreak=\"goodbreak\"/><mml:msub><mml:mi>m</mml:mi><mml:mi>F</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mo\
+          \ stretchy=\"false\">\u27E9</mml:mo></mml:math></inline-formula> state. Then\
+          \ it is transported into a cigar-shaped quadrupole-Ioffe-configuration magnetic\
+          \ trap with axial trapping frequency <inline-formula><mml:math display=\"\
+          inline\"><mml:msub><mml:mi>\u03C9</mml:mi><mml:mi>a</mml:mi></mml:msub></mml:math></inline-formula>\
+          \ and radial frequency <inline-formula><mml:math display=\"inline\"><mml:msub><mml:mi>\u03C9\
+          </mml:mi><mml:mi>\u03C1</mml:mi></mml:msub></mml:math></inline-formula> <xref\
+          \ ref-type=\"bibr\" rid=\"c29\">[29]</xref>, where it is cooled by radio-frequency\
+          \ (rf) forced evaporation.</p><p>The sequence outlined above is typically\
+          \ subject to technical fluctuations that prevent the observation of atom number\
+          \ fluctuations. To overcome this challenge, a stabilization procedure is initiated\
+          \ when the cloud contains <inline-formula><mml:math display=\"inline\"><mml:mo>\u223C\
+          </mml:mo><mml:mn>4</mml:mn><mml:mo>\xD7</mml:mo><mml:msup><mml:mn>10</mml:mn><mml:mn>6</mml:mn></mml:msup></mml:math></inline-formula>\
+          \ atoms at a temperature <inline-formula><mml:math display=\"inline\"><mml:mrow><mml:mn>14</mml:mn><mml:mtext>\u2009\
+          </mml:mtext><mml:mi>\u03BC</mml:mi><mml:mi mathvariant=\"normal\">K</mml:mi></mml:mrow></mml:math></inline-formula>.\
+          \ The cloud is probed using minimally destructive Faraday imaging, and the\
+          \ atom number is corrected using a weak rf pulse of controllable duration.\
+          \ The pulse removes excess atoms, and the outcome of the stabilization procedure\
+          \ is verified by a second Faraday measurement. This allows us to prepare a\
+          \ well-controlled number of atoms with a relative stability at the <inline-formula><mml:math\
+          \ display=\"inline\"><mml:msup><mml:mn>10</mml:mn><mml:mrow><mml:mo>-</mml:mo><mml:mn>4</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula>\
+          \ level <xref ref-type=\"bibr\" rid=\"c30 c31\">[30,31]</xref>.</p><p>For\
+          \ efficient cooling towards BEC, a tight magnetic trap and consequently large\
+          \ collision rate is desirable. In its most compressed configuration, our trap\
+          \ has an aspect ratio <inline-formula><mml:math display=\"inline\"><mml:mi>\u03BB\
+          </mml:mi><mml:mo>=</mml:mo><mml:mn>17</mml:mn></mml:math></inline-formula>.\
+          \ This can lead to significant phase fluctuations across the spatial extent\
+          \ of the cloud <xref ref-type=\"bibr\" rid=\"c32\">[32]</xref>, which evolve\
+          \ into density modulations during time of flight (TOF) and thus hinder the\
+          \ precise determination of atom number and temperature. We therefore decompress\
+          \ the magnetic trap for our measurements, limiting the aspect ratio to <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mn>4.5</mml:mn><mml:mo>&lt;</mml:mo><mml:mi>\u03BB\
+          </mml:mi><mml:mo>&lt;</mml:mo><mml:mn>10</mml:mn></mml:math></inline-formula>\
+          \ where the phase coherence length is larger than the condensate length in\
+          \ the long direction.</p><p>In the final step of the experimental sequence,\
+          \ BECs are produced by forced evaporation ending at a rf-frequency corresponding\
+          \ to the desired BEC temperature. To ensure proper thermal equilibrium, the\
+          \ BEC is first held at the final rf frequency for 800\_ms and a further 400\_\
+          ms without rf radiation before the trap is turned off.</p><p>The clouds are\
+          \ probed after 35\_ms TOF expansion using resonant absorption imaging on the\
+          \ <inline-formula><mml:math display=\"inline\"><mml:mi>F</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mo\
+          \ stretchy=\"false\">\u2192</mml:mo><mml:msup><mml:mi>F</mml:mi><mml:mo>\u2032\
+          </mml:mo></mml:msup><mml:mo>=</mml:mo><mml:mn>3</mml:mn></mml:math></inline-formula>\
+          \ cycling transition. Fringes in the processed image due to vibrations of\
+          \ optical components are mitigated by minimizing the time-delay between the\
+          \ absorption and reference image. Optical pumping is applied between these\
+          \ images to transfer the atoms to the transparent <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi>F</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:math></inline-formula>\
+          \ state. Thus, the atom and beam images can be taken only <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mn>340</mml:mn><mml:mtext>\u2009</mml:mtext><mml:mtext>\u2009\
+          </mml:mtext><mml:mi>\u03BC</mml:mi><mml:mi mathvariant=\"normal\">s</mml:mi></mml:math></inline-formula>\
+          \ apart, limited only by the camera shift speed.</p><p>For each experimental\
+          \ configuration corresponding to a chosen aspect ratio and atom number, the\
+          \ fluctuations were measured as a function of the temperature <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi>T</mml:mi></mml:math></inline-formula>. At every\
+          \ temperature (corresponding to a rf end frequency) a set of 60 measurements\
+          \ according to the experimental sequence outline above was taken <xref ref-type=\"\
+          bibr\" rid=\"c33\">[33]</xref>.</p><p>To determine the BEC atom number in\
+          \ each image, the wings of the cloud are fit with a Bose-enhanced thermal\
+          \ distribution from which the temperature is obtained. The fitted distribution\
+          \ is subtracted from the image, and the BEC atom number <inline-formula><mml:math\
+          \ display=\"inline\"><mml:msub><mml:mi>N</mml:mi><mml:mn>0</mml:mn></mml:msub></mml:math></inline-formula>\
+          \ is obtained by integration of the remaining density. However, the variance\
+          \ cannot be determined directly from <inline-formula><mml:math display=\"\
+          inline\"><mml:msub><mml:mi>N</mml:mi><mml:mn>0</mml:mn></mml:msub></mml:math></inline-formula>,\
+          \ since small remaining drifts of the magnetic offset field lead to minor\
+          \ temperature variations with a median standard deviation of <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mo>\u223C</mml:mo><mml:mn>3</mml:mn><mml:mtext>\u2009\
+          </mml:mtext><mml:mtext>\u2009</mml:mtext><mml:mi>nK</mml:mi></mml:math></inline-formula>.\
+          \ We eliminate this drift by subtracting a linear fit of the condensate number\
+          \ as a function of the total atom number <xref ref-type=\"bibr\" rid=\"c12\"\
+          >[12]</xref> and determine the residuals <inline-formula><mml:math display=\"\
+          inline\"><mml:msub><mml:mi>\u03B7</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:math></inline-formula>,\
+          \ where <inline-formula><mml:math display=\"inline\"><mml:mi>i</mml:mi></mml:math></inline-formula>\
+          \ indicates the order in time. The BEC atom number variance is then given\
+          \ by a two-sample variance of the residuals <disp-formula id=\"d2\"><mml:math\
+          \ display=\"block\"><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mn>0</mml:mn><mml:mn>2</mml:mn></mml:msubsup><mml:mo>=</mml:mo><mml:mfrac><mml:mn>1</mml:mn><mml:mn>2</mml:mn></mml:mfrac><mml:mrow><mml:mo\
+          \ stretchy=\"false\">\u27E8</mml:mo><mml:msup><mml:mrow><mml:mo stretchy=\"\
+          false\">(</mml:mo><mml:msub><mml:mi>\u03B7</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>-</mml:mo><mml:msub><mml:mi>\u03B7\
+          </mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy=\"false\">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mo\
+          \ stretchy=\"false\">\u27E9</mml:mo></mml:mrow><mml:mo>.</mml:mo></mml:math><label>(2)</label></disp-formula>Thus,\
+          \ this two-sample variance contains the BEC fluctuations and detection noise,\
+          \ but excludes slow technical drifts. Figure\_<xref ref-type=\"fig\" rid=\"\
+          f1\">1(b)</xref> shows this variance of the measurements as a function of\
+          \ <inline-formula><mml:math display=\"inline\"><mml:mi>T</mml:mi></mml:math></inline-formula>\
+          \ for a given configuration of the experiment.</p><p>The peak fluctuations\
+          \ are determined by a fit to <inline-formula><mml:math display=\"inline\"\
+          ><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mn>0</mml:mn><mml:mn>2</mml:mn></mml:msubsup></mml:math></inline-formula>\
+          \ also illustrated in Fig.\_<xref ref-type=\"fig\" rid=\"f1\">1(b)</xref>.\
+          \ The fit model is inspired by the asymptotic behavior of the fluctuations\
+          \ in a noninteracting gas <inline-formula><mml:math display=\"inline\"><mml:mrow><mml:mi\
+          \ mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mrow><mml:mi>N</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msubsup><mml:mo>=</mml:mo><mml:mi>\u03B6\
+          </mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy=\"\
+          false\">)</mml:mo><mml:msup><mml:mrow><mml:mo stretchy=\"false\">(</mml:mo><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi>B</mml:mi></mml:mrow></mml:msub><mml:mo>/</mml:mo><mml:mi>\u210F\
+          </mml:mi><mml:mover accent=\"true\"><mml:mrow><mml:mi>\u03C9</mml:mi></mml:mrow><mml:mrow><mml:mo\
+          \ stretchy=\"false\">\xAF</mml:mo></mml:mrow></mml:mover><mml:mo stretchy=\"\
+          false\">)</mml:mo></mml:mrow><mml:mrow><mml:mn>3</mml:mn></mml:mrow></mml:msup><mml:msup><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mn>3</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></inline-formula>,\
+          \ where <inline-formula><mml:math display=\"inline\"><mml:mover accent=\"\
+          true\"><mml:mi>\u03C9</mml:mi><mml:mo stretchy=\"false\">\xAF</mml:mo></mml:mover></mml:math></inline-formula>\
+          \ is the geometric mean of the trapping frequencies <xref ref-type=\"bibr\"\
+          \ rid=\"c2\">[2]</xref>. Moreover, the fluctuations decay in a near steplike\
+          \ manner close to the critical temperature, which we model with a Heaviside\
+          \ step function <inline-formula><mml:math display=\"inline\"><mml:mi mathvariant=\"\
+          normal\">\u0398</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>p</mml:mi></mml:msub><mml:mo>-</mml:mo><mml:mi>T</mml:mi><mml:mo\
+          \ stretchy=\"false\">)</mml:mo></mml:math></inline-formula>, where <inline-formula><mml:math\
+          \ display=\"inline\"><mml:msub><mml:mi>T</mml:mi><mml:mi>p</mml:mi></mml:msub></mml:math></inline-formula>\
+          \ is the temperature at the peak fluctuations. To account for small temperature\
+          \ drifts the expression is furthermore convolved with a normal distribution\
+          \ <inline-formula><mml:math display=\"inline\"><mml:mi mathvariant=\"script\"\
+          >N</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mi>T</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>\u03C3\
+          </mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo stretchy=\"false\">)</mml:mo></mml:math></inline-formula>\
+          \ centered on the temperature <inline-formula><mml:math display=\"inline\"\
+          ><mml:mi>T</mml:mi></mml:math></inline-formula> with a standard deviation\
+          \ <inline-formula><mml:math display=\"inline\"><mml:msub><mml:mi>\u03C3</mml:mi><mml:mi>T</mml:mi></mml:msub></mml:math></inline-formula>\
+          \ given by the median of the measured temperature variation. Thus, we fit\
+          \ the data with the model <disp-formula id=\"d3\"><mml:math display=\"block\"\
+          ><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mn>0</mml:mn><mml:mn>2</mml:mn></mml:msubsup><mml:mo\
+          \ stretchy=\"false\">(</mml:mo><mml:mi>T</mml:mi><mml:mo stretchy=\"false\"\
+          >)</mml:mo><mml:mo>=</mml:mo><mml:mrow><mml:mo stretchy=\"false\">(</mml:mo><mml:mi>f</mml:mi><mml:mo>*</mml:mo><mml:mi>g</mml:mi><mml:mo\
+          \ stretchy=\"false\">)</mml:mo></mml:mrow><mml:mo stretchy=\"false\">(</mml:mo><mml:mi>T</mml:mi><mml:mo\
+          \ stretchy=\"false\">)</mml:mo><mml:mo>+</mml:mo><mml:mi mathvariant=\"script\"\
+          >O</mml:mi><mml:mo>,</mml:mo></mml:math><label>(3)</label></disp-formula>where\
+          \ <inline-formula><mml:math display=\"inline\"><mml:mi>f</mml:mi></mml:math></inline-formula>\
+          \ and <inline-formula><mml:math display=\"inline\"><mml:mi>g</mml:mi></mml:math></inline-formula>\
+          \ are given by <disp-formula id=\"d4\"><mml:math display=\"block\"><mml:mi>f</mml:mi><mml:mo\
+          \ stretchy=\"false\">(</mml:mo><mml:mi>T</mml:mi><mml:mo stretchy=\"false\"\
+          >)</mml:mo><mml:mo>=</mml:mo><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mrow><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>p</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:msubsup><mml:msup><mml:mrow><mml:mo>(</mml:mo><mml:mfrac><mml:mi>T</mml:mi><mml:msub><mml:mi>T</mml:mi><mml:mi>p</mml:mi></mml:msub></mml:mfrac><mml:mo>)</mml:mo></mml:mrow><mml:mn>3</mml:mn></mml:msup><mml:mi\
+          \ mathvariant=\"normal\">\u0398</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:msub><mml:mi>T</mml:mi><mml:mi>p</mml:mi></mml:msub><mml:mo>-</mml:mo><mml:mi>T</mml:mi><mml:mo\
+          \ stretchy=\"false\">)</mml:mo><mml:mo>,</mml:mo></mml:math><label>(4)</label></disp-formula><disp-formula\
+          \ id=\"d5\"><mml:math display=\"block\"><mml:mi>g</mml:mi><mml:mo stretchy=\"\
+          false\">(</mml:mo><mml:mi>T</mml:mi><mml:mo stretchy=\"false\">)</mml:mo><mml:mo>=</mml:mo><mml:mi\
+          \ mathvariant=\"script\">N</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mi>T</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mi>\u03C3\
+          </mml:mi><mml:mi>T</mml:mi></mml:msub><mml:mo stretchy=\"false\">)</mml:mo><mml:mo>.</mml:mo></mml:math><label>(5)</label></disp-formula>The\
+          \ three fit parameters are the peak atom number variance <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mrow><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>p</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:msubsup></mml:math></inline-formula>,\
+          \ <inline-formula><mml:math display=\"inline\"><mml:msub><mml:mi>T</mml:mi><mml:mi>p</mml:mi></mml:msub></mml:math></inline-formula>\
+          \ and an offset <inline-formula><mml:math display=\"inline\"><mml:mi mathvariant=\"\
+          script\">O</mml:mi></mml:math></inline-formula> which accounts for experimental\
+          \ noise <xref ref-type=\"bibr\" rid=\"c12\">[12]</xref>. Since the atom number\
+          \ varies as a consequence of the evaporation, we determine the atom number\
+          \ at peak fluctuations <inline-formula><mml:math display=\"inline\"><mml:msub><mml:mi>N</mml:mi><mml:mi>p</mml:mi></mml:msub></mml:math></inline-formula>\
+          \ from a spline interpolation of the atom number as a function of the temperature\
+          \ for all measurements in a given configuration, evaluated at <inline-formula><mml:math\
+          \ display=\"inline\"><mml:msub><mml:mi>T</mml:mi><mml:mi>p</mml:mi></mml:msub></mml:math></inline-formula>.\
+          \ Figure\_<xref ref-type=\"fig\" rid=\"f3\">3</xref> shows the measured peak\
+          \ atom number variance for all 13 experimental configurations of aspect ratio\
+          \ and atom number (for a tabular presentation of the data see Supplemental\
+          \ Material <xref ref-type=\"bibr\" rid=\"c29\">[29]</xref>). The three points\
+          \ at lowest atom number are also included in Fig.\_<xref ref-type=\"fig\"\
+          \ rid=\"f2\">2</xref>.</p><fig id=\"f3\"><object-id>3</object-id><object-id\
+          \ pub-id-type=\"doi\">10.1103/PhysRevLett.126.153601.f3</object-id><label>FIG.\
+          \ 3.</label><caption><p>Peak fluctuations of a BEC. (Data points) Observed\
+          \ peak variance of the BEC atom number as a function of the atom number at\
+          \ peak variance <inline-formula><mml:math display=\"inline\"><mml:msub><mml:mi>N</mml:mi><mml:mi>p</mml:mi></mml:msub></mml:math></inline-formula>\
+          \ and trap aspect ratio <inline-formula><mml:math display=\"inline\"><mml:mi>\u03BB\
+          </mml:mi></mml:math></inline-formula>. The thick black bars indicate the 68.2%\_\
+          confidence interval. Narrow stems connect the data points to the base to guide\
+          \ the eye. (Surface) Theoretical expectation for a noninteraction canonical\
+          \ ensemble scaled according to Eq.\_<xref ref-type=\"disp-formula\" rid=\"\
+          d6\">(6)</xref>.</p></caption><graphic xlink:href=\"e153601_3.eps\"/></fig><p>We\
+          \ quantitatively evaluate the peak fluctuations using two approaches. First,\
+          \ we compare the measured fluctuations to the expected fluctuations in a canonical\
+          \ noninteracting gas, which can be calculated under conditions comparable\
+          \ to the experiment. Second, the fluctuations are investigated using a phenomenological\
+          \ model to probe their dependence on atom number and trapping geometry.</p><p>To\
+          \ compare experiment and theory the average ratio <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi>S</mml:mi></mml:math></inline-formula> between\
+          \ the observed fluctuations and the exact theoretical result for the noninteracting\
+          \ canonical ensemble <inline-formula><mml:math display=\"inline\"><mml:mrow><mml:mi\
+          \ mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mrow><mml:mi>N</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>p</mml:mi><mml:mo>,</mml:mo><mml:mi>can</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msubsup></mml:mrow></mml:math></inline-formula>\
+          \ is evaluated. We obtain <inline-formula><mml:math display=\"inline\"><mml:mi>S</mml:mi></mml:math></inline-formula>\
+          \ from a fit of <disp-formula id=\"d6\"><mml:math display=\"block\"><mml:mrow><mml:mi\
+          \ mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mrow><mml:mi>N</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msubsup><mml:mo>=</mml:mo><mml:mi>S</mml:mi><mml:mo\
+          \ stretchy=\"false\">[</mml:mo><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mi>a</mml:mi><mml:mi>\u03B4\
+          </mml:mi><mml:mi>\u03BB</mml:mi><mml:mo>+</mml:mo><mml:mi>b</mml:mi><mml:mi>\u03B4\
+          </mml:mi><mml:mi>ln</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mi>N</mml:mi><mml:mo\
+          \ stretchy=\"false\">)</mml:mo><mml:mo stretchy=\"false\">]</mml:mo><mml:mi\
+          \ mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mrow><mml:mi>N</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>p</mml:mi><mml:mo>,</mml:mo><mml:mi>can</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msubsup><mml:mo>,</mml:mo></mml:mrow></mml:math><label>(6)</label></disp-formula>inspired\
+          \ by the scalings with atom number and aspect ratio in Fig.\_<xref ref-type=\"\
+          fig\" rid=\"f2\">2</xref>. The coefficients <inline-formula><mml:math display=\"\
+          inline\"><mml:mi>a</mml:mi></mml:math></inline-formula> and <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi>b</mml:mi></mml:math></inline-formula> allow\
+          \ for a linear scaling with the trap aspect ratio and the logarithm of the\
+          \ atom number, where <inline-formula><mml:math display=\"inline\"><mml:mi>\u03B4\
+          </mml:mi><mml:mi>x</mml:mi><mml:mo>=</mml:mo><mml:mi>x</mml:mi><mml:mo>-</mml:mo><mml:mo\
+          \ stretchy=\"false\">\u27E8</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy=\"\
+          false\">\u27E9</mml:mo></mml:math></inline-formula> denotes that the mean\
+          \ over the set of experimental parameters has been subtracted. This yields\
+          \ an average ratio <inline-formula><mml:math display=\"inline\"><mml:mi>S</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mn>0.73</mml:mn><mml:mo>\xB1\
+          </mml:mo><mml:mn>0.05</mml:mn></mml:mrow></mml:math></inline-formula> corresponding\
+          \ to a 27% reduction of the fluctuations and clearly reveals the microcanonical\
+          \ nature of our system with reduced fluctuations below the canonical ensemble\
+          \ expectation. The coefficients <inline-formula><mml:math display=\"inline\"\
+          ><mml:mi>a</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mn>0.04</mml:mn><mml:mo>\xB1\
+          </mml:mo><mml:mn>0.04</mml:mn></mml:mrow></mml:math></inline-formula> and\
+          \ <inline-formula><mml:math display=\"inline\"><mml:mi>b</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mn>0.24</mml:mn><mml:mo>\xB1\
+          </mml:mo><mml:mn>0.26</mml:mn></mml:mrow></mml:math></inline-formula> represent\
+          \ a correction to <inline-formula><mml:math display=\"inline\"><mml:mi>S</mml:mi></mml:math></inline-formula>\
+          \ which are barely resolved within our data range, supporting the interpretation\
+          \ that the microcanonical nature of the system constitutes the most important\
+          \ deviation from the canonical result.</p><p>We use a complementary approach\
+          \ to analyze the scaling of the fluctuations with atom number and aspect ratio\
+          \ <inline-formula><mml:math display=\"inline\"><mml:mi>\u03BB</mml:mi></mml:math></inline-formula>.\
+          \ Inspired by Eq.\_<xref ref-type=\"disp-formula\" rid=\"d1\">(1)</xref>,\
+          \ we use the phenomenological model <disp-formula id=\"d7\"><mml:math display=\"\
+          block\"><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mrow><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>p</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:msubsup><mml:mo\
+          \ stretchy=\"false\">/</mml:mo><mml:mi>N</mml:mi><mml:mo>=</mml:mo><mml:mi>a</mml:mi><mml:mo>+</mml:mo><mml:mi>b</mml:mi><mml:mi>\u03BB\
+          </mml:mi><mml:msup><mml:mi>N</mml:mi><mml:mi>\u03B3</mml:mi></mml:msup><mml:mo>,</mml:mo></mml:math><label>(7)</label></disp-formula>where\
+          \ <inline-formula><mml:math display=\"inline\"><mml:mi>a</mml:mi></mml:math></inline-formula>,\
+          \ <inline-formula><mml:math display=\"inline\"><mml:mi>b</mml:mi></mml:math></inline-formula>,\
+          \ and <inline-formula><mml:math display=\"inline\"><mml:mi>\u03B3</mml:mi></mml:math></inline-formula>\
+          \ are fit coefficients allowing for linear aspect ratio and a nonlinear number\
+          \ dependence. In particular, the exponent <inline-formula><mml:math display=\"\
+          inline\"><mml:mi>\u03B3</mml:mi></mml:math></inline-formula> quantifies the\
+          \ degree of anomalous atom number scaling.</p><p>We first fit the exact canonical\
+          \ result <inline-formula><mml:math display=\"inline\"><mml:mrow><mml:mi mathvariant=\"\
+          normal\">\u0394</mml:mi><mml:msubsup><mml:mrow><mml:mi>N</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mi>p</mml:mi><mml:mo>,</mml:mo><mml:mi>can</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msubsup></mml:mrow></mml:math></inline-formula>\
+          \ with this model which yields <inline-formula><mml:math display=\"inline\"\
+          ><mml:mi>a</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mn>1.327</mml:mn><mml:mo>\xB1\
+          </mml:mo><mml:mn>0.014</mml:mn></mml:mrow></mml:math></inline-formula>, <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi>b</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mn>1.5</mml:mn><mml:mo>\xB1\
+          </mml:mo><mml:mn>0.5</mml:mn></mml:mrow></mml:math></inline-formula>, and\
+          \ <inline-formula><mml:math display=\"inline\"><mml:mi>\u03B3</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mo>-</mml:mo><mml:mn>0.27</mml:mn><mml:mo>\xB1\
+          </mml:mo><mml:mn>0.03</mml:mn></mml:mrow></mml:math></inline-formula>. Thus,\
+          \ the coefficient <inline-formula><mml:math display=\"inline\"><mml:mi>a</mml:mi></mml:math></inline-formula>\
+          \ is close to its limiting value <inline-formula><mml:math display=\"inline\"\
+          ><mml:mi>\u03B6</mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mn>2</mml:mn><mml:mo\
+          \ stretchy=\"false\">)</mml:mo><mml:mo stretchy=\"false\">/</mml:mo><mml:mi>\u03B6\
+          </mml:mi><mml:mo stretchy=\"false\">(</mml:mo><mml:mn>3</mml:mn><mml:mo stretchy=\"\
+          false\">)</mml:mo><mml:mo>=</mml:mo><mml:mn>1.37</mml:mn></mml:math></inline-formula>\
+          \ corresponding to the first term in Eq.\_<xref ref-type=\"disp-formula\"\
+          \ rid=\"d1\">(1)</xref>. More significantly, the negative sign of <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi>\u03B3</mml:mi></mml:math></inline-formula> combined\
+          \ with the relatively large value of <inline-formula><mml:math display=\"\
+          inline\"><mml:mi>b</mml:mi></mml:math></inline-formula> shows that even the\
+          \ exact theoretical result scales anomalously with <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi>N</mml:mi></mml:math></inline-formula>. This\
+          \ can be attributed to the transition from a system with reduced dimensionality\
+          \ at low atom numbers to the limiting 3D case <xref ref-type=\"bibr\" rid=\"\
+          c12\">[12]</xref>. Hence, we do not expect our experiment to reflect the thermodynamic\
+          \ limit, where the scaling has been investigated theoretically <xref ref-type=\"\
+          bibr\" rid=\"c4 c5 c22\">[4,5,22]</xref>.</p><p>Figure\_<xref ref-type=\"\
+          fig\" rid=\"f4\">4</xref> shows the experimental data and the fit according\
+          \ to Eq.\_<xref ref-type=\"disp-formula\" rid=\"d7\">(7)</xref> using a maximum\
+          \ likelihood method. Contrary to the noninteracting theoretical case, we find\
+          \ anomalous scaling with <inline-formula><mml:math display=\"inline\"><mml:mi>\u03B3\
+          </mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mn>0.134</mml:mn><mml:mo>\xB1</mml:mo><mml:mn>0.005</mml:mn></mml:mrow><mml:mo>&gt;</mml:mo><mml:mn>0</mml:mn></mml:math></inline-formula>.\
+          \ We interpret our result as being due to the interplay between the dimensionality\
+          \ effects in a microcanonical system and interaction effects, which are predicted\
+          \ to yield <inline-formula><mml:math display=\"inline\"><mml:mi>\u03B3</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo\
+          \ stretchy=\"false\">/</mml:mo><mml:mn>3</mml:mn></mml:math></inline-formula>\
+          \ in the thermodynamic limit <xref ref-type=\"bibr\" rid=\"c4 c5\">[4,5]</xref>.\
+          \ In particular, Fig.\_<xref ref-type=\"fig\" rid=\"f2\">2</xref> shows that\
+          \ a microcanonical system generally scales different from a canonical one\
+          \ in both <inline-formula><mml:math display=\"inline\"><mml:mi>\u03BB</mml:mi></mml:math></inline-formula>\
+          \ and <inline-formula><mml:math display=\"inline\"><mml:mi>N</mml:mi></mml:math></inline-formula>.\
+          \ Since <inline-formula><mml:math display=\"inline\"><mml:mi>\u03B3</mml:mi><mml:mo>&gt;</mml:mo><mml:mn>0</mml:mn></mml:math></inline-formula>,\
+          \ Eq.\_<xref ref-type=\"disp-formula\" rid=\"d7\">(7)</xref> diverges and\
+          \ the coefficient <inline-formula><mml:math display=\"inline\"><mml:mi>a</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mn>0.55</mml:mn><mml:mo>\xB1\
+          </mml:mo><mml:mn>0.04</mml:mn></mml:mrow></mml:math></inline-formula> cannot\
+          \ be interpreted as a limiting value. Moreover, <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi>b</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mn>0.020</mml:mn><mml:mo>\xB1\
+          </mml:mo><mml:mn>0.012</mml:mn></mml:mrow></mml:math></inline-formula> is\
+          \ very small due to the large value of <inline-formula><mml:math display=\"\
+          inline\"><mml:msup><mml:mi>N</mml:mi><mml:mi>\u03B3</mml:mi></mml:msup></mml:math></inline-formula>.\
+          \ This result thus provides a simple analytical model as a benchmark for future\
+          \ theoretical investigations.</p><fig id=\"f4\"><object-id>4</object-id><object-id\
+          \ pub-id-type=\"doi\">10.1103/PhysRevLett.126.153601.f4</object-id><label>FIG.\
+          \ 4.</label><caption><p>Scaling model for peak atom number fluctuations of\
+          \ a BEC. (Data points) Normalized peak variance of the BEC atom number as\
+          \ a function of <inline-formula><mml:math display=\"inline\"><mml:msub><mml:mi>N</mml:mi><mml:mi>p</mml:mi></mml:msub></mml:math></inline-formula>\
+          \ and aspect ratio <inline-formula><mml:math display=\"inline\"><mml:mi>\u03BB\
+          </mml:mi></mml:math></inline-formula>. The thick black bars indicate the 68.2%\_\
+          confidence interval. Narrow stems connect the data points to the base to guide\
+          \ the eye. (Surface) Phenomenological model given by Eq.\_<xref ref-type=\"\
+          disp-formula\" rid=\"d7\">(7)</xref> of the fluctuations.</p></caption><graphic\
+          \ xlink:href=\"e153601_4.eps\"/></fig><p>In conclusion, we have measured the\
+          \ peak fluctuations of a weakly interacting Bose-Einstein condensate as a\
+          \ function of atom number and trap aspect ratio. The significant differences\
+          \ between a canonical and microcanonical ensemble description of these fluctuations\
+          \ were investigated numerically by postprocessing ensembles generated via\
+          \ the quantum Metropolis algorithm. Experimentally the fluctuations were found\
+          \ to be reduced by 27% relative to the expectation for a canonical noninteracting\
+          \ gas, in qualitative agreement with our theoretical prediction. This clearly\
+          \ demonstrates the microcanonical nature of the system and thus guides future\
+          \ theoretical work. In addition, the peak fluctuations were found to follow\
+          \ a weakly anomalous scaling with the total atom number <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mrow><mml:mn>0</mml:mn><mml:mi>p</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:msubsup><mml:mo>\u221D\
+          </mml:mo><mml:msup><mml:mi>N</mml:mi><mml:mn>1.134</mml:mn></mml:msup></mml:math></inline-formula>.\
+          \ We interpret the scaling as an interplay between dimensional effects and\
+          \ the limiting case in the thermodynamic limit with <inline-formula><mml:math\
+          \ display=\"inline\"><mml:mi mathvariant=\"normal\">\u0394</mml:mi><mml:msubsup><mml:mi>N</mml:mi><mml:mrow><mml:mn>0</mml:mn><mml:mi>p</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:msubsup><mml:mo>\u221D\
+          </mml:mo><mml:msup><mml:mi>N</mml:mi><mml:mrow><mml:mn>4</mml:mn><mml:mo stretchy=\"\
+          false\">/</mml:mo><mml:mn>3</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula>.</p><p>Future\
+          \ experiments will aim to observe the slight increase of the fluctuations\
+          \ due to interactions, predicted by our theoretical calculation. To date,\
+          \ this effect is shrouded by measurement uncertainties and the dependence\
+          \ of the fluctuations on trapping geometry. Moreover, the use of larger atomic\
+          \ clouds will provide experimental insight in the fluctuations in the thermodynamic\
+          \ limit <xref ref-type=\"bibr\" rid=\"c4 c5\">[4,5]</xref>. Finally, technical\
+          \ improvements will allow for larger data sample sizes and enable the investigation\
+          \ of the time dependence and higher moments of the atom number distribution\
+          \ <xref ref-type=\"bibr\" rid=\"c34\">[34]</xref>.</p></body><back><ack><p>M.\u2009\
+          B.\u2009C., T.\u2009V., A.\u2009J.\u2009H., M.\u2009A.\u2009K., and J.\u2009\
+          J.\u2009A. acknowledge support by the Villum Foundation, the Carlsberg Foundation,\
+          \ and the Danish National Research Foundation through the Center of Excellence\
+          \ \u201CCCQ\u201D (Grant Agreement No.\_DNRF156). K.\u2009R., M.\u2009B.\u2009\
+          K., and D.\u2009H. acknowledge support from the (Polish) National Science\
+          \ Center Grant No.\_2018/29/B/ST2/01308. K.\u2009P. acknowledges support from\
+          \ the (Polish) National Science Center Grant No.\_2019/34/E/ST2/00289. This\
+          \ research was supported in part by PLGrid Infrastructure. Center for Theoretical\
+          \ Physics of the Polish Academy of Sciences is a member of the National Laboratory\
+          \ of Atomic, Molecular and Optical Physics (KL FAMO). M.\u2009B.\u2009K. acknowledges\
+          \ support from the (Polish) National Science Center Grant No.\_2018/31/B/ST2/01871.\
+          \ This article has been supported by the Polish National Agency for Academic\
+          \ Exchange under Grant No.\_PPI/PZA/2019/1/00094/U/00001.</p></ack><ref-list><ref\
+          \ id=\"c1\"><label>[1]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>1</object-id><person-group person-group-type=\"author\"><string-name>I.\
+          \ Bloch</string-name>, <string-name>J. Dalibard</string-name>, and <string-name>S.\
+          \ Nascimb\xE8ne</string-name></person-group>, <article-title>Quantum simulations\
+          \ with ultracold quantum gases</article-title>, <source>Nat. Phys.</source>\
+          \ <volume>8</volume>, <page-range>267</page-range> (<year>2012</year>).<pub-id\
+          \ pub-id-type=\"coden\">NPAHAX</pub-id><issn>1745-2473</issn><pub-id pub-id-type=\"\
+          doi\" specific-use=\"suppress-display\">10.1038/nphys2259</pub-id></mixed-citation></ref><ref\
+          \ id=\"c2\"><label>[2]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>2</object-id><person-group person-group-type=\"author\"><string-name>H.\u2009\
+          D. Politzer</string-name></person-group>, <article-title>Condensate fluctuations\
+          \ of a trapped, ideal Bose gas</article-title>, <source>Phys. Rev. A</source>\
+          \ <volume>54</volume>, <page-range>5048</page-range> (<year>1996</year>).<pub-id\
+          \ pub-id-type=\"coden\">PLRAAN</pub-id><issn>1050-2947</issn><pub-id pub-id-type=\"\
+          doi\" specific-use=\"suppress-display\">10.1103/PhysRevA.54.5048</pub-id></mixed-citation></ref><ref\
+          \ id=\"c3\"><label>[3]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>3</object-id><person-group person-group-type=\"author\"><string-name>P.\
+          \ Navez</string-name>, <string-name>D. Bitouk</string-name>, <string-name>M.\
+          \ Gajda</string-name>, <string-name>Z. Idziaszek</string-name>, and <string-name>K.\
+          \ Rz\u0105\u017Cewski</string-name></person-group>, <article-title>Fourth\
+          \ Statistical Ensemble for the Bose-Einstein Condensate</article-title>, <source>Phys.\
+          \ Rev. Lett.</source> <volume>79</volume>, <page-range>1789</page-range> (<year>1997</year>).<pub-id\
+          \ pub-id-type=\"coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id pub-id-type=\"\
+          doi\" specific-use=\"suppress-display\">10.1103/PhysRevLett.79.1789</pub-id></mixed-citation></ref><ref\
+          \ id=\"c4\"><label>[4]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>4</object-id><person-group person-group-type=\"author\"><string-name>S.\
+          \ Giorgini</string-name>, <string-name>L.\u2009P. Pitaevskii</string-name>,\
+          \ and <string-name>S. Stringari</string-name></person-group>, <article-title>Anomalous\
+          \ Fluctuations of the Condensate in Interacting Bose Gases</article-title>,\
+          \ <source>Phys. Rev. Lett.</source> <volume>80</volume>, <page-range>5040</page-range>\
+          \ (<year>1998</year>).<pub-id pub-id-type=\"coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id\
+          \ pub-id-type=\"doi\" specific-use=\"suppress-display\">10.1103/PhysRevLett.80.5040</pub-id></mixed-citation></ref><ref\
+          \ id=\"c5\"><label>[5]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>5</object-id><person-group person-group-type=\"author\"><string-name>F.\
+          \ Meier</string-name> and <string-name>W. Zwerger</string-name></person-group>,\
+          \ <article-title>Anomalous condensate fluctuations in strongly interacting\
+          \ superfluids</article-title>, <source>Phys. Rev. A</source> <volume>60</volume>,\
+          \ <page-range>5133</page-range> (<year>1999</year>).<pub-id pub-id-type=\"\
+          coden\">PLRAAN</pub-id><issn>1050-2947</issn><pub-id pub-id-type=\"doi\" specific-use=\"\
+          suppress-display\">10.1103/PhysRevA.60.5133</pub-id></mixed-citation></ref><ref\
+          \ id=\"c6\"><label>[6]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>6</object-id><person-group person-group-type=\"author\"><string-name>V.\u2009\
+          V. Kocharovsky</string-name>, <string-name>V.\u2009V. Kocharovsky</string-name>,\
+          \ <string-name>M. Holthaus</string-name>, <string-name>C.\u2009H. Raymond\
+          \ Ooi</string-name>, <string-name>A. Svidzinsky</string-name>, <string-name>W.\
+          \ Ketterle</string-name>, and <string-name>M.\u2009O. Scully</string-name></person-group>,\
+          \ <article-title>Fluctuations in ideal and interacting Bose-Einstein condensates:\
+          \ From the laser phase transition analogy to squeezed states and Bogoliubov\
+          \ quasiparticles</article-title>, <source>Adv. At. Mol. Opt. Phys.</source>\
+          \ <volume>53</volume>, <page-range>291</page-range> (<year>2006</year>).<pub-id\
+          \ pub-id-type=\"coden\">AAMPE9</pub-id><issn>1049-250X</issn><pub-id pub-id-type=\"\
+          doi\" specific-use=\"suppress-display\">10.1016/S1049-250X(06)53010-1</pub-id></mixed-citation></ref><ref\
+          \ id=\"c7\"><label>[7]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>7</object-id><person-group person-group-type=\"author\"><string-name>F.\
+          \ Gerbier</string-name>, <string-name>J.\u2009H. Thywissen</string-name>,\
+          \ <string-name>S. Richard</string-name>, <string-name>M. Hugbart</string-name>,\
+          \ <string-name>P. Bouyer</string-name>, and <string-name>A. Aspect</string-name></person-group>,\
+          \ <article-title>Experimental study of the thermodynamics of an interacting\
+          \ trapped Bose-Einstein condensed gas</article-title>, <source>Phys. Rev.\
+          \ A</source> <volume>70</volume>, <page-range>013607</page-range> (<year>2004</year>).<pub-id\
+          \ pub-id-type=\"coden\">PLRAAN</pub-id><issn>1050-2947</issn><pub-id pub-id-type=\"\
+          doi\" specific-use=\"suppress-display\">10.1103/PhysRevA.70.013607</pub-id></mixed-citation></ref><ref\
+          \ id=\"c8\"><label>[8]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>8</object-id><person-group person-group-type=\"author\"><string-name>R.\
+          \ Meppelink</string-name>, <string-name>R.\u2009A. Rozendaal</string-name>,\
+          \ <string-name>S.\u2009B. Koller</string-name>, <string-name>J.\u2009M. Vogels</string-name>,\
+          \ and <string-name>P. van der Straten</string-name></person-group>, <article-title>Thermodynamics\
+          \ of Bose-Einstein-condensed clouds using phase-contrast imaging</article-title>,\
+          \ <source>Phys. Rev. A</source> <volume>81</volume>, <page-range>053632</page-range>\
+          \ (<year>2010</year>).<pub-id pub-id-type=\"coden\">PLRAAN</pub-id><issn>1050-2947</issn><pub-id\
+          \ pub-id-type=\"doi\" specific-use=\"suppress-display\">10.1103/PhysRevA.81.053632</pub-id></mixed-citation></ref><ref\
+          \ id=\"c9\"><label>[9]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>9</object-id><person-group person-group-type=\"author\"><string-name>N.\
+          \ Tammuz</string-name>, <string-name>R.\u2009P. Smith</string-name>, <string-name>R.\u2009\
+          L.\u2009D. Campbell</string-name>, <string-name>S. Beattie</string-name>,\
+          \ <string-name>S. Moulder</string-name>, <string-name>J. Dalibard</string-name>,\
+          \ and <string-name>Z. Hadzibabic</string-name></person-group>, <article-title>Can\
+          \ a Bose Gas Be Saturated</article-title>, <source>Phys. Rev. Lett.</source>\
+          \ <volume>106</volume>, <page-range>230401</page-range> (<year>2011</year>).<pub-id\
+          \ pub-id-type=\"coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id pub-id-type=\"\
+          doi\" specific-use=\"suppress-display\">10.1103/PhysRevLett.106.230401</pub-id></mixed-citation></ref><ref\
+          \ id=\"c10\"><label>[10]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>10</object-id><person-group person-group-type=\"author\"><string-name>F.\
+          \ Gerbier</string-name>, <string-name>J.\u2009H. Thywissen</string-name>,\
+          \ <string-name>S. Richard</string-name>, <string-name>M. Hugbart</string-name>,\
+          \ <string-name>P. Bouyer</string-name>, and <string-name>A. Aspect</string-name></person-group>,\
+          \ <article-title>Critical Temperature of a Trapped, Weakly Interacting Bose\
+          \ Gas</article-title>, <source>Phys. Rev. Lett.</source> <volume>92</volume>,\
+          \ <page-range>030405</page-range> (<year>2004</year>).<pub-id pub-id-type=\"\
+          coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id pub-id-type=\"doi\" specific-use=\"\
+          suppress-display\">10.1103/PhysRevLett.92.030405</pub-id></mixed-citation></ref><ref\
+          \ id=\"c11\"><label>[11]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>11</object-id><person-group person-group-type=\"author\"><string-name>R.\u2009\
+          P. Smith</string-name>, <string-name>R.\u2009L.\u2009D. Campbell</string-name>,\
+          \ <string-name>N. Tammuz</string-name>, and <string-name>Z. Hadzibabic</string-name></person-group>,\
+          \ <article-title>Effects of Interactions on the Critical Temperature of a\
+          \ Trapped Bose Gas</article-title>, <source>Phys. Rev. Lett.</source> <volume>106</volume>,\
+          \ <page-range>250403</page-range> (<year>2011</year>).<pub-id pub-id-type=\"\
+          coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id pub-id-type=\"doi\" specific-use=\"\
+          suppress-display\">10.1103/PhysRevLett.106.250403</pub-id></mixed-citation></ref><ref\
+          \ id=\"c12\"><label>[12]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>12</object-id><person-group person-group-type=\"author\"><string-name>M.\u2009\
+          A. Kristensen</string-name>, <string-name>M.\u2009B. Christensen</string-name>,\
+          \ <string-name>M. Gajdacz</string-name>, <string-name>M. Iglicki</string-name>,\
+          \ <string-name>K. Paw\u0142owski</string-name>, <string-name>C. Klempt</string-name>,\
+          \ <string-name>J.\u2009F. Sherson</string-name>, <string-name>K. Rz\u0105\u017C\
+          ewski</string-name>, <string-name>A.\u2009J. Hilliard</string-name>, and <string-name>J.\u2009\
+          J. Arlt</string-name></person-group>, <article-title>Observation of Atom Number\
+          \ Fluctuations in a Bose-Einstein Condensate</article-title>, <source>Phys.\
+          \ Rev. Lett.</source> <volume>122</volume>, <page-range>163601</page-range>\
+          \ (<year>2019</year>).<pub-id pub-id-type=\"coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id\
+          \ pub-id-type=\"doi\" specific-use=\"suppress-display\">10.1103/PhysRevLett.122.163601</pub-id></mixed-citation></ref><ref\
+          \ id=\"c13\"><label>[13]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>13</object-id><person-group person-group-type=\"author\"><string-name>R.\u2009\
+          M. Ziff</string-name>, <string-name>G.\u2009E. Uhlenbeck</string-name>, and\
+          \ <string-name>M. Kac</string-name></person-group>, <article-title>The ideal\
+          \ Bose-Einstein gas, revisited</article-title>, <source>Phys. Rep.</source>\
+          \ <volume>32</volume>, <page-range>169</page-range> (<year>1977</year>).<pub-id\
+          \ pub-id-type=\"coden\">PRPLCM</pub-id><issn>0370-1573</issn><pub-id pub-id-type=\"\
+          doi\" specific-use=\"suppress-display\">10.1016/0370-1573(77)90052-7</pub-id></mixed-citation></ref><ref\
+          \ id=\"c14\"><label>[14]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>14</object-id><person-group person-group-type=\"author\"><string-name>S.\
+          \ Grossmann</string-name> and <string-name>M. Holthaus</string-name></person-group>,\
+          \ <article-title>Microcanonical fluctuations of a Bose system\u2019s ground\
+          \ state occupation number</article-title>, <source>Phys. Rev. E</source> <volume>54</volume>,\
+          \ <page-range>3495</page-range> (<year>1996</year>).<pub-id pub-id-type=\"\
+          coden\">PLEEE8</pub-id><issn>1063-651X</issn><pub-id pub-id-type=\"doi\" specific-use=\"\
+          suppress-display\">10.1103/PhysRevE.54.3495</pub-id></mixed-citation></ref><ref\
+          \ id=\"c15\"><label>[15]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>15</object-id><person-group person-group-type=\"author\"><string-name>M.\
+          \ Holthaus</string-name>, <string-name>E. Kalinowski</string-name>, and <string-name>K.\
+          \ Kirsten</string-name></person-group>, <article-title>Condensate fluctuations\
+          \ in trapped Bose gases: Canonical vs. microcanonical ensemble</article-title>,\
+          \ <source>Ann. Phys. (N.Y.)</source> <volume>270</volume>, <page-range>198</page-range>\
+          \ (<year>1998</year>).<pub-id pub-id-type=\"coden\">APNYA6</pub-id><issn>0003-4916</issn><pub-id\
+          \ pub-id-type=\"doi\" specific-use=\"suppress-display\">10.1006/aphy.1998.5852</pub-id></mixed-citation></ref><ref\
+          \ id=\"c16\"><label>[16]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>16</object-id><person-group person-group-type=\"author\"><string-name>C.\
+          \ Weiss</string-name> and <string-name>M. Wilkens</string-name></person-group>,\
+          \ <article-title>Particle number counting statistics in ideal Bose gases</article-title>,\
+          \ <source>Opt. Express</source> <volume>1</volume>, <page-range>272</page-range>\
+          \ (<year>1997</year>).<pub-id pub-id-type=\"coden\">OPEXFF</pub-id><issn>1094-4087</issn><pub-id\
+          \ pub-id-type=\"doi\" specific-use=\"suppress-display\">10.1364/OE.1.000272</pub-id></mixed-citation></ref><ref\
+          \ id=\"c17\"><label>[17]</label><mixed-citation publication-type=\"book\"\
+          ><object-id>17</object-id><person-group person-group-type=\"author\"><string-name>L.\u2009\
+          E. Dickson</string-name></person-group>, <source>History of the Theory of\
+          \ Numbers: Diophantine Analysis</source> (<publisher-name>Chelsea Publishing\
+          \ Co.</publisher-name>, New York, <year>1971</year>).</mixed-citation></ref><ref\
+          \ id=\"c18\"><label>[18]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>18</object-id><person-group person-group-type=\"author\"><string-name>G.\u2009\
+          H. Hardy</string-name> and <string-name>S. Ramanujan</string-name></person-group>,\
+          \ <article-title>Asymptotic formulae in combinatory analysis</article-title>,\
+          \ <source>Proc. London Math. Soc.</source> <volume>17</volume>, <page-range>75</page-range>\
+          \ (<year>1918</year>).<pub-id pub-id-type=\"coden\">PLMTAL</pub-id><issn>0024-6115</issn><pub-id\
+          \ pub-id-type=\"doi\" specific-use=\"suppress-display\">10.1112/plms/s2-17.1.75</pub-id></mixed-citation></ref><ref\
+          \ id=\"c19\"><label>[19]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>19</object-id><person-group person-group-type=\"author\"><string-name>S.\
+          \ Grossmann</string-name> and <string-name>M. Holthaus</string-name></person-group>,\
+          \ <article-title>Maxwell\u2019s demon at work: Two types of Bose condensate\
+          \ fluctuations in power-law traps</article-title>, <source>Opt. Express</source>\
+          \ <volume>1</volume>, <page-range>262</page-range> (<year>1997</year>).<pub-id\
+          \ pub-id-type=\"coden\">OPEXFF</pub-id><issn>1094-4087</issn><pub-id pub-id-type=\"\
+          doi\" specific-use=\"suppress-display\">10.1364/OE.1.000262</pub-id></mixed-citation></ref><ref\
+          \ id=\"c20\"><label>[20]</label><note content-type=\"endnote\"><p>The Maxwell\u2019\
+          s demon ensemble yields the variance of the number of atoms in the thermal\
+          \ cloud. Because of conservation of the total number of atoms, this also exactly\
+          \ corresponds to the variance of the number of atoms in the condensate.</p></note></ref><ref\
+          \ id=\"c21\"><label>[21]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>21</object-id><person-group person-group-type=\"author\"><string-name>W.\
+          \ Zwerger</string-name></person-group>, <article-title>Anomalous Fluctuations\
+          \ in Phases with a Broken Continuous Symmetry</article-title>, <source>Phys.\
+          \ Rev. Lett.</source> <volume>92</volume>, <page-range>027203</page-range>\
+          \ (<year>2004</year>).<pub-id pub-id-type=\"coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id\
+          \ pub-id-type=\"doi\" specific-use=\"suppress-display\">10.1103/PhysRevLett.92.027203</pub-id></mixed-citation></ref><ref\
+          \ id=\"c22\"><label>[22]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>22</object-id><person-group person-group-type=\"author\"><string-name>Z.\
+          \ Idziaszek</string-name>, <string-name>M. Gajda</string-name>, <string-name>P.\
+          \ Navez</string-name>, <string-name>M. Wilkens</string-name>, and <string-name>K.\
+          \ Rz\u0105\u017Cewski</string-name></person-group>, <article-title>Fluctuations\
+          \ of the Weakly Interacting Bose-Einstein Condensate</article-title>, <source>Phys.\
+          \ Rev. Lett.</source> <volume>82</volume>, <page-range>4376</page-range> (<year>1999</year>).<pub-id\
+          \ pub-id-type=\"coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id pub-id-type=\"\
+          doi\" specific-use=\"suppress-display\">10.1103/PhysRevLett.82.4376</pub-id></mixed-citation></ref><ref\
+          \ id=\"c23\"><label>[23]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>23</object-id><person-group person-group-type=\"author\"><string-name>V.\u2009\
+          V. Kocharovsky</string-name>, <string-name>V.\u2009V. Kocharovsky</string-name>,\
+          \ and <string-name>M.\u2009O. Scully</string-name></person-group>, <article-title>Condensate\
+          \ Statistics in Interacting and Ideal Dilute Bose Gases</article-title>, <source>Phys.\
+          \ Rev. Lett.</source> <volume>84</volume>, <page-range>2306</page-range> (<year>2000</year>).<pub-id\
+          \ pub-id-type=\"coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id pub-id-type=\"\
+          doi\" specific-use=\"suppress-display\">10.1103/PhysRevLett.84.2306</pub-id></mixed-citation></ref><ref\
+          \ id=\"c24\"><label>[24]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>24</object-id><person-group person-group-type=\"author\"><string-name>V.\u2009\
+          V. Kocharovsky</string-name>, <string-name>V.\u2009V. Kocharovsky</string-name>,\
+          \ and <string-name>M.\u2009O. Scully</string-name></person-group>, <article-title>Condensation\
+          \ of <inline-formula><mml:math display=\"inline\"><mml:mi>N</mml:mi></mml:math></inline-formula>\
+          \ bosons. III. analytical results for all higher moments of condensate fluctuations\
+          \ in interacting and ideal dilute Bose gases via the canonical ensemble quasiparticle\
+          \ formulation</article-title>, <source>Phys. Rev. A</source> <volume>61</volume>,\
+          \ <page-range>053606</page-range> (<year>2000</year>).<pub-id pub-id-type=\"\
+          coden\">PLRAAN</pub-id><issn>1050-2947</issn><pub-id pub-id-type=\"doi\" specific-use=\"\
+          suppress-display\">10.1103/PhysRevA.61.053606</pub-id></mixed-citation></ref><ref\
+          \ id=\"c25\"><label>[25]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>25</object-id><person-group person-group-type=\"author\"><string-name>A.\u2009\
+          A. Svidzinsky</string-name> and <string-name>M.\u2009O. Scully</string-name></person-group>,\
+          \ <article-title>Condensation of <inline-formula><mml:math display=\"inline\"\
+          ><mml:mi>N</mml:mi></mml:math></inline-formula> Interacting Bosons: A Hybrid\
+          \ Approach to Condensate Fluctuations</article-title>, <source>Phys. Rev.\
+          \ Lett.</source> <volume>97</volume>, <page-range>190402</page-range> (<year>2006</year>).<pub-id\
+          \ pub-id-type=\"coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id pub-id-type=\"\
+          doi\" specific-use=\"suppress-display\">10.1103/PhysRevLett.97.190402</pub-id></mixed-citation></ref><ref\
+          \ id=\"c26\"><label>[26]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>26</object-id><person-group person-group-type=\"author\"><string-name>A.\u2009\
+          A. Svidzinsky</string-name> and <string-name>M.\u2009O. Scully</string-name></person-group>,\
+          \ <article-title>Condensation of <inline-formula><mml:math display=\"inline\"\
+          ><mml:mi>N</mml:mi></mml:math></inline-formula> bosons: Microscopic approach\
+          \ to fluctuations in an interacting Bose gas</article-title>, <source>Phys.\
+          \ Rev. A</source> <volume>82</volume>, <page-range>063630</page-range> (<year>2010</year>).<pub-id\
+          \ pub-id-type=\"coden\">PLRAAN</pub-id><issn>1050-2947</issn><pub-id pub-id-type=\"\
+          doi\" specific-use=\"suppress-display\">10.1103/PhysRevA.82.063630</pub-id></mixed-citation></ref><ref\
+          \ id=\"c27\"><label>[27]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>27</object-id><person-group person-group-type=\"author\"><string-name>S.\
+          \ Bhattacharyya</string-name> and <string-name>B. Chakrabarti</string-name></person-group>,\
+          \ <article-title>Condensate fluctuation and thermodynamics of mesoscopic Bose-Einstein\
+          \ condensates: A correlated many-body approach</article-title>, <source>Phys.\
+          \ Rev. A</source> <volume>93</volume>, <page-range>023636</page-range> (<year>2016</year>).<pub-id\
+          \ pub-id-type=\"coden\">PLRAAN</pub-id><issn>2469-9926</issn><pub-id pub-id-type=\"\
+          doi\" specific-use=\"suppress-display\">10.1103/PhysRevA.93.023636</pub-id></mixed-citation></ref><ref\
+          \ id=\"c28\"><label>[28]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>28</object-id><person-group person-group-type=\"author\"><string-name>V.\u2009\
+          I. Yukalov</string-name></person-group>, <article-title>No anomalous fluctuations\
+          \ exist in stable equilibrium systems</article-title>, <source>Phys. Lett.\
+          \ A</source> <volume>340</volume>, <page-range>369</page-range> (<year>2005</year>).<pub-id\
+          \ pub-id-type=\"coden\">PYLAAG</pub-id><issn>0375-9601</issn><pub-id pub-id-type=\"\
+          doi\" specific-use=\"suppress-display\">10.1016/j.physleta.2005.04.035</pub-id></mixed-citation></ref><ref\
+          \ id=\"c29\"><label>[29]</label><mixed-citation publication-type=\"supplemental-material\"\
+          ><object-id>29</object-id>See Supplemental Material at <ext-link ext-link-type=\"\
+          uri\" xlink:href=\"http://link.aps.org/supplemental/10.1103/PhysRevLett.126.153601\"\
+          >http://link.aps.org/supplemental/10.1103/PhysRevLett.126.153601</ext-link>,\
+          \ which includes Refs.\_[7,16], for further details.</mixed-citation></ref><ref\
+          \ id=\"c30\"><label>[30]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>30</object-id><person-group person-group-type=\"author\"><string-name>M.\
+          \ Kristensen</string-name>, <string-name>M. Gajdacz</string-name>, <string-name>P.\u2009\
+          L. Pedersen</string-name>, <string-name>C. Klempt</string-name>, <string-name>J.\u2009\
+          F. Sherson</string-name>, <string-name>J.\u2009J. Arlt</string-name>, and\
+          \ <string-name>A.\u2009J. Hilliard</string-name></person-group>, <article-title>Sub-atom\
+          \ shot noise Faraday imaging of ultracold atom clouds</article-title>, <source>J.\
+          \ Phys. B</source> <volume>50</volume>, <page-range>034004</page-range> (<year>2017</year>).<pub-id\
+          \ pub-id-type=\"coden\">JPAPEH</pub-id><issn>0953-4075</issn><pub-id pub-id-type=\"\
+          doi\" specific-use=\"suppress-display\">10.1088/1361-6455/50/3/034004</pub-id></mixed-citation></ref><ref\
+          \ id=\"c31\"><label>[31]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>31</object-id><person-group person-group-type=\"author\"><string-name>M.\
+          \ Gajdacz</string-name>, <string-name>A.\u2009J. Hilliard</string-name>, <string-name>M.\u2009\
+          A. Kristensen</string-name>, <string-name>P.\u2009L. Pedersen</string-name>,\
+          \ <string-name>C. Klempt</string-name>, <string-name>J.\u2009J. Arlt</string-name>,\
+          \ and <string-name>J.\u2009F. Sherson</string-name></person-group>, <article-title>Preparation\
+          \ of Ultracold Atom Clouds at the Shot Noise Level</article-title>, <source>Phys.\
+          \ Rev. Lett.</source> <volume>117</volume>, <page-range>073604</page-range>\
+          \ (<year>2016</year>).<pub-id pub-id-type=\"coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id\
+          \ pub-id-type=\"doi\" specific-use=\"suppress-display\">10.1103/PhysRevLett.117.073604</pub-id></mixed-citation></ref><ref\
+          \ id=\"c32\"><label>[32]</label><mixed-citation publication-type=\"journal\"\
+          ><object-id>32</object-id><person-group person-group-type=\"author\"><string-name>D.\
+          \ Hellweg</string-name>, <string-name>L. Cacciapuoti</string-name>, <string-name>M.\
+          \ Kottke</string-name>, <string-name>T. Schulte</string-name>, <string-name>K.\
+          \ Sengstock</string-name>, <string-name>W. Ertmer</string-name>, and <string-name>J.\u2009\
+          J. Arlt</string-name></person-group>, <article-title>Measurement of the Spatial\
+          \ Correlation Function of Phase Fluctuating Bose-Einstein Condensates</article-title>,\
+          \ <source>Phys. Rev. Lett.</source> <volume>91</volume>, <page-range>010406</page-range>\
+          \ (<year>2003</year>).<pub-id pub-id-type=\"coden\">PRLTAO</pub-id><issn>0031-9007</issn><pub-id\
+          \ pub-id-type=\"doi\" specific-use=\"suppress-display\">10.1103/PhysRevLett.91.010406</pub-id></mixed-citation></ref><ref\
+          \ id=\"c33\"><label>[33]</label><note content-type=\"endnote\"><p>Measurements\
+          \ for which the stabilization process failed were excluded, such that each\
+          \ set includes at least 45 measurements.</p></note></ref><ref id=\"c34\"><label>[34]</label><mixed-citation\
+          \ publication-type=\"eprint\"><object-id>34</object-id><person-group person-group-type=\"\
+          author\"><string-name>J. Zeiher</string-name>, <string-name>J. Wolf</string-name>,\
+          \ <string-name>J.\u2009A. Isaacs</string-name>, <string-name>J. Kohler</string-name>,\
+          \ and <string-name>D.\u2009M. Stamper-Kurn</string-name></person-group>, <article-title>Tracking\
+          \ evaporative cooling of a mesoscopic atomic quantum gas in real time</article-title>,\
+          \ <pub-id pub-id-type=\"arxiv\">arXiv:2012.01280</pub-id>.</mixed-citation></ref></ref-list></back></article>\r\
+          \n"
+      headers:
+        Connection:
+          - keep-alive
+        Content-Type:
+          - text/xml;charset=utf-8
+        Date:
+          - Tue, 05 Jul 2022 07:54:56 GMT
+        Server:
+          - nginx/1.21.6
+        Transfer-Encoding:
+          - chunked
+        Vary:
+          - Accept-Encoding
+        X-Content-Type-Options:
+          - nosniff
+        X-Frame-Options:
+          - SAMEORIGIN
+        X-XSS-Protection:
+          - 1; mode=block
+        content-length:
+          - "80949"
+      status:
+        code: 200
+        message: OK
 version: 1

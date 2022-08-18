@@ -42,6 +42,10 @@ class Request:
         response = self.get_response()
         return response.json()
 
+    def get_response_xml(self):
+        response = self.get_response()
+        return response.content
+
     def get_parameters(self):
         parameters = {
             "base_url": self.base_url,

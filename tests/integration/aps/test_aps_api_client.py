@@ -26,8 +26,7 @@ def test_get_articles_metadata(aps_api_client_fixture, shared_datadir):
 @pytest.mark.vcr
 def test_get_pdf_file(aps_api_client_fixture, shared_datadir):
     doi = "10.1103/PhysRevLett.126.153601"
-    parameters = APSParams(from_date="2021-04-10", until_date="2022-04-10").get_params()
-    pdf = aps_api_client_fixture.get_pdf_file(parameters=parameters, doi=doi)
+    pdf = aps_api_client_fixture.get_pdf_file(doi=doi)
     file_path = os.path.join(shared_datadir, "test_pdf.pdf")
     with open(file_path, "rb") as pdf_file:
         assert pdf_file.read() == pdf
@@ -36,8 +35,7 @@ def test_get_pdf_file(aps_api_client_fixture, shared_datadir):
 @pytest.mark.vcr
 def test_get_xml(aps_api_client_fixture, shared_datadir):
     doi = "10.1103/PhysRevLett.126.153601"
-    parameters = APSParams(from_date="2021-04-10", until_date="2022-04-10").get_params()
-    xml = aps_api_client_fixture.get_xml_file(parameters=parameters, doi=doi)
+    xml = aps_api_client_fixture.get_xml_file(doi=doi)
     file_path = os.path.join(shared_datadir, "test_xml.xml")
     with open(file_path, "rb") as xml_file:
         assert xml_file.read() == xml
