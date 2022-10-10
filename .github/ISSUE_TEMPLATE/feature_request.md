@@ -1,13 +1,13 @@
 ---
 name: Feature request
 about: A high-level summary of the request
-title: ''
-labels: ''
-assignees: ''
-
+title: ""
+labels: ""
+assignees: ""
 ---
 
 **Sescription**
+
 1. Requirement: why is this feature needed?
 2. Proposed solution(s)
 3. Expected behavior

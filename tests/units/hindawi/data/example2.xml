@@ -1,0 +1,185 @@
+<ns0:record xmlns:ns0="http://www.openarchives.org/OAI/2.0/" xmlns:ns1="http://www.loc.gov/MARC21/slim" xmlns:ns3="http://www.w3.org/1998/Math/MathML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ns0:header>
+		<ns0:identifier>oai:hindawi.com:10.1155/2022/5287693</ns0:identifier>
+		<ns0:datestamp>2022-02-22T12:20:01Z</ns0:datestamp>
+		<ns0:setSpec>HINDAWI.AHEP:2022</ns0:setSpec>
+	</ns0:header>
+	<ns0:metadata>
+		<ns1:record xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+			<ns0:datafield tag="024" ind1="7" ind2=" ">
+				<ns0:subfield code="a">10.1155/2022/5287693</ns0:subfield>
+				<ns0:subfield code="2">DOI</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="037" ind1=" " ind2=" ">
+				<ns0:subfield code="9">arXiv</ns0:subfield>
+				<ns0:subfield code="a">arXiv:2112.00315</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="100" ind1=" " ind2=" ">
+				<ns0:subfield code="a">Li, Ying</ns0:subfield>
+				<ns0:subfield code="u">Department of Physics, Yantai University, Yantai 264005, China</ns0:subfield>
+				<ns0:subfield code="j">https://orcid.org/0000-0002-1337-7662</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="245" ind1=" " ind2=" ">
+				<ns0:subfield code="a">
+					Charmless Quasi-Two-Body
+					<ns3:math id="M1">
+						<ns3:mi>B</ns3:mi>
+					</ns3:math>
+					Decays in Perturbative QCD Approach: Taking
+					<ns3:math id="M2">
+						<ns3:mi>B</ns3:mi>
+						<ns3:mo>&#10230;</ns3:mo>
+						<ns3:mi>K</ns3:mi>
+						<ns3:mfenced open="(" close=")">
+							<ns3:mrow>
+								<ns3:mi mathvariant="script">R</ns3:mi>
+								<ns3:mo>&#10230;</ns3:mo>
+							</ns3:mrow>
+						</ns3:mfenced>
+						<ns3:msup>
+							<ns3:mrow>
+								<ns3:mi>K</ns3:mi>
+							</ns3:mrow>
+							<ns3:mrow>
+								<ns3:mo>+</ns3:mo>
+							</ns3:mrow>
+						</ns3:msup>
+						<ns3:msup>
+							<ns3:mrow>
+								<ns3:mi>K</ns3:mi>
+							</ns3:mrow>
+							<ns3:mrow>
+								<ns3:mo>&#8722;</ns3:mo>
+							</ns3:mrow>
+						</ns3:msup>
+					</ns3:math>
+					as Examples
+				</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="260" ind1=" " ind2=" ">
+				<ns0:subfield code="b">Hindawi</ns0:subfield>
+				<ns0:subfield code="c">2022-02-22</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="300" ind1=" " ind2=" ">
+				<ns0:subfield code="a">8</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="520" ind1=" " ind2=" ">
+				<ns0:subfield code="a">
+					Three-body
+					<ns3:math id="M3">
+						<ns3:mi>B</ns3:mi>
+					</ns3:math>
+					decays not only significantly broaden the study of
+					<ns3:math id="M4">
+						<ns3:mi>B</ns3:mi>
+					</ns3:math>
+					meson decay mechanisms but also provide information of resonant particles. Because of complicate dynamics, it is very hard for us to study the whole phase space in a specific approach. In this review, we take
+					<ns3:math id="M5">
+						<ns3:mi>B</ns3:mi>
+						<ns3:mo>&#10230;</ns3:mo>
+						<ns3:mi>K</ns3:mi>
+						<ns3:mfenced open="(" close=")">
+							<ns3:mrow>
+								<ns3:mi mathvariant="script">R</ns3:mi>
+								<ns3:mo>&#10230;</ns3:mo>
+							</ns3:mrow>
+						</ns3:mfenced>
+						<ns3:msup>
+							<ns3:mrow>
+								<ns3:mi>K</ns3:mi>
+							</ns3:mrow>
+							<ns3:mrow>
+								<ns3:mo>+</ns3:mo>
+							</ns3:mrow>
+						</ns3:msup>
+						<ns3:msup>
+							<ns3:mrow>
+								<ns3:mi>K</ns3:mi>
+							</ns3:mrow>
+							<ns3:mrow>
+								<ns3:mo>&#8722;</ns3:mo>
+							</ns3:mrow>
+						</ns3:msup>
+					</ns3:math>
+					decays as examples and show the application of the perturbative QCD (PQCD) approach in studying the quasi-two-body
+					<ns3:math id="M6">
+						<ns3:mi>B</ns3:mi>
+					</ns3:math>
+					decays, where two particles move collinearly with large energy and the bachelor one recoils back. To describe the dynamics of two collinear particles, the
+					<ns3:math id="M7">
+						<ns3:mi>S</ns3:mi>
+					</ns3:math>
+					,
+					<ns3:math id="M8">
+						<ns3:mi>P</ns3:mi>
+					</ns3:math>
+					, and
+					<ns3:math id="M9">
+						<ns3:mi>D</ns3:mi>
+					</ns3:math>
+					-wave functions of kaon-pair with different waves are introduced. By keeping the transverse momenta, all possible diagrams including the hard spectator diagrams and annihilation ones can be calculated in PQCD approach. Most results are well consistent with the current measurements from BaBar, Belle, and LHCb experiments. Moreover, under the narrow-width approximation, we can extract the branching fractions of the two-body decays involving the resonant states and also predict the branching fractions of the corresponding quasi-two-body decays
+					<ns3:math id="M10">
+						<ns3:mi>B</ns3:mi>
+						<ns3:mo>&#10230;</ns3:mo>
+						<ns3:mi>K</ns3:mi>
+						<ns3:mfenced open="(" close=")">
+							<ns3:mrow>
+								<ns3:mi mathvariant="script">R</ns3:mi>
+								<ns3:mo>&#10230;</ns3:mo>
+							</ns3:mrow>
+						</ns3:mfenced>
+						<ns3:msup>
+							<ns3:mrow>
+								<ns3:mi>&#960;</ns3:mi>
+							</ns3:mrow>
+							<ns3:mrow>
+								<ns3:mo>+</ns3:mo>
+							</ns3:mrow>
+						</ns3:msup>
+						<ns3:msup>
+							<ns3:mrow>
+								<ns3:mi>&#960;</ns3:mi>
+							</ns3:mrow>
+							<ns3:mrow>
+								<ns3:mo>&#8722;</ns3:mo>
+							</ns3:mrow>
+						</ns3:msup>
+					</ns3:math>
+					. All predictions are expected to be tested in the ongoing LHCb and Belle-II experiments.
+				</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="540" ind1=" " ind2=" ">
+				<ns0:subfield code="a">CC-BY-3.0</ns0:subfield>
+				<ns0:subfield code="u">http://creativecommons.org/licenses/by/3.0/</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="542" ind1=" " ind2=" ">
+				<ns0:subfield code="f">Copyright &#169; 2022 Wen-Feng Liu et al.</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="700" ind1=" " ind2=" ">
+				<ns0:subfield code="a">Liu, Wen-Feng</ns0:subfield>
+				<ns0:subfield code="u">Department of Physics, Yantai University, Yantai 264005, China</ns0:subfield>
+				<ns0:subfield code="j">https://orcid.org/0000-0002-9549-1863</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="700" ind1=" " ind2=" ">
+				<ns0:subfield code="a">Zou, Zhi-Tian</ns0:subfield>
+				<ns0:subfield code="u">Department of Physics, Yantai University, Yantai 264005, China</ns0:subfield>
+				<ns0:subfield code="j">https://orcid.org/0000-0002-6985-8174</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="773" ind1=" " ind2=" ">
+				<ns0:subfield code="p">Advances in High Energy Physics</ns0:subfield>
+				<ns0:subfield code="v">2022</ns0:subfield>
+				<ns0:subfield code="c">5287693</ns0:subfield>
+				<ns0:subfield code="y">2022</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="980" ind1=" " ind2=" ">
+				<ns0:subfield code="a">SCOAP3</ns0:subfield>
+				<ns0:subfield code="b">Hindawi</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="856" ind1="4" ind2="0">
+				<ns0:subfield code="u">https://doi.org/10.1155/2022/5287693</ns0:subfield>
+				<ns0:subfield code="z">Full text URL</ns0:subfield>
+			</ns0:datafield>
+		</ns1:record>
+	</ns0:metadata>
+</ns0:record>
+		

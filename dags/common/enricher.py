@@ -21,7 +21,7 @@ class Enricher(object):
         if arxiv is None:
             return None
         try:
-            return re.match(r"(\d{4}\.\d{4,5})", arxiv).group()
+            return re.search(r"\d{4}\.\d{4,5}", arxiv).group()
         except AttributeError:
             return None
 
@@ -99,6 +99,7 @@ class Enricher(object):
     def _set_categories(self, eprint: Dict):
         if eprint["value"]:
             eprint["categories"] = self._get_arxiv_categories(eprint["value"])
+            eprint["value"] = self._clean_arxiv(eprint["value"])
         return eprint
 
     def __call__(self, article: Dict):

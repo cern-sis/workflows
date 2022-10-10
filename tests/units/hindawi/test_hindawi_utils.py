@@ -49,5 +49,5 @@ def test_save_file_in_s3():
 
 
 def test_split_xml():
-    ids_and_articles = split_xmls(repo=MockedRepo(), key="key/key")
-    assert len(ids_and_articles) == 1
+    records = split_xmls(repo=MockedRepo(), key="key/key")
+    assert len(records) == 1

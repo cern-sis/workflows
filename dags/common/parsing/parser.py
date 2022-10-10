@@ -35,11 +35,12 @@ class IParser:
         self.extractors = extractors
 
     def _publisher_specific_parsing(self, article: ET.Element):
-        return {
+        extracted_value = {
             extractor.destination: value
             for extractor in self.extractors
             if (value := extractor.extract(article)) is not None
         }
+        return extracted_value
 
     def _generic_parsing(self, publisher_parsed_article: Dict):
         def get(field, default=[]):

@@ -1,5 +1,6 @@
 import logging
 
+import backoff
 import requests
 
 
@@ -23,6 +24,9 @@ class Request:
                     header={self.headers}, \
                     path_segments={self.path_segments}>"
 
+    @backoff.on_exception(
+        backoff.expo, requests.exceptions.RequestException, max_time=60, max_tries=3
+    )
     def get_response(self):
         from furl import furl
 

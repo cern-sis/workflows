@@ -46,8 +46,8 @@ class SpringerParser(IParser):
                 extra_function=lambda x: article_type_mapping[x],
             ),
             TextExtractor(
-                "dois",
-                "./Journal/Volume/Issue/Article/ArticleInfo/ArticleDOI",
+                destination="dois",
+                source="./Journal/Volume/Issue/Article/ArticleInfo/ArticleDOI",
                 extra_function=lambda x: [x],
             ),
             CustomExtractor("arxiv_eprints", self._get_arxiv_eprints),
@@ -59,55 +59,57 @@ class SpringerParser(IParser):
             ),
             CustomExtractor("authors", self._get_authors),
             TextExtractor(
-                "collaborations",
-                "./Journal/Volume/Issue/Article/ArticleHeader/AuthorGroup/InstitutionalAuthor/InstitutionalAuthorName",
-                False,
+                destination="collaborations",
+                source="./Journal/Volume/Issue/Article/ArticleHeader/AuthorGroup/InstitutionalAuthor/InstitutionalAuthorName",
+                required=False,
                 extra_function=lambda x: [x],
             ),
             TextExtractor(
-                "journal_title",
-                "./Journal/JournalInfo/JournalTitle",
+                destination="journal_title",
+                source="./Journal/JournalInfo/JournalTitle",
                 extra_function=lambda s: s.lstrip("The "),
             ),
             TextExtractor(
-                "journal_issue", "./Journal/Volume/Issue/IssueInfo/IssueIDStart"
+                destination="journal_issue",
+                source="./Journal/Volume/Issue/IssueInfo/IssueIDStart",
             ),
             TextExtractor(
-                "journal_volume", "./Journal/Volume/VolumeInfo/VolumeIDStart"
+                destination="journal_volume",
+                source="./Journal/Volume/VolumeInfo/VolumeIDStart",
             ),
             AttributeExtractor("journal_artid", "./Journal/Volume/Issue/Article", "ID"),
             TextExtractor(
-                "journal_fpage",
-                "./Journal/Volume/Issue/Article/ArticleInfo/ArticleFirstPage",
+                destination="journal_fpage",
+                source="./Journal/Volume/Issue/Article/ArticleInfo/ArticleFirstPage",
             ),
             TextExtractor(
-                "journal_lpage",
-                "./Journal/Volume/Issue/Article/ArticleInfo/ArticleLastPage",
+                destination="journal_lpage",
+                source="./Journal/Volume/Issue/Article/ArticleInfo/ArticleLastPage",
             ),
             TextExtractor(
-                "journal_year",
-                "./Journal/Volume/Issue/Article/ArticleInfo/*/OnlineDate/Year",
+                destination="journal_year",
+                source="./Journal/Volume/Issue/Article/ArticleInfo/*/OnlineDate/Year",
                 extra_function=lambda x: int(x),
             ),
             CustomExtractor("date_published", self._get_published_date),
             TextExtractor(
-                "copyright_holder",
-                "./Journal/Volume/Issue/Article/ArticleInfo/ArticleCopyright/CopyrightHolderName",
+                destination="copyright_holder",
+                source="./Journal/Volume/Issue/Article/ArticleInfo/ArticleCopyright/CopyrightHolderName",
             ),
             TextExtractor(
-                "copyright_year",
-                "./Journal/Volume/Issue/Article/ArticleInfo/ArticleCopyright/CopyrightYear",
+                destination="copyright_year",
+                source="./Journal/Volume/Issue/Article/ArticleInfo/ArticleCopyright/CopyrightYear",
                 extra_function=lambda x: int(x),
             ),
             TextExtractor(
-                "copyright_statement",
-                "./Journal/Volume/Issue/Article/ArticleInfo/ArticleCopyright/copyright-statement",
-                False,
+                destination="copyright_statement",
+                source="./Journal/Volume/Issue/Article/ArticleInfo/ArticleCopyright/copyright-statement",
+                required=False,
             ),
             CustomExtractor("license", self._get_license),
             TextExtractor(
-                "collections",
-                "./Journal/JournalInfo/JournalTitle",
+                destination="collections",
+                source="./Journal/JournalInfo/JournalTitle",
                 extra_function=lambda x: [x.lstrip("The ")],
             ),
         ]
@@ -209,9 +211,15 @@ class SpringerParser(IParser):
                 None,
                 [
                     AttributeExtractor("orcid", ".", "ORCID"),
-                    TextExtractor("surname", "./AuthorName/FamilyName"),
-                    TextExtractor("given_names", "./AuthorName/GivenName"),
-                    TextExtractor("email", "./Contact/Email", False),
+                    TextExtractor(
+                        destination="surname", source="./AuthorName/FamilyName"
+                    ),
+                    TextExtractor(
+                        destination="given_names", source="./AuthorName/GivenName"
+                    ),
+                    TextExtractor(
+                        destination="email", source="./Contact/Email", required=False
+                    ),
                 ],
             ).extract(contrib)
             author["affiliations"] = self._get_affiliations(

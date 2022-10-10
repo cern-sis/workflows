@@ -11,15 +11,22 @@ class TextExtractor(IExtractor):
         required=True,
         default_value=None,
         extra_function=lambda s: s,
+        prefixes=None,
     ) -> None:
         super().__init__(destination)
         self.destination = destination
         self.source = source
+        self.prefixes = prefixes
         self.required = required
         self.default_value = default_value
         self.extra_function = extra_function
 
     def extract(self, article: ET.Element):
+        if self.prefixes:
+            node_with_prefix = self.extra_function(
+                article.find(self.source, self.prefixes).text
+            )
+            return node_with_prefix
         node = article.find(self.source)
         if self.required and node is None:
             raise RequiredFieldNotFoundExtractionError(self.source)
@@ -30,26 +37,39 @@ class TextExtractor(IExtractor):
 
 class AttributeExtractor(IExtractor):
     def __init__(
-        self, destination, source, attribute, extra_function=lambda x: x
+        self,
+        destination,
+        source,
+        attribute,
+        default_value=None,
+        extra_function=lambda x: x,
     ) -> None:
         super().__init__(destination)
         self.destination = destination
         self.source = source
         self.attribute = attribute
         self.extra_function = extra_function
+        self.default_value = default_value
 
     def extract(self, article: ET.Element):
-        return self.extra_function(article.find(self.source).get(self.attribute))
+        value = self.extra_function(article.find(self.source).get(self.attribute))
+        if value:
+            return value
+        return self.default_value
 
 
 class CustomExtractor(IExtractor):
-    def __init__(self, destination, extraction_function) -> None:
+    def __init__(self, destination, extraction_function, default_value=None) -> None:
         super().__init__(destination)
         self.destination = destination
         self.extraction_function = extraction_function
+        self.default_value = default_value
 
     def extract(self, article: ET.Element):
-        return self.extraction_function(article)
+        value = self.extraction_function(article)
+        if value:
+            return value
+        return self.default_value
 
 
 class ConstantExtractor(IExtractor):

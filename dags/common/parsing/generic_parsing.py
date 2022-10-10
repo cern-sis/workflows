@@ -80,6 +80,8 @@ def parse_thesis_supervisors(value):
 
 
 def publication_info(article):
+    if "publication_info" in article:
+        return article["publication_info"]
     return [
         {
             "journal_title": article.get("journal_title", ""),

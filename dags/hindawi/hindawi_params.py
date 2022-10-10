@@ -7,7 +7,7 @@ class HindawiParams:
         from_date: str = (date.today() - timedelta(days=1)).strftime("%Y-%m-%d"),
         until_date: str = date.today().strftime("%Y-%m-%d"),
         verb: str = "listrecords",
-        set: str = "HINDAWI.AA",
+        set: str = "HINDAWI.AHEP",
         metadataprefix: str = "marc21",
     ):
         self.from_date = from_date

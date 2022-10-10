@@ -1,9 +1,13 @@
+import re
+
 from bleach import clean
 from bleach.html5lib_shim import Filter
 from bleach.sanitizer import Cleaner
 
 
 def clean_whitespace_characters(input):
+    if type(input) == list:
+        return input
     return " ".join(input.split())
 
 
@@ -64,11 +68,9 @@ def remove_unnecessary_fields(obj):
 
 
 def remove_orcid_prefix(obj):
-    orcid_prefixes = ("orcid:", "https://orcid.org/", "http://orcid.org/")
+    pattern = re.compile(r"https{0,1}://orcid.org/|ORCID-|orcid:", flags=re.I)
     for author in obj.get("authors", ()):
         if "orcid" not in author:
             continue
-        for orcid_prefix in orcid_prefixes:
-            if author["orcid"].lower().startswith(orcid_prefix):
-                author["orcid"] = author["orcid"][len(orcid_prefix) :]
+        author["orcid"] = pattern.sub("", author["orcid"])
     return obj
