@@ -46,6 +46,7 @@ class HindawiParser(IParser):
             ),
             TextExtractor(
                 destination="date_published",
+                required=False,
                 source="ns0:metadata/ns1:record/ns0:datafield/[@tag='260']/ns0:subfield/[@code='c']",
                 prefixes=self.prefixes,
                 extra_function=lambda x: x,
@@ -54,6 +55,7 @@ class HindawiParser(IParser):
             TextExtractor(
                 destination="page_nr",
                 source="ns0:metadata/ns1:record/ns0:datafield/[@tag='300']/ns0:subfield/[@code='a']",
+                required=False,
                 prefixes=self.prefixes,
                 extra_function=lambda x: [int(x)],
                 default_value=[0],

@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 
 from common.parsing.extractor import IExtractor
+from structlog import get_logger
 
 
 class TextExtractor(IExtractor):
@@ -20,6 +21,7 @@ class TextExtractor(IExtractor):
         self.required = required
         self.default_value = default_value
         self.extra_function = extra_function
+        self.logger = get_logger().bind(class_name=type(self).__name__)
 
     def extract(self, article: ET.Element):
         if self.prefixes:
@@ -42,6 +44,7 @@ class AttributeExtractor(IExtractor):
         source,
         attribute,
         default_value=None,
+        required=False,
         extra_function=lambda x: x,
     ) -> None:
         super().__init__(destination)
@@ -50,25 +53,33 @@ class AttributeExtractor(IExtractor):
         self.attribute = attribute
         self.extra_function = extra_function
         self.default_value = default_value
+        self.required = required
 
     def extract(self, article: ET.Element):
         value = self.extra_function(article.find(self.source).get(self.attribute))
         if value:
             return value
+        if self.required and value is None:
+            raise RequiredFieldNotFoundExtractionError(self.source)
         return self.default_value
 
 
 class CustomExtractor(IExtractor):
-    def __init__(self, destination, extraction_function, default_value=None) -> None:
+    def __init__(
+        self, destination, extraction_function, required=False, default_value=None
+    ) -> None:
         super().__init__(destination)
         self.destination = destination
         self.extraction_function = extraction_function
         self.default_value = default_value
+        self.required = required
 
     def extract(self, article: ET.Element):
         value = self.extraction_function(article)
         if value:
             return value
+        if self.required and value is None:
+            raise RequiredFieldNotFoundExtractionError(self.source)
         return self.default_value
 
 

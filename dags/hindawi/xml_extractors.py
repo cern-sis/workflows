@@ -18,12 +18,13 @@ class HindawiTextExtractor(TextExtractor):
             raise RequiredFieldNotFoundExtractionError(self.source)
         if node is None:
             return self.default_value
-        pattern = re.compile(r"[\n\t]*")
+        pattern = re.compile(r"[\n\t]{0,}" + r"\s{2,}")
         extracted_value = "".join(
-            [pattern.sub("", node.text) or ""]
-            + [pattern.sub("", ET.tostring(el).decode("ascii")) for el in node]
+            [node.text or ""] + [ET.tostring(el).decode("ascii") for el in node]
         )
-        return self.extra_function(extracted_value)
+        final_value = self.extra_function(pattern.sub("", extracted_value))
+        self.logger.info("Extracted value", field=self.destination, value=final_value)
+        return final_value
 
     def extract(self, article: ET.Element):
         if self.prefixes:
@@ -32,40 +33,3 @@ class HindawiTextExtractor(TextExtractor):
 
         node = article.find(self.source)
         return self._get_extracted_value(node)
-
-
-class HindawiTextsExtractor(TextExtractor):
-    def _get_none_value(self, value):
-        if value:
-            return value
-        return ""
-
-    def extract(self, article: ET.Element):
-        extracted_values = []
-        pattern = re.compile(r"[\n\t]*")
-        if self.prefixes:
-            values = article.findall(self.source, self.prefixes)
-            for value in values:
-                extracted_values.append(
-                    "".join(
-                        [pattern.sub("", value.text)]
-                        + [
-                            pattern.sub("", ET.tostring(el).decode("UTF-8"))
-                            for el in value
-                        ]
-                    )
-                )
-            print(extracted_values)
-            return [
-                self.extra_function(extracted_value)
-                for extracted_value in extracted_values
-            ]
-        node = article.findall(self.source)
-        if self.required and node is None:
-            raise RequiredFieldNotFoundExtractionError(self.source)
-        if node is None:
-            return self.default_value
-        return [
-            self.extra_function(extracted_value)
-            for extracted_value in article.findall(self.source)
-        ]

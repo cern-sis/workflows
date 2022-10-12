@@ -1,0 +1,122 @@
+<ns0:record xmlns:ns0="http://www.openarchives.org/OAI/2.0/" xmlns:ns1="http://www.loc.gov/MARC21/slim" xmlns:ns3="http://www.w3.org/1998/Math/MathML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ns0:header>
+        <ns0:identifier>oai:hindawi.com:10.1155/2022/2755821</ns0:identifier>
+        <ns0:datestamp>2022-02-22T11:05:01Z</ns0:datestamp>
+        <ns0:setSpec>HINDAWI.AHEP:2022</ns0:setSpec>
+    </ns0:header>
+    <ns0:metadata>
+        <ns1:record xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+            <ns0:datafield tag="024" ind1="7" ind2=" ">
+                <ns0:subfield code="a">10.1155/2022/2755821</ns0:subfield>
+                <ns0:subfield code="2">DOI</ns0:subfield>
+            </ns0:datafield>
+            <ns0:datafield tag="037" ind1=" " ind2=" ">
+                <ns0:subfield code="9">arXiv</ns0:subfield>
+                <ns0:subfield code="a">arXiv:2112.01500</ns0:subfield>
+            </ns0:datafield>
+            <ns0:datafield tag="100" ind1=" " ind2=" ">
+                <ns0:subfield code="a">Wei, Yan-Bing</ns0:subfield>
+                <ns0:subfield code="u">Physik Department T31, James-Franck-Stra&#223;e 1, Technische Universit&#228;t M&#252;nchen, D85748 Garching, Germany</ns0:subfield>
+                <ns0:subfield code="j">https://orcid.org/0000-0001-5917-5786</ns0:subfield>
+            </ns0:datafield>
+            <ns0:datafield tag="245" ind1=" " ind2=" ">
+                <ns0:subfield code="a">
+                    <ns3:math id="M1">
+                        <ns3:mi>B</ns3:mi>
+                        <ns3:mo>&#10230;</ns3:mo>
+                        <ns3:mi>P</ns3:mi>
+                        <ns3:mo>,</ns3:mo>
+                        <ns3:mi>V</ns3:mi>
+                    </ns3:math>
+                    Form Factors with the
+                    <ns3:math id="M2">
+                        <ns3:mi>B</ns3:mi>
+                    </ns3:math>
+                    -Meson Light-Cone Sum Rules
+                </ns0:subfield>
+            </ns0:datafield>
+            <ns0:datafield tag="260" ind1=" " ind2=" ">
+                <ns0:subfield code="b">Hindawi</ns0:subfield>
+                <ns0:subfield code="c">2022-02-22</ns0:subfield>
+            </ns0:datafield>
+            <ns0:datafield tag="300" ind1=" " ind2=" ">
+                <ns0:subfield code="a">29</ns0:subfield>
+            </ns0:datafield>
+            <ns0:datafield tag="520" ind1=" " ind2=" ">
+                <ns0:subfield code="a">
+                    In this review, we discuss the calculation of the
+                    <ns3:math id="M3">
+                        <ns3:mi>B</ns3:mi>
+                        <ns3:mo>&#10230;</ns3:mo>
+                        <ns3:mi>P</ns3:mi>
+                        <ns3:mo>,</ns3:mo>
+                        <ns3:mi>V</ns3:mi>
+                    </ns3:math>
+                    form factors within the framework of the light-cone sum rules with the light-cone distribution amplitudes of the
+                    <ns3:math id="M4">
+                        <ns3:mi>B</ns3:mi>
+                    </ns3:math>
+                    -meson. A detailed introduction to the definition, scale evolution, and phenomenological models of the
+                    <ns3:math id="M5">
+                        <ns3:mi>B</ns3:mi>
+                    </ns3:math>
+                    -meson distribution amplitudes is presented. We show two equivalent approaches of calculating the next-to-leading order QCD corrections to the sum rules for the form factors, i.e., the method of regions and the step-by-step matching in the soft-collinear effective theory. The power suppressed corrections to the
+                    <ns3:math id="M6">
+                        <ns3:mi>B</ns3:mi>
+                        <ns3:mo>&#10230;</ns3:mo>
+                        <ns3:mi>P</ns3:mi>
+                        <ns3:mo>,</ns3:mo>
+                        <ns3:mi>V</ns3:mi>
+                    </ns3:math>
+                    form factors especially the contributions from the higher-twist
+                    <ns3:math id="M7">
+                        <ns3:mi>B</ns3:mi>
+                    </ns3:math>
+                    -meson distribution amplitudes are displayed. We also present numerical results of the form factors including both the QCD and the power corrections, and phenomenological applications of the predicted form factors such as the determination of the CKM matrix element
+                    <ns3:math id="M8">
+                        <ns3:mfenced open="|" close="|">
+                            <ns3:mrow>
+                                <ns3:msub>
+                                    <ns3:mrow>
+                                        <ns3:mi>V</ns3:mi>
+                                    </ns3:mrow>
+                                    <ns3:mrow>
+                                        <ns3:mi>u</ns3:mi>
+                                        <ns3:mi>b</ns3:mi>
+                                    </ns3:mrow>
+                                </ns3:msub>
+                            </ns3:mrow>
+                        </ns3:mfenced>
+                    </ns3:math>
+                    .
+                </ns0:subfield>
+            </ns0:datafield>
+            <ns0:datafield tag="540" ind1=" " ind2=" ">
+                <ns0:subfield code="a">CC-BY-3.0</ns0:subfield>
+                <ns0:subfield code="u">http://creativecommons.org/licenses/by/3.0/</ns0:subfield>
+            </ns0:datafield>
+            <ns0:datafield tag="542" ind1=" " ind2=" ">
+                <ns0:subfield code="f">Copyright &#169; 2022 Yue-Long Shen and Yan-Bing Wei.</ns0:subfield>
+            </ns0:datafield>
+            <ns0:datafield tag="700" ind1=" " ind2=" ">
+                <ns0:subfield code="a">Shen, Yue-Long</ns0:subfield>
+                <ns0:subfield code="u">College of Physics and Photoelectric Engineering, Ocean University of China, Qingdao 266100, China</ns0:subfield>
+                <ns0:subfield code="j" />
+            </ns0:datafield>
+            <ns0:datafield tag="773" ind1=" " ind2=" ">
+                <ns0:subfield code="p">Advances in High Energy Physics</ns0:subfield>
+                <ns0:subfield code="v">2022</ns0:subfield>
+                <ns0:subfield code="c">2755821</ns0:subfield>
+                <ns0:subfield code="y">2022</ns0:subfield>
+            </ns0:datafield>
+            <ns0:datafield tag="980" ind1=" " ind2=" ">
+                <ns0:subfield code="a">SCOAP3</ns0:subfield>
+                <ns0:subfield code="b">Hindawi</ns0:subfield>
+            </ns0:datafield>
+            <ns0:datafield tag="856" ind1="4" ind2="0">
+                <ns0:subfield code="u">https://doi.org/10.1155/2022/2755821</ns0:subfield>
+                <ns0:subfield code="z">Full text URL</ns0:subfield>
+            </ns0:datafield>
+        </ns1:record>
+    </ns0:metadata>
+</ns0:record>

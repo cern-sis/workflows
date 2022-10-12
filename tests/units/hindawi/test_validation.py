@@ -28,7 +28,7 @@ def test_hindawi_validate_record(parsed_article):
 
 
 def test_hindawi_validate_record_without_doi(parser, shared_datadir):
-    with open(shared_datadir / "example3.xml") as file:
+    with open(shared_datadir / "without_doi.xml") as file:
         with raises(RequiredFieldNotFoundExtractionError):
             parsed_file = parser.parse(ET.fromstring(file.read()))
             enhanced_file = Enhancer()("Hindawi", parsed_file)
