@@ -55,7 +55,6 @@ class HindawiApiClient:
             )
             return request.get_response_bytes()
         except RequestException:
-            # TODO return exception
             self.logger.error("Request failed with exception.")
 
     def __repr__(self) -> str:

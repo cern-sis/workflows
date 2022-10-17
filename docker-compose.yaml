@@ -134,6 +134,7 @@ services:
       /usr/bin/mc mb airflow/springer;
       /usr/bin/mc mb airflow/aps;
       /usr/bin/mc mb airflow/hindawi;
+      /usr/bin/mc mb airflow/iop;
       exit 0;
       "
 
