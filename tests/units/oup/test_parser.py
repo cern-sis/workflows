@@ -65,10 +65,89 @@ def test_abstract(parsed_articles):
 
 
 def test_title(parsed_articles):
-    page_nrs = [
+    titles = [
         "Open-closed homotopy algebra in superstring field theory",
         'Generating string field theory solutions with matter operators from<ns0:italic xmlns:ns0="http://specifications.silverchair.com/xsd/1/24/SCJATS-journalpublishing.xsd">KBc</ns0:italic>algebra',
         'Study of<ns0:italic xmlns:ns0="http://specifications.silverchair.com/xsd/1/24/SCJATS-journalpublishing.xsd">F</ns0:italic>-wave bottom mesons in heavy quark effective theory',
     ]
-    for page_nr, article in zip(page_nrs, parsed_articles):
-        assert article["title"] == page_nr
+    for tilte, article in zip(titles, parsed_articles):
+        assert article["title"] == tilte
+
+
+def test_authors(parsed_articles):
+    authors = [
+        [
+            {
+                "surname": "Kunitomo",
+                "given_names": "Hiroshi",
+                "email": "kunitomo@yukawa.kyoto-u.ac.jp",
+                "affiliations": [
+                    {
+                        "institution": "Center for Gravitational Physics and Quantum Information, Yukawa Institute for Theoretical Physics",
+                        "country": "Japan",
+                    }
+                ],
+            }
+        ],
+        [
+            {
+                "surname": "Hata",
+                "given_names": "Hiroyuki",
+                "email": False,
+                "affiliations": [
+                    {
+                        "institution": "Department of Physics, Kyoto University",
+                        "country": "Japan",
+                    }
+                ],
+            },
+            {
+                "surname": "Takeda",
+                "given_names": "Daichi",
+                "email": False,
+                "affiliations": [
+                    {
+                        "institution": "Department of Physics, Kyoto University",
+                        "country": "Japan",
+                    }
+                ],
+            },
+            {
+                "surname": "Yoshinaka",
+                "given_names": "Jojiro",
+                "email": "george.yoshinaka@gauge.scphys.kyoto-u.ac.jp",
+                "affiliations": [
+                    {
+                        "institution": "Department of Physics, Kyoto University",
+                        "country": "Japan",
+                    }
+                ],
+            },
+        ],
+        [
+            {
+                "surname": "Garg",
+                "given_names": "Ritu",
+                "email": "rgarg_phd19@thapar.edu",
+                "affiliations": [
+                    {
+                        "institution": "School of Physics and Materials Science, Thapar Institute of Engineering and Technology",
+                        "country": "INDIA",
+                    }
+                ],
+            },
+            {
+                "surname": "Upadhyay",
+                "given_names": "A",
+                "email": False,
+                "affiliations": [
+                    {
+                        "institution": "School of Physics and Materials Science, Thapar Institute of Engineering and Technology",
+                        "country": "INDIA",
+                    }
+                ],
+            },
+        ],
+    ]
+    for author, article in zip(authors, parsed_articles):
+        assert article["authors"] == author

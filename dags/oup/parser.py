@@ -76,12 +76,15 @@ class OUPParser(IParser):
                 prefixes=self.prefixes,
                 default_value="",
             ),
+            # Different from hepcawrl, need to double check
+            CustomExtractor(
+                destination="authors",
+                extraction_function=self._get_authors,
+                default_value=[],
+            ),
         ]
 
         super().__init__(extractors)
-
-    def _form_authors(self, article: ET.Element):
-        pass
 
     def _get_journal_doctype(self, article: ET.Element):
         journal_doctype_raw = article.find(
@@ -123,15 +126,39 @@ class OUPParser(IParser):
         arxiv_eprint = arxivs_raw.lower().replace("arxiv:", "")
         return {"value": arxiv_eprint}
 
-    def _get_abstract(self, article: ET.Element):
-        parent_abstract = article.find(
-            "prefix:front/prefix:article-meta/prefix:abstract/prefix:p",
-            {
-                "prefix": "http://specifications.silverchair.com/xsd/1/24/SCJATS-journalpublishing.xsd"
-            },
+    def _get_authors(self, article):
+        contributions = article.findall(
+            "prefix:front/prefix:article-meta/prefix:contrib-group/prefix:contrib[@contrib-type='author']",
+            self.prefixes,
         )
-        for child in parent_abstract.getchildren():
-            # print(ET.tostring(parent_abstract).decode("utf-8"))
-            print(parent_abstract.text())
-            print(child.text)
-            return "s"
+        authors = []
+        for contribution in contributions:
+            surname = contribution.find(
+                "prefix:name/prefix:surname", self.prefixes
+            ).text
+            given_names = contribution.find(
+                "prefix:name/prefix:given-names", self.prefixes
+            ).text
+            email = (
+                contribution.find("prefix:email", self.prefixes) is not None
+                and contribution.find("prefix:email", self.prefixes).text
+            )
+            affiliations = contribution.findall("prefix:aff", self.prefixes)
+            full_affiliation = [
+                {
+                    "institution": affiliation.find(
+                        "prefix:institution", self.prefixes
+                    ).text,
+                    "country": affiliation.find("prefix:country", self.prefixes).text,
+                }
+                for affiliation in affiliations
+            ]
+            authors.append(
+                {
+                    "surname": surname,
+                    "given_names": given_names,
+                    "email": email,
+                    "affiliations": full_affiliation,
+                }
+            )
+        return authors
