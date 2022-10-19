@@ -1,7 +1,13 @@
+import datetime
 import xml.etree.ElementTree as ET
 
 from common.parsing.parser import IParser
-from common.parsing.xml_extractors import AttributeExtractor, CustomExtractor
+from common.parsing.xml_extractors import (
+    AttributeExtractor,
+    ConstantExtractor,
+    CustomExtractor,
+)
+from common.utils import construct_license
 from hindawi.xml_extractors import HindawiTextExtractor as TextExtractor
 from structlog import get_logger
 
@@ -82,6 +88,84 @@ class OUPParser(IParser):
                 extraction_function=self._get_authors,
                 default_value=[],
             ),
+            # IMPORTANT: IDK HOW WITH COLLAB
+            CustomExtractor(
+                destination="date_published",
+                extraction_function=self._get_published_date,
+                default_value="2000-00-00",
+            ),
+            CustomExtractor(
+                destination="journal_title",
+                extraction_function=self._get_journal_title,
+                default_value="Progress of Theoretical and Experimental Physics",
+            ),
+            TextExtractor(
+                destination="journal_issue",
+                source="prefix:front/prefix:article-meta/prefix:issue",
+                extra_function=lambda x: x,
+                required=False,
+                prefixes=self.prefixes,
+                default_value="",
+            ),
+            TextExtractor(
+                destination="journal_volume",
+                source="prefix:front/prefix:article-meta/prefix:volume",
+                extra_function=lambda x: x,
+                required=False,
+                prefixes=self.prefixes,
+                default_value="",
+            ),
+            TextExtractor(
+                destination="journal_artid",
+                source="prefix:front/prefix:article-meta/prefix:elocation-id",
+                extra_function=lambda x: x,
+                required=False,
+                prefixes=self.prefixes,
+                default_value="",
+            ),
+            # Different from hepcrawl, there looks like can be more than one volume, can it be (journal_year and volume are the same)?
+            TextExtractor(
+                destination="journal_year",
+                source="prefix:front/prefix:article-meta/prefix:volume",
+                extra_function=lambda x: x,
+                required=False,
+                prefixes=self.prefixes,
+                default_value="",
+            ),
+            TextExtractor(
+                destination="copyright_statement",
+                source="prefix:front/prefix:article-meta/prefix:permissions/prefix:copyright-statement",
+                extra_function=lambda x: x,
+                required=False,
+                prefixes=self.prefixes,
+                default_value="",
+            ),
+            # I cannot find holder, maybe there is none?
+            TextExtractor(
+                destination="copyright_holder",
+                source="prefix:front/prefix:article-meta/prefix:permissions/prefix:copyright-holder",
+                extra_function=lambda x: x,
+                required=False,
+                prefixes=self.prefixes,
+                default_value="",
+            ),
+            TextExtractor(
+                destination="copyright_year",
+                source="prefix:front/prefix:article-meta/prefix:permissions/prefix:copyright-year",
+                extra_function=lambda x: int(x),
+                required=False,
+                prefixes=self.prefixes,
+                default_value=2000,
+            ),
+            CustomExtractor(
+                destination="license",
+                extraction_function=self._get_license,
+                default_value=[],
+            ),
+            ConstantExtractor(
+                destination="collections",
+                constant=["Progress of Theoretical and Experimental Physics"],
+            ),
         ]
 
         super().__init__(extractors)
@@ -126,7 +210,7 @@ class OUPParser(IParser):
         arxiv_eprint = arxivs_raw.lower().replace("arxiv:", "")
         return {"value": arxiv_eprint}
 
-    def _get_authors(self, article):
+    def _get_authors(self, article: ET.Element):
         contributions = article.findall(
             "prefix:front/prefix:article-meta/prefix:contrib-group/prefix:contrib[@contrib-type='author']",
             self.prefixes,
@@ -162,3 +246,80 @@ class OUPParser(IParser):
                 }
             )
         return authors
+
+    def _get_date(self, date):
+        return datetime.date(
+            day=int(date.find("prefix:day", self.prefixes).text),
+            month=int(date.find("prefix:month", self.prefixes).text),
+            year=int(date.find("prefix:year", self.prefixes).text),
+        ).isoformat()
+
+    def _get_published_date(self, article: ET.Element):
+        print(
+            article.find(
+                "prefix:front/prefix:article-meta/prefix:pub-date/[@pub-type='epub']",
+                self.prefixes,
+            )
+        )
+        date = (
+            article.find(
+                "prefix:front/prefix:article-meta/prefix:pub-date/[@pub-type='epub']",
+                self.prefixes,
+            )
+            or article.find(
+                "prefix:front/prefix:article-meta/prefix:date/[@date-type='published']",
+                self.prefixes,
+            )
+            or article.find(
+                "prefix:front/prefix:article-meta/prefix:pub-date/[@pub-type='ppub']",
+                self.prefixes,
+            )
+            or article.find(
+                "prefix:front/prefix:article-meta/prefix:pub-date/[@pub-type='ppub']",
+                self.prefixes,
+            )
+        )
+        if date is not None:
+            return self._get_date(date)
+        else:
+            # In the worst case we return today
+            return datetime.date.today().isoformat()
+
+        # A little bit different from hepcrawl
+
+    def _get_journal_title(self, article: ET.Element):
+        journal_title = article.find(
+            "prefix:front/prefix:journal-meta/prefix:journal-title-group/prefix:journal-title",
+            self.prefixes,
+        )
+        if journal_title is not None:
+            return journal_title.text
+        journal_publisher = article.find(
+            "prefix:front/prefix:journal-meta/prefix:journal-title-group/prefix:abbrev-journal-title",
+            self.prefixes,
+        )
+        if journal_publisher is not None:
+            return journal_publisher.text
+
+    def _get_license(self, article):
+        licenses = []
+        try:
+            licenses_url_obj = article.findall(
+                "prefix:front/prefix:article-meta/prefix:permissions/prefix:license/prefix:license-p/prefix:ext-link",
+                self.prefixes,
+            )
+            print(licenses_url_obj, "KSDJKJSDK ")
+            for license_url_obj in licenses_url_obj:
+                url = license_url_obj.text
+                clean_url_parts = list(filter(bool, url.split("/")))
+                version = clean_url_parts[-1]
+                license_type = clean_url_parts[-2]
+                print(url, license_type, version)
+                licenses.append(
+                    construct_license(
+                        url=url, license_type=license_type.upper(), version=version
+                    )
+                )
+        except Exception:
+            self.logger.error("Error was raised while parsing licenses")
+        return licenses
