@@ -46,6 +46,7 @@ class AttributeExtractor(IExtractor):
         default_value=None,
         required=False,
         extra_function=lambda x: x,
+        prefixes=None,
     ) -> None:
         super().__init__(destination)
         self.destination = destination
@@ -54,10 +55,24 @@ class AttributeExtractor(IExtractor):
         self.extra_function = extra_function
         self.default_value = default_value
         self.required = required
+        self.prefixes = prefixes
+
+    def _value_with_prefix(self, article):
+        node_with_prefix = article.find(self.source, self.prefixes)
+        if node_with_prefix is not None:
+            return self.extra_function(node_with_prefix.get(self.attribute))
+
+    def _value_without_prefix(self, article):
+        return self.extra_function(article.find(self.source).get(self.attribute))
+
+    def _get_value(self, article):
+        if self.prefixes:
+            return self._value_with_prefix(article)
+        return self._value_without_prefix(article)
 
     def extract(self, article: ET.Element):
-        value = self.extra_function(article.find(self.source).get(self.attribute))
-        if value:
+        value = self._get_value(article)
+        if value is not None:
             return value
         if self.required and value is None:
             raise RequiredFieldNotFoundExtractionError(self.source)

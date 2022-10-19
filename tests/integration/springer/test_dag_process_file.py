@@ -29,7 +29,7 @@ def dag():
 
 @fixture
 def article():
-    data_dir = "./data/"
+    data_dir = "./data/springer/"
     test_file = "ftp_PUB_19-01-29_20-02-10_JHEP.zip"
 
     def extract_zip_to_article(zip_filename):
