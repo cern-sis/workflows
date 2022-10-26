@@ -146,10 +146,10 @@ class APSParser(IParser):
                 url_parts = url.split("/")
                 clean_url_parts = list(filter(bool, url_parts))
                 version = clean_url_parts.pop()
-                licencse_type = clean_url_parts.pop()
+                license_type = clean_url_parts.pop()
                 licenses.append(
                     construct_license(
-                        url=url, license_type=licencse_type.upper(), version=version
+                        url=url, license_type=license_type.upper(), version=version
                     )
                 )
             return licenses
