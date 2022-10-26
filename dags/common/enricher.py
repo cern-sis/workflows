@@ -46,7 +46,8 @@ class Enricher(object):
             return []
         if len(primary_categories) > 1:
             self.logger.error(
-                f"Arxiv returned {len(primary_categories)} primary categories."
+                "Arxiv returned multiple primary categories.",
+                categories=primary_categories,
             )
             return []
         primary_category = primary_categories[0]
@@ -85,13 +86,18 @@ class Enricher(object):
             categories = self._get_arxiv_categories_from_response_xml(xml)
             if not categories:
                 self.logger.warning(
-                    f"Could not get arxiv categories for id={arxiv_id} title={title} doi={doi}"
+                    "Could not get arxiv categories.",
+                    id=arxiv_id,
+                    title=title,
+                    doi=doi,
                 )
         else:
             self.logger.error(
-                f"Got status_code {response.status_code} "
-                f"from arXiv when looking for categires for"
-                f"id={arxiv_id} title={title} doi={doi}"
+                "Got arxiv response error.",
+                status_code=response.status_code,
+                id=arxiv_id,
+                title=title,
+                doi=doi,
             )
             response.raise_for_status()
         return categories

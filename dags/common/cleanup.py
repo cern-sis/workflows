@@ -49,10 +49,10 @@ def clean_affiliation_for_author(input):
     return clean_whitespace_characters(remove_specific_tags(cleaned_label_content))
 
 
-def clean_all_affiliations_for_author(input):
-    for affiliation in input.get("affiliations", []):
+def clean_all_affiliations_for_author(data):
+    for affiliation in data.get("affiliations", []):
         affiliation["value"] = clean_affiliation_for_author(affiliation["value"])
-    return input
+    return data
 
 
 def remove_unnecessary_fields(obj):

@@ -4,7 +4,7 @@ import boto3
 from botocore.client import Config
 
 
-def S3Service(bucket: str):
+def S3Service(bucket):
     return boto3.resource(
         "s3",
         endpoint_url=os.getenv("S3_ENDPOINT", "http://localhost:9000"),

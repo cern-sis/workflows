@@ -26,4 +26,6 @@ def set_harvesting_interval(repo, **kwargs):
 def construct_license(url, license_type, version):
     if url and license_type and version:
         return {"url": url, "license": f"CC-{license_type}-{version}"}
-    logger.error("Licence is not given, or missing arguments.")
+    logger.error(
+        "License is not given, or missing arguments.",
+    )

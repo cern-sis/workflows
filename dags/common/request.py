@@ -2,23 +2,30 @@ import logging
 
 import backoff
 import requests
+from furl import furl
 
 
 class Request:
     def __init__(
         self,
-        base_url: str = "localhost",
-        port: int = 8080,
-        parameters: dict = {},
-        headers: dict = {},
-        path_segments: list = [],
+        base_url="localhost",
+        port=8080,
+        parameters=None,
+        headers=None,
+        path_segments=None,
     ):
         self.base_url = base_url
+        if parameters is None:
+            parameters = {}
         self.parameters = parameters
+        if headers is None:
+            headers = {}
         self.headers = headers
+        if path_segments is None:
+            path_segments = []
         self.path_segments = path_segments
 
-    def __repr__(self) -> str:
+    def __repr__(self):
         return f"<RestApi base_url={self.base_url}, \
                     parameters={self.parameters}, \
                     header={self.headers}, \
@@ -28,8 +35,6 @@ class Request:
         backoff.expo, requests.exceptions.RequestException, max_time=60, max_tries=3
     )
     def get_response(self):
-        from furl import furl
-
         url_base_obj = furl(self.base_url)
         url_base_obj.path.segments = self.path_segments
         url_base_obj.add(self.parameters)

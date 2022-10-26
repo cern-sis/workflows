@@ -2,7 +2,7 @@ import datetime
 
 
 class Enhancer:
-    def __constuct_abstracts(self, item, publisher):
+    def __construct_abstracts(self, item, publisher):
         item["abstracts"] = [{"value": item.pop("abstract", ""), "source": publisher}]
 
     def __construct_acquisition_source(self, item, creation_date, publisher):
@@ -42,7 +42,7 @@ class Enhancer:
     def __call__(self, publisher, item):
         creation_date = datetime.datetime.now().isoformat()
         item_copy = item.copy()
-        self.__constuct_abstracts(item_copy, publisher)
+        self.__construct_abstracts(item_copy, publisher)
         self.__construct_acquisition_source(item_copy, creation_date, publisher)
         self.__construct_copyright(item_copy)
         self.__construct_imprints(item_copy, publisher)

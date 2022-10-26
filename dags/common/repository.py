@@ -1,6 +1,3 @@
-from typing import IO
-
-
 class IRepository:
     def get_all_raw_filenames(self):
         raise NotImplementedError
@@ -8,13 +5,13 @@ class IRepository:
     def find_all(self):
         raise NotImplementedError
 
-    def find_by_id(self, id: str):
+    def find_by_id(self, id):
         raise NotImplementedError
 
     def find_the_last_uploaded_file_date(self):
         raise NotImplementedError
 
-    def save(self, filename: str, obj: IO):
+    def save(self, filename, obj):
         raise NotImplementedError
 
     def delete_all(self):

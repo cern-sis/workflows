@@ -1,5 +1,4 @@
 from io import BytesIO
-from typing import List
 
 import pysftp
 
@@ -7,11 +6,11 @@ import pysftp
 class SFTPService:
     def __init__(
         self,
-        host: str = "localhost",
-        username: str = "airflow",
-        password: str = "airflow",
-        port: int = 2222,
-        dir: str = "/upload",
+        host="localhost",
+        username="airflow",
+        password="airflow",
+        port=2222,
+        dir="/upload",
     ):
         self.host = host
         self.username = username
@@ -19,16 +18,16 @@ class SFTPService:
         self.port = port
         self.dir = dir
 
-    def list_files(self) -> List[str]:
+    def list_files(self):
         with self.__connect() as sftp:
             return sftp.listdir()
 
-    def get_file(self, file) -> BytesIO:
+    def get_file(self, file):
         with self.__connect() as sftp:
             with sftp.open(file, "rb") as fl:
                 return BytesIO(fl.read())
 
-    def __connect(self) -> pysftp.Connection:
+    def __connect(self):
         cnopts = pysftp.CnOpts()
         cnopts.hostkeys = None
         conn = pysftp.Connection(
@@ -47,5 +46,5 @@ class SFTPService:
 
 
 class DirectoryNotFoundException(Exception):
-    def __init__(self, *args: object) -> None:
+    def __init__(self, *args):
         super().__init__(*args)

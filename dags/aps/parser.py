@@ -153,5 +153,5 @@ class APSParser(IParser):
                     )
                 )
             return licenses
-        except Exception as e:
-            self.logger.error("Error was raised while parsing licenses", e)
+        except Exception:
+            self.logger.error("Error was raised while parsing licenses.")

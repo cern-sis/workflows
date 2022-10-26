@@ -11,23 +11,23 @@ from structlog import PrintLogger
 
 
 def migrate_files(filenames, sftp: SFTPService, repo: IRepository, logger: PrintLogger):
-    logger.msg(f"Processing files : {filenames}")
+    logger.msg("Processing fils.", filenames=filenames)
     extracted_filenames = []
-    for file in filenames:
-        logger.msg(f"Getting file {file} from SFTP.")
-        file_bytes = sftp.get_file(file)
+    for _file in filenames:
+        logger.msg("Getting file from SFTP.", file=_file)
+        file_bytes = sftp.get_file(_file)
         if not zipfile.is_zipfile(file_bytes):
             logger.msg("File is not a zipfile, processing next file.")
             continue
         with zipfile.ZipFile(file_bytes) as zip:
             for zip_filename in zip.namelist():
-                file_prefix = file.split(".")[0]
+                file_prefix = _file.split(".")[0]
                 file_content = zip.read(zip_filename)
                 s3_filename = file_prefix + "/" + zip_filename
                 repo.save(s3_filename, io.BytesIO(file_content))
                 if repo.is_meta(s3_filename):
                     extracted_filenames.append("extracted/" + s3_filename)
-        repo.save(file, file_bytes)
+        repo.save(_file, file_bytes)
     return extracted_filenames
 
 
@@ -57,9 +57,9 @@ def _filenames_pull(
     filenames = filenames_pull_params["filenames"]
     force_from_ftp = filenames_pull_params["force_from_ftp"]
     if force_from_ftp:
-        logger.msg(f"Pullling specified filenames from SFTP : {filenames}")
+        logger.msg("Pulling specified filenames from SFTP", filenames=filenames)
         return migrate_files(filenames, sftp, repo, logger)
-    logger.msg(f"Processing specified filenames : {filenames}")
+    logger.msg("Processing specified filenames.", filenames=filenames)
     return _find_files_in_zip(filenames, repo)
 
 
@@ -98,15 +98,15 @@ def trigger_file_processing(
     else:
         files = list(map(lambda x: x["xml"], repo.find_all()))
     for filename in files:
-        logger.msg(f"Running processing for {filename}")
+        logger.msg("Running processing.", filename=filename)
         file_bytes = repo.find_by_id(filename)
 
         for article in article_splitter_function(file_bytes):
-            id = _generate_id(publisher)
+            _id = _generate_id(publisher)
             encoded_article = base64.b64encode(article.getvalue()).decode()
             trigger_dag.trigger_dag(
                 dag_id=f"{publisher}_process_file",
-                run_id=id,
+                run_id=_id,
                 conf={"file": encoded_article},
                 replace_microseconds=False,
             )
