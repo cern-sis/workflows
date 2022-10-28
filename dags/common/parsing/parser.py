@@ -67,7 +67,13 @@ class IParser:
                 "date_published": fix_publication_date(get("date_published")),
                 "related_article_doi": list_to_value_dict(get("related_article_doi")),
                 "free_keywords": pipe_functions(
-                    [lambda x: map(clean_whitespace_characters, x), free_keywords],
+                    [
+                        lambda keywords: map(
+                            clean_whitespace_characters,
+                            [keyword for keyword in keywords],
+                        ),
+                        free_keywords,
+                    ],
                     get("free_keywords"),
                 ),
                 "classification_numbers": classification_numbers(
