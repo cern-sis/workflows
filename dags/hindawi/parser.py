@@ -18,11 +18,9 @@ class HindawiParser(IParser):
     def __init__(self) -> None:
         self.logger = get_logger().bind(class_name=type(self).__name__)
         extractors = [
-            TextExtractor(
+            CustomExtractor(
                 destination="dois",
-                source="ns0:metadata/ns1:record/ns0:datafield/[@tag='024']/ns0:subfield/[@code='a']",
-                prefixes=self.prefixes,
-                extra_function=lambda x: [x],
+                extraction_function=self._get_doi,
                 default_value=[],
             ),
             CustomExtractor(
@@ -87,6 +85,15 @@ class HindawiParser(IParser):
             ),
         ]
         super().__init__(extractors)
+
+    def _get_doi(self, article: ET.Element):
+        doi = article.find(
+            "ns0:metadata/ns1:record/ns0:datafield/[@tag='024']/ns0:subfield/[@code='a']",
+            self.prefixes,
+        )
+        if doi is not None:
+            self.logger.info(f"Started processing article with doi {doi.text}")
+            return [doi.text]
 
     def _get_authors(self, article: ET.Element):
         authors_all = article.findall(
@@ -173,8 +180,7 @@ class HindawiParser(IParser):
         )
         for license_url, license_text in zip(license_urls, license_texts):
             if license_url.text:
-                url_parts = license_url.text.split("/")
-                clean_url_parts = list(filter(bool, url_parts))
+                clean_url_parts = list(filter(bool, license_url.text.split("/")))
                 version = clean_url_parts.pop()
                 license_type = clean_url_parts.pop()
                 licenses.append(
