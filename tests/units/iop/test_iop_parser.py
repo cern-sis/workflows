@@ -497,7 +497,3 @@ def test_get_license(parsed_articles):
     ]
     for license, article in zip(licenses, parsed_articles):
         assert article["license"] == license
-
-
-def test_nothing():
-    pass
