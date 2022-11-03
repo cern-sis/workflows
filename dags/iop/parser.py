@@ -128,12 +128,15 @@ class IOPParser(IParser):
             ".",
         ).get("article-type")
         journal_doctype = self.article_type_mapping[raw_journal_doctype]
-        if "other" in journal_doctype:
+        if journal_doctype not in self.article_type_mapping:
+            print("NOOTTT")
             doi = article.find("front/article-meta/article-id/[@pub-id-type='doi']")
             if doi is not None:
                 self.logger.msg(
                     f"There are unmapped article types for article {doi.text} with types {raw_journal_doctype}"
                 )
+            return
+        print("YAYAYAY")
         return journal_doctype
 
     def _get_related_article_doi(self, article):

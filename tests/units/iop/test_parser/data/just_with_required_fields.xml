@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "JATS-journalpublishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="other" dtd-version="1.1" xml:lang="en">
+    <front>
+        <journal-meta>
+            <journal-id journal-id-type="publisher-id">cpc</journal-id>
+            <journal-title-group>
+                <journal-title xml:lang="en">Chinese Physics C</journal-title>
+            </journal-title-group>
+            <issn pub-type="ppub">1674-1137</issn>
+            <publisher>
+                <publisher-name>Chinese Physical Society and the Institute of High Energy Physics of the Chinese Academy of Sciences and the Institute of Modern Physics of the Chinese Academy of Sciences and IOP Publishing Ltd</publisher-name>
+            </publisher>
+        </journal-meta>
+        <article-meta>
+            <article-id pub-id-type="publisher-id">cpc_46_8_085001</article-id>
+            <article-id pub-id-type="doi">10.1088/1674-1137/ac66cc</article-id>
+            <article-id pub-id-type="manuscript">ac66cc</article-id>
+            <article-categories>
+                <subj-group subj-group-type="display-article-type">
+                    <subject>Paper</subject>
+                </subj-group>
+                <subj-group subj-group-type="section">
+                    <subject>Particle and nuclear astrophysics and cosmology</subject>
+                </subj-group>
+            </article-categories>
+            <title-group>
+                <article-title>
+                    Measurement of muon-induced neutron yield at the China Jinping Underground Laboratory
+                    <xref ref-type="fn" rid="cpc_46_8_085001_fn1">*</xref>
+                    <fn id="cpc_46_8_085001_fn1">
+                        <label>*</label>
+                        <p>Supported in part by the National Natural Science Foundation of China (11620101004, 11475093, 12127808), the Key Laboratory of Particle &amp; Radiation Imaging (TsinghuaUniversity), the CAS Center for Excellence in Particle Physics (CCEPP), and Guangdong Basic and Applied Basic Research Foundation (2019A1515012216). Portion of this work performed at Brookhaven National Laboratory is supported in part by the United States Department of Energy (DE-SC0012704)</p>
+                    </fn>
+                </article-title>
+            </title-group>
+            <contrib-group>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Zhao</surname>
+                        <given-names>Lin</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>赵</surname>
+                        <given-names>林</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation01">1</xref>
+                    <xref ref-type="aff" rid="affiliation02">2</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Luo</surname>
+                        <given-names>Wentai</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>骆</surname>
+                        <given-names>文泰</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation06">6</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Bathe-Peters</surname>
+                        <given-names>Lars</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation01">1</xref>
+                    <xref ref-type="aff" rid="affiliation04">4</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Chen</surname>
+                        <given-names>Shaomin</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>陈</surname>
+                        <given-names>少敏</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation01">1</xref>
+                    <xref ref-type="aff" rid="affiliation02">2</xref>
+                    <xref ref-type="aff" rid="affiliation03">3</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Chouaki</surname>
+                        <given-names>Mourad</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation01">1</xref>
+                    <xref ref-type="aff" rid="affiliation05">5</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Dou</surname>
+                        <given-names>Wei</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>窦</surname>
+                        <given-names>威</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation01">1</xref>
+                    <xref ref-type="aff" rid="affiliation02">2</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Guo</surname>
+                        <given-names>Lei</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>郭</surname>
+                        <given-names>磊</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation01">1</xref>
+                    <xref ref-type="aff" rid="affiliation02">2</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Guo</surname>
+                        <given-names>Ziyi</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>郭</surname>
+                        <given-names>子溢</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation01">1</xref>
+                    <xref ref-type="aff" rid="affiliation02">2</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Hussain</surname>
+                        <given-names>Ghulam</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation01">1</xref>
+                    <xref ref-type="aff" rid="affiliation02">2</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Li</surname>
+                        <given-names>Jinjing</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>李</surname>
+                        <given-names>进京</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation01">1</xref>
+                    <xref ref-type="aff" rid="affiliation02">2</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Liang</surname>
+                        <given-names>Ye</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>梁</surname>
+                        <given-names>晔</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation01">1</xref>
+                    <xref ref-type="aff" rid="affiliation02">2</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Liu</surname>
+                        <given-names>Qian</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>刘</surname>
+                        <given-names>倩</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation06">6</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Luo</surname>
+                        <given-names>Guang</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>罗</surname>
+                        <given-names>光</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation07">7</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Qi</surname>
+                        <given-names>Ming</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>祁</surname>
+                        <given-names>鸣</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation08">8</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Shao</surname>
+                        <given-names>Wenhui</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>邵</surname>
+                        <given-names>文辉</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation01">1</xref>
+                    <xref ref-type="aff" rid="affiliation02">2</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Tang</surname>
+                        <given-names>Jian</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>唐</surname>
+                        <given-names>健</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation07">7</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Wan</surname>
+                        <given-names>Linyan</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>万</surname>
+                        <given-names>林焱</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation01">1</xref>
+                    <xref ref-type="aff" rid="affiliation02">2</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Wang</surname>
+                        <given-names>Zhe</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>王</surname>
+                        <given-names>喆</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation01">1</xref>
+                    <xref ref-type="aff" rid="affiliation02">2</xref>
+                    <xref ref-type="aff" rid="affiliation03">3</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Wu</surname>
+                        <given-names>Yiyang</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>武</surname>
+                        <given-names>益阳</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation01">1</xref>
+                    <xref ref-type="aff" rid="affiliation02">2</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Xu</surname>
+                        <given-names>Benda</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>续</surname>
+                        <given-names>本达</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation01">1</xref>
+                    <xref ref-type="aff" rid="affiliation02">2</xref>
+                    <xref ref-type="aff" rid="affiliation03">3</xref>
+                    <email>orv@tsinghua.edu.cn</email>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Xu</surname>
+                        <given-names>Tong</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>徐</surname>
+                        <given-names>彤</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation01">1</xref>
+                    <xref ref-type="aff" rid="affiliation02">2</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Xu</surname>
+                        <given-names>Weiran</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>徐</surname>
+                        <given-names>蔚然</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation01">1</xref>
+                    <xref ref-type="aff" rid="affiliation02">2</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Yang</surname>
+                        <given-names>Yuzi</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>杨</surname>
+                        <given-names>玉梓</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation01">1</xref>
+                    <xref ref-type="aff" rid="affiliation02">2</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Yeh</surname>
+                        <given-names>Minfang</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation09">9</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Zhang</surname>
+                        <given-names>Aiqiang</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>张</surname>
+                        <given-names>爱强</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation01">1</xref>
+                    <xref ref-type="aff" rid="affiliation02">2</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname>Zhang</surname>
+                        <given-names>Bin</given-names>
+                    </name>
+                    <name content-type="non-latin-no-space" name-style="eastern">
+                        <surname>张</surname>
+                        <given-names>彬</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="affiliation01">1</xref>
+                    <xref ref-type="aff" rid="affiliation02">2</xref>
+                </contrib>
+                <contrib contrib-type="author" xlink:type="simple">
+                    <name name-style="western">
+                        <surname />
+                        <given-names>(JNE collaboration)</given-names>
+                    </name>
+                </contrib>
+                <aff id="affiliation01">
+                    <label>1</label>
+
+                    <institution xlink:type="simple">Department of Engineering Physics, Tsinghua University</institution>
+                    , Beijing 100084,
+                    <country>China</country>
+                </aff>
+                <aff id="affiliation02">
+                    <label>2</label>
+
+                    <institution xlink:type="simple">Center for High Energy Physics, Tsinghua University</institution>
+                    , Beijing 100084,
+                    <country>China</country>
+                </aff>
+                <aff id="affiliation03">
+                    <label>3</label>
+
+                    <institution xlink:type="simple">Key Laboratory of Particle &amp; Radiation Imaging (Tsinghua University)</institution>
+                    , Ministry of Education,
+                    <country>China</country>
+                </aff>
+                <aff id="affiliation04">
+                    <label>4</label>
+
+                    <institution xlink:type="simple">Institut für Physik, Technische Universität Berlin</institution>
+                    , Berlin 10623,
+                    <country>Germany</country>
+                </aff>
+                <aff id="affiliation05">
+                    <label>5</label>
+
+                    <institution xlink:type="simple">École Polytechnique Fédérale de Lausanne</institution>
+                    , Lausanne 1015,
+                    <country>Switzerland</country>
+                </aff>
+                <aff id="affiliation06">
+                    <label>6</label>
+
+                    <institution xlink:type="simple">School of Physical Sciences, University of Chinese Academy of Sciences</institution>
+                    , Beijing 100049,
+                    <country>China</country>
+                </aff>
+                <aff id="affiliation07">
+                    <label>7</label>
+
+                    <institution xlink:type="simple">School of Physics, Sun Yat-Sen University</institution>
+                    , Guangzhou 510275,
+                    <country>China</country>
+                </aff>
+                <aff id="affiliation08">
+                    <label>8</label>
+
+                    <institution xlink:type="simple">School of Physics, Nanjing University</institution>
+                    , Nanjing 210093,
+                    <country>China</country>
+                </aff>
+                <aff id="affiliation09">
+                    <label>9</label>
+
+                    <institution xlink:type="simple">Brookhaven National Laboratory, Upton</institution>
+                    , New York 11973,
+                    <country>USA</country>
+                </aff>
+            </contrib-group>
+            <permissions>
+                <copyright-statement>© 2022 Chinese Physical Society and the Institute of High Energy Physics of the Chinese Academy of Sciences and the Institute of Modern Physics of the Chinese Academy of Sciences and IOP Publishing Ltd</copyright-statement>
+                <copyright-year>2022</copyright-year>
+                <license license-type="cc-by" xlink:href="http://creativecommons.org/licenses/by/3.0/" xlink:type="simple">
+                    <license-p>
+                        <graphic content-type="online" orientation="portrait" position="float" xlink:href="cpc_46_8_085001_ccby.tif" xlink:type="simple" />
+                        Content from this work may be used under the terms of the
+                        <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/3.0" xlink:type="simple">Creative Commons Attribution 3.0 licence</ext-link>
+                        . Any further distribution of this work must maintain attribution to the author(s) and the title of the work, journal citation and DOI. Article funded by SCOAP
+                        <sup>3</sup>
+                        and published under licence by Chinese Physical Society and the Institute of High Energy Physics of the Chinese Academy of Sciences and the Institute of Modern Physics of the Chinese Academy of Sciences and IOP Publishing Ltd
+                    </license-p>
+                </license>
+            </permissions>
+            <self-uri content-type="pdf" xlink:href="cpc_46_8_085001.pdf" xlink:type="simple" />
+            <abstract>
+                <title>Abstract</title>
+                <p>
+                    Solar, terrestrial, and supernova neutrino experiments are subject to muon-induced radioactive background. The China Jinping Underground Laboratory (CJPL), with its unique advantage of a 2400 m rock coverage and long distance from nuclear power plants, is ideal for MeV-scale neutrino experiments. Using a 1-ton prototype detector of the Jinping Neutrino Experiment (JNE), we detected 343 high-energy cosmic-ray muons and (7.86
+                    <inline-formula>
+                        <tex-math>
+                            <?CDATA $ \pm $?>
+                        </tex-math>
+                        <inline-graphic xlink:href="cpc_46_8_085001_M1.jpg" xlink:type="simple" />
+                    </inline-formula>
+                    3.97) muon-induced neutrons from an 820.28-day dataset at the first phase of CJPL (CJPL-I). Based on the muon-induced neutrons, we measured the corresponding muon-induced neutron yield in a liquid scintillator to be
+                    <inline-formula>
+                        <tex-math>
+                            <?CDATA $(3.44 \pm 1.86_{\rm stat.}\pm $?>
+                        </tex-math>
+                        <inline-graphic xlink:href="cpc_46_8_085001_M2.jpg" xlink:type="simple" />
+                    </inline-formula>
+                    <inline-formula>
+                        <tex-math>
+                            <?CDATA $ 0.76_{\rm syst.})\times 10^{-4}$?>
+                        </tex-math>
+                        <inline-graphic xlink:href="cpc_46_8_085001_M2-1.jpg" xlink:type="simple" />
+                    </inline-formula>
+                    μ
+                    <sup>−1</sup>
+                    g
+                    <sup>−1</sup>
+                    cm
+                    <sup>2</sup>
+                    at an average muon energy of 340 GeV. We provided the first study for such neutron background at CJPL. A global fit including this measurement shows a power-law coefficient of (0.75
+                    <inline-formula>
+                        <tex-math>
+                            <?CDATA $ \pm $?>
+                        </tex-math>
+                        <inline-graphic xlink:href="cpc_46_8_085001_M3.jpg" xlink:type="simple" />
+                    </inline-formula>
+                    0.02) for the dependence of the neutron yield at the liquid scintillator on muon energy.
+                </p>
+            </abstract>
+        </article-meta>
+    </front>
+</article>
