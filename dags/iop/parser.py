@@ -4,10 +4,9 @@ import xml.etree.ElementTree as ET
 
 from common.parsing.parser import IParser
 from common.parsing.xml_extractors import AttributeExtractor, CustomExtractor
+from common.utils import get_text_value
 from hindawi.xml_extractors import HindawiTextExtractor as TextExtractor
 from structlog import get_logger
-
-# FIXME used Hindawi xml extractor, because it has mathlib string handling
 
 
 class IOPParser(IParser):
@@ -22,10 +21,10 @@ class IOPParser(IParser):
             "editorial": "editorial",
         }
         extractors = [
-            TextExtractor(
+            CustomExtractor(
                 destination="dois",
-                source="front/article-meta/article-id/[@pub-id-type='doi']",
-                extra_function=lambda x: [x],
+                extraction_function=self._get_dois,
+                required=True,
                 default_value=[],
             ),
             CustomExtractor(
@@ -72,6 +71,7 @@ class IOPParser(IParser):
             CustomExtractor(
                 destination="authors",
                 extraction_function=self._get_affiliations,
+                required=True,
                 default_value=[],
             ),
             CustomExtractor(
@@ -91,13 +91,6 @@ class IOPParser(IParser):
                 default_value="2000-00-00",
             ),
             TextExtractor(
-                destination="copyright_holder",
-                source="front/article-meta/permissions/copyright-holder",
-                required=False,  # copyright is required
-                extra_function=lambda x: x,
-                default_value="",
-            ),
-            TextExtractor(
                 destination="copyright_year",
                 source="front/article-meta/permissions/copyright-year",
                 extra_function=lambda x: x,
@@ -115,8 +108,20 @@ class IOPParser(IParser):
                 required=True,
                 default_value=[],
             ),
+            CustomExtractor(
+                destination="collaborations",
+                extraction_function=self._get_collaborations,
+                required=True,
+                default_value=[],
+            ),
         ]
         super().__init__(extractors)
+
+    def _get_dois(self, article: ET.Element):
+        dois_raw = article.find("front/article-meta/article-id/[@pub-id-type='doi']")
+        if dois_raw is not None:
+            self.logger.msg(f"Starting to parse article with doi {dois_raw.text}")
+            return [dois_raw.text]
 
     def _get_journal_doctype(self, article: ET.Element):
         raw_journal_doctype = article.find(
@@ -125,9 +130,10 @@ class IOPParser(IParser):
         journal_doctype = self.article_type_mapping[raw_journal_doctype]
         if "other" in journal_doctype:
             doi = article.find("front/article-meta/article-id/[@pub-id-type='doi']")
-            self.logger.msg(
-                f"There are unmapped article types for article {doi} with types {raw_journal_doctype}"
-            )
+            if doi is not None:
+                self.logger.msg(
+                    f"There are unmapped article types for article {doi.text} with types {raw_journal_doctype}"
+                )
         return journal_doctype
 
     def _get_related_article_doi(self, article):
@@ -140,26 +146,34 @@ class IOPParser(IParser):
         arxiv_eprints = []
         arxivs_value = article.find(
             "front/article-meta/custom-meta-group/custom-meta/meta-value"
-        ).text.lower()
-        pattern = re.compile(r"(arxiv:|v[0-9]$)", flags=re.I)
-        arxiv_eprints.append({"value": pattern.sub("", arxivs_value)})
+        )
+        if arxivs_value is not None:
+            pattern = re.compile(r"(arxiv:|v[0-9]$)", flags=re.I)
+            arxiv_eprints.append({"value": pattern.sub("", arxivs_value.text.lower())})
         return arxiv_eprints
 
-    def _get_institutions(self, article, reffered_id):
-        return article.findall(
+    def _get_institution(self, article, reffered_id):
+        raw_insitution = article.find(
             f"front/article-meta/contrib-group/aff[@id='{reffered_id.get('rid')}']/institution"
         )
+        return get_text_value(raw_insitution)
 
-    def _get_countries(self, article, reffered_id):
-        return article.findall(
+    def _get_countrry(self, article, reffered_id):
+        raw_country = article.find(
             f"front/article-meta/contrib-group/aff[@id='{reffered_id.get('rid')}']/country"
         )
+        return get_text_value(raw_country)
 
-    def _get_affiliation_values(self, institutions, countries):
+    def _get_affiliation_values(self, article, reffered_ids):
+        institutions = []
+        countries = []
+        for reffered_id in reffered_ids:
+            institutions.append(self._get_institution(article, reffered_id))
+            countries.append(self._get_countrry(article, reffered_id))
         return [
             {
-                "value": ",".join([institution.text, country.text]),
-                "country": country.text,
+                "value": ",".join([institution, country]),
+                "country": country,
             }
             for institution, country in zip(institutions, countries)
         ]
@@ -170,20 +184,23 @@ class IOPParser(IParser):
         )
         authors = []
         for contrib_type in contrib_types:
-            surname = contrib_type.find("name/surname").text
-            given_names = contrib_type.find("name/given-names").text
-            reffered_id = contrib_type.find("xref[@ref-type='aff']")
-            if reffered_id is None:
+            surname = get_text_value(contrib_type.find("name/surname"))
+            given_names = get_text_value(contrib_type.find("name/given-names"))
+            reffered_ids = [
+                reffered_id
+                for reffered_id in contrib_type.findall("xref[@ref-type='aff']")
+                if reffered_id is not None
+            ]
+            if reffered_ids is None:
                 continue
-            institutions = self._get_institutions(article, reffered_id)
-            countries = self._get_countries(article, reffered_id)
-            affiliations = self._get_affiliation_values(institutions, countries)
-            author = {
-                "surname": surname,
-                "given_names": given_names,
-                "affiliations": affiliations,
-            }
-            authors.append(author)
+            affiliations = self._get_affiliation_values(article, reffered_ids)
+            if "collaboration" not in given_names.lower():
+                author = {
+                    "surname": surname,
+                    "given_names": given_names,
+                    "affiliations": affiliations,
+                }
+                authors.append(author)
         return authors
 
     def _get_date(self, date):
@@ -200,7 +217,8 @@ class IOPParser(IParser):
             or article.find("front/article-meta/history/pub-date[@pub-type='ppub']")
             or article.find("front/article-meta/pub-date")
         )
-        if date:
+
+        if date is not None:
             return self._get_date(date)
         return datetime.date.today().isoformat()
 
@@ -234,21 +252,37 @@ class IOPParser(IParser):
                 licenses.append(
                     self._construct_license(license_url, license_type.upper(), version)
                 )
-            elif license_text.text:
+            elif get_text_value(license_text):
                 licenses.append(license_text.text)
         return licenses
 
     def _get_publication_info(self, article):
+        journal_title = article.find(
+            "front/journal-meta/journal-title-group/journal-title",
+        )
+        journal_volume = article.find(
+            "front/article-meta/volume",
+        )
+        journal_year = self._get_journal_year(article)
+        journal_issue = article.find("front/article-meta/issue")
+        journal_artid = article.find("front/article-meta/elocation-id")
         return [
             {
-                "journal_title": article.find(
-                    "front/journal-meta/journal-title-group/journal-title",
-                ).text,
-                "journal_volume": article.find(
-                    "front/article-meta/volume",
-                ).text,
-                "journal_year": self._get_journal_year(article),
-                "journal_issue": article.find("front/article-meta/issue").text,
-                "journal_artid": article.find("front/article-meta/elocation-id").text,
+                "journal_title": get_text_value(journal_title),
+                "journal_volume": get_text_value(journal_volume),
+                "journal_year": int(journal_year),
+                "journal_issue": get_text_value(journal_issue),
+                "journal_artid": get_text_value(journal_artid),
             }
         ]
+
+    def _get_collaborations(self, article: ET.Element):
+        contrib_types = article.findall(
+            "front/article-meta/contrib-group/contrib[@contrib-type='author']"
+        )
+        collaborations = []
+        for contrib_type in contrib_types:
+            given_names = get_text_value(contrib_type.find("name/given-names"))
+            if "collaboration" in given_names.lower():
+                collaborations.append(given_names)
+        return collaborations

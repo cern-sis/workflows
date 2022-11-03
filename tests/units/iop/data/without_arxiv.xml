@@ -1,0 +1,3752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "JATS-journalpublishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="1.1" xml:lang="en">
+	<front>
+		<journal-meta>
+			<journal-id journal-id-type="publisher-id">cpc</journal-id>
+			<journal-title-group>
+				<journal-title xml:lang="en">Chinese Physics C</journal-title>
+			</journal-title-group>
+			<issn pub-type="ppub">1674-1137</issn>
+			<publisher>
+				<publisher-name>Chinese Physical Society and the Institute of High Energy Physics of the Chinese Academy of Sciences and the Institute of Modern Physics of the Chinese Academy of Sciences and IOP Publishing Ltd</publisher-name>
+			</publisher>
+		</journal-meta>
+		<article-meta>
+			<article-id pub-id-type="publisher-id">cpc_46_9_093112</article-id>
+			<article-id pub-id-type="doi">10.1088/1674-1137/ac7547</article-id>
+			<article-id pub-id-type="manuscript">ac7547</article-id>
+			<article-categories>
+				<subj-group subj-group-type="display-article-type">
+					<subject>Paper</subject>
+				</subj-group>
+				<subj-group subj-group-type="section">
+					<subject>Particles and fields</subject>
+				</subj-group>
+			</article-categories>
+			<title-group>
+				<article-title>
+					Exploring fermionic multiplet dark matter through precision measurements at the CEPC
+					<xref ref-type="fn" rid="cpc_46_9_093112_fn1">*</xref>
+					<fn id="cpc_46_9_093112_fn1">
+						<label>*</label>
+						<p>The work of LQG and XJB is Supported by the National Natural Science Foundation of China (12175248); The work of JWW is Supported by the research grant "the Dark Universe: A Synergic Multi-messenger Approach" number (2017X7X85K) under the program PRIN 2017 funded by the Ministero dell'Istruzione, Universitàe della Ricerca (MIUR)</p>
+					</fn>
+				</article-title>
+			</title-group>
+			<contrib-group>
+				<contrib contrib-type="author" xlink:type="simple">
+					<name name-style="western">
+						<surname>Gao</surname>
+						<given-names>Lin-Qing</given-names>
+					</name>
+					<name content-type="non-latin-no-space" name-style="eastern">
+						<surname>高</surname>
+						<given-names>林青</given-names>
+					</name>
+					<xref ref-type="aff" rid="affiliation01">1</xref>
+					<xref ref-type="aff" rid="affiliation02">2</xref>
+					<email>gaolq@ihep.ac.cn</email>
+				</contrib>
+				<contrib contrib-type="author" xlink:type="simple">
+					<name name-style="western">
+						<surname>Bi</surname>
+						<given-names>Xiao-Jun</given-names>
+					</name>
+					<name content-type="non-latin-no-space" name-style="eastern">
+						<surname>毕</surname>
+						<given-names>效军</given-names>
+					</name>
+					<xref ref-type="aff" rid="affiliation01">1</xref>
+					<xref ref-type="aff" rid="affiliation02">2</xref>
+					<email>bixj@ihep.ac.cn</email>
+				</contrib>
+				<contrib contrib-type="author" xlink:type="simple">
+					<name name-style="western">
+						<surname>Wang</surname>
+						<given-names>Jin-Wei</given-names>
+					</name>
+					<name content-type="non-latin-no-space" name-style="eastern">
+						<surname>王</surname>
+						<given-names>金伟</given-names>
+					</name>
+					<xref ref-type="aff" rid="affiliation03">3</xref>
+					<xref ref-type="aff" rid="affiliation04">4</xref>
+					<xref ref-type="aff" rid="affiliation05">5</xref>
+					<email>jinwei.wang@sissa.it</email>
+				</contrib>
+				<contrib contrib-type="author" xlink:type="simple">
+					<name name-style="western">
+						<surname>Xiang</surname>
+						<given-names>Qian-Fei</given-names>
+					</name>
+					<name content-type="non-latin-no-space" name-style="eastern">
+						<surname>向</surname>
+						<given-names>仟飞</given-names>
+					</name>
+					<xref ref-type="aff" rid="affiliation06">6</xref>
+					<email>xiangqf@pku.edu.cn</email>
+				</contrib>
+				<contrib contrib-type="author" xlink:type="simple">
+					<name name-style="western">
+						<surname>Yin</surname>
+						<given-names>Peng-Fei</given-names>
+					</name>
+					<name content-type="non-latin-no-space" name-style="eastern">
+						<surname>殷</surname>
+						<given-names>鹏飞</given-names>
+					</name>
+					<xref ref-type="aff" rid="affiliation01">1</xref>
+					<email>yinpf@ihep.ac.cn</email>
+				</contrib>
+				<aff id="affiliation01">
+					<label>1</label>
+
+					<institution xlink:type="simple">Key Laboratory of Particle Astrophysics, Institute of High Energy Physics, Chinese Academy of Sciences</institution>
+					, Beijing 100049,
+					<country>China</country>
+				</aff>
+				<aff id="affiliation02">
+					<label>2</label>
+
+					<institution xlink:type="simple">School of Physical Sciences, University of Chinese Academy of Sciences</institution>
+					, Beijing 100049,
+					<country>China</country>
+				</aff>
+				<aff id="affiliation03">
+					<label>3</label>
+
+					<institution xlink:type="simple">Scuola Internazionale Superiore di Studi Avanzati (SISSA), via Bonomea 265</institution>
+					, 34136 Trieste,
+					<country>Italy</country>
+				</aff>
+				<aff id="affiliation04">
+					<label>4</label>
+
+					<institution xlink:type="simple">INFN, Sezione di Trieste, via Valerio 2</institution>
+					, 34127 Trieste,
+					<country>Italy</country>
+				</aff>
+				<aff id="affiliation05">
+					<label>5</label>
+
+					<institution xlink:type="simple">Institute for Fundamental Physics of the Universe (IFPU), via Beirut 2</institution>
+					, 34151 Trieste,
+					<country>Italy</country>
+				</aff>
+				<aff id="affiliation06">
+					<label>6</label>
+
+					<institution xlink:type="simple">Center for High Energy Physics, Peking University</institution>
+					, Beijing 100871,
+					<country>China</country>
+				</aff>
+			</contrib-group>
+			<pub-date pub-type="ppub">
+				<day>01</day>
+				<month>9</month>
+				<year>2022</year>
+			</pub-date>
+			<pub-date pub-type="open-access">
+				<day>19</day>
+				<month>7</month>
+				<year>2022</year>
+			</pub-date>
+			<volume>46</volume>
+			<issue>9</issue>
+			<elocation-id content-type="artnum">093112</elocation-id>
+			<history>
+				<date date-type="received">
+					<day>17</day>
+					<month>2</month>
+					<year>2022</year>
+				</date>
+				<date date-type="published-online">
+					<day>19</day>
+					<month>7</month>
+					<year>2022</year>
+				</date>
+				<date date-type="oa-requested">
+					<day>17</day>
+					<month>2</month>
+					<year>2022</year>
+				</date>
+			</history>
+			<permissions>
+				<copyright-statement>© 2022 Chinese Physical Society and the Institute of High Energy Physics of the Chinese Academy of Sciences and the Institute of Modern Physics of the Chinese Academy of Sciences and IOP Publishing Ltd</copyright-statement>
+				<copyright-year>2022</copyright-year>
+				<license license-type="cc-by" xlink:href="http://creativecommons.org/licenses/by/3.0/" xlink:type="simple">
+					<license-p>
+						<graphic content-type="online" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_ccby.tif" xlink:type="simple" />
+						Content from this work may be used under the terms of the
+						<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/3.0" xlink:type="simple">Creative Commons Attribution 3.0 licence</ext-link>
+						. Any further distribution of this work must maintain attribution to the author(s) and the title of the work, journal citation and DOI. Article funded by SCOAP
+						<sup>3</sup>
+						and published under licence by Chinese Physical Society and the Institute of High Energy Physics of the Chinese Academy of Sciences and the Institute of Modern Physics of the Chinese Academy of Sciences and IOP Publishing Ltd
+					</license-p>
+				</license>
+			</permissions>
+			<self-uri content-type="pdf" xlink:href="cpc_46_9_093112.pdf" xlink:type="simple" />
+			<abstract>
+				<title>Abstract</title>
+				<p>
+					New physics could be explored through loop effects using the precision measurements at the Circular Electron Positron Collider (CEPC) owing to its clean collision environment and high luminosity. In this paper, we focus on two dark matter models that involve additional electroweak fermionic multiplets. We calculate their one-loop corrections in five processes, i.e.,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ e^+e^- \to \mu^+\mu^-, \; Zh, \; W^+W^-, \; ZZ $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M1.jpg" xlink:type="simple" />
+					</inline-formula>
+					, and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ Z\gamma $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M2.jpg" xlink:type="simple" />
+					</inline-formula>
+					, and investigate the corresponding signatures at the CEPC with the projected sensitivity. We observe that the detectable parameter regions of these processes are complementary. The combined analysis shows that the mass of dark matter
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_{\chi^0_1} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M3.jpg" xlink:type="simple" />
+					</inline-formula>
+					in these two models can be probed up to
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \sim 150\; {\rm{GeV}} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M4.jpg" xlink:type="simple" />
+					</inline-formula>
+					and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \sim 450 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M5.jpg" xlink:type="simple" />
+					</inline-formula>
+					GeV, respectively, at a 95% confidence level.
+				</p>
+			</abstract>
+			<kwd-group kwd-group-type="author">
+				<kwd>CEPC</kwd>
+				<kwd>dark matter</kwd>
+				<kwd>loop correction</kwd>
+			</kwd-group>
+			<funding-group>
+				<open-access>
+					<p content-type="scoap3">
+						Article funded by SCOAP
+						<sup>3</sup>
+					</p>
+				</open-access>
+			</funding-group>
+			<counts>
+				<page-count count="14" />
+			</counts>
+		</article-meta>
+	</front>
+	<body>
+		<sec id="cpc_46_9_093112_s01">
+			<label>I.</label>
+			<title>INTRODUCTION</title>
+			<p>
+				The discovery of the Higgs boson at the Large Hadron Collider (LHC) marked a significant success for the standard model (SM) of particle physics [
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib1">1</xref>
+				,
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib2">2</xref>
+				]. However, the existence of dark matter (DM), which has been revealed by many astrophysical and cosmological observations, clearly shows that the SM is not a complete theory and the new physics (NP) beyond the SM must exist [
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib3">3</xref>
+				,
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib4">4</xref>
+				]. Under the assumption that DM is an unknown particle, its properties would be effectively detected at colliders, particularly when its mass is smaller than the center of mass energy of the collider. If this is not the case, the properties of DM might also be investigated through the loop effects at the proposed electron-positron colliders owing to their high precision, such as the Circular Electron Positron Collider (CEPC) [
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib5">5</xref>
+				], Future Circular Collider [
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib6">6</xref>
+				], and International Linear Collider [
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib7">7</xref>
+				].
+			</p>
+			<p>
+				Among various DM candidates proposed in the literature, weakly interacting massive particles (WIMPs) are very compelling because they can naturally explain the DM relic density (dubbed WIMP miracle). It is natural to construct a WIMP model by introducing a dark sector containing electroweak (EW)
+				<inline-formula>
+					<tex-math>
+						<?CDATA ${S U}(2)_L$?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M6.jpg" xlink:type="simple" />
+				</inline-formula>
+				multiplets, such as the minimal DM model [
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib8">8</xref>
+				], which involves one nontrivial
+				<inline-formula>
+					<tex-math>
+						<?CDATA ${S U}(2)_L$?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M7.jpg" xlink:type="simple" />
+				</inline-formula>
+				multiplet and is considered the minimal extension. In this paper, we focus on a type of DM model that contains more than one EW multiplet:
+			</p>
+			<p>
+				● Singlet-doublet fermionic dark matter (SDFDM) model: the dark sector involves one singlet Weyl spinor and two doublet Weyl spinors [
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib9">9</xref>
+				–
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib13">13</xref>
+				];
+			</p>
+			<p>
+				● Doublet-triplet fermionic dark matter (DTFDM) model: the dark sector involves two doublet Weyl spinors and one triplet Weyl spinor [
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib11">11</xref>
+				–
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib14">14</xref>
+				].
+			</p>
+			<p>
+				Because the even dimensional representation of the
+				<inline-formula>
+					<tex-math>
+						<?CDATA $S U(2)$?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M8.jpg" xlink:type="simple" />
+				</inline-formula>
+				group is pseudoreal, two doublet Weyl spinors are introduced to generate the corresponding mass terms. After EW symmetry breaking (EWSB), the Yukawa terms result in mixing between these multiplets. Specifically, the SDFDM (DTFDM) model contains three neutral Majorana fermions and one (two) charged fermions. With a discrete
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ Z_2 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M9.jpg" xlink:type="simple" />
+				</inline-formula>
+				symmetry, the lightest Majorana fermion is stable and can be the DM candidate. Considering the possible couplings between dark sector particles and the gauge bosons (e.g.,
+				<italic toggle="yes">W</italic>
+				,
+				<italic toggle="yes">Z</italic>
+				, and
+				<italic toggle="yes">γ</italic>
+				) or Higgs boson, the CEPC is an ideal tool to explore these models because of its accurate measurement and large luminosity.
+			</p>
+			<p>
+				According to it operation plan [
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib5">5</xref>
+				], the CEPC will operate in three possible modes: the Higgs factory,
+				<italic toggle="yes">Z</italic>
+				factory, and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ WW $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M10.jpg" xlink:type="simple" />
+				</inline-formula>
+				threshold scan. For the Higgs factory period, the CEPC will run at
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \sqrt{s}=240 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M11.jpg" xlink:type="simple" />
+				</inline-formula>
+				GeV for
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ e^+ e^- \to Z h $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M12.jpg" xlink:type="simple" />
+				</inline-formula>
+				production, and the total integrated luminosity can reach
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \sim 5.6\; {{\rm{ab}}}^{-1} $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M13.jpg" xlink:type="simple" />
+				</inline-formula>
+				[
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib5">5</xref>
+				]. As a result, the CEPC can collect
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \sim 10^6 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M14.jpg" xlink:type="simple" />
+				</inline-formula>
+				Higgs bosons,
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \sim 10^7 \mu^+\mu^- $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M15.jpg" xlink:type="simple" />
+				</inline-formula>
+				events,
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \sim 3 \times 10^6 ZZ $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M16.jpg" xlink:type="simple" />
+				</inline-formula>
+				events,
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \sim 5 \times 10^7 W^+ W^- $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M17.jpg" xlink:type="simple" />
+				</inline-formula>
+				events, and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \sim5\times 10^7 Z\gamma $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M18.jpg" xlink:type="simple" />
+				</inline-formula>
+				events. With such many events, the sensitivities of these channels at the CEPC could reach a sub-percentage level. Therefore, the hint of NP could be detected through the loop order processes [
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib12">12</xref>
+				,
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib15">15</xref>
+				–
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib21">21</xref>
+				]. Some recent studies have investigated such effects in the Higgs decay [
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib22">22</xref>
+				,
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib23">23</xref>
+				], EW oblique parameters [
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib11">11</xref>
+				,
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib24">24</xref>
+				],
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ e^+ e^- \to W^+ W^- $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M19.jpg" xlink:type="simple" />
+				</inline-formula>
+				[
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib25">25</xref>
+				,
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib26">26</xref>
+				],
+				<inline-formula>
+					<tex-math>
+						<?CDATA $e^+ e^- \to \mu^+ \mu^-$?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M20.jpg" xlink:type="simple" />
+				</inline-formula>
+				[
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib27">27</xref>
+				–
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib29">29</xref>
+				], etc.
+			</p>
+			<p>
+				In our paper, we investigate the loop effects of the SDFDM and DTFDM models at the CEPC with
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \sqrt{s}= 240 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M21.jpg" xlink:type="simple" />
+				</inline-formula>
+				GeV through five processes:
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ e^+e^- \to \mu^+ \mu^-, \; Zh, \; W^+W^-, \; ZZ $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M22.jpg" xlink:type="simple" />
+				</inline-formula>
+				, and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ Z \gamma $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M23.jpg" xlink:type="simple" />
+				</inline-formula>
+				. We calculate the deviations of the cross sections of these processes that are induced by the NP sector at one-loop level and provide the combined CEPC constraints at the 95% confidence level. The results show that the constraints of these five processes can be complementary to each other in some parameter regions. Note that the process of
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ e^+e^- \to Zh $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M24-5.jpg" xlink:type="simple" />
+				</inline-formula>
+				has been studied in Ref. [
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib12">12</xref>
+				], here we just include the corresponding result for comparison.
+			</p>
+			<p>
+				The remainder of the paper is organized as follows. In Sec. II, we briefly introduce the SDFDM model and calculate its one-loop effects on five SM processes (
+				<inline-formula>
+					<tex-math>
+						<?CDATA $e^+e^- \rightarrow \mu^+ \mu^-$?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_Z-20220615153210.jpg" xlink:type="simple" />
+				</inline-formula>
+				,
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ Zh, \; W^+W^-, \; ZZ $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M25.jpg" xlink:type="simple" />
+				</inline-formula>
+				, and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ Z \gamma $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M26.jpg" xlink:type="simple" />
+				</inline-formula>
+				) at the CEPC. The combined 95% confidence results at the CEPC are also shown. In Sec. III, we show the results of the DTFDM model. Conclusions and discussions are provided in Sec. IV.
+			</p>
+		</sec>
+		<sec id="cpc_46_9_093112_s02">
+			<label>II.</label>
+			<title>SINGLET-DOUBLET FERMIONIC DARK MATTER MODEL</title>
+			<sec id="cpc_46_9_093112_s02-01">
+				<label>A.</label>
+				<title>Model details</title>
+				<p>
+					In the SDFDM model [
+					<xref ref-type="bibr" rid="cpc_46_9_093112_bib9">9</xref>
+					–
+					<xref ref-type="bibr" rid="cpc_46_9_093112_bib13">13</xref>
+					], the dark sector contains one singlet Weyl spinor
+					<italic toggle="yes">S</italic>
+					and two doublet Weyl spinors
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ D_i $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M27.jpg" xlink:type="simple" />
+					</inline-formula>
+					(
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ i=1,2 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M28.jpg" xlink:type="simple" />
+					</inline-formula>
+					) obeying the following
+					<inline-formula>
+						<tex-math>
+							<?CDATA $S U(2)_L \times U(1)_Y$?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M29.jpg" xlink:type="simple" />
+					</inline-formula>
+					gauge transformations:
+				</p>
+				<p>
+					<disp-formula>
+						<label>1</label>
+						<tex-math id="cpc_46_9_093112_E1">
+							<?CDATA $ \begin{aligned}[b] & S\in( {1}, 0) ,\; \; \; \; \; \; D_1=\left( \begin{array}{l} D^0_1 \\ D^-_1 \end{array} \right)\in( {2}, -1) ,\; \; \; \; \; \; \\ & D_2=\left( \begin{array}{l} D^+_2 \\ D^0_2 \end{array} \right) \in( {2}, 1). \end{aligned} $?>
+						</tex-math>
+						<graphic orientation="portrait" position="float" xlink:href="cpc_46_9_093112_E1.jpg" xlink:type="simple" />
+					</disp-formula>
+				</p>
+				<p>
+					The hypercharge signs of
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ D_1 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M30.jpg" xlink:type="simple" />
+					</inline-formula>
+					and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ D_2 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M31.jpg" xlink:type="simple" />
+					</inline-formula>
+					are opposite, which guarantees that the SDFDM model is anomaly free. The gauge invariant Lagrangians are given by
+				</p>
+				<p>
+					<disp-formula>
+						<label>2</label>
+						<tex-math id="cpc_46_9_093112_E2">
+							<?CDATA $ \begin{aligned}[b] {\cal{L}}_S = & {\rm i} S^+ \bar{\sigma^{\mu}}D_{\mu}S - \frac{1}{2}(m_s S^T(-\epsilon)S + {\rm h.c.}) , \\ {\cal{L}}_D = & {\rm i} D_1^+ \bar{\sigma^{\mu}}D_{\mu}D_1 +{\rm i} D_2^+ \bar{\sigma^{\mu}}D_{\mu}D_2 \\ & + (m_D D^{iT}_1 (-\epsilon)D^j_2 + {\rm h.c.}) , \\ {\cal{L}}_Y = & y_1 S D_1^i H_i - y_2 S D_2^i \tilde{H_i} + {\rm h.c.}, \end{aligned} $?>
+						</tex-math>
+						<graphic orientation="portrait" position="float" xlink:href="cpc_46_9_093112_E2.jpg" xlink:type="simple" />
+					</disp-formula>
+				</p>
+				<p>
+					where
+					<inline-formula>
+						<tex-math>
+							<?CDATA $D_\mu=\partial_\mu -{\rm i} g t^j A^j_\mu -{\rm i} \dfrac{g'}{2}YB_\mu$?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M32.jpg" xlink:type="simple" />
+					</inline-formula>
+					is the covariant derivative,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ t^j $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M33.jpg" xlink:type="simple" />
+					</inline-formula>
+					are the generators of the corresponding representation of
+					<inline-formula>
+						<tex-math>
+							<?CDATA $S U(2)_L$?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M34.jpg" xlink:type="simple" />
+					</inline-formula>
+					,
+					<italic toggle="yes">Y</italic>
+					is the hypercharge,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $\epsilon \equiv {\rm i}\sigma^2$?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M35.jpg" xlink:type="simple" />
+					</inline-formula>
+					,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_S $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M36.jpg" xlink:type="simple" />
+					</inline-formula>
+					and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_D $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M37.jpg" xlink:type="simple" />
+					</inline-formula>
+					are the mass parameters of the singlet and doublets, respectively, and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ y_1 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M38.jpg" xlink:type="simple" />
+					</inline-formula>
+					and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ y_2 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M39.jpg" xlink:type="simple" />
+					</inline-formula>
+					are two Yukawa couplings between the dark sector particles and Higgs boson. Consequently, this model has four independent parameters:
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_S $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M40.jpg" xlink:type="simple" />
+					</inline-formula>
+					,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_D $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M41.jpg" xlink:type="simple" />
+					</inline-formula>
+					,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ y_1 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M42.jpg" xlink:type="simple" />
+					</inline-formula>
+					, and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ y_2 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M43.jpg" xlink:type="simple" />
+					</inline-formula>
+					.
+				</p>
+				<p>
+					After EWSB, the Higgs field acquires the vacuum expectation value
+					<italic toggle="yes">v</italic>
+					and can be expressed in the unitary gauge as
+				</p>
+				<p>
+					<disp-formula>
+						<label>3</label>
+						<tex-math id="cpc_46_9_093112_E3">
+							<?CDATA $ \begin{array}{*{20}{l}} H=\dfrac{1}{\sqrt{2}} \left( \begin{array}{c} 0 \\ v+h \end{array} \right),\; \; \; \; \; \; \; \; \; \; \tilde{H}=\dfrac{1}{\sqrt{2}} \left( \begin{array}{c} v+h \\ 0 \end{array} \right). \end{array} $?>
+						</tex-math>
+						<graphic orientation="portrait" position="float" xlink:href="cpc_46_9_093112_E3.jpg" xlink:type="simple" />
+					</disp-formula>
+				</p>
+				<p>Subsequently, the Yukawa couplings result in mixing between the singlet Weyl spinor and doublet Weyl spinors. The mass terms of the dark sector particles are given by</p>
+				<p>
+					<disp-formula>
+						<label>4</label>
+						<tex-math id="cpc_46_9_093112_E4">
+							<?CDATA $ \begin{aligned}[b] {\cal{L}}_m & = -\frac{1}{2}(S, D_1^0, D_2^0)M_n (-\epsilon) \left( \begin{array}{c} S \\ D_1^0 \\ D_2^0 \end{array} \right) - M_D D_1^- (-\epsilon)D_2^+ + {\rm h.c.} = -\frac{1}{2} m_{\chi^0_i} \sum \chi_i^0 (-\epsilon) \chi_i^0 - m_{\chi^{\pm}} \chi^- (-\epsilon) \chi^+ + {\rm h.c.} , \end{aligned} $?>
+						</tex-math>
+						<graphic orientation="portrait" position="float" xlink:href="cpc_46_9_093112_E4.jpg" xlink:type="simple" />
+					</disp-formula>
+				</p>
+				<p>where</p>
+				<p>
+					<disp-formula>
+						<label>5</label>
+						<tex-math id="cpc_46_9_093112_E5">
+							<?CDATA $ \begin{array}{*{20}{l}} M_n = \begin{pmatrix} M_S & \dfrac{1}{\sqrt{2}} y_1 v & \dfrac{1}{\sqrt{2}} y_2 v \\ \dfrac{1}{\sqrt{2}} y_1 v & 0 & -M_D \\ \dfrac{1}{\sqrt{2}} y_2 v & -M_D & 0 \\ \end{pmatrix} \end{array} $?>
+						</tex-math>
+						<graphic orientation="portrait" position="float" xlink:href="cpc_46_9_093112_E5.jpg" xlink:type="simple" />
+					</disp-formula>
+				</p>
+				<p>
+					is the mass matrix of the neutral particles,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \chi^0_i \; (i = 1,\; 2,\; 3) $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M44.jpg" xlink:type="simple" />
+					</inline-formula>
+					and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \chi^\pm $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M45.jpg" xlink:type="simple" />
+					</inline-formula>
+					are the mass eigenstates,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_{\chi^0_i} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M46.jpg" xlink:type="simple" />
+					</inline-formula>
+					and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_{\chi^\pm} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M47.jpg" xlink:type="simple" />
+					</inline-formula>
+					are the masses of the corresponding mass eignestates. The mass eigenstates of the neutral particles
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \chi_i^0 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M48.jpg" xlink:type="simple" />
+					</inline-formula>
+					are connected to the gauge eigenstates through the mixing matrix
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ {\cal{N}} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M49.jpg" xlink:type="simple" />
+					</inline-formula>
+					. That is,
+				</p>
+				<p>
+					<disp-formula>
+						<label>6</label>
+						<tex-math id="cpc_46_9_093112_E6">
+							<?CDATA $ \begin{array}{*{20}{l}} {\cal{N}}^T M_n {\cal{N}} = {{\rm{diag}}}(m_{\chi^0_1},m_{\chi^0_2},m_{\chi^0_3}), \; \; \; \begin{pmatrix} S \\ D_1^0 \\ D_2^0 \\ \end{pmatrix} = {\cal{N}} \begin{pmatrix} \chi_1^0 \\ \chi_2^0 \\ \chi_3^0 \\ \end{pmatrix}. \end{array} $?>
+						</tex-math>
+						<graphic orientation="portrait" position="float" xlink:href="cpc_46_9_093112_E6.jpg" xlink:type="simple" />
+					</disp-formula>
+				</p>
+				<p>
+					For convenience, we adopt the mass orders
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_{\chi^0_1} \leq m_{\chi^0_2} \leq m_{\chi^0_3} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M50.jpg" xlink:type="simple" />
+					</inline-formula>
+					, which can be realized by adjusting
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ {\cal{N}} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M51.jpg" xlink:type="simple" />
+					</inline-formula>
+					. Because of the discrete
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ Z_2 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M52.jpg" xlink:type="simple" />
+					</inline-formula>
+					symmetry, the lightest neutral fermion
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \chi^0_1 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M53.jpg" xlink:type="simple" />
+					</inline-formula>
+					is stable and can be considered a DM candidate. Moreover, we can construct four-component Dirac spinors from two-component Weyl spinors:
+				</p>
+				<p>
+					<disp-formula>
+						<label>7</label>
+						<tex-math id="cpc_46_9_093112_E7">
+							<?CDATA $ \begin{array}{*{20}{l}} \Psi _i = \begin{pmatrix} \chi_i^0 \\ \epsilon (\chi_i^0)^{\dagger T} \\ \end{pmatrix}, \;\;\; \Psi^+ = \begin{pmatrix} \chi^+ \\ \epsilon (\chi^-)^{\dagger T} \end{pmatrix}. \end{array} $?>
+						</tex-math>
+						<graphic orientation="portrait" position="float" xlink:href="cpc_46_9_093112_E7.jpg" xlink:type="simple" />
+					</disp-formula>
+				</p>
+				<p>Thus, the mass terms and interaction terms of the SDFDM model can be rewritten as</p>
+				<p>
+					<disp-formula>
+						<label>8</label>
+						<tex-math id="cpc_46_9_093112_E8">
+							<?CDATA $ \begin{aligned}[b] {\cal{L}}_{{\rm{SDFDM}}} = & -\frac{1}{2} m_{\chi^0_i} \overline{ \Psi_i} \Psi_i - m_{\chi^\pm} \overline{\Psi^+}\Psi^+ \\ & + -\frac{1}{\sqrt{2}} (y_1 {\cal{N}}_{1i} {\cal{N}}_{2j} + y_2 {\cal{N}}_{1i} {\cal{N}}_{3j}) h \overline{ \Psi_i} \Psi_j \\ & + e A_\mu \overline{\Psi^+}\gamma^\mu \Psi^+ + (g\cos\theta - \frac{g\sin^2\theta}{\cos\theta})Z_\mu \overline{\Psi^+}\gamma^\mu \Psi^+ \\ & + \frac{g}{4\cos\theta} ( {\cal{N}}_{2i}^* {\cal{N}}_{2j} - {\cal{N}}_{3i}^* {\cal{N}}_{3j} ) Z_\mu \overline{\Psi_i^0}\gamma^\mu P_L\Psi_j^0 \\ & - \frac{g}{4\cos\theta} ( {\cal{N}}_{2i}^* {\cal{N}}_{2j} - {\cal{N}}_{3i}^* {\cal{N}}_{3j} ) Z_\mu \overline{\Psi_j^0}\gamma^\mu P_R\Psi_i^0 \\ & - \frac{g}{\sqrt{2}} {\cal{N}}_{2i} W^- \overline{\Psi_i^0}\gamma^\mu P_R \Psi^+ + \frac{g}{\sqrt{2}} {\cal{N}}_{3i}^* W^- \overline{\Psi_i^0}\gamma^\mu P_L \Psi^+ \\ & - \frac{g}{\sqrt{2}} {\cal{N}}_{2i}^* W^+ \overline{\Psi^+}\gamma^\mu P_R \Psi_i^0 + \frac{g}{\sqrt{2}} {\cal{N}}_{3i} W^+ \overline{\Psi^+}\gamma^\mu P_L \Psi_i^0. \end{aligned} $?>
+						</tex-math>
+						<graphic orientation="portrait" position="float" xlink:href="cpc_46_9_093112_E8.jpg" xlink:type="simple" />
+					</disp-formula>
+				</p>
+			</sec>
+			<sec id="cpc_46_9_093112_s02-02">
+				<label>B.</label>
+				<title>Detection sensitivity of the CEPC</title>
+				<p>
+					Although the dark sector particle
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \chi = \{\chi^0_i,\; \chi^\pm\} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M54.jpg" xlink:type="simple" />
+					</inline-formula>
+					cannot be directly produced at the collider when
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ 2m_{\chi} \gt \sqrt{s} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M55.jpg" xlink:type="simple" />
+					</inline-formula>
+					, it can still affect the cross sections of the SM processes through loop effects, which means that the hint of dark sector particles may be revealed through precision measurements. In this paper, we focus on five processes,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ e^+ e^- \rightarrow \mu^+\mu^-, \; Zh, \; W^+W^-, \; ZZ, $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M56.jpg" xlink:type="simple" />
+					</inline-formula>
+					and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ Z\gamma $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M57.jpg" xlink:type="simple" />
+					</inline-formula>
+					at the CEPC, and calculate the deviation of the cross section induced by the dark sector particles from the SM prediction at the one-loop level. The corresponding Feynman diagrams of one-loop contributions are given in Appendix A. By utilizing the high precision of the CEPC, these deviations can consequently provide effective constraints on the parameter space of the new physical model. In our calculations, the Packages FeynArts 3.10 [
+					<xref ref-type="bibr" rid="cpc_46_9_093112_bib30">30</xref>
+					], FormCalc 9.7 [
+					<xref ref-type="bibr" rid="cpc_46_9_093112_bib31">31</xref>
+					], and LoopTools 2.15 [
+					<xref ref-type="bibr" rid="cpc_46_9_093112_bib31">31</xref>
+					] are used to generate Feynman diagrams and derive the numerical results. Note that the entire calculation is performed under the on-shell renormalization scheme.
+				</p>
+				<p>The cross section at the next to leading order with the EW correction can be expressed as</p>
+				<p>
+					<disp-formula>
+						<label>9</label>
+						<tex-math id="cpc_46_9_093112_E9">
+							<?CDATA $ \begin{array}{*{20}{l}} \sigma = \sigma_{{{\rm{LO}}}}+\sigma_{{\rm{NLO}}}^{{\rm{EW}}}+\sigma_{{\rm{NLO}}}^{{\rm{Soft}}}, \end{array} $?>
+						</tex-math>
+						<graphic orientation="portrait" position="float" xlink:href="cpc_46_9_093112_E9.jpg" xlink:type="simple" />
+					</disp-formula>
+				</p>
+				<p>
+					where
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \sigma_{{{\rm{LO}}}} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M58.jpg" xlink:type="simple" />
+					</inline-formula>
+					is the tree-level cross section,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \sigma_{{\rm{NLO}}}^{{\rm{EW}}} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M59.jpg" xlink:type="simple" />
+					</inline-formula>
+					is the EW correction at the one-loop level.
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \sigma_{{\rm{NLO}}}^{{\rm{Soft}}} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M60.jpg" xlink:type="simple" />
+					</inline-formula>
+					is the contribution from the soft bremsstrahlung diagrams, which cancels the infrared divergences originating from the diagrams with the exchange of virtual photons. The deviation of the cross-section from the SM prediction can be expressed as
+				</p>
+				<p>
+					<disp-formula>
+						<label>10</label>
+						<tex-math id="cpc_46_9_093112_E10">
+							<?CDATA $ \frac{\Delta\sigma}{\sigma_0} = \frac{\mid \sigma_{{{\rm{SDFDM}}}}-\sigma_{{{\rm{SM}}}} \mid}{\sigma_{{{\rm{SM}}}}}, $?>
+						</tex-math>
+						<graphic orientation="portrait" position="float" xlink:href="cpc_46_9_093112_E10.jpg" xlink:type="simple" />
+					</disp-formula>
+				</p>
+				<p>
+					where
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \sigma_{{{\rm{SDFDM}}}} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M61.jpg" xlink:type="simple" />
+					</inline-formula>
+					and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \sigma_{{{\rm{SM}}}} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M62.jpg" xlink:type="simple" />
+					</inline-formula>
+					are the one-loop cross sections of the SDFDM model and SM, respectively (see (9)). For the five processes considered here, the leading contributions to
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \Delta \sigma $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M63.jpg" xlink:type="simple" />
+					</inline-formula>
+					result from the interferences between the SM amplitudes at the leading order and the amplitudes involving the particles in the dark sector.
+				</p>
+				<p>
+					Note that for the process
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ e^+ e^- \to Z \gamma $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M64.jpg" xlink:type="simple" />
+					</inline-formula>
+					, the cross section contains collinear divergence even at the tree-level. However, considering that the collinear photons cannot be detected owing to the blind spot of the detector, the collinear divergence can be removed by excluding the collinear photons. Here, we calculate the cross section with
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ |\cos\theta_{\gamma}| \lt 0.99 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M65.jpg" xlink:type="simple" />
+					</inline-formula>
+					, where
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \theta_{\gamma} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M66.jpg" xlink:type="simple" />
+					</inline-formula>
+					is the angle between the photon and beam.
+				</p>
+				<p>
+					The precision of the CEPC is determined by the statistical and systematic uncertainties. In this analysis, we treat these uncertainties as independent numbers. The statistical uncertainty can be estimated from the predicted event numbers
+					<italic toggle="yes">N</italic>
+					, that is,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \sim 1/\sqrt{N} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M67.jpg" xlink:type="simple" />
+					</inline-formula>
+					, whereas the systematic uncertainties are primarily from the uncertainty of integrated luminosity and the misidentification of final states. Thereinto, the integrated luminosity uncertainty at the CEPC is
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \sim 0.1\% $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M68.jpg" xlink:type="simple" />
+					</inline-formula>
+					[
+					<xref ref-type="bibr" rid="cpc_46_9_093112_bib5">5</xref>
+					]. For the process of
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ e^+ e^- \to \mu^+ \mu^- $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M69.jpg" xlink:type="simple" />
+					</inline-formula>
+					, the misidentification uncertainty can be ignored owing to the excellent capability of the muon reconstruction. Note that the leptonic and semileptonic decays of the gauge bosons can also be well reconstructed, whereas distinguishing the two jets from one gauge boson in the pure hadronic decay is difficult. For simplicity, in our analysis, we consider only the cross sections from leptonic and semileptonic decays; thus, the reconstruction of the gauge bosons would have a high efficiency. In this case, we assume that the systematic uncertainties of
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ e^+ e^- \to W^+W^-,\; ZZ $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M70.jpg" xlink:type="simple" />
+					</inline-formula>
+					, and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ Z\gamma $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M71.jpg" xlink:type="simple" />
+					</inline-formula>
+					are only from integrated luminosity
+					<sup>
+						<xref ref-type="fn" rid="cpc_46_9_093112_pn2">②</xref>
+					</sup>
+					.
+				</p>
+				<p>
+					According to the number of events in Sec. I, the statistical uncertainties of
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ e^+ e^- \to \mu^+ \mu^- $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M73.jpg" xlink:type="simple" />
+					</inline-formula>
+					,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ W^+W^- $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M74.jpg" xlink:type="simple" />
+					</inline-formula>
+					,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ ZZ $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M75.jpg" xlink:type="simple" />
+					</inline-formula>
+					, and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ Z\gamma $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M76.jpg" xlink:type="simple" />
+					</inline-formula>
+					are estimated as 0.032%,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ 0.014\% $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M77.jpg" xlink:type="simple" />
+					</inline-formula>
+					,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ 0.059\% $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M78.jpg" xlink:type="simple" />
+					</inline-formula>
+					, and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ 0.014\% $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M79.jpg" xlink:type="simple" />
+					</inline-formula>
+					, respectively. Combined with the systematic uncertainties, the corresponding precision of these processes are about
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ 0.1\% $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M80.jpg" xlink:type="simple" />
+					</inline-formula>
+					,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ 0.1\% $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M81.jpg" xlink:type="simple" />
+					</inline-formula>
+					,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ 0.12\% $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M82.jpg" xlink:type="simple" />
+					</inline-formula>
+					, and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ 0.1\% $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M83.jpg" xlink:type="simple" />
+					</inline-formula>
+					. The precision of
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ e^+ e^- \to Zh $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M84.jpg" xlink:type="simple" />
+					</inline-formula>
+					is given as 0.5% by Ref. [
+					<xref ref-type="bibr" rid="cpc_46_9_093112_bib5">5</xref>
+					].
+				</p>
+			</sec>
+			<sec id="cpc_46_9_093112_s02-03">
+				<label>C.</label>
+				<title>Numerical results</title>
+				<p>
+					In this section, we study the capability of the CEPC to probe the parameter space of the SDFDM model. Considering that the SDFDM model has four free parameters, i.e.,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ y_1,\; y_2,\; m_S, $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M85.jpg" xlink:type="simple" />
+					</inline-formula>
+					and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_D $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M86.jpg" xlink:type="simple" />
+					</inline-formula>
+					, we propose to show the calculation results of
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \Delta \sigma/\sigma_{{\rm{SM}}} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M87.jpg" xlink:type="simple" />
+					</inline-formula>
+					on the Yukawa plane (
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ y_1-y_2 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M88.jpg" xlink:type="simple" />
+					</inline-formula>
+					) or/and mass plane (
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_S-m_D $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M89.jpg" xlink:type="simple" />
+					</inline-formula>
+					). Here, we select three sets of benchmark parameters: (1)
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ y_1 = 1.0 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M90.jpg" xlink:type="simple" />
+					</inline-formula>
+					and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ y_2 = 0.5 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M91.jpg" xlink:type="simple" />
+					</inline-formula>
+					; (2)
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ M_S = 100 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M92.jpg" xlink:type="simple" />
+					</inline-formula>
+					GeV and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ M_D = 400 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M93.jpg" xlink:type="simple" />
+					</inline-formula>
+					GeV; (3)
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ M_S = 400 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M94.jpg" xlink:type="simple" />
+					</inline-formula>
+					GeV and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ M_D = 200 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M95.jpg" xlink:type="simple" />
+					</inline-formula>
+					GeV. Considering that the Yukawa interaction induced mass mixing between the singlet and doublets (see Eq. (2)) are at the order of the EWSB scale
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \sim {\cal{O}} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M96.jpg" xlink:type="simple" />
+					</inline-formula>
+					(100) GeV, the benchmark parameters (2) and (3) represent the DM candidate
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \chi^0_1 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M97.jpg" xlink:type="simple" />
+					</inline-formula>
+					that is roughly singlet-dominated and doublet-dominated, respectively. The corresponding results are shown in
+					<xref ref-type="fig" rid="cpc_46_9_093112_f1">Fig. 1</xref>
+					,
+					<xref ref-type="fig" rid="cpc_46_9_093112_f3">Fig. 3</xref>
+					, and
+					<xref ref-type="fig" rid="cpc_46_9_093112_f4">Fig. 4</xref>
+					.
+				</p>
+				<fig id="cpc_46_9_093112_f1" orientation="portrait" position="float">
+					<label>Fig. 1</label>
+					<caption id="cpc_46_9_093112_fc1">
+						<p>
+							(color online) Heat maps for the relative deviation of
+							<inline-formula>
+								<tex-math>
+									<?CDATA $ e^+e^- \to \mu^+\mu^-,\; Zh,\; W^+W^-, \; ZZ $?>
+								</tex-math>
+								<inline-graphic xlink:href="cpc_46_9_093112_M98.jpg" xlink:type="simple" />
+							</inline-formula>
+							, and
+							<inline-formula>
+								<tex-math>
+									<?CDATA $ Z\gamma $?>
+								</tex-math>
+								<inline-graphic xlink:href="cpc_46_9_093112_M99.jpg" xlink:type="simple" />
+							</inline-formula>
+							are shown in (a)
+							<inline-formula>
+								<tex-math>
+									<?CDATA $ \sim $?>
+								</tex-math>
+								<inline-graphic xlink:href="cpc_46_9_093112_M100.jpg" xlink:type="simple" />
+							</inline-formula>
+							(e). The colored regions indicate that
+							<inline-formula>
+								<tex-math>
+									<?CDATA $ \Delta \sigma/\sigma_0 $?>
+								</tex-math>
+								<inline-graphic xlink:href="cpc_46_9_093112_M101.jpg" xlink:type="simple" />
+							</inline-formula>
+							is larger than the expected sensitivities of the CEPC. The dot dashed lines in (c) (d) (e) correspond to a conservative estimate with
+							<inline-formula>
+								<tex-math>
+									<?CDATA $ \Delta \sigma/\sigma_0 = 0.5 $?>
+								</tex-math>
+								<inline-graphic xlink:href="cpc_46_9_093112_M102.jpg" xlink:type="simple" />
+							</inline-formula>
+							%. The combined result of all these channels at the 95% confidence level is shown in (f), where the dot dashed line represents the mass contour of
+							<inline-formula>
+								<tex-math>
+									<?CDATA $ \chi^0_1 $?>
+								</tex-math>
+								<inline-graphic xlink:href="cpc_46_9_093112_M103.jpg" xlink:type="simple" />
+							</inline-formula>
+							. The regions below the dotted black line are excluded by the search for charged particles at the LEP [
+							<xref ref-type="bibr" rid="cpc_46_9_093112_bib32">32</xref>
+							]. The solid black lines indicate constraints from conservative estimation. All these results are derived with fixed Yukawa couplings of
+							<inline-formula>
+								<tex-math>
+									<?CDATA $ y_1 = 1.0 $?>
+								</tex-math>
+								<inline-graphic xlink:href="cpc_46_9_093112_M104.jpg" xlink:type="simple" />
+							</inline-formula>
+							and
+							<inline-formula>
+								<tex-math>
+									<?CDATA $ y_2 = 0.5 $?>
+								</tex-math>
+								<inline-graphic xlink:href="cpc_46_9_093112_M105.jpg" xlink:type="simple" />
+							</inline-formula>
+							.
+						</p>
+					</caption>
+					<graphic content-type="print" id="cpc_46_9_093112_f1_eps" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_f1.eps" xlink:type="simple" />
+					<graphic content-type="online" id="cpc_46_9_093112_f1_online" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_f1.jpg" xlink:type="simple" />
+				</fig>
+				<fig id="cpc_46_9_093112_f3" orientation="portrait" position="float">
+					<label>Fig. 3</label>
+					<caption id="cpc_46_9_093112_fc3">
+						<p>
+							(color online) Same as
+							<xref ref-type="fig" rid="cpc_46_9_093112_f1">Fig. 1</xref>
+							, but in the
+							<inline-formula>
+								<tex-math>
+									<?CDATA $ y_1-y_2 $?>
+								</tex-math>
+								<inline-graphic xlink:href="cpc_46_9_093112_M108.jpg" xlink:type="simple" />
+							</inline-formula>
+							plane with the fixed mass parameters of
+							<inline-formula>
+								<tex-math>
+									<?CDATA $ M_S = 100 $?>
+								</tex-math>
+								<inline-graphic xlink:href="cpc_46_9_093112_M109.jpg" xlink:type="simple" />
+							</inline-formula>
+							GeV and
+							<inline-formula>
+								<tex-math>
+									<?CDATA $ M_D = 400 $?>
+								</tex-math>
+								<inline-graphic xlink:href="cpc_46_9_093112_M110.jpg" xlink:type="simple" />
+							</inline-formula>
+							GeV.
+						</p>
+					</caption>
+					<graphic content-type="print" id="cpc_46_9_093112_f3_eps" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_f3.eps" xlink:type="simple" />
+					<graphic content-type="online" id="cpc_46_9_093112_f3_online" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_f3.jpg" xlink:type="simple" />
+				</fig>
+				<fig id="cpc_46_9_093112_f4" orientation="portrait" position="float">
+					<label>Fig. 4</label>
+					<caption id="cpc_46_9_093112_fc4">
+						<p>
+							(color online) Same as
+							<xref ref-type="fig" rid="cpc_46_9_093112_f1">Fig. 1</xref>
+							, but in the
+							<inline-formula>
+								<tex-math>
+									<?CDATA $ y_1-y_2 $?>
+								</tex-math>
+								<inline-graphic xlink:href="cpc_46_9_093112_M111.jpg" xlink:type="simple" />
+							</inline-formula>
+							plane with the fixed mass parameters of
+							<inline-formula>
+								<tex-math>
+									<?CDATA $ M_S = 400 $?>
+								</tex-math>
+								<inline-graphic xlink:href="cpc_46_9_093112_M112.jpg" xlink:type="simple" />
+							</inline-formula>
+							GeV and
+							<inline-formula>
+								<tex-math>
+									<?CDATA $ M_D = 200 $?>
+								</tex-math>
+								<inline-graphic xlink:href="cpc_46_9_093112_M113.jpg" xlink:type="simple" />
+							</inline-formula>
+							GeV.
+						</p>
+					</caption>
+					<graphic content-type="print" id="cpc_46_9_093112_f4_eps" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_f4.eps" xlink:type="simple" />
+					<graphic content-type="online" id="cpc_46_9_093112_f4_online" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_f4.jpg" xlink:type="simple" />
+				</fig>
+				<p>
+					In
+					<xref ref-type="fig" rid="cpc_46_9_093112_f1">Fig. 1</xref>
+					, we show the results of first set of benchmark parameters, where
+					<xref ref-type="fig" rid="cpc_46_9_093112_f1">Fig. 1</xref>
+					(a)
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \sim $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M114.jpg" xlink:type="simple" />
+					</inline-formula>
+					<xref ref-type="fig" rid="cpc_46_9_093112_f1">Fig. 1</xref>
+					(e) represent the processes
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ e^+e^- \to \mu^+ \mu^- $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M115.jpg" xlink:type="simple" />
+					</inline-formula>
+					,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ Zh $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M116.jpg" xlink:type="simple" />
+					</inline-formula>
+					,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ W^+W^- $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M117.jpg" xlink:type="simple" />
+					</inline-formula>
+					,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ ZZ $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M118.jpg" xlink:type="simple" />
+					</inline-formula>
+					, and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ Z \gamma $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M119.jpg" xlink:type="simple" />
+					</inline-formula>
+					, respectively.
+					<xref ref-type="fig" rid="cpc_46_9_093112_f1">Fig. 1</xref>
+					(f) represents the combined result of all these channels at the 95% confidence level (see details below). The colored parameter regions indicate that
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \Delta \sigma/\sigma_0 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M120.jpg" xlink:type="simple" />
+					</inline-formula>
+					is larger than the precision of the CEPC and can thus be explored in a future measurement. For a conservative estimate, we also consider a precision of
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ 0.5\% $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M121.jpg" xlink:type="simple" />
+					</inline-formula>
+					for the processes of
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ e^+e^-\to W^+W^- $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M122.jpg" xlink:type="simple" />
+					</inline-formula>
+					,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ ZZ $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M123.jpg" xlink:type="simple" />
+					</inline-formula>
+					, and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ Z \gamma $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M124.jpg" xlink:type="simple" />
+					</inline-formula>
+					, and show the corresponding results in
+					<xref ref-type="fig" rid="cpc_46_9_093112_f1">Fig. 1</xref>
+					,
+					<xref ref-type="fig" rid="cpc_46_9_093112_f3">Fig. 3</xref>
+					, and
+					<xref ref-type="fig" rid="cpc_46_9_093112_f4">Fig. 4</xref>
+					.
+				</p>
+				<p>
+					In comparison with other channels, the result of
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ e^+ e^- \to \mu^+ \mu^- $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M125.jpg" xlink:type="simple" />
+					</inline-formula>
+					(see
+					<xref ref-type="fig" rid="cpc_46_9_093112_f1">Fig. 1</xref>
+					(a)) is relatively simpler. We observe that the colored regions are strongly dependent on
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_D $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M126.jpg" xlink:type="simple" />
+					</inline-formula>
+					and almost independent of
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_S $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M127.jpg" xlink:type="simple" />
+					</inline-formula>
+					. Considering that the dark sector particles in the SDFDM model do not interact with leptons, the deviation of this process is dominantly induced by the corrections to the propagators, i.e.,
+					<italic toggle="yes">Z</italic>
+					and/or
+					<italic toggle="yes">γ</italic>
+					, as shown in Appendix A. For the charged particle
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \chi^\pm $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M128.jpg" xlink:type="simple" />
+					</inline-formula>
+					(pure doublet), its coupling to
+					<italic toggle="yes">Z</italic>
+					and
+					<italic toggle="yes">γ</italic>
+					is constant (see Eq. (8)); thus, the corrections induced by
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \chi^\pm $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M129.jpg" xlink:type="simple" />
+					</inline-formula>
+					only depend on
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_D $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M130.jpg" xlink:type="simple" />
+					</inline-formula>
+					. For the neutral particles
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \chi^0_i $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M131.jpg" xlink:type="simple" />
+					</inline-formula>
+					, the results are similar for
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_D \ll m_S $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M132.jpg" xlink:type="simple" />
+					</inline-formula>
+					, because in this case, the lighter neutral particles
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \chi^0_1 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M133.jpg" xlink:type="simple" />
+					</inline-formula>
+					and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \chi^0_2 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M134.jpg" xlink:type="simple" />
+					</inline-formula>
+					are also doublet dominated. Our calculation shows that the contribution of the SDFDM model to
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ e^+e^- \to \mu^+ \mu^- $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M135.jpg" xlink:type="simple" />
+					</inline-formula>
+					is dominated by doublets, which is consistent with
+					<xref ref-type="fig" rid="cpc_46_9_093112_f1">Fig. 1</xref>
+					(a). Moreover, the corrections from the NP particles in the loop would change dramatically when some mass conditions are fulfilled. These mass threshold effects might partially explain the structures in
+					<xref ref-type="fig" rid="cpc_46_9_093112_f1">Fig. 1</xref>
+					.
+				</p>
+				<p>
+					In
+					<xref ref-type="fig" rid="cpc_46_9_093112_f2">Fig. 2</xref>
+					, we show some typical mass conditions with
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ y_1 = 1.0 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M136.jpg" xlink:type="simple" />
+					</inline-formula>
+					and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ y_2 = 0.5 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M137.jpg" xlink:type="simple" />
+					</inline-formula>
+					, e.g.,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_{\chi^0_1}+m_{\chi^0_1}(m_{\chi^0_2})=\sqrt{s} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M138.jpg" xlink:type="simple" />
+					</inline-formula>
+					,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $2m_{\chi^-}= \sqrt{s}$?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M139.jpg" xlink:type="simple" />
+					</inline-formula>
+					,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_{\chi^0_1}+m_{\chi^0_1}(m_{\chi^0_2})=m_Z $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M140.jpg" xlink:type="simple" />
+					</inline-formula>
+					,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ 2m_{\chi^-}=m_Z $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M141.jpg" xlink:type="simple" />
+					</inline-formula>
+					, and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $m_{\chi^0_i}+m_{\chi^-}= m_{W^-}$?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M142.jpg" xlink:type="simple" />
+					</inline-formula>
+					. For
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ e^+e^- \to \mu^+ \mu^- $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M143.jpg" xlink:type="simple" />
+					</inline-formula>
+					, we observe that the NP correction reaches a maximum value at
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_D \sim 45 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M144.jpg" xlink:type="simple" />
+					</inline-formula>
+					GeV with
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ 2m_{\chi_1^0}\sim m_Z $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M145.jpg" xlink:type="simple" />
+					</inline-formula>
+					and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ 2m_{\chi_-}\sim m_Z $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M146.jpg" xlink:type="simple" />
+					</inline-formula>
+					, and then with the increase in
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_D $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M147.jpg" xlink:type="simple" />
+					</inline-formula>
+					, the NP correction rapidly decreases to zero and changes to an opposite sign until the next mass threshold appears. This behavior could explain the gray band of
+					<xref ref-type="fig" rid="cpc_46_9_093112_f1">Fig. 1</xref>
+					(a) within 50 GeV
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \lesssim m_D \lesssim 80 \; {{\rm{GeV}}} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M148.jpg" xlink:type="simple" />
+					</inline-formula>
+					, where the correction of NP is too small to detect. When the next threshold appears at
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_D \sim 120 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M149.jpg" xlink:type="simple" />
+					</inline-formula>
+					GeV with
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ 2m_{\chi^-}=\sqrt{s} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M150.jpg" xlink:type="simple" />
+					</inline-formula>
+					, the NP correction reaches a minimum value and thus
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \Delta \sigma/\sigma_0 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M151.jpg" xlink:type="simple" />
+					</inline-formula>
+					reaches a new maximum value. When
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_D \gtrsim 120 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M152.jpg" xlink:type="simple" />
+					</inline-formula>
+					GeV, the absolute value of the correction is suppressed by the large masses of the NP particles in loops. Another striking feature is that the results of
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ e^+ e^- \to W^+W^- $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M153.jpg" xlink:type="simple" />
+					</inline-formula>
+					,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ ZZ $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M154.jpg" xlink:type="simple" />
+					</inline-formula>
+					, and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ Z\gamma $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M155.jpg" xlink:type="simple" />
+					</inline-formula>
+					are similar (see
+					<xref ref-type="fig" rid="cpc_46_9_093112_f1">Fig. 1</xref>
+					(c)
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \sim $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M156.jpg" xlink:type="simple" />
+					</inline-formula>
+					<xref ref-type="fig" rid="cpc_46_9_093112_f1">Fig. 1</xref>
+					(e)). We observe that the contributions from the triangle loops connecting to three gauge bosons for these processes are actually sub-dominant. The main NP corrections are provided by the t-channel diagrams with the insertion of the counter terms, which involve the contributions of the NP particles, into the vertex between the gauge boson and leptons. The related Feynman diagrams are provided in Appendix A.
+				</p>
+				<fig id="cpc_46_9_093112_f2" orientation="portrait" position="float">
+					<label>Fig. 2</label>
+					<caption id="cpc_46_9_093112_fc2">
+						<p>
+							(color online) Contours for the mass threshold conditions with
+							<inline-formula>
+								<tex-math>
+									<?CDATA $ y_1 = 1.0 $?>
+								</tex-math>
+								<inline-graphic xlink:href="cpc_46_9_093112_M106.jpg" xlink:type="simple" />
+							</inline-formula>
+							and
+							<inline-formula>
+								<tex-math>
+									<?CDATA $ y_2 = 0.5 $?>
+								</tex-math>
+								<inline-graphic xlink:href="cpc_46_9_093112_M107.jpg" xlink:type="simple" />
+							</inline-formula>
+							.
+						</p>
+					</caption>
+					<graphic content-type="print" id="cpc_46_9_093112_f2_eps" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_f2.eps" xlink:type="simple" />
+					<graphic content-type="online" id="cpc_46_9_093112_f2_online" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_f2.jpg" xlink:type="simple" />
+				</fig>
+				<p>
+					For the second benchmark case, i.e.,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_S = 100\; {\rm{GeV}} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M157.jpg" xlink:type="simple" />
+					</inline-formula>
+					and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_D = 400\; {\rm{GeV}} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M158.jpg" xlink:type="simple" />
+					</inline-formula>
+					, the corresponding results are shown in
+					<xref ref-type="fig" rid="cpc_46_9_093112_f3">Fig. 3</xref>
+					. In this case, the
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \chi^0_1 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M159.jpg" xlink:type="simple" />
+					</inline-formula>
+					is dominated by the singlet and is much lighter than the other NP particles. Therefore, for the process
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ e^+ e^- \to \mu^+\mu^- $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M160.jpg" xlink:type="simple" />
+					</inline-formula>
+					, the NP correction significantly depends on the
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ Z\chi^0_1\chi^0_1 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M161.jpg" xlink:type="simple" />
+					</inline-formula>
+					coupling. We observe that
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ |y_1| = |y_2| $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M162.jpg" xlink:type="simple" />
+					</inline-formula>
+					results in a vanishing
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ Z\chi^0_1\chi^0_1 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M163.jpg" xlink:type="simple" />
+					</inline-formula>
+					coupling; thus, the NP correction induced by
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \chi^0_1 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M164.jpg" xlink:type="simple" />
+					</inline-formula>
+					is highly suppressed, which rends a non-detectable parameter region around
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ |y_1| \approx |y_2| $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M165.jpg" xlink:type="simple" />
+					</inline-formula>
+					at the CEPC (see
+					<xref ref-type="fig" rid="cpc_46_9_093112_f3">Fig. 3</xref>
+					(a)). The structures for the processes of
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ e^+ e^- \to W^+W^- $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M166.jpg" xlink:type="simple" />
+					</inline-formula>
+					,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ ZZ $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M167.jpg" xlink:type="simple" />
+					</inline-formula>
+					, and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ Z\gamma $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M168.jpg" xlink:type="simple" />
+					</inline-formula>
+					are also similar. However, the parameter regions with
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \mid y_1 \mid \approx \mid y_2 \mid \gtrsim 1 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M169.jpg" xlink:type="simple" />
+					</inline-formula>
+					can be detected at the CEPC, which is different from the process
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ e^+ e^- \to \mu^+\mu^- $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M170.jpg" xlink:type="simple" />
+					</inline-formula>
+					.
+				</p>
+				<p>
+					For the third benchmark case, i.e.,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_S = 400\; {\rm{GeV}} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M171.jpg" xlink:type="simple" />
+					</inline-formula>
+					and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_D = 200\; {\rm{GeV}} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M172.jpg" xlink:type="simple" />
+					</inline-formula>
+					, the results are shown in
+					<xref ref-type="fig" rid="cpc_46_9_093112_f4">Fig. 4</xref>
+					. Both the neutral particles
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \chi_1 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M173.jpg" xlink:type="simple" />
+					</inline-formula>
+					and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \chi_2 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M174.jpg" xlink:type="simple" />
+					</inline-formula>
+					are doublet-dominated, whereas
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \chi_3 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M175.jpg" xlink:type="simple" />
+					</inline-formula>
+					is singlet-dominated. In this case,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \chi^0_1 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M176.jpg" xlink:type="simple" />
+					</inline-formula>
+					and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \chi^0_2 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M177.jpg" xlink:type="simple" />
+					</inline-formula>
+					would provide a comparable contribution to the deviation. However, comparing this with the second benchmark case, the masses of
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_{\chi^0_1} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M178.jpg" xlink:type="simple" />
+					</inline-formula>
+					and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_{\chi^0_2} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M179.jpg" xlink:type="simple" />
+					</inline-formula>
+					are heavier, which rends a relatively smaller detectable parameter regions.
+				</p>
+				<p>
+					From the results shown in subfigures (a)
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \sim $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M180.jpg" xlink:type="simple" />
+					</inline-formula>
+					(e) of
+					<xref ref-type="fig" rid="cpc_46_9_093112_f1">Fig. 1</xref>
+					,
+					<xref ref-type="fig" rid="cpc_46_9_093112_f3">Fig. 3</xref>
+					, and
+					<xref ref-type="fig" rid="cpc_46_9_093112_f4">Fig. 4</xref>
+					, we observe that for different channels, the parameter space that can be explored by the CEPC are actually complementary. Therefore, we propose to combine all these five processes and perform a likelihood analysis to obtain a more efficient constraint on the parameter space [
+					<xref ref-type="bibr" rid="cpc_46_9_093112_bib23">23</xref>
+					,
+					<xref ref-type="bibr" rid="cpc_46_9_093112_bib27">27</xref>
+					]. We define a
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \chi^2 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M181.jpg" xlink:type="simple" />
+					</inline-formula>
+					function as
+				</p>
+				<p>
+					<disp-formula>
+						<label>11</label>
+						<tex-math id="cpc_46_9_093112_E11">
+							<?CDATA $ \chi^2 = \sum\limits_i \frac{(\mu_i^{\rm NP} - \mu_i^{\rm obs})^2}{\sigma^2_{\mu_i}}\simeq \sum\limits_i \frac{(\Delta \sigma/\sigma_0)^2}{\sigma^2_{\mu_i}}, $?>
+						</tex-math>
+						<graphic orientation="portrait" position="float" xlink:href="cpc_46_9_093112_E11.jpg" xlink:type="simple" />
+					</disp-formula>
+				</p>
+				<p>
+					where
+					<inline-formula>
+						<tex-math>
+							<?CDATA $\mu_i^{\rm NP} = \sigma^{\rm NP}_i/\sigma^{\rm SM}_i$?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M182.jpg" xlink:type="simple" />
+					</inline-formula>
+					is the ratio of the NLO cross section between NP and the SM,
+					<inline-formula>
+						<tex-math>
+							<?CDATA $\mu_i^{\rm obs}$?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M183.jpg" xlink:type="simple" />
+					</inline-formula>
+					is assumed to be 1, and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \sigma_{\mu_i} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M184.jpg" xlink:type="simple" />
+					</inline-formula>
+					is the estimated CEPC precision for the
+					<italic toggle="yes">i</italic>
+					-th process (see Sec. II.B). For a two-parameter fitting, the corresponding
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \delta \chi^2=\chi^2-\chi_{{{\rm{min}}}}^2 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M185.jpg" xlink:type="simple" />
+					</inline-formula>
+					at the 95% confidence level is 5.99. The corresponding combined results are shown in
+					<xref ref-type="fig" rid="cpc_46_9_093112_f1">Fig. 1</xref>
+					(f),
+					<xref ref-type="fig" rid="cpc_46_9_093112_f3">Fig. 3</xref>
+					(f), and
+					<xref ref-type="fig" rid="cpc_46_9_093112_f4">Fig. 4</xref>
+					(f), respectively. For instance, when
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ y_1 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M186.jpg" xlink:type="simple" />
+					</inline-formula>
+					= 1.0 and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ y_2 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M187.jpg" xlink:type="simple" />
+					</inline-formula>
+					= 0.5, the precision measurements at the CEPC could explore the mass of
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \chi^0_1 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M188.jpg" xlink:type="simple" />
+					</inline-formula>
+					nearly up to
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_{\chi_1^0} \sim 150\; {\rm{GeV}} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M189.jpg" xlink:type="simple" />
+					</inline-formula>
+					at the 95% confidence level.
+				</p>
+				<p>
+					For the lightest chargino search in supersymmetric models at the LEP, the mass of new charged particles less than 103.5 GeV has been almost excluded [
+					<xref ref-type="bibr" rid="cpc_46_9_093112_bib32">32</xref>
+					]. We impose this limit on
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_{\chi^{\pm}} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M190.jpg" xlink:type="simple" />
+					</inline-formula>
+					in the SDFDM model here and show the corresponding results in
+					<xref ref-type="fig" rid="cpc_46_9_093112_f1">Fig. 1</xref>
+					(f). Ref. [
+					<xref ref-type="bibr" rid="cpc_46_9_093112_bib12">12</xref>
+					] observed that at the LHC, the monojet+
+					<inline-formula>
+						<tex-math>
+							<?CDATA $\not E_{\rm{T}}$?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M191.jpg" xlink:type="simple" />
+					</inline-formula>
+					channel could set more strict constraints than other channels, such as
+					<inline-formula>
+						<tex-math>
+							<?CDATA $2\ell + \not E_{\rm{T}}$?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M192.jpg" xlink:type="simple" />
+					</inline-formula>
+					and
+					<inline-formula>
+						<tex-math>
+							<?CDATA $3\ell + \not E_{\rm{T}}$?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M193.jpg" xlink:type="simple" />
+					</inline-formula>
+					. Such constraints on
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ m_{\chi^0_1} $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M194.jpg" xlink:type="simple" />
+					</inline-formula>
+					are not stronger than
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ \sim 100 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M195.jpg" xlink:type="simple" />
+					</inline-formula>
+					GeV. The detectability of the CEPC would be complementary to the LEP and LHC in some parameter regions.
+				</p>
+				<p>
+					Ref. [
+					<xref ref-type="bibr" rid="cpc_46_9_093112_bib12">12</xref>
+					] also observed that the constraints from the DM relic abundance and direct detection are generally more stringent in a large portion of the parameter space. In this paper, we do not repeat all the analyses from other experiments and only demonstrate the constraints from the DM relic abundance and direct detection in Appendix B. We observe that the DM direct detection experiments have set very stringent constraints on the parameter space. However, some allowed parameter regions with
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ y_1\sim y_2 $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M196.jpg" xlink:type="simple" />
+					</inline-formula>
+					can still be tested by the CEPC.
+				</p>
+			</sec>
+		</sec>
+		<sec id="cpc_46_9_093112_s03">
+			<label>III.</label>
+			<title>DOUBLET-TRIPLET FERMIONIC DARK MATTER MODEL</title>
+			<p>
+				In the DTFDM model [
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib11">11</xref>
+				–
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib14">14</xref>
+				], the dark sector contains one triplet Weyl spinor
+				<italic toggle="yes">T</italic>
+				and two doublet Weyl spinors
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ D_i $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M197.jpg" xlink:type="simple" />
+				</inline-formula>
+				(
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ i=1,2 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M198.jpg" xlink:type="simple" />
+				</inline-formula>
+				) obeying the following
+				<inline-formula>
+					<tex-math>
+						<?CDATA $S U(2)_L \times U(1)_Y$?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M199.jpg" xlink:type="simple" />
+				</inline-formula>
+				gauge transformations:
+			</p>
+			<p>
+				<disp-formula>
+					<label>12</label>
+					<tex-math id="cpc_46_9_093112_E12">
+						<?CDATA $ \begin{aligned}[b] & D_1=\left( \begin{array}{l} D^0_1 \\ D^-_1 \end{array} \right)\in( {2}, -1) ,\; \; \; \; \; \; D_2=\left( \begin{array}{l} D^+_2 \\ D^0_2 \end{array} \right) \in( {2}, 1) ,\\ & T = \left( \begin{array}{l} T^+ \\ T^0 \\ -T^- \end{array} \right) \in( {3}, 0) . \end{aligned} $?>
+					</tex-math>
+					<graphic orientation="portrait" position="float" xlink:href="cpc_46_9_093112_E12.jpg" xlink:type="simple" />
+				</disp-formula>
+			</p>
+			<p>The gauge invariant Lagrangians of the dark sector particles are given by</p>
+			<p>
+				<disp-formula>
+					<label>13</label>
+					<tex-math id="cpc_46_9_093112_E13">
+						<?CDATA $ \begin{aligned}[b] {\cal{L}}_T = & {\rm i} T^+ \bar{\sigma^{\mu}}D_{\mu}T + \frac{1}{2}(m_T T^T(-\epsilon)T + {\rm h.c.}), \\ {\cal{L}}_D = & {\rm i} D_1^+ \bar{\sigma^{\mu}}D_{\mu}D_1 + {\rm i} D_2^+ \bar{\sigma^{\mu}}D_{\mu}D_2 \\ & + (m_D D^{iT}_1 (-\epsilon)D^j_2 + {\rm h.c.}), \\ {\cal{L}}_Y = & y_1 T D_1^i H_i + y_2 T D_2^i \tilde{H_i} + {\rm h.c.}. \end{aligned} $?>
+					</tex-math>
+					<graphic orientation="portrait" position="float" xlink:href="cpc_46_9_093112_E13.jpg" xlink:type="simple" />
+				</disp-formula>
+			</p>
+			<p>
+				Similarly, the model also has four free parameters, including two mass parameters,
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ m_T $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M200.jpg" xlink:type="simple" />
+				</inline-formula>
+				and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ m_D $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M201.jpg" xlink:type="simple" />
+				</inline-formula>
+				, and two Yukawa couplings,
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ y_1 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M202.jpg" xlink:type="simple" />
+				</inline-formula>
+				and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ y_2 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M203.jpg" xlink:type="simple" />
+				</inline-formula>
+				. The EWSB results in the mixing between the triplet and two doublets. In the base of mass eigenstate, we obtain three neutral Majorana fermions
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \chi^0_i $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M204.jpg" xlink:type="simple" />
+				</inline-formula>
+				(
+				<inline-formula>
+					<tex-math>
+						<?CDATA $i = $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_Z-20220615153549.jpg" xlink:type="simple" />
+				</inline-formula>
+				1, 2, 3) and two charged Dirac fermions
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \chi_i^\pm $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M205.jpg" xlink:type="simple" />
+				</inline-formula>
+				(
+				<inline-formula>
+					<tex-math>
+						<?CDATA $i= $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_Z-20220615153605.jpg" xlink:type="simple" />
+				</inline-formula>
+				1, 2). The full Lagrangians expressed in the terms of four-component spinors can are provided in Ref. [
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib12">12</xref>
+				].
+			</p>
+			<p>
+				Compared with the SDFDM model, the DTFDM model contains one more charged particle, which would induce a relatively larger
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \Delta \sigma/\sigma_0 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M206.jpg" xlink:type="simple" />
+				</inline-formula>
+				. In
+				<xref ref-type="fig" rid="cpc_46_9_093112_f5">Fig. 5</xref>
+				, we show the combined constraints from the five processes in the
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ y_1-y_2 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M207.jpg" xlink:type="simple" />
+				</inline-formula>
+				and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ m_D-m_T $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M208.jpg" xlink:type="simple" />
+				</inline-formula>
+				planes, where the yellow regions can be explored by the CEPC at the 95% confidence level.
+			</p>
+			<fig id="cpc_46_9_093112_f5" orientation="portrait" position="float">
+				<label>Fig. 5</label>
+				<caption id="cpc_46_9_093112_fc5">
+					<p>
+						(color online) Same as subfigures (f) of
+						<xref ref-type="fig" rid="cpc_46_9_093112_f1">Fig. 1</xref>
+						,
+						<xref ref-type="fig" rid="cpc_46_9_093112_f3">Fig. 3</xref>
+						, and
+						<xref ref-type="fig" rid="cpc_46_9_093112_f4">Fig. 4</xref>
+						, but for the DTFDM model.
+					</p>
+				</caption>
+				<graphic content-type="print" id="cpc_46_9_093112_f5_eps" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_f5.eps" xlink:type="simple" />
+				<graphic content-type="online" id="cpc_46_9_093112_f5_online" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_f5.jpg" xlink:type="simple" />
+			</fig>
+			<p>
+				In
+				<xref ref-type="fig" rid="cpc_46_9_093112_f5">Fig. 5</xref>
+				(a), we observe that the parameter regions with small
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ m_D $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M209.jpg" xlink:type="simple" />
+				</inline-formula>
+				or
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ m_T $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M210.jpg" xlink:type="simple" />
+				</inline-formula>
+				can be explored by the CEPC. Similar to the results of the SDFDM model for
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ m_D \lesssim $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M211.jpg" xlink:type="simple" />
+				</inline-formula>
+				100 GeV, the deviation induced by the DTFDM model can be probed, because two lighter neutral NP particles are doublet dominated and have small masses. However, unlike the results of the SDFDM model for
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ m_D \gt 1 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M212.jpg" xlink:type="simple" />
+				</inline-formula>
+				TeV and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ m_s \lesssim $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M213.jpg" xlink:type="simple" />
+				</inline-formula>
+				100 GeV, the deviation induced by the DTFDM model for
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ m_D \gt 1 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M214.jpg" xlink:type="simple" />
+				</inline-formula>
+				TeV and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ m_T \lesssim $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M215.jpg" xlink:type="simple" />
+				</inline-formula>
+				100 GeV can still be probed. This is because, in this parameter region, except for the lightest neutral NP particles, the lighter charged particles are dominated by the triplet components and have small masses. In
+				<xref ref-type="fig" rid="cpc_46_9_093112_f5">Fig. 5</xref>
+				(a) we also show the mass contour of
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \chi_1^0 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M216.jpg" xlink:type="simple" />
+				</inline-formula>
+				as in
+				<xref ref-type="fig" rid="cpc_46_9_093112_f1">Fig. 1</xref>
+				,
+				<xref ref-type="fig" rid="cpc_46_9_093112_f3">Fig. 3</xref>
+				, and
+				<xref ref-type="fig" rid="cpc_46_9_093112_f4">Fig. 4</xref>
+				. We observe that the CEPC has the capability to indirectly detect
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ m_{\chi^0_1} $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M217.jpg" xlink:type="simple" />
+				</inline-formula>
+				up to 450 GeV.
+			</p>
+			<p>
+				For the fixed mass parameters
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ m_D = $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M218.jpg" xlink:type="simple" />
+				</inline-formula>
+				100 GeV and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ m_T = $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M219.jpg" xlink:type="simple" />
+				</inline-formula>
+				400 GeV, almost all the parameter regions with
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ |y_1| \lt 2 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M220.jpg" xlink:type="simple" />
+				</inline-formula>
+				and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ |y_2| \lt 2 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M221.jpg" xlink:type="simple" />
+				</inline-formula>
+				can be excluded by the CEPC, as shown in
+				<xref ref-type="fig" rid="cpc_46_9_093112_f5">Fig. 5</xref>
+				(b). This is because
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \chi^0_1 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M222.jpg" xlink:type="simple" />
+				</inline-formula>
+				,
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \chi^0_2 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M223.jpg" xlink:type="simple" />
+				</inline-formula>
+				, and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \chi^\pm_1 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M224.jpg" xlink:type="simple" />
+				</inline-formula>
+				are doublet dominated and provide significant contributions to the NP correction owing to small masses. The result for the fixed mass parameters
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ m_D = $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M225.jpg" xlink:type="simple" />
+				</inline-formula>
+				400 GeV and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ m_T = $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M226.jpg" xlink:type="simple" />
+				</inline-formula>
+				200 GeV is shown in
+				<xref ref-type="fig" rid="cpc_46_9_093112_f5">Fig. 5</xref>
+				(c). In this case, the triplet dominated
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \chi^0_1 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M227.jpg" xlink:type="simple" />
+				</inline-formula>
+				and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \chi^\pm_1 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M228.jpg" xlink:type="simple" />
+				</inline-formula>
+				have relatively large masses in the parameter region with
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ y_1\approx y_2 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M229.jpg" xlink:type="simple" />
+				</inline-formula>
+				, where the couplings
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ Z\chi^0_i\chi^0_i $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M230.jpg" xlink:type="simple" />
+				</inline-formula>
+				are suppressed. Thus, a larger region cannot be detected by the CEPC compared with the previous case. Other constraints on the DTFDM model are simialr to those on the SDFDM model. We provide the constraints on the parameter space of the DTFDM model set by the DM relic density and the direct detection in Appendix B.
+			</p>
+		</sec>
+		<sec id="cpc_46_9_093112_s04">
+			<label>IV.</label>
+			<title>CONCLUSIONS</title>
+			<p>
+				In this paper, we study the effects of the EW multiplet fermionic dark matter models through precision measurements at the future electron-positron collider, the CEPC. As a Higgs factory, the CEPC will significantly increase the accuracy of the EW measurements owing to its relatively clean environment and large luminosity
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \sim5.6 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M231.jpg" xlink:type="simple" />
+				</inline-formula>
+				ab
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ ^{-1} $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M232.jpg" xlink:type="simple" />
+				</inline-formula>
+				. In particular, the sensitivity of
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ e^+e^- \to \mu^+\mu^-, \; Zh, \; W^+W^-, \; ZZ $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M233.jpg" xlink:type="simple" />
+				</inline-formula>
+				, and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ Z\gamma $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M234.jpg" xlink:type="simple" />
+				</inline-formula>
+				can even reach a sub-percentage level. Thus, any possible deviations from the SM prediction can be considered a hint of NP.
+			</p>
+			<p>
+				We focus on two fermionic dark matter models, namely the SDFDM and DTFDM models. In these models, two types of fermionic multiplets under the
+				<inline-formula>
+					<tex-math>
+						<?CDATA $S U(2)_L$?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M235.jpg" xlink:type="simple" />
+				</inline-formula>
+				representation are introduced based on the SM. We calculate the one-loop deviations induced by the NP particles for the abovementioned five SM processes and investigate the parameter regions that can be detected by the CEPC. Considering that the results of these channels are complementary for both models, we adopt a combined analysis and obtain a more efficient constraint on the model parameter space. For
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ y_1 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M236.jpg" xlink:type="simple" />
+				</inline-formula>
+				= 1.0 and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ y_2 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M237.jpg" xlink:type="simple" />
+				</inline-formula>
+				= 0.5, we observe that the CEPC can probe
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ m_{\chi^0_1} $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M238.jpg" xlink:type="simple" />
+				</inline-formula>
+				up to
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \sim 150\; {\rm{GeV}} $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M239.jpg" xlink:type="simple" />
+				</inline-formula>
+				and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \sim 450 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M240.jpg" xlink:type="simple" />
+				</inline-formula>
+				GeV at the 95% confidence level for the SDFDM and DTFDM models, respectively.
+			</p>
+		</sec>
+		<sec id="cpc_46_9_093112_s05">
+			<title>ACKNOWLEDGMENTS</title>
+			<p>
+				<italic toggle="yes">The authors would like to thank Manqi Ruan for helpful discussions.</italic>
+			</p>
+		</sec>
+		<sec id="cpc_46_9_093112_s06">
+			<title>APPENDIX A: FEYNMAN DIAGRAMS</title>
+			<p>
+				Feynman diagrams contributed by the new particles in the loop for the SDFDM and DTFDM models are provided here. For the SDFDM model, the new particles contain
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \chi^0_i $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M242.jpg" xlink:type="simple" />
+				</inline-formula>
+				(
+				<italic toggle="yes">i</italic>
+				=1,2,3) and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \chi^{\pm}_j $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M243.jpg" xlink:type="simple" />
+				</inline-formula>
+				(
+				<italic toggle="yes">j</italic>
+				=1). For the DTFDM model, the new particles contain
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \chi^0_i $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M244.jpg" xlink:type="simple" />
+				</inline-formula>
+				(
+				<italic toggle="yes">i</italic>
+				=1,2,3) and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \chi^{\pm}_j $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M245.jpg" xlink:type="simple" />
+				</inline-formula>
+				(
+				<italic toggle="yes">j</italic>
+				=1,2).
+				<xref ref-type="fig" rid="cpc_46_9_093112_fA1">Fig. A1</xref>
+				,
+				<xref ref-type="fig" rid="cpc_46_9_093112_fA2">Fig. A2</xref>
+				,
+				<xref ref-type="fig" rid="cpc_46_9_093112_fA3">Fig. A3</xref>
+				,
+				<xref ref-type="fig" rid="cpc_46_9_093112_fA4">Fig. A4</xref>
+				, and
+				<xref ref-type="fig" rid="cpc_46_9_093112_fA5">Fig. A</xref>
+				<xref ref-type="fig" rid="cpc_46_9_093112_fA6">5</xref>
+				correspond to the processes
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ e^+e^- \to \mu^+\mu^-, \; Zh, \; W^+W^-, \; ZZ $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M246.jpg" xlink:type="simple" />
+				</inline-formula>
+				, and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ Z\gamma $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M247.jpg" xlink:type="simple" />
+				</inline-formula>
+				, respectively. For
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ e^+e^- \to \; W^+W^- $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M248.jpg" xlink:type="simple" />
+				</inline-formula>
+				,
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ZZ $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_Z-20220615153956.jpg" xlink:type="simple" />
+				</inline-formula>
+				, and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ Z\gamma $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M249.jpg" xlink:type="simple" />
+				</inline-formula>
+				, we also show the Feynman diagrams of the
+				<italic toggle="yes">t</italic>
+				-channel processes with the insertion of the counter terms into the vertex between the gauge boson and leptons. These diagrams with the counter terms involving the NP contributions provide leading corrections to the related cross sections.
+			</p>
+			<fig id="cpc_46_9_093112_fA1" orientation="portrait" position="float">
+				<label>Fig. A1</label>
+				<caption id="cpc_46_9_093112_fcA1">
+					<p>
+						Feynman diagrams for the propagator (a, b) corrections to
+						<inline-formula>
+							<tex-math>
+								<?CDATA $ e^+ e^- \to \mu^+ \mu^- $?>
+							</tex-math>
+							<inline-graphic xlink:href="cpc_46_9_093112_M250.jpg" xlink:type="simple" />
+						</inline-formula>
+						due to the dark sector in both models.
+					</p>
+				</caption>
+				<graphic content-type="print" id="cpc_46_9_093112_fA1_eps" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_fA1.eps" xlink:type="simple" />
+				<graphic content-type="online" id="cpc_46_9_093112_fA1_online" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_fA1.jpg" xlink:type="simple" />
+			</fig>
+			<fig id="cpc_46_9_093112_fA2" orientation="portrait" position="float">
+				<label>Fig. A2</label>
+				<caption id="cpc_46_9_093112_fcA2">
+					<p>
+						Feynman diagrams for the vertex (a) and propagator (b, c) corrections to
+						<inline-formula>
+							<tex-math>
+								<?CDATA $ e^+ e^- \to Z H $?>
+							</tex-math>
+							<inline-graphic xlink:href="cpc_46_9_093112_M251.jpg" xlink:type="simple" />
+						</inline-formula>
+						.
+					</p>
+				</caption>
+				<graphic content-type="print" id="cpc_46_9_093112_fA2_eps" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_fA2.eps" xlink:type="simple" />
+				<graphic content-type="online" id="cpc_46_9_093112_fA2_online" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_fA2.jpg" xlink:type="simple" />
+			</fig>
+			<fig id="cpc_46_9_093112_fA3" orientation="portrait" position="float">
+				<label>Fig. A3</label>
+				<caption id="cpc_46_9_093112_fcA3">
+					<p>
+						Feynman diagrams for the vertex (a,b) and propagator (c, d) corrections to
+						<inline-formula>
+							<tex-math>
+								<?CDATA $ e^+ e^- \to W^+ W^- $?>
+							</tex-math>
+							<inline-graphic xlink:href="cpc_46_9_093112_M252.jpg" xlink:type="simple" />
+						</inline-formula>
+						.
+					</p>
+				</caption>
+				<graphic content-type="print" id="cpc_46_9_093112_fA3_eps" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_fA3.eps" xlink:type="simple" />
+				<graphic content-type="online" id="cpc_46_9_093112_fA3_online" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_fA3.jpg" xlink:type="simple" />
+			</fig>
+			<fig id="cpc_46_9_093112_fA4" orientation="portrait" position="float">
+				<label>Fig. A4</label>
+				<caption id="cpc_46_9_093112_fcA4">
+					<p>
+						Feynman diagrams for the vertex (a,b) corrections to
+						<inline-formula>
+							<tex-math>
+								<?CDATA $ e^+ e^- \to Z Z $?>
+							</tex-math>
+							<inline-graphic xlink:href="cpc_46_9_093112_M253.jpg" xlink:type="simple" />
+						</inline-formula>
+						.
+					</p>
+				</caption>
+				<graphic content-type="print" id="cpc_46_9_093112_fA4_eps" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_fA4.eps" xlink:type="simple" />
+				<graphic content-type="online" id="cpc_46_9_093112_fA4_online" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_fA4.jpg" xlink:type="simple" />
+			</fig>
+			<fig id="cpc_46_9_093112_fA5" orientation="portrait" position="float">
+				<label>Fig. A5</label>
+				<caption id="cpc_46_9_093112_fcA5">
+					<p>
+						Feynman diagrams for the vertex corrections to
+						<inline-formula>
+							<tex-math>
+								<?CDATA $ e^+ e^- \to Z \gamma $?>
+							</tex-math>
+							<inline-graphic xlink:href="cpc_46_9_093112_M254.jpg" xlink:type="simple" />
+						</inline-formula>
+						.
+					</p>
+				</caption>
+				<graphic content-type="print" id="cpc_46_9_093112_fA5_eps" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_fA5.eps" xlink:type="simple" />
+				<graphic content-type="online" id="cpc_46_9_093112_fA5_online" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_fA5.jpg" xlink:type="simple" />
+			</fig>
+			<fig id="cpc_46_9_093112_fA6" orientation="portrait" position="float">
+				<label>Fig. A6</label>
+				<caption id="cpc_46_9_093112_fcA6">
+					<p>
+						Feynman diagrams of
+						<italic toggle="yes">t</italic>
+						-channel (a, b, c) containing the counter terms, that involve the contributions of the NP particles, for the processes
+						<inline-formula>
+							<tex-math>
+								<?CDATA $ e^+ e^- \to W^+ W^-, Z Z $?>
+							</tex-math>
+							<inline-graphic xlink:href="cpc_46_9_093112_M255.jpg" xlink:type="simple" />
+						</inline-formula>
+						, and
+						<inline-formula>
+							<tex-math>
+								<?CDATA $ Z \gamma $?>
+							</tex-math>
+							<inline-graphic xlink:href="cpc_46_9_093112_M256.jpg" xlink:type="simple" />
+						</inline-formula>
+						, respectively.
+					</p>
+				</caption>
+				<graphic content-type="print" id="cpc_46_9_093112_fA6_eps" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_fA6.eps" xlink:type="simple" />
+				<graphic content-type="online" id="cpc_46_9_093112_fA6_online" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_fA6.jpg" xlink:type="simple" />
+			</fig>
+		</sec>
+		<sec id="cpc_46_9_093112_s07">
+			<title>APPENDIX B:CONSTRAINTS FROM THE DM RELIC ABUNDANCE AND DIRECT DETECTION</title>
+			<p>
+				In
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB1">Fig. B1</xref>
+				and
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB2">Fig. B2</xref>
+				, we show the constraints from the DM relic abundance and direct detection for the SDFDM and DTFDM models, respectively. For the relic abundance, the effects of all the annihilation and coannihilation channels are calculated using the package MadDM [
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib33">33</xref>
+				]. The blue regions are excluded because of the predicted DM relic abundance is larger than the observed value with
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ \Omega h^2 \gt 0.12 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M257.jpg" xlink:type="simple" />
+				</inline-formula>
+				[
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib34">34</xref>
+				]. For comparison, we have selected the same parameters in
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB1">Fig. B1</xref>
+				(a),
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB1">B1</xref>
+				(b),
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB1">B1</xref>
+				(c),
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB2">B2</xref>
+				(a),
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB2">B2</xref>
+				(b), and
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB2">B2</xref>
+				(c) as in
+				<xref ref-type="fig" rid="cpc_46_9_093112_f1">Fig. 1</xref>
+				(f),
+				<xref ref-type="fig" rid="cpc_46_9_093112_f3">3</xref>
+				(f),
+				<xref ref-type="fig" rid="cpc_46_9_093112_f4">4</xref>
+				(f),
+				<xref ref-type="fig" rid="cpc_46_9_093112_f5">5</xref>
+				(a),
+				<xref ref-type="fig" rid="cpc_46_9_093112_f5">5</xref>
+				(b), and
+				<xref ref-type="fig" rid="cpc_46_9_093112_f5">5</xref>
+				(c). We also consider the constraints from the DM direct detection and show the excluded parameter regions in
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB1">Fig. B1</xref>
+				and
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB2">Fig. B2</xref>
+				. The experimental limits on the spin-independent (SI) and spin-dependent (SD) DM-nucleon scatterings are obtained from the results of PandaX-4T [
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib35">35</xref>
+				] and PICO-60 [
+				<xref ref-type="bibr" rid="cpc_46_9_093112_bib36">36</xref>
+				], respectively. The DM-nucleon scattering cross sections are also calculated using MadDM.
+			</p>
+			<fig id="cpc_46_9_093112_fB1" orientation="portrait" position="float">
+				<label>Fig. B1</label>
+				<caption id="cpc_46_9_093112_fcB1">
+					<p>
+						(color online) DM constraints in the
+						<inline-formula>
+							<tex-math>
+								<?CDATA $ m_S-m_D $?>
+							</tex-math>
+							<inline-graphic xlink:href="cpc_46_9_093112_M258.jpg" xlink:type="simple" />
+						</inline-formula>
+						(a) and
+						<inline-formula>
+							<tex-math>
+								<?CDATA $ y_1-y_2 $?>
+							</tex-math>
+							<inline-graphic xlink:href="cpc_46_9_093112_M259.jpg" xlink:type="simple" />
+						</inline-formula>
+						(b, c) planes for the SDFDM model. The blue regions represent the parameter regions, where the predicted DM relic abundance is larger than the observed value [
+						<xref ref-type="bibr" rid="cpc_46_9_093112_bib34">34</xref>
+						] with
+						<inline-formula>
+							<tex-math>
+								<?CDATA $ \Omega h^2 \gt{0.12} $?>
+							</tex-math>
+							<inline-graphic xlink:href="cpc_46_9_093112_M260.jpg" xlink:type="simple" />
+						</inline-formula>
+						. The orange and purple lines represent the constraints set by the direct detection PandaX-4T [
+						<xref ref-type="bibr" rid="cpc_46_9_093112_bib35">35</xref>
+						] for the SI scattering and PICO-60 [
+						<xref ref-type="bibr" rid="cpc_46_9_093112_bib36">36</xref>
+						] for the SD scattering, respectively. The arrows denote the directions for exclusion.
+					</p>
+				</caption>
+				<graphic content-type="print" id="cpc_46_9_093112_fB1_eps" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_fB1.eps" xlink:type="simple" />
+				<graphic content-type="online" id="cpc_46_9_093112_fB1_online" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_fB1.jpg" xlink:type="simple" />
+			</fig>
+			<fig id="cpc_46_9_093112_fB2" orientation="portrait" position="float">
+				<label>Fig. B2</label>
+				<caption id="cpc_46_9_093112_fcB2">
+					<p>
+						(color online) Same as
+						<xref ref-type="fig" rid="cpc_46_9_093112_fB1">Fig. B1</xref>
+						, but for the DTFDM model.
+					</p>
+				</caption>
+				<graphic content-type="print" id="cpc_46_9_093112_fB2_eps" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_fB2.eps" xlink:type="simple" />
+				<graphic content-type="online" id="cpc_46_9_093112_fB2_online" orientation="portrait" position="float" xlink:href="cpc_46_9_093112_fB2.jpg" xlink:type="simple" />
+			</fig>
+			<p>
+				The DM overproduction limit excludes the parameter regions in which the DM annihilation cross section is excessively small. For the SDFDM model,
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ m_D \gtrsim 1 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M261.jpg" xlink:type="simple" />
+				</inline-formula>
+				TeV in
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB1">Fig. B1</xref>
+				(a) can be excluded by the DM overproduction limit. This is because when
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ m_D $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M262.jpg" xlink:type="simple" />
+				</inline-formula>
+				is large, the DM annihilation cross section would be significantly suppressed owing to the small doublet components in the DM. In
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB1">Fig. B1</xref>
+				(b), although
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ m_D $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M263.jpg" xlink:type="simple" />
+				</inline-formula>
+				is not very large, small
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ m_S $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M264.jpg" xlink:type="simple" />
+				</inline-formula>
+				,
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ y_1 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M265.jpg" xlink:type="simple" />
+				</inline-formula>
+				, and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ y_2 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M266.jpg" xlink:type="simple" />
+				</inline-formula>
+				may also result in a DM dominated by the singlet component. Moreover, in
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB1">Fig. B1</xref>
+				(b) and
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB1">B1</xref>
+				(c), if
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ y_1 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M267.jpg" xlink:type="simple" />
+				</inline-formula>
+				and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ y_2 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M268.jpg" xlink:type="simple" />
+				</inline-formula>
+				have opposite signs, a parameter region may occur in which the DM is very light owing to the large mass splitting term. These parameter regions are excluded by the overproduction limit because the DM particles do not have a significant annihilation cross section.
+			</p>
+			<p>
+				The couplings of
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ h\chi_1^0\chi_1^0 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M269.jpg" xlink:type="simple" />
+				</inline-formula>
+				and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ Z\chi_1^0\chi_1^0 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M270.jpg" xlink:type="simple" />
+				</inline-formula>
+				result in SI and SD DM-nucleon scatterings in DM detection experiments, respectively. As shown in
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB1">Fig. B1</xref>
+				(a),
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB1">B1</xref>
+				(b), and
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB1">B1</xref>
+				(c), both the DM direct detection experiments for the SI and SD interactions set very stringent limits on the parameter space, and the two effects can be complementary in some parameter regions. We can observe that some parameter regions are still permitted by the direct detection with
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ y_1\sim y_2 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M271.jpg" xlink:type="simple" />
+				</inline-formula>
+				. In this case, the
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ h\chi_1^0\chi_1^0 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M272.jpg" xlink:type="simple" />
+				</inline-formula>
+				and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ Z\chi_1^0\chi_1^0 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M273.jpg" xlink:type="simple" />
+				</inline-formula>
+				couplings are suppressed.
+			</p>
+			<p>
+				The results of the DTFDM model shown in
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB2">Fig. B2</xref>
+				are similar to those of the SDFDM model in
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB1">Fig. B1</xref>
+				. Since both the doublets and triplet participate in the weak interaction, the DM in the DTFDM model would always have a significant annihilation cross section. When DM is not very light, a small DM relic density can be easily achieved in the DTFDM model. If
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ M_S $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M274.jpg" xlink:type="simple" />
+				</inline-formula>
+				is replaced by
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ M_T $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M275.jpg" xlink:type="simple" />
+				</inline-formula>
+				, the mass matrix
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ M_N $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M276.jpg" xlink:type="simple" />
+				</inline-formula>
+				of the neutral NP particles in the DTFDM model is identical to that in the SDFDM Eq. (5). Thus, the couplings of
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ h\chi_1^0\chi_1^0 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M277.jpg" xlink:type="simple" />
+				</inline-formula>
+				and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ Z\chi_1^0\chi_1^0 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M278.jpg" xlink:type="simple" />
+				</inline-formula>
+				in these two models are equal when
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ M_S=M_T $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M279.jpg" xlink:type="simple" />
+				</inline-formula>
+				for the same
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ y_1 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M280.jpg" xlink:type="simple" />
+				</inline-formula>
+				,
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ y_2 $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M281.jpg" xlink:type="simple" />
+				</inline-formula>
+				, and
+				<inline-formula>
+					<tex-math>
+						<?CDATA $ M_D $?>
+					</tex-math>
+					<inline-graphic xlink:href="cpc_46_9_093112_M282.jpg" xlink:type="simple" />
+				</inline-formula>
+				. Therefore, the excluded regions set by the direct detection are the same in
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB1">Fig. B1</xref>
+				(a) and
+				<xref ref-type="fig" rid="cpc_46_9_093112_fB2">Fig. B2</xref>
+				(a).
+			</p>
+		</sec>
+	</body>
+	<back>
+		<fn-group>
+			<fn id="cpc_46_9_093112_pn1">
+				<p>
+					Note that the process of
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ e^+e^- \to Zh $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M24.jpg" xlink:type="simple" />
+					</inline-formula>
+					has been studied in Ref. [
+					<xref ref-type="bibr" rid="cpc_46_9_093112_bib12">12</xref>
+					], here we just include the corresponding result for comparison.
+				</p>
+			</fn>
+			<fn id="cpc_46_9_093112_pn2">
+				<p>
+					Other systematic uncertainties of these channels may result from the backgrounds and reconstructions. The exact value depending on the efficiency and purity of the simulation and have not been provided yet. However, it is expected that the realistic systematic uncertainties of these processes are smaller than that of
+					<inline-formula>
+						<tex-math>
+							<?CDATA $ e^+e^-\to Zh $?>
+						</tex-math>
+						<inline-graphic xlink:href="cpc_46_9_093112_M72.jpg" xlink:type="simple" />
+					</inline-formula>
+					at least, because of the better reconstruction and larger statistics of the gauge bosons.
+				</p>
+			</fn>
+		</fn-group>
+		<ref-list>
+			<title>References</title>
+			<ref id="cpc_46_9_093112_bib1">
+				<label>[1]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Aad . (ATLAS Collaboration)</surname>
+							<given-names>G.</given-names>
+						</name>
+						<etal>et al</etal>
+					</person-group>
+					<source>Phys. Lett. B</source>
+					<year>2012</year>
+					<volume>716</volume>
+					<fpage>1</fpage>
+					<lpage>29</lpage>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1207.7214" xlink:type="simple">1207.7214</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib2">
+				<label>[2]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Chatrchyan . (CMS Collaboration)</surname>
+							<given-names>S.</given-names>
+						</name>
+						<etal>et al</etal>
+					</person-group>
+					<source>Phys. Lett. B</source>
+					<year>2012</year>
+					<volume>716</volume>
+					<fpage>30</fpage>
+					<lpage>61</lpage>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1207.7235" xlink:type="simple">1207.7235</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib3">
+				<label>[3]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>L. Feng</surname>
+							<given-names>J.</given-names>
+						</name>
+					</person-group>
+					<source>Ann. Rev. Astron. Astrophys.</source>
+					<year>2010</year>
+					<volume>48</volume>
+					<fpage>495</fpage>
+					<lpage>545</lpage>
+					<pub-id pub-id-type="doi">10.1146/annurev-astro-082708-101659</pub-id>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1003.0904[astro-ph.CO]" xlink:type="simple">1003.0904[astro-ph.CO]</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib4">
+				<label>[4]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Bertone</surname>
+							<given-names>G.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Hooper</surname>
+							<given-names>D.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Silk</surname>
+							<given-names>J.</given-names>
+						</name>
+					</person-group>
+					<source>Phys. Rept.</source>
+					<year>2005</year>
+					<volume>405</volume>
+					<fpage>279</fpage>
+					<lpage>390</lpage>
+					<pub-id pub-id-type="doi">10.1016/j.physrep.2004.08.031</pub-id>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/hep-ph/0404175" xlink:type="simple">hep-ph/0404175</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib5">
+				<label>[5]</label>
+				<element-citation publication-type="other" xlink:type="simple">
+					<comment>
+						M. Dong and G. Li
+						<italic toggle="yes">et al.</italic>
+						(CEPC Study Group Collaboration),
+						<italic toggle="yes">CEPC Conceptual Design Report: Volume 2 - Physics &amp; Detector</italic>
+						, arXiv: 1811.10545[hep-ex]
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib6">
+				<label>[6]</label>
+				<element-citation publication-type="other" xlink:type="simple">
+					<comment>
+						A. Abada
+						<italic toggle="yes">et al</italic>
+						. (FCC Collaboration),
+						<italic toggle="yes">Future Circular Collider</italic>
+						, CERN-ACC-2018-0057
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib7">
+				<label>[7]</label>
+				<element-citation publication-type="other" xlink:type="simple">
+					<comment>
+						H. Baer, T. Barklow, K. Fujii
+						<italic toggle="yes">et al</italic>
+						.,
+						<italic toggle="yes">The International Linear Collider Technical Design Report - Volume 2: Physics</italic>
+						, arXiv: 1306.6352[hep-ph]
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib8">
+				<label>[8]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Cirelli</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Fornengo</surname>
+							<given-names>N.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Strumia</surname>
+							<given-names>A.</given-names>
+						</name>
+					</person-group>
+					<source>Nucl. Phys. B</source>
+					<year>2006</year>
+					<volume>753</volume>
+					<fpage>178</fpage>
+					<lpage>194</lpage>
+					<pub-id pub-id-type="doi">10.1016/j.nuclphysb.2006.07.012</pub-id>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/hep-ph/0512090" xlink:type="simple">hep-ph/0512090</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib9">
+				<label>[9]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>E. Yaguna</surname>
+							<given-names>C.</given-names>
+						</name>
+					</person-group>
+					<source>Phys. Rev. D</source>
+					<year>2015</year>
+					<volume>92</volume>
+					<fpage>115002</fpage>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1510.06151" xlink:type="simple">1510.06151</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib10">
+				<label>[10]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Calibbi</surname>
+							<given-names>L.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Mariotti</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Tziveloglou</surname>
+							<given-names>P.</given-names>
+						</name>
+					</person-group>
+					<source>JHEP</source>
+					<year>2015</year>
+					<volume>10</volume>
+					<fpage>116</fpage>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1505.03867" xlink:type="simple">1505.03867</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib11">
+				<label>[11]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Cai</surname>
+							<given-names>C.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Yu</surname>
+							<given-names>Z.-H.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Zhang</surname>
+							<given-names>H.-H.</given-names>
+						</name>
+					</person-group>
+					<source>Nucl. Phys. B</source>
+					<year>2017</year>
+					<volume>921</volume>
+					<fpage>181</fpage>
+					<lpage>210</lpage>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1611.02186" xlink:type="simple">1611.02186</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib12">
+				<label>[12]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Xiang</surname>
+							<given-names>Q.-F.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Bi</surname>
+							<given-names>X.-J.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Yin</surname>
+							<given-names>P.-F.</given-names>
+						</name>
+						<etal>et al</etal>
+					</person-group>
+					<source>Phys. Rev. D</source>
+					<year>2018</year>
+					<volume>97</volume>
+					<fpage>055004</fpage>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1707.03094" xlink:type="simple">1707.03094</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib13">
+				<label>[13]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Wang</surname>
+							<given-names>J.-W.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Bi</surname>
+							<given-names>X.-J.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Yin</surname>
+							<given-names>P.-F.</given-names>
+						</name>
+						<etal>et al</etal>
+					</person-group>
+					<source>Phys. Rev. D</source>
+					<year>2019</year>
+					<volume>99</volume>
+					<fpage>055009</fpage>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1811.08743" xlink:type="simple">1811.08743</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib14">
+				<label>[14]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Dedes</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Karamitros</surname>
+							<given-names>D.</given-names>
+						</name>
+					</person-group>
+					<source>Phys. Rev. D</source>
+					<year>2014</year>
+					<volume>89</volume>
+					<fpage>115002</fpage>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1403.7744" xlink:type="simple">1403.7744</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib15">
+				<label>[15]</label>
+				<element-citation publication-type="other" xlink:type="simple">
+					<comment>
+						M. McCullough,
+						<italic toggle="yes">An Indirect Model-Dependent Probe of the Higgs Self-Coupling</italic>
+						, Phys. Rev. D
+						<bold>90</bold>
+						,
+						<bold />
+						015001 (2014) arXiv: 1312.3322[hep-ph] [Erratum: Phys. Rev.D
+						<bold>92</bold>
+						(3), 039903 (2015)]
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib16">
+				<label>[16]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Cao</surname>
+							<given-names>J.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Heng</surname>
+							<given-names>Z.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Li</surname>
+							<given-names>D.</given-names>
+						</name>
+						<etal>et al</etal>
+					</person-group>
+					<source>JHEP</source>
+					<year>2014</year>
+					<volume>08</volume>
+					<fpage>138</fpage>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1405.4489" xlink:type="simple">1405.4489</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib17">
+				<label>[17]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Beneke</surname>
+							<given-names>M.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Boito</surname>
+							<given-names>D.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Wang</surname>
+							<given-names>Y.-M.</given-names>
+						</name>
+					</person-group>
+					<source>JHEP</source>
+					<year>2014</year>
+					<volume>11</volume>
+					<fpage>028</fpage>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1406.1361" xlink:type="simple">1406.1361</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib18">
+				<label>[18]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Shen</surname>
+							<given-names>C.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Zhu</surname>
+							<given-names>S.-h.</given-names>
+						</name>
+					</person-group>
+					<source>Phys. Rev. D</source>
+					<year>2015</year>
+					<volume>92</volume>
+					<fpage>094001</fpage>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1504.05626" xlink:type="simple">1504.05626</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib19">
+				<label>[19]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>P. Huang</surname>
+							<given-names>F.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Gu</surname>
+							<given-names>P.-H.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Yin</surname>
+							<given-names>P.-F.</given-names>
+						</name>
+						<etal>et al</etal>
+					</person-group>
+					<source>Phys. Rev. D</source>
+					<year>2016</year>
+					<volume>93</volume>
+					<fpage>103515</fpage>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1511.03969" xlink:type="simple">1511.03969</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib20">
+				<label>[20]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Kobakhidze</surname>
+							<given-names>A.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Liu</surname>
+							<given-names>N.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Wu</surname>
+							<given-names>L.</given-names>
+						</name>
+						<etal>et al</etal>
+					</person-group>
+					<source>Phys. Rev. D</source>
+					<year>2017</year>
+					<volume>95</volume>
+					<fpage>015016</fpage>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1610.06676" xlink:type="simple">1610.06676</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib21">
+				<label>[21]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Wang</surname>
+							<given-names>J.-W.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Bi</surname>
+							<given-names>X.-J.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Xiang</surname>
+							<given-names>Q.-F.</given-names>
+						</name>
+						<etal>et al</etal>
+					</person-group>
+					<source>Phys. Rev. D</source>
+					<year>2018</year>
+					<volume>97</volume>
+					<fpage>035021</fpage>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1711.05622" xlink:type="simple">1711.05622</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib22">
+				<label>[22]</label>
+				<element-citation publication-type="other" xlink:type="simple">
+					<comment>
+						N. Chen, T. Han, S. Li
+						<italic toggle="yes">et al</italic>
+						.,
+						<italic toggle="yes">Type-I 2HDM under the Higgs and Electroweak Precision Measurements</italic>
+						, arXiv: 1912.01431[hep-ph]
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib23">
+				<label>[23]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Chen</surname>
+							<given-names>N.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Han</surname>
+							<given-names>T.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Su</surname>
+							<given-names>S.</given-names>
+						</name>
+						<etal>et al</etal>
+					</person-group>
+					<source>JHEP</source>
+					<year>2019</year>
+					<volume>03</volume>
+					<fpage>023</fpage>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1808.02037" xlink:type="simple">1808.02037</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib24">
+				<label>[24]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Cai</surname>
+							<given-names>C.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Yu</surname>
+							<given-names>Z.-H.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Zhang</surname>
+							<given-names>H.-H.</given-names>
+						</name>
+					</person-group>
+					<source>Nucl. Phys. B</source>
+					<year>2017</year>
+					<volume>924</volume>
+					<fpage>128</fpage>
+					<lpage>152</lpage>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1705.07921" xlink:type="simple">1705.07921</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib25">
+				<label>[25]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Liu</surname>
+							<given-names>N.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Wu</surname>
+							<given-names>L.</given-names>
+						</name>
+					</person-group>
+					<source>Eur. Phys. J. C</source>
+					<year>2017</year>
+					<volume>77</volume>
+					<fpage>868</fpage>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1705.02534" xlink:type="simple">1705.02534</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib26">
+				<label>[26]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>V. Andreev</surname>
+							<given-names>V.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Moortgat-Pick</surname>
+							<given-names>G.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Osland</surname>
+							<given-names>P.</given-names>
+						</name>
+						<etal>et al</etal>
+					</person-group>
+					<source>Eur. Phys. J. C</source>
+					<year>2012</year>
+					<volume>72</volume>
+					<fpage>2147</fpage>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1205.0866" xlink:type="simple">1205.0866</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib27">
+				<label>[27]</label>
+				<element-citation publication-type="other" xlink:type="simple">
+					<comment>
+						K. Harigaya, K. Ichikawa, A. Kundu
+						<italic toggle="yes">et al</italic>
+						.,
+						<italic toggle="yes">Indirect probe of electroweak-interacting particles at future lepton colliders</italic>
+						, Journal of High Energy Physics
+						<bold>2015</bold>
+						(Sep, 2015)
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib28">
+				<label>[28]</label>
+				<element-citation publication-type="other" xlink:type="simple">
+					<comment>
+						Q.-H. Cao, Y. Li, B. Yan
+						<italic toggle="yes">et al</italic>
+						.,
+						<italic toggle="yes">Probing dark particles indirectly at the CEPC</italic>
+						, Nucl. Phys. B
+						<bold>909</bold>
+						, 197-217 (2016)
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib29">
+				<label>[29]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Gulov</surname>
+							<given-names>A.</given-names>
+						</name>
+					</person-group>
+					<source>Int. J. Mod. Phys. A</source>
+					<year>2014</year>
+					<volume>29</volume>
+					<fpage>1450161</fpage>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1308.4837" xlink:type="simple">1308.4837</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib30">
+				<label>[30]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Hahn</surname>
+							<given-names>T.</given-names>
+						</name>
+					</person-group>
+					<source>Comput. Phys. Commun.</source>
+					<year>2001</year>
+					<volume>140</volume>
+					<fpage>418</fpage>
+					<lpage>431</lpage>
+					<pub-id pub-id-type="doi">10.1016/S0010-4655(01)00290-9</pub-id>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/hep-ph/0012260" xlink:type="simple">hep-ph/0012260</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib31">
+				<label>[31]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Hahn</surname>
+							<given-names>T.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Perez-Victoria</surname>
+							<given-names>M.</given-names>
+						</name>
+					</person-group>
+					<source>Comput. Phys. Commun.</source>
+					<year>1999</year>
+					<volume>118</volume>
+					<fpage>153</fpage>
+					<lpage>165</lpage>
+					<pub-id pub-id-type="doi">10.1016/S0010-4655(98)00173-8</pub-id>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/hep-ph/9807565" xlink:type="simple">hep-ph/9807565</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib32">
+				<label>[32]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Abdallah . (DELPHI Collaboration)</surname>
+							<given-names>J.</given-names>
+						</name>
+						<etal>et al</etal>
+					</person-group>
+					<source>Eur. Phys. C. J</source>
+					<year>2003</year>
+					<volume>31</volume>
+					<fpage>421</fpage>
+					<lpage>479</lpage>
+					<pub-id pub-id-type="doi">10.1140/epjc/s2003-01355-5</pub-id>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/hep-ex/0311019" xlink:type="simple">hep-ex/0311019</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib33">
+				<label>[33]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Ambrogi</surname>
+							<given-names>F.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Arina</surname>
+							<given-names>C.</given-names>
+						</name>
+						<name name-style="western">
+							<surname>Backovic</surname>
+							<given-names>M.</given-names>
+						</name>
+						<etal>et al</etal>
+					</person-group>
+					<source>Phys. Dark Univ.</source>
+					<year>2019</year>
+					<volume>24</volume>
+					<fpage>100249</fpage>
+					<pub-id pub-id-type="doi">10.1016/j.dark.2018.11.009</pub-id>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1804.00044" xlink:type="simple">1804.00044</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib34">
+				<label>[34]</label>
+				<element-citation publication-type="other" xlink:type="simple">
+					<comment>
+						N. Aghanim
+						<italic toggle="yes">et al</italic>
+						. (Planck Collaboration),
+						<italic toggle="yes">Planck 2018 results. VI. Cosmological parameters,</italic>
+						Astron. Astrophys
+						<italic toggle="yes">.</italic>
+						<bold>641</bold>
+						, A6 (2020), arXiv: 1807.06209[astro-ph.CO] [Erratum: Astron. Astrophys.
+						<bold>652</bold>
+						, C4 (2021)]
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib35">
+				<label>[35]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Meng . (PandaX-4T Collaboration)</surname>
+							<given-names>Y.</given-names>
+						</name>
+						<etal>et al</etal>
+					</person-group>
+					<source>Phys. Rev. Lett.</source>
+					<year>2021</year>
+					<volume>127</volume>
+					<fpage>261802</fpage>
+					<pub-id pub-id-type="doi">10.1103/PhysRevLett.127.261802</pub-id>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/2107.13438" xlink:type="simple">2107.13438</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+			<ref id="cpc_46_9_093112_bib36">
+				<label>[36]</label>
+				<element-citation publication-type="journal" xlink:type="simple">
+					<person-group person-group-type="author">
+						<name name-style="western">
+							<surname>Amole . (PICO Collaboration)</surname>
+							<given-names>C.</given-names>
+						</name>
+						<etal>et al</etal>
+					</person-group>
+					<source>Phys. Rev. D</source>
+					<year>2019</year>
+					<volume>100</volume>
+					<fpage>022001</fpage>
+					<pub-id pub-id-type="doi">10.1103/PhysRevD.100.022001</pub-id>
+					<comment>
+						arXiv:
+						<ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1902.04031[astro-ph.CO]" xlink:type="simple">1902.04031[astro-ph.CO]</ext-link>
+					</comment>
+				</element-citation>
+			</ref>
+		</ref-list>
+	</back>
+</article>

@@ -1,4 +1,5 @@
 import datetime
+import xml.etree.ElementTree as ET
 from asyncio.log import logger
 
 
@@ -29,3 +30,8 @@ def construct_license(url, license_type, version):
     logger.error(
         "License is not given, or missing arguments.",
     )
+
+
+def get_text_value(element: ET.Element):
+    if element is not None:
+        return element.text
