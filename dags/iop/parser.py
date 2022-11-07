@@ -159,7 +159,7 @@ class IOPParser(IParser):
         )
         return get_text_value(raw_insitution)
 
-    def _get_countrry(self, article, reffered_id):
+    def _get_country(self, article, reffered_id):
         raw_country = article.find(
             f"front/article-meta/contrib-group/aff[@id='{reffered_id.get('rid')}']/country"
         )
@@ -170,13 +170,14 @@ class IOPParser(IParser):
         countries = []
         for reffered_id in reffered_ids:
             institutions.append(self._get_institution(article, reffered_id))
-            countries.append(self._get_countrry(article, reffered_id))
+            countries.append(self._get_country(article, reffered_id))
         return [
             {
                 "value": ",".join([institution, country]),
                 "country": country,
             }
             for institution, country in zip(institutions, countries)
+            if all([institution, country])
         ]
 
     def _get_affiliations(self, article):
@@ -195,14 +196,18 @@ class IOPParser(IParser):
             if reffered_ids is None:
                 continue
             affiliations = self._get_affiliation_values(article, reffered_ids)
-            if "collaboration" not in given_names.lower():
+            if (
+                all([affiliations, surname, given_names])
+                and "collaboration" not in given_names.lower()
+            ):
                 author = {
                     "surname": surname,
                     "given_names": given_names,
                     "affiliations": affiliations,
                 }
                 authors.append(author)
-        return authors
+        if authors:
+            return authors
 
     def _get_date(self, date):
         return datetime.date(

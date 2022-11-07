@@ -79,7 +79,7 @@ class CustomExtractor(IExtractor):
         if value is not None:
             return value
         if self.required and value is None:
-            raise RequiredFieldNotFoundExtractionError(self.source)
+            raise RequiredFieldNotFoundExtractionError(self.destination)
         return self.default_value
 
 
