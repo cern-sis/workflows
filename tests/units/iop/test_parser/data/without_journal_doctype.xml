@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "JATS-journalpublishing1.dtd">
-<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="other" dtd-version="1.1" xml:lang="en">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.1" xml:lang="en">
     <front>
         <journal-meta>
             <journal-id journal-id-type="publisher-id">cpc</journal-id>
@@ -453,9 +453,6 @@
                     0.02) for the dependence of the neutron yield at the liquid scintillator on muon energy.
                 </p>
             </abstract>
-            <counts>
-                <page-count count="page" />
-            </counts>
         </article-meta>
     </front>
 </article>

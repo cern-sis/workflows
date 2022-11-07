@@ -23,6 +23,8 @@ class HindawiTextExtractor(TextExtractor):
             [node.text or ""] + [ET.tostring(el).decode("ascii") for el in node]
         )
         final_value = self.extra_function(pattern.sub("", extracted_value))
+        if not final_value:
+            raise RequiredFieldNotFoundExtractionError(self.source)
         self.logger.info("Extracted value", field=self.destination, value=final_value)
         return final_value
 

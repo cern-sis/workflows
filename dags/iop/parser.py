@@ -46,7 +46,7 @@ class IOPParser(IParser):
                 destination="page_nr",
                 source="front/article-meta/counts/page-count",
                 attribute="count",
-                extra_function=lambda x: [int(x)],
+                extra_function=self._parse_page_to_int,
                 default_value=[0],
             ),
             TextExtractor(
@@ -127,16 +127,14 @@ class IOPParser(IParser):
         raw_journal_doctype = article.find(
             ".",
         ).get("article-type")
-        journal_doctype = self.article_type_mapping[raw_journal_doctype]
-        if journal_doctype not in self.article_type_mapping:
-            print("NOOTTT")
+        if raw_journal_doctype not in self.article_type_mapping:
             doi = article.find("front/article-meta/article-id/[@pub-id-type='doi']")
             if doi is not None:
                 self.logger.msg(
                     f"There are unmapped article types for article {doi.text} with types {raw_journal_doctype}"
                 )
             return
-        print("YAYAYAY")
+        journal_doctype = self.article_type_mapping[raw_journal_doctype]
         return journal_doctype
 
     def _get_related_article_doi(self, article):
@@ -289,3 +287,10 @@ class IOPParser(IParser):
             if "collaboration" in given_names.lower():
                 collaborations.append(given_names)
         return collaborations
+
+    def _parse_page_to_int(self, value: str):
+        try:
+            return [int(value)]
+        except ValueError:
+            self.logger.msg("Corrupted page_nr value")
+            return [0]

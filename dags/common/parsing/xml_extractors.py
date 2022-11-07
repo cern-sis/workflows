@@ -76,7 +76,7 @@ class CustomExtractor(IExtractor):
 
     def extract(self, article: ET.Element):
         value = self.extraction_function(article)
-        if value:
+        if value is not None:
             return value
         if self.required and value is None:
             raise RequiredFieldNotFoundExtractionError(self.source)
