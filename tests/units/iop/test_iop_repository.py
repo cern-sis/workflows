@@ -6,6 +6,8 @@ from iop.repository import IOPRepository
 
 
 class S3BucketResultObj:
+    key: str
+
     def __init__(self, key) -> None:
         self.key = key
 

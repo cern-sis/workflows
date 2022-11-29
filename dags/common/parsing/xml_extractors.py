@@ -56,9 +56,9 @@ class AttributeExtractor(IExtractor):
         self.required = required
 
     def extract(self, article: ET.Element):
-        value = article.find(self.source)
-        if value is not None:
-            return self.extra_function(value.get(self.attribute))
+        value = self.extra_function(article.find(self.source).get(self.attribute))
+        if value:
+            return value
         if self.required and value is None:
             raise RequiredFieldNotFoundExtractionError(self.source)
         return self.default_value

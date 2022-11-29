@@ -42,7 +42,7 @@
   ],
   "collections": ["Test Collection"],
   "control_field": ["Test control field"],
-  "free_keywords": ["Test free 1", "Test free  2   "],
+  "free_keywords": ["Test free 1", "Test free 2"],
   "thesis_supervisor": [
     {
       "surname": "Test Surname",

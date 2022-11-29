@@ -173,7 +173,8 @@ class HindawiParser(IParser):
         )
         for license_url, license_text in zip(license_urls, license_texts):
             if license_url.text:
-                clean_url_parts = list(filter(bool, license_url.text.split("/")))
+                url_parts = license_url.text.split("/")
+                clean_url_parts = list(filter(bool, url_parts))
                 version = clean_url_parts.pop()
                 license_type = clean_url_parts.pop()
                 licenses.append(
