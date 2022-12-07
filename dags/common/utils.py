@@ -1,4 +1,5 @@
 import datetime
+import json
 from asyncio.log import logger
 
 
@@ -29,3 +30,22 @@ def construct_license(url, license_type, version):
     logger.error(
         "License is not given, or missing arguments.",
     )
+
+
+def is_json_serializable(x):
+    try:
+        json.dumps(x)
+        return True
+    except TypeError:
+        return False
+
+
+def check_value(value):
+    json_serializable = is_json_serializable(value)
+    if json_serializable:
+        if value:
+            return bool(value)
+        if "hasattr" in dir(value) and value.hasattr("__iter__"):
+            return all(value)
+        return False
+    return False

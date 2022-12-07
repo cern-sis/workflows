@@ -2,7 +2,6 @@ import xml.etree.ElementTree as ET
 
 from common.parsing.xml_extractors import (
     AttributeExtractor,
-    ConstantExtractor,
     CustomExtractor,
     RequiredFieldNotFoundExtractionError,
     TextExtractor,
@@ -65,8 +64,3 @@ def test_custom_extractor(xml_node: ET.Element):
 
     extractor = CustomExtractor(None, extract_and_cast)
     assert extractor.extract(xml_node) == 5
-
-
-def test_constant_extractor(xml_node: ET.Element):
-    extractor = ConstantExtractor(None, "Constant")
-    assert extractor.extract(xml_node) == "Constant"

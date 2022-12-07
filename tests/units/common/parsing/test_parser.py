@@ -4,7 +4,6 @@ import xml.etree.ElementTree as ET
 from common.parsing.parser import IParser
 from common.parsing.xml_extractors import (
     AttributeExtractor,
-    ConstantExtractor,
     CustomExtractor,
     TextExtractor,
 )
@@ -48,14 +47,12 @@ def test_publisher_parsing(xml_node: ET.Element):
             TextExtractor("text_value", "./FieldOne/UnexistantField", required=False),
             AttributeExtractor("attribute_value", "./FieldOne", "TagOne"),
             CustomExtractor("custom_value", extract_and_cast),
-            ConstantExtractor("constant_value", "Constant"),
         ]
     )
     assert parser._publisher_specific_parsing(xml_node) == {
         "text_value": "Value Field Two",
         "attribute_value": "TagOneValue",
         "custom_value": 5,
-        "constant_value": "Constant",
     }
 
 
