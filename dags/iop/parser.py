@@ -16,12 +16,17 @@ class IOPParser(IParser):
     }
 
     def __init__(self) -> None:
+        self.dois = None
         self.logger = get_logger().bind(class_name=type(self).__name__)
         extractors = [
             CustomExtractor(
                 destination="dois",
                 extraction_function=self._get_dois,
                 required=True,
+            ),
+            CustomExtractor(
+                destination="journal_doctype",
+                extraction_function=self._get_journal_doctype,
             ),
         ]
         super().__init__(extractors)
@@ -33,5 +38,21 @@ class IOPParser(IParser):
         dois = node.text
         if dois:
             self.logger.msg("Parsing dois for article", dois=dois)
+            self.dois = dois
             return [dois]
-        return None
+        return
+
+    def _get_journal_doctype(self, article: ET.Element):
+        node = article.find(".")
+        value = node.get("article-type")
+        if not value:
+            self.logger.error("Article-type is not found in XML", doi=self.dois)
+            return None
+        try:
+            return self.article_type_mapping[value]
+        except KeyError:
+            self.logger.error(
+                "Unmapped article type", doi=self.dois, article_type=value
+            )
+        except Exception:
+            self.logger.error("Unknown error", doi=self.dois)

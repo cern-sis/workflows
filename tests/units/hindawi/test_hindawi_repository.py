@@ -6,8 +6,6 @@ from hindawi.repository import HindawiRepository
 
 
 class S3BucketResultObj:
-    key: str
-
     def __init__(self, key) -> None:
         self.key = key
 

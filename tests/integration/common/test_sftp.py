@@ -19,7 +19,6 @@ def test_list_files(client_fixture: SFTPService):
 def test_get_file(client_fixture: SFTPService):
     data_path = pathlib.Path().resolve().__str__() + "/data/springer"
     data_files = os.listdir(data_path)
-    print(data_files)
     filename = data_files[0]
     with open(data_path + "/" + data_files[0], "rb") as file:
         assert file.read() == client_fixture.get_file(filename).read()
