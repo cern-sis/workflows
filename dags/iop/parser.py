@@ -1,8 +1,9 @@
 import xml.etree.ElementTree as ET
 
-from common.constants import ARXIV_EXTRACTION_PATTERN, ARXIV_VALIDATION_PATTERN
+from common.constants import ARXIV_EXTRACTION_PATTERN
 from common.parsing.parser import IParser
 from common.parsing.xml_extractors import CustomExtractor
+from idutils import is_arxiv
 from structlog import get_logger
 
 
@@ -87,9 +88,8 @@ class IOPParser(IParser):
         )
         try:
             arxiv_value = ARXIV_EXTRACTION_PATTERN.sub("", arxivs_value.text.lower())
-            if ARXIV_VALIDATION_PATTERN.match(arxiv_value):
+            if is_arxiv(arxiv_value):
                 return [{"value": arxiv_value}]
-            else:
-                self.logger.error("arXiv value is not correct format", dois=self.dois)
+            self.logger.error("The arXiv value is not valid.", dois=self.dois)
         except AttributeError:
             self.logger.error("No arXiv eprints found", dois=self.dois)

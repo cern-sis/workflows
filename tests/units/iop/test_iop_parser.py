@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 
-from common.constants import ARXIV_EXTRACTION_PATTERN, ARXIV_VALIDATION_PATTERN
+from common.constants import ARXIV_EXTRACTION_PATTERN
 from common.parsing.xml_extractors import RequiredFieldNotFoundExtractionError
 from iop.parser import IOPParser
 from pytest import fixture, mark, param, raises
@@ -218,7 +218,7 @@ def test_wrong_arxiv_eprints_value_log_error_without_value(shared_datadir, parse
             {
                 "class_name": "IOPParser",
                 "dois": "10.1088/1674-1137/ac66cc",
-                "event": "arXiv value is not correct format",
+                "event": "The arXiv value is not valid.",
                 "log_level": "error",
             },
         ]
@@ -243,19 +243,3 @@ def test_wrong_arxiv_eprints_value_log_error_without_value(shared_datadir, parse
 )
 def test_arxiv_extraction_pattern(expected, input):
     assert ARXIV_EXTRACTION_PATTERN.sub("", input) == expected
-
-
-@mark.parametrize(
-    "input, expected",
-    [
-        param("1111.11111", True, id="test_validation_of_correct_arxiv_value"),
-        param(
-            "11ss1.111aaa",
-            False,
-            id="test_validation_of_arxiv_value_with_letters",
-        ),
-        param("1111.111v1", False, id="test_validation_of_arxiv_value_version"),
-    ],
-)
-def test_arxiv_validation_pattern(input, expected):
-    assert expected == bool(ARXIV_VALIDATION_PATTERN.match(input))
