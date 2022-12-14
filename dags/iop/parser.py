@@ -17,6 +17,7 @@ class IOPParser(IParser):
 
     def __init__(self) -> None:
         self.dois = None
+        self.journal_doctype = None
         self.logger = get_logger().bind(class_name=type(self).__name__)
         extractors = [
             CustomExtractor(
@@ -28,13 +29,17 @@ class IOPParser(IParser):
                 destination="journal_doctype",
                 extraction_function=self._get_journal_doctype,
             ),
+            CustomExtractor(
+                destination="related_article_doi",
+                extraction_function=self._get_related_article_doi,
+            ),
         ]
         super().__init__(extractors)
 
     def _get_dois(self, article: ET.Element):
         node = article.find("front/article-meta/article-id/[@pub-id-type='doi']")
         if node is None:
-            return None
+            return
         dois = node.text
         if dois:
             self.logger.msg("Parsing dois for article", dois=dois)
@@ -46,13 +51,27 @@ class IOPParser(IParser):
         node = article.find(".")
         value = node.get("article-type")
         if not value:
-            self.logger.error("Article-type is not found in XML", doi=self.dois)
+            self.logger.error("Article-type is not found in XML", dois=self.dois)
             return None
         try:
-            return self.article_type_mapping[value]
+            self.journal_doctype = self.article_type_mapping[value]
+            return self.journal_doctype
         except KeyError:
             self.logger.error(
-                "Unmapped article type", doi=self.dois, article_type=value
+                "Unmapped article type", dois=self.dois, article_type=value
             )
         except Exception:
-            self.logger.error("Unknown error", doi=self.dois)
+            self.logger.error("Unknown error", dois=self.dois)
+
+    def _get_related_article_doi(self, article):
+        if self.journal_doctype not in ["corrigendum", "addendum"]:
+            return
+        node = article.find("front/article-meta/related-article[@ext-link-type='doi']")
+        try:
+            related_article_doi = node.get("href")
+            if related_article_doi:
+                self.logger.info("Adding related_article_doi.")
+                return [related_article_doi]
+        except AttributeError:
+            self.logger.error("No related article dois found", dois=self.dois)
+            return

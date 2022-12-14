@@ -77,7 +77,7 @@ def test_journal_doctype_log_error_with_wrong_value(shared_datadir):
             },
             {
                 "class_name": "IOPParser",
-                "doi": "10.1088/1674-1137/ac66cc",
+                "dois": "10.1088/1674-1137/ac66cc",
                 "article_type": "no-data",
                 "event": "Unmapped article type",
                 "log_level": "error",
@@ -100,8 +100,51 @@ def test_journal_doctype_log_error_without_value(shared_datadir, parser):
             },
             {
                 "class_name": "IOPParser",
-                "doi": "10.1088/1674-1137/ac66cc",
+                "dois": "10.1088/1674-1137/ac66cc",
                 "event": "Article-type is not found in XML",
+                "log_level": "error",
+            },
+        ]
+
+
+def test_related_article_doi(shared_datadir, parser):
+    content = (shared_datadir / "related_article_dois.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert parsed_article["related_article_doi"] == ["10.0000/0000-0000/aa00aa"]
+
+
+def test_no_related_article_dois(shared_datadir, parser):
+    content = (shared_datadir / "related_article_dois_no_path.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert "related_article_doi" not in parsed_article
+
+
+def test_related_article_dois_no_value(shared_datadir, parser):
+    content = (shared_datadir / "related_article_dois_no_value.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert "related_article_doi" not in parsed_article
+
+
+def test_realted_article_dois_log_error_without_value(shared_datadir, parser):
+    with capture_logs() as cap_logs:
+        parser = IOPParser()
+        content = (shared_datadir / "related_article_dois_no_path.xml").read_text()
+        article = ET.fromstring(content)
+        parser._publisher_specific_parsing(article)
+        assert cap_logs == [
+            {
+                "class_name": "IOPParser",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "Parsing dois for article",
+                "log_level": "info",
+            },
+            {
+                "class_name": "IOPParser",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "No related article dois found",
                 "log_level": "error",
             },
         ]
