@@ -1,8 +1,9 @@
 import xml.etree.ElementTree as ET
 
+from common.constants import ARXIV_EXTRACTION_PATTERN, ARXIV_VALIDATION_PATTERN
 from common.parsing.xml_extractors import RequiredFieldNotFoundExtractionError
 from iop.parser import IOPParser
-from pytest import fixture, raises
+from pytest import fixture, mark, param, raises
 from structlog.testing import capture_logs
 
 
@@ -148,3 +149,113 @@ def test_realted_article_dois_log_error_without_value(shared_datadir, parser):
                 "log_level": "error",
             },
         ]
+
+
+def test_arxiv_eprints(shared_datadir, parser):
+    content = (shared_datadir / "arxiv_eprints.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert parsed_article["arxiv_eprints"] == [{"value": "2108.04010"}]
+
+
+def test_no_arxiv_eprints(shared_datadir, parser):
+    content = (shared_datadir / "no_arxiv_eprints.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert "arxiv_eprints" not in parsed_article
+
+
+def test_no_arxiv_eprints_value(shared_datadir, parser):
+    content = (shared_datadir / "no_arxiv_eprints_value.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert "arxiv_eprints" not in parsed_article
+
+
+def test_no_arxiv_eprints_value_log_error_without_value(shared_datadir, parser):
+    with capture_logs() as cap_logs:
+        parser = IOPParser()
+        content = (shared_datadir / "no_arxiv_eprints_value.xml").read_text()
+        article = ET.fromstring(content)
+        parser._publisher_specific_parsing(article)
+        assert cap_logs == [
+            {
+                "class_name": "IOPParser",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "Parsing dois for article",
+                "log_level": "info",
+            },
+            {
+                "class_name": "IOPParser",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "No arXiv eprints found",
+                "log_level": "error",
+            },
+        ]
+
+
+def test_arxiv_eprints_value_with_version(shared_datadir, parser):
+    content = (shared_datadir / "arxiv_eprints_with_version.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert parsed_article["arxiv_eprints"] == [{"value": "2108.04010"}]
+
+
+def test_wrong_arxiv_eprints_value_log_error_without_value(shared_datadir, parser):
+    with capture_logs() as cap_logs:
+        parser = IOPParser()
+        content = (shared_datadir / "arxiv_eprint_wrong_value.xml").read_text()
+        article = ET.fromstring(content)
+        parsed_article = parser._publisher_specific_parsing(article)
+        assert "arxiv_eprints" not in parsed_article
+        assert cap_logs == [
+            {
+                "class_name": "IOPParser",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "Parsing dois for article",
+                "log_level": "info",
+            },
+            {
+                "class_name": "IOPParser",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "arXiv value is not correct format",
+                "log_level": "error",
+            },
+        ]
+
+
+@fixture
+@mark.parametrize(
+    "input, expected",
+    [
+        param("1111.111123", "1111.111123", id="test_arxiv_value_with_digits"),
+        param(
+            "1111.111wtwtwvqv1",
+            "1111.111wtwtwvq",
+            id="test_arxiv_value_with_digits_and_letters_and_version",
+        ),
+        param(
+            "1111.111123v1",
+            "1111.111123",
+            id="test_arxiv_value_with_digits_and_version",
+        ),
+    ],
+)
+def test_arxiv_extraction_pattern(expected, input):
+    assert ARXIV_EXTRACTION_PATTERN.sub("", input) == expected
+
+
+@mark.parametrize(
+    "input, expected",
+    [
+        param("1111.11111", True, id="test_validation_of_correct_arxiv_value"),
+        param(
+            "11ss1.111aaa",
+            False,
+            id="test_validation_of_arxiv_value_with_letters",
+        ),
+        param("1111.111v1", False, id="test_validation_of_arxiv_value_version"),
+    ],
+)
+def test_arxiv_validation_pattern(input, expected):
+    assert expected == bool(ARXIV_VALIDATION_PATTERN.match(input))
