@@ -243,3 +243,53 @@ def test_wrong_arxiv_eprints_value_log_error_without_value(shared_datadir, parse
 )
 def test_arxiv_extraction_pattern(expected, input):
     assert ARXIV_EXTRACTION_PATTERN.sub("", input) == expected
+
+
+def test_page_nr(shared_datadir, parser):
+    content = (shared_datadir / "page_nr.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert parsed_article["page_nr"] == [9]
+
+
+def test_no_page_nr_path(shared_datadir, parser):
+    content = (shared_datadir / "no_page_nr_path.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert "page_nr" not in parsed_article
+
+
+def test_page_nr_wrong_value(shared_datadir, parser):
+    content = (shared_datadir / "page_nr_wrong_value.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert "page_nr" not in parsed_article
+
+
+def test_page_nr_no_value(shared_datadir, parser):
+    content = (shared_datadir / "page_nr_no_value.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert "page_nr" not in parsed_article
+
+
+def test_wrong_page_nr_value_log(shared_datadir, parser):
+    with capture_logs() as cap_logs:
+        parser = IOPParser()
+        content = (shared_datadir / "page_nr_wrong_value.xml").read_text()
+        article = ET.fromstring(content)
+        parsed_article = parser._publisher_specific_parsing(article)
+        assert "page_nr" not in parsed_article
+        assert cap_logs == [
+            {
+                "class_name": "IOPParser",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "Parsing dois for article",
+                "log_level": "info",
+            },
+            {
+                "value": "abc",
+                "event": "Cannot parse to integer",
+                "log_level": "error",
+            },
+        ]

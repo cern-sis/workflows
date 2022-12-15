@@ -2,7 +2,8 @@ import xml.etree.ElementTree as ET
 
 from common.constants import ARXIV_EXTRACTION_PATTERN
 from common.parsing.parser import IParser
-from common.parsing.xml_extractors import CustomExtractor
+from common.parsing.xml_extractors import AttributeExtractor, CustomExtractor
+from common.utils import parse_to_int
 from idutils import is_arxiv
 from structlog import get_logger
 
@@ -38,6 +39,12 @@ class IOPParser(IParser):
             CustomExtractor(
                 destination="arxiv_eprints",
                 extraction_function=self._get_extracted_arxiv_eprint_value,
+            ),
+            AttributeExtractor(
+                destination="page_nr",
+                source="front/article-meta/counts/page-count",
+                attribute="count",
+                extra_function=lambda x: [parse_to_int(x)] if parse_to_int(x) else None,
             ),
         ]
         super().__init__(extractors)

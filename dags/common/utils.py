@@ -1,6 +1,9 @@
 import datetime
 import json
-from asyncio.log import logger
+
+from structlog import get_logger
+
+logger = get_logger()
 
 
 def set_harvesting_interval(repo, **kwargs):
@@ -49,3 +52,10 @@ def check_value(value):
             return all(value)
         return False
     return False
+
+
+def parse_to_int(value):
+    try:
+        return int(value)
+    except (ValueError, TypeError):
+        logger.error("Cannot parse to integer", value=value)
