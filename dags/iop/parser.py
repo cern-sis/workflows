@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 from common.constants import ARXIV_EXTRACTION_PATTERN
 from common.parsing.parser import IParser
 from common.parsing.xml_extractors import AttributeExtractor, CustomExtractor
-from common.utils import parse_to_int
+from common.utils import clean_dict, parse_to_int
 from idutils import is_arxiv
 from structlog import get_logger
 
@@ -45,6 +45,11 @@ class IOPParser(IParser):
                 source="front/article-meta/counts/page-count",
                 attribute="count",
                 extra_function=lambda x: [parse_to_int(x)] if parse_to_int(x) else None,
+            ),
+            CustomExtractor(
+                destination="authors",
+                extraction_function=self._get_authors,
+                required=True,
             ),
         ]
         super().__init__(extractors)
@@ -100,3 +105,80 @@ class IOPParser(IParser):
             self.logger.error("The arXiv value is not valid.", dois=self.dois)
         except AttributeError:
             self.logger.error("No arXiv eprints found", dois=self.dois)
+
+    def _get_authors(self, article):
+        contrib_types = article.findall(
+            "front/article-meta/contrib-group/contrib[@contrib-type='author']"
+        )
+        authors = []
+        surname = ""
+        given_names = ""
+
+        for contrib_type in contrib_types:
+            try:
+                surname = contrib_type.find("name/surname").text
+            except AttributeError:
+                self.logger.error("Surname is not found in XML", dois=self.dois)
+            try:
+                given_names = contrib_type.find("name/given-names").text
+            except AttributeError:
+                self.logger.error("Given_names is not found in XML", dois=self.dois)
+
+            reffered_ids = contrib_type.findall("xref[@ref-type='aff']")
+            affiliations = [
+                self._get_affiliation_value(article, reffered_id)
+                for reffered_id in reffered_ids
+                if self._get_affiliation_value(article, reffered_id) is not None
+            ]
+
+            if "collaboration" not in given_names.lower():
+                author = clean_dict(
+                    {
+                        "surname": surname,
+                        "given_names": given_names,
+                        "affiliations": affiliations,
+                    }
+                )
+                authors.append(author)
+
+        if all(authors):
+            return authors
+
+    def _get_affiliation_value(self, article, reffered_id):
+        institution_and_country = {}
+        try:
+            id = reffered_id.get("rid")
+        except AttributeError:
+            self.logger.error("Referred id is not found")
+        institution = self._get_institution(article, id)
+        country = self._get_country(article, id)
+        try:
+            institution_and_country = {"country": country}
+            institution_and_country.update(
+                {"institution": ", ".join([institution, country])}
+            )
+        except TypeError:
+            self.logger.error("Cannot join institution and country to one value")
+        cleaned_institution_and_country = clean_dict(institution_and_country)
+        if cleaned_institution_and_country:
+            return cleaned_institution_and_country
+
+    def _get_institution(self, article, id):
+        try:
+            institution = article.find(
+                f"front/article-meta/contrib-group/aff[@id='{id}']/institution"
+            ).text
+            return institution
+        except AttributeError:
+            self.logger.error("Institution is not found in XML")
+            return
+
+    def _get_country(self, article, id):
+        try:
+            country = article.find(
+                f"front/article-meta/contrib-group/aff[@id='{id}']/country"
+            ).text
+            return country
+        except AttributeError:
+            self.logger.error("Country is not found in XML")
+            return

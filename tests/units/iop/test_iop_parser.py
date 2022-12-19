@@ -105,6 +105,36 @@ def test_journal_doctype_log_error_without_value(shared_datadir, parser):
                 "event": "Article-type is not found in XML",
                 "log_level": "error",
             },
+            {
+                "class_name": "IOPParser",
+                "event": "Institution is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Country is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot join institution and country to one value",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Institution is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Country is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot join institution and country to one value",
+                "log_level": "error",
+            },
         ]
 
 
@@ -146,6 +176,36 @@ def test_realted_article_dois_log_error_without_value(shared_datadir, parser):
                 "class_name": "IOPParser",
                 "dois": "10.1088/1674-1137/ac66cc",
                 "event": "No related article dois found",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Institution is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Country is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot join institution and country to one value",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Institution is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Country is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot join institution and country to one value",
                 "log_level": "error",
             },
         ]
@@ -191,6 +251,36 @@ def test_no_arxiv_eprints_value_log_error_without_value(shared_datadir, parser):
                 "event": "No arXiv eprints found",
                 "log_level": "error",
             },
+            {
+                "class_name": "IOPParser",
+                "event": "Institution is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Country is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot join institution and country to one value",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Institution is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Country is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot join institution and country to one value",
+                "log_level": "error",
+            },
         ]
 
 
@@ -219,6 +309,36 @@ def test_wrong_arxiv_eprints_value_log_error_without_value(shared_datadir, parse
                 "class_name": "IOPParser",
                 "dois": "10.1088/1674-1137/ac66cc",
                 "event": "The arXiv value is not valid.",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Institution is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Country is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot join institution and country to one value",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Institution is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Country is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot join institution and country to one value",
                 "log_level": "error",
             },
         ]
@@ -287,9 +407,429 @@ def test_wrong_page_nr_value_log(shared_datadir, parser):
                 "event": "Parsing dois for article",
                 "log_level": "info",
             },
+            {"value": "abc", "event": "Cannot parse to integer", "log_level": "error"},
             {
-                "value": "abc",
-                "event": "Cannot parse to integer",
+                "class_name": "IOPParser",
+                "event": "Institution is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Country is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot join institution and country to one value",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Institution is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Country is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot join institution and country to one value",
                 "log_level": "error",
             },
         ]
+
+
+def test_authors(shared_datadir, parser):
+    content = (shared_datadir / "all_fields.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    parsed_article["authors"] == [
+        {
+            "surname": "Zhao",
+            "given_names": "Lin",
+            "affiliations": [
+                {
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+            ],
+        },
+        {
+            "surname": "Luo",
+            "given_names": "Wentai",
+            "affiliations": [
+                {
+                    "institution": "School of Physical Sciences, University of Chinese Academy of Sciences, China",
+                    "country": "China",
+                }
+            ],
+        },
+        {
+            "surname": "Bathe-Peters",
+            "given_names": "Lars",
+            "affiliations": [
+                {
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Institut für Physik, Technische Universität Berlin, Germany",
+                    "country": "Germany",
+                },
+            ],
+        },
+        {
+            "surname": "Chen",
+            "given_names": "Shaomin",
+            "affiliations": [
+                {
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Key Laboratory of Particle & Radiation Imaging (Tsinghua University), China",
+                    "country": "China",
+                },
+            ],
+        },
+        {
+            "surname": "Chouaki",
+            "given_names": "Mourad",
+            "affiliations": [
+                {
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "École Polytechnique Fédérale de Lausanne, Switzerland",
+                    "country": "Switzerland",
+                },
+            ],
+        },
+        {
+            "surname": "Dou",
+            "given_names": "Wei",
+            "affiliations": [
+                {
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+            ],
+        },
+        {
+            "surname": "Guo",
+            "given_names": "Lei",
+            "affiliations": [
+                {
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+            ],
+        },
+        {
+            "surname": "Guo",
+            "given_names": "Ziyi",
+            "affiliations": [
+                {
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+            ],
+        },
+        {
+            "surname": "Hussain",
+            "given_names": "Ghulam",
+            "affiliations": [
+                {
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+            ],
+        },
+        {
+            "surname": "Li",
+            "given_names": "Jinjing",
+            "affiliations": [
+                {
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+            ],
+        },
+        {
+            "surname": "Liang",
+            "given_names": "Ye",
+            "affiliations": [
+                {
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+            ],
+        },
+        {
+            "surname": "Liu",
+            "given_names": "Qian",
+            "affiliations": [
+                {
+                    "institution": "School of Physical Sciences, University of Chinese Academy of Sciences, China",
+                    "country": "China",
+                }
+            ],
+        },
+        {
+            "surname": "Luo",
+            "given_names": "Guang",
+            "affiliations": [
+                {
+                    "institution": "School of Physics, Sun Yat-Sen University, China",
+                    "country": "China",
+                }
+            ],
+        },
+        {
+            "surname": "Qi",
+            "given_names": "Ming",
+            "affiliations": [
+                {
+                    "institution": "School of Physics, Nanjing University, China",
+                    "country": "China",
+                }
+            ],
+        },
+        {
+            "surname": "Shao",
+            "given_names": "Wenhui",
+            "affiliations": [
+                {
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+            ],
+        },
+        {
+            "surname": "Tang",
+            "given_names": "Jian",
+            "affiliations": [
+                {
+                    "institution": "School of Physics, Sun Yat-Sen University, China",
+                    "country": "China",
+                }
+            ],
+        },
+        {
+            "surname": "Wan",
+            "given_names": "Linyan",
+            "affiliations": [
+                {
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+            ],
+        },
+        {
+            "surname": "Wang",
+            "given_names": "Zhe",
+            "affiliations": [
+                {
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Key Laboratory of Particle & Radiation Imaging (Tsinghua University), China",
+                    "country": "China",
+                },
+            ],
+        },
+        {
+            "surname": "Wu",
+            "given_names": "Yiyang",
+            "affiliations": [
+                {
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+            ],
+        },
+        {
+            "surname": "Xu",
+            "given_names": "Benda",
+            "affiliations": [
+                {
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Key Laboratory of Particle & Radiation Imaging (Tsinghua University), China",
+                    "country": "China",
+                },
+            ],
+        },
+        {
+            "surname": "Xu",
+            "given_names": "Tong",
+            "affiliations": [
+                {
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+            ],
+        },
+        {
+            "surname": "Xu",
+            "given_names": "Weiran",
+            "affiliations": [
+                {
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+            ],
+        },
+        {
+            "surname": "Yang",
+            "given_names": "Yuzi",
+            "affiliations": [
+                {
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+            ],
+        },
+        {
+            "surname": "Yeh",
+            "given_names": "Minfang",
+            "affiliations": [
+                {
+                    "institution": "Brookhaven National Laboratory, Upton, USA",
+                    "country": "USA",
+                }
+            ],
+        },
+        {
+            "surname": "Zhang",
+            "given_names": "Aiqiang",
+            "affiliations": [
+                {
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+            ],
+        },
+        {
+            "surname": "Zhang",
+            "given_names": "Bin",
+            "affiliations": [
+                {
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+                {
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
+                    "country": "China",
+                },
+            ],
+        },
+    ]
+
+
+def test_no_authors(shared_datadir, parser):
+    content = (shared_datadir / "no_authors.xml").read_text()
+    article = ET.fromstring(content)
+    with raises(RequiredFieldNotFoundExtractionError):
+        parser._publisher_specific_parsing(article)
+
+
+def test_no_authors_institutions(shared_datadir, parser):
+    content = (shared_datadir / "no_authors_institutions.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert parsed_article["authors"] == [
+        {
+            "surname": "Zhao",
+            "given_names": "Lin",
+            "affiliations": [{"country": "China"}, {"country": "China"}],
+        }
+    ]
+
+
+def test_no_authors_country(shared_datadir, parser):
+    content = (shared_datadir / "no_authors_country.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert parsed_article["authors"] == [{"given_names": "Lin", "surname": "Zhao"}]
+
+
+def test_no_authors_and_institutions_country(shared_datadir, parser):
+    content = (shared_datadir / "no_authors_and_institutions_country.xml").read_text()
+    article = ET.fromstring(content)
+    with raises(RequiredFieldNotFoundExtractionError):
+        parser._publisher_specific_parsing(article)
