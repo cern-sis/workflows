@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 from common.constants import ARXIV_EXTRACTION_PATTERN
 from common.parsing.parser import IParser
 from common.parsing.xml_extractors import AttributeExtractor, CustomExtractor
-from common.utils import clean_dict, parse_to_int
+from common.utils import parse_to_int
 from idutils import is_arxiv
 from structlog import get_logger
 
@@ -48,7 +48,7 @@ class IOPParser(IParser):
             ),
             CustomExtractor(
                 destination="authors",
-                extraction_function=self._get_authors,
+                extraction_function=self._extract_authors,
                 required=True,
             ),
         ]
@@ -106,7 +106,7 @@ class IOPParser(IParser):
         except AttributeError:
             self.logger.error("No arXiv eprints found", dois=self.dois)
 
-    def _get_authors(self, article):
+    def _extract_authors(self, article):
         contrib_types = article.findall(
             "front/article-meta/contrib-group/contrib[@contrib-type='author']"
         )
@@ -115,34 +115,40 @@ class IOPParser(IParser):
         given_names = ""
 
         for contrib_type in contrib_types:
-            try:
-                surname = contrib_type.find("name/surname").text
-            except AttributeError:
-                self.logger.error("Surname is not found in XML", dois=self.dois)
-            try:
-                given_names = contrib_type.find("name/given-names").text
-            except AttributeError:
-                self.logger.error("Given_names is not found in XML", dois=self.dois)
-
+            surname = self._extract_surname(contrib_type)
+            given_names = self._extract_given_names(contrib_type)
             reffered_ids = contrib_type.findall("xref[@ref-type='aff']")
             affiliations = [
                 self._get_affiliation_value(article, reffered_id)
                 for reffered_id in reffered_ids
-                if self._get_affiliation_value(article, reffered_id) is not None
+                if self._get_affiliation_value(article, reffered_id)
             ]
-
-            if "collaboration" not in given_names.lower():
-                author = clean_dict(
-                    {
-                        "surname": surname,
-                        "given_names": given_names,
-                        "affiliations": affiliations,
-                    }
-                )
+            author = {}
+            if surname:
+                author["surname"] = surname
+            if given_names:
+                author["given_names"] = given_names
+            if affiliations:
+                author["affiliations"] = affiliations
+            if author:
                 authors.append(author)
+        return authors
 
-        if all(authors):
-            return authors
+    def _extract_surname(self, contrib_type):
+        try:
+            return contrib_type.find("name/surname").text
+        except AttributeError:
+            self.logger.error("Surname is not found in XML", dois=self.dois)
+
+    def _extract_given_names(self, contrib_type):
+        try:
+            given_names = contrib_type.find("name/given-names").text
+            # IOP puts the collaboration in authors as 'author' with the given_name,
+            # which value actually is calloboration name
+            if "collaboration" not in given_names.lower():
+                return given_names
+        except AttributeError:
+            self.logger.error("Given_names is not found in XML", dois=self.dois)
 
     def _get_affiliation_value(self, article, reffered_id):
         institution_and_country = {}
@@ -152,16 +158,11 @@ class IOPParser(IParser):
             self.logger.error("Referred id is not found")
         institution = self._get_institution(article, id)
         country = self._get_country(article, id)
-        try:
-            institution_and_country = {"country": country}
-            institution_and_country.update(
-                {"institution": ", ".join([institution, country])}
-            )
-        except TypeError:
-            self.logger.error("Cannot join institution and country to one value")
-        cleaned_institution_and_country = clean_dict(institution_and_country)
-        if cleaned_institution_and_country:
-            return cleaned_institution_and_country
+        if country:
+            institution_and_country["country"] = country
+        if institution and country:
+            institution_and_country["institution"] = ", ".join([institution, country])
+        return institution_and_country
 
     def _get_institution(self, article, id):
         try:

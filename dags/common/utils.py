@@ -59,7 +59,3 @@ def parse_to_int(value):
         return int(value)
     except (ValueError, TypeError):
         logger.error("Cannot parse to integer", value=value)
-
-
-def clean_dict(dict: dict):
-    return {k: v for k, v in dict.items() if v}

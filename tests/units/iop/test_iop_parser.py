@@ -117,22 +117,12 @@ def test_journal_doctype_log_error_without_value(shared_datadir, parser):
             },
             {
                 "class_name": "IOPParser",
-                "event": "Cannot join institution and country to one value",
-                "log_level": "error",
-            },
-            {
-                "class_name": "IOPParser",
                 "event": "Institution is not found in XML",
                 "log_level": "error",
             },
             {
                 "class_name": "IOPParser",
                 "event": "Country is not found in XML",
-                "log_level": "error",
-            },
-            {
-                "class_name": "IOPParser",
-                "event": "Cannot join institution and country to one value",
                 "log_level": "error",
             },
         ]
@@ -190,22 +180,12 @@ def test_realted_article_dois_log_error_without_value(shared_datadir, parser):
             },
             {
                 "class_name": "IOPParser",
-                "event": "Cannot join institution and country to one value",
-                "log_level": "error",
-            },
-            {
-                "class_name": "IOPParser",
                 "event": "Institution is not found in XML",
                 "log_level": "error",
             },
             {
                 "class_name": "IOPParser",
                 "event": "Country is not found in XML",
-                "log_level": "error",
-            },
-            {
-                "class_name": "IOPParser",
-                "event": "Cannot join institution and country to one value",
                 "log_level": "error",
             },
         ]
@@ -263,22 +243,12 @@ def test_no_arxiv_eprints_value_log_error_without_value(shared_datadir, parser):
             },
             {
                 "class_name": "IOPParser",
-                "event": "Cannot join institution and country to one value",
-                "log_level": "error",
-            },
-            {
-                "class_name": "IOPParser",
                 "event": "Institution is not found in XML",
                 "log_level": "error",
             },
             {
                 "class_name": "IOPParser",
                 "event": "Country is not found in XML",
-                "log_level": "error",
-            },
-            {
-                "class_name": "IOPParser",
-                "event": "Cannot join institution and country to one value",
                 "log_level": "error",
             },
         ]
@@ -323,22 +293,12 @@ def test_wrong_arxiv_eprints_value_log_error_without_value(shared_datadir, parse
             },
             {
                 "class_name": "IOPParser",
-                "event": "Cannot join institution and country to one value",
-                "log_level": "error",
-            },
-            {
-                "class_name": "IOPParser",
                 "event": "Institution is not found in XML",
                 "log_level": "error",
             },
             {
                 "class_name": "IOPParser",
                 "event": "Country is not found in XML",
-                "log_level": "error",
-            },
-            {
-                "class_name": "IOPParser",
-                "event": "Cannot join institution and country to one value",
                 "log_level": "error",
             },
         ]
@@ -420,22 +380,12 @@ def test_wrong_page_nr_value_log(shared_datadir, parser):
             },
             {
                 "class_name": "IOPParser",
-                "event": "Cannot join institution and country to one value",
-                "log_level": "error",
-            },
-            {
-                "class_name": "IOPParser",
                 "event": "Institution is not found in XML",
                 "log_level": "error",
             },
             {
                 "class_name": "IOPParser",
                 "event": "Country is not found in XML",
-                "log_level": "error",
-            },
-            {
-                "class_name": "IOPParser",
-                "event": "Cannot join institution and country to one value",
                 "log_level": "error",
             },
         ]
@@ -833,3 +783,50 @@ def test_no_authors_and_institutions_country(shared_datadir, parser):
     article = ET.fromstring(content)
     with raises(RequiredFieldNotFoundExtractionError):
         parser._publisher_specific_parsing(article)
+
+
+def test_authors_with_missing_given_names(shared_datadir, parser):
+    content = (shared_datadir / "authors_with_missing_given_names.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert parsed_article["authors"] == [
+        {
+            "surname": "Zhao",
+            "given_names": "林",
+            "affiliations": [
+                {
+                    "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                },
+                {
+                    "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                },
+            ],
+        },
+        {
+            "surname": "Test1",
+            "affiliations": [
+                {
+                    "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                },
+                {
+                    "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                },
+            ],
+        },
+        {
+            "affiliations": [
+                {
+                    "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                },
+                {
+                    "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
+                },
+            ]
+        },
+    ]
