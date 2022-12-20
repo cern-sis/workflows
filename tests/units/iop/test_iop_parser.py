@@ -785,14 +785,14 @@ def test_no_authors_and_institutions_country(shared_datadir, parser):
         parser._publisher_specific_parsing(article)
 
 
-def test_authors_with_missing_given_names(shared_datadir, parser):
-    content = (shared_datadir / "authors_with_missing_given_names.xml").read_text()
+def test_authors_with_missing_fields(shared_datadir, parser):
+    content = (shared_datadir / "authors_with_missing_fields.xml").read_text()
     article = ET.fromstring(content)
     parsed_article = parser._publisher_specific_parsing(article)
     assert parsed_article["authors"] == [
         {
             "surname": "Zhao",
-            "given_names": "林",
+            "given_names": "林",  # the author misses given_names, so it's taken from name-style="eastern"
             "affiliations": [
                 {
                     "country": "China",
@@ -805,7 +805,7 @@ def test_authors_with_missing_given_names(shared_datadir, parser):
             ],
         },
         {
-            "surname": "Test1",
+            "surname": "Test1",  # the author misses given_names
             "affiliations": [
                 {
                     "country": "China",
@@ -818,7 +818,7 @@ def test_authors_with_missing_given_names(shared_datadir, parser):
             ],
         },
         {
-            "affiliations": [
+            "affiliations": [  # the author misses given_names and name
                 {
                     "country": "China",
                     "institution": "Department of Engineering Physics, Tsinghua University, China",
