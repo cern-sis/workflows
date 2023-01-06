@@ -70,10 +70,10 @@ jobs:
           tags: registry.cern.ch/cern-sis/workflows:latest,registry.cern.ch/cern-sis/workflows:${{ github.sha }}
 
       - name: Deploy QA
-        uses: peter-evans/repository-dispatch@v1
-        if: ${{ github.event_name == 'push'}}
+        uses: cern-sis/gh-workflows/.github/workflows/deploy-qa.yml@main
         with:
-          token: ${{ secrets.CERN_SIS_BOT_PAT }}
-          repository: cern-sis/kubernetes
-          event-type: deploy
-          client-payload: '{"project": "scoap3", "application":"scoap3-workflows", "namespace": "scoap3-qa", "image":"registry.cern.ch/cern-sis/workflows","new_tag":"${{ github.sha }}"}'
+          project: scoap3
+          application: scoap3-workflows
+          namespace: scoap3-qa
+          image: registry.cern.ch/cern-sis/workflows
+            
