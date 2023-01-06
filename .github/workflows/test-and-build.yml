@@ -71,6 +71,7 @@ jobs:
 
       - name: Deploy QA
         uses: cern-sis/gh-workflows/.github/workflows/deploy-qa.yml@main
+        secrets: inherit
         with:
           project: scoap3
           application: scoap3-workflows
