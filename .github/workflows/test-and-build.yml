@@ -72,10 +72,10 @@ jobs:
   Deploy:
     needs: [Build]
     uses: cern-sis/gh-workflows/.github/workflows/deploy-qa.yml@main
-    secrets: inherit
     with:
       project: scoap3
       application: scoap3-workflows
       namespace: scoap3-qa
       image: registry.cern.ch/cern-sis/workflows
+      PAT: ${{ secrets.PAT_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES }}
  
