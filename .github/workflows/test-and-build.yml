@@ -69,12 +69,13 @@ jobs:
           push: true
           tags: registry.cern.ch/cern-sis/workflows:latest,registry.cern.ch/cern-sis/workflows:${{ github.sha }}
 
-      - name: Deploy QA
-        uses: cern-sis/gh-workflows/.github/workflows/deploy-qa.yml@main
-        secrets: inherit
-        with:
-          project: scoap3
-          application: scoap3-workflows
-          namespace: scoap3-qa
-          image: registry.cern.ch/cern-sis/workflows
-            
+  Deploy:
+    needs: [Build]
+    uses: cern-sis/gh-workflows/.github/workflows/deploy-qa.yml@main
+    secrets: inherit
+    with:
+      project: scoap3
+      application: scoap3-workflows
+      namespace: scoap3-qa
+      image: registry.cern.ch/cern-sis/workflows
+ 
