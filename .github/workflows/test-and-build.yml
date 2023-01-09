@@ -77,5 +77,6 @@ jobs:
       application: scoap3-workflows
       namespace: scoap3-qa
       image: registry.cern.ch/cern-sis/workflows
+    secrets:
       PAT: ${{ secrets.PAT_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES }}
  
