@@ -50,8 +50,8 @@ jobs:
       tags: registry.cern.ch/cern-sis/workflows:latest,registry.cern.ch/cern-sis/workflows:${{ github.sha }}
       push: true
     secrets:
-      harborUsername: ${{ secrets.HARBOR_USERNAME }}
-      harborPassword: ${{ secrets.HARBOR_PASSWORD }}
+      registry_username: ${{ secrets.HARBOR_USERNAME }}
+      registry_password: ${{ secrets.HARBOR_PASSWORD }}
 
   Deploy:
     needs: [Build]
