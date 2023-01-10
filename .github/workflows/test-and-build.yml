@@ -11,23 +11,24 @@ env:
   AIRFLOW_HOME: /home/runner/work/workflows/workflows
 
 jobs:
+  Build:
+    uses: cern-sis/gh-workflows/.github/workflows/build-image.yml@main
+    with:
+      registry: registry.cern.ch
+      tags: registry.cern.ch/cern-sis/workflows:${{ github.sha }}
+      push: true
+    secrets:
+      registry_username: ${{ secrets.HARBOR_USERNAME }}
+      registry_password: ${{ secrets.HARBOR_PASSWORD }}
+
   Test:
+    needs: [Build]
     runs-on: ubuntu-latest
+    container: registry.cern.ch/cern-sis/workflows:${{ github.sha }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Install Python 3
-        uses: actions/setup-python@v1
-        with:
-          python-version: 3.8
-
-      - name: Install dependencies
-        run: |
-          pip install --upgrade pip
-          pip install --no-cache-dir --upgrade setuptools
-          pip install --no-cache-dir --upgrade wheel
-          pip install -r requirements-airflow.txt -r requirements.txt -r requirements-test.txt
       - name: Create S3 Buckets
         run: make buckets
 
@@ -42,19 +43,8 @@ jobs:
         with:
           verbose: true
 
-  Build:
-    needs: [Test]
-    uses: cern-sis/gh-workflows/.github/workflows/build-image.yml@main
-    with:
-      registry: registry.cern.ch
-      tags: registry.cern.ch/cern-sis/workflows:latest,registry.cern.ch/cern-sis/workflows:${{ github.sha }}
-      push: true
-    secrets:
-      registry_username: ${{ secrets.HARBOR_USERNAME }}
-      registry_password: ${{ secrets.HARBOR_PASSWORD }}
-
   Deploy:
-    needs: [Build]
+    needs: [Test]
     uses: cern-sis/gh-workflows/.github/workflows/deploy-qa.yml@main
     with:
       project: scoap3
