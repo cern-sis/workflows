@@ -24,7 +24,8 @@ jobs:
   Test:
     needs: [Build]
     runs-on: ubuntu-latest
-    container: registry.cern.ch/cern-sis/workflows:${{ github.sha }}
+    env:
+      DOCKER_IMAGE: registry.cern.ch/cern-sis/workflows:${{ github.sha }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -36,7 +37,12 @@ jobs:
         run: make start
 
       - name: Run tests with pytest and generate report
-        run: pytest --cov=./ --cov-report=xml
+        run: |
+          docker run -v "$(pwd)"/tests:/opt/airflow/tests --name workflows --entrypoint bash $DOCKER_IMAGE pytest --cov=./ --cov-report=xml
+
+      - name: Copy test coverage file to host machine
+        run: |
+          docker cp workflows:/opt/airflow/coverage.xml .
 
       - name: Upload Coverage to Codecov
         uses: codecov/codecov-action@v2
