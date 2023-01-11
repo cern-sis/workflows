@@ -50,7 +50,7 @@ jobs:
 
       - name: Run tests with pytest and generate report
         run: |
-          docker run -v "$(pwd)"/tests:/opt/airflow/tests --name workflows --entrypoint bash $DOCKER_IMAGE pytest --cov=./ --cov-report=xml
+          docker run -v "$(pwd)"/tests:/opt/airflow/tests --name workflows --entrypoint pytest $DOCKER_IMAGE --cov=./ --cov-report=xml
 
       - name: Copy test coverage file to host machine
         run: |
