@@ -63,4 +63,3 @@ jobs:
       image: registry.cern.ch/cern-sis/workflows
     secrets:
       PAT: ${{ secrets.PAT_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES }}
- 

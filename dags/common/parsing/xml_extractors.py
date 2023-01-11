@@ -28,7 +28,8 @@ class TextExtractor(IExtractor):
         try:
             return raw_value.text
         except AttributeError:
-            return None
+            self.logger.error(f"{self.destination} is not found in XML")
+            return
 
     def _process_text_with_extra_function(self, text):
         if text:

@@ -59,3 +59,11 @@ def parse_to_int(value):
         return int(value)
     except (ValueError, TypeError):
         logger.error("Cannot parse to integer", value=value)
+
+
+def extract_text(article, path, field_name, dois):
+    try:
+        return article.find(path).text
+    except AttributeError:
+        logger.error(f"{field_name} is not found in XML", dois=dois)
+        return

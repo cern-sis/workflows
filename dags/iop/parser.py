@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 from common.constants import ARXIV_EXTRACTION_PATTERN, NODE_ATTRIBUTE_NOT_FOUND_ERRORS
 from common.parsing.parser import IParser
 from common.parsing.xml_extractors import AttributeExtractor, CustomExtractor
-from common.utils import parse_to_int
+from common.utils import extract_text, parse_to_int
 from idutils import is_arxiv
 from inspire_utils.date import PartialDate
 from structlog import get_logger
@@ -60,6 +60,11 @@ class IOPParser(IParser):
             CustomExtractor(
                 destination="journal_year",
                 extraction_function=self._get_journal_year,
+                required=True,
+            ),
+            CustomExtractor(
+                destination="copyright",
+                extraction_function=self._get_copyright,
                 required=True,
             ),
         ]
@@ -188,10 +193,12 @@ class IOPParser(IParser):
         return authors
 
     def _extract_surname(self, contrib_type):
-        try:
-            return contrib_type.find("name/surname").text
-        except AttributeError:
-            self.logger.error("Surname is not found in XML", dois=self.dois)
+        return extract_text(
+            article=contrib_type,
+            path="name/surname",
+            field_name="surname",
+            dois=self.dois,
+        )
 
     def _extract_given_names(self, contrib_type):
         try:
@@ -204,35 +211,59 @@ class IOPParser(IParser):
             self.logger.error("Given_names is not found in XML", dois=self.dois)
 
     def _get_affiliation_value(self, article, reffered_id):
-        institution_and_country = {}
         try:
+            institution_and_country = {}
             id = reffered_id.get("rid")
+            institution = self._get_institution(article, id)
+            country = self._get_country(article, id)
+            if country:
+                institution_and_country["country"] = country
+            if institution and country:
+                institution_and_country["institution"] = ", ".join(
+                    [institution, country]
+                )
+            return institution_and_country
         except AttributeError:
             self.logger.error("Referred id is not found")
-        institution = self._get_institution(article, id)
-        country = self._get_country(article, id)
-        if country:
-            institution_and_country["country"] = country
-        if institution and country:
-            institution_and_country["institution"] = ", ".join([institution, country])
-        return institution_and_country
 
     def _get_institution(self, article, id):
-        try:
-            institution = article.find(
-                f"front/article-meta/contrib-group/aff[@id='{id}']/institution"
-            ).text
-            return institution
-        except AttributeError:
-            self.logger.error("Institution is not found in XML")
-            return
+        return extract_text(
+            article=article,
+            path=f"front/article-meta/contrib-group/aff[@id='{id}']/institution",
+            field_name="institution",
+            dois=self.dois,
+        )
 
     def _get_country(self, article, id):
-        try:
-            country = article.find(
-                f"front/article-meta/contrib-group/aff[@id='{id}']/country"
-            ).text
-            return country
-        except AttributeError:
-            self.logger.error("Country is not found in XML")
-            return
+        return extract_text(
+            article=article,
+            path=f"front/article-meta/contrib-group/aff[@id='{id}']/country",
+            field_name="country",
+            dois=self.dois,
+        )
+
+    def _extract_copyright_year(self, article):
+        return extract_text(
+            article=article,
+            path="front/article-meta/permissions/copyright-year",
+            field_name="copyright_year",
+            dois=self.dois,
+        )
+
+    def _extract_copyright_statement(self, article):
+        return extract_text(
+            article=article,
+            path="front/article-meta/permissions/copyright-statement",
+            field_name="copyright_statement",
+            dois=self.dois,
+        )
+
+    def _get_copyright(self, article):
+        copyright = {}
+        extracted_year = self._extract_copyright_year(article)
+        if extracted_year:
+            copyright["year"] = extracted_year
+        extracted_statement = self._extract_copyright_statement(article)
+        if extracted_statement:
+            copyright["copyright_statement"] = extracted_statement
+        return [copyright]

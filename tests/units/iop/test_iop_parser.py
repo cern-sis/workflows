@@ -106,23 +106,23 @@ def test_journal_doctype_log_error_without_value(shared_datadir, parser):
                 "log_level": "error",
             },
             {
-                "class_name": "IOPParser",
-                "event": "Institution is not found in XML",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "institution is not found in XML",
                 "log_level": "error",
             },
             {
-                "class_name": "IOPParser",
-                "event": "Country is not found in XML",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "country is not found in XML",
                 "log_level": "error",
             },
             {
-                "class_name": "IOPParser",
-                "event": "Institution is not found in XML",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "institution is not found in XML",
                 "log_level": "error",
             },
             {
-                "class_name": "IOPParser",
-                "event": "Country is not found in XML",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "country is not found in XML",
                 "log_level": "error",
             },
             {
@@ -179,23 +179,23 @@ def test_realted_article_dois_log_error_without_value(shared_datadir, parser):
                 "log_level": "error",
             },
             {
-                "class_name": "IOPParser",
-                "event": "Institution is not found in XML",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "institution is not found in XML",
                 "log_level": "error",
             },
             {
-                "class_name": "IOPParser",
-                "event": "Country is not found in XML",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "country is not found in XML",
                 "log_level": "error",
             },
             {
-                "class_name": "IOPParser",
-                "event": "Institution is not found in XML",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "institution is not found in XML",
                 "log_level": "error",
             },
             {
-                "class_name": "IOPParser",
-                "event": "Country is not found in XML",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "country is not found in XML",
                 "log_level": "error",
             },
             {
@@ -252,23 +252,23 @@ def test_no_arxiv_eprints_value_log_error_without_value(shared_datadir, parser):
                 "log_level": "error",
             },
             {
-                "class_name": "IOPParser",
-                "event": "Institution is not found in XML",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "institution is not found in XML",
                 "log_level": "error",
             },
             {
-                "class_name": "IOPParser",
-                "event": "Country is not found in XML",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "country is not found in XML",
                 "log_level": "error",
             },
             {
-                "class_name": "IOPParser",
-                "event": "Institution is not found in XML",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "institution is not found in XML",
                 "log_level": "error",
             },
             {
-                "class_name": "IOPParser",
-                "event": "Country is not found in XML",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "country is not found in XML",
                 "log_level": "error",
             },
             {
@@ -312,23 +312,23 @@ def test_wrong_arxiv_eprints_value_log_error_without_value(shared_datadir, parse
                 "log_level": "error",
             },
             {
-                "class_name": "IOPParser",
-                "event": "Institution is not found in XML",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "institution is not found in XML",
                 "log_level": "error",
             },
             {
-                "class_name": "IOPParser",
-                "event": "Country is not found in XML",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "country is not found in XML",
                 "log_level": "error",
             },
             {
-                "class_name": "IOPParser",
-                "event": "Institution is not found in XML",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "institution is not found in XML",
                 "log_level": "error",
             },
             {
-                "class_name": "IOPParser",
-                "event": "Country is not found in XML",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "country is not found in XML",
                 "log_level": "error",
             },
             {
@@ -409,23 +409,23 @@ def test_wrong_page_nr_value_log(shared_datadir, parser):
             },
             {"value": "abc", "event": "Cannot parse to integer", "log_level": "error"},
             {
-                "class_name": "IOPParser",
-                "event": "Institution is not found in XML",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "institution is not found in XML",
                 "log_level": "error",
             },
             {
-                "class_name": "IOPParser",
-                "event": "Country is not found in XML",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "country is not found in XML",
                 "log_level": "error",
             },
             {
-                "class_name": "IOPParser",
-                "event": "Institution is not found in XML",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "institution is not found in XML",
                 "log_level": "error",
             },
             {
-                "class_name": "IOPParser",
-                "event": "Country is not found in XML",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "country is not found in XML",
                 "log_level": "error",
             },
             {
@@ -911,3 +911,153 @@ def test_authors_with_missing_fields(shared_datadir, parser):
             ]
         },
     ]
+
+
+def test_copyright(shared_datadir, parser):
+    content = (shared_datadir / "just_required_fields.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert parsed_article["copyright"] == [
+        {
+            "year": "2022",
+            "copyright_statement": "© 2022 Chinese Physical Society and the Institute of High Energy Physics of the Chinese Academy of Sciences and the Institute of Modern Physics of the Chinese Academy of Sciences and IOP Publishing Ltd",
+        }
+    ]
+
+
+def test_copyright_no_year(shared_datadir, parser):
+    content = (shared_datadir / "no_copyright_year.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert parsed_article["copyright"] == [
+        {
+            "copyright_statement": "© 2022 Chinese Physical Society and the Institute of High Energy Physics of the Chinese Academy of Sciences and the Institute of Modern Physics of the Chinese Academy of Sciences and IOP Publishing Ltd"
+        }
+    ]
+
+
+def test_copyright_no_year_value(shared_datadir, parser):
+    content = (shared_datadir / "no_copyright_year_value.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert parsed_article["copyright"] == [
+        {
+            "copyright_statement": "© 2022 Chinese Physical Society and the Institute of High Energy Physics of the Chinese Academy of Sciences and the Institute of Modern Physics of the Chinese Academy of Sciences and IOP Publishing Ltd"
+        }
+    ]
+
+
+def test_copyright_no_years_logs(shared_datadir, parser):
+    with capture_logs() as cap_logs:
+        parser = IOPParser()
+        content = (shared_datadir / "no_copyright_year.xml").read_text()
+        article = ET.fromstring(content)
+        parser._publisher_specific_parsing(article)
+        assert cap_logs == [
+            {
+                "class_name": "IOPParser",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "Parsing dois for article",
+                "log_level": "info",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "institution is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "country is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "institution is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "country is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot find month of date_published in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot find day of date_published in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "copyright_year is not found in XML",
+                "log_level": "error",
+            },
+        ]
+
+
+def test_copyright_no_statement(shared_datadir, parser):
+    content = (shared_datadir / "no_copyright_statement.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert parsed_article["copyright"] == [{"year": "2022"}]
+
+
+def test_copyright_no_statement_value(shared_datadir, parser):
+    content = (shared_datadir / "no_copyright_statement_value.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert parsed_article["copyright"] == [{"year": "2022"}]
+
+
+def test_copyright_no_statement_logs(shared_datadir, parser):
+    with capture_logs() as cap_logs:
+        parser = IOPParser()
+        content = (shared_datadir / "no_copyright_statement.xml").read_text()
+        article = ET.fromstring(content)
+        parser._publisher_specific_parsing(article)
+        assert cap_logs == [
+            {
+                "class_name": "IOPParser",
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "Parsing dois for article",
+                "log_level": "info",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "institution is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "country is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "institution is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "country is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot find month of date_published in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot find day of date_published in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "copyright_statement is not found in XML",
+                "log_level": "error",
+            },
+        ]
