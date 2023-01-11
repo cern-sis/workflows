@@ -1,10 +1,11 @@
 import xml.etree.ElementTree as ET
 
-from common.constants import ARXIV_EXTRACTION_PATTERN
+from common.constants import ARXIV_EXTRACTION_PATTERN, NODE_ATTRIBUTE_NOT_FOUND_ERRORS
 from common.parsing.parser import IParser
 from common.parsing.xml_extractors import AttributeExtractor, CustomExtractor
 from common.utils import parse_to_int
 from idutils import is_arxiv
+from inspire_utils.date import PartialDate
 from structlog import get_logger
 
 
@@ -20,6 +21,7 @@ class IOPParser(IParser):
 
     def __init__(self) -> None:
         self.dois = None
+        self.year = None
         self.journal_doctype = None
         self.logger = get_logger().bind(class_name=type(self).__name__)
         extractors = [
@@ -49,6 +51,15 @@ class IOPParser(IParser):
             CustomExtractor(
                 destination="authors",
                 extraction_function=self._extract_authors,
+                required=True,
+            ),
+            CustomExtractor(
+                destination="date_published",
+                extraction_function=self._get_date_published,
+            ),
+            CustomExtractor(
+                destination="journal_year",
+                extraction_function=self._get_journal_year,
                 required=True,
             ),
         ]
@@ -105,6 +116,48 @@ class IOPParser(IParser):
             self.logger.error("The arXiv value is not valid.", dois=self.dois)
         except AttributeError:
             self.logger.error("No arXiv eprints found", dois=self.dois)
+
+    def _get_date_element(self, article):
+        date = (
+            article.find("front/article-meta/history/date[@date-type='published']")
+            or article.find("front/article-meta/history/date[@date-type='epub']")
+            or article.find("front/article-meta/history/pub-date[@pub-type='ppub']")
+            or article.find("front/article-meta/pub-date")
+        )
+        return date
+
+    def _get_date_published(self, article):
+        date_element = self._get_date_element(article)
+        return self._get_date(date_element)
+
+    def _get_date(self, date):
+        try:
+            year = int(date.find("year").text)
+            self.year = year
+        except NODE_ATTRIBUTE_NOT_FOUND_ERRORS:
+            self.logger.error("Cannot find year of date_published in XML")
+        try:
+            month = int(date.find("month").text)
+        # was discussed with Anne: if the day is not present, we return year and month
+        # if the month value is not present - we return just year
+        # if the year is not present - the parsing should crash, because according schema
+        # the publication_year is required, which is take from date_published
+        except NODE_ATTRIBUTE_NOT_FOUND_ERRORS:
+            self.logger.error("Cannot find month of date_published in XML")
+            month = None
+        try:
+            day = int(date.find("day").text)
+        except NODE_ATTRIBUTE_NOT_FOUND_ERRORS:
+            self.logger.error("Cannot find day of date_published in XML")
+            day = None
+        try:
+            date = PartialDate(year=self.year, month=month, day=day)
+            return PartialDate.dumps(date)
+        except NODE_ATTRIBUTE_NOT_FOUND_ERRORS + (ValueError,):
+            return str(self.year)
+
+    def _get_journal_year(self, article):
+        return self.year
 
     def _extract_authors(self, article):
         contrib_types = article.findall(

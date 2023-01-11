@@ -125,6 +125,16 @@ def test_journal_doctype_log_error_without_value(shared_datadir, parser):
                 "event": "Country is not found in XML",
                 "log_level": "error",
             },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot find month of date_published in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot find day of date_published in XML",
+                "log_level": "error",
+            },
         ]
 
 
@@ -186,6 +196,16 @@ def test_realted_article_dois_log_error_without_value(shared_datadir, parser):
             {
                 "class_name": "IOPParser",
                 "event": "Country is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot find month of date_published in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot find day of date_published in XML",
                 "log_level": "error",
             },
         ]
@@ -251,6 +271,16 @@ def test_no_arxiv_eprints_value_log_error_without_value(shared_datadir, parser):
                 "event": "Country is not found in XML",
                 "log_level": "error",
             },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot find month of date_published in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot find day of date_published in XML",
+                "log_level": "error",
+            },
         ]
 
 
@@ -299,6 +329,16 @@ def test_wrong_arxiv_eprints_value_log_error_without_value(shared_datadir, parse
             {
                 "class_name": "IOPParser",
                 "event": "Country is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot find month of date_published in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot find day of date_published in XML",
                 "log_level": "error",
             },
         ]
@@ -388,7 +428,25 @@ def test_wrong_page_nr_value_log(shared_datadir, parser):
                 "event": "Country is not found in XML",
                 "log_level": "error",
             },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot find month of date_published in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "IOPParser",
+                "event": "Cannot find day of date_published in XML",
+                "log_level": "error",
+            },
         ]
+
+
+def test_date_published(shared_datadir, parser):
+    content = (shared_datadir / "all_fields.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert parsed_article["date_published"] == "2022-08-01"
+    assert parsed_article["journal_year"] == 2022
 
 
 def test_authors(shared_datadir, parser):
@@ -753,6 +811,29 @@ def test_authors(shared_datadir, parser):
 
 def test_no_authors(shared_datadir, parser):
     content = (shared_datadir / "no_authors.xml").read_text()
+    article = ET.fromstring(content)
+    with raises(RequiredFieldNotFoundExtractionError):
+        parser._publisher_specific_parsing(article)
+
+
+def test_no_month_published(shared_datadir, parser):
+    content = (shared_datadir / "no_month_published.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert parsed_article["journal_year"] == 2022
+    assert parsed_article["date_published"] == "2022"
+
+
+def test_no_day_published(shared_datadir, parser):
+    content = (shared_datadir / "no_day_published.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert parsed_article["date_published"] == "2022-08"
+    assert parsed_article["journal_year"] == 2022
+
+
+def test_no_year_published(shared_datadir, parser):
+    content = (shared_datadir / "no_year_published.xml").read_text()
     article = ET.fromstring(content)
     with raises(RequiredFieldNotFoundExtractionError):
         parser._publisher_specific_parsing(article)
