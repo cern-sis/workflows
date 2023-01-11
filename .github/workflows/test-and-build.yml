@@ -30,6 +30,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Install Python 3
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install --no-cache-dir --upgrade setuptools
+          pip install --no-cache-dir --upgrade wheel
+          pip install -r requirements-airflow.txt -r requirements.txt -r requirements-test.txt
+
       - name: Create S3 Buckets
         run: make buckets
 
