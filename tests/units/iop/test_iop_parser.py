@@ -83,6 +83,11 @@ def test_journal_doctype_log_error_with_wrong_value(shared_datadir):
                 "event": "Unmapped article type",
                 "log_level": "error",
             },
+            {
+                "class_name": "TextExtractor",
+                "event": "subtitle is not found in XML",
+                "log_level": "error",
+            },
         ]
 
 
@@ -148,6 +153,11 @@ def test_journal_doctype_log_error_without_value(shared_datadir, parser):
             {
                 "dois": "10.1088/1674-1137/ac66cc",
                 "event": "journal_artid is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "TextExtractor",
+                "event": "subtitle is not found in XML",
                 "log_level": "error",
             },
         ]
@@ -238,6 +248,12 @@ def test_realted_article_dois_log_error_without_value(shared_datadir, parser):
                 "event": "journal_artid is not found in XML",
                 "log_level": "error",
             },
+            {
+                "class_name": "TextExtractor",
+                "event": "subtitle is not found in XML",
+                "log_level": "error",
+            },
+
         ]
 
 
@@ -326,6 +342,11 @@ def test_no_arxiv_eprints_value_log_error_without_value(shared_datadir, parser):
                 "event": "journal_artid is not found in XML",
                 "log_level": "error",
             },
+            {
+                "class_name": "TextExtractor",
+                "event": "subtitle is not found in XML",
+                "log_level": "error",
+            },
         ]
 
 
@@ -399,6 +420,11 @@ def test_wrong_arxiv_eprints_value_log_error_without_value(shared_datadir, parse
             {
                 "dois": "10.1088/1674-1137/ac66cc",
                 "event": "journal_artid is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "TextExtractor",
+                "event": "subtitle is not found in XML",
                 "log_level": "error",
             },
         ]
@@ -511,6 +537,11 @@ def test_wrong_page_nr_value_log(shared_datadir, parser):
             {
                 "dois": "10.1088/1674-1137/ac66cc",
                 "event": "journal_artid is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "class_name": "TextExtractor",
+                "event": "subtitle is not found in XML",
                 "log_level": "error",
             },
         ]
@@ -1085,6 +1116,11 @@ def test_copyright_no_years_logs(shared_datadir, parser):
                 "event": "journal_artid is not found in XML",
                 "log_level": "error",
             },
+            {
+                "class_name": "TextExtractor",
+                "event": "subtitle is not found in XML",
+                "log_level": "error",
+            },
         ]
 
 
@@ -1165,6 +1201,11 @@ def test_copyright_no_statement_logs(shared_datadir, parser):
                 "event": "journal_artid is not found in XML",
                 "log_level": "error",
             },
+            {
+                "class_name": "TextExtractor",
+                "event": "subtitle is not found in XML",
+                "log_level": "error",
+            },
         ]
 
 
@@ -1178,11 +1219,13 @@ def test_publication_info(shared_datadir, parser):
     assert parsed_article["journal_artid"] == "085001"
     assert parsed_article["journal_year"] == 2022
 
+
 def test_publication_info_just_journal_title_year(shared_datadir, parser):
     content = (shared_datadir / "just_journal_year.xml").read_text()
     article = ET.fromstring(content)
     with raises(RequiredFieldNotFoundExtractionError):
         parser._publisher_specific_parsing(article)
+
 
 def test_publication_info_fields_values_just_year(shared_datadir, parser):
     content = (
@@ -1191,6 +1234,8 @@ def test_publication_info_fields_values_just_year(shared_datadir, parser):
     article = ET.fromstring(content)
     with raises(RequiredFieldNotFoundExtractionError):
         parser._publisher_specific_parsing(article)
+
+
 def test_collaborations(shared_datadir, parser):
     content = (shared_datadir / "all_fields.xml").read_text()
     article = ET.fromstring(content)
@@ -1210,3 +1255,44 @@ def test_no_collaborations_value(shared_datadir, parser):
     article = ET.fromstring(content)
     parsed_article = parser._publisher_specific_parsing(article)
     assert "collaborations" not in parsed_article
+
+
+def test_title(shared_datadir, parser):
+    content = (shared_datadir / "just_required_fields.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert (
+        parsed_article["title"]
+        == "Measurement of muon-induced neutron yield at the China Jinping Underground Laboratory"
+    )
+
+
+# Couldn't find original IOP articles, which have subtitle
+# The data is falsified
+def test_subtitle(shared_datadir, parser):
+    content = (shared_datadir / "with_subtitle.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert parsed_article["subtitle"] == "Subtitle (pseudo data)"
+
+
+def test_no_title(shared_datadir, parser):
+    content = (shared_datadir / "no_title.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert "title" not in parsed_article
+
+
+def test_no_subtitle(shared_datadir, parser):
+    content = (shared_datadir / "just_required_fields.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert "subtitle" not in parsed_article
+
+
+def test_no_title_no_subtitle_values(shared_datadir, parser):
+    content = (shared_datadir / "no_title_no_subtitle_values.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert "title" not in parsed_article
+    assert "subtitle" not in parsed_article

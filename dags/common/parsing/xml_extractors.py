@@ -17,6 +17,7 @@ class TextExtractor(IExtractor):
         prefixes=None,
     ) -> None:
         super().__init__(destination)
+
         self.destination = destination
         self.source = source
         self.prefixes = prefixes
@@ -49,7 +50,7 @@ class TextExtractor(IExtractor):
         value = self._get_text_value(node)
         processed_value = self._process_text_with_extra_function(value)
 
-        if check_value(value):
+        if check_value(processed_value):
             return processed_value
         if self.required:
             raise RequiredFieldNotFoundExtractionError(self.destination)

@@ -6,7 +6,12 @@ from common.constants import (
     REMOVE_SPECIAL_CHARS,
 )
 from common.parsing.parser import IParser
-from common.parsing.xml_extractors import AttributeExtractor, CustomExtractor, ConstantExtractor
+from common.parsing.xml_extractors import AttributeExtractor, CustomExtractor
+from common.parsing.xml_extractors import (
+    AttributeExtractor,
+    CustomExtractor,
+    TextExtractor,
+)
 from common.utils import extract_text, parse_to_int
 from idutils import is_arxiv
 from inspire_utils.date import PartialDate
@@ -92,7 +97,19 @@ class IOPParser(IParser):
             CustomExtractor(
                 destination="collaborations",
                 extraction_function=self._get_collaborations,
-            )
+            ),
+            TextExtractor(
+                destination="title",
+                required=False,
+                source="front/article-meta/title-group/article-title",
+                extra_function=lambda x: " ".join(x.split()),
+            ),
+            TextExtractor(
+                destination="subtitle",
+                required=False,
+                source="front/article-meta/subtitle",
+                extra_function=lambda x: " ".join(x.split()),
+            ),
         ]
         super().__init__(extractors)
 
