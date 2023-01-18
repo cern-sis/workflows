@@ -11,21 +11,12 @@ env:
   AIRFLOW_HOME: /home/runner/work/workflows/workflows
 
 jobs:
-  Build:
-    uses: cern-sis/gh-workflows/.github/workflows/build-image.yml@main
-    with:
-      registry: registry.cern.ch
-      tags: registry.cern.ch/cern-sis/workflows:${{ github.sha }}
-      push: true
-    secrets:
-      registry_username: ${{ secrets.HARBOR_USERNAME }}
-      registry_password: ${{ secrets.HARBOR_PASSWORD }}
-
-  Test:
-    needs: [Build]
+  build_test:
+    name: Build and Test
     runs-on: ubuntu-latest
     env:
       DOCKER_IMAGE: registry.cern.ch/cern-sis/workflows:${{ github.sha }}
+    if: ${{ github.event_name == 'push' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -47,6 +38,12 @@ jobs:
 
       - name: Run services for IT Tests
         run: make start
+
+      - name: Build Image
+        uses: cern-sis/gh-workflows/.github/actions/build-docker@main
+        with:
+          context: .
+          tags: registry.cern.ch/cern-sis/workflows:${{ github.sha }}
 
       - name: Run tests with pytest and generate report
         run: |
