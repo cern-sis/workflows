@@ -1,6 +1,5 @@
 import json
 
-import airflow
 import requests
 from airflow.decorators import dag, task
 from aps.parser import APSParser
@@ -28,7 +27,7 @@ def aps_validate_record(enriched_file):
     validate(enriched_file, schema)
 
 
-@dag(start_date=airflow.utils.dates.days_ago(0))
+@dag(schedule=None)
 def aps_process_file():
     @task()
     def parse(**kwargs):
