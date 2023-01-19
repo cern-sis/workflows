@@ -1,4 +1,4 @@
-name: Run Python Tests
+name: Build and Test
 on:
   push:
     branches:
@@ -59,7 +59,7 @@ jobs:
           verbose: true
 
   Deploy:
-    needs: [Test]
+    needs: [build_test]
     uses: cern-sis/gh-workflows/.github/workflows/deploy-qa.yml@main
     with:
       project: scoap3
