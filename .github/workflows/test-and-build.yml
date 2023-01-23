@@ -16,7 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DOCKER_IMAGE: registry.cern.ch/cern-sis/workflows:${{ github.sha }}
-    if: ${{ github.event_name == 'push' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -60,12 +59,14 @@ jobs:
 
       - name: Login to DockerHub
         uses: docker/login-action@v1
+        if: ${{ github.event_name == 'push' }}
         with:
           registry: registry.cern.ch
           username: ${{ secrets.HARBOR_USERNAME }}
           password: ${{ secrets.HARBOR_PASSWORD }}
 
       - name: Push
+        if: ${{ github.event_name == 'push' }}
         run: |
           docker push $DOCKER_IMAGE
 
