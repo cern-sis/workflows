@@ -11,7 +11,7 @@ from structlog import PrintLogger
 
 
 def migrate_files(filenames, sftp: SFTPService, repo: IRepository, logger: PrintLogger):
-    logger.msg("Processing fils.", filenames=filenames)
+    logger.msg("Processing files.", filenames=filenames)
     extracted_filenames = []
     for _file in filenames:
         logger.msg("Getting file from SFTP.", file=_file)

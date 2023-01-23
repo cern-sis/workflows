@@ -5,6 +5,7 @@ ENV AIRFLOW_UID=501
 
 COPY requirements.txt ./requirements.txt
 COPY requirements-test.txt ./requirements-test.txt
+COPY known_hosts /home/airflow/.ssh/known_hosts
 COPY dags ./dags
 USER airflow
 RUN pip install --upgrade pip &&\

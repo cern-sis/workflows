@@ -1,3 +1,4 @@
+import os
 from io import BytesIO
 
 import pysftp
@@ -19,17 +20,25 @@ class SFTPService:
         self.dir = dir
 
     def list_files(self):
+        print(self.dir)
         with self.__connect() as sftp:
-            return sftp.listdir()
+            paths = [path for path in self.dir.split(",")]
+            files = []
+            for path in paths:
+                files = files + sftp.listdir(path)
+            return files
 
     def get_file(self, file):
         with self.__connect() as sftp:
-            with sftp.open(file, "rb") as fl:
+            with sftp.open(os.path.join(self.dir, file), "rb") as fl:
                 return BytesIO(fl.read())
 
     def __connect(self):
-        cnopts = pysftp.CnOpts()
-        cnopts.hostkeys = None
+        if self.host == "localhost":
+            cnopts = pysftp.CnOpts()
+            cnopts.hostkeys = None
+        else:
+            cnopts = pysftp.CnOpts(knownhosts="known_hosts")
         conn = pysftp.Connection(
             host=self.host,
             username=self.username,
@@ -41,7 +50,6 @@ class SFTPService:
             raise DirectoryNotFoundException(
                 "Remote directory doesn't exist. Abort connection."
             )
-        conn.chdir(self.dir)
         return conn
 
 
