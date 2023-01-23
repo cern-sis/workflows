@@ -20,9 +20,9 @@ class SFTPService:
         self.dir = dir
 
     def list_files(self):
-        print(self.dir)
         with self.__connect() as sftp:
             paths = [path for path in self.dir.split(",")]
+            print(paths)
             files = []
             for path in paths:
                 files = files + sftp.listdir(path)
@@ -46,10 +46,12 @@ class SFTPService:
             port=self.port,
             cnopts=cnopts,
         )
-        if not conn.isdir(self.dir):
-            raise DirectoryNotFoundException(
-                "Remote directory doesn't exist. Abort connection."
-            )
+        paths = [path for path in self.dir.split(",")]
+        for path in paths:
+            if not conn.isdir(path):
+                raise DirectoryNotFoundException(
+                    "Remote directory doesn't exist. Abort connection."
+                )
         return conn
 
 
