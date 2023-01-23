@@ -20,13 +20,8 @@ class SFTPService:
         self.dir = dir
 
     def list_files(self):
-        print(self.dir)
         with self.__connect() as sftp:
-            paths = [path for path in self.dir.split(",")]
-            files = []
-            for path in paths:
-                files = files + sftp.listdir(path)
-            return files
+            return sftp.listdir(self.dir)
 
     def get_file(self, file):
         with self.__connect() as sftp:
