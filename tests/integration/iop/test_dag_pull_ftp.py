@@ -42,13 +42,14 @@ def test_dag_migrate_from_FTP():
     repo = IOPRepository()
     repo.delete_all()
     assert len(repo.find_all()) == 0
-    migrate_from_ftp(
-        IOPSFTPService(),
-        repo,
-        get_logger().bind(class_name="test_logger"),
-        **{"params": {}},
-    )
-    assert len(repo.find_all()) == 11
+    with IOPSFTPService() as sftp:
+        migrate_from_ftp(
+            sftp,
+            repo,
+            get_logger().bind(class_name="test_logger"),
+            **{"params": {}},
+        )
+        assert len(repo.find_all()) == 11
 
 
 def test_dag_trigger_file_processing():

@@ -12,7 +12,7 @@ from common.repository import IRepository
 from common.utils import set_harvesting_interval
 
 
-@dag(start_date=airflow.utils.dates.days_ago(0))
+@dag(start_date=airflow.utils.dates.days_ago(0), schedule_interval="@hourly")
 def aps_fetch_api():
     @task()
     def set_fetching_intervals(repo: IRepository = APSRepository(), **kwargs):

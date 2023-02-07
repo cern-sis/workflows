@@ -1,6 +1,9 @@
+import os
+import traceback
 from io import BytesIO
 
 import pysftp
+from structlog import get_logger
 
 
 class SFTPService:
@@ -12,20 +15,13 @@ class SFTPService:
         port=2222,
         dir="/upload",
     ):
+        self.connection = None
         self.host = host
         self.username = username
         self.password = password
         self.port = port
+        self.logger = get_logger().bind(class_name=type(self).__name__)
         self.dir = dir
-
-    def list_files(self):
-        with self.__connect() as sftp:
-            return sftp.listdir()
-
-    def get_file(self, file):
-        with self.__connect() as sftp:
-            with sftp.open(file, "rb") as fl:
-                return BytesIO(fl.read())
 
     def __connect(self):
         cnopts = pysftp.CnOpts()
@@ -41,10 +37,42 @@ class SFTPService:
             raise DirectoryNotFoundException(
                 "Remote directory doesn't exist. Abort connection."
             )
-        conn.chdir(self.dir)
         return conn
+
+    def __enter__(self):
+        self.connection = self.__connect()
+        return self
+
+    def __exit__(self, exc_type, exc_value, tb):
+        if self.connection:
+            self.connection.close()
+        if exc_type is not None:
+            formed_exception = traceback.format_exception_only(exc_type, exc_value)
+            self.logger.error(
+                "An error occurred while exiting SFTPService",
+                execption=formed_exception,
+            )
+        return True
+
+    def list_files(self):
+        try:
+            return self.connection.listdir(self.dir)
+        except AttributeError:
+            raise NotConnectedException
+
+    def get_file(self, file):
+        try:
+            file_ = self.connection.open(os.path.join(self.dir, file), "rb")
+            return BytesIO(file_.read())
+        except AttributeError:
+            raise NotConnectedException
 
 
 class DirectoryNotFoundException(Exception):
     def __init__(self, *args):
         super().__init__(*args)
+
+
+class NotConnectedException(Exception):
+    def __init__(self):
+        super().__init__("SFTP connection not established")

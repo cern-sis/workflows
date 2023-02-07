@@ -1,8 +1,8 @@
+import os
+
 import airflow
 import common.pull_ftp as pull_ftp
 from airflow.decorators import dag, task
-from common.repository import IRepository
-from common.sftp_service import SFTPService
 from springer.repository import SpringerRepository
 from springer.sftp_service import SpringerSFTPService
 from structlog import get_logger
@@ -10,6 +10,7 @@ from structlog import get_logger
 
 @dag(
     start_date=airflow.utils.dates.days_ago(0),
+    schedule_interval="@hourly",
     params={
         "force_pull": False,
         "filenames_pull": {"enabled": False, "filenames": [], "force_from_ftp": False},
@@ -20,22 +21,32 @@ def springer_pull_ftp():
 
     @task()
     def migrate_from_ftp(
-        sftp: SFTPService = SpringerSFTPService(),
-        repo: IRepository = SpringerRepository(),
-        **kwargs
+        repo=SpringerRepository(), sftp=SpringerSFTPService(), **kwargs
     ):
-        return pull_ftp.migrate_from_ftp(sftp, repo, logger, **kwargs)
+        with sftp:
+            root_dir = sftp.dir
+            base_folder_1 = os.getenv("SPRINGER_BASE_FOLDER_NAME_1", "EPJC")
+            sftp.dir = os.path.join(root_dir, base_folder_1)
+            base_folder_1_files = pull_ftp.migrate_from_ftp(
+                sftp, repo, logger, **kwargs
+            )
+
+            base_folder_2 = os.getenv("SPRINGER_BASE_FOLDER_NAME_2", "JHEP")
+            sftp.dir = os.path.join(root_dir, base_folder_2)
+            base_folder_2_files = pull_ftp.migrate_from_ftp(
+                sftp, repo, logger, **kwargs
+            )
+
+            return base_folder_1_files + base_folder_2_files
 
     @task()
-    def trigger_file_processing(
-        filenames=None, repo: IRepository = SpringerRepository()
-    ):
+    def trigger_file_processing(repo=SpringerRepository(), filenames=None):
         return pull_ftp.trigger_file_processing(
-            "springer", repo, logger, filenames or []
+            publisher="springer", repo=repo, logger=logger, filenames=filenames or []
         )
 
     filenames = migrate_from_ftp()
-    trigger_file_processing(filenames)
+    trigger_file_processing(filenames=filenames)
 
 
 dag_taskflow = springer_pull_ftp()

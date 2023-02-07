@@ -11,7 +11,7 @@ from hindawi.repository import HindawiRepository
 from hindawi.utils import save_file_in_s3, split_xmls, trigger_file_processing_DAG
 
 
-@dag(start_date=airflow.utils.dates.days_ago(0))
+@dag(start_date=airflow.utils.dates.days_ago(0), schedule_interval="@hourly")
 def hindawi_fetch_api():
     @task()
     def set_fetching_intervals(repo: IRepository = HindawiRepository(), **kwargs):
