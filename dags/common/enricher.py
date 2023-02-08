@@ -63,7 +63,7 @@ class Enricher(object):
         return list([primary_category] + secondary_categories)
 
     @backoff.on_exception(
-        backoff.expo, requests.exceptions.RequestException, max_time=60, max_tries=3
+        backoff.expo, requests.exceptions.RequestException, max_time=60, max_tries=5
     )
     def _get_arxiv_categories(self, arxiv_id=None, title=None, doi=None):
         if arxiv_id is None and title is None and doi is None:
