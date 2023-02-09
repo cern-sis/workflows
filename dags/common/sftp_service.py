@@ -52,6 +52,7 @@ class SFTPService:
                 "An error occurred while exiting SFTPService",
                 execption=formed_exception,
             )
+            return False
         return True
 
     def list_files(self):

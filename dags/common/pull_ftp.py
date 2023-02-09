@@ -37,9 +37,20 @@ def migrate_from_ftp(
     params = kwargs["params"]
     if "force_pull" in params and params["force_pull"]:
         return _force_pull(sftp, repo, logger)
-    elif "filenames_pull" in params and params["filenames_pull"]["enabled"]:
+    elif (
+        "filenames_pull" in params
+        and params["filenames_pull"]["enabled"]
+        and params["filenames_pull"]["force_from_ftp"]
+    ):
         return _filenames_pull(params["filenames_pull"], sftp, repo, logger)
     return _differential_pull(sftp, repo, logger)
+
+
+def reprocess_files(repo: IRepository, logger: PrintLogger, **kwargs):
+    filenames_pull_params = kwargs["params"]["filenames_pull"]
+    filenames = filenames_pull_params["filenames"]
+    logger.msg("Processing specified filenames.", filenames=filenames)
+    return _find_files_in_zip(filenames, repo)
 
 
 def _force_pull(sftp: SFTPService, repo: IRepository, logger: PrintLogger):
@@ -55,12 +66,8 @@ def _filenames_pull(
     logger: PrintLogger,
 ):
     filenames = filenames_pull_params["filenames"]
-    force_from_ftp = filenames_pull_params["force_from_ftp"]
-    if force_from_ftp:
-        logger.msg("Pulling specified filenames from SFTP", filenames=filenames)
-        return migrate_files(filenames, sftp, repo, logger)
-    logger.msg("Processing specified filenames.", filenames=filenames)
-    return _find_files_in_zip(filenames, repo)
+    logger.msg("Pulling specified filenames from SFTP", filenames=filenames)
+    return migrate_files(filenames, sftp, repo, logger)
 
 
 def _find_files_in_zip(filenames, repo: IRepository):
@@ -70,7 +77,7 @@ def _find_files_in_zip(filenames, repo: IRepository):
         with zipfile.ZipFile(zipped_file) as zip:
             for zip_filename in zip.namelist():
                 if repo.is_meta(zip_filename):
-                    filename_without_extension = filenames[0].split(".")[0]
+                    filename_without_extension = zipped_filename.split(".")[0]
                     extracted_filenames.append(
                         f"extracted/{filename_without_extension}/{zip_filename}"
                     )

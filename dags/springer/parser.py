@@ -15,6 +15,7 @@ from structlog import get_logger
 class SpringerParser(IParser):
     def __init__(self) -> None:
         self.logger = get_logger().bind(class_name=type(self).__name__)
+        self.dois = None
         article_type_mapping = {
             "OriginalPaper": "article",
             "ReviewPaper": "review",
@@ -39,16 +40,14 @@ class SpringerParser(IParser):
         }
 
         extractors = [
+            CustomExtractor(
+                destination="dois", extraction_function=self.get_dois, required=True
+            ),
             AttributeExtractor(
                 "journal_doctype",
                 "./Journal/Volume/Issue/Article/ArticleInfo",
                 "ArticleType",
                 extra_function=lambda x: article_type_mapping[x],
-            ),
-            TextExtractor(
-                destination="dois",
-                source="./Journal/Volume/Issue/Article/ArticleInfo/ArticleDOI",
-                extra_function=lambda x: [x],
             ),
             CustomExtractor("arxiv_eprints", self._get_arxiv_eprints),
             CustomExtractor("page_nr", self._get_page_nrs),
@@ -114,6 +113,15 @@ class SpringerParser(IParser):
             ),
         ]
         super().__init__(extractors)
+
+    def get_dois(self, article: ET.Element):
+        source = "./Journal/Volume/Issue/Article/ArticleInfo/ArticleDOI"
+        doi_element = article.find(source)
+        if doi_element is not None:
+            dois = doi_element.text
+            self.logger.msg("Parsing dois for article", dois=dois)
+            self.dois = dois
+            return [dois]
 
     def _get_abstract(self, article: ET.Element):
         def is_latex_node(node: ET.Element):

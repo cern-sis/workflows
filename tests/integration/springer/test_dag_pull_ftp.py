@@ -42,9 +42,9 @@ def test_dag_migrate_from_FTP():
     repo = SpringerRepository()
     repo.delete_all()
     assert len(repo.find_all()) == 0
-    with SpringerSFTPService() as sftp:
+    with SpringerSFTPService(dir="upload/springer/EPJC") as sftp:
         migrate_from_ftp(
-            sftp(dir="upload/springer/EPJC"),
+            sftp,
             repo,
             get_logger().bind(class_name="test_logger"),
             **{"params": {}},

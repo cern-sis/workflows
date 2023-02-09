@@ -10,7 +10,7 @@ from structlog import get_logger
 
 @dag(
     start_date=airflow.utils.dates.days_ago(0),
-    schedule_interval="@hourly",
+    schedule_interval="30 */3 * * *",
     params={
         "force_pull": False,
         "filenames_pull": {"enabled": False, "filenames": [], "force_from_ftp": False},
@@ -23,6 +23,17 @@ def springer_pull_ftp():
     def migrate_from_ftp(
         repo=SpringerRepository(), sftp=SpringerSFTPService(), **kwargs
     ):
+        params = kwargs["params"]
+        specific_files = (
+            "filenames_pull" in params
+            and params["filenames_pull"]["enabled"]
+            and not params["filenames_pull"]["force_from_ftp"]
+        )
+        if specific_files:
+            root_dir = sftp.dir
+            specific_files_names = pull_ftp.reprocess_files(repo, logger, **kwargs)
+            return specific_files_names
+
         with sftp:
             root_dir = sftp.dir
             base_folder_1 = os.getenv("SPRINGER_BASE_FOLDER_NAME_1", "EPJC")

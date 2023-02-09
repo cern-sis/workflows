@@ -3,7 +3,6 @@ from unittest.mock import MagicMock, patch
 from common.sftp_service import DirectoryNotFoundException, SFTPService
 from pysftp import Connection
 from pytest import raises
-from structlog.testing import capture_logs
 
 
 def test_connect():
@@ -23,15 +22,7 @@ def test_connect_should_crash(connection_mock: MagicMock, *args):
     raises(DirectoryNotFoundException, initiate_sftp_service)
 
 
-def test_logs():
-    with capture_logs() as cap_logs:
+def test_error_raise():
+    with raises(Exception):
         with SFTPService():
             raise Exception
-        assert cap_logs == [
-            {
-                "class_name": "SFTPService",
-                "execption": ["Exception\n"],
-                "event": "An error occurred while exiting SFTPService",
-                "log_level": "error",
-            }
-        ]

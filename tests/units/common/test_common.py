@@ -4,7 +4,7 @@ from typing import List
 from unittest.mock import MagicMock, Mock, patch
 
 import pytest
-from common.pull_ftp import migrate_from_ftp, trigger_file_processing
+from common.pull_ftp import migrate_from_ftp, reprocess_files, trigger_file_processing
 from common.repository import IRepository
 from common.sftp_service import SFTPService
 from structlog import get_logger
@@ -174,10 +174,8 @@ def test_migrate_from_ftp_specified_file(
     zip_fixture,
 ):
     repo_get_all.return_value = SFTP_ZIP_FILES[0:-1]
-    sftp = SFTPService()
     repo = IRepository()
-    migrate_from_ftp(
-        sftp,
+    reprocess_files(
         repo,
         get_logger().bind(class_name="test_logger"),
         **{
