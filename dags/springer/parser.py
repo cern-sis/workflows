@@ -117,11 +117,12 @@ class SpringerParser(IParser):
     def get_dois(self, article: ET.Element):
         source = "./Journal/Volume/Issue/Article/ArticleInfo/ArticleDOI"
         doi_element = article.find(source)
-        if doi_element is not None:
-            dois = doi_element.text
-            self.logger.msg("Parsing dois for article", dois=dois)
-            self.dois = dois
-            return [dois]
+        if doi_element is None:
+            return []
+        dois = doi_element.text
+        self.logger.msg("Parsing dois for article", dois=dois)
+        self.dois = dois
+        return [dois]
 
     def _get_abstract(self, article: ET.Element):
         def is_latex_node(node: ET.Element):
