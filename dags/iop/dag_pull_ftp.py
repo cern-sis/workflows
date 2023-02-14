@@ -17,9 +17,9 @@ def iop_pull_ftp():
     logger = get_logger().bind(class_name="iop_pull_ftp")
 
     @task()
-    def migrate_from_ftp(repo=IOPRepository(), sftp=IOPSFTPService(), **kwargs):
+    def migrate_from_ftp(repo=IOPRepository(), sftp=IOPSFTPService()):
         with sftp:
-            return pull_ftp.migrate_from_ftp(sftp, repo, logger, **kwargs)
+            return pull_ftp.differential_pull(sftp, repo, logger)
 
     @task()
     def trigger_file_processing(filenames=None):

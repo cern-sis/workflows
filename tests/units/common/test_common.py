@@ -4,17 +4,20 @@ from typing import List
 from unittest.mock import MagicMock, Mock, patch
 
 import pytest
-from common.pull_ftp import migrate_from_ftp, reprocess_files, trigger_file_processing
+from common.pull_ftp import (
+    differential_pull,
+    pull_force_files_and_reprocess,
+    reprocess_files,
+    trigger_file_processing,
+)
 from common.repository import IRepository
 from common.sftp_service import SFTPService
 from structlog import get_logger
 
-SFTP_NOT_ZIP_FILES: List[str] = ["file2.png"]
-SFTP_ZIP_FILES: List[str] = [
+SFTP_LIST_FILES_RETURN_VALUE: List[str] = [
     "file1.zip",
     "file2.zip",
 ]
-SFTP_LIST_FILES_RETURN_VALUE: List[str] = SFTP_NOT_ZIP_FILES + SFTP_ZIP_FILES
 
 REPO_FIND_ALL_RETURN_VALUE: List[dict] = [
     {"xml": f, "pdf": f} for f in SFTP_LIST_FILES_RETURN_VALUE
@@ -25,7 +28,9 @@ REPO_FIND_ALL_RETURN_VALUE: List[dict] = [
 def zip_fixture():
     with patch("zipfile.ZipFile", autospec=True) as zip_patch:
         mock_ziparchive = Mock()
-        mock_ziparchive.return_value.namelist.return_value = SFTP_ZIP_FILES
+        mock_ziparchive.return_value.namelist.return_value = (
+            SFTP_LIST_FILES_RETURN_VALUE
+        )
         mock_ziparchive.return_value.read.return_value = BytesIO().read()
         zip_patch.return_value.__enter__ = mock_ziparchive
         yield zip_patch
@@ -42,7 +47,6 @@ def ftp_get_file_fixture():
         yield patched
 
 
-@patch.object(SFTPService, attribute="__init__", return_value=None)
 @patch.object(
     SFTPService, attribute="list_files", return_value=SFTP_LIST_FILES_RETURN_VALUE
 )
@@ -54,19 +58,17 @@ def test_migrate_from_ftp(
     repo_get_all,
     repo_is_meta,
     sftp_list_files,
-    ftp_init,
     ftp_get_file_fixture,
     zip_fixture,
 ):
-    sftp = SFTPService()
-    repo = IRepository()
-    migrate_from_ftp(
-        sftp, repo, get_logger().bind(class_name="test_logger"), **{"params": {}}
-    )
-    assert repo_save.call_count == len(SFTP_ZIP_FILES) + pow(len(SFTP_ZIP_FILES), 2)
+    with SFTPService() as sftp:
+        repo = IRepository()
+        differential_pull(sftp, repo, get_logger().bind(class_name="test_logger"))
+        assert repo_save.call_count == len(SFTP_LIST_FILES_RETURN_VALUE) + pow(
+            len(SFTP_LIST_FILES_RETURN_VALUE), 2
+        )
 
 
-@patch.object(SFTPService, attribute="__init__", return_value=None)
 @patch.object(
     SFTPService, attribute="list_files", return_value=SFTP_LIST_FILES_RETURN_VALUE
 )
@@ -78,48 +80,54 @@ def test_migrate_from_ftp_only_one_file(
     repo_get_all: MagicMock,
     repo_is_meta,
     sftp_list_files,
-    ftp_init,
     ftp_get_file_fixture,
     zip_fixture,
 ):
-    repo_get_all.return_value = SFTP_ZIP_FILES[0:-1]
-    sftp = SFTPService()
-    repo = IRepository()
-    migrate_from_ftp(
-        sftp, repo, get_logger().bind(class_name="test_logger"), **{"params": {}}
-    )
-    assert repo_save.call_count == 3
+    repo_get_all.return_value = SFTP_LIST_FILES_RETURN_VALUE[0:-1]
+    with SFTPService() as sftp:
+        repo = IRepository()
+        differential_pull(sftp, repo, get_logger().bind(class_name="test_logger"))
+        assert repo_save.call_count == len(SFTP_LIST_FILES_RETURN_VALUE[0:-1]) + pow(
+            2, len(SFTP_LIST_FILES_RETURN_VALUE[0:-1])
+        )
 
 
-@patch.object(SFTPService, attribute="__init__", return_value=None)
 @patch.object(
     SFTPService, attribute="list_files", return_value=SFTP_LIST_FILES_RETURN_VALUE
 )
 @patch.object(IRepository, attribute="is_meta")
 @patch.object(IRepository, attribute="get_all_raw_filenames")
 @patch.object(IRepository, attribute="save")
-def test_migrate_from_ftp_only_one_file_but_force_flag(
+def test_migrate_from_ftp_force_flag(
     repo_save: MagicMock,
     repo_get_all: MagicMock,
     repo_is_meta,
     sftp_list_files,
-    ftp_init,
     ftp_get_file_fixture,
     zip_fixture,
 ):
-    repo_get_all.return_value = SFTP_ZIP_FILES[0:-1]
-    sftp = SFTPService()
-    repo = IRepository()
-    migrate_from_ftp(
-        sftp,
-        repo,
-        get_logger().bind(class_name="test_logger"),
-        **{"params": {"force_pull": True}}
-    )
-    assert repo_save.call_count == len(SFTP_ZIP_FILES) + pow(len(SFTP_ZIP_FILES), 2)
+    repo_get_all.return_value = SFTP_LIST_FILES_RETURN_VALUE
+    with SFTPService() as sftp:
+        repo = IRepository()
+        pull_force_files_and_reprocess(
+            sftp,
+            repo,
+            get_logger().bind(class_name="test_logger"),
+            **{
+                "params": {
+                    "filenames_pull": {
+                        "enabled": True,
+                        "filenames": [],
+                        "force_from_ftp": True,
+                    }
+                }
+            }
+        )
+        assert repo_save.call_count == len(SFTP_LIST_FILES_RETURN_VALUE) + pow(
+            len(SFTP_LIST_FILES_RETURN_VALUE), 2
+        )
 
 
-@patch.object(SFTPService, attribute="__init__", return_value=None)
 @patch.object(
     SFTPService, attribute="list_files", return_value=SFTP_LIST_FILES_RETURN_VALUE
 )
@@ -131,28 +139,29 @@ def test_migrate_from_ftp_specified_file_force_from_ftp(
     repo_get_all: MagicMock,
     repo_is_meta,
     sftp_list_files,
-    ftp_init,
     ftp_get_file_fixture,
     zip_fixture,
 ):
-    repo_get_all.return_value = SFTP_ZIP_FILES[0:-1]
-    sftp = SFTPService()
-    repo = IRepository()
-    migrate_from_ftp(
-        sftp,
-        repo,
-        get_logger().bind(class_name="test_logger"),
-        **{
-            "params": {
-                "filenames_pull": {
-                    "enabled": True,
-                    "filenames": ["file1.zip"],
-                    "force_from_ftp": True,
+    repo_get_all.return_value = SFTP_LIST_FILES_RETURN_VALUE[0:-1]
+    with SFTPService() as sftp:
+        repo = IRepository()
+        pull_force_files_and_reprocess(
+            sftp,
+            repo,
+            get_logger().bind(class_name="test_logger"),
+            **{
+                "params": {
+                    "filenames_pull": {
+                        "enabled": True,
+                        "filenames": ["file1.zip"],
+                        "force_from_ftp": True,
+                    }
                 }
             }
-        }
-    )
-    assert repo_save.call_count == 3
+        )
+        assert repo_save.call_count == len(SFTP_LIST_FILES_RETURN_VALUE[0:-1]) + pow(
+            2, len(SFTP_LIST_FILES_RETURN_VALUE[0:-1])
+        )
 
 
 @patch.object(SFTPService, attribute="__init__", return_value=None)
@@ -173,7 +182,7 @@ def test_migrate_from_ftp_specified_file(
     ftp_get_file_fixture,
     zip_fixture,
 ):
-    repo_get_all.return_value = SFTP_ZIP_FILES[0:-1]
+    repo_get_all.return_value = SFTP_LIST_FILES_RETURN_VALUE[0:-1]
     repo = IRepository()
     reprocess_files(
         repo,

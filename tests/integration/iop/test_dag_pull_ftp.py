@@ -6,7 +6,7 @@ from airflow.models import DagBag
 from airflow.models.dagrun import DagRun
 from airflow.utils.state import DagRunState
 from busypie import SECOND, wait
-from common.pull_ftp import migrate_from_ftp, trigger_file_processing
+from common.pull_ftp import differential_pull, trigger_file_processing
 from iop.repository import IOPRepository
 from iop.sftp_service import IOPSFTPService
 from structlog import get_logger
@@ -43,12 +43,7 @@ def test_dag_migrate_from_FTP():
     repo.delete_all()
     assert len(repo.find_all()) == 0
     with IOPSFTPService() as sftp:
-        migrate_from_ftp(
-            sftp,
-            repo,
-            get_logger().bind(class_name="test_logger"),
-            **{"params": {}},
-        )
+        differential_pull(sftp, repo, get_logger().bind(class_name="test_logger"))
         assert len(repo.find_all()) == 11
 
 

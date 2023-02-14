@@ -31,26 +31,30 @@ def migrate_files(filenames, sftp: SFTPService, repo: IRepository, logger: Print
     return extracted_filenames
 
 
-def migrate_from_ftp(
-    sftp: SFTPService, repo: IRepository, logger: PrintLogger, **kwargs
-):
-    params = kwargs["params"]
-    if "force_pull" in params and params["force_pull"]:
-        return _force_pull(sftp, repo, logger)
-    elif (
-        "filenames_pull" in params
-        and params["filenames_pull"]["enabled"]
-        and params["filenames_pull"]["force_from_ftp"]
-    ):
-        return _filenames_pull(params["filenames_pull"], sftp, repo, logger)
-    return _differential_pull(sftp, repo, logger)
-
-
 def reprocess_files(repo: IRepository, logger: PrintLogger, **kwargs):
     filenames_pull_params = kwargs["params"]["filenames_pull"]
     filenames = filenames_pull_params["filenames"]
     logger.msg("Processing specified filenames.", filenames=filenames)
     return _find_files_in_zip(filenames, repo)
+
+
+def pull_force_files_and_reprocess(
+    sftp: SFTPService, repo: IRepository, logger: PrintLogger, **kwargs
+):
+    params = kwargs["params"]
+    if (
+        "filenames_pull" in params
+        and params["filenames_pull"]["force_from_ftp"]
+        and not params["filenames_pull"]["filenames"]
+    ):
+        return _force_pull(sftp, repo, logger)
+    elif (
+        "filenames_pull" in params
+        and params["filenames_pull"]["enabled"]
+        and params["filenames_pull"]["filenames"]
+        and params["filenames_pull"]["force_from_ftp"]
+    ):
+        return _filenames_pull(params["filenames_pull"], sftp, repo, logger)
 
 
 def _force_pull(sftp: SFTPService, repo: IRepository, logger: PrintLogger):
@@ -84,7 +88,7 @@ def _find_files_in_zip(filenames, repo: IRepository):
     return extracted_filenames
 
 
-def _differential_pull(sftp: SFTPService, repo: IRepository, logger: PrintLogger):
+def differential_pull(sftp: SFTPService, repo: IRepository, logger: PrintLogger):
     logger.msg("Pulling missing files only.")
     sftp_files = sftp.list_files()
     s3_files = repo.get_all_raw_filenames()
