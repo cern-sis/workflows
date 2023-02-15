@@ -5,10 +5,10 @@ from springer.sftp_service import SpringerSFTPService
 from structlog import get_logger
 
 
-@fixture(scope="function")
+@fixture
 def springer_empty_repo():
     repo = SpringerRepository()
-    repo.delete_all
+    repo.delete_all()
     yield repo
 
 
