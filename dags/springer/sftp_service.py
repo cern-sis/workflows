@@ -11,4 +11,5 @@ class SpringerSFTPService(SFTPService):
             password=os.getenv("SPRINGER_FTP_PASSWORD", "airflow"),
             port=int(os.getenv("SPRINGER_FTP_PORT", "2222")),
             dir=os.getenv("SPRINGER_FTP_DIR", dir),
+            subdirs=os.getenv("SPRINGER_JOURNALS", "EPJC,JHEP"),
         )

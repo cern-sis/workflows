@@ -42,9 +42,9 @@ def test_dag_migrate_from_FTP():
     repo = SpringerRepository()
     repo.delete_all()
     assert len(repo.find_all()) == 0
-    with SpringerSFTPService(dir="upload/springer/EPJC") as sftp:
+    with SpringerSFTPService() as sftp:
         differential_pull(sftp, repo, get_logger().bind(class_name="test_logger"))
-        assert len(repo.find_all()) == 2
+        assert len(repo.find_all()) == 3
 
 
 def test_dag_trigger_file_processing():

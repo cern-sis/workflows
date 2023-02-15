@@ -14,6 +14,7 @@ class SFTPService:
         password="airflow",
         port=2222,
         dir="/upload",
+        subdirs="",
     ):
         self.connection = None
         self.host = host
@@ -22,6 +23,7 @@ class SFTPService:
         self.port = port
         self.logger = get_logger().bind(class_name=type(self).__name__)
         self.dir = dir
+        self.subdirs = subdirs
 
     def __connect(self):
         cnopts = pysftp.CnOpts()
@@ -57,7 +59,23 @@ class SFTPService:
 
     def list_files(self):
         try:
-            return self.connection.listdir(self.dir)
+            all_files = []
+            subdirs = self.subdirs.split(",")
+            working_dir = self.dir
+            if not subdirs:
+                return self.connection.listdir(self.dir)
+            for subdir in subdirs:
+                path = os.path.join(working_dir, subdir)
+                if not self.connection.isdir(path):
+                    raise DirectoryNotFoundException(
+                        "Remote directory doesn't exist. Abort connection."
+                    )
+                files = [
+                    os.path.join(subdir, file_name)
+                    for file_name in self.connection.listdir(path)
+                ]
+                all_files = all_files + files
+            return all_files
         except AttributeError:
             raise NotConnectedException
 

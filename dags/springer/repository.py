@@ -16,7 +16,7 @@ class SpringerRepository(IRepository):
 
     def get_all_raw_filenames(self):
         return [
-            f.key.split("/")[-1]
+            "/".join(f.key.split("/")[1:])
             for f in self.s3.objects.filter(Prefix=self.ZIPED_DIR).all()
         ]
 

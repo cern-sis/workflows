@@ -1,5 +1,3 @@
-import os
-
 import airflow
 import common.pull_ftp as pull_ftp
 from airflow.decorators import dag, task
@@ -24,62 +22,43 @@ def springer_pull_ftp():
         repo=SpringerRepository(), sftp=SpringerSFTPService(), **kwargs
     ):
         params = kwargs["params"]
-        specific_files = (
+        reprocess_specific_files = (
             "filenames_pull" in params
             and params["filenames_pull"]["enabled"]
             and params["filenames_pull"]["filenames"]
             and not params["filenames_pull"]["force_from_ftp"]
         )
-        pull_force = (
+        pull_force_all_files = (
             params["filenames_pull"]["enabled"]
             and params["filenames_pull"]["force_from_ftp"]
             and not params["filenames_pull"]["filenames"]
         )
 
-        pull_force_spec = (
+        pull_force_specific_files = (
             params["filenames_pull"]["enabled"]
             and params["filenames_pull"]["force_from_ftp"]
             and params["filenames_pull"]["filenames"]
         )
 
-        if specific_files:
+        if reprocess_specific_files:
             specific_files_names = pull_ftp.reprocess_files(repo, logger, **kwargs)
             return specific_files_names
 
-        if pull_force_spec:
+        if pull_force_specific_files:
             with sftp:
                 specific_files_names_force = pull_ftp.pull_force_files_and_reprocess(
                     sftp, repo, logger, **kwargs
                 )
                 return specific_files_names_force
 
-        if pull_force:
-            root_dir = sftp.dir
+        if pull_force_all_files:
             with sftp:
-                base_folder_1 = os.getenv("SPRINGER_BASE_FOLDER_NAME_1", "EPJC")
-                sftp.dir = os.path.join(root_dir, base_folder_1)
-                all_files_names_1 = pull_ftp.pull_force_files_and_reprocess(
+                return pull_ftp.pull_force_files_and_reprocess(
                     sftp, repo, logger, **kwargs
                 )
-
-                base_folder_2 = os.getenv("SPRINGER_BASE_FOLDER_NAME_2", "JHEP")
-                sftp.dir = os.path.join(root_dir, base_folder_2)
-                all_files_names_2 = pull_ftp.pull_force_files_and_reprocess(
-                    sftp, repo, logger, **kwargs
-                )
-                return all_files_names_1 + all_files_names_2
 
         with sftp:
-            root_dir = sftp.dir
-            base_folder_1 = os.getenv("SPRINGER_BASE_FOLDER_NAME_1", "EPJC")
-            sftp.dir = os.path.join(root_dir, base_folder_1)
-            base_folder_1_files = pull_ftp.differential_pull(sftp, repo, logger)
-
-            base_folder_2 = os.getenv("SPRINGER_BASE_FOLDER_NAME_2", "JHEP")
-            sftp.dir = os.path.join(root_dir, base_folder_2)
-            base_folder_2_files = pull_ftp.differential_pull(sftp, repo, logger)
-
-            return base_folder_1_files + base_folder_2_files
+            return pull_ftp.differential_pull(sftp, repo, logger)
 
     @task()
     def trigger_file_processing(repo=SpringerRepository(), filenames=None):
