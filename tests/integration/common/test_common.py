@@ -5,7 +5,7 @@ from springer.sftp_service import SpringerSFTPService
 from structlog import get_logger
 
 
-@fixture
+@fixture(scope="function")
 def springer_empty_repo():
     repo = SpringerRepository()
     repo.delete_all
