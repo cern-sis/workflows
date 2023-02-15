@@ -1,16 +1,22 @@
 from common.pull_ftp import pull_force_files_and_reprocess, reprocess_files
+from pytest import fixture
 from springer.repository import SpringerRepository
 from springer.sftp_service import SpringerSFTPService
 from structlog import get_logger
 
 
-def test_force_pull_from_sftp():
+@fixture
+def springer_empty_repo():
     repo = SpringerRepository()
-    repo.delete_all()
+    repo.delete_all
+    yield repo
+
+
+def test_force_pull_from_sftp(springer_empty_repo):
     with SpringerSFTPService() as sftp:
         pull_force_files_and_reprocess(
             sftp,
-            repo,
+            springer_empty_repo,
             get_logger().bind(class_name="test_logger"),
             **{
                 "params": {
@@ -22,16 +28,14 @@ def test_force_pull_from_sftp():
                 }
             }
         )
-        assert len(repo.find_all()) == 1
+        assert len(springer_empty_repo.find_all()) == 1
 
 
-def test_pull_from_sftp_and_reprocess():
-    repo = SpringerRepository()
-    repo.delete_all()
+def test_pull_from_sftp_and_reprocess(springer_empty_repo):
     with SpringerSFTPService() as sftp:
         pull_force_files_and_reprocess(
             sftp,
-            repo,
+            springer_empty_repo,
             get_logger().bind(class_name="test_logger"),
             **{
                 "params": {
@@ -43,9 +47,9 @@ def test_pull_from_sftp_and_reprocess():
                 }
             }
         )
-        assert len(repo.find_all()) == 1
+        assert len(springer_empty_repo.find_all()) == 1
         reprocess_files(
-            repo,
+            springer_empty_repo,
             get_logger().bind(class_name="test_logger"),
             **{
                 "params": {
@@ -57,4 +61,4 @@ def test_pull_from_sftp_and_reprocess():
                 }
             }
         )
-        assert len(repo.find_all()) == 1
+        assert len(springer_empty_repo.find_all()) == 1
