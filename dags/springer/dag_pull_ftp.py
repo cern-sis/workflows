@@ -24,36 +24,36 @@ def springer_pull_ftp():
         repo=SpringerRepository(), sftp=SpringerSFTPService(), **kwargs
     ):
         params = kwargs["params"]
-        specific_files = (
+        reprocess_specific_files = (
             "filenames_pull" in params
             and params["filenames_pull"]["enabled"]
             and params["filenames_pull"]["filenames"]
             and not params["filenames_pull"]["force_from_ftp"]
         )
-        pull_force = (
+        pull_force_all_files = (
             params["filenames_pull"]["enabled"]
             and params["filenames_pull"]["force_from_ftp"]
             and not params["filenames_pull"]["filenames"]
         )
 
-        pull_force_spec = (
+        pull_force_specific_files = (
             params["filenames_pull"]["enabled"]
             and params["filenames_pull"]["force_from_ftp"]
             and params["filenames_pull"]["filenames"]
         )
 
-        if specific_files:
+        if reprocess_specific_files:
             specific_files_names = pull_ftp.reprocess_files(repo, logger, **kwargs)
             return specific_files_names
 
-        if pull_force_spec:
+        if pull_force_specific_files:
             with sftp:
                 specific_files_names_force = pull_ftp.pull_force_files_and_reprocess(
                     sftp, repo, logger, **kwargs
                 )
                 return specific_files_names_force
 
-        if pull_force:
+        if pull_force_all_files:
             root_dir = sftp.dir
             with sftp:
                 base_folder_1 = os.getenv("SPRINGER_BASE_FOLDER_NAME_1", "EPJC")
