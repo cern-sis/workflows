@@ -67,3 +67,14 @@ def extract_text(article, path, field_name, dois):
     except AttributeError:
         logger.error(f"{field_name} is not found in XML", dois=dois)
         return
+
+
+def remove_excluded_folders(filenames, excluded_folders):
+    files_not_from_excluded_folder = []
+    if not excluded_folders:
+        return filenames
+    for folder in excluded_folders:
+        files_not_from_excluded_folder += [
+            file for file in filenames if folder not in file
+        ]
+    return files_not_from_excluded_folder

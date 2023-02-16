@@ -10,6 +10,7 @@ from structlog import get_logger
     start_date=airflow.utils.dates.days_ago(0),
     schedule_interval="30 */3 * * *",
     params={
+        "excluded_dirs": [],
         "force_pull": False,
         "filenames_pull": {"enabled": False, "filenames": [], "force_from_ftp": False},
     },
@@ -58,7 +59,7 @@ def springer_pull_ftp():
                 )
 
         with sftp:
-            return pull_ftp.differential_pull(sftp, repo, logger)
+            return pull_ftp.differential_pull(sftp, repo, logger, **kwargs)
 
     @task()
     def trigger_file_processing(repo=SpringerRepository(), filenames=None):
