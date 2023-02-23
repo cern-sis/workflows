@@ -9,6 +9,7 @@ from structlog import get_logger
 @dag(
     start_date=airflow.utils.dates.days_ago(0),
     params={
+        "excluded_directories": [],
         "force_pull": False,
         "filenames_pull": {"enabled": False, "filenames": [], "force_from_ftp": False},
     },

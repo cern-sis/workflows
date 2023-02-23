@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as ET
 
+from common.exceptions import RequiredFieldNotFoundExtractionError
 from common.parsing.extractor import IExtractor
 from common.utils import check_value
 from structlog import get_logger
@@ -118,9 +119,3 @@ class CustomExtractor(IExtractor):
         if self.required:
             raise RequiredFieldNotFoundExtractionError(self.destination)
         return self.default_value
-
-
-class RequiredFieldNotFoundExtractionError(Exception):
-    def __init__(self, missing_field):
-        super().__init__(f"Required filed is missing: {missing_field}")
-        self.missing_field = missing_field

@@ -35,7 +35,21 @@ def test_dag_run(dag: DAG):
     )
     dagrun = dag.create_dagrun(DagRunState.QUEUED, run_id=id)
     wait().at_most(60, SECOND).until(lambda: __test_dagrun_state(dagrun))
-    assert len(repo.find_all()) == 3
+    expected_files = [
+        {
+            "xml": "extracted/EPJC/ftp_PUB_19-01-29_20-02-10_EPJC/JOU=10052/VOL=2019.79/ISU=1/ART=6572/10052_2019_Article_6572.xml.Meta",
+            "pdf": "extracted/EPJC/ftp_PUB_19-01-29_20-02-10_EPJC/JOU=10052/VOL=2019.79/ISU=1/ART=6572/BodyRef/PDF/10052_2019_Article_6572.pdf",
+        },
+        {
+            "xml": "extracted/EPJC/ftp_PUB_19-02-06_16-01-13_EPJC_stripped/JOU=10052/VOL=2019.79/ISU=2/ART=6540/10052_2019_Article_6540.xml.Meta",
+            "pdf": "extracted/EPJC/ftp_PUB_19-02-06_16-01-13_EPJC_stripped/JOU=10052/VOL=2019.79/ISU=2/ART=6540/BodyRef/PDF/10052_2019_Article_6540.pdf",
+        },
+        {
+            "xml": "extracted/JHEP/ftp_PUB_19-01-29_20-02-10_JHEP/JOU=13130/VOL=2019.2019/ISU=1/ART=9848/13130_2019_Article_9848.xml.scoap",
+            "pdf": "extracted/JHEP/ftp_PUB_19-01-29_20-02-10_JHEP/JOU=13130/VOL=2019.2019/ISU=1/ART=9848/BodyRef/PDF/13130_2019_Article_9848.pdf",
+        },
+    ]
+    assert repo.find_all() == expected_files
 
 
 def test_dag_migrate_from_FTP():
@@ -47,9 +61,29 @@ def test_dag_migrate_from_FTP():
             sftp,
             repo,
             get_logger().bind(class_name="test_logger"),
-            **{"params": {}},
+            **{
+                "params": {
+                    "excluded_directories": [],
+                    "force_pull": False,
+                    "filenames_pull": {
+                        "enabled": False,
+                        "filenames": [],
+                        "force_from_ftp": False,
+                    },
+                }
+            },
         )
-        assert len(repo.find_all()) == 2
+        expected_files = [
+            {
+                "xml": "extracted/ftp_PUB_19-01-29_20-02-10_EPJC/JOU=10052/VOL=2019.79/ISU=1/ART=6572/10052_2019_Article_6572.xml.Meta",
+                "pdf": "extracted/ftp_PUB_19-01-29_20-02-10_EPJC/JOU=10052/VOL=2019.79/ISU=1/ART=6572/BodyRef/PDF/10052_2019_Article_6572.pdf",
+            },
+            {
+                "xml": "extracted/ftp_PUB_19-02-06_16-01-13_EPJC_stripped/JOU=10052/VOL=2019.79/ISU=2/ART=6540/10052_2019_Article_6540.xml.Meta",
+                "pdf": "extracted/ftp_PUB_19-02-06_16-01-13_EPJC_stripped/JOU=10052/VOL=2019.79/ISU=2/ART=6540/BodyRef/PDF/10052_2019_Article_6540.pdf",
+            },
+        ]
+        assert repo.find_all() == expected_files
 
 
 def test_dag_trigger_file_processing():

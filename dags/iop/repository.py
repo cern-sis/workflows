@@ -1,10 +1,10 @@
 import os
-from collections import defaultdict
 from io import BytesIO
 from typing import IO
 
 from common.repository import IRepository
 from common.s3_service import S3Service
+from common.utils import find_extension
 
 
 class IOPRepository(IRepository):
@@ -17,12 +17,12 @@ class IOPRepository(IRepository):
 
     def get_all_raw_filenames(self):
         return [
-            os.path.basename(f.key)
+            f.key.replace("raw/", "")
             for f in self.s3.objects.filter(Prefix=self.ZIPED_DIR).all()
         ]
 
     def find_all(self, filenames_to_process=None):
-        ret_dict = {}
+        grouped_files = {}
         filenames = (
             filenames_to_process
             if filenames_to_process
@@ -31,10 +31,11 @@ class IOPRepository(IRepository):
         for file in filenames:
             last_part = os.path.basename(file)
             filename_without_extension = last_part.split(".")[0]
-            ret_dict.setdefault(filename_without_extension, defaultdict(dict))
-            extension = "xml" if self.is_meta(last_part) else "pdf"
-            ret_dict[filename_without_extension].setdefault(extension, file)
-        return list(ret_dict.values())
+            if filename_without_extension not in grouped_files:
+                grouped_files[filename_without_extension] = {}
+            extension = find_extension(last_part)
+            grouped_files[filename_without_extension][extension] = file
+        return list(grouped_files.values())
 
     def find_by_id(self, id: str):
         retfile = BytesIO()

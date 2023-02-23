@@ -50,4 +50,4 @@ def test_save_file_in_s3():
 
 def test_split_xml():
     records = split_xmls(repo=MockedRepo(), key="key/key")
-    assert len(records) == 1
+    assert records == ["<record>record</record>"]

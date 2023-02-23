@@ -1,6 +1,8 @@
 import datetime
 import json
+import re
 
+from common.exceptions import UnknownFileExtension
 from structlog import get_logger
 
 logger = get_logger()
@@ -67,3 +69,20 @@ def extract_text(article, path, field_name, dois):
     except AttributeError:
         logger.error(f"{field_name} is not found in XML", dois=dois)
         return
+
+
+def append_file_if_not_in_excluded_directory(
+    filename, exclude_directories, list_of_files
+):
+    if not exclude_directories or not (
+        any(re.search(exclude, filename) for exclude in exclude_directories)
+    ):
+        list_of_files.append(filename)
+
+
+def find_extension(file):
+    if file.endswith(".xml"):
+        return "xml"
+    elif file.endswith(".pdf"):
+        return "pdf"
+    raise UnknownFileExtension(file)

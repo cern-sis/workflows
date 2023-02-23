@@ -1,8 +1,11 @@
 import os
+import re
 import traceback
 from io import BytesIO
 
 import pysftp
+from common.exceptions import DirectoryNotFoundException, NotConnectedException
+from common.utils import append_file_if_not_in_excluded_directory
 from structlog import get_logger
 
 
@@ -55,9 +58,20 @@ class SFTPService:
             return False
         return True
 
-    def list_files(self):
+    def list_files(self, excluded_directories=None):
         try:
-            return self.connection.listdir(self.dir)
+            file_names = []
+            self.connection.walktree(
+                self.dir,
+                lambda filename: append_file_if_not_in_excluded_directory(
+                    re.sub(self.dir + "/", "", filename),
+                    excluded_directories,
+                    file_names,
+                ),
+                lambda directory: directory,
+                lambda unknown: unknown,
+            )
+            return file_names
         except AttributeError:
             raise NotConnectedException
 
@@ -67,13 +81,3 @@ class SFTPService:
             return BytesIO(file_.read())
         except AttributeError:
             raise NotConnectedException
-
-
-class DirectoryNotFoundException(Exception):
-    def __init__(self, *args):
-        super().__init__(*args)
-
-
-class NotConnectedException(Exception):
-    def __init__(self):
-        super().__init__("SFTP connection not established")

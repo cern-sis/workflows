@@ -10,7 +10,7 @@ def test_list_files():
         data_files = os.listdir(
             pathlib.Path().resolve().__str__() + "/data/springer/JHEP"
         )
-        assert len(sftp.list_files()) == len(data_files)
+        assert sftp.list_files() == data_files
 
 
 def test_get_file():
@@ -20,3 +20,11 @@ def test_get_file():
     with open(data_path + "/" + data_files[0], "rb") as file:
         with SFTPService(dir="upload/springer/JHEP") as sftp:
             assert file.read() == sftp.get_file(filename).read()
+
+
+def test_list_files_with_exclude_directories():
+    excluded_directories = ["JHEP"]
+    with SFTPService(dir="upload/springer/JHEP") as sftp:
+        files = sftp.list_files(excluded_directories=excluded_directories)
+        expected_files = []
+        assert expected_files == files
