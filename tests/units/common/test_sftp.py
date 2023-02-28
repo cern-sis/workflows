@@ -1,7 +1,7 @@
 from unittest.mock import MagicMock, patch
 
 from common.sftp_service import DirectoryNotFoundException, SFTPService
-from pysftp import Connection
+from paramiko import SFTPClient
 from pytest import raises
 
 
@@ -13,7 +13,7 @@ def test_connect():
     assert initiate_sftp_service() is not None
 
 
-@patch.object(Connection, attribute="isdir", return_value=False)
+@patch.object(SFTPClient, attribute="stat", side_effect=FileNotFoundError)
 def test_connect_should_crash(connection_mock: MagicMock, *args):
     def initiate_sftp_service():
         with SFTPService():

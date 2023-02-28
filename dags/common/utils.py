@@ -1,6 +1,7 @@
 import datetime
 import json
 import re
+from stat import S_ISDIR, S_ISREG
 
 from common.exceptions import UnknownFileExtension
 from structlog import get_logger
@@ -86,3 +87,13 @@ def find_extension(file):
     elif file.endswith(".pdf"):
         return "pdf"
     raise UnknownFileExtension(file)
+
+
+def walk_sftp(sftp, remotedir, paths):
+    for entry in sftp.listdir_attr(remotedir):
+        remotepath = remotedir + "/" + entry.filename
+        mode = entry.st_mode
+        if S_ISDIR(mode):
+            walk_sftp(sftp=sftp, remotedir=remotepath, paths=paths)
+        elif S_ISREG(mode):
+            paths.append(remotepath)

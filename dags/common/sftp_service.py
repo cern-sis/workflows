@@ -3,9 +3,9 @@ import re
 import traceback
 from io import BytesIO
 
-import pysftp
+import paramiko
 from common.exceptions import DirectoryNotFoundException, NotConnectedException
-from common.utils import append_file_if_not_in_excluded_directory
+from common.utils import append_file_if_not_in_excluded_directory, walk_sftp
 from structlog import get_logger
 
 
@@ -27,20 +27,23 @@ class SFTPService:
         self.dir = dir
 
     def __connect(self):
-        cnopts = pysftp.CnOpts()
-        cnopts.hostkeys = None
-        conn = pysftp.Connection(
-            host=self.host,
+        client = paramiko.SSHClient()
+        client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+        client.connect(
+            banner_timeout=200,
+            hostname=self.host,
             username=self.username,
             password=self.password,
             port=self.port,
-            cnopts=cnopts,
         )
-        if not conn.isdir(self.dir):
+        connection = client.open_sftp()
+        try:
+            connection.stat(self.dir)
+        except FileNotFoundError:
             raise DirectoryNotFoundException(
                 "Remote directory doesn't exist. Abort connection."
             )
-        return conn
+        return connection
 
     def __enter__(self):
         self.connection = self.__connect()
@@ -61,23 +64,22 @@ class SFTPService:
     def list_files(self, excluded_directories=None):
         try:
             file_names = []
-            self.connection.walktree(
-                self.dir,
-                lambda filename: append_file_if_not_in_excluded_directory(
-                    re.sub(self.dir + "/", "", filename),
+            filtered_files = []
+            walk_sftp(sftp=self.connection, remotedir=self.dir, paths=file_names)
+            for file_name in file_names:
+                append_file_if_not_in_excluded_directory(
+                    re.sub(self.dir + "/", "", file_name),
                     excluded_directories,
-                    file_names,
-                ),
-                lambda directory: directory,
-                lambda unknown: unknown,
-            )
-            return file_names
+                    filtered_files,
+                )
+            return filtered_files
         except AttributeError:
             raise NotConnectedException
 
     def get_file(self, file):
         try:
-            file_ = self.connection.open(os.path.join(self.dir, file), "rb")
+            file_ = self.connection.open(os.path.join(self.dir, file))
+            file_.prefetch()
             return BytesIO(file_.read())
         except AttributeError:
             raise NotConnectedException
