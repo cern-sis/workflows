@@ -1,7 +1,6 @@
 import os
 import re
 import traceback
-from io import BytesIO
 
 import paramiko
 from common.exceptions import DirectoryNotFoundException, NotConnectedException
@@ -80,6 +79,6 @@ class SFTPService:
         try:
             file_ = self.connection.open(os.path.join(self.dir, file))
             file_.prefetch()
-            return BytesIO(file_.read())
+            return file_
         except AttributeError:
             raise NotConnectedException
