@@ -9,14 +9,25 @@ class HindawiParams:
         verb: str = "listrecords",
         set: str = "HINDAWI.AHEP",
         metadataprefix: str = "marc21",
+        record: str = "",
     ):
         self.from_date = from_date
         self.until_date = until_date
         self.verb = verb
         self.set = set
         self.metadataprefix = metadataprefix
+        self.record = record
 
-    def get_params(self) -> dict:
+    def _single_record_payload(self, identifier):
+        params = {
+            "verb": "getrecord",
+            "set": self.set,
+            "identifier": identifier,
+            "metadataprefix": self.metadataprefix,
+        }
+        return params
+
+    def _set_of_records(self):
         params = {
             "from": self.from_date,
             "until": self.until_date,
@@ -24,4 +35,12 @@ class HindawiParams:
             "set": self.set,
             "metadataprefix": self.metadataprefix,
         }
+        return params
+
+    def get_params(self) -> dict:
+        if self.record:
+            identifier = f"oai:hindawi.com:{self.record}"
+            params = self._single_record_payload(identifier)
+        else:
+            params = self._set_of_records()
         return {key: value for key, value in params.items() if value}

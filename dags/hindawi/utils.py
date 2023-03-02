@@ -21,14 +21,14 @@ def split_xmls(repo, key):
     file = repo.find_by_id(key)
     xml_string = file.getvalue().decode("utf-8")
     for tag in ElementTree.fromstring(xml_string):
-        if "ListRecords" not in tag.tag:
-            continue
-        for record in tag:
-            if "record" not in record.tag:
-                continue
-            ids_and_records.append(
-                ElementTree.tostring(record).decode("utf-8"),
-            )
+        if "ListRecords" in tag.tag or "GetRecord" in tag.tag:
+            for record in tag:
+                if "record" not in record.tag:
+                    continue
+                ids_and_records.append(
+                    ElementTree.tostring(record).decode("utf-8"),
+                )
+
     return ids_and_records
 
 

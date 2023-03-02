@@ -11,17 +11,21 @@ from hindawi.repository import HindawiRepository
 from hindawi.utils import save_file_in_s3, split_xmls, trigger_file_processing_DAG
 
 
-@dag(start_date=airflow.utils.dates.days_ago(0), schedule_interval="@hourly")
+@dag(
+    start_date=airflow.utils.dates.days_ago(0),
+    schedule_interval="30 */3 * * *",
+    params={"start_date": None, "until_date": None, "record_doi": None},
+)
 def hindawi_fetch_api():
     @task()
     def set_fetching_intervals(repo: IRepository = HindawiRepository(), **kwargs):
         return set_harvesting_interval(repo=repo, **kwargs)
 
     @task()
-    def save_xml_in_s3(dates: dict, repo: IRepository = HindawiRepository()):
+    def save_xml_in_s3(dates: dict, repo: IRepository = HindawiRepository(), **kwargs):
+        record = kwargs["params"]["record_doi"]
         parameters = HindawiParams(
-            from_date=dates["start_date"],
-            until_date=dates["until_date"],
+            from_date=dates["start_date"], until_date=dates["until_date"], record=record
         ).get_params()
         rest_api = HindawiApiClient(
             base_url=os.getenv("HINDAWI_API_BASE_URL", "https://www.hindawi.com")

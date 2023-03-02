@@ -119,3 +119,19 @@ class CustomExtractor(IExtractor):
         if self.required:
             raise RequiredFieldNotFoundExtractionError(self.destination)
         return self.default_value
+
+
+class ConstantExtractor(IExtractor):
+    def __init__(
+        self,
+        destination,
+        value,
+        required=False,
+    ) -> None:
+        super().__init__(destination)
+        self.destination = destination
+        self.required = required
+        self.value = value
+
+    def extract(self, article: ET.Element):
+        return self.value

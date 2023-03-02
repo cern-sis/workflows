@@ -11,8 +11,8 @@ logger = get_logger()
 def set_harvesting_interval(repo, **kwargs):
     if (
         "params" in kwargs
-        and "start_date" in kwargs["params"]
-        and "until_date" in kwargs["params"]
+        and kwargs["params"].get("start_date")
+        and kwargs["params"].get("until_date")
     ):
         return {
             "start_date": kwargs["params"]["start_date"],

@@ -32,7 +32,7 @@ class Request:
                     path_segments={self.path_segments}>"
 
     @backoff.on_exception(
-        backoff.expo, requests.exceptions.RequestException, max_time=60, max_tries=3
+        backoff.expo, requests.exceptions.RequestException, max_time=60, max_tries=6
     )
     def get_response(self):
         url_base_obj = furl(self.base_url)

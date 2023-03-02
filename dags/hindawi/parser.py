@@ -1,8 +1,9 @@
 import re
 import xml.etree.ElementTree as ET
 
+from common.constants import COUNTRY_PARSING_PATTERN, ORGANIZATION_PARSING_PATTERN
 from common.parsing.parser import IParser
-from common.parsing.xml_extractors import CustomExtractor
+from common.parsing.xml_extractors import ConstantExtractor, CustomExtractor
 from hindawi.xml_extractors import HindawiTextExtractor as TextExtractor
 from structlog import get_logger
 
@@ -85,6 +86,9 @@ class HindawiParser(IParser):
                 extraction_function=self._get_license,
                 default_value=[],
             ),
+            ConstantExtractor(
+                destination="collections", value=["Advances in High Energy Physics"]
+            ),
         ]
         super().__init__(extractors)
 
@@ -116,8 +120,8 @@ class HindawiParser(IParser):
         parsed_affiliations = [
             {
                 "value": affiliation.text,
-                "organization": re.sub(r",\s[A-Z]?[a-z]*$", "", affiliation.text),
-                "country": re.search(r"[A-Z]?[a-z]*$", affiliation.text).group(0),
+                "organization": ORGANIZATION_PARSING_PATTERN.sub("", affiliation.text),
+                "country": COUNTRY_PARSING_PATTERN.search(affiliation.text).group(0),
             }
             for affiliation in affiliations
         ]
@@ -197,7 +201,10 @@ class HindawiParser(IParser):
         copyright_year = re.search(
             r"[0-9]{4}", self._get_copyright_statement(article)
         ).group(0)
-        return copyright_year
+        try:
+            return int(copyright_year)
+        except (ValueError, TypeError):
+            self.logger.error("Invalid copyright_year value: cannot parse to int")
 
     def _get_publication_info(self, article):
         journals = article.findall(

@@ -30,12 +30,11 @@ class HindawiApiClient:
             path_segments=path_segments,
             parameters=parameters,
         )
-        if "until" not in parameters:
+        if "until" not in parameters and "identifier" not in parameters:
             raise AttributeError("until date is required")
         response_content = request.get_response_xml()
-
         for tag in ElementTree.fromstring(response_content):
-            if "ListRecords" in tag.tag:
+            if "ListRecords" in tag.tag or "GetRecord" in tag.tag:
                 empty_xml = False
                 break
         if not empty_xml:

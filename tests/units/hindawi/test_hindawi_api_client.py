@@ -75,7 +75,7 @@ def test_hindawi_get_file(pdf_file):
 
 
 @mark.vcr
-def test_hindawi_get_file_with_wrong_DOI(pdf_file):
+def test_hindawi_get_file_with_wrong_DOI():
     rest_api = HindawiApiClient(base_url="https://www.hindawi.com")
     parameters = HindawiParams(
         from_date="2022-01-01",
@@ -95,3 +95,11 @@ def test_hindawi_get_file_without_extension():
         rest_api.get_file(
             parameters, "not_existent_extension", doi="10.1155/2019/3902819"
         )
+
+
+@mark.vcr
+def test_hindawi_get_one_record():
+    rest_api = HindawiApiClient(base_url="https://www.hindawi.com")
+    parameters = HindawiParams(record="10.1155/2022/8009789").get_params()
+    articles_metadata = rest_api.get_articles_metadata(parameters)
+    assert articles_metadata is not None

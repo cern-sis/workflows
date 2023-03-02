@@ -26,17 +26,17 @@ interactions:
         Content-Type:
           - text/html
         Date:
-          - Mon, 10 Oct 2022 09:30:02 GMT
+          - Wed, 01 Mar 2023 09:35:43 GMT
         Location:
           - https://downloads.hindawi.com/journals/ahep/2019%2F0000000.pdf?from=2022-01-01&until=2022-01-10&verb=listrecords&set=HINDAWI.AHEP&metadataprefix=marc21
         Server:
           - CloudFront
         Via:
-          - 1.1 3dc3dc42adbf32dc7d24710c2307cb20.cloudfront.net (CloudFront)
+          - 1.1 76a5975e559091e5f81e2804be07dd0c.cloudfront.net (CloudFront)
         X-Amz-Cf-Id:
-          - obptd4G8SbXyiYM_GiWJUYGPLvU-BTp_dcIUBJPRDnhuFVQ7zE-xiw==
+          - E8wZL5HCWiuaxKCGFZXe1_lgASpXRSAgKYE2SVcB8VTRK1QDVs4w-A==
         X-Amz-Cf-Pop:
-          - MRS52-P3
+          - CDG52-P2
         X-Cache:
           - Redirect from cloudfront
       status:
@@ -59,24 +59,24 @@ interactions:
       body:
         string: '<?xml version="1.0" encoding="UTF-8"?>
 
-          <Error><Code>AccessDenied</Code><Message>Access Denied</Message><RequestId>AGRZCMQXPJ219PZG</RequestId><HostId>UQXNIMT4UhdwmvcpIgzOBy1ygl//7RMakqFDtqZrgJEB8F3zDsXuZ9Vi/FLHgxSW9s8Pks8N0AI=</HostId></Error>'
+          <Error><Code>AccessDenied</Code><Message>Access Denied</Message><RequestId>Y7Q6QQ4MS3A0Y7YP</RequestId><HostId>72dn+H8VD925cbnspvslMEcDYkYNkdJ7IrMCtgaoCjj7GNIxABkO3VcOasuyOX5bZWm60iPTi8Y=</HostId></Error>'
       headers:
         Connection:
           - keep-alive
         Content-Type:
           - application/xml
         Date:
-          - Mon, 10 Oct 2022 09:30:01 GMT
+          - Wed, 01 Mar 2023 09:35:42 GMT
         Server:
           - AmazonS3
         Transfer-Encoding:
           - chunked
         Via:
-          - 1.1 3799516d704a83279637ec65e07bafd6.cloudfront.net (CloudFront)
+          - 1.1 127aaaaca740f298a4c887357ec047b4.cloudfront.net (CloudFront)
         X-Amz-Cf-Id:
-          - cTSrgpl9oe7quco_iMUUwmzYkn8Io2Eb2iz2iJNKAN0ErhGXgepoaw==
+          - MliBRo2vS8z5Vz4okMtsq_y7edDHbr0bPvO2IIAuWF68fAcav4FOiw==
         X-Amz-Cf-Pop:
-          - MRS52-P3
+          - CDG52-P2
         X-Cache:
           - Error from cloudfront
       status:
@@ -109,17 +109,17 @@ interactions:
         Content-Type:
           - text/html
         Date:
-          - Mon, 10 Oct 2022 09:30:02 GMT
+          - Wed, 01 Mar 2023 09:35:44 GMT
         Location:
           - https://downloads.hindawi.com/journals/ahep/2019%2F0000000.pdf?from=2022-01-01&until=2022-01-10&verb=listrecords&set=HINDAWI.AHEP&metadataprefix=marc21
         Server:
           - CloudFront
         Via:
-          - 1.1 ab0b1e7cbd7487a4d0b7fa6622ab2758.cloudfront.net (CloudFront)
+          - 1.1 69b4ccb4caed8bb6a3a45a0df08d1446.cloudfront.net (CloudFront)
         X-Amz-Cf-Id:
-          - o1-AvbGflgGXeFyo7_ekP0nsV1OkqqE0BlQBBXtVg_0I6A6k63RyKw==
+          - rjGMtHcHbQBl8YIC4-vhY7Up53t_WRy7_1a5g4enzpo0QGC5zqRoGQ==
         X-Amz-Cf-Pop:
-          - MRS52-P3
+          - CDG52-P2
         X-Cache:
           - Redirect from cloudfront
       status:
@@ -142,24 +142,24 @@ interactions:
       body:
         string: '<?xml version="1.0" encoding="UTF-8"?>
 
-          <Error><Code>AccessDenied</Code><Message>Access Denied</Message><RequestId>JZHH81TFK875TGJ5</RequestId><HostId>94gSzuzTkNYyAy7eMoZe3COqIupiQxIp1Qh4ZekFnf7s4Hck1Meq7JDJ5vMZdXInCVenIbG/tsQ=</HostId></Error>'
+          <Error><Code>AccessDenied</Code><Message>Access Denied</Message><RequestId>T7MADWG7VRNVSZ0B</RequestId><HostId>wQR7p124dmyKi2we65bh5OZ4dwaRp4u6OAniezrOnlGRy0TpaR2Yr/9pZ21ceIWkONoDI3NdfeM=</HostId></Error>'
       headers:
         Connection:
           - keep-alive
         Content-Type:
           - application/xml
         Date:
-          - Mon, 10 Oct 2022 09:30:02 GMT
+          - Wed, 01 Mar 2023 09:35:43 GMT
         Server:
           - AmazonS3
         Transfer-Encoding:
           - chunked
         Via:
-          - 1.1 b975c806f4011f8d213f0f1066a80674.cloudfront.net (CloudFront)
+          - 1.1 8c91fcc64b7a86489661ea1249599ca2.cloudfront.net (CloudFront)
         X-Amz-Cf-Id:
-          - F_XCwypvLtPR86KLNWl_Pg1fGtXE-URWojMi2ywtO3YOt75P8oqbnw==
+          - qN3yMupWquY-rdmpMenALt2bUu2rdCdRWDBi09GmsW26s_lc7ukb1A==
         X-Amz-Cf-Pop:
-          - MRS52-P3
+          - CDG52-P2
         X-Cache:
           - Error from cloudfront
       status:
@@ -192,17 +192,17 @@ interactions:
         Content-Type:
           - text/html
         Date:
-          - Mon, 10 Oct 2022 09:30:04 GMT
+          - Wed, 01 Mar 2023 09:35:44 GMT
         Location:
           - https://downloads.hindawi.com/journals/ahep/2019%2F0000000.pdf?from=2022-01-01&until=2022-01-10&verb=listrecords&set=HINDAWI.AHEP&metadataprefix=marc21
         Server:
           - CloudFront
         Via:
-          - 1.1 cecc98027ec93a43d579cd5155bb37a2.cloudfront.net (CloudFront)
+          - 1.1 ef16cf332760e013a5fd2d10ab2b11ec.cloudfront.net (CloudFront)
         X-Amz-Cf-Id:
-          - h6Rsdv6zt5uCANVxbEQH6urLFhjPFU9e0wxx8--gy6OPFyeLdvhasQ==
+          - yeMXZcLJPtkXjsJcdu0jl5XnBAzOBeZINJH9j2adCABYlZGBC08vNw==
         X-Amz-Cf-Pop:
-          - MRS52-P3
+          - CDG52-P2
         X-Cache:
           - Redirect from cloudfront
       status:
@@ -225,24 +225,273 @@ interactions:
       body:
         string: '<?xml version="1.0" encoding="UTF-8"?>
 
-          <Error><Code>AccessDenied</Code><Message>Access Denied</Message><RequestId>TNTFVHYDN2ZHXDE8</RequestId><HostId>3PMBuGyzyND4ADakUHMdczeQu6N44sDtzq5JzKIMFyCKboP6rx8G9HWUX58NBlusFa0gcdmQJkw=</HostId></Error>'
+          <Error><Code>AccessDenied</Code><Message>Access Denied</Message><RequestId>22EVEHG2J5F0VM01</RequestId><HostId>ry5zF253jekp443HyXeOfFfUaJA5QfQI0fJd+z/S9qkqc+Q67WsdlNX/cNnE+vcQpeHtQLtR8Vc=</HostId></Error>'
       headers:
         Connection:
           - keep-alive
         Content-Type:
           - application/xml
         Date:
-          - Mon, 10 Oct 2022 09:30:04 GMT
+          - Wed, 01 Mar 2023 09:35:45 GMT
         Server:
           - AmazonS3
         Transfer-Encoding:
           - chunked
         Via:
-          - 1.1 3d4ac7efd2409b595925102be9dd340e.cloudfront.net (CloudFront)
+          - 1.1 fd000a128e6bb534d86b423d2d506d52.cloudfront.net (CloudFront)
         X-Amz-Cf-Id:
-          - Zd0xtIlhKrDFSxLuq_bpPXjuGT-4jkfXda9eodLuSH9d997ViWNtxQ==
+          - uq4QYpW3QxUt0-RR1yyTNodr6Fk6iFIvG4M3fkSYn5zc5Rr8R6Zq6Q==
         X-Amz-Cf-Pop:
-          - MRS52-P3
+          - CDG52-P2
+        X-Cache:
+          - Error from cloudfront
+      status:
+        code: 403
+        message: Forbidden
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.27.1
+      method: GET
+      uri: http://downloads.hindawi.com/journals/ahep/2019%2F0000000.pdf?from=2022-01-01&until=2022-01-10&verb=listrecords&set=HINDAWI.AHEP&metadataprefix=marc21
+    response:
+      body:
+        string:
+          "<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\
+          \n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>CloudFront</center>\r\
+          \n</body>\r\n</html>\r\n"
+      headers:
+        Connection:
+          - keep-alive
+        Content-Length:
+          - "167"
+        Content-Type:
+          - text/html
+        Date:
+          - Wed, 01 Mar 2023 09:35:48 GMT
+        Location:
+          - https://downloads.hindawi.com/journals/ahep/2019%2F0000000.pdf?from=2022-01-01&until=2022-01-10&verb=listrecords&set=HINDAWI.AHEP&metadataprefix=marc21
+        Server:
+          - CloudFront
+        Via:
+          - 1.1 ef16cf332760e013a5fd2d10ab2b11ec.cloudfront.net (CloudFront)
+        X-Amz-Cf-Id:
+          - Yf_R4rjj4BkYq6_t9YafqByXZMZFMyW6Tl0crhRCCwVsqS2TB8Zn6g==
+        X-Amz-Cf-Pop:
+          - CDG52-P2
+        X-Cache:
+          - Redirect from cloudfront
+      status:
+        code: 301
+        message: Moved Permanently
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.27.1
+      method: GET
+      uri: https://downloads.hindawi.com/journals/ahep/2019%2F0000000.pdf?from=2022-01-01&until=2022-01-10&verb=listrecords&set=HINDAWI.AHEP&metadataprefix=marc21
+    response:
+      body:
+        string: '<?xml version="1.0" encoding="UTF-8"?>
+
+          <Error><Code>AccessDenied</Code><Message>Access Denied</Message><RequestId>NEYK31ARN5AY7N59</RequestId><HostId>rgcdcGxoIMs66QxdQbtd2kMegJMCF4WgfnNCy5HkSgji3HTCdjB9RNNFIVnbvmGRyhRgMvQA+6Ku9Ds/aTdw+w==</HostId></Error>'
+      headers:
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/xml
+        Date:
+          - Wed, 01 Mar 2023 09:35:48 GMT
+        Server:
+          - AmazonS3
+        Transfer-Encoding:
+          - chunked
+        Via:
+          - 1.1 e0720e45d2e7ea5da3d185114a45e51e.cloudfront.net (CloudFront)
+        X-Amz-Cf-Id:
+          - Lht9ohLG9OXjk8nS9YN2aXRwCZ5mE5nXb6BO1JAIJYagWT6suJzk7A==
+        X-Amz-Cf-Pop:
+          - CDG52-P2
+        X-Cache:
+          - Error from cloudfront
+      status:
+        code: 403
+        message: Forbidden
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.27.1
+      method: GET
+      uri: http://downloads.hindawi.com/journals/ahep/2019%2F0000000.pdf?from=2022-01-01&until=2022-01-10&verb=listrecords&set=HINDAWI.AHEP&metadataprefix=marc21
+    response:
+      body:
+        string:
+          "<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\
+          \n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>CloudFront</center>\r\
+          \n</body>\r\n</html>\r\n"
+      headers:
+        Connection:
+          - keep-alive
+        Content-Length:
+          - "167"
+        Content-Type:
+          - text/html
+        Date:
+          - Wed, 01 Mar 2023 09:35:52 GMT
+        Location:
+          - https://downloads.hindawi.com/journals/ahep/2019%2F0000000.pdf?from=2022-01-01&until=2022-01-10&verb=listrecords&set=HINDAWI.AHEP&metadataprefix=marc21
+        Server:
+          - CloudFront
+        Via:
+          - 1.1 4eac31fa332b238427dad87ea3716264.cloudfront.net (CloudFront)
+        X-Amz-Cf-Id:
+          - SPloeQAreXQPnT2o-aExOdydpPUttyRjB4hD23krAXlvze_SXHEEFw==
+        X-Amz-Cf-Pop:
+          - CDG52-P2
+        X-Cache:
+          - Redirect from cloudfront
+      status:
+        code: 301
+        message: Moved Permanently
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.27.1
+      method: GET
+      uri: https://downloads.hindawi.com/journals/ahep/2019%2F0000000.pdf?from=2022-01-01&until=2022-01-10&verb=listrecords&set=HINDAWI.AHEP&metadataprefix=marc21
+    response:
+      body:
+        string: '<?xml version="1.0" encoding="UTF-8"?>
+
+          <Error><Code>AccessDenied</Code><Message>Access Denied</Message><RequestId>KZM0B39K8VFBZ7HV</RequestId><HostId>McknKz+F2voeA1+FOq5Ql5tdCCwDStoPTlOXQ6M5x++CDw0xwCGb9zGbGOb5rDlkiz1zfa300/EaWsPqVyfWZA==</HostId></Error>'
+      headers:
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/xml
+        Date:
+          - Wed, 01 Mar 2023 09:35:53 GMT
+        Server:
+          - AmazonS3
+        Transfer-Encoding:
+          - chunked
+        Via:
+          - 1.1 4eac31fa332b238427dad87ea3716264.cloudfront.net (CloudFront)
+        X-Amz-Cf-Id:
+          - 9hSUZWYRuw2uICv-CSmb4UzUlY98bvGirN9xBLOSHsRGC8O83OAZog==
+        X-Amz-Cf-Pop:
+          - CDG52-P2
+        X-Cache:
+          - Error from cloudfront
+      status:
+        code: 403
+        message: Forbidden
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.27.1
+      method: GET
+      uri: http://downloads.hindawi.com/journals/ahep/2019%2F0000000.pdf?from=2022-01-01&until=2022-01-10&verb=listrecords&set=HINDAWI.AHEP&metadataprefix=marc21
+    response:
+      body:
+        string:
+          "<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\
+          \n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>CloudFront</center>\r\
+          \n</body>\r\n</html>\r\n"
+      headers:
+        Connection:
+          - keep-alive
+        Content-Length:
+          - "167"
+        Content-Type:
+          - text/html
+        Date:
+          - Wed, 01 Mar 2023 09:36:06 GMT
+        Location:
+          - https://downloads.hindawi.com/journals/ahep/2019%2F0000000.pdf?from=2022-01-01&until=2022-01-10&verb=listrecords&set=HINDAWI.AHEP&metadataprefix=marc21
+        Server:
+          - CloudFront
+        Via:
+          - 1.1 8fa6a359afa3b10c460a2c884c6400e8.cloudfront.net (CloudFront)
+        X-Amz-Cf-Id:
+          - k0xz3RJTneV2rhFe8xDKpeqcUNLMkmTqBFVG4Aw5BHbdKP0Nxof02A==
+        X-Amz-Cf-Pop:
+          - CDG52-P2
+        X-Cache:
+          - Redirect from cloudfront
+      status:
+        code: 301
+        message: Moved Permanently
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.27.1
+      method: GET
+      uri: https://downloads.hindawi.com/journals/ahep/2019%2F0000000.pdf?from=2022-01-01&until=2022-01-10&verb=listrecords&set=HINDAWI.AHEP&metadataprefix=marc21
+    response:
+      body:
+        string: '<?xml version="1.0" encoding="UTF-8"?>
+
+          <Error><Code>AccessDenied</Code><Message>Access Denied</Message><RequestId>8FG2CDCZSFXJ7SGV</RequestId><HostId>HlXeqeqrGbSjthqlzYR1/esU5xZeNkwlQbFTpLM8fUkCXuT2vwOahS2iLzyK2Cxkq3SW8jbOa0E=</HostId></Error>'
+      headers:
+        Connection:
+          - keep-alive
+        Content-Type:
+          - application/xml
+        Date:
+          - Wed, 01 Mar 2023 09:36:07 GMT
+        Server:
+          - AmazonS3
+        Transfer-Encoding:
+          - chunked
+        Via:
+          - 1.1 aaa5fbd869d655f42986dd16509f667e.cloudfront.net (CloudFront)
+        X-Amz-Cf-Id:
+          - s-0Uah6NlEVDJqCkyuF6uNzPE9f8TosVbeZ2fsFPuYvglF37MpZkWg==
+        X-Amz-Cf-Pop:
+          - CDG52-P2
         X-Cache:
           - Error from cloudfront
       status:

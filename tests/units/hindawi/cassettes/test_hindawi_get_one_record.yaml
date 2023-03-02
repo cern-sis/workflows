@@ -1,0 +1,110 @@
+interactions:
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.27.1
+      method: GET
+      uri: https://www.hindawi.com/oai-pmh/oai.aspx?verb=getrecord&set=HINDAWI.AHEP&identifier=oai%3Ahindawi.com%3A10.1155%2F2022%2F8009789&metadataprefix=marc21
+    response:
+      body:
+        string:
+          "<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\" xmlns:xsi=\"\
+          http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/\
+          \ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\" xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"\
+          \ ><responseDate>2023-02-22T10:28:51Z</responseDate><request verb=\"GetRecord\"\
+          \ metadataPrefix=\"marc21\" identifier=\"oai:hindawi.com:10.1155/2022/8009789\"\
+          >http://oaipmh.hindawi.com/oai-pmh/oai.aspx</request><GetRecord><record><header><identifier>oai:hindawi.com:10.1155/2022/8009789</identifier>\n\
+          \t\t\t<datestamp>2022-12-12T08:20:02Z</datestamp>\n<setSpec>HINDAWI.AHEP:2022</setSpec></header><metadata><marc:record\
+          \ xmlns:marc=\"http://www.loc.gov/MARC21/slim\"  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\
+          \  xsi:schemaLocation=\"http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd\"\
+          ><datafield tag=\"024\" ind1=\"7\" ind2=\" \"><subfield code=\"a\">10.1155/2022/8009789</subfield><subfield\
+          \ code=\"2\">DOI</subfield></datafield>\r\n<datafield tag=\"037\" ind1=\"\
+          \ \" ind2=\" \"><subfield code=\"9\">arXiv</subfield><subfield code=\"a\"\
+          >arXiv:2206.07972</subfield></datafield>\r\n<datafield tag=\"100\" ind1=\"\
+          \ \" ind2=\" \"><subfield code=\"a\">Balasundaram, Muthukumar</subfield><subfield\
+          \ code=\"u\">Department of Physics, School of Physical, Chemical and Applied\
+          \ Sciences, Pondicherry University, Puducherry 605014, India</subfield><subfield\
+          \ code=\"j\">https://orcid.org/0000-0002-9333-897X</subfield></datafield>\r\
+          \n<datafield tag=\"245\" ind1=\" \" ind2=\" \"><subfield code=\"a\">On the\
+          \ Quantization of Length in Noncommutative Spaces</subfield></datafield>\r\
+          \n<datafield tag=\"260\" ind1=\" \" ind2=\" \"><subfield code=\"b\">Hindawi</subfield><subfield\
+          \ code=\"c\">2022-12-12</subfield></datafield>\r\n<datafield tag=\"300\" ind1=\"\
+          \ \" ind2=\" \"><subfield code=\"a\">5</subfield></datafield>\r\n<datafield\
+          \ tag=\"520\" ind1=\" \" ind2=\" \"><subfield code=\"a\">We consider canonical/Weyl-Moyal\
+          \ type noncommutative (NC) spaces with rectilinear coordinates. Motivated\
+          \ by the analogy of the formalism of the quantum mechanical harmonic oscillator\
+          \ problem in quantum phase-space with that of the canonical-type NC 2-D space,\
+          \ and noting that the square of length in the latter case is analogous to\
+          \ the Hamiltonian in the former case, we arrive at the conclusion that the\
+          \ length and area are quantized in such an NC space, if the area is expressed\
+          \ entirely in terms of length. We extend our analysis to the 3-D case and\
+          \ formulate a ladder operator approach to the quantization of length in 3-D\
+          \ space. However, our method does not lend itself to the quantization of spacetime\
+          \ length in <mml:math id=\"M1\" xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"\
+          ><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mn>1</mml:mn></mml:math> and <mml:math\
+          \ id=\"M2\" xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"><mml:mn>2</mml:mn><mml:mo>+</mml:mo><mml:mn>1</mml:mn></mml:math>\
+          \ Minkowski spacetimes if the noncommutativity between time and space is considered.\
+          \ If time is taken to commute with spatial coordinates and the noncommutativity\
+          \ is maintained only among the spatial coordinates in <mml:math id=\"M3\"\
+          \ xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"><mml:mn>2</mml:mn><mml:mo>+</mml:mo><mml:mn>1</mml:mn></mml:math>\
+          \ and <mml:math id=\"M4\" xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"\
+          ><mml:mn>3</mml:mn><mml:mo>+</mml:mo><mml:mn>1</mml:mn></mml:math> dimensional\
+          \ spacetime, then the quantization of spatial length is possible in our approach.</subfield></datafield>\r\
+          \n<datafield tag=\"540\" ind1=\" \" ind2=\" \"><subfield code=\"a\">CC-BY-3.0</subfield><subfield\
+          \ code=\"u\">http://creativecommons.org/licenses/by/3.0/</subfield></datafield>\r\
+          \n<datafield tag=\"542\" ind1=\" \" ind2=\" \"><subfield code=\"f\">Copyright\
+          \ &#x00A9; 2022 Muthukumar Balasundaram and Aamir Rashid.</subfield></datafield>\r\
+          \n<datafield tag=\"700\" ind1=\" \" ind2=\" \"><subfield code=\"a\">Rashid,\
+          \ Aamir</subfield><subfield code=\"u\">Department of Physics, School of Physical,\
+          \ Chemical and Applied Sciences, Pondicherry University, Puducherry 605014,\
+          \ India</subfield><subfield code=\"j\">https://orcid.org/0000-0002-0733-9934</subfield></datafield>\r\
+          \n<datafield tag=\"773\" ind1=\" \" ind2=\" \"><subfield code=\"p\">Advances\
+          \ in High Energy Physics</subfield><subfield code=\"v\">2022</subfield><subfield\
+          \ code=\"n\">0</subfield><subfield code=\"c\">8009789</subfield><subfield\
+          \ code=\"y\">2022</subfield></datafield>\r\n<datafield tag=\"980\" ind1=\"\
+          \ \" ind2=\" \"><subfield code=\"a\">SCOAP3</subfield><subfield code=\"b\"\
+          >Hindawi</subfield></datafield>\r\n<datafield tag=\"856\" ind1=\"4\" ind2=\"\
+          0\"><subfield code=\"u\">https://doi.org/10.1155/2022/8009789</subfield><subfield\
+          \ code=\"z\">Full text URL</subfield></datafield></marc:record></metadata></record></GetRecord></OAI-PMH>"
+      headers:
+        Age:
+          - "7309"
+        Cache-Control:
+          - private
+        Connection:
+          - keep-alive
+        Content-Length:
+          - "4682"
+        Content-Type:
+          - text/xml; charset=utf-8
+        Date:
+          - Wed, 22 Feb 2023 10:28:52 GMT
+        Pragma:
+          - no-cache
+        Server:
+          - ""
+        Via:
+          - 1.1 d5ee2aa873a3cb23609433e0272dd41c.cloudfront.net (CloudFront)
+        X-Amz-Cf-Id:
+          - g4phWoamV_-bGNvJ6DloD58antyQi0NoG-35S9TVTH1urenZalC7Fw==
+        X-Amz-Cf-Pop:
+          - CDG50-P2
+        X-AspNet-Version:
+          - 4.0.30319
+        X-AspNetMvc-Version:
+          - "4.0"
+        X-Cache:
+          - Hit from cloudfront
+        X-Powered-By:
+          - ASP.NET
+      status:
+        code: 200
+        message: OK
+version: 1

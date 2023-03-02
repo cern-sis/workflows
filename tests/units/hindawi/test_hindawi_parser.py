@@ -210,7 +210,7 @@ def parsed_articles(hindawi_parser, articles):
             id="test_copyright_statement",
         ),
         pytest.param(
-            ["2019", "2022", "2022"], "copyright_year", id="test_test_copyright_year"
+            [2019, 2022, 2022], "copyright_year", id="test_test_copyright_year"
         ),
         pytest.param(
             [
@@ -235,6 +235,15 @@ def parsed_articles(hindawi_parser, articles):
             ],
             "license",
             id="test_license",
+        ),
+        pytest.param(
+            [
+                ["Advances in High Energy Physics"],
+                ["Advances in High Energy Physics"],
+                ["Advances in High Energy Physics"],
+            ],
+            "collections",
+            id="test_collections",
         ),
     ],
 )
