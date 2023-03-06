@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "JATS-journalpublishing1.dtd">
-<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="no-data" dtd-version="1.1" xml:lang="en">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="1.1" xml:lang="en">
 	<front>
 		<journal-meta>
 			<journal-id journal-id-type="publisher-id">cpc</journal-id>
 			<journal-title-group>
-				<journal-title xml:lang="en">Chinese Physics C</journal-title>
+				<journal-title xml:lang="en"></journal-title>
 			</journal-title-group>
 			<issn pub-type="ppub">1674-1137</issn>
 			<publisher>
@@ -409,9 +409,9 @@
 				<month>6</month>
 				<year>2022</year>
 			</pub-date>
-			<volume>46</volume>
-			<issue>8</issue>
-			<elocation-id content-type="artnum">085001</elocation-id>
+			<volume></volume>
+			<issue></issue>
+			<elocation-id content-type="artnum"></elocation-id>
 			<history>
 				<date date-type="received">
 					<day>10</day>

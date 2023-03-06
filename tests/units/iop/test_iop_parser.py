@@ -135,6 +135,21 @@ def test_journal_doctype_log_error_without_value(shared_datadir, parser):
                 "event": "Cannot find day of date_published in XML",
                 "log_level": "error",
             },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_volume is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_issue is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_artid is not found in XML",
+                "log_level": "error",
+            },
         ]
 
 
@@ -206,6 +221,21 @@ def test_realted_article_dois_log_error_without_value(shared_datadir, parser):
             {
                 "class_name": "IOPParser",
                 "event": "Cannot find day of date_published in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_volume is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_issue is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_artid is not found in XML",
                 "log_level": "error",
             },
         ]
@@ -281,6 +311,21 @@ def test_no_arxiv_eprints_value_log_error_without_value(shared_datadir, parser):
                 "event": "Cannot find day of date_published in XML",
                 "log_level": "error",
             },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_volume is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_issue is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_artid is not found in XML",
+                "log_level": "error",
+            },
         ]
 
 
@@ -339,6 +384,21 @@ def test_wrong_arxiv_eprints_value_log_error_without_value(shared_datadir, parse
             {
                 "class_name": "IOPParser",
                 "event": "Cannot find day of date_published in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_volume is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_issue is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_artid is not found in XML",
                 "log_level": "error",
             },
         ]
@@ -436,6 +496,21 @@ def test_wrong_page_nr_value_log(shared_datadir, parser):
             {
                 "class_name": "IOPParser",
                 "event": "Cannot find day of date_published in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_volume is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_issue is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_artid is not found in XML",
                 "log_level": "error",
             },
         ]
@@ -995,6 +1070,21 @@ def test_copyright_no_years_logs(shared_datadir, parser):
                 "event": "copyright_year is not found in XML",
                 "log_level": "error",
             },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_volume is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_issue is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_artid is not found in XML",
+                "log_level": "error",
+            },
         ]
 
 
@@ -1060,4 +1150,44 @@ def test_copyright_no_statement_logs(shared_datadir, parser):
                 "event": "copyright_statement is not found in XML",
                 "log_level": "error",
             },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_volume is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_issue is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "journal_artid is not found in XML",
+                "log_level": "error",
+            },
         ]
+
+
+def test_publication_info(shared_datadir, parser):
+    content = (shared_datadir / "all_fields.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert parsed_article["journal_title"] == "Chinese Physics C"
+    assert parsed_article["journal_volume"] == "46"
+    assert parsed_article["journal_issue"] == "8"
+    assert parsed_article["journal_artid"] == "085001"
+    assert parsed_article["journal_year"] == 2022
+
+def test_publication_info_just_journal_title_year(shared_datadir, parser):
+    content = (shared_datadir / "just_journal_year.xml").read_text()
+    article = ET.fromstring(content)
+    with raises(RequiredFieldNotFoundExtractionError):
+        parser._publisher_specific_parsing(article)
+
+def test_publication_info_fields_values_just_year(shared_datadir, parser):
+    content = (
+        shared_datadir / "no_journal_tiltle_volume_issue_artid_values.xml"
+    ).read_text()
+    article = ET.fromstring(content)
+    with raises(RequiredFieldNotFoundExtractionError):
+        parser._publisher_specific_parsing(article)

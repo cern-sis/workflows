@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 
 from common.constants import ARXIV_EXTRACTION_PATTERN, NODE_ATTRIBUTE_NOT_FOUND_ERRORS
 from common.parsing.parser import IParser
-from common.parsing.xml_extractors import AttributeExtractor, CustomExtractor
+from common.parsing.xml_extractors import AttributeExtractor, CustomExtractor, ConstantExtractor
 from common.utils import extract_text, parse_to_int
 from idutils import is_arxiv
 from inspire_utils.date import PartialDate
@@ -65,6 +65,28 @@ class IOPParser(IParser):
             CustomExtractor(
                 destination="copyright",
                 extraction_function=self._get_copyright,
+                required=True,
+            ),
+            CustomExtractor(
+                destination="journal_title",
+                extraction_function=self._extract_journal_title,
+                required=True,
+            ),
+            CustomExtractor(
+                destination="journal_volume",
+                extraction_function=self._extract_journal_volume,
+            ),
+            CustomExtractor(
+                destination="journal_issue",
+                extraction_function=self._extract_journal_issue,
+            ),
+            CustomExtractor(
+                destination="journal_artid",
+                extraction_function=self._extract_journal_artid,
+            ),
+            ConstantExtractor(
+                destination="journal_year",
+                value=self.year,
                 required=True,
             ),
         ]
@@ -267,3 +289,35 @@ class IOPParser(IParser):
         if extracted_statement:
             copyright["copyright_statement"] = extracted_statement
         return [copyright]
+
+    def _extract_journal_title(self, article):
+        return extract_text(
+            article=article,
+            path="front/journal-meta/journal-title-group/journal-title",
+            field_name="journal_title",
+            dois=self.dois,
+        )
+
+    def _extract_journal_volume(self, article):
+        return extract_text(
+            article=article,
+            path="front/article-meta/volume",
+            field_name="journal_volume",
+            dois=self.dois,
+        )
+
+    def _extract_journal_issue(self, article):
+        return extract_text(
+            article=article,
+            path="front/article-meta/issue",
+            field_name="journal_issue",
+            dois=self.dois,
+        )
+
+    def _extract_journal_artid(self, article):
+        return extract_text(
+            article=article,
+            path="front/article-meta/elocation-id",
+            field_name="journal_artid",
+            dois=self.dois,
+        )
