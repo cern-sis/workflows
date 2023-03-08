@@ -1,6 +1,10 @@
 import xml.etree.ElementTree as ET
 
-from common.constants import ARXIV_EXTRACTION_PATTERN, NODE_ATTRIBUTE_NOT_FOUND_ERRORS
+from common.constants import (
+    ARXIV_EXTRACTION_PATTERN,
+    NODE_ATTRIBUTE_NOT_FOUND_ERRORS,
+    REMOVE_SPECIAL_CHARS,
+)
 from common.parsing.parser import IParser
 from common.parsing.xml_extractors import AttributeExtractor, CustomExtractor, ConstantExtractor
 from common.utils import extract_text, parse_to_int
@@ -23,6 +27,7 @@ class IOPParser(IParser):
         self.dois = None
         self.year = None
         self.journal_doctype = None
+        self.collaborations = []
         self.logger = get_logger().bind(class_name=type(self).__name__)
         extractors = [
             CustomExtractor(
@@ -84,11 +89,10 @@ class IOPParser(IParser):
                 destination="journal_artid",
                 extraction_function=self._extract_journal_artid,
             ),
-            ConstantExtractor(
-                destination="journal_year",
-                value=self.year,
-                required=True,
-            ),
+            CustomExtractor(
+                destination="collaborations",
+                extraction_function=self._get_collaborations,
+            )
         ]
         super().__init__(extractors)
 
@@ -229,6 +233,8 @@ class IOPParser(IParser):
             # which value actually is calloboration name
             if "collaboration" not in given_names.lower():
                 return given_names
+            else:
+                self.collaborations.append(REMOVE_SPECIAL_CHARS.sub("", given_names))
         except AttributeError:
             self.logger.error("Given_names is not found in XML", dois=self.dois)
 
@@ -321,3 +327,5 @@ class IOPParser(IParser):
             field_name="journal_artid",
             dois=self.dois,
         )
+    def _get_collaborations(self, article):
+        return self.collaborations

@@ -1191,3 +1191,22 @@ def test_publication_info_fields_values_just_year(shared_datadir, parser):
     article = ET.fromstring(content)
     with raises(RequiredFieldNotFoundExtractionError):
         parser._publisher_specific_parsing(article)
+def test_collaborations(shared_datadir, parser):
+    content = (shared_datadir / "all_fields.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert parsed_article["collaborations"] == ["JNE collaboration"]
+
+
+def test_no_collaborations(shared_datadir, parser):
+    content = (shared_datadir / "just_required_fields.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert "collaborations" not in parsed_article
+
+
+def test_no_collaborations_value(shared_datadir, parser):
+    content = (shared_datadir / "no_collaboration_value.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert "collaborations" not in parsed_article
