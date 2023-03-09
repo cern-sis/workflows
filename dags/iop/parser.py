@@ -8,7 +8,6 @@ from common.constants import (
     NODE_ATTRIBUTE_NOT_FOUND_ERRORS,
 )
 from common.parsing.parser import IParser
-from common.parsing.xml_extractors import AttributeExtractor, CustomExtractor
 from common.parsing.xml_extractors import (
     AttributeExtractor,
     CustomExtractor,
@@ -125,6 +124,12 @@ class IOPParser(IParser):
                 destination="license",
                 extraction_function=self._get_license,
                 required=True,
+            ),
+            TextExtractor(
+                destination="abstract",
+                source="front/article-meta/abstract/p",
+                all_content_between_tags=True,
+                extra_function=lambda x: x,
             ),
         ]
         super().__init__(extractors)
