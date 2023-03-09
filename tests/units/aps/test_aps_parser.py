@@ -160,13 +160,13 @@ def parsed_articles(parser, articles):
             [
                 [
                     {
-                        "license": "CC-LICENSES-aps-default-license",
+                        "license": "CC-BY-3.0",
                         "url": "http://link.aps.org/licenses/aps-default-license",
                     }
                 ],
                 [
                     {
-                        "license": "CC-LICENSES-aps-default-license",
+                        "license": "CC-BY-3.0",
                         "url": "http://link.aps.org/licenses/aps-default-license",
                     }
                 ],

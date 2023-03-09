@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 
 from common.constants import ARXIV_EXTRACTION_PATTERN
+from common.exceptions import UnknownLicense
 from common.parsing.xml_extractors import RequiredFieldNotFoundExtractionError
 from iop.parser import IOPParser
 from pytest import fixture, mark, param, raises
@@ -1227,10 +1228,33 @@ def test_publication_info_just_journal_title_year(shared_datadir, parser):
         parser._publisher_specific_parsing(article)
 
 
+def test_licenses(shared_datadir, parser):
+    content = (shared_datadir / "just_required_fields.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert parsed_article["license"] == [
+        {"license": "CC-BY-3.0", "url": "http://creativecommons.org/licenses/by/3.0/"}
+    ]
+
+
+def test_no_licenses_and_no_statements(shared_datadir, parser):
+    content = (shared_datadir / "no_license_and_no_statement_no_url.xml").read_text()
+    article = ET.fromstring(content)
+    with raises(RequiredFieldNotFoundExtractionError):
+        parser._publisher_specific_parsing(article)
+
+
 def test_publication_info_fields_values_just_year(shared_datadir, parser):
     content = (
         shared_datadir / "no_journal_tiltle_volume_issue_artid_values.xml"
     ).read_text()
+    article = ET.fromstring(content)
+    with raises(RequiredFieldNotFoundExtractionError):
+        parser._publisher_specific_parsing(article)
+
+
+def test_no_license_url(shared_datadir, parser):
+    content = (shared_datadir / "no_license_url.xml").read_text()
     article = ET.fromstring(content)
     with raises(RequiredFieldNotFoundExtractionError):
         parser._publisher_specific_parsing(article)
@@ -1296,3 +1320,19 @@ def test_no_title_no_subtitle_values(shared_datadir, parser):
     parsed_article = parser._publisher_specific_parsing(article)
     assert "title" not in parsed_article
     assert "subtitle" not in parsed_article
+
+
+def test_no_licenses_statement(shared_datadir, parser):
+    content = (shared_datadir / "no_license_statement.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert parsed_article["license"] == [
+        {"license": "CC-BY-3.0", "url": "http://creativecommons.org/licenses/by/3.0/"}
+    ]
+
+
+def test_unknown_license_in_license_URL(shared_datadir, parser):
+    content = (shared_datadir / "unknown_license_in_license_URL.xml").read_text()
+    article = ET.fromstring(content)
+    with raises(UnknownLicense):
+        parser._publisher_specific_parsing(article)

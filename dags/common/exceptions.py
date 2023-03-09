@@ -18,3 +18,8 @@ class RequiredFieldNotFoundExtractionError(Exception):
     def __init__(self, missing_field):
         super().__init__(f"Required filed is missing: {missing_field}")
         self.missing_field = missing_field
+
+class UnknownLicense(Exception):
+    def __init__(self, license):
+        super().__init__(f"Unknown license type: {license}")
+        self.license = license

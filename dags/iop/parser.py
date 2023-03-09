@@ -4,6 +4,8 @@ from common.constants import (
     ARXIV_EXTRACTION_PATTERN,
     NODE_ATTRIBUTE_NOT_FOUND_ERRORS,
     REMOVE_SPECIAL_CHARS,
+    LICENSE_VERSION_PATTERN,
+    NODE_ATTRIBUTE_NOT_FOUND_ERRORS,
 )
 from common.parsing.parser import IParser
 from common.parsing.xml_extractors import AttributeExtractor, CustomExtractor
@@ -13,6 +15,15 @@ from common.parsing.xml_extractors import (
     TextExtractor,
 )
 from common.utils import extract_text, parse_to_int
+from common.parsing.parser import IParser
+from common.parsing.xml_extractors import AttributeExtractor, CustomExtractor
+from common.utils import (
+    construct_license,
+    extract_text,
+    get_license_type,
+    get_license_type_and_version_from_url,
+    parse_to_int,
+)
 from idutils import is_arxiv
 from inspire_utils.date import PartialDate
 from structlog import get_logger
@@ -109,6 +120,11 @@ class IOPParser(IParser):
                 required=False,
                 source="front/article-meta/subtitle",
                 extra_function=lambda x: " ".join(x.split()),
+            ),
+            CustomExtractor(
+                destination="license",
+                extraction_function=self._get_license,
+                required=True,
             ),
         ]
         super().__init__(extractors)
@@ -344,5 +360,40 @@ class IOPParser(IParser):
             field_name="journal_artid",
             dois=self.dois,
         )
+
     def _get_collaborations(self, article):
         return self.collaborations
+
+    def _get_license_type_and_version(self, license_node, url):
+        try:
+            license_type = license_node.get("license-type")
+            version = LICENSE_VERSION_PATTERN.search(url).group(0)
+            return construct_license(
+                license_type=license_type.upper(), version=version, url=url
+            )
+        except AttributeError:
+            return
+
+    def _get_license_from_text(self, license_node):
+        license_text = extract_text(
+            path="license-p/ext-link",
+            article=license_node,
+            field_name="ext-link",
+            dois=self.dois,
+        )
+        license_type = get_license_type(license_text=license_text)
+        version = LICENSE_VERSION_PATTERN.search(license_text).group(0)
+        return construct_license(license_type=license_type, version=version)
+
+    def _get_license(self, article: ET.Element):
+        licenses = []
+        licenses_nodes = article.findall("front/article-meta/permissions/license")
+        for license_node in licenses_nodes:
+            try:
+                url = license_node.attrib["{http://www.w3.org/1999/xlink}href"]
+                type_and_version = get_license_type_and_version_from_url(url=url)
+                if type_and_version:
+                    licenses.append(type_and_version)
+            except (KeyError):
+                self.logger.error("License is not found in XML.")
+        return licenses

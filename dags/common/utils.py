@@ -4,6 +4,8 @@ import re
 from stat import S_ISDIR, S_ISREG
 
 from common.exceptions import UnknownFileExtension
+from common.constants import BY_PATTERN, CREATIVE_COMMONS_PATTERN, LICENSE_PATTERN
+from common.exceptions import UnknownLicense
 from structlog import get_logger
 
 logger = get_logger()
@@ -28,14 +30,6 @@ def set_harvesting_interval(repo, **kwargs):
         "start_date": (start_date or until_date),
         "until_date": until_date,
     }
-
-
-def construct_license(url, license_type, version):
-    if url and license_type and version:
-        return {"url": url, "license": f"CC-{license_type}-{version}"}
-    logger.error(
-        "License is not given, or missing arguments.",
-    )
 
 
 def is_json_serializable(x):
@@ -97,3 +91,42 @@ def walk_sftp(sftp, remotedir, paths):
             walk_sftp(sftp=sftp, remotedir=remotepath, paths=paths)
         elif S_ISREG(mode):
             paths.append(remotepath)
+
+
+def construct_license(license_type, version, url=None):
+    if not license_type == "CC-BY":
+        raise UnknownLicense(license_type)
+    if url and license_type and version:
+        return {"url": url, "license": f"{license_type}-{version}"}
+    if license_type and version:
+        logger.error("License URL is not found in XML.")
+        return {"license": f"{license_type}-{version}"}
+    logger.error(
+        "License is not given, or missing arguments.",
+    )
+
+
+def get_license_type(license_text):
+    if not CREATIVE_COMMONS_PATTERN.search(license_text) or not BY_PATTERN.match(
+        license_text
+    ):
+        raise UnknownLicense(license=license_text)
+    return "CC-BY"
+
+
+def get_license_type_and_version_from_url(url):
+    match = LICENSE_PATTERN.search(url)
+    if not match:
+        logger.error("No license found in URL")
+        return None
+    first_part_of_license_type = ""
+    version = match.group(2)
+    second_part_of_license_type = match.group(1).upper()
+    if CREATIVE_COMMONS_PATTERN.search(url):
+        first_part_of_license_type = "CC"
+    else:
+        raise UnknownLicense(url)
+    if not f"{first_part_of_license_type}-{second_part_of_license_type}" == "CC-BY":
+        raise UnknownLicense(url)
+    license_type = ("-").join([first_part_of_license_type, second_part_of_license_type])
+    return construct_license(license_type=license_type, version=version, url=url)

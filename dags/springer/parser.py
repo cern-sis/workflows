@@ -9,6 +9,7 @@ from common.parsing.xml_extractors import (
     TextExtractor,
 )
 from common.utils import construct_license
+from common.exceptions import UnknownLicense
 from structlog import get_logger
 
 
@@ -266,11 +267,13 @@ class SpringerParser(IParser):
         base_url = "https://creativecommons.org/licenses"
 
         if license_node is not None:
-            license_type = license_node.get("SubType")
-            license_type = license_type.lower().lstrip("cc ").replace(" ", "-")
-
+            license_type_parts = license_node.get("SubType").split(" ")
+            license_type = "-".join(license_type_parts)
             version = version_node.get("Version")
-            url = f"{base_url}/{license_type}/{version}"
+            try:
+                url = f"{base_url}/{license_type_parts[1].lower()}/{version}"
+            except IndexError:
+                raise UnknownLicense(" ".join(license_type_parts))
             return [
                 construct_license(
                     url=url, license_type=license_type.upper(), version=version

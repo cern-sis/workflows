@@ -144,9 +144,13 @@ class APSParser(IParser):
             for right in rights:
                 url = right["url"]
                 url_parts = url.split("/")
-                clean_url_parts = list(filter(bool, url_parts))
-                version = clean_url_parts.pop()
-                license_type = clean_url_parts.pop()
+                if url == "http://link.aps.org/licenses/aps-default-license":
+                    license_type="CC-BY"
+                    version="3.0"
+                else:
+                    clean_url_parts = list(filter(bool, url_parts))
+                    version = clean_url_parts.pop()
+                    license_type = f'CC-{clean_url_parts.pop()}'
                 licenses.append(
                     construct_license(
                         url=url, license_type=license_type.upper(), version=version
