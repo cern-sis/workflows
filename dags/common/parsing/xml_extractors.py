@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 
 from common.exceptions import RequiredFieldNotFoundExtractionError
+from common.constants import WHITE_SPACES
 from common.parsing.extractor import IExtractor
 from common.utils import check_value
 from structlog import get_logger
@@ -15,6 +16,7 @@ class TextExtractor(IExtractor):
         default_value=None,
         extra_function=lambda s: s,
         prefixes=None,
+        all_content_between_tags=False,
     ) -> None:
         super().__init__(destination)
 
@@ -24,11 +26,26 @@ class TextExtractor(IExtractor):
         self.required = required
         self.default_value = default_value
         self.extra_function = extra_function
+        self.all_content_between_tags = all_content_between_tags
         self.logger = get_logger().bind(class_name=type(self).__name__)
 
     def _get_text_value(self, raw_value):
         try:
             return raw_value.text
+        except AttributeError:
+            self.logger.error(f"{self.destination} is not found in XML")
+            return
+
+    def _get_content_as_text_value(self, node):
+        try:
+            values_in_regular_tags = [node.text or ""]
+            values_math_expression_and_styling_tags = [
+                ET.tostring(el).decode("ascii") for el in node
+            ]
+            extracted_value = "".join(
+                values_in_regular_tags + values_math_expression_and_styling_tags
+            )
+            return WHITE_SPACES.sub("", extracted_value)
         except AttributeError:
             self.logger.error(f"{self.destination} is not found in XML")
             return
@@ -47,7 +64,10 @@ class TextExtractor(IExtractor):
             )
             return node_with_prefix
         node = article.find(self.source)
-        value = self._get_text_value(node)
+        if self.all_content_between_tags:
+            value = self._get_content_as_text_value(node)
+        else:
+            value = self._get_text_value(node)
         processed_value = self._process_text_with_extra_function(value)
 
         if check_value(processed_value):

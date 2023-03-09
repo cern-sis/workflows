@@ -3,6 +3,7 @@ import xml.etree.ElementTree as ET
 from common.constants import ARXIV_EXTRACTION_PATTERN
 from common.exceptions import UnknownLicense
 from common.parsing.xml_extractors import RequiredFieldNotFoundExtractionError
+from common.utils import parse_to_ET_element, preserve_cdata
 from iop.parser import IOPParser
 from pytest import fixture, mark, param, raises
 from structlog.testing import capture_logs
@@ -15,35 +16,35 @@ def parser():
 
 def test_doi(shared_datadir, parser):
     content = (shared_datadir / "just_required_fields.xml").read_text()
-    article = ET.fromstring(content)
+    article = parse_to_ET_element(content)
     parsed_article = parser._publisher_specific_parsing(article)
     assert parsed_article["dois"] == ["10.1088/1674-1137/ac66cc"]
 
 
 def test_no_doi(shared_datadir, parser):
     content = (shared_datadir / "no_data.xml").read_text()
-    article = ET.fromstring(content)
+    article = parse_to_ET_element(content)
     with raises(RequiredFieldNotFoundExtractionError):
         parser._publisher_specific_parsing(article)
 
 
 def test_no_doi_in_text(shared_datadir, parser):
     content = (shared_datadir / "just_fields_no_text_data.xml").read_text()
-    article = ET.fromstring(content)
+    article = parse_to_ET_element(content)
     with raises(RequiredFieldNotFoundExtractionError):
         parser._publisher_specific_parsing(article)
 
 
 def test_journal_doctype(shared_datadir, parser):
     content = (shared_datadir / "just_required_fields.xml").read_text()
-    article = ET.fromstring(content)
+    article = parse_to_ET_element(content)
     parsed_article = parser._publisher_specific_parsing(article)
     assert parsed_article["journal_doctype"] == "article"
 
 
 def test_no_journal_doctype(shared_datadir, parser):
     content = (shared_datadir / "without_journal_doc_type.xml").read_text()
-    article = ET.fromstring(content)
+    article = parse_to_ET_element(content)
     parsed_article = parser._publisher_specific_parsing(article)
     assert "journal_doctype" not in parsed_article
 
@@ -52,14 +53,14 @@ def test_no_journal_doctype_in_attribute(shared_datadir, parser):
     content = (
         shared_datadir / "without_journal_doc_type_attribute_value.xml"
     ).read_text()
-    article = ET.fromstring(content)
+    article = parse_to_ET_element(content)
     parsed_article = parser._publisher_specific_parsing(article)
     assert "journal_doctype" not in parsed_article
 
 
 def test_journal_doctype_with_wrong_value(shared_datadir, parser):
     content = (shared_datadir / "all_fields_wrong_values.xml").read_text()
-    article = ET.fromstring(content)
+    article = parse_to_ET_element(content)
     parsed_article = parser._publisher_specific_parsing(article)
     assert "journal_doctype" not in parsed_article
 
@@ -67,6 +68,7 @@ def test_journal_doctype_with_wrong_value(shared_datadir, parser):
 def test_journal_doctype_log_error_with_wrong_value(shared_datadir):
     with capture_logs() as cap_logs:
         content = (shared_datadir / "all_fields_wrong_values.xml").read_text()
+        content = preserve_cdata(content)
         article = ET.fromstring(content)
         parser = IOPParser()
         parser._publisher_specific_parsing(article)
@@ -96,6 +98,7 @@ def test_journal_doctype_log_error_without_value(shared_datadir, parser):
     with capture_logs() as cap_logs:
         parser = IOPParser()
         content = (shared_datadir / "without_journal_doc_type.xml").read_text()
+        content = preserve_cdata(content)
         article = ET.fromstring(content)
         parser._publisher_specific_parsing(article)
         assert cap_logs == [
@@ -166,21 +169,21 @@ def test_journal_doctype_log_error_without_value(shared_datadir, parser):
 
 def test_related_article_doi(shared_datadir, parser):
     content = (shared_datadir / "related_article_dois.xml").read_text()
-    article = ET.fromstring(content)
+    article = parse_to_ET_element(content)
     parsed_article = parser._publisher_specific_parsing(article)
     assert parsed_article["related_article_doi"] == ["10.0000/0000-0000/aa00aa"]
 
 
 def test_no_related_article_dois(shared_datadir, parser):
     content = (shared_datadir / "related_article_dois_no_path.xml").read_text()
-    article = ET.fromstring(content)
+    article = parse_to_ET_element(content)
     parsed_article = parser._publisher_specific_parsing(article)
     assert "related_article_doi" not in parsed_article
 
 
 def test_related_article_dois_no_value(shared_datadir, parser):
     content = (shared_datadir / "related_article_dois_no_value.xml").read_text()
-    article = ET.fromstring(content)
+    article = parse_to_ET_element(content)
     parsed_article = parser._publisher_specific_parsing(article)
     assert "related_article_doi" not in parsed_article
 
@@ -189,6 +192,7 @@ def test_realted_article_dois_log_error_without_value(shared_datadir, parser):
     with capture_logs() as cap_logs:
         parser = IOPParser()
         content = (shared_datadir / "related_article_dois_no_path.xml").read_text()
+        content = preserve_cdata(content)
         article = ET.fromstring(content)
         parser._publisher_specific_parsing(article)
         assert cap_logs == [
@@ -260,21 +264,21 @@ def test_realted_article_dois_log_error_without_value(shared_datadir, parser):
 
 def test_arxiv_eprints(shared_datadir, parser):
     content = (shared_datadir / "arxiv_eprints.xml").read_text()
-    article = ET.fromstring(content)
+    article = parse_to_ET_element(content)
     parsed_article = parser._publisher_specific_parsing(article)
     assert parsed_article["arxiv_eprints"] == [{"value": "2108.04010"}]
 
 
 def test_no_arxiv_eprints(shared_datadir, parser):
     content = (shared_datadir / "no_arxiv_eprints.xml").read_text()
-    article = ET.fromstring(content)
+    article = parse_to_ET_element(content)
     parsed_article = parser._publisher_specific_parsing(article)
     assert "arxiv_eprints" not in parsed_article
 
 
 def test_no_arxiv_eprints_value(shared_datadir, parser):
     content = (shared_datadir / "no_arxiv_eprints_value.xml").read_text()
-    article = ET.fromstring(content)
+    article = parse_to_ET_element(content)
     parsed_article = parser._publisher_specific_parsing(article)
     assert "arxiv_eprints" not in parsed_article
 
@@ -283,6 +287,7 @@ def test_no_arxiv_eprints_value_log_error_without_value(shared_datadir, parser):
     with capture_logs() as cap_logs:
         parser = IOPParser()
         content = (shared_datadir / "no_arxiv_eprints_value.xml").read_text()
+        content = preserve_cdata(content)
         article = ET.fromstring(content)
         parser._publisher_specific_parsing(article)
         assert cap_logs == [
@@ -353,7 +358,7 @@ def test_no_arxiv_eprints_value_log_error_without_value(shared_datadir, parser):
 
 def test_arxiv_eprints_value_with_version(shared_datadir, parser):
     content = (shared_datadir / "arxiv_eprints_with_version.xml").read_text()
-    article = ET.fromstring(content)
+    article = parse_to_ET_element(content)
     parsed_article = parser._publisher_specific_parsing(article)
     assert parsed_article["arxiv_eprints"] == [{"value": "2108.04010"}]
 
@@ -362,6 +367,7 @@ def test_wrong_arxiv_eprints_value_log_error_without_value(shared_datadir, parse
     with capture_logs() as cap_logs:
         parser = IOPParser()
         content = (shared_datadir / "arxiv_eprint_wrong_value.xml").read_text()
+        content = preserve_cdata(content)
         article = ET.fromstring(content)
         parsed_article = parser._publisher_specific_parsing(article)
         assert "arxiv_eprints" not in parsed_article
@@ -454,28 +460,28 @@ def test_arxiv_extraction_pattern(expected, input):
 
 def test_page_nr(shared_datadir, parser):
     content = (shared_datadir / "page_nr.xml").read_text()
-    article = ET.fromstring(content)
+    article = parse_to_ET_element(content)
     parsed_article = parser._publisher_specific_parsing(article)
     assert parsed_article["page_nr"] == [9]
 
 
 def test_no_page_nr_path(shared_datadir, parser):
     content = (shared_datadir / "no_page_nr_path.xml").read_text()
-    article = ET.fromstring(content)
+    article = parse_to_ET_element(content)
     parsed_article = parser._publisher_specific_parsing(article)
     assert "page_nr" not in parsed_article
 
 
 def test_page_nr_wrong_value(shared_datadir, parser):
     content = (shared_datadir / "page_nr_wrong_value.xml").read_text()
-    article = ET.fromstring(content)
+    article = parse_to_ET_element(content)
     parsed_article = parser._publisher_specific_parsing(article)
     assert "page_nr" not in parsed_article
 
 
 def test_page_nr_no_value(shared_datadir, parser):
     content = (shared_datadir / "page_nr_no_value.xml").read_text()
-    article = ET.fromstring(content)
+    article = parse_to_ET_element(content)
     parsed_article = parser._publisher_specific_parsing(article)
     assert "page_nr" not in parsed_article
 
@@ -484,6 +490,7 @@ def test_wrong_page_nr_value_log(shared_datadir, parser):
     with capture_logs() as cap_logs:
         parser = IOPParser()
         content = (shared_datadir / "page_nr_wrong_value.xml").read_text()
+        content = preserve_cdata(content)
         article = ET.fromstring(content)
         parsed_article = parser._publisher_specific_parsing(article)
         assert "page_nr" not in parsed_article
@@ -923,6 +930,44 @@ def test_no_authors(shared_datadir, parser):
         parser._publisher_specific_parsing(article)
 
 
+def test_abstract(shared_datadir, parser):
+    content = (shared_datadir / "abstract.xml").read_text()
+    article = parse_to_ET_element(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert (
+        parsed_article["abstract"]
+        == r"Solar, terrestrial, and supernova neutrino experiments are subject to muon-induc"
+        r"ed radioactive background. The China Jinping Underground Laboratory (CJPL), with"
+        r" its unique advantage of a 2400 m rock coverage and long distance from nuclear p"
+        r"ower plants, is ideal for MeV-scale neutrino experiments. Using a 1-ton prototyp"
+        r"e detector of the Jinping Neutrino Experiment (JNE), we detected 343 high-energy"
+        r' cosmic-ray muons and (7.86<inline-formula xmlns:ns0="http://www.w3.org/1999/xli'
+        r'nk"><tex-math>$ \pm $</tex-math><inline-graphic ns0:href="cpc_46_8_085001_M1.jpg'
+        r'" ns0:type="simple" /></inline-formula>3.97) muon-induced neutrons from an 820.2'
+        r"8-day dataset at the first phase of CJPL (CJPL-I). Based on the muon-induced neu"
+        r"trons, we measured the corresponding muon-induced neutron yield in a liquid scin"
+        r'tillator to be<inline-formula xmlns:ns0="http://www.w3.org/1999/xlink"><tex-math'
+        r'>$(3.44 \pm 1.86_{\rm stat.}\pm $</tex-math><inline-graphic ns0:href="cpc_46_8_0'
+        r'85001_M2.jpg" ns0:type="simple" /></inline-formula><inline-formula xmlns:ns0="ht'
+        r'tp://www.w3.org/1999/xlink"><tex-math>$ 0.76_{\rm syst.})\times 10^{-4}$</tex-ma'
+        r'th><inline-graphic ns0:href="cpc_46_8_085001_M2-1.jpg" ns0:type="simple" /></inl'
+        r"ine-formula>&#956;<sup>&#8722;1</sup>g<sup>&#8722;1</sup>cm<sup>2</sup>at an ave"
+        r"rage muon energy of 340 GeV. We provided the first study for such neutron backgr"
+        r"ound at CJPL. A global fit including this measurement shows a power-law coeffici"
+        r'ent of (0.75<inline-formula xmlns:ns0="http://www.w3.org/1999/xlink"><tex-math>$'
+        r' \pm $</tex-math><inline-graphic ns0:href="cpc_46_8_085001_M3.jpg" ns0:type="sim'
+        r'ple" /></inline-formula>0.02) for the dependence of the neutron yield at the liq'
+        r"uid scintillator on muon energy."
+    )
+
+
+def test_no_abstract(shared_datadir, parser):
+    content = (shared_datadir / "no_abstract.xml").read_text()
+    article = parse_to_ET_element(content)
+    with raises(RequiredFieldNotFoundExtractionError):
+        parser._publisher_specific_parsing(article)
+
+
 def test_no_month_published(shared_datadir, parser):
     content = (shared_datadir / "no_month_published.xml").read_text()
     article = ET.fromstring(content)
@@ -1242,6 +1287,12 @@ def test_no_licenses_and_no_statements(shared_datadir, parser):
     article = ET.fromstring(content)
     with raises(RequiredFieldNotFoundExtractionError):
         parser._publisher_specific_parsing(article)
+        
+def test_no_abstract_value(shared_datadir, parser):
+    content = (shared_datadir / "no_abstract_value.xml").read_text()
+    article = parse_to_ET_element(content)
+    with raises(RequiredFieldNotFoundExtractionError):
+        parser._publisher_specific_parsing(article)
 
 
 def test_publication_info_fields_values_just_year(shared_datadir, parser):
@@ -1336,3 +1387,51 @@ def test_unknown_license_in_license_URL(shared_datadir, parser):
     article = ET.fromstring(content)
     with raises(UnknownLicense):
         parser._publisher_specific_parsing(article)
+def test_cdata_with_regex():
+    paseudo_aricle = """
+    <article>
+        <title>That's the title</title>
+    <abstract>
+        <p><?CDATA Data in Cdata ?>Data not in CDATA</p>
+    </abstract>
+    </article>
+    """
+    ET_article = parse_to_ET_element(paseudo_aricle)
+    abstract_element = ET_article.find("abstract/p")
+    abstract_text = abstract_element.text
+    assert abstract_text == " Data in Cdata Data not in CDATA"
+
+    title_element = ET_article.find("title")
+    title_text = title_element.text
+    assert title_text == "That's the title"
+
+    string_abstract = ET.tostring(abstract_element)
+    assert string_abstract == b"<p> Data in Cdata Data not in CDATA</p>\n    "
+
+
+def test_cdata_without_regex():
+    paseudo_aricle = """
+    <article>
+        <title>That's the title</title>
+    <abstract>
+        <p><?CDATA Data in Cdata ?>Data not in CDATA</p>
+    </abstract>
+    </article>
+    """
+    ET_article = ET.fromstring(paseudo_aricle)
+    p_element_content = ET.tostring(ET_article.find("abstract"))
+    assert (
+        p_element_content
+        == b"<abstract>\n        <p>Data not in CDATA</p>\n    </abstract>\n    "
+    )
+
+    abstract_element = ET_article.find("abstract/p")
+    abstract_text = abstract_element.text
+    assert abstract_text == "Data not in CDATA"
+
+    title_element = ET_article.find("title")
+    title_text = title_element.text
+    assert title_text == "That's the title"
+
+    string_abstract = ET.tostring(abstract_element)
+    assert string_abstract == b"<p>Data not in CDATA</p>\n    "

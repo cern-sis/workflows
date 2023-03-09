@@ -6,6 +6,9 @@ from stat import S_ISDIR, S_ISREG
 from common.exceptions import UnknownFileExtension
 from common.constants import BY_PATTERN, CREATIVE_COMMONS_PATTERN, LICENSE_PATTERN
 from common.exceptions import UnknownLicense
+import xml.etree.ElementTree as ET
+
+from common.constants import CDATA_PATTERN
 from structlog import get_logger
 
 logger = get_logger()
@@ -130,3 +133,15 @@ def get_license_type_and_version_from_url(url):
         raise UnknownLicense(url)
     license_type = ("-").join([first_part_of_license_type, second_part_of_license_type])
     return construct_license(license_type=license_type, version=version, url=url)
+def preserve_cdata(article: str):
+    matches = CDATA_PATTERN.finditer(article)
+    for match in matches:
+        cdata_content_with_escaped_escape_chars = match.group(1).replace("\\", "\\\\")
+        article = CDATA_PATTERN.sub(
+            cdata_content_with_escaped_escape_chars, article, count=1
+        )
+    return article
+
+
+def parse_to_ET_element(article: str):
+    return ET.fromstring(preserve_cdata(article))
