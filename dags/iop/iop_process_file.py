@@ -1,12 +1,63 @@
+import base64
+import xml.etree.ElementTree as ET
+
 import airflow
+import requests
 from airflow.decorators import dag, task
+from common.enhancer import Enhancer
+from common.enricher import Enricher
+from iop.parser import IOPParser
+from jsonschema import validate
 
 
-@dag(start_date=airflow.utils.dates.days_ago(0))
+def iop_parse_file(**kwargs):
+    if "params" not in kwargs or "file" not in kwargs["params"]:
+        raise Exception("There was no 'file' parameter. Exiting run.")
+    encoded_xml = kwargs["params"]["file"]
+    xml_bytes = base64.b64decode(encoded_xml)
+    xml = ET.fromstring(xml_bytes.decode("utf-8"))
+
+    parser = IOPParser()
+    parsed = parser.parse(xml)
+
+    return parsed
+
+
+def iop_enhance_file(parsed_file):
+    return Enhancer()("IOP", parsed_file)
+
+
+def iop_enrich_file(enhanced_file):
+    return Enricher()(enhanced_file)
+
+
+def iop_validate_record(enriched_file):
+    schema = requests.get(enriched_file["$schema"]).json()
+    validate(enriched_file, schema)
+
+
+@dag(schedule_interval=None, start_date=airflow.utils.dates.days_ago(0))
 def iop_process_file():
     @task()
-    def start():
-        pass
+    def parse_file(**kwargs):
+        return iop_parse_file(**kwargs)
+
+    @task()
+    def enhance_file(parsed_file):
+        return iop_enhance_file(parsed_file)
+
+    @task()
+    def enrich_file(enhanced_file):
+        return iop_enrich_file(enhanced_file)
+
+    @task()
+    def validate_record(enriched_file):
+        iop_validate_record(enriched_file)
+
+    parsed_file = parse_file()
+    enhanced_file = enhance_file(parsed_file)
+    enriched_file = enrich_file(enhanced_file)
+    validate_record(enriched_file)
 
 
-dag_for_iop_files_processing = iop_process_file()
+dag_taskflow = iop_process_file()

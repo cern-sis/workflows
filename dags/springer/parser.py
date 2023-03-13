@@ -2,6 +2,7 @@ import datetime
 import re
 import xml.etree.ElementTree as ET
 
+from common.exceptions import UnknownLicense
 from common.parsing.parser import IParser, ObjectExtractor
 from common.parsing.xml_extractors import (
     AttributeExtractor,
@@ -9,7 +10,6 @@ from common.parsing.xml_extractors import (
     TextExtractor,
 )
 from common.utils import construct_license
-from common.exceptions import UnknownLicense
 from structlog import get_logger
 
 

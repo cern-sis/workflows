@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 
-from common.exceptions import RequiredFieldNotFoundExtractionError
 from common.constants import WHITE_SPACES
+from common.exceptions import RequiredFieldNotFoundExtractionError
 from common.parsing.extractor import IExtractor
 from common.utils import check_value
 from structlog import get_logger
