@@ -1,5 +1,7 @@
 import datetime
+import xml.etree.ElementTree as ET
 from asyncio.log import logger
+from io import StringIO
 
 
 def set_harvesting_interval(repo, **kwargs):
@@ -27,3 +29,16 @@ def construct_license(url, license_type, version):
     if url and license_type and version:
         return {"url": url, "license": f"CC-{license_type}-{version}"}
     logger.error("Licence is not given, or missing arguments.")
+
+
+def parse_without_names_spaces(xml: str):
+    it = ET.iterparse(StringIO(xml))
+    for _, el in it:
+        _, _, el.tag = el.tag.rpartition("}")
+    root = it.root
+    return root
+
+
+def get_text_value(element: ET.Element):
+    if element is not None:
+        return element.text
