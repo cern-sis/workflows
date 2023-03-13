@@ -96,6 +96,7 @@ def test_dag_migrate_from_FTP():
             get_logger().bind(class_name="test_logger"),
             **{
                 "params": {
+                    "force_pull": False,
                     "excluded_directories": [],
                     "force_pull": False,
                     "filenames_pull": {
@@ -156,7 +157,7 @@ def test_dag_migrate_from_FTP():
 
 def test_dag_trigger_file_processing():
     repo = IOPRepository()
-    assert list(map(lambda x: x["xml"], repo.find_all())) == trigger_file_processing(
+    assert [x["xml"] for x in repo.find_all()] == trigger_file_processing(
         "iop", repo, get_logger().bind(class_name="test_logger")
     )
 

@@ -64,6 +64,7 @@ def test_migrate_from_ftp(
             get_logger().bind(class_name="test_logger"),
             **{
                 "params": {
+                    "force_pull": False,
                     "excluded_directories": [],
                     "force_pull": False,
                     "filenames_pull": {
@@ -98,6 +99,7 @@ def test_migrate_from_ftp_only_one_file(
             get_logger().bind(class_name="test_logger"),
             **{
                 "params": {
+                    "force_pull": False,
                     "excluded_directories": [],
                     "force_pull": False,
                     "filenames_pull": {
@@ -172,6 +174,7 @@ def test_migrate_from_ftp_specified_file_force_from_ftp(
             get_logger().bind(class_name="test_logger"),
             **{
                 "params": {
+                    "force_pull": False,
                     "excluded_directories": [],
                     "filenames_pull": {
                         "enabled": True,
@@ -209,6 +212,7 @@ def test_migrate_from_ftp_specified_file(
         get_logger().bind(class_name="test_logger"),
         **{
             "params": {
+                "force_pull": False,
                 "excluded_directories": [],
                 "filenames_pull": {
                     "enabled": True,

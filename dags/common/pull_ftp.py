@@ -40,13 +40,20 @@ def migrate_from_ftp(
     sftp: SFTPService, repo: IRepository, logger: PrintLogger, **kwargs
 ):
     params = kwargs["params"]
-    if "force_pull" in params and params["force_pull"]:
-        return _force_pull(sftp, repo, logger, **kwargs)
-    elif (
+    force_pull_specific_files = (
         "filenames_pull" in params
         and params["filenames_pull"]["enabled"]
         and params["filenames_pull"]["force_from_ftp"]
-    ):
+    )
+    force_pull_all_files = (
+        "filenames_pull" in params
+        and not params["filenames_pull"]["enabled"]
+        and params["force_pull"]
+    )
+
+    if force_pull_all_files:
+        return _force_pull(sftp, repo, logger, **kwargs)
+    elif force_pull_specific_files:
         return _filenames_pull(sftp, repo, logger, **kwargs)
     return _differential_pull(sftp, repo, logger, **kwargs)
 
