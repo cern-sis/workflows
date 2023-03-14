@@ -4,20 +4,19 @@ from typing import IO
 
 from common.repository import IRepository
 from common.s3_service import S3Service
-from common.utils import find_extension
 
 
-class IOPRepository(IRepository):
+class OUPRepository(IRepository):
     ZIPED_DIR: str = "raw/"
     EXTRACTED_DIR: str = "extracted/"
 
     def __init__(self) -> None:
         super().__init__()
-        self.s3 = S3Service(os.getenv("IOP_BUCKET_NAME", "iop"))
+        self.s3 = S3Service(os.getenv("OUP_BUCKET_NAME", "oup"))
 
     def get_all_raw_filenames(self):
         return [
-            f.key.replace("raw/", "")
+            os.path.basename(f.key)
             for f in self.s3.objects.filter(Prefix=self.ZIPED_DIR).all()
         ]
 
@@ -28,12 +27,14 @@ class IOPRepository(IRepository):
             if filenames_to_process
             else self.__find_all_extracted_files()
         )
+        if not filenames:
+            return []
         for file in filenames:
             last_part = os.path.basename(file)
             filename_without_extension = last_part.split(".")[0]
+            extension = "xml" if self.is_meta(last_part) else "pdf"
             if filename_without_extension not in grouped_files:
                 grouped_files[filename_without_extension] = {}
-            extension = find_extension(last_part)
             grouped_files[filename_without_extension][extension] = file
         return list(grouped_files.values())
 

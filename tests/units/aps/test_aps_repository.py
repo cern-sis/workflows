@@ -39,5 +39,5 @@ def test_save_json_file(boto3_fixture: MagicMock):
 
 def test_find_by_id(boto3_fixture: MagicMock):
     repo = APSRepository()
-    file = repo.find_by_id(id="1")
+    file = repo.get_by_id(id="1")
     assert isinstance(file, BytesIO)

@@ -96,7 +96,6 @@ def test_dag_migrate_from_FTP():
             get_logger().bind(class_name="test_logger"),
             **{
                 "params": {
-                    "force_pull": False,
                     "excluded_directories": [],
                     "force_pull": False,
                     "filenames_pull": {

@@ -26,7 +26,7 @@ file = BytesIO(json.dumps(pseudo_article).encode("utf-8"))
 
 
 @freeze_time("2023-02-22T15:41")
-@patch.object(IRepository, attribute="find_by_id", return_value=file)
+@patch.object(IRepository, attribute="get_by_id", return_value=file)
 def test_split_json_(*args):
     repo = IRepository()
     ids_and_articles = split_json(repo, "key")
