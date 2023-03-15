@@ -21,15 +21,20 @@ def dag():
     return dagbag.get_dag(dag_id=DAG_NAME)
 
 
+@pytest.fixture
+def iop_empty_repo():
+    repo = IOPRepository()
+    repo.delete_all()
+    yield repo
+
+
 def test_dag_loaded(dag: DAG):
     assert dag is not None
     assert len(dag.tasks) == 2
 
 
-def test_dag_run(dag: DAG):
-    repo = IOPRepository()
-    repo.delete_all()
-    assert len(repo.find_all()) == 0
+def test_dag_run(dag: DAG, iop_empty_repo):
+    assert len(iop_empty_repo.find_all()) == 0
     id = datetime.datetime.utcnow().strftime(
         "test_iop_dag_pull_ftp_%Y-%m-%dT%H:%M:%S.%f"
     )
@@ -82,17 +87,15 @@ def test_dag_run(dag: DAG):
         },
     ]
 
-    assert repo.find_all() == expected_files
+    assert iop_empty_repo.find_all() == expected_files
 
 
-def test_dag_migrate_from_FTP():
-    repo = IOPRepository()
-    repo.delete_all()
-    assert len(repo.find_all()) == 0
+def test_dag_migrate_from_FTP(iop_empty_repo):
+    assert len(iop_empty_repo.find_all()) == 0
     with IOPSFTPService() as sftp:
         migrate_from_ftp(
             sftp,
-            repo,
+            iop_empty_repo,
             get_logger().bind(class_name="test_logger"),
             **{
                 "params": {
@@ -106,7 +109,7 @@ def test_dag_migrate_from_FTP():
                 }
             },
         )
-        assert repo.find_all() == [
+        assert iop_empty_repo.find_all() == [
             {
                 "pdf": "extracted/2022-07-30T03_02_01_content/1674-1137/1674-1137_46/1674-1137_46_8/1674-1137_46_8_085001/cpc_46_8_085001.pdf",
                 "xml": "extracted/2022-07-30T03_02_01_content/1674-1137/1674-1137_46/1674-1137_46_8/1674-1137_46_8_085001/cpc_46_8_085001.xml",

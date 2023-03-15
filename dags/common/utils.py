@@ -2,6 +2,7 @@ import datetime
 import json
 import re
 import xml.etree.ElementTree as ET
+from io import StringIO
 from stat import S_ISDIR, S_ISREG
 
 from common.constants import (
@@ -149,3 +150,16 @@ def preserve_cdata(article: str):
 
 def parse_to_ET_element(article: str):
     return ET.fromstring(preserve_cdata(article))
+
+
+def parse_without_names_spaces(xml: str):
+    it = ET.iterparse(StringIO(xml))
+    for _, el in it:
+        el.tag = el.tag.rpartition("}")[-1]
+    root = it.root
+    return root
+
+
+def get_text_value(element: ET.Element):
+    if element is not None:
+        return element.text
