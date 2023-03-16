@@ -2,10 +2,9 @@ import xml.etree.ElementTree as ET
 
 from common.constants import (
     ARXIV_EXTRACTION_PATTERN,
-    NODE_ATTRIBUTE_NOT_FOUND_ERRORS,
-    REMOVE_SPECIAL_CHARS,
     LICENSE_VERSION_PATTERN,
     NODE_ATTRIBUTE_NOT_FOUND_ERRORS,
+    REMOVE_SPECIAL_CHARS,
 )
 from common.parsing.parser import IParser
 from common.parsing.xml_extractors import (
@@ -13,9 +12,6 @@ from common.parsing.xml_extractors import (
     CustomExtractor,
     TextExtractor,
 )
-from common.utils import extract_text, parse_to_int
-from common.parsing.parser import IParser
-from common.parsing.xml_extractors import AttributeExtractor, CustomExtractor
 from common.utils import (
     construct_license,
     extract_text,
@@ -83,9 +79,12 @@ class IOPParser(IParser):
                 required=True,
             ),
             CustomExtractor(
-                destination="copyright",
-                extraction_function=self._get_copyright,
-                required=True,
+                destination="copyright_year",
+                extraction_function=self._extract_copyright_year,
+            ),
+            CustomExtractor(
+                destination="copyright_statement",
+                extraction_function=self._extract_copyright_statement,
             ),
             CustomExtractor(
                 destination="journal_title",
@@ -323,16 +322,6 @@ class IOPParser(IParser):
             field_name="copyright_statement",
             dois=self.dois,
         )
-
-    def _get_copyright(self, article):
-        copyright = {}
-        extracted_year = self._extract_copyright_year(article)
-        if extracted_year:
-            copyright["year"] = extracted_year
-        extracted_statement = self._extract_copyright_statement(article)
-        if extracted_statement:
-            copyright["copyright_statement"] = extracted_statement
-        return [copyright]
 
     def _extract_journal_title(self, article):
         return extract_text(

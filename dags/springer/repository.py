@@ -39,7 +39,7 @@ class SpringerRepository(IRepository):
             ] = file
         return list(ret_dict.values())
 
-    def find_by_id(self, id: str):
+    def get_by_id(self, id: str):
         retfile = BytesIO()
         self.s3.download_fileobj(id, retfile)
         return retfile

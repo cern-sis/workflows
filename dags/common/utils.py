@@ -1,14 +1,17 @@
 import datetime
 import json
 import re
+import xml.etree.ElementTree as ET
+from io import StringIO
 from stat import S_ISDIR, S_ISREG
 
-from common.exceptions import UnknownFileExtension
-from common.constants import BY_PATTERN, CREATIVE_COMMONS_PATTERN, LICENSE_PATTERN
-from common.exceptions import UnknownLicense
-import xml.etree.ElementTree as ET
-
-from common.constants import CDATA_PATTERN
+from common.constants import (
+    BY_PATTERN,
+    CDATA_PATTERN,
+    CREATIVE_COMMONS_PATTERN,
+    LICENSE_PATTERN,
+)
+from common.exceptions import UnknownFileExtension, UnknownLicense
 from structlog import get_logger
 
 logger = get_logger()
@@ -133,6 +136,8 @@ def get_license_type_and_version_from_url(url):
         raise UnknownLicense(url)
     license_type = ("-").join([first_part_of_license_type, second_part_of_license_type])
     return construct_license(license_type=license_type, version=version, url=url)
+
+
 def preserve_cdata(article: str):
     matches = CDATA_PATTERN.finditer(article)
     for match in matches:
@@ -145,3 +150,16 @@ def preserve_cdata(article: str):
 
 def parse_to_ET_element(article: str):
     return ET.fromstring(preserve_cdata(article))
+
+
+def parse_without_names_spaces(xml: str):
+    it = ET.iterparse(StringIO(xml))
+    for _, el in it:
+        el.tag = el.tag.rpartition("}")[-1]
+    root = it.root
+    return root
+
+
+def get_text_value(element: ET.Element):
+    if element is not None:
+        return element.text

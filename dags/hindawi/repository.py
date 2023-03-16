@@ -18,7 +18,7 @@ class HindawiRepository(IRepository):
             files.append(file_name)
         return files
 
-    def find_by_id(self, id: str):
+    def get_by_id(self, id: str):
         retfile = io.BytesIO()
         self.s3_bucket.download_fileobj(id, retfile)
         return retfile

@@ -17,7 +17,7 @@ class MockedRepo:
     def save(self, key, file):
         pass
 
-    def find_by_id(self, id):
+    def get_by_id(self, id):
         return BytesIO(str.encode(hindawi_xml))
 
     def find_all(self):

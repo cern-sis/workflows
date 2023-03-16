@@ -40,13 +40,20 @@ def migrate_from_ftp(
     sftp: SFTPService, repo: IRepository, logger: PrintLogger, **kwargs
 ):
     params = kwargs["params"]
-    if "force_pull" in params and params["force_pull"]:
-        return _force_pull(sftp, repo, logger, **kwargs)
-    elif (
+    force_pull_specific_files = (
         "filenames_pull" in params
         and params["filenames_pull"]["enabled"]
         and params["filenames_pull"]["force_from_ftp"]
-    ):
+    )
+    force_pull_all_files = (
+        "filenames_pull" in params
+        and not params["filenames_pull"]["enabled"]
+        and params["force_pull"]
+    )
+
+    if force_pull_all_files:
+        return _force_pull(sftp, repo, logger, **kwargs)
+    elif force_pull_specific_files:
         return _filenames_pull(sftp, repo, logger, **kwargs)
     return _differential_pull(sftp, repo, logger, **kwargs)
 
@@ -80,7 +87,7 @@ def _filenames_pull(
 def _find_files_in_zip(filenames, repo: IRepository):
     extracted_filenames = []
     for zipped_filename in filenames:
-        zipped_file: str = repo.find_by_id(f"raw/{zipped_filename}")
+        zipped_file: str = repo.get_by_id(f"raw/{zipped_filename}")
         with zipfile.ZipFile(zipped_file) as zip:
             for zip_filename in zip.namelist():
                 if repo.is_meta(zip_filename):
@@ -116,7 +123,7 @@ def trigger_file_processing(
         files = list(map(lambda x: x["xml"], repo.find_all()))
     for filename in files:
         logger.msg("Running processing.", filename=filename)
-        file_bytes = repo.find_by_id(filename)
+        file_bytes = repo.get_by_id(filename)
 
         for article in article_splitter_function(file_bytes):
             _id = _generate_id(publisher)

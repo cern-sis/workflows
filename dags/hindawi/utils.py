@@ -18,7 +18,7 @@ def save_file_in_s3(data, repo):
 
 def split_xmls(repo, key):
     ids_and_records = []
-    file = repo.find_by_id(key)
+    file = repo.get_by_id(key)
     xml_string = file.getvalue().decode("utf-8")
     for tag in ElementTree.fromstring(xml_string):
         if "ListRecords" in tag.tag or "GetRecord" in tag.tag:

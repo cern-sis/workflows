@@ -20,6 +20,7 @@ def test_pull_from_sftp(iop_empty_repo):
             get_logger().bind(class_name="test_logger"),
             **{
                 "params": {
+                    "force_pull": False,
                     "excluded_directories": [],
                     "filenames_pull": {
                         "enabled": False,

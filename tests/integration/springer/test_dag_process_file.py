@@ -34,11 +34,13 @@ def article():
 
     def extract_zip_to_article(zip_filename):
         with ZipFile(zip_filename, "r") as zip_file:
-            return [
-                zip_file.read(filename)
-                for filename in map(lambda x: x.filename, zip_file.filelist)
-                if ".Meta" in filename or ".scoap" in filename
-            ][0]
+            xmls = [
+                file.filename
+                for file in zip_file.filelist
+                if ".Meta" in file.filename or ".scoap" in file.filename
+            ]
+            xmls_content = [zip_file.read(xml) for xml in xmls]
+            return xmls_content[0]
 
     article = ET.fromstring(extract_zip_to_article(data_dir + test_file))
 

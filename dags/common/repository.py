@@ -5,7 +5,7 @@ class IRepository:
     def find_all(self):
         raise NotImplementedError
 
-    def find_by_id(self, id):
+    def get_by_id(self, id):
         raise NotImplementedError
 
     def find_the_last_uploaded_file_date(self):

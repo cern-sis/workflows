@@ -18,7 +18,7 @@ def save_file_in_s3(data, repo):
 
 
 def split_json(repo, key):
-    _file = repo.find_by_id(key)
+    _file = repo.get_by_id(key)
     data = json.loads(_file.getvalue().decode("utf-8"))["data"]
     ids_and_articles = []
     for article in data:

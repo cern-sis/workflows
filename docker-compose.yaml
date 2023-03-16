@@ -135,6 +135,7 @@ services:
       /usr/bin/mc mb airflow/aps;
       /usr/bin/mc mb airflow/hindawi;
       /usr/bin/mc mb airflow/iop;
+      /usr/bin/mc mb airflow/oup;
       exit 0;
       "
 

@@ -14,7 +14,7 @@ def test_find_all(repo: IRepository):
 
 
 def test_test_find_by_id(repo: IRepository):
-    raises(NotImplementedError, repo.find_by_id, id="")
+    raises(NotImplementedError, repo.get_by_id, id="")
 
 
 def test_save(repo: IRepository):

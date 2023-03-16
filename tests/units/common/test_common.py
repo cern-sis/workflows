@@ -64,6 +64,7 @@ def test_migrate_from_ftp(
             get_logger().bind(class_name="test_logger"),
             **{
                 "params": {
+                    "force_pull": False,
                     "excluded_directories": [],
                     "force_pull": False,
                     "filenames_pull": {
@@ -98,6 +99,7 @@ def test_migrate_from_ftp_only_one_file(
             get_logger().bind(class_name="test_logger"),
             **{
                 "params": {
+                    "force_pull": False,
                     "excluded_directories": [],
                     "force_pull": False,
                     "filenames_pull": {
@@ -172,6 +174,7 @@ def test_migrate_from_ftp_specified_file_force_from_ftp(
             get_logger().bind(class_name="test_logger"),
             **{
                 "params": {
+                    "force_pull": False,
                     "excluded_directories": [],
                     "filenames_pull": {
                         "enabled": True,
@@ -188,7 +191,7 @@ def test_migrate_from_ftp_specified_file_force_from_ftp(
 @patch.object(
     SFTPService, attribute="list_files", return_value=SFTP_LIST_FILES_RETURN_VALUE
 )
-@patch.object(IRepository, attribute="find_by_id")
+@patch.object(IRepository, attribute="get_by_id")
 @patch.object(IRepository, attribute="is_meta")
 @patch.object(IRepository, attribute="get_all_raw_filenames")
 @patch.object(IRepository, attribute="save")
@@ -209,6 +212,7 @@ def test_migrate_from_ftp_specified_file(
         get_logger().bind(class_name="test_logger"),
         **{
             "params": {
+                "force_pull": False,
                 "excluded_directories": [],
                 "filenames_pull": {
                     "enabled": True,
@@ -224,7 +228,7 @@ def test_migrate_from_ftp_specified_file(
 
 
 @patch("common.pull_ftp.trigger_dag.trigger_dag")
-@patch.object(IRepository, attribute="find_by_id", return_value=BytesIO())
+@patch.object(IRepository, attribute="get_by_id", return_value=BytesIO())
 @patch.object(
     IRepository, attribute="find_all", return_value=REPO_FIND_ALL_RETURN_VALUE
 )

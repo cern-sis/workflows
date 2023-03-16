@@ -23,15 +23,14 @@ def springer_pull_ftp():
         repo=SpringerRepository(), sftp=SpringerSFTPService(), **kwargs
     ):
         params = kwargs["params"]
-        specific_files = (
+        reprocess_specific_files = (
             "filenames_pull" in params
             and params["filenames_pull"]["enabled"]
             and not params["filenames_pull"]["force_from_ftp"]
         )
-        if specific_files:
+        if reprocess_specific_files:
             specific_files_names = pull_ftp.reprocess_files(repo, logger, **kwargs)
             return specific_files_names
-
         with sftp:
             return pull_ftp.migrate_from_ftp(sftp, repo, logger, **kwargs)
 

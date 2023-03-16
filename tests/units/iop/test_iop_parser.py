@@ -258,7 +258,6 @@ def test_realted_article_dois_log_error_without_value(shared_datadir, parser):
                 "event": "subtitle is not found in XML",
                 "log_level": "error",
             },
-
         ]
 
 
@@ -1069,34 +1068,31 @@ def test_copyright(shared_datadir, parser):
     content = (shared_datadir / "just_required_fields.xml").read_text()
     article = ET.fromstring(content)
     parsed_article = parser._publisher_specific_parsing(article)
-    assert parsed_article["copyright"] == [
-        {
-            "year": "2022",
-            "copyright_statement": "© 2022 Chinese Physical Society and the Institute of High Energy Physics of the Chinese Academy of Sciences and the Institute of Modern Physics of the Chinese Academy of Sciences and IOP Publishing Ltd",
-        }
-    ]
+    assert parsed_article["copyright_year"] == "2022"
+    assert (
+        parsed_article["copyright_statement"]
+        == "© 2022 Chinese Physical Society and the Institute of High Energy Physics of the Chinese Academy of Sciences and the Institute of Modern Physics of the Chinese Academy of Sciences and IOP Publishing Ltd"
+    )
 
 
 def test_copyright_no_year(shared_datadir, parser):
     content = (shared_datadir / "no_copyright_year.xml").read_text()
     article = ET.fromstring(content)
     parsed_article = parser._publisher_specific_parsing(article)
-    assert parsed_article["copyright"] == [
-        {
-            "copyright_statement": "© 2022 Chinese Physical Society and the Institute of High Energy Physics of the Chinese Academy of Sciences and the Institute of Modern Physics of the Chinese Academy of Sciences and IOP Publishing Ltd"
-        }
-    ]
+    assert (
+        parsed_article["copyright_statement"]
+        == "© 2022 Chinese Physical Society and the Institute of High Energy Physics of the Chinese Academy of Sciences and the Institute of Modern Physics of the Chinese Academy of Sciences and IOP Publishing Ltd"
+    )
 
 
 def test_copyright_no_year_value(shared_datadir, parser):
     content = (shared_datadir / "no_copyright_year_value.xml").read_text()
     article = ET.fromstring(content)
     parsed_article = parser._publisher_specific_parsing(article)
-    assert parsed_article["copyright"] == [
-        {
-            "copyright_statement": "© 2022 Chinese Physical Society and the Institute of High Energy Physics of the Chinese Academy of Sciences and the Institute of Modern Physics of the Chinese Academy of Sciences and IOP Publishing Ltd"
-        }
-    ]
+    assert (
+        parsed_article["copyright_statement"]
+        == "© 2022 Chinese Physical Society and the Institute of High Energy Physics of the Chinese Academy of Sciences and the Institute of Modern Physics of the Chinese Academy of Sciences and IOP Publishing Ltd"
+    )
 
 
 def test_copyright_no_years_logs(shared_datadir, parser):
@@ -1174,14 +1170,14 @@ def test_copyright_no_statement(shared_datadir, parser):
     content = (shared_datadir / "no_copyright_statement.xml").read_text()
     article = ET.fromstring(content)
     parsed_article = parser._publisher_specific_parsing(article)
-    assert parsed_article["copyright"] == [{"year": "2022"}]
+    assert parsed_article["copyright_year"] == "2022"
 
 
 def test_copyright_no_statement_value(shared_datadir, parser):
     content = (shared_datadir / "no_copyright_statement_value.xml").read_text()
     article = ET.fromstring(content)
     parsed_article = parser._publisher_specific_parsing(article)
-    assert parsed_article["copyright"] == [{"year": "2022"}]
+    assert parsed_article["copyright_year"] == "2022"
 
 
 def test_copyright_no_statement_logs(shared_datadir, parser):
@@ -1287,7 +1283,8 @@ def test_no_licenses_and_no_statements(shared_datadir, parser):
     article = ET.fromstring(content)
     with raises(RequiredFieldNotFoundExtractionError):
         parser._publisher_specific_parsing(article)
-        
+
+
 def test_no_abstract_value(shared_datadir, parser):
     content = (shared_datadir / "no_abstract_value.xml").read_text()
     article = parse_to_ET_element(content)
@@ -1387,6 +1384,8 @@ def test_unknown_license_in_license_URL(shared_datadir, parser):
     article = ET.fromstring(content)
     with raises(UnknownLicense):
         parser._publisher_specific_parsing(article)
+
+
 def test_cdata_with_regex():
     paseudo_aricle = """
     <article>
