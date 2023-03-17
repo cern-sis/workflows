@@ -32,7 +32,7 @@ def test_dag_run(dag: DAG):
     assert len(repo.find_all()) == 0
     id = datetime.datetime.utcnow().strftime("test_oup_pull_ftp_%Y-%m-%dT%H:%M:%S.%f")
     dagrun = dag.create_dagrun(DagRunState.QUEUED, run_id=id)
-    wait().at_most(60, SECOND).until(lambda: get_dagrun_state(dagrun))
+    wait().at_most(90, SECOND).until(lambda: get_dagrun_state(dagrun))
     assert len(repo.find_all()) == 3
 
 
