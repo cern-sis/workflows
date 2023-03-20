@@ -336,3 +336,25 @@ def test_no_title_value(shared_datadir, parser):
         content = ET.fromstring(file.read())
         with raises(RequiredFieldNotFoundExtractionError):
             parser._publisher_specific_parsing(content)
+
+
+def test_date_published(parsed_articles):
+    expected_date = ["2022-01-12", "2022-08-18", "2022-08-27", "2022-09-02"]
+    dates = [article["date_published"] for article in parsed_articles]
+    assert sorted(expected_date) == sorted(dates)
+
+
+def test_no_date_published(shared_datadir, parser):
+    article_name = "ptac108_no_date_published.xml"
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
+        article = parser._publisher_specific_parsing(content)
+        assert "date_published" not in article
+
+
+def test_no_date_published_value(shared_datadir, parser):
+    article_name = "ptac108_no_date_published_value.xml"
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
+        article = parser._publisher_specific_parsing(content)
+        assert "date_published" not in article

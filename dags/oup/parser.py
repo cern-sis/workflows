@@ -1,3 +1,4 @@
+import datetime
 import xml.etree.ElementTree as ET
 
 from common.parsing.parser import IParser
@@ -55,6 +56,10 @@ class OUPParser(IParser):
                 destination="title",
                 source="front/article-meta/title-group/article-title",
                 all_content_between_tags=True,
+            ),
+            TextExtractor(
+                destination="date_published",
+                extraction_function=self._get_published_date,
             ),
         ]
         super().__init__(extractors)
@@ -136,3 +141,21 @@ class OUPParser(IParser):
                     }
                 )
         return authors
+
+    def __get_date(self, article):
+        year = article.find("year").text
+        month = article.find("month").text
+        day = article.find("day").text
+        if year and month and day:
+            return datetime.date(
+                day=int(day), month=int(month), year=int(year)
+            ).isoformat()
+
+    def _get_published_date(self, article: ET.Element):
+        date = (
+            article.find("front/article-meta/pub-date/[@pub-type='epub']")
+            or article.find("front/article-meta/date/[@date-type='published']")
+            or article.find("front/article-meta/pub-date/[@pub-type='ppub']")
+        )
+        if date is not None:
+            return self.__get_date(date)
