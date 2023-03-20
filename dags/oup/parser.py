@@ -1,9 +1,10 @@
 import xml.etree.ElementTree as ET
 
 from common.parsing.parser import IParser
-from common.parsing.xml_extractors import CustomExtractor
+from common.parsing.xml_extractors import CustomExtractor, TextExtractor
 from common.utils import get_text_value
 from structlog import get_logger
+
 
 
 class OUPParser(IParser):
@@ -25,6 +26,12 @@ class OUPParser(IParser):
             CustomExtractor(
                 destination="journal_doctype",
                 extraction_function=self._get_journal_doctype,
+            ),
+            TextExtractor(
+                destination="subtitle",
+                source="front/article-meta/title-group/subtitle",
+                extra_function=lambda x: x,
+                required=False,
             ),
         ]
         super().__init__(extractors)
