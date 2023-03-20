@@ -32,6 +32,10 @@ class OUPParser(IParser):
                 destination="journal_doctype",
                 extraction_function=self._get_journal_doctype,
             ),
+            CustomExtractor(
+                destination="arxiv_eprints",
+                extraction_function=self._get_arxiv_eprints,
+            ),
         ]
         super().__init__(extractors)
 
@@ -54,8 +58,20 @@ class OUPParser(IParser):
             journal_doctype = self.article_type_mapping[journal_doctype_raw]
         except KeyError:
             journal_doctype = "other"
+        if "other" in journal_doctype:
             self.logger.warning(
                 "There are unmapped article types for article",
                 journal_doctype=journal_doctype,
             )
         return journal_doctype
+
+    def _get_arxiv_eprints(self, article: ET.Element):
+        arxivs_raw = get_text_value(
+            article.find("front/article-meta/article-id/[@pub-id-type='arxiv']")
+        )
+        if not arxivs_raw:
+            return
+        arxiv_eprint = arxivs_raw.lower().replace("arxiv:", "")
+        if not arxiv_eprint:
+            return
+        return {"value": arxiv_eprint}

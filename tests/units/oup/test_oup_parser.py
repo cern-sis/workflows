@@ -109,3 +109,22 @@ def other_doc_type_article(shared_datadir, parser):
 
 def test_other_journal_doc_types(other_doc_type_article):
     assert "other" == other_doc_type_article["journal_doctype"]
+
+
+def test_arxiv(parsed_articles):
+    doc_types = [
+        {"value": "2111.09468"},
+        {"value": "2204.01249"},
+        {"value": "2207.02498"},
+        {"value": "2205.14599"},
+    ]
+    for doc_type, article_doc_type in zip(doc_types, parsed_articles):
+        assert doc_type == article_doc_type["arxiv_eprints"]
+
+
+def test_no_arxiv(shared_datadir, parser):
+    article_name = "ptac120_no_arxiv_value.xml"
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
+        article = parser._publisher_specific_parsing(content)
+        assert "arxiv_eprints" not in article
