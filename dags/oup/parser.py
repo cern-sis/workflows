@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 
 from common.parsing.parser import IParser
-from common.parsing.xml_extractors import CustomExtractor
+from common.parsing.xml_extractors import AttributeExtractor, CustomExtractor
 from common.utils import get_text_value
 from structlog import get_logger
 
@@ -21,6 +21,12 @@ class OUPParser(IParser):
         extractors = [
             CustomExtractor(
                 destination="dois", extraction_function=self._get_dois, required=True
+            ),
+            AttributeExtractor(
+                destination="page_nr",
+                source="front/article-meta/counts/page-count",
+                attribute="count",
+                extra_function=lambda x: int(x),
             ),
             CustomExtractor(
                 destination="journal_doctype",

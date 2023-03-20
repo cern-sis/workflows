@@ -53,6 +53,36 @@ def test_no_doi_value_article(shared_datadir, parser):
             parser._publisher_specific_parsing(content)
 
 
+def test_page_nr(parsed_articles):
+    page_nrs = [10, 13, 16, 27]
+    page_nrs_parsed_article = [article["page_nr"] for article in parsed_articles]
+    assert sorted(page_nrs) == sorted(page_nrs_parsed_article)
+
+
+def test_no_page_nr(shared_datadir, parser):
+    article_name = "ptac113_without_page_nr.xml"
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
+        article = parser._publisher_specific_parsing(content)
+        assert "page_nr" not in article
+
+
+def test_no_page_nr_value(shared_datadir, parser):
+    article_name = "ptac113_without_page_nr_value.xml"
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
+        article = parser._publisher_specific_parsing(content)
+        assert "page_nr" not in article
+
+
+def test_no_page_nr_count(shared_datadir, parser):
+    article_name = "ptac113_without_page_nr_count.xml"
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
+        article = parser._publisher_specific_parsing(content)
+        assert "page_nr" not in article
+
+
 def test_journal_doc_types(parsed_articles):
     doc_types = sorted(["article", "article", "article", "other"])
     parsed_articles_types = sorted(
