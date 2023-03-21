@@ -36,6 +36,11 @@ class OUPParser(IParser):
                 destination="arxiv_eprints",
                 extraction_function=self._get_arxiv_eprints,
             ),
+            CustomExtractor(
+                destination="authors",
+                extraction_function=self._get_authors,
+                required=True,
+            ),
         ]
         super().__init__(extractors)
 
@@ -75,3 +80,44 @@ class OUPParser(IParser):
         if not arxiv_eprint:
             return
         return {"value": arxiv_eprint}
+
+    def _get_authors(self, article: ET.Element):
+        contributions = article.findall(
+            "front/article-meta/contrib-group/contrib[@contrib-type='author']"
+        )
+        authors = []
+        for contribution in contributions:
+            surname = get_text_value(contribution.find("name/surname"))
+            given_names = get_text_value(contribution.find("name/given-names"))
+            email = get_text_value(contribution.find("email"))
+            affiliations = contribution.findall("aff")
+            full_affiliation = []
+            for affiliation in affiliations:
+                country = get_text_value(
+                    affiliation.find(
+                        "country",
+                    )
+                )
+                institution = get_text_value(
+                    affiliation.find(
+                        "institution",
+                    )
+                )
+                if country:
+                    country = country.capitalize()
+                full_affiliation.append(
+                    {"institution": institution, "country": country}
+                )
+
+            if not all([surname, given_names, email]) and not full_affiliation:
+                pass
+            else:
+                authors.append(
+                    {
+                        "surname": surname,
+                        "given_names": given_names,
+                        "email": email,
+                        "affiliations": full_affiliation,
+                    }
+                )
+        return authors

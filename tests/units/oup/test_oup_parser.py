@@ -128,3 +128,155 @@ def test_no_arxiv(shared_datadir, parser):
         content = parse_without_names_spaces(file.read())
         article = parser._publisher_specific_parsing(content)
         assert "arxiv_eprints" not in article
+
+
+def test_authors(parsed_articles):
+    authors = [
+        [
+            {
+                "surname": "Iwazaki",
+                "given_names": "Aiichi",
+                "email": "a_iwazaki@hotmail.com",
+                "affiliations": [
+                    {
+                        "institution": "International Economics and Politics, Nishogakusha University",
+                        "country": "Japan",
+                    }
+                ],
+            }
+        ],
+        [
+            {
+                "surname": "Kunitomo",
+                "given_names": "Hiroshi",
+                "email": "kunitomo@yukawa.kyoto-u.ac.jp",
+                "affiliations": [
+                    {
+                        "institution": "Center for Gravitational Physics and Quantum Information, Yukawa Institute for Theoretical Physics",
+                        "country": "Japan",
+                    }
+                ],
+            }
+        ],
+        [
+            {
+                "surname": "Garg",
+                "given_names": "Ritu",
+                "email": "rgarg_phd19@thapar.edu",
+                "affiliations": [
+                    {
+                        "institution": "School of Physics and Materials Science, Thapar Institute of Engineering and Technology",
+                        "country": "India",
+                    }
+                ],
+            },
+            {
+                "surname": "Upadhyay",
+                "given_names": "A",
+                "email": None,
+                "affiliations": [
+                    {
+                        "institution": "School of Physics and Materials Science, Thapar Institute of Engineering and Technology",
+                        "country": "India",
+                    }
+                ],
+            },
+        ],
+        [
+            {
+                "surname": "Hata",
+                "given_names": "Hiroyuki",
+                "email": None,
+                "affiliations": [
+                    {
+                        "institution": "Department of Physics, Kyoto University",
+                        "country": "Japan",
+                    }
+                ],
+            },
+            {
+                "surname": "Takeda",
+                "given_names": "Daichi",
+                "email": None,
+                "affiliations": [
+                    {
+                        "institution": "Department of Physics, Kyoto University",
+                        "country": "Japan",
+                    }
+                ],
+            },
+            {
+                "surname": "Yoshinaka",
+                "given_names": "Jojiro",
+                "email": "george.yoshinaka@gauge.scphys.kyoto-u.ac.jp",
+                "affiliations": [
+                    {
+                        "institution": "Department of Physics, Kyoto University",
+                        "country": "Japan",
+                    }
+                ],
+            },
+        ],
+    ]
+    parsed_authors = [article["authors"] for article in parsed_articles]
+    assert authors == parsed_authors
+
+
+def test_no_authors(shared_datadir, parser):
+    article_name = "patc120_without_authors.xml"
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
+        with raises(RequiredFieldNotFoundExtractionError):
+            parser._publisher_specific_parsing(content)
+
+
+def test_no_authors_names(shared_datadir, parser):
+    article_name = "ptac120_without_authors_names.xml"
+    expected_output = [
+        {
+            "surname": "Hata",
+            "given_names": None,
+            "email": None,
+            "affiliations": [
+                {
+                    "institution": "Department of Physics, Kyoto University",
+                    "country": "Japan",
+                }
+            ],
+        },
+        {
+            "surname": "Takeda",
+            "given_names": None,
+            "email": None,
+            "affiliations": [
+                {
+                    "institution": "Department of Physics, Kyoto University",
+                    "country": "Japan",
+                }
+            ],
+        },
+        {
+            "surname": "Yoshinaka",
+            "given_names": None,
+            "email": "george.yoshinaka@gauge.scphys.kyoto-u.ac.jp",
+            "affiliations": [
+                {
+                    "institution": "Department of Physics, Kyoto University",
+                    "country": "Japan",
+                }
+            ],
+        },
+    ]
+
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
+        parsed_article = parser._publisher_specific_parsing(content)
+        assert parsed_article["authors"] == expected_output
+
+
+def test_no_authors_value(shared_datadir, parser):
+    article_name = "ptac120_without_authors_value.xml"
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
+        with raises(RequiredFieldNotFoundExtractionError):
+            parser._publisher_specific_parsing(content)
