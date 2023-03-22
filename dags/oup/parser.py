@@ -1,7 +1,11 @@
 import xml.etree.ElementTree as ET
 
 from common.parsing.parser import IParser
-from common.parsing.xml_extractors import AttributeExtractor, CustomExtractor
+from common.parsing.xml_extractors import (
+    AttributeExtractor,
+    CustomExtractor,
+    TextExtractor,
+)
 from common.utils import get_text_value
 from structlog import get_logger
 
@@ -39,6 +43,12 @@ class OUPParser(IParser):
             CustomExtractor(
                 destination="authors",
                 extraction_function=self._get_authors,
+                required=True,
+            ),
+            TextExtractor(
+                destination="abstract",
+                source="front/article-meta/abstract/p",
+                all_content_between_tags=True,
                 required=True,
             ),
         ]
