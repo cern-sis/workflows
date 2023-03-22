@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ET
 from common.parsing.parser import IParser
 from common.parsing.xml_extractors import (
     AttributeExtractor,
+    ConstantExtractor,
     CustomExtractor,
     TextExtractor,
 )
@@ -91,6 +92,10 @@ class OUPParser(IParser):
                 destination="license",
                 extraction_function=self._get_license,
                 required=True,
+            ),
+            ConstantExtractor(
+                destination="collections",
+                value=["Progress of Theoretical and Experimental Physics"],
             ),
         ]
         super().__init__(extractors)

@@ -518,3 +518,16 @@ def test_licenses_no_license_value(shared_datadir, parser):
         content = ET.fromstring(file.read())
         with raises(RequiredFieldNotFoundExtractionError):
             parser._publisher_specific_parsing(content)
+
+
+def test_collections(parsed_articles):
+    collections = [
+        "Progress of Theoretical and Experimental Physics",
+        "Progress of Theoretical and Experimental Physics",
+        "Progress of Theoretical and Experimental Physics",
+        "Progress of Theoretical and Experimental Physics",
+    ]
+    collections_parsed_article = [
+        article["collections"][0] for article in parsed_articles
+    ]
+    assert set(collections) == set(collections_parsed_article)
