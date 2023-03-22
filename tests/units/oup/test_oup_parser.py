@@ -446,3 +446,27 @@ def test_no_journal_artid(shared_datadir, parser):
         content = parse_without_names_spaces(file.read())
         article = parser._publisher_specific_parsing(content)
         assert "journal_artid" not in article
+
+
+def test_copyright_year(parsed_articles):
+    copyright_years = [2022, 2022, 2022, 2022]
+    copyright_years_parsed_article = [
+        article["copyright_year"] for article in parsed_articles
+    ]
+    assert set(copyright_years) == set(copyright_years_parsed_article)
+
+
+def test_no_copyright_year(shared_datadir, parser):
+    article_name = "ptac120_without_copyright_year.xml"
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
+        article = parser._publisher_specific_parsing(content)
+        assert "copyright_year" not in article
+
+
+def test_no_copyright_year_value(shared_datadir, parser):
+    article_name = "ptac120_without_copyright_year_value.xml"
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
+        article = parser._publisher_specific_parsing(content)
+        assert "copyright_year" not in article

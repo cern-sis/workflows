@@ -81,6 +81,12 @@ class OUPParser(IParser):
                 source="front/article-meta/elocation-id",
                 required=False,
             ),
+            TextExtractor(
+                destination="copyright_year",
+                source="front/article-meta/permissions/copyright-year",
+                extra_function=lambda x: int(x),
+                required=False,
+            ),
         ]
         super().__init__(extractors)
 
