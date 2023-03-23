@@ -109,15 +109,14 @@ class IOPParser(IParser):
             ),
             TextExtractor(
                 destination="title",
-                required=False,
+                required=True,
+                all_content_between_tags=True,
                 source="front/article-meta/title-group/article-title",
-                extra_function=lambda x: " ".join(x.split()),
             ),
             TextExtractor(
                 destination="subtitle",
                 required=False,
                 source="front/article-meta/subtitle",
-                extra_function=lambda x: " ".join(x.split()),
             ),
             CustomExtractor(
                 destination="license",

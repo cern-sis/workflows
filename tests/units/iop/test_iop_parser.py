@@ -1335,7 +1335,7 @@ def test_title(shared_datadir, parser):
     parsed_article = parser._publisher_specific_parsing(article)
     assert (
         parsed_article["title"]
-        == "Measurement of muon-induced neutron yield at the China Jinping Underground Laboratory"
+        == 'Measurement of muon-induced neutron yield at the China Jinping Underground Laboratory<xref ref-type="fn" rid="cpc_46_8_085001_fn1">*</xref><fn id="cpc_46_8_085001_fn1"><label>*</label><p>Supported in part by the National Natural Science Foundation of China (11620101004, 11475093, 12127808), the Key Laboratory of Particle &amp; Radiation Imaging (TsinghuaUniversity), the CAS Center for Excellence in Particle Physics (CCEPP), and Guangdong Basic and Applied Basic Research Foundation (2019A1515012216). Portion of this work performed at Brookhaven National Laboratory is supported in part by the United States Department of Energy (DE-SC0012704)</p></fn>'
     )
 
 
@@ -1350,9 +1350,9 @@ def test_subtitle(shared_datadir, parser):
 
 def test_no_title(shared_datadir, parser):
     content = (shared_datadir / "no_title.xml").read_text()
-    article = ET.fromstring(content)
-    parsed_article = parser._publisher_specific_parsing(article)
-    assert "title" not in parsed_article
+    article = parse_to_ET_element(content)
+    with raises(RequiredFieldNotFoundExtractionError):
+        parser._publisher_specific_parsing(article)
 
 
 def test_no_subtitle(shared_datadir, parser):
@@ -1365,9 +1365,9 @@ def test_no_subtitle(shared_datadir, parser):
 def test_no_title_no_subtitle_values(shared_datadir, parser):
     content = (shared_datadir / "no_title_no_subtitle_values.xml").read_text()
     article = ET.fromstring(content)
-    parsed_article = parser._publisher_specific_parsing(article)
-    assert "title" not in parsed_article
-    assert "subtitle" not in parsed_article
+    article = parse_to_ET_element(content)
+    with raises(RequiredFieldNotFoundExtractionError):
+        parser._publisher_specific_parsing(article)
 
 
 def test_no_licenses_statement(shared_datadir, parser):
@@ -1434,3 +1434,13 @@ def test_cdata_without_regex():
 
     string_abstract = ET.tostring(abstract_element)
     assert string_abstract == b"<p>Data not in CDATA</p>\n    "
+
+
+def test_title_starting_with_tags(shared_datadir, parser):
+    content = (shared_datadir / "aca95c.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser._publisher_specific_parsing(article)
+    assert (
+        parsed_article["title"]
+        == '<italic toggle="yes">R</italic>-Symmetric NMSSM<xref ref-type="fn" rid="cpc_47_4_043105_fn1">*</xref><fn id="cpc_47_4_043105_fn1"><label>*</label><p>Supported in part by the National Natural Science Foundation of China (11775039), the High-level Talents Research and Startup Foundation Projects for Doctors of Zhoukou Normal University (ZKNUC2021006), and Scientific research projects of universities in Henan Province, China (23A140027).</p></fn>'
+    )
