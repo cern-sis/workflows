@@ -51,6 +51,11 @@ class OUPParser(IParser):
                 all_content_between_tags=True,
                 required=True,
             ),
+            TextExtractor(
+                destination="title",
+                source="front/article-meta/title-group/article-title",
+                all_content_between_tags=True,
+            ),
         ]
         super().__init__(extractors)
 

@@ -309,3 +309,30 @@ def test_no_abstract_value(shared_datadir, parser):
         content = ET.fromstring(file.read())
         with raises(RequiredFieldNotFoundExtractionError):
             parser._publisher_specific_parsing(content)
+
+
+def test_titles(parsed_articles):
+    titles = [
+        "Detectable electric current induced by the dark matter axion in a conductor",
+        "Open-closed homotopy algebra in superstring field theory",
+        "Study of<italic>F</italic>-wave bottom mesons in heavy quark effective theory",
+        "Generating string field theory solutions with matter operators from<italic>KBc</italic>algebra",
+    ]
+    titles_parsed_article = [article["title"] for article in parsed_articles]
+    assert set(titles) == set(titles_parsed_article)
+
+
+def test_no_title(shared_datadir, parser):
+    article_name = "ptac108_no_title.xml"
+    with open(shared_datadir / article_name) as file:
+        content = ET.fromstring(file.read())
+        with raises(RequiredFieldNotFoundExtractionError):
+            parser._publisher_specific_parsing(content)
+
+
+def test_no_title_value(shared_datadir, parser):
+    article_name = "ptac108_no_title_value.xml"
+    with open(shared_datadir / article_name) as file:
+        content = ET.fromstring(file.read())
+        with raises(RequiredFieldNotFoundExtractionError):
+            parser._publisher_specific_parsing(content)
