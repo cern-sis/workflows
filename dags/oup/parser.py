@@ -142,7 +142,7 @@ class OUPParser(IParser):
                 )
         return authors
 
-    def __get_date(self, article):
+    def _get_date(self, article):
         year = article.find("year").text
         month = article.find("month").text
         day = article.find("day").text
@@ -158,4 +158,4 @@ class OUPParser(IParser):
             or article.find("front/article-meta/pub-date/[@pub-type='ppub']")
         )
         if date is not None:
-            return self.__get_date(date)
+            return self._get_date(date)
