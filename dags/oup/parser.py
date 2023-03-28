@@ -57,7 +57,7 @@ class OUPParser(IParser):
                 source="front/article-meta/title-group/article-title",
                 all_content_between_tags=True,
             ),
-            TextExtractor(
+            CustomExtractor(
                 destination="date_published",
                 extraction_function=self._get_published_date,
             ),
