@@ -285,7 +285,7 @@ def test_no_authors_value(shared_datadir, parser):
 
 def test_abstract(parsed_articles):
     abstracts = [
-        'We propose a method of detecting the dark matter axion by using two slabs of a conductor. The flat surfaces are set face to face, parallel to each other. An external magnetic field <italic>B</italic> parallel to the surfaces is applied. Radiation converted from the axion arises between the two slabs. When we tune the spacing <italic>l</italic> between the two surfaces such that <italic>l</italic> = &#960;/<italic>m</italic><sub><italic>a</italic></sub> with axion mass <italic>m</italic><sub><italic>a</italic></sub>, a resonance occurs so that the radiation becomes strong. Furthermore, the electric current flowing on the surface of the slabs is enhanced. We show that the electric current is large enough to be detectable at the resonance. It reaches 0.7 &#215; 10<sup>&#8722;9</sup>&#8201;A&#8201;<inline-formula><tex-math id="TM0001" notation="LaTeX">$(10^{-5}\\, \\mbox{eV}/m_a)^{1/2} \\, (B/5\\, \\mbox{T}) \\, (L/10\\, \\mbox{cm}) \\, (\\sigma /3.3\\times 10^7 \\, \\rm eV)$</tex-math></inline-formula> using 6N copper for the square slabs with side length <italic>L</italic> and high electrical conductivity &#963; at temperature <italic>T</italic> &#8764; 1&#8201;K. The power of the Joule heating is <inline-formula><tex-math id="TM0002" notation="LaTeX">$0.3\\times 10^{-22} \\, \\mbox{W} \\, (B/5 \\, \\mbox{T})^2 \\, (10^{-5} \\, \\mbox{eV}/m_a)^{1/2} \\, (L/10 \\, \\mbox{cm})^2 \\, (\\sigma /3.3\\times 10^7 \\, \\rm eV)$</tex-math></inline-formula>. When we amplify the power using an LC circuit with factor <italic>Q</italic><sub>LC</sub>, the signal-to-noise ratio is <inline-formula><tex-math id="TM0003" notation="LaTeX">$4.5\\times 10^{4} \\, (Q_\\mathrm{LC}/10^6) \\, (B/5 \\, \\mbox{T})^2 \\, (t_\\mathrm{obs}/1\\, \\mathrm{s})^{1/2}\\, (10^{-5} \\, \\mbox{eV}/m_a) \\, (L/10 \\, \\mbox{cm})^2 \\, (\\sigma /3.3\\times 10^7 \\, \\rm eV)$</tex-math></inline-formula> with an observation time of <italic>t</italic><sub>obs</sub>.',
+        'We propose a method of detecting the dark matter axion by using two slabs of aconductor. The flat surfaces are set face to face, parallel to each other. Anexternal magnetic field <italic>B</italic> parallel to the surfaces is applied.Radiation converted from the axion arises between the two slabs. When we tunethe spacing <italic>l</italic> between the two surfaces such that <italic>l</italic>= &#960;/<italic>m</italic><sub><italic>a</italic></sub> with axion mass <italic>m</italic><sub><italic>a</italic></sub>, a resonance occurs so that theradiation becomes strong. Furthermore, the electric current flowing on thesurface of the slabs is enhanced. We show that the electric current is largeenough to be detectable at the resonance. It reaches 0.7 &#215; 10<sup>&#8722;9</sup>&#8201;A&#8201;<inline-formula><tex-math id="TM0001" notation="LaTeX">$(10^{-5}\\, \\mbox{eV}/m_a)^{1/2} \\, (B/5\\, \\mbox{T}) \\, (L/10\\, \\mbox{cm}) \\, (\\sigma /3.3\\times 10^7 \\, \\rm eV)$</tex-math></inline-formula>using 6N copper for the square slabs with side length <italic>L</italic> andhigh electrical conductivity &#963; at temperature <italic>T</italic> &#8764;1&#8201;K. The power of the Joule heating is <inline-formula><tex-math id="TM0002" notation="LaTeX">$0.3\\times 10^{-22} \\, \\mbox{W} \\, (B/5 \\, \\mbox{T})^2 \\, (10^{-5} \\, \\mbox{eV}/m_a)^{1/2} \\, (L/10 \\, \\mbox{cm})^2 \\, (\\sigma /3.3\\times 10^7 \\, \\rm eV)$</tex-math></inline-formula>.When we amplify the power using an LC circuit with factor <italic>Q</italic><sub>LC</sub>, the signal-to-noise ratio is <inline-formula><tex-math id="TM0003" notation="LaTeX">$4.5\\times 10^{4} \\, (Q_\\mathrm{LC}/10^6) \\, (B/5 \\, \\mbox{T})^2 \\, (t_\\mathrm{obs}/1\\, \\mathrm{s})^{1/2}\\, (10^{-5} \\, \\mbox{eV}/m_a) \\, (L/10 \\, \\mbox{cm})^2 \\, (\\sigma /3.3\\times 10^7 \\, \\rm eV)$</tex-math></inline-formula>with an observation time of <italic>t</italic><sub>obs</sub>.',
         "We construct open-closed superstring interactions based on the open-closed homotopy algebra structure. This provides a classical open superstring field theory on general closed-superstring-field backgrounds described by classical solutions of the nonlinear equation\xa0of motion of the closed superstring field theory. We also give the corresponding WZW-like action through the map connecting the homotopy-based and WZW-like formulations.",
         "We study<italic>F</italic>-wave bottom mesons in heavy quark effective theory. The available experimental and theoretical data is used to calculate the masses of<italic>F</italic>-wave bottom mesons. The decay widths of bottom mesons are analyzed to find upper bounds for the associated couplings. We also construct Regge trajectories for our predicted data in the (<italic>J, M</italic><sup>2</sup>) plane, and our results nicely fit on Regge lines. Our results may provide crucial information for future experimental studies.",
         "The<italic>KBc</italic>algebra is a subalgebra that has been used to construct classical solutions in Witten&#8217;s open string field theory, such as the tachyon vacuum solution. The main purpose of this paper is to give various operator sets that satisfy the<italic>KBc</italic>algebra. In addition, since those sets can contain matter operators arbitrarily, we can reproduce the solution of Kiermaier, Okawa, and Soler, and that of Erler and Maccaferri. Starting with a single D-brane solution on the tachyon vacuum, we replace the original<italic>KBc</italic>in it with an appropriate set to generate each of the above solutions. Thus, it is expected that the<italic>KBc</italic>algebra, combined with the single D-brane solution, leads to a more unified description of classical solutions.",
@@ -313,7 +313,7 @@ def test_no_abstract_value(shared_datadir, parser):
 
 def test_titles(parsed_articles):
     titles = [
-        "Detectable electric current induced by the dark matter axion in a conductor",
+        "Detectable electric current induced by the dark matter axion in aconductor",
         "Open-closed homotopy algebra in superstring field theory",
         "Study of<italic>F</italic>-wave bottom mesons in heavy quark effective theory",
         "Generating string field theory solutions with matter operators from<italic>KBc</italic>algebra",
@@ -326,6 +326,22 @@ def test_no_title(shared_datadir, parser):
     article_name = "ptac108_no_title.xml"
     with open(shared_datadir / article_name) as file:
         content = ET.fromstring(file.read())
+        with raises(RequiredFieldNotFoundExtractionError):
+            parser._publisher_specific_parsing(content)
+
+
+def test_journal_volume(parsed_articles):
+    journal_volumes = ["2022", "2022", "2022", "2022"]
+    journal_volumes_parsed_article = [
+        article["journal_volume"] for article in parsed_articles
+    ]
+    assert set(journal_volumes) == set(journal_volumes_parsed_article)
+
+
+def test_no_journal_volume(shared_datadir, parser):
+    article_name = "ptab170_no_journal_volume.xml"
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
         with raises(RequiredFieldNotFoundExtractionError):
             parser._publisher_specific_parsing(content)
 
@@ -382,3 +398,35 @@ def test_no_journal_issue_value_article(shared_datadir, parser):
         content = parse_without_names_spaces(file.read())
         article = parser._publisher_specific_parsing(content)
         assert "journal_issue" not in article
+
+
+def test_no_journal_volume_value(shared_datadir, parser):
+    article_name = "ptab170_no_journal_volume_value.xml"
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
+        with raises(RequiredFieldNotFoundExtractionError):
+            parser._publisher_specific_parsing(content)
+
+
+def test_journal_year(parsed_articles):
+    journal_volumes = ["2022", "2022", "2022", "2022"]
+    journal_volumes_parsed_article = [
+        article["journal_year"] for article in parsed_articles
+    ]
+    assert set(journal_volumes) == set(journal_volumes_parsed_article)
+
+
+def test_no_journal_year(shared_datadir, parser):
+    article_name = "ptab170_no_journal_volume.xml"
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
+        with raises(RequiredFieldNotFoundExtractionError):
+            parser._publisher_specific_parsing(content)
+
+
+def test_no_year_volume_value(shared_datadir, parser):
+    article_name = "ptab170_no_journal_volume_value.xml"
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
+        with raises(RequiredFieldNotFoundExtractionError):
+            parser._publisher_specific_parsing(content)

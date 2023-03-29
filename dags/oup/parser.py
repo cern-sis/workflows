@@ -22,6 +22,7 @@ class OUPParser(IParser):
             "addendum": "addendum",
             "editorial": "editorial",
         }
+        self.year = None
 
         extractors = [
             CustomExtractor(
@@ -65,6 +66,15 @@ class OUPParser(IParser):
                 destination="journal_issue",
                 source="front/article-meta/issue",
                 required=False,
+            ),
+            CustomExtractor(
+                destination="journal_volume",
+                extraction_function=self._get_journal_volume,
+            ),
+            CustomExtractor(
+                destination="journal_year",
+                extraction_function=self._get_journal_year,
+                required=True,
             ),
         ]
         super().__init__(extractors)
@@ -164,3 +174,11 @@ class OUPParser(IParser):
         )
         if date is not None:
             return self._get_date(date)
+
+    def _get_journal_volume(self, article):
+        journal_volume = get_text_value(article.find("front/article-meta/volume"))
+        self.year = journal_volume
+        return journal_volume
+
+    def _get_journal_year(self, article):
+        return self.year

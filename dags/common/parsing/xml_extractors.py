@@ -155,4 +155,6 @@ class ConstantExtractor(IExtractor):
         self.value = value
 
     def extract(self, article: ET.Element):
+        if not self.value and self.required:
+            raise RequiredFieldNotFoundExtractionError(self.destination)
         return self.value
