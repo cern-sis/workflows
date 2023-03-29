@@ -61,6 +61,11 @@ class OUPParser(IParser):
                 destination="date_published",
                 extraction_function=self._get_published_date,
             ),
+            TextExtractor(
+                destination="journal_issue",
+                source="front/article-meta/issue",
+                required=False,
+            ),
         ]
         super().__init__(extractors)
 

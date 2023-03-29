@@ -358,3 +358,27 @@ def test_no_date_published_value(shared_datadir, parser):
         content = parse_without_names_spaces(file.read())
         article = parser._publisher_specific_parsing(content)
         assert "date_published" not in article
+
+
+def test_journal_issue(parsed_articles):
+    doc_types = sorted(["2", "9", "9", "9"])
+    parsed_articles_types = sorted(
+        [article["journal_issue"] for article in parsed_articles]
+    )
+    assert parsed_articles_types == doc_types
+
+
+def test_no_journal_issue_article(shared_datadir, parser):
+    article_name = "ptac113_no_journal_issue.xml"
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
+        article = parser._publisher_specific_parsing(content)
+        assert "journal_issue" not in article
+
+
+def test_no_journal_issue_value_article(shared_datadir, parser):
+    article_name = "ptac113_no_journal_issue_value.xml"
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
+        article = parser._publisher_specific_parsing(content)
+        assert "journal_issue" not in article
