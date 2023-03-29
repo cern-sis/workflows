@@ -76,6 +76,11 @@ class OUPParser(IParser):
                 extraction_function=self._get_journal_year,
                 required=True,
             ),
+            TextExtractor(
+                destination="journal_artid",
+                source="front/article-meta/elocation-id",
+                required=False,
+            ),
         ]
         super().__init__(extractors)
 

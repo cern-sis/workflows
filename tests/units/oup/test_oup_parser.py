@@ -430,3 +430,19 @@ def test_no_year_volume_value(shared_datadir, parser):
         content = parse_without_names_spaces(file.read())
         with raises(RequiredFieldNotFoundExtractionError):
             parser._publisher_specific_parsing(content)
+
+
+def test_journal_artid(parsed_articles):
+    journal_artids = ["021B01", "093B07", "093B08", "093B09"]
+    journal_artids_parsed_article = [
+        article["journal_artid"] for article in parsed_articles
+    ]
+    assert set(journal_artids) == set(journal_artids_parsed_article)
+
+
+def test_no_journal_artid(shared_datadir, parser):
+    article_name = "ptac120_without_journal_artid.xml"
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
+        article = parser._publisher_specific_parsing(content)
+        assert "journal_artid" not in article
