@@ -7,7 +7,7 @@ from common.parsing.xml_extractors import (
     CustomExtractor,
     TextExtractor,
 )
-from common.utils import get_text_value
+from common.utils import get_license_type_and_version_from_url, get_text_value
 from structlog import get_logger
 
 
@@ -86,6 +86,11 @@ class OUPParser(IParser):
                 source="front/article-meta/permissions/copyright-year",
                 extra_function=lambda x: int(x),
                 required=False,
+            ),
+            CustomExtractor(
+                destination="license",
+                extraction_function=self._get_license,
+                required=True,
             ),
         ]
         super().__init__(extractors)
@@ -193,3 +198,18 @@ class OUPParser(IParser):
 
     def _get_journal_year(self, article):
         return self.year
+
+    def _get_license(self, article: ET.Element):
+        licenses = []
+        licenses_nodes = article.findall(
+            "front/article-meta/permissions/license/license-p/ext-link"
+        )
+        for license_node in licenses_nodes:
+            try:
+                url = get_text_value(license_node)
+                type_and_version = get_license_type_and_version_from_url(url=url)
+                if type_and_version:
+                    licenses.append(type_and_version)
+            except (KeyError, TypeError):
+                self.logger.error("License is not found in XML.", dois=self.dois)
+        return licenses

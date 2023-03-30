@@ -470,3 +470,51 @@ def test_no_copyright_year_value(shared_datadir, parser):
         content = parse_without_names_spaces(file.read())
         article = parser._publisher_specific_parsing(content)
         assert "copyright_year" not in article
+
+
+def test_licenses(parsed_articles):
+    licenses = [
+        [
+            {
+                "url": "https://creativecommons.org/licenses/by/4.0/",
+                "license": "CC-BY-4.0",
+            }
+        ],
+        [
+            {
+                "url": "https://creativecommons.org/licenses/by/4.0/",
+                "license": "CC-BY-4.0",
+            }
+        ],
+        [
+            {
+                "url": "https://creativecommons.org/licenses/by/4.0/",
+                "license": "CC-BY-4.0",
+            }
+        ],
+        [
+            {
+                "url": "https://creativecommons.org/licenses/by/4.0/",
+                "license": "CC-BY-4.0",
+            }
+        ],
+    ]
+    licenses_parsed_article = [article["license"] for article in parsed_articles]
+    print(licenses)
+    assert licenses == licenses_parsed_article
+
+
+def test_licenses_no_license(shared_datadir, parser):
+    article_name = "ptac113_without_license.xml"
+    with open(shared_datadir / article_name) as file:
+        content = ET.fromstring(file.read())
+        with raises(RequiredFieldNotFoundExtractionError):
+            parser._publisher_specific_parsing(content)
+
+
+def test_licenses_no_license_value(shared_datadir, parser):
+    article_name = "ptac113_without_license_value.xml"
+    with open(shared_datadir / article_name) as file:
+        content = ET.fromstring(file.read())
+        with raises(RequiredFieldNotFoundExtractionError):
+            parser._publisher_specific_parsing(content)

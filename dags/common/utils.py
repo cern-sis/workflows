@@ -162,4 +162,9 @@ def parse_without_names_spaces(xml: str):
 
 def get_text_value(element: ET.Element):
     if element is not None:
-        return element.text
+        if element.text:
+            return clean_text(element.text)
+
+
+def clean_text(text):
+    return " ".join(text.split())
