@@ -940,23 +940,23 @@ def test_abstract(shared_datadir, parser):
         r" its unique advantage of a 2400 m rock coverage and long distance from nuclear p"
         r"ower plants, is ideal for MeV-scale neutrino experiments. Using a 1-ton prototyp"
         r"e detector of the Jinping Neutrino Experiment (JNE), we detected 343 high-energy"
-        r' cosmic-ray muons and (7.86<inline-formula xmlns:ns0="http://www.w3.org/1999/xli'
-        r'nk"><tex-math>$ \pm $</tex-math><inline-graphic ns0:href="cpc_46_8_085001_M1.jpg'
-        r'" ns0:type="simple" /></inline-formula>3.97) muon-induced neutrons from an 820.2'
-        r"8-day dataset at the first phase of CJPL (CJPL-I). Based on the muon-induced neu"
-        r"trons, we measured the corresponding muon-induced neutron yield in a liquid scin"
-        r'tillator to be<inline-formula xmlns:ns0="http://www.w3.org/1999/xlink"><tex-math'
-        r'>$(3.44 \pm 1.86_{\rm stat.}\pm $</tex-math><inline-graphic ns0:href="cpc_46_8_0'
-        r'85001_M2.jpg" ns0:type="simple" /></inline-formula><inline-formula xmlns:ns0="ht'
-        r'tp://www.w3.org/1999/xlink"><tex-math>$ 0.76_{\rm syst.})\times 10^{-4}$</tex-ma'
-        r'th><inline-graphic ns0:href="cpc_46_8_085001_M2-1.jpg" ns0:type="simple" /></inl'
-        r"ine-formula>&#956;<sup>&#8722;1</sup>g<sup>&#8722;1</sup>cm<sup>2</sup>at an ave"
-        r"rage muon energy of 340 GeV. We provided the first study for such neutron backgr"
-        r"ound at CJPL. A global fit including this measurement shows a power-law coeffici"
-        r'ent of (0.75<inline-formula xmlns:ns0="http://www.w3.org/1999/xlink"><tex-math>$'
-        r' \pm $</tex-math><inline-graphic ns0:href="cpc_46_8_085001_M3.jpg" ns0:type="sim'
-        r'ple" /></inline-formula>0.02) for the dependence of the neutron yield at the liq'
-        r"uid scintillator on muon energy."
+        r' cosmic-ray muons and (7.86 <inline-formula xmlns:ns0="http://www.w3.org/1999/xl'
+        r'ink"> <tex-math> $ \pm $ </tex-math> <inline-graphic ns0:href="cpc_46_8_085001_M'
+        r'1.jpg" ns0:type="simple" /> </inline-formula> 3.97) muon-induced neutrons from a'
+        r"n 820.28-day dataset at the first phase of CJPL (CJPL-I). Based on the muon-indu"
+        r"ced neutrons, we measured the corresponding muon-induced neutron yield in a liqu"
+        r'id scintillator to be <inline-formula xmlns:ns0="http://www.w3.org/1999/xlink"> '
+        r"<tex-math> $(3.44 \pm 1.86_{\rm stat.}\pm $ </tex-math> <inline-graphic ns0:href"
+        r'="cpc_46_8_085001_M2.jpg" ns0:type="simple" /> </inline-formula> <inline-formula'
+        r' xmlns:ns0="http://www.w3.org/1999/xlink"> <tex-math> $ 0.76_{\rm syst.})\times '
+        r'10^{-4}$ </tex-math> <inline-graphic ns0:href="cpc_46_8_085001_M2-1.jpg" ns0:typ'
+        r'e="simple" /> </inline-formula> &#956; <sup>&#8722;1</sup> g <sup>&#8722;1</sup>'
+        r" cm <sup>2</sup> at an average muon energy of 340 GeV. We provided the first stu"
+        r"dy for such neutron background at CJPL. A global fit including this measurement "
+        r'shows a power-law coefficient of (0.75 <inline-formula xmlns:ns0="http://www.w3.'
+        r'org/1999/xlink"> <tex-math> $ \pm $ </tex-math> <inline-graphic ns0:href="cpc_46'
+        r'_8_085001_M3.jpg" ns0:type="simple" /> </inline-formula> 0.02) for the dependenc'
+        r"e of the neutron yield at the liquid scintillator on muon energy."
     )
 
 
@@ -1335,7 +1335,7 @@ def test_title(shared_datadir, parser):
     parsed_article = parser._publisher_specific_parsing(article)
     assert (
         parsed_article["title"]
-        == 'Measurement of muon-induced neutron yield at the China Jinping Underground Laboratory<xref ref-type="fn" rid="cpc_46_8_085001_fn1">*</xref><fn id="cpc_46_8_085001_fn1"><label>*</label><p>Supported in part by the National Natural Science Foundation of China (11620101004, 11475093, 12127808), the Key Laboratory of Particle &amp; Radiation Imaging (TsinghuaUniversity), the CAS Center for Excellence in Particle Physics (CCEPP), and Guangdong Basic and Applied Basic Research Foundation (2019A1515012216). Portion of this work performed at Brookhaven National Laboratory is supported in part by the United States Department of Energy (DE-SC0012704)</p></fn>'
+        == 'Measurement of muon-induced neutron yield at the China Jinping Underground Laboratory <xref ref-type="fn" rid="cpc_46_8_085001_fn1">*</xref> <fn id="cpc_46_8_085001_fn1"> <label>*</label> <p>Supported in part by the National Natural Science Foundation of China (11620101004, 11475093, 12127808), the Key Laboratory of Particle &amp; Radiation Imaging (TsinghuaUniversity), the CAS Center for Excellence in Particle Physics (CCEPP), and Guangdong Basic and Applied Basic Research Foundation (2019A1515012216). Portion of this work performed at Brookhaven National Laboratory is supported in part by the United States Department of Energy (DE-SC0012704)</p> </fn>'
     )
 
 
@@ -1442,5 +1442,5 @@ def test_title_starting_with_tags(shared_datadir, parser):
     parsed_article = parser._publisher_specific_parsing(article)
     assert (
         parsed_article["title"]
-        == '<italic toggle="yes">R</italic>-Symmetric NMSSM<xref ref-type="fn" rid="cpc_47_4_043105_fn1">*</xref><fn id="cpc_47_4_043105_fn1"><label>*</label><p>Supported in part by the National Natural Science Foundation of China (11775039), the High-level Talents Research and Startup Foundation Projects for Doctors of Zhoukou Normal University (ZKNUC2021006), and Scientific research projects of universities in Henan Province, China (23A140027).</p></fn>'
+        == '<italic toggle="yes">R</italic>-Symmetric NMSSM <xref ref-type="fn" rid="cpc_47_4_043105_fn1">*</xref> <fn id="cpc_47_4_043105_fn1"><label>*</label><p>Supported in part by the National Natural Science Foundation of China (11775039), the High-level Talents Research and Startup Foundation Projects for Doctors of Zhoukou Normal University (ZKNUC2021006), and Scientific research projects of universities in Henan Province, China (23A140027).</p></fn>'
     )

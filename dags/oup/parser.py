@@ -8,7 +8,11 @@ from common.parsing.xml_extractors import (
     CustomExtractor,
     TextExtractor,
 )
-from common.utils import get_license_type_and_version_from_url, get_text_value
+from common.utils import (
+    clean_text,
+    get_license_type_and_version_from_url,
+    get_text_value,
+)
 from structlog import get_logger
 
 
@@ -52,7 +56,6 @@ class OUPParser(IParser):
                 destination="abstract",
                 source="front/article-meta/abstract/p",
                 all_content_between_tags=True,
-                required=True,
             ),
             TextExtractor(
                 destination="title",
@@ -87,6 +90,11 @@ class OUPParser(IParser):
                 source="front/article-meta/permissions/copyright-year",
                 extra_function=lambda x: int(x),
                 required=False,
+            ),
+            CustomExtractor(
+                destination="journal_title",
+                extraction_function=self._get_journal_title,
+                required=True,
             ),
             CustomExtractor(
                 destination="license",
@@ -203,6 +211,30 @@ class OUPParser(IParser):
 
     def _get_journal_year(self, article):
         return self.year
+
+    def _get_journal_title(self, article: ET.Element):
+        journal_title = get_text_value(
+            article.find(
+                "front/journal-meta/journal-title-group/journal-title",
+            )
+        )
+        if journal_title:
+            return clean_text(journal_title)
+        journal_title_short_form = get_text_value(
+            article.find(
+                "front/journal-meta/journal-title-group/abbrev-journal-title/[@abbrev-type='pubmed']"
+            )
+        )
+        if journal_title_short_form:
+            return clean_text(journal_title_short_form)
+
+        journal_publisher = get_text_value(
+            article.find(
+                "front/journal-meta/journal-title-group/abbrev-journal-title/[@abbrev-type='publisher']"
+            )
+        )
+        if journal_publisher:
+            return clean_text(journal_publisher)
 
     def _get_license(self, article: ET.Element):
         licenses = []

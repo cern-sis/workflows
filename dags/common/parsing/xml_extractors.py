@@ -42,10 +42,10 @@ class TextExtractor(IExtractor):
             values_math_expression_and_styling_tags = [
                 ET.tostring(el).decode("ascii") for el in node
             ]
-            extracted_value = "".join(
+            extracted_value = " ".join(
                 values_in_regular_tags + values_math_expression_and_styling_tags
             )
-            return WHITE_SPACES.sub("", extracted_value)
+            return WHITE_SPACES.sub(" ", extracted_value).strip()
         except AttributeError:
             self.logger.error(f"{self.destination} is not found in XML")
             return
