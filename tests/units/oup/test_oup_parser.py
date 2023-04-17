@@ -290,7 +290,6 @@ def test_abstract(parsed_articles):
         "We study <italic>F</italic> -wave bottom mesons in heavy quark effective theory. The available experimental and theoretical data is used to calculate the masses of <italic>F</italic> -wave bottom mesons. The decay widths of bottom mesons are analyzed to find upper bounds for the associated couplings. We also construct Regge trajectories for our predicted data in the ( <italic>J, M</italic> <sup>2</sup> ) plane, and our results nicely fit on Regge lines. Our results may provide crucial information for future experimental studies.",
         "The <italic>KBc</italic> algebra is a subalgebra that has been used to construct classical solutions in Witten&#8217;s open string field theory, such as the tachyon vacuum solution. The main purpose of this paper is to give various operator sets that satisfy the <italic>KBc</italic> algebra. In addition, since those sets can contain matter operators arbitrarily, we can reproduce the solution of Kiermaier, Okawa, and Soler, and that of Erler and Maccaferri. Starting with a single D-brane solution on the tachyon vacuum, we replace the original <italic>KBc</italic> in it with an appropriate set to generate each of the above solutions. Thus, it is expected that the <italic>KBc</italic> algebra, combined with the single D-brane solution, leads to a more unified description of classical solutions.",
     ]
-
     abstracts_parsed_article = [article["abstract"] for article in parsed_articles]
     assert set(abstracts) == set(abstracts_parsed_article)
 
@@ -319,7 +318,7 @@ def test_titles(parsed_articles):
         "Generating string field theory solutions with matter operators from <italic>KBc</italic> algebra",
     ]
     titles_parsed_article = [article["title"] for article in parsed_articles]
-    assert set(titles) == set(titles_parsed_article)
+    assert sorted(titles) == sorted(titles_parsed_article)
 
 
 def test_no_title(shared_datadir, parser):
@@ -470,6 +469,35 @@ def test_no_copyright_year_value(shared_datadir, parser):
         content = parse_without_names_spaces(file.read())
         article = parser._publisher_specific_parsing(content)
         assert "copyright_year" not in article
+
+
+def test_copyright_statement(parsed_articles):
+    statements = [
+        "© The Author(s) 2022. Published by Oxford University Press on behalf of the Physical Society of Japan.",
+        "© The Author(s) 2022. Published by Oxford University Press on behalf of the Physical Society of Japan.",
+        "© The Author(s) 2022. Published by Oxford University Press on behalf of the Physical Society of Japan.",
+        "© The Author(s) 2022. Published by Oxford University Press on behalf of the Physical Society of Japan.",
+    ]
+    statements_parsed_article = [
+        article["copyright_statement"] for article in parsed_articles
+    ]
+    assert set(statements) == set(statements_parsed_article)
+
+
+def test_no_copyright_statement(shared_datadir, parser):
+    article_name = "ptac108_without_copyright_statement.xml"
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
+        article = parser._publisher_specific_parsing(content)
+        assert "copyright_statement" not in article
+
+
+def test_no_copyright_statement_value(shared_datadir, parser):
+    article_name = "ptac108_without_copyright_statement_value.xml"
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
+        article = parser._publisher_specific_parsing(content)
+        assert "copyright_statement" not in article
 
 
 def test_journal_title(parsed_articles):

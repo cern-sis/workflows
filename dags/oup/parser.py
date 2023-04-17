@@ -91,6 +91,12 @@ class OUPParser(IParser):
                 extra_function=lambda x: int(x),
                 required=False,
             ),
+            TextExtractor(
+                destination="copyright_statement",
+                source="front/article-meta/permissions/copyright-statement",
+                all_content_between_tags=True,
+                required=False,
+            ),
             CustomExtractor(
                 destination="journal_title",
                 extraction_function=self._get_journal_title,
