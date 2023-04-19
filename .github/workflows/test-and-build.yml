@@ -59,14 +59,12 @@ jobs:
 
       - name: Login to DockerHub
         uses: docker/login-action@v1
-        if: ${{ github.event_name == 'push' }}
         with:
           registry: registry.cern.ch
           username: ${{ secrets.HARBOR_USERNAME }}
           password: ${{ secrets.HARBOR_PASSWORD }}
 
       - name: Push
-        if: ${{ github.event_name == 'push' }}
         run: |
           docker push $DOCKER_IMAGE
 
