@@ -37,7 +37,7 @@ class OUPParser(IParser):
                 destination="page_nr",
                 source="front/article-meta/counts/page-count",
                 attribute="count",
-                extra_function=lambda x: int(x),
+                extra_function=lambda x: [int(x)],
             ),
             CustomExtractor(
                 destination="journal_doctype",
@@ -115,7 +115,7 @@ class OUPParser(IParser):
         super().__init__(extractors)
 
     def _get_dois(self, article: ET.Element):
-        source = ".front/article-meta/article-id/[@pub-id-type='doi']"
+        source = "front/article-meta/article-id/[@pub-id-type='doi']"
         doi_element = article.find(source)
         doi = get_text_value(doi_element)
         if not doi:
@@ -141,15 +141,16 @@ class OUPParser(IParser):
         return journal_doctype
 
     def _get_arxiv_eprints(self, article: ET.Element):
-        arxivs_raw = get_text_value(
-            article.find("front/article-meta/article-id/[@pub-id-type='arxiv']")
+        arxiv_eprints = []
+        arxivs_raw = article.findall(
+            "front/article-meta/article-id/[@pub-id-type='arxiv']"
         )
-        if not arxivs_raw:
-            return
-        arxiv_eprint = arxivs_raw.lower().replace("arxiv:", "")
-        if not arxiv_eprint:
-            return
-        return {"value": arxiv_eprint}
+        for arxiv in arxivs_raw:
+            arxiv_text = get_text_value(arxiv)
+            arxiv_eprint = arxiv_text.lower().replace("arxiv:", "")
+            if arxiv_eprint:
+                arxiv_eprints.append({"value": arxiv_eprint})
+        return arxiv_eprints
 
     def _get_authors(self, article: ET.Element):
         contributions = article.findall(

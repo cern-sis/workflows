@@ -26,7 +26,7 @@ def migrate_files(
             continue
         with zipfile.ZipFile(file_bytes) as zip:
             for zip_filename in zip.namelist():
-                file_prefix = _file.split(".")[0]
+                file_prefix = ".".join(_file.split(".")[:-1])
                 file_content = zip.read(zip_filename)
                 s3_filename = os.path.join(file_prefix, zip_filename)
                 repo.save(s3_filename, io.BytesIO(file_content))

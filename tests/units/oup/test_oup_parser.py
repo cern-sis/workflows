@@ -55,7 +55,7 @@ def test_no_doi_value_article(shared_datadir, parser):
 
 
 def test_page_nr(parsed_articles):
-    page_nrs = [10, 13, 16, 27]
+    page_nrs = [[10], [13], [16], [27]]
     page_nrs_parsed_article = [article["page_nr"] for article in parsed_articles]
     assert sorted(page_nrs) == sorted(page_nrs_parsed_article)
 
@@ -114,10 +114,10 @@ def test_other_journal_doc_types(other_doc_type_article):
 
 def test_arxiv(parsed_articles):
     doc_types = [
-        {"value": "2111.09468"},
-        {"value": "2204.01249"},
-        {"value": "2207.02498"},
-        {"value": "2205.14599"},
+        [{"value": "2111.09468"}],
+        [{"value": "2204.01249"}],
+        [{"value": "2207.02498"}],
+        [{"value": "2205.14599"}],
     ]
     for doc_type, article_doc_type in zip(doc_types, parsed_articles):
         assert doc_type == article_doc_type["arxiv_eprints"]
@@ -565,7 +565,6 @@ def test_licenses(parsed_articles):
         ],
     ]
     licenses_parsed_article = [article["license"] for article in parsed_articles]
-    print(licenses)
     assert licenses == licenses_parsed_article
 
 

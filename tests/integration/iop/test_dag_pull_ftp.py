@@ -85,7 +85,7 @@ def test_dag_run(dag: DAG, iop_empty_repo):
             "pdf": "extracted/2022-09-24T03_01_43_content/1674-1137/1674-1137_46/1674-1137_46_10/1674-1137_46_10_103108/cpc_46_10_103108.pdf",
             "xml": "extracted/2022-09-24T03_01_43_content/1674-1137/1674-1137_46/1674-1137_46_10/1674-1137_46_10_103108/cpc_46_10_103108.xml",
         },
-        {"xml": "extracted/aca95c/aca95c.xml"},
+        {"xml": "extracted/aca95c.xml/aca95c.xml"},
     ]
 
     assert iop_empty_repo.find_all() == expected_files
@@ -155,7 +155,7 @@ def test_dag_migrate_from_FTP(iop_empty_repo):
                 "pdf": "extracted/2022-09-24T03_01_43_content/1674-1137/1674-1137_46/1674-1137_46_10/1674-1137_46_10_103108/cpc_46_10_103108.pdf",
                 "xml": "extracted/2022-09-24T03_01_43_content/1674-1137/1674-1137_46/1674-1137_46_10/1674-1137_46_10_103108/cpc_46_10_103108.xml",
             },
-            {"xml": "extracted/aca95c/aca95c.xml"},
+            {"xml": "extracted/aca95c.xml/aca95c.xml"},
         ]
 
 
