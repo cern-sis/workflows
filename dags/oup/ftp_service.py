@@ -1,9 +1,9 @@
 import os
 
-from common.sftp_service import SFTPService
+from common.ftp_service import FTPService
 
 
-class OUPSFTPService(SFTPService):
+class OUPFTPService(FTPService):
     def __init__(self):
         super().__init__(
             host=os.getenv("OUP_FTP_HOST", "localhost"),

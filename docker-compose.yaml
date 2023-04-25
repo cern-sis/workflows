@@ -39,13 +39,16 @@
 # Feel free to modify this file to suit your needs.
 ---
 version: "3"
-x-airflow-common: &airflow-common
+x-airflow-common:
   # In order to add custom dependencies or upgrade provider packages you can use your extended image.
   # Comment the image line, place your Dockerfile in the directory where you placed the docker-compose.yaml
   # and uncomment the "build" line below, Then run `docker-compose build` to build the images.
   # image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:2.2.4}
+  &airflow-common
   build: .
-  environment: &airflow-common-env # PATH: /root/.poetry/bin:${PATH}
+  environment:
+    # PATH: /root/.poetry/bin:${PATH}
+    &airflow-common-env
     AIRFLOW__CORE__EXECUTOR: CeleryExecutor
     AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
@@ -110,6 +113,19 @@ services:
     command: airflow:airflow:::upload
     restart: always
 
+  ftp:
+    container_name: ftp-server
+    image: garethflowers/ftp-server
+    environment:
+      - FTP_USER=airflow
+      - FTP_PASS=airflow
+    restart: always
+    ports:
+      - "20-21:20-21/tcp"
+      - "40000-40009:40000-40009/tcp" # passive mode
+    volumes:
+      - ./data:/home/airflow/upload
+
   s3:
     image: minio/minio
     expose:
@@ -128,16 +144,7 @@ services:
     depends_on:
       - s3
     entrypoint: >
-      /bin/sh -c "
-      sleep 10;
-      /usr/bin/mc alias set airflow http://s3:9000 airflow Airflow01;
-      /usr/bin/mc mb airflow/springer;
-      /usr/bin/mc mb airflow/aps;
-      /usr/bin/mc mb airflow/hindawi;
-      /usr/bin/mc mb airflow/iop;
-      /usr/bin/mc mb airflow/oup;
-      exit 0;
-      "
+      /bin/sh -c " sleep 10; /usr/bin/mc alias set airflow http://s3:9000 airflow Airflow01; /usr/bin/mc mb airflow/springer; /usr/bin/mc mb airflow/aps; /usr/bin/mc mb airflow/hindawi; /usr/bin/mc mb airflow/iop; /usr/bin/mc mb airflow/oup; exit 0; "
 
   airflow-webserver:
     <<: *airflow-common

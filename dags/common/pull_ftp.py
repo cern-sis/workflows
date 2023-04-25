@@ -5,14 +5,17 @@ import zipfile
 from datetime import datetime
 
 from airflow.api.common import trigger_dag
+from common.ftp_service import FTPService
 from common.repository import IRepository
 from common.sftp_service import SFTPService
 from structlog import PrintLogger
 
+SFTP_FTP_TYPE = (FTPService, SFTPService)
+
 
 def migrate_files(
     filenames,
-    sftp: SFTPService,
+    s_ftp: SFTP_FTP_TYPE,
     repo: IRepository,
     logger: PrintLogger,
 ):
@@ -20,7 +23,7 @@ def migrate_files(
     extracted_filenames = []
     for _file in filenames:
         logger.msg("Getting file from SFTP.", file=_file)
-        file_bytes = sftp.get_file(_file)
+        file_bytes = s_ftp.get_file(_file)
         if not zipfile.is_zipfile(file_bytes):
             logger.msg("File is not a zipfile, processing next file.")
             continue
@@ -37,7 +40,7 @@ def migrate_files(
 
 
 def migrate_from_ftp(
-    sftp: SFTPService, repo: IRepository, logger: PrintLogger, **kwargs
+    s_ftp: SFTP_FTP_TYPE, repo: IRepository, logger: PrintLogger, **kwargs
 ):
     params = kwargs["params"]
     force_pull_specific_files = (
@@ -52,10 +55,10 @@ def migrate_from_ftp(
     )
 
     if force_pull_all_files:
-        return _force_pull(sftp, repo, logger, **kwargs)
+        return _force_pull(s_ftp, repo, logger, **kwargs)
     elif force_pull_specific_files:
-        return _filenames_pull(sftp, repo, logger, **kwargs)
-    return _differential_pull(sftp, repo, logger, **kwargs)
+        return _filenames_pull(s_ftp, repo, logger, **kwargs)
+    return _differential_pull(s_ftp, repo, logger, **kwargs)
 
 
 def reprocess_files(repo: IRepository, logger: PrintLogger, **kwargs):
@@ -65,15 +68,15 @@ def reprocess_files(repo: IRepository, logger: PrintLogger, **kwargs):
     return _find_files_in_zip(filenames, repo)
 
 
-def _force_pull(sftp: SFTPService, repo: IRepository, logger: PrintLogger, **kwargs):
+def _force_pull(s_ftp: SFTP_FTP_TYPE, repo: IRepository, logger: PrintLogger, **kwargs):
     logger.msg("Force Pulling from SFTP.")
     excluded_directories = kwargs["params"]["excluded_directories"]
-    filenames = sftp.list_files(excluded_directories=excluded_directories)
-    return migrate_files(filenames, sftp, repo, logger)
+    filenames = s_ftp.list_files(excluded_directories=excluded_directories)
+    return migrate_files(filenames, s_ftp, repo, logger)
 
 
 def _filenames_pull(
-    sftp: SFTPService,
+    s_ftp: SFTP_FTP_TYPE,
     repo: IRepository,
     logger: PrintLogger,
     **kwargs,
@@ -81,7 +84,7 @@ def _filenames_pull(
     filenames_pull_params = kwargs["params"]["filenames_pull"]
     filenames = filenames_pull_params["filenames"]
     logger.msg("Pulling specified filenames from SFTP")
-    return migrate_files(filenames, sftp, repo, logger)
+    return migrate_files(filenames, s_ftp, repo, logger)
 
 
 def _find_files_in_zip(filenames, repo: IRepository):
@@ -99,14 +102,14 @@ def _find_files_in_zip(filenames, repo: IRepository):
 
 
 def _differential_pull(
-    sftp: SFTPService, repo: IRepository, logger: PrintLogger, **kwargs
+    s_ftp: SFTP_FTP_TYPE, repo: IRepository, logger: PrintLogger, **kwargs
 ):
     logger.msg("Pulling missing files only.")
     excluded_directories = kwargs["params"]["excluded_directories"]
-    sftp_files = sftp.list_files(excluded_directories=excluded_directories)
+    sftp_files = s_ftp.list_files(excluded_directories=excluded_directories)
     s3_files = repo.get_all_raw_filenames()
     diff_files = list(filter(lambda x: x not in s3_files, sftp_files))
-    return migrate_files(diff_files, sftp, repo, logger)
+    return migrate_files(diff_files, s_ftp, repo, logger)
 
 
 def trigger_file_processing(

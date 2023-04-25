@@ -1,9 +1,9 @@
-from oup.sftp_service import OUPSFTPService
+from oup.ftp_service import OUPFTPService
 
 
 def test_oup_sftp_path():
-    with OUPSFTPService() as sftp:
-        files = sftp.list_files()
+    with OUPFTPService() as ftp:
+        files = ftp.list_files()
     assert sorted(files) == sorted(
         [
             "2022-09-22_00:30:02_ptep_iss_2022_9.img.zip",

@@ -32,7 +32,7 @@ airflow:
 	echo -e "\033[0;32m Airflow Started. \033[0m"
 
 compose:
-	docker-compose up -d redis postgres sftp s3 create_buckets
+	docker-compose up -d redis postgres sftp ftp s3 create_buckets
 	sleep 5
 
 stop:

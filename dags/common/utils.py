@@ -2,7 +2,9 @@ import datetime
 import json
 import re
 import xml.etree.ElementTree as ET
+from ftplib import error_perm
 from io import StringIO
+from os.path import basename
 from stat import S_ISDIR, S_ISREG
 
 from common.constants import (
@@ -97,6 +99,15 @@ def walk_sftp(sftp, remotedir, paths):
             walk_sftp(sftp=sftp, remotedir=remotepath, paths=paths)
         elif S_ISREG(mode):
             paths.append(remotepath)
+
+
+def walk_ftp(ftp, remotedir, paths):
+    for entry in ftp.nlst(remotedir):
+        try:
+            ftp.cwd(entry)
+            walk_sftp(ftp=ftp, remotedir=entry, paths=paths)
+        except error_perm:
+            paths.append(basename(entry))
 
 
 def construct_license(license_type, version, url=None):

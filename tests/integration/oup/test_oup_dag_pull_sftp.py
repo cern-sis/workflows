@@ -7,8 +7,8 @@ from airflow.models.dagrun import DagRun
 from airflow.utils.state import DagRunState
 from busypie import SECOND, wait
 from common.pull_ftp import migrate_from_ftp, trigger_file_processing
+from oup.ftp_service import OUPFTPService
 from oup.repository import OUPRepository
-from oup.sftp_service import OUPSFTPService
 from structlog import get_logger
 
 DAG_NAME = "oup_pull_ftp"
@@ -59,9 +59,9 @@ def test_dag_run(dag: DAG, oup_empty_repo):
 
 def test_dag_migrate_from_FTP(oup_empty_repo):
     assert len(oup_empty_repo.find_all()) == 0
-    with OUPSFTPService() as sftp:
+    with OUPFTPService() as ftp:
         migrate_from_ftp(
-            sftp,
+            ftp,
             oup_empty_repo,
             get_logger().bind(class_name="test_logger"),
             **{

@@ -1,10 +1,10 @@
 import airflow
 import common.pull_ftp as pull_ftp
 from airflow.decorators import dag, task
+from common.ftp_service import FTPService
 from common.repository import IRepository
-from common.sftp_service import SFTPService
+from oup.ftp_service import OUPFTPService
 from oup.repository import OUPRepository
-from oup.sftp_service import OUPSFTPService
 from structlog import get_logger
 
 
@@ -21,9 +21,7 @@ def oup_pull_ftp():
 
     @task()
     def migrate_from_ftp(
-        sftp: SFTPService = OUPSFTPService(),
-        repo: IRepository = OUPRepository(),
-        **kwargs
+        ftp: FTPService = OUPFTPService(), repo: IRepository = OUPRepository(), **kwargs
     ):
         params = kwargs["params"]
         specific_files = (
@@ -35,8 +33,8 @@ def oup_pull_ftp():
             specific_files_names = pull_ftp.reprocess_files(repo, logger, **kwargs)
             return specific_files_names
 
-        with sftp:
-            return pull_ftp.migrate_from_ftp(sftp, repo, logger, **kwargs)
+        with ftp:
+            return pull_ftp.migrate_from_ftp(ftp, repo, logger, **kwargs)
 
     @task()
     def trigger_file_processing(
