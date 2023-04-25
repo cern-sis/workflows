@@ -5,7 +5,7 @@ import re
 import traceback
 
 from common.exceptions import DirectoryNotFoundException, NotConnectedException
-from common.utils import append_file_if_not_in_excluded_directory, walk_ftp
+from common.utils import append_not_excluded_files, walk_ftp
 from structlog import get_logger
 
 
@@ -41,11 +41,13 @@ class FTPService:
         self.connection = self.__connect()
         return self
 
-    def __exit__(self, exc_type, exc_value, tb):
+    def __exit__(self, exception_type, exception_value, tb):
         if self.connection:
             self.connection.close()
-        if exc_type is not None:
-            formed_exception = traceback.format_exception_only(exc_type, exc_value)
+        if exception_type is not None:
+            formed_exception = traceback.format_exception_only(
+                exception_type, exception_value
+            )
             self.logger.error(
                 "An error occurred while exiting FTPService",
                 execption=formed_exception,
@@ -59,7 +61,7 @@ class FTPService:
             filtered_files = []
             walk_ftp(ftp=self.connection, remotedir=self.dir, paths=file_names)
             for file_name in file_names:
-                append_file_if_not_in_excluded_directory(
+                append_not_excluded_files(
                     re.sub(self.dir + "/", "", file_name),
                     excluded_directories,
                     filtered_files,
@@ -71,9 +73,8 @@ class FTPService:
     def get_file(self, file):
         try:
             file_contents = io.BytesIO()
-            self.connection.retrbinary(
-                f"RETR {os.path.join(self.dir, file)}", file_contents.write
-            )
+            file_path = os.path.join(self.dir, file)
+            self.connection.retrbinary(f"RETR {file_path}", file_contents.write)
             return file_contents
         except AttributeError:
             raise NotConnectedException

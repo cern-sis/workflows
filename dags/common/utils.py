@@ -74,9 +74,7 @@ def extract_text(article, path, field_name, dois):
         return
 
 
-def append_file_if_not_in_excluded_directory(
-    filename, exclude_directories, list_of_files
-):
+def append_not_excluded_files(filename, exclude_directories, list_of_files):
     if not exclude_directories or not (
         any(re.search(exclude, filename) for exclude in exclude_directories)
     ):
