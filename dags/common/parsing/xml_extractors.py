@@ -53,7 +53,7 @@ class TextExtractor(IExtractor):
     def _process_text_with_extra_function(self, text):
         if text:
             try:
-                return self.extra_function(text)
+                return self.extra_function(text.replace('"', "'"))
             except Exception:
                 self.logger.error("Error in extra function with value", text=text)
 
