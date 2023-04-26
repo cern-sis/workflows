@@ -103,7 +103,7 @@ def walk_ftp(ftp, remotedir, paths):
     for entry in ftp.nlst(remotedir):
         try:
             ftp.cwd(entry)
-            walk_sftp(ftp=ftp, remotedir=entry, paths=paths)
+            walk_ftp(ftp=ftp, remotedir=entry, paths=paths)
         except error_perm:
             paths.append(basename(entry))
 
