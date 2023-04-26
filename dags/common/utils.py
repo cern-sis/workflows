@@ -105,6 +105,7 @@ def walk_ftp(ftp, remotedir, paths):
             ftp.cwd(entry)
             walk_ftp(ftp=ftp, remotedir=entry, paths=paths)
         except error_perm:
+            ftp.cwd("/")
             paths.append(basename(entry))
 
 
