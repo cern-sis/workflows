@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 
 from common.constants import ARXIV_EXTRACTION_PATTERN
+from common.enhancer import Enhancer
 from common.exceptions import UnknownLicense
 from common.parsing.xml_extractors import RequiredFieldNotFoundExtractionError
 from common.utils import parse_to_ET_element, preserve_cdata
@@ -1443,4 +1444,15 @@ def test_title_starting_with_tags(shared_datadir, parser):
     assert (
         parsed_article["title"]
         == "<italic toggle='yes'>R</italic>-Symmetric NMSSM <xref ref-type='fn' rid='cpc_47_4_043105_fn1'>*</xref> <fn id='cpc_47_4_043105_fn1'><label>*</label><p>Supported in part by the National Natural Science Foundation of China (11775039), the High-level Talents Research and Startup Foundation Projects for Doctors of Zhoukou Normal University (ZKNUC2021006), and Scientific research projects of universities in Henan Province, China (23A140027).</p></fn>"
+    )
+
+
+def test_title_starting_with_tags_after_enhancer(shared_datadir, parser):
+    content = (shared_datadir / "aca95c.xml").read_text()
+    article = ET.fromstring(content)
+    parsed_article = parser.parse(article)
+    enhanced_file = Enhancer()("IOP", parsed_article)
+    assert (
+        enhanced_file["titles"][0]["title"]
+        == "<italic toggle='yes'>R</italic>-Symmetric NMSSM <xref ref-type='fn' rid='cpc_47_4_043105_fn1'>*</xref>"
     )

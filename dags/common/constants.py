@@ -11,3 +11,4 @@ CREATIVE_COMMONS_PATTERN = re.compile(r".*(creative\s{0,}commons).*", flags=re.I
 BY_PATTERN = re.compile(r".*(attribution).*", flags=re.I)
 WHITE_SPACES = re.compile(r"[\n\t]{1,}" + r"\s{2,}")
 CDATA_PATTERN = re.compile(r"<\?CDATA(.*)\?>")
+FN_REGEX = re.compile(r"<fn.*<\/fn>")
