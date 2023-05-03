@@ -74,7 +74,7 @@ class FTPService:
         try:
             file_contents = io.BytesIO()
             file_path = os.path.join(self.dir, file)
-            self.logger.msg(f'Downloading file ', file_path=file_path)
+            self.logger.msg("Downloading file ", file_path=file_path)
             self.connection.retrbinary(f"RETR {file_path}", file_contents.write)
             return file_contents
         except AttributeError:

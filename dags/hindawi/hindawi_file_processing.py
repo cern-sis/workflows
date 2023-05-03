@@ -27,7 +27,7 @@ def hindawi_validate_record(enriched_file):
     validate(enriched_file, schema)
 
 
-@dag(schedule_interval=None, start_date=airflow.utils.dates.days_ago(0))
+@dag(schedule=None, start_date=airflow.utils.dates.days_ago(0))
 def hindawi_file_processing():
     @task()
     def parse(**kwargs):

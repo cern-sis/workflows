@@ -2,7 +2,7 @@ import json
 import logging
 import os
 
-import airflow
+import pendulum
 from airflow.decorators import dag, task
 from aps.aps_api_client import APSApiClient
 from aps.aps_params import APSParams
@@ -13,8 +13,8 @@ from common.utils import set_harvesting_interval
 
 
 @dag(
-    start_date=airflow.utils.dates.days_ago(0),
-    schedule_interval="@hourly",
+    start_date=pendulum.today("UTC").add(days=-1),
+    schedule="@hourly",
     params={"start_date": None, "until_date": None, "record_doi": None},
 )
 def aps_fetch_api():

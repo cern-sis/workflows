@@ -1,5 +1,5 @@
-import airflow
 import common.pull_ftp as pull_ftp
+import pendulum
 from airflow.decorators import dag, task
 from iop.repository import IOPRepository
 from iop.sftp_service import IOPSFTPService
@@ -7,7 +7,7 @@ from structlog import get_logger
 
 
 @dag(
-    start_date=airflow.utils.dates.days_ago(0),
+    start_date=pendulum.today("UTC").add(days=-1),
     params={
         "excluded_directories": [],
         "force_pull": False,

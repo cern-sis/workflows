@@ -36,7 +36,7 @@ def springer_validate_record(enriched_file):
     validate(enriched_file, schema)
 
 
-@dag(schedule_interval=None, start_date=airflow.utils.dates.days_ago(0))
+@dag(schedule=None, start_date=airflow.utils.dates.days_ago(0))
 def springer_process_file():
     @task()
     def parse_file(**kwargs):

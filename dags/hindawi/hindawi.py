@@ -1,7 +1,7 @@
 import logging
 import os
 
-import airflow
+import pendulum
 from airflow.decorators import dag, task
 from common.repository import IRepository
 from common.utils import set_harvesting_interval
@@ -12,8 +12,8 @@ from hindawi.utils import save_file_in_s3, split_xmls, trigger_file_processing_D
 
 
 @dag(
-    start_date=airflow.utils.dates.days_ago(0),
-    schedule_interval="30 */3 * * *",
+    start_date=pendulum.today("UTC").add(days=-1),
+    schedule="30 */3 * * *",
     params={"start_date": None, "until_date": None, "record_doi": None},
 )
 def hindawi_fetch_api():

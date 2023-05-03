@@ -1,5 +1,5 @@
-import airflow
 import common.pull_ftp as pull_ftp
+import pendulum
 from airflow.decorators import dag, task
 from springer.repository import SpringerRepository
 from springer.sftp_service import SpringerSFTPService
@@ -7,8 +7,8 @@ from structlog import get_logger
 
 
 @dag(
-    start_date=airflow.utils.dates.days_ago(0),
-    schedule_interval="30 */3 * * *",
+    start_date=pendulum.today("UTC").add(days=-1),
+    schedule="30 */3 * * *",
     params={
         "excluded_directories": [],
         "force_pull": False,
