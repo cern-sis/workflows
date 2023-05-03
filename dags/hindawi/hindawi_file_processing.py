@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 
-import airflow
+import pendulum
 import requests
 from airflow.decorators import dag, task
 from common.enhancer import Enhancer
@@ -27,7 +27,7 @@ def hindawi_validate_record(enriched_file):
     validate(enriched_file, schema)
 
 
-@dag(schedule=None, start_date=airflow.utils.dates.days_ago(0))
+@dag(schedule=None, start_date=pendulum.today("UTC").add(days=-1))
 def hindawi_file_processing():
     @task()
     def parse(**kwargs):

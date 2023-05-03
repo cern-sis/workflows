@@ -1,6 +1,6 @@
 import base64
 
-import airflow
+import pendulum
 import requests
 from airflow.decorators import dag, task
 from common.enhancer import Enhancer
@@ -36,7 +36,7 @@ def oup_validate_record(enriched_file):
     validate(enriched_file, schema)
 
 
-@dag(schedule=None, start_date=airflow.utils.dates.days_ago(0))
+@dag(schedule=None, start_date=pendulum.today("UTC").add(days=-1))
 def oup_process_file():
     @task()
     def parse_file(**kwargs):
