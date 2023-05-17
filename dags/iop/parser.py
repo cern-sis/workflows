@@ -236,16 +236,27 @@ class IOPParser(IParser):
                 for reffered_id in reffered_ids
                 if self._get_affiliation_value(article, reffered_id)
             ]
+            email = self._extract_email(contrib_type)
             author = {}
             if surname:
                 author["surname"] = surname
             if given_names:
                 author["given_names"] = given_names
+            if email:
+                author["email"] = email
             if affiliations:
                 author["affiliations"] = affiliations
             if author:
                 authors.append(author)
         return authors
+
+    def _extract_email(self, contrib_type):
+        return extract_text(
+            article=contrib_type,
+            path="email",
+            field_name="email",
+            dois=self.dois,
+        )
 
     def _extract_surname(self, contrib_type):
         return extract_text(

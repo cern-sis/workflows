@@ -88,6 +88,136 @@ def test_journal_doctype_log_error_with_wrong_value(shared_datadir):
                 "log_level": "error",
             },
             {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
                 "class_name": "TextExtractor",
                 "event": "subtitle is not found in XML",
                 "log_level": "error",
@@ -133,6 +263,11 @@ def test_journal_doctype_log_error_without_value(shared_datadir, parser):
             {
                 "dois": "10.1088/1674-1137/ac66cc",
                 "event": "country is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
                 "log_level": "error",
             },
             {
@@ -230,6 +365,11 @@ def test_realted_article_dois_log_error_without_value(shared_datadir, parser):
                 "log_level": "error",
             },
             {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
                 "class_name": "IOPParser",
                 "event": "Cannot find month of date_published in XML",
                 "log_level": "error",
@@ -324,6 +464,11 @@ def test_no_arxiv_eprints_value_log_error_without_value(shared_datadir, parser):
                 "log_level": "error",
             },
             {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
                 "class_name": "IOPParser",
                 "event": "Cannot find month of date_published in XML",
                 "log_level": "error",
@@ -402,6 +547,11 @@ def test_wrong_arxiv_eprints_value_log_error_without_value(shared_datadir, parse
             {
                 "dois": "10.1088/1674-1137/ac66cc",
                 "event": "country is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
                 "log_level": "error",
             },
             {
@@ -523,6 +673,11 @@ def test_wrong_page_nr_value_log(shared_datadir, parser):
                 "log_level": "error",
             },
             {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
                 "class_name": "IOPParser",
                 "event": "Cannot find month of date_published in XML",
                 "log_level": "error",
@@ -567,18 +722,18 @@ def test_authors(shared_datadir, parser):
     content = (shared_datadir / "all_fields.xml").read_text()
     article = ET.fromstring(content)
     parsed_article = parser._publisher_specific_parsing(article)
-    parsed_article["authors"] == [
+    assert parsed_article["authors"] == [
         {
             "surname": "Zhao",
             "given_names": "Lin",
             "affiliations": [
                 {
-                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
-                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -587,8 +742,8 @@ def test_authors(shared_datadir, parser):
             "given_names": "Wentai",
             "affiliations": [
                 {
-                    "institution": "School of Physical Sciences, University of Chinese Academy of Sciences, China",
                     "country": "China",
+                    "institution": "School of Physical Sciences, University of Chinese Academy of Sciences, China",
                 }
             ],
         },
@@ -597,12 +752,12 @@ def test_authors(shared_datadir, parser):
             "given_names": "Lars",
             "affiliations": [
                 {
-                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
-                    "institution": "Institut für Physik, Technische Universität Berlin, Germany",
                     "country": "Germany",
+                    "institution": "Institut für Physik, Technische Universität Berlin, Germany",
                 },
             ],
         },
@@ -611,16 +766,16 @@ def test_authors(shared_datadir, parser):
             "given_names": "Shaomin",
             "affiliations": [
                 {
+                    "country": "China",
                     "institution": "Department of Engineering Physics, Tsinghua University, China",
-                    "country": "China",
                 },
                 {
+                    "country": "China",
                     "institution": "Center for High Energy Physics, Tsinghua University, China",
-                    "country": "China",
                 },
                 {
-                    "institution": "Key Laboratory of Particle & Radiation Imaging (Tsinghua University), China",
                     "country": "China",
+                    "institution": "Key Laboratory of Particle & Radiation Imaging (Tsinghua University), China",
                 },
             ],
         },
@@ -629,12 +784,12 @@ def test_authors(shared_datadir, parser):
             "given_names": "Mourad",
             "affiliations": [
                 {
-                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
-                    "institution": "École Polytechnique Fédérale de Lausanne, Switzerland",
                     "country": "Switzerland",
+                    "institution": "École Polytechnique Fédérale de Lausanne, Switzerland",
                 },
             ],
         },
@@ -643,12 +798,12 @@ def test_authors(shared_datadir, parser):
             "given_names": "Wei",
             "affiliations": [
                 {
-                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
-                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -657,12 +812,12 @@ def test_authors(shared_datadir, parser):
             "given_names": "Lei",
             "affiliations": [
                 {
-                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
-                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -671,12 +826,12 @@ def test_authors(shared_datadir, parser):
             "given_names": "Ziyi",
             "affiliations": [
                 {
-                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
-                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -685,12 +840,12 @@ def test_authors(shared_datadir, parser):
             "given_names": "Ghulam",
             "affiliations": [
                 {
-                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
-                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -699,12 +854,12 @@ def test_authors(shared_datadir, parser):
             "given_names": "Jinjing",
             "affiliations": [
                 {
-                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
-                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -713,12 +868,12 @@ def test_authors(shared_datadir, parser):
             "given_names": "Ye",
             "affiliations": [
                 {
-                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
-                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -727,8 +882,8 @@ def test_authors(shared_datadir, parser):
             "given_names": "Qian",
             "affiliations": [
                 {
-                    "institution": "School of Physical Sciences, University of Chinese Academy of Sciences, China",
                     "country": "China",
+                    "institution": "School of Physical Sciences, University of Chinese Academy of Sciences, China",
                 }
             ],
         },
@@ -737,8 +892,8 @@ def test_authors(shared_datadir, parser):
             "given_names": "Guang",
             "affiliations": [
                 {
-                    "institution": "School of Physics, Sun Yat-Sen University, China",
                     "country": "China",
+                    "institution": "School of Physics, Sun Yat-Sen University, China",
                 }
             ],
         },
@@ -747,8 +902,8 @@ def test_authors(shared_datadir, parser):
             "given_names": "Ming",
             "affiliations": [
                 {
-                    "institution": "School of Physics, Nanjing University, China",
                     "country": "China",
+                    "institution": "School of Physics, Nanjing University, China",
                 }
             ],
         },
@@ -757,12 +912,12 @@ def test_authors(shared_datadir, parser):
             "given_names": "Wenhui",
             "affiliations": [
                 {
-                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
-                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -771,8 +926,8 @@ def test_authors(shared_datadir, parser):
             "given_names": "Jian",
             "affiliations": [
                 {
-                    "institution": "School of Physics, Sun Yat-Sen University, China",
                     "country": "China",
+                    "institution": "School of Physics, Sun Yat-Sen University, China",
                 }
             ],
         },
@@ -781,12 +936,12 @@ def test_authors(shared_datadir, parser):
             "given_names": "Linyan",
             "affiliations": [
                 {
-                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
-                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -795,16 +950,16 @@ def test_authors(shared_datadir, parser):
             "given_names": "Zhe",
             "affiliations": [
                 {
+                    "country": "China",
                     "institution": "Department of Engineering Physics, Tsinghua University, China",
-                    "country": "China",
                 },
                 {
+                    "country": "China",
                     "institution": "Center for High Energy Physics, Tsinghua University, China",
-                    "country": "China",
                 },
                 {
-                    "institution": "Key Laboratory of Particle & Radiation Imaging (Tsinghua University), China",
                     "country": "China",
+                    "institution": "Key Laboratory of Particle & Radiation Imaging (Tsinghua University), China",
                 },
             ],
         },
@@ -813,30 +968,31 @@ def test_authors(shared_datadir, parser):
             "given_names": "Yiyang",
             "affiliations": [
                 {
-                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
-                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
         {
             "surname": "Xu",
             "given_names": "Benda",
+            "email": "orv@tsinghua.edu.cn",
             "affiliations": [
                 {
+                    "country": "China",
                     "institution": "Department of Engineering Physics, Tsinghua University, China",
-                    "country": "China",
                 },
                 {
+                    "country": "China",
                     "institution": "Center for High Energy Physics, Tsinghua University, China",
-                    "country": "China",
                 },
                 {
-                    "institution": "Key Laboratory of Particle & Radiation Imaging (Tsinghua University), China",
                     "country": "China",
+                    "institution": "Key Laboratory of Particle & Radiation Imaging (Tsinghua University), China",
                 },
             ],
         },
@@ -845,12 +1001,12 @@ def test_authors(shared_datadir, parser):
             "given_names": "Tong",
             "affiliations": [
                 {
-                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
-                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -859,12 +1015,12 @@ def test_authors(shared_datadir, parser):
             "given_names": "Weiran",
             "affiliations": [
                 {
-                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
-                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -873,12 +1029,12 @@ def test_authors(shared_datadir, parser):
             "given_names": "Yuzi",
             "affiliations": [
                 {
-                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
-                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -887,8 +1043,8 @@ def test_authors(shared_datadir, parser):
             "given_names": "Minfang",
             "affiliations": [
                 {
-                    "institution": "Brookhaven National Laboratory, Upton, USA",
                     "country": "USA",
+                    "institution": "Brookhaven National Laboratory, Upton, USA",
                 }
             ],
         },
@@ -897,12 +1053,12 @@ def test_authors(shared_datadir, parser):
             "given_names": "Aiqiang",
             "affiliations": [
                 {
-                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
-                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -911,12 +1067,12 @@ def test_authors(shared_datadir, parser):
             "given_names": "Bin",
             "affiliations": [
                 {
-                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Department of Engineering Physics, Tsinghua University, China",
                 },
                 {
-                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                     "country": "China",
+                    "institution": "Center for High Energy Physics, Tsinghua University, China",
                 },
             ],
         },
@@ -1130,6 +1286,11 @@ def test_copyright_no_years_logs(shared_datadir, parser):
                 "log_level": "error",
             },
             {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
+                "log_level": "error",
+            },
+            {
                 "class_name": "IOPParser",
                 "event": "Cannot find month of date_published in XML",
                 "log_level": "error",
@@ -1212,6 +1373,11 @@ def test_copyright_no_statement_logs(shared_datadir, parser):
             {
                 "dois": "10.1088/1674-1137/ac66cc",
                 "event": "country is not found in XML",
+                "log_level": "error",
+            },
+            {
+                "dois": "10.1088/1674-1137/ac66cc",
+                "event": "email is not found in XML",
                 "log_level": "error",
             },
             {
