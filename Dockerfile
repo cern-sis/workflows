@@ -1,4 +1,4 @@
-FROM apache/airflow:2.2.4-python3.8
+FROM apache/airflow:2.6.0-python3.10
 
 ENV PYTHONBUFFERED=0 
 ENV AIRFLOW_UID=501
