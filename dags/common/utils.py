@@ -7,6 +7,8 @@ from io import StringIO
 from os.path import basename
 from stat import S_ISDIR, S_ISREG
 
+from airflow.models.dagrun import DagRun
+from airflow.utils.state import DagRunState
 from common.constants import (
     BY_PATTERN,
     CDATA_PATTERN,
@@ -178,3 +180,21 @@ def get_text_value(element: ET.Element):
 
 def clean_text(text):
     return " ".join(text.split())
+
+
+def check_dagrun_state(dagrun: DagRun, not_allowed_states=[], allowed_states=[]):
+    dag_run_states = {
+        "queued": DagRunState.QUEUED,
+        "running": DagRunState.RUNNING,
+        "failed": DagRunState.FAILED,
+    }
+    dagrun.update_state()
+    states_values = []
+
+    for not_allowed_state in not_allowed_states:
+        value = dagrun.get_state() != dag_run_states[not_allowed_state]
+        states_values.append(value)
+    for allowed_state in allowed_states:
+        value = dagrun.get_state() == dag_run_states[allowed_state]
+        states_values.append(value)
+    return all(states_values)

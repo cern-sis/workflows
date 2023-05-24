@@ -15,7 +15,7 @@ def hindawi_parser():
     return HindawiParser()
 
 
-@pytest.fixture()
+@pytest.fixture
 def articles(shared_datadir):
     articles = []
     files = ["example1.xml", "example2.xml", "example4.xml"]
@@ -26,7 +26,7 @@ def articles(shared_datadir):
     return articles
 
 
-@pytest.fixture()
+@pytest.fixture
 def parsed_articles(hindawi_parser, articles):
     return [hindawi_parser._publisher_specific_parsing(article) for article in articles]
 
@@ -255,7 +255,7 @@ def test_hindawi_parsing(parsed_articles, expected, key):
         assert article[key] == expected_value
 
 
-@pytest.fixture()
+@pytest.fixture
 def article_without_doi(shared_datadir):
     with open(shared_datadir / "without_doi.xml") as f:
         return ET.fromstring(f.read())
@@ -266,7 +266,7 @@ def test_parse_article_without_doi(hindawi_parser, article_without_doi):
         hindawi_parser._publisher_specific_parsing(article_without_doi)
 
 
-@pytest.fixture()
+@pytest.fixture
 def article_without_page_nr(shared_datadir):
     with open(shared_datadir / "without_page_nr.xml") as f:
         return ET.fromstring(f.read())
@@ -276,7 +276,7 @@ def test_parse_article_without_page_nr(hindawi_parser, article_without_page_nr):
     hindawi_parser._publisher_specific_parsing(article_without_page_nr)
 
 
-@pytest.fixture()
+@pytest.fixture
 def parsed_article_without_page_nr(hindawi_parser, article_without_page_nr):
     return hindawi_parser._publisher_specific_parsing(article_without_page_nr)
 

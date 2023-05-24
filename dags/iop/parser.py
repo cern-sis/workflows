@@ -270,9 +270,9 @@ class IOPParser(IParser):
     def _get_affiliation_value(self, article, reffered_id):
         try:
             institution_and_country = {}
-            id = reffered_id.get("rid")
-            institution = self._get_institution(article, id)
-            country = self._get_country(article, id)
+            rid = reffered_id.get("rid")
+            institution = self._get_institution(article, rid)
+            country = self._get_country(article, rid)
             if country:
                 institution_and_country["country"] = country
             if institution and country:

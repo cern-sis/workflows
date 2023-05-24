@@ -15,7 +15,7 @@ def articles(shared_datadir):
     return [article for article in json.loads(json_response)["data"]]
 
 
-@pytest.fixture()
+@pytest.fixture
 def parsed_articles(parser, articles):
     return [parser._publisher_specific_parsing(article) for article in articles]
 

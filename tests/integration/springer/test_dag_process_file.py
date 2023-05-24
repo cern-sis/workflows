@@ -5,9 +5,10 @@ from zipfile import ZipFile
 
 import pytest
 from airflow import DAG
-from airflow.models import DagBag
+from airflow.models import DagBag, DagModel
 from airflow.utils.state import DagRunState
 from busypie import SECOND, wait
+from common.utils import check_dagrun_state
 from freezegun import freeze_time
 from pytest import fixture, raises
 from springer.dag_process_file import (
@@ -25,6 +26,11 @@ def dag():
     dagbag = DagBag(dag_folder="dags/", include_examples=False)
     assert dagbag.import_errors.get(f"dags/{DAG_NAME}.py") is None
     return dagbag.get_dag(dag_id=DAG_NAME)
+
+
+@pytest.fixture
+def dag_was_paused(dag):
+    return dag.get_is_paused()
 
 
 @fixture
@@ -47,39 +53,48 @@ def article():
     return article
 
 
-def test_dag_loaded(dag: DAG):
-    assert dag is not None
-    assert len(dag.tasks) == 4
+class TestClassSpringerFilesHarvesting:
+    def test_dag_loaded(self, dag: DAG):
+        assert dag is not None
+        assert len(dag.tasks) == 4
 
+    def test_dag_run(self, dag: DAG, dag_was_paused: bool, article: ET):
+        dag_run_id = datetime.datetime.utcnow().strftime(
+            "test_springer_dag_process_file_%Y-%m-%dT%H:%M:%S.%f"
+        )
+        if dag.get_is_paused():
+            DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=False)
+        dagrun = dag.create_dagrun(
+            DagRunState.QUEUED,
+            run_id=dag_run_id,
+            conf={"file": base64.b64encode(ET.tostring(article)).decode()},
+        )
+        wait().at_most(60, SECOND).until(
+            lambda: check_dagrun_state(dagrun, not_allowed_states=["queued", "running"])
+        )
+        if dag_was_paused:
+            DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=True)
 
-def test_dag_run(dag: DAG, article):
-    id = datetime.datetime.utcnow().strftime(
-        "test_springer_dag_process_file_%Y-%m-%dT%H:%M:%S.%f"
-    )
-    dagrun = dag.create_dagrun(
-        DagRunState.QUEUED,
-        run_id=id,
-        conf={"file": base64.b64encode(ET.tostring(article)).decode()},
-    )
-    wait().at_most(60, SECOND).until(lambda: __test_dagrun_state(dagrun))
+    def test_dag_run_no_input_file(self, dag: DAG, dag_was_paused: bool):
+        if dag.get_is_paused():
+            DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=False)
+        dag_run_id = datetime.datetime.utcnow().strftime(
+            "test_springer_dag_process_file_%Y-%m-%dT%H:%M:%S.%f"
+        )
+        dagrun = dag.create_dagrun(DagRunState.QUEUED, run_id=dag_run_id)
+        wait().at_most(60, SECOND).until(
+            lambda: check_dagrun_state(dagrun, not_allowed_states=["failed"])
+        )
+        if dag_was_paused:
+            DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=True)
 
-
-def test_dag_run_no_input_file(dag: DAG):
-    id = datetime.datetime.utcnow().strftime(
-        "test_springer_dag_process_file_%Y-%m-%dT%H:%M:%S.%f"
-    )
-    dagrun = dag.create_dagrun(DagRunState.QUEUED, run_id=id)
-    wait().at_most(60, SECOND).until(lambda: __test_dagrun_fails(dagrun))
-
-
-def test_dag_parse_file(article):
-    springer_parse_file(
-        params={"file": base64.b64encode(ET.tostring(article)).decode()}
-    )
+    def test_dag_parse_file(self, article):
+        springer_parse_file(
+            params={"file": base64.b64encode(ET.tostring(article)).decode()}
+        )
 
 
 publisher = "Springer"
-
 generic_pseudo_parser_output = {
     "abstract": "this is abstracts",
     "copyright_holder": "copyright_holder",
@@ -90,8 +105,6 @@ generic_pseudo_parser_output = {
     "title": "title",
     "subtitle": "subtitle",
 }
-
-
 expected_output = {
     "abstracts": [{"value": "this is abstracts", "source": publisher}],
     "acquisition_source": {
@@ -111,7 +124,6 @@ expected_output = {
     "record_creation_date": "2022-05-20T00:00:00",
     "titles": [{"title": "title", "subtitle": "subtitle", "source": publisher}],
 }
-
 empty_generic_pseudo_parser_output = {
     "abstract": "",
     "copyright_holder": "",
@@ -122,8 +134,6 @@ empty_generic_pseudo_parser_output = {
     "title": "",
     "subtitle": "",
 }
-
-
 expected_output_from_empty_input = {
     "abstracts": [{"value": "", "source": publisher}],
     "acquisition_source": {
@@ -279,17 +289,3 @@ def test_dag_validate_file_fails(article):
 
 def test_dag_process_file_no_input_file(article):
     raises(Exception, springer_parse_file)
-
-
-def __test_dagrun_fails(dagrun):
-    dagrun.update_state()
-    return not dagrun.get_state() == DagRunState.FAILED
-
-
-def __test_dagrun_state(dagrun):
-    dagrun.update_state()
-    assert dagrun.get_state() != DagRunState.FAILED
-    return (
-        not dagrun.get_state() == DagRunState.QUEUED
-        and not dagrun.get_state() == DagRunState.RUNNING
-    )
