@@ -23,7 +23,7 @@ def dag():
 
 @pytest.fixture
 def dag_was_paused(dag):
-    """ Getting current dag state, before we ran tests. For these test we need to have dag active. After tests we want to return dag to the same state."""
+    """Getting current dag state, before we ran tests. For these test we need to have dag active. After tests we want to return dag to the same state."""
     return dag.get_is_paused()
 
 
