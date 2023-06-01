@@ -1,6 +1,6 @@
-FROM apache/airflow:2.6.0-python3.10
+FROM apache/airflow:2.6.0-python3.8
 
-ENV PYTHONBUFFERED=0 
+ENV PYTHONBUFFERED=0
 ENV AIRFLOW_UID=501
 
 COPY requirements.txt ./requirements.txt
