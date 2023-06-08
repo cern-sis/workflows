@@ -60,7 +60,7 @@ jobs:
           -v "$(pwd)"/data:/opt/airflow/data
           -v "$(pwd)"/airflow.cfg:/opt/airflow/airflow.cfg
           --entrypoint pytest
-          $REGISTRY/$IMAGE:${{ steps.build.outputs.image-id }}
+          $REGISTRY/$IMAGE@${{ steps.build.outputs.image-digest }}
           --cov=./
           --cov-report=xml
 
@@ -77,5 +77,5 @@ jobs:
         uses: cern-sis/gh-workflows/.github/actions/kubernetes-project-new-images@v6
         with:
           event-type: update
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE }}:${{ steps.build.outputs.image-id }}
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE }}@${{ steps.build.outputs.image-id }}
           token: ${{ secrets.PAT_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES }}
