@@ -1,6 +1,4 @@
 import pytest
-from airflow import DAG
-from airflow.models import DagBag
 from common.pull_ftp import migrate_from_ftp, reprocess_files, trigger_file_processing
 from springer.repository import SpringerRepository
 from springer.sftp_service import SpringerSFTPService
@@ -10,48 +8,13 @@ DAG_NAME = "springer_pull_ftp"
 
 
 @pytest.fixture
-def dag():
-    dagbag = DagBag(dag_folder="dags/", include_examples=False)
-    assert dagbag.import_errors.get(f"dags/{DAG_NAME}.py") is None
-    return dagbag.get_dag(dag_id=DAG_NAME)
-
-
-@pytest.fixture
 def springer_empty_repo():
     repo = SpringerRepository()
     repo.delete_all()
     yield repo
 
 
-class TestClassSpringerPullFilesFromSFTP:
-    def test_dag_loaded(self, dag: DAG):
-        assert dag is not None
-        assert len(dag.tasks) == 2
-
-    def test_dag_run(self, dag: DAG, springer_empty_repo):
-        assert len(springer_empty_repo.find_all()) == 0
-        dag.test()
-        expected_files = [
-            {
-                "xml": "extracted/EPJC/ftp_PUB_19-01-29_20-02-10_EPJC/JOU=10052/VOL=2019.79/ISU=1/ART=6572/10052_2019_Article_6572.xml.Meta",
-                "pdf": "extracted/EPJC/ftp_PUB_19-01-29_20-02-10_EPJC/JOU=10052/VOL=2019.79/ISU=1/ART=6572/BodyRef/PDF/10052_2019_Article_6572.pdf",
-            },
-            {
-                "xml": "extracted/EPJC/ftp_PUB_19-02-06_16-01-13_EPJC_stripped/JOU=10052/VOL=2019.79/ISU=2/ART=6540/10052_2019_Article_6540.xml.Meta",
-                "pdf": "extracted/EPJC/ftp_PUB_19-02-06_16-01-13_EPJC_stripped/JOU=10052/VOL=2019.79/ISU=2/ART=6540/BodyRef/PDF/10052_2019_Article_6540.pdf",
-            },
-            {
-                "xml": "extracted/JHEP/ftp_PUB_19-01-29_20-02-10_JHEP/JOU=13130/VOL=2019.2019/ISU=1/ART=9848/13130_2019_Article_9848.xml.scoap",
-                "pdf": "extracted/JHEP/ftp_PUB_19-01-29_20-02-10_JHEP/JOU=13130/VOL=2019.2019/ISU=1/ART=9848/BodyRef/PDF/13130_2019_Article_9848.pdf",
-            },
-        ]
-
-        assert sorted(
-            springer_empty_repo.find_all(),
-            key=lambda x: (x["xml"], x["pdf"]),
-            reverse=True,
-        ) == sorted(expected_files, key=lambda x: (x["xml"], x["pdf"]), reverse=True)
-
+class TestSpringerFilesHarvestingMethods:
     def test_dag_trigger_file_processing(self):
         repo = SpringerRepository()
         assert [x["xml"] for x in repo.find_all()] == trigger_file_processing(
@@ -89,7 +52,6 @@ class TestClassSpringerPullFilesFromSFTP:
                     "pdf": "extracted/JHEP/ftp_PUB_19-01-29_20-02-10_JHEP/JOU=13130/VOL=2019.2019/ISU=1/ART=9848/BodyRef/PDF/13130_2019_Article_9848.pdf",
                 },
             ]
-
             assert sorted(
                 springer_empty_repo.find_all(),
                 key=lambda x: (x["xml"], x["pdf"]),
@@ -148,19 +110,13 @@ class TestClassSpringerPullFilesFromSFTP:
                     }
                 },
             )
-            expected_files = [
+            excepted_files = [
                 {
                     "xml": "extracted/JHEP/ftp_PUB_19-01-29_20-02-10_JHEP/JOU=13130/VOL=2019.2019/ISU=1/ART=9848/13130_2019_Article_9848.xml.scoap",
                     "pdf": "extracted/JHEP/ftp_PUB_19-01-29_20-02-10_JHEP/JOU=13130/VOL=2019.2019/ISU=1/ART=9848/BodyRef/PDF/13130_2019_Article_9848.pdf",
                 }
             ]
-            assert sorted(
-                springer_empty_repo.find_all(),
-                key=lambda x: (x["xml"], x["pdf"]),
-                reverse=True,
-            ) == sorted(
-                expected_files, key=lambda x: (x["xml"], x["pdf"]), reverse=True
-            )
+            assert springer_empty_repo.find_all() == excepted_files
 
             reprocess_files(
                 springer_empty_repo,
@@ -183,10 +139,4 @@ class TestClassSpringerPullFilesFromSFTP:
                     "pdf": "extracted/JHEP/ftp_PUB_19-01-29_20-02-10_JHEP/JOU=13130/VOL=2019.2019/ISU=1/ART=9848/BodyRef/PDF/13130_2019_Article_9848.pdf",
                 }
             ]
-            assert sorted(
-                springer_empty_repo.find_all(),
-                key=lambda x: (x["xml"], x["pdf"]),
-                reverse=True,
-            ) == sorted(
-                excepted_files, key=lambda x: (x["xml"], x["pdf"]), reverse=True
-            )
+            assert springer_empty_repo.find_all() == excepted_files

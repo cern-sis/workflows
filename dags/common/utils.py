@@ -1,14 +1,14 @@
 import datetime
 import json
+import random
 import re
+import string
 import xml.etree.ElementTree as ET
 from ftplib import error_perm
 from io import StringIO
 from os.path import basename
 from stat import S_ISDIR, S_ISREG
 
-from airflow.models.dagrun import DagRun
-from airflow.utils.state import DagRunState
 from common.constants import (
     BY_PATTERN,
     CDATA_PATTERN,
@@ -102,12 +102,12 @@ def walk_sftp(sftp, remotedir, paths):
 
 
 def walk_ftp(ftp, remotedir, paths):
-    for entry in ftp.nlst(remotedir):
+    for entry in ftp.list_directory(remotedir):
         try:
-            ftp.cwd(entry)
+            ftp.list_directory(entry)
             walk_ftp(ftp=ftp, remotedir=entry, paths=paths)
         except error_perm:
-            ftp.cwd("/")
+            ftp.list_directory("/")
             paths.append(basename(entry))
 
 
@@ -182,19 +182,5 @@ def clean_text(text):
     return " ".join(text.split())
 
 
-def check_dagrun_state(dagrun: DagRun, not_allowed_states=[], allowed_states=[]):
-    dag_run_states = {
-        "queued": DagRunState.QUEUED,
-        "running": DagRunState.RUNNING,
-        "failed": DagRunState.FAILED,
-    }
-    dagrun.update_state()
-    states_values = []
-
-    for not_allowed_state in not_allowed_states:
-        value = dagrun.get_state() != dag_run_states[not_allowed_state]
-        states_values.append(value)
-    for allowed_state in allowed_states:
-        value = dagrun.get_state() == dag_run_states[allowed_state]
-        states_values.append(value)
-    return all(states_values)
+def generate_ids():
+    return "".join(random.choices(string.ascii_uppercase + string.digits, k=10))

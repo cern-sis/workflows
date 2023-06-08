@@ -1,6 +1,4 @@
 pre-commit==2.17.0
-apache-airflow[celery]==2.6.0 --constraint https://raw.githubusercontent.com/apache/airflow/constraints-2.6.0/constraints-3.8.txt
-apache_airflow_providers_ftp==2.1.2
 boto3==1.21.39
 botocore==1.24.39
 busypie==0.4.5

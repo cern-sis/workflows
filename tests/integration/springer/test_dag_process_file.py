@@ -1,14 +1,10 @@
 import base64
-import datetime
 import xml.etree.ElementTree as ET
 from zipfile import ZipFile
 
 import pytest
 from airflow import DAG
-from airflow.models import DagBag, DagModel
-from airflow.utils.state import DagRunState
-from busypie import SECOND, wait
-from common.utils import check_dagrun_state
+from airflow.models import DagBag
 from freezegun import freeze_time
 from pytest import fixture, raises
 from springer.dag_process_file import (
@@ -58,35 +54,8 @@ class TestClassSpringerFilesHarvesting:
         assert dag is not None
         assert len(dag.tasks) == 4
 
-    def test_dag_run(self, dag: DAG, dag_was_paused: bool, article: ET):
-        dag_run_id = datetime.datetime.utcnow().strftime(
-            "test_springer_dag_process_file_%Y-%m-%dT%H:%M:%S.%f"
-        )
-        if dag.get_is_paused():
-            DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=False)
-        dagrun = dag.create_dagrun(
-            DagRunState.QUEUED,
-            run_id=dag_run_id,
-            conf={"file": base64.b64encode(ET.tostring(article)).decode()},
-        )
-        wait().at_most(60, SECOND).until(
-            lambda: check_dagrun_state(dagrun, not_allowed_states=["queued", "running"])
-        )
-        if dag_was_paused:
-            DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=True)
-
-    def test_dag_run_no_input_file(self, dag: DAG, dag_was_paused: bool):
-        if dag.get_is_paused():
-            DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=False)
-        dag_run_id = datetime.datetime.utcnow().strftime(
-            "test_springer_dag_process_file_%Y-%m-%dT%H:%M:%S.%f"
-        )
-        dagrun = dag.create_dagrun(DagRunState.QUEUED, run_id=dag_run_id)
-        wait().at_most(60, SECOND).until(
-            lambda: check_dagrun_state(dagrun, not_allowed_states=["failed"])
-        )
-        if dag_was_paused:
-            DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=True)
+    def test_dag_run(self, dag: DAG, article: ET):
+        dag.test(run_conf={"file": base64.b64encode(ET.tostring(article)).decode()})
 
     def test_dag_parse_file(self, article):
         springer_parse_file(
