@@ -32,7 +32,7 @@ airflow:
 	echo -e "\033[0;32m Airflow Started. \033[0m"
 
 create_ftp:
-	airflow connections add 'oup_ftp_service' --conn-json '{"conn_type": "ftp","login": "airflow","password": "airflow", "host": "127.0.0.1", "port": 40009}'
+	airflow connections add 'oup_ftp_service' --conn-json '{"conn_type": "ftp","login": "airflow","password": "airflow", "host": "127.0.0.1", "port": 21}'
 
 
 compose:
