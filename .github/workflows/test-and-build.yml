@@ -9,19 +9,19 @@ on:
 
 env:
   AIRFLOW_HOME: /home/runner/work/workflows/workflows
+  REGISTRY: registry.cern.ch
+  IMAGE: cern-sis/workflows
 
 jobs:
   build_test:
     name: Build and Test
     runs-on: ubuntu-latest
-    env:
-      DOCKER_IMAGE: registry.cern.ch/cern-sis/workflows:${{ github.sha }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install Python 3
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v4
         with:
           python-version: 3.10.11
 
@@ -42,39 +42,40 @@ jobs:
         run: docker ps
 
       - name: Build Image
-        uses: cern-sis/gh-workflows/.github/actions/build-docker@v1.0.0
+        id: build
+        uses: cern-sis/gh-workflows/.github/actions/docker-build@v6
         with:
-          context: .
-          tags: registry.cern.ch/cern-sis/workflows:${{ github.sha }}
-
-      - name: Run tests with pytest and generate report
-        run: |
-          docker run --network=host -v "$(pwd)"/tests:/opt/airflow/tests -v "$(pwd)"/data:/opt/airflow/data -v "$(pwd)"/airflow.cfg:/opt/airflow/airflow.cfg --name workflows --entrypoint pytest $DOCKER_IMAGE --cov=./ --cov-report=xml
-
-      - name: Copy test coverage file to host machine
-        run: |
-          docker cp workflows:/opt/airflow/coverage.xml .
-
-      - name: Upload Coverage to Codecov
-        uses: codecov/codecov-action@v2
-        with:
-          verbose: true
-
-      - name: Login to DockerHub
-        uses: docker/login-action@v1
-        with:
-          registry: registry.cern.ch
+          registry: ${{ env.REGISTRY }}
+          image: ${{ env.IMAGE }}
+          cache: false
           username: ${{ secrets.HARBOR_USERNAME }}
           password: ${{ secrets.HARBOR_PASSWORD }}
 
-      - name: Push
-        run: |
-          docker push $DOCKER_IMAGE
+      - name: Run tests with pytest and generate report
+        run: >
+          docker run
+          --name workflows
+          --network=host
+          -v "$(pwd)"/tests:/opt/airflow/tests
+          -v "$(pwd)"/data:/opt/airflow/data
+          -v "$(pwd)"/airflow.cfg:/opt/airflow/airflow.cfg
+          --entrypoint pytest
+          $REGISTRY/$IMAGE:${{ steps.build.outputs.image-id }}
+          --cov=./
+          --cov-report=xml
+
+      - name: Copy test coverage file to host machine
+        run: docker cp workflows:/opt/airflow/coverage.xml .
+
+      - name: Upload Coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          verbose: true
 
       - name: Deploy QA
         if: ${{ github.event_name == 'push' }}
-        uses: cern-sis/gh-workflows/.github/actions/kubernetes-project-new-images@v5.5.0
+        uses: cern-sis/gh-workflows/.github/actions/kubernetes-project-new-images@v6
         with:
           event-type: update
-          images: registry.cern.ch/cern-sis/workflows:${{ github.sha }}
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE }}:${{ steps.build.outputs.image-id }}
           token: ${{ secrets.PAT_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES }}
