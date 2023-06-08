@@ -18,7 +18,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
+        if: ${{ github.event_name == 'push' }}
         uses: actions/checkout@v3
+
+      - name: Checkout PR
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Install Python 3
         uses: actions/setup-python@v4
