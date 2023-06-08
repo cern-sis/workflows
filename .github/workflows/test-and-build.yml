@@ -43,7 +43,7 @@ jobs:
 
       - name: Build Image
         id: build
-        uses: cern-sis/gh-workflows/.github/actions/docker-build@main
+        uses: cern-sis/gh-workflows/.github/actions/docker-build@v6
         with:
           registry: ${{ env.REGISTRY }}
           image: ${{ env.IMAGE }}
