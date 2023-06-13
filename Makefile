@@ -40,13 +40,16 @@ airflow:
 	echo -e "\033[0;32m Airflow Started. \033[0m"
 
 create_ftp:
-	airflow connections add 'oup_ftp_service' --conn-json '{"conn_type": "ftp","login": "airflow","password": "airflow", "host": "127.0.0.1", "port": 21}'
+	-airflow connections add 'oup_ftp_service' --conn-json '{"conn_type": "ftp","login": "airflow","password": "airflow", "host": "127.0.0.1", "port": 21}'
 
 compose:
 	docker-compose up -d redis postgres sftp ftp s3 create_buckets
 
 stop:
 	docker-compose down
+	-kill -9 $(lsof -ti:8080)
+	-kill -9 $(lsof -ti:5555)
+	-kill -9 $(lsof -ti:8793)
 	-cat $(WEBSERVER_PID) | xargs kill  -9
 	-cat $(TRIGGERER_PID) | xargs kill -9
 	-cat $(SCHEDULER_PID) | xargs kill -9
