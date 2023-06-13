@@ -1,4 +1,3 @@
-export AIRFLOW_HOME=${PWD}
 export PYTHON_VERSION = 3.10.11
 
 FLOWER_PID=airflow-flower.pid
@@ -13,6 +12,7 @@ init:
     pyenv install ${PYTHON_VERSION}
     pyenv virtualenv ${PYTHON_VERSION} workflows
     pyenv activate workflows
+    export AIRFLOW_HOME=${PWD}
 
 start: compose sleep airflow_db airflow_users create_ftp
 
