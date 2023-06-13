@@ -37,7 +37,7 @@ We need to install airflow.
 export AIRFLOW_HOME=/path/to/cloned/repo
 ```
 
-4. Install all required dependencies for a project. We need 3 requirements files, when we're running the project locally. First file (requirements.py) has all additional dependencies required to run the tasks correctly (connecting to ftputil, boto3 and etc.), the second one installs requirememnts for testing, such as pytest, the third- (requirements_airflow.py) installs Airflow itself and constraints needed for it. The the third file is not needed when we're running the procject on Docker, because we're using Apache Airflow Docker image:
+4. Install all required dependencies for a project. We need 3 requirements files, when we're running the project locally. First file (requirements.py) has all additional dependencies required to run the tasks correctly (connecting to ftputil, boto3 and etc.), the second one installs requirements for testing, such as pytest, the third- (requirements_airflow.py) installs Airflow itself and constraints needed for it. The the third file is not needed when we're running the project on Docker, because we're using Apache Airflow Docker image:
    `pip install -r requirements.txt -r requirements-test.txt -r requirements-airflow.txt`
 5. Run Airflow. Airflow comes with the `standalone` command. This should not be used as it seems to use the SequentialExecutor by default. To have our local config being use, we must run all services together :
 
@@ -57,7 +57,7 @@ A Makefile has been created to ease this process. The available targets are the 
 
 ## Access UI
 
-Airflow UI will be rinning on localhost:8080.
+Airflow UI will be running on localhost:8080.
 More details about Airflow installation and running can be found [here](https://airflow.apache.org/docs/apache-airflow/stable/start/local.html)
 
 ## Environment Variables
