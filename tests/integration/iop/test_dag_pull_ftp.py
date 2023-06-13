@@ -1,13 +1,8 @@
-import datetime
-
 import pytest
 from airflow import DAG
-from airflow.models import DagBag, DagModel
-from airflow.utils.state import DagRunState
-from busypie import SECOND, wait
+from airflow.models import DagBag
 from common.pull_ftp import migrate_from_ftp, trigger_file_processing
 from common.repository import IRepository
-from common.utils import check_dagrun_state
 from iop.repository import IOPRepository
 from iop.sftp_service import IOPSFTPService
 from structlog import get_logger
@@ -42,16 +37,8 @@ class TestClassIOPFilesHarvesting:
 
     def test_dag_run(self, dag: DAG, dag_was_paused: bool, iop_empty_repo: IRepository):
         assert len(iop_empty_repo.find_all()) == 0
-        dag_run_id = datetime.datetime.utcnow().strftime(
-            "test_iop_dag_pull_ftp_%Y-%m-%dT%H:%M:%S.%f"
-        )
-        if dag.get_is_paused():
-            DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=False)
-        dagrun = dag.create_dagrun(DagRunState.QUEUED, run_id=dag_run_id)
-        dagrun.update_state()
-        wait().at_most(60, SECOND).until(
-            lambda: check_dagrun_state(dagrun, not_allowed_states=["queued", "running"])
-        )
+        dag.clear()
+        dag.test()
         expected_files = [
             {
                 "pdf": "extracted/2022-07-30T03_02_01_content/1674-1137/1674-1137_46/1674-1137_46_8/1674-1137_46_8_085001/cpc_46_8_085001.pdf",
@@ -101,8 +88,6 @@ class TestClassIOPFilesHarvesting:
         ]
 
         assert iop_empty_repo.find_all() == expected_files
-        if dag_was_paused:
-            DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=True)
 
     def test_dag_migrate_from_FTP(self, iop_empty_repo):
         assert len(iop_empty_repo.find_all()) == 0

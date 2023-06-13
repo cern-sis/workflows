@@ -1,11 +1,11 @@
-export PYTHON_VERSION = 3.8.13
+export PYTHON_VERSION = 3.10.11
 
-
-WEBSERVER_PID=airflow-webserver-monitor.pid
-TRIGGERER_PID=airflow-triggerer.pid
-SCHEDULER_PID=airflow-scheduler.pid
-WORKER_PID=airflow-worker.pid
 FLOWER_PID=airflow-flower.pid
+SCHEDULER_PID=airflow-scheduler.pid
+TRIGGERER_PID=airflow-triggerer.pid
+WEBSERVER_MONITOR_PID=airflow-webserver-monitor.pid
+WEBSERVER_PID=airflow-webserver.pid
+WORKER_PID=airflow-worker.pid
 
 init:
 	pyenv global $(PYTHON_VERSION)
@@ -24,6 +24,13 @@ buckets:
 
 airflow:
 	airflow db init
+	airflow users create \
+		--username admin \
+		--password admin \
+		--role Admin \
+		--firstname FIRST_NAME \
+		--lastname LAST_NAME \
+		--email admin@worfklows.cern
 	airflow webserver -D
 	airflow triggerer -D
 	airflow scheduler -D
@@ -37,12 +44,17 @@ compose:
 
 stop:
 	docker-compose down
-	cat $(WEBSERVER_PID) | xargs kill  -9
-	cat $(TRIGGERER_PID) | xargs kill -9
-	cat $(SCHEDULER_PID) | xargs kill -9
-	cat $(WORKER_PID) | xargs kill -9
-	cat $(FLOWER_PID) | xargs kill -9
-	rm *.out *.err *.log
-	kill -9 $(lsof -ti:8080)
-	rm *.out *.err
+	-kill -9 $(lsof -ti:8080)
+	-kill -9 $(lsof -ti:5555)
+	-kill -9 $(lsof -ti:8793)
+	-cat $(WEBSERVER_PID) | xargs kill  -9
+	-cat $(TRIGGERER_PID) | xargs kill -9
+	-cat $(SCHEDULER_PID) | xargs kill -9
+	-cat $(WORKER_PID) | xargs kill -9
+	-cat $(FLOWER_PID) | xargs kill -9
+	-cat $(WEBSERVER_MONITOR_PID) | xargs kill -9
+	-rm *.out *.err *.pid *.log
+	-kill -9 $(lsof -ti:8080)
+	-kill -9 $(lsof -ti:5555)
+	-kill -9 $(lsof -ti:8793)
 	echo -e "\033[0;32m Airflow Stoped. \033[0m"
