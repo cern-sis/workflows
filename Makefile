@@ -14,7 +14,9 @@ init:
 	pyenv virtualenv ${PYTHON_VERSION} workflows
 	pyenv activate workflows
 
-start: compose sleep airflow create_ftp
+start: compose sleep airflow_db airflow_users create_ftp
+
+all: start airflow_services
 
 sleep:
 	sleep 5
@@ -39,8 +41,27 @@ airflow:
 	airflow celery flower -D
 	echo -e "\033[0;32m Airflow Started. \033[0m"
 
+airflow_db:
+	airflow db init
+
+airflow_users:
+	airflow users create \
+		--username admin \
+		--password admin \
+		--role Admin \
+		--firstname FIRST_NAME \
+		--lastname LAST_NAME \
+		--email admin@worfklows.cern
+
+airflow_services:
+	airflow webserver -D
+	airflow triggerer -D
+	airflow scheduler -D
+	airflow celery worker -D
+	airflow celery flower -D
+
 create_ftp:
-	-airflow connections add 'oup_ftp_service' --conn-json '{"conn_type": "ftp","login": "airflow","password": "airflow", "host": "127.0.0.1", "port": 21}'
+	-airflow connections add 'oup_ftp_service' --conn-json '{"conn_type": "ftp","login": "airflow","password": "airflow", "host": "localhost", "port": 21}'
 
 compose:
 	docker-compose up -d redis postgres sftp ftp s3 create_buckets
