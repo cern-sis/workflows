@@ -84,5 +84,5 @@ jobs:
         uses: cern-sis/gh-workflows/.github/actions/kubernetes-project-new-images@v6
         with:
           event-type: update
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE }}@${{ steps.build.outputs.image-id }}
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE }}@${{ steps.build.outputs.image-digest }}
           token: ${{ secrets.PAT_FIRE_EVENTS_ON_CERN_SIS_KUBERNETES }}
