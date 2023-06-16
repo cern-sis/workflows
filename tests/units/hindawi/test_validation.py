@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as ET
 
+import pytest
 import requests
 from common.enhancer import Enhancer
 from common.enricher import Enricher
@@ -22,6 +23,7 @@ def parsed_article(shared_datadir, parser):
         return Enricher()(enhanced_file)
 
 
+@pytest.mark.vcr
 def test_hindawi_validate_record(parsed_article):
     schema = requests.get(parsed_article["$schema"]).json()
     validate(parsed_article, schema)

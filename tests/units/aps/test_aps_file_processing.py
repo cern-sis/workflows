@@ -1,5 +1,6 @@
 import json
 
+import pytest
 from aps.aps_process_file import aps_validate_record, enhance_aps, enrich_aps
 from aps.parser import APSParser
 from pytest import fixture
@@ -36,5 +37,6 @@ def enrich_article(enhance_articles):
     return [enrich_aps(article) for article in enhance_articles]
 
 
+@pytest.mark.vcr
 def test_aps_validated_record(enrich_article):
     [aps_validate_record(article) for article in enrich_article]

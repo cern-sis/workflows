@@ -9,6 +9,6 @@ class OUPFTPService(FTPService):
             host=os.getenv("OUP_FTP_HOST", "localhost"),
             username=os.getenv("OUP_FTP_USERNAME", "airflow"),
             password=os.getenv("OUP_FTP_PASSWORD", "airflow"),
-            port=int(os.getenv("OUP_FTP_PORT", "2222")),
+            port=int(os.getenv("OUP_FTP_PORT", 21)),
             dir=os.getenv("OUP_FTP_DIR", "upload/oup"),
         )

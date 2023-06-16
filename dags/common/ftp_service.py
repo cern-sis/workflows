@@ -15,7 +15,7 @@ class FTPService:
         host="localhost",
         username="airflow",
         password="airflow",
-        port=2222,
+        port=21,
         dir="/upload",
     ):
         self.connection = None

@@ -53,45 +53,49 @@ def article():
     return article
 
 
-class TestClassSpringerFilesHarvesting:
-    def test_dag_loaded(self, dag: DAG):
-        assert dag is not None
-        assert len(dag.tasks) == 4
+def test_dag_loaded(dag: DAG):
+    assert dag is not None
+    assert len(dag.tasks) == 4
 
-    def test_dag_run(self, dag: DAG, dag_was_paused: bool, article: ET):
-        dag_run_id = datetime.datetime.utcnow().strftime(
-            "test_springer_dag_process_file_%Y-%m-%dT%H:%M:%S.%f"
-        )
-        if dag.get_is_paused():
-            DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=False)
-        dagrun = dag.create_dagrun(
-            DagRunState.QUEUED,
-            run_id=dag_run_id,
-            conf={"file": base64.b64encode(ET.tostring(article)).decode()},
-        )
-        wait().at_most(60, SECOND).until(
-            lambda: check_dagrun_state(dagrun, not_allowed_states=["queued", "running"])
-        )
-        if dag_was_paused:
-            DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=True)
 
-    def test_dag_run_no_input_file(self, dag: DAG, dag_was_paused: bool):
-        if dag.get_is_paused():
-            DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=False)
-        dag_run_id = datetime.datetime.utcnow().strftime(
-            "test_springer_dag_process_file_%Y-%m-%dT%H:%M:%S.%f"
-        )
-        dagrun = dag.create_dagrun(DagRunState.QUEUED, run_id=dag_run_id)
-        wait().at_most(60, SECOND).until(
-            lambda: check_dagrun_state(dagrun, not_allowed_states=["failed"])
-        )
-        if dag_was_paused:
-            DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=True)
+@pytest.mark.skip(reason="It does not test anything.")
+def test_dag_run(dag: DAG, dag_was_paused: bool, article: ET):
+    dag_run_id = datetime.datetime.utcnow().strftime(
+        "test_springer_dag_process_file_%Y-%m-%dT%H:%M:%S.%f"
+    )
+    if dag.get_is_paused():
+        DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=False)
+    dagrun = dag.create_dagrun(
+        DagRunState.QUEUED,
+        run_id=dag_run_id,
+        conf={"file": base64.b64encode(ET.tostring(article)).decode()},
+    )
+    wait().at_most(60, SECOND).until(
+        lambda: check_dagrun_state(dagrun, not_allowed_states=["queued", "running"])
+    )
+    if dag_was_paused:
+        DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=True)
 
-    def test_dag_parse_file(self, article):
-        springer_parse_file(
-            params={"file": base64.b64encode(ET.tostring(article)).decode()}
-        )
+
+@pytest.mark.skip(reason="It does not test anything.")
+def test_dag_run_no_input_file(dag: DAG, dag_was_paused: bool):
+    if dag.get_is_paused():
+        DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=False)
+    dag_run_id = datetime.datetime.utcnow().strftime(
+        "test_springer_dag_process_file_%Y-%m-%dT%H:%M:%S.%f"
+    )
+    dagrun = dag.create_dagrun(DagRunState.QUEUED, run_id=dag_run_id)
+    wait().at_most(60, SECOND).until(
+        lambda: check_dagrun_state(dagrun, not_allowed_states=["failed"])
+    )
+    if dag_was_paused:
+        DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=True)
+
+
+def test_dag_parse_file(article):
+    springer_parse_file(
+        params={"file": base64.b64encode(ET.tostring(article)).decode()}
+    )
 
 
 publisher = "Springer"
@@ -164,6 +168,7 @@ def test_dag_enhance_file(test_input, expected, publisher):
     assert expected == springer_enhance_file(test_input)
 
 
+@pytest.mark.vcr
 def test_dag_enrich_file(assertListEqual):
     input_article = {
         "arxiv_eprints": [{"value": "2112.01211"}],
@@ -182,6 +187,7 @@ def test_dag_enrich_file(assertListEqual):
     )
 
 
+@pytest.mark.vcr
 def test_dag_validate_file_pass(article):
     article = {
         "dois": [{"value": "10.1007/JHEP01(2019)210"}],

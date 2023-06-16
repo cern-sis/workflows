@@ -51,6 +51,7 @@ def test_dag_loaded(dag: DAG):
     assert len(dag.tasks) == 4
 
 
+@pytest.mark.vcr
 def test_dag_validate_file_processing(article):
     iop_validate_record(article)
 
@@ -131,6 +132,7 @@ def test_dag_enhance_file(test_input, expected, publisher):
     assert expected == iop_enhance_file(test_input)
 
 
+@pytest.mark.vcr
 def test_dag_enrich_file(assertListEqual):
     input_article = {
         "arxiv_eprints": [{"value": "2112.01211"}],

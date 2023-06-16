@@ -285,6 +285,7 @@ def test_page_nr(parsed_article_without_page_nr):
     assert parsed_article_without_page_nr["page_nr"] == [0]  # Default value
 
 
+@pytest.mark.vcr
 def test_hindawi_record_validation(hindawi_parser, parsed_article_without_page_nr):
     enhanced = enhance_hindawi(
         hindawi_parser._generic_parsing(parsed_article_without_page_nr)

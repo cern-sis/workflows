@@ -17,7 +17,7 @@ init:
 start: compose sleep airflow
 
 sleep:
-	sleep 10
+	sleep 5
 
 buckets:
 	docker-compose up -d create_buckets
@@ -33,16 +33,23 @@ airflow:
 
 compose:
 	docker-compose up -d redis postgres sftp ftp s3 create_buckets
-	sleep 5
+
+crate_user:
+	airflow users create \
+		--username admin \
+		--password admin \
+		--role Admin \
+		--firstname FIRST_NAME \
+		--lastname LAST_NAME \
+		--email admin@worfklows.cern
 
 stop:
-	docker-compose down
-	cat $(WEBSERVER_PID) | xargs kill  -9
-	cat $(TRIGGERER_PID) | xargs kill -9
-	cat $(SCHEDULER_PID) | xargs kill -9
-	cat $(WORKER_PID) | xargs kill -9
-	cat $(FLOWER_PID) | xargs kill -9
-	rm *.out *.err *.log
-	kill -9 $(lsof -ti:8080)
-	rm *.out *.err
+	-docker-compose down
+	-cat $(WEBSERVER_PID) | xargs kill  -9
+	-cat $(TRIGGERER_PID) | xargs kill -9
+	-cat $(SCHEDULER_PID) | xargs kill -9
+	-cat $(WORKER_PID) | xargs kill -9
+	-cat $(FLOWER_PID) | xargs kill -9
+	-rm *.out *.err *.log *.pid
+	-kill -9 $(lsof -ti:8080)
 	echo -e "\033[0;32m Airflow Stoped. \033[0m"
