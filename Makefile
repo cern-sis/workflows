@@ -1,4 +1,4 @@
-export PYTHON_VERSION = 3.8.13
+export PYTHON_VERSION = 3.10.11
 
 
 WEBSERVER_PID=airflow-webserver-monitor.pid
@@ -14,7 +14,7 @@ init:
 	pyenv activate workflows
 	export AIRFLOW_HOME=${PWD}
 
-start: compose sleep airflow
+start: compose sleep airflow create_ftp
 
 sleep:
 	sleep 10
@@ -31,18 +31,18 @@ airflow:
 	airflow celery flower -D
 	echo -e "\033[0;32m Airflow Started. \033[0m"
 
+create_ftp:
+	airflow connections add 'oup_ftp_service' --conn-json '{"conn_type": "ftp","login": "airflow","password": "airflow", "host": "localhost", "port": 40009}'
+
+
 compose:
 	docker-compose up -d redis postgres sftp ftp s3 create_buckets
 	sleep 5
 
 stop:
 	docker-compose down
-	cat $(WEBSERVER_PID) | xargs kill  -9
-	cat $(TRIGGERER_PID) | xargs kill -9
-	cat $(SCHEDULER_PID) | xargs kill -9
-	cat $(WORKER_PID) | xargs kill -9
-	cat $(FLOWER_PID) | xargs kill -9
-	rm *.out *.err *.log
 	kill -9 $(lsof -ti:8080)
+	kill -9 $(lsof -ti:5555)
+	kill -9 $(lsof -ti:8793)
 	rm *.out *.err
 	echo -e "\033[0;32m Airflow Stoped. \033[0m"

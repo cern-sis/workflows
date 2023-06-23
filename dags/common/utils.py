@@ -102,12 +102,12 @@ def walk_sftp(sftp, remotedir, paths):
 
 
 def walk_ftp(ftp, remotedir, paths):
-    for entry in ftp.nlst(remotedir):
+    for entry in ftp.list_directory(remotedir):
         try:
-            ftp.cwd(entry)
+            ftp.list_directory(entry)
             walk_ftp(ftp=ftp, remotedir=entry, paths=paths)
         except error_perm:
-            ftp.cwd("/")
+            ftp.list_directory("/")
             paths.append(basename(entry))
 
 

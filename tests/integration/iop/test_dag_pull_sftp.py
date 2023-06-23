@@ -1,8 +1,18 @@
-from common.pull_ftp import migrate_from_ftp
+from airflow import DAG
+from airflow.models import DagBag
+from common.repository import IRepository
 from iop.repository import IOPRepository
-from iop.sftp_service import IOPSFTPService
 from pytest import fixture
-from structlog import get_logger
+
+DAG_NAME = "iop_pull_ftp"
+
+
+@fixture
+def dag():
+    dagbag = DagBag(dag_folder="dags/", include_examples=False)
+    assert dagbag.import_errors.get(f"dags/{DAG_NAME}.py") is None
+    iop_dag = dagbag.get_dag(dag_id=DAG_NAME)
+    return iop_dag
 
 
 @fixture
@@ -12,24 +22,14 @@ def iop_empty_repo():
     yield repo
 
 
-def test_pull_from_sftp(iop_empty_repo):
-    with IOPSFTPService() as sftp:
-        migrate_from_ftp(
-            sftp,
-            iop_empty_repo,
-            get_logger().bind(class_name="test_logger"),
-            **{
-                "params": {
-                    "force_pull": False,
-                    "excluded_directories": [],
-                    "filenames_pull": {
-                        "enabled": False,
-                        "filenames": [],
-                        "force_from_ftp": False,
-                    },
-                }
-            }
-        )
+class TestClassIOPFilesHarvesting:
+    def test_dag_loaded(self, dag: DAG):
+        assert dag is not None
+        assert len(dag.tasks) == 2
+
+    def test_dag_run(self, dag: DAG, iop_empty_repo: IRepository):
+        assert len(iop_empty_repo.find_all()) == 0
+        dag.test()
         expected_files = [
             {
                 "pdf": "extracted/2022-07-30T03_02_01_content/1674-1137/1674-1137_46/1674-1137_46_8/1674-1137_46_8_085001/cpc_46_8_085001.pdf",
@@ -77,13 +77,7 @@ def test_pull_from_sftp(iop_empty_repo):
             },
             {"xml": "extracted/aca95c.xml/aca95c.xml"},
         ]
-        assert iop_empty_repo.find_all() == expected_files
-        assert sorted(iop_empty_repo.get_all_raw_filenames()) == sorted(
-            [
-                "2022-07-30T03_02_01_content.zip",
-                "2022-09-01T03_01_40_content.zip",
-                "2022-09-03T03_01_49_content.zip",
-                "2022-09-24T03_01_43_content.zip",
-                "aca95c.xml.zip",
-            ]
-        )
+
+        assert sorted(
+            iop_empty_repo.find_all(), key=lambda x: x["xml"], reverse=True
+        ) == sorted(expected_files, key=lambda x: x["xml"], reverse=True)

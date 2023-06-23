@@ -1,8 +1,8 @@
 import base64
 import io
 import os
+import uuid
 import zipfile
-from datetime import datetime
 
 from airflow.api.common import trigger_dag
 from common.ftp_service import FTPService
@@ -129,7 +129,7 @@ def trigger_file_processing(
         file_bytes = repo.get_by_id(filename)
 
         for article in article_splitter_function(file_bytes):
-            _id = _generate_id(publisher)
+            _id = publisher + str(uuid.uuid1())
             encoded_article = base64.b64encode(article.getvalue()).decode()
             trigger_dag.trigger_dag(
                 dag_id=f"{publisher}_process_file",
@@ -138,7 +138,3 @@ def trigger_file_processing(
                 replace_microseconds=False,
             )
     return files
-
-
-def _generate_id(publisher: str):
-    return datetime.utcnow().strftime(f"{publisher}_%Y-%m-%dT%H:%M:%S.%f")
