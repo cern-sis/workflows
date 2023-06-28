@@ -34,7 +34,7 @@ airflow:
 compose:
 	docker-compose up -d redis postgres sftp ftp s3 create_buckets
 
-crate_user:
+create_user:
 	airflow users create \
 		--username admin \
 		--password admin \
