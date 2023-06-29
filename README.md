@@ -54,6 +54,7 @@ A Makefile has been created to ease this process. The available targets are the 
 - `make init` : Inits the pyenv version and virtual env.
 - `make start` : Starts all processes needed.
 - `make stop` : Stops all processes needed.
+- `make create_user` : create a new user with all the parameters
 
 ## Access UI
 
