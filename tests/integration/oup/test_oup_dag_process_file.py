@@ -1,5 +1,5 @@
 from zipfile import ZipFile
-
+#export AIRFLOW_HOME=${PWD}
 import pytest
 from airflow import DAG
 from airflow.models import DagBag
