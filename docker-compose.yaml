@@ -74,8 +74,8 @@ services:
   postgres:
     image: docker.io/library/postgres:13
     environment:
-      POSTGRES_USER: airflow
-      POSTGRES_PASSWORD: airflow
+      POSTGRES_USER: adrienstucki
+      POSTGRES_PASSWORD: Albatros2.0
       POSTGRES_DB: airflow
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
