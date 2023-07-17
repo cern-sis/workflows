@@ -5,11 +5,11 @@ from aps.aps_params import APSParams
 from common.request import Request
 
 dates = {
-    "start_date": "2022-02-05",
+    "from_date": "2022-02-05",
     "until_date": "2022-03-05",
 }
 parameters = APSParams(
-    from_date=dates["start_date"], until_date=dates["until_date"]
+    from_date=dates["from_date"], until_date=dates["until_date"]
 ).get_params()
 
 exptected_params = {

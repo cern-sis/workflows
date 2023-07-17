@@ -27,14 +27,14 @@ def test_dag_loaded(dag: DAG):
 @pytest.mark.vcr
 def test_aps_fetch_api(dag: DAG):
     dates = {
-        "start_date": "2022-02-05",
+        "from_date": "2022-02-05",
         "until_date": "2022-03-05",
     }
     repo = APSRepository()
     repo.delete_all()
     assert len(repo.find_all()) == 0
     parameters = APSParams(
-        from_date=dates["start_date"],
+        from_date=dates["from_date"],
         until_date=dates["until_date"],
     ).get_params()
     aps_api_client = APSApiClient()
@@ -53,7 +53,7 @@ def test_dag_run(dag: DAG):
     dag.clear()
     dag.test(
         run_conf={
-            "start_date": "2022-02-05",
+            "from_date": "2022-02-05",
             "until_date": "2022-03-05",
         }
     )

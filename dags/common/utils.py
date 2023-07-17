@@ -24,20 +24,20 @@ logger = get_logger()
 def set_harvesting_interval(repo, **kwargs):
     if (
         "params" in kwargs
-        and kwargs["params"].get("start_date")
+        and kwargs["params"].get("from_date")
         and kwargs["params"].get("until_date")
     ):
         return {
-            "start_date": kwargs["params"]["start_date"],
+            "from_date": kwargs["params"]["from_date"],
             "until_date": kwargs["params"]["until_date"],
         }
-    start_date = (
-        kwargs.get("params", {}).get("start_date")
+    from_date = (
+        kwargs.get("params", {}).get("from_date")
         or repo.find_the_last_uploaded_file_date()
     )
     until_date = datetime.date.today().strftime("%Y-%m-%d")
     return {
-        "start_date": (start_date or until_date),
+        "from_date": (from_date or until_date),
         "until_date": until_date,
     }
 

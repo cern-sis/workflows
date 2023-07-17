@@ -32,7 +32,7 @@ class MockedHindawiApiClient:
 def test_set_Hindawi_harvesting_interval(repo=MockedRepo()):
     today = date.today().strftime("%Y-%m-%d")
     expected_days = {
-        "start_date": today,
+        "from_date": today,
         "until_date": today,
     }
     dates = set_harvesting_interval(repo)
