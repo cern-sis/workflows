@@ -1,4 +1,5 @@
 import datetime
+import re
 
 from common.constants import FN_REGEX
 
@@ -42,6 +43,18 @@ class Enhancer:
             }
         ]
 
+    def __remove_country(self, item):
+        pattern_for_cern_cooperation_agreement = re.compile(
+            r"cooperation agreement with cern", re.IGNORECASE
+        )
+        for author in item.get("authors", []):
+            for affiliation in author.get("affiliations", []):
+                match_pattern = pattern_for_cern_cooperation_agreement.search(
+                    affiliation.get("value", "")
+                )
+                if match_pattern:
+                    affiliation.pop("country", None)
+
     def __call__(self, publisher, item):
         creation_date = datetime.datetime.now().isoformat()
         item_copy = item.copy()
@@ -51,4 +64,5 @@ class Enhancer:
         self.__construct_imprints(item_copy, publisher)
         self.__construct_record_creation_date(item_copy, creation_date)
         self.__construct_titles(item_copy, publisher)
+        self.__remove_country(item)
         return item_copy
