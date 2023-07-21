@@ -21,31 +21,37 @@ Currently the docker-compose performance isn't very good. Thus, for local dev, i
 
 We need to install airflow.
 
-1. First, we should create virtual environment with pyenv:
+1. First, we need to install poetry:
 
-```
-    export PYTHON_VERSION=3.8.13
-    pyenv install $PYTHON_VERSION
-    pyenv global $PYTHON_VERSION
-    pyenv virtualenv $PYTHON_VERSION workflows
-    pyenv activate workflows
-```
+   ```
+   curl -sSL https://install.python-poetry.org | python3 -
 
-3. Set airflow home directory:
+   ```
 
-```
-export AIRFLOW_HOME=/path/to/cloned/repo
-```
+2. Install pyenv, the instruction can be found [here](https://github.com/pyenv/pyenv#installation)
+3. Export correct python version by using pyenv:
+   ```
+   export PYTHON_VERSION = 3.10.11
+   pyenv install ${PYTHON_VERSION}
+   pyenv global $(PYTHON_VERSION)
+   ```
+4. Set airflow home directory:
 
-4. Install all required dependencies for a project. We need 3 requirements files, when we're running the project locally. First file (requirements.py) has all additional dependencies required to run the tasks correctly (connecting to ftputil, boto3 and etc.), the second one installs requirememnts for testing, such as pytest, the third- (requirements_airflow.py) installs Airflow itself and constraints needed for it. The the third file is not needed when we're running the procject on Docker, because we're using Apache Airflow Docker image:
-   `pip install -r requirements.txt -r requirements-test.txt -r requirements-airflow.txt`
-5. Run Airflow. Airflow comes with the `standalone` command. This should not be used as it seems to use the SequentialExecutor by default. To have our local config being use, we must run all services together :
+   ```
+   export AIRFLOW_HOME=${PWD}
+   ```
 
-```
-    airflow webserver
-    airflow triggerer
-    airflow scheduler
-```
+5. Install dependencies listed in pyproject.toml file by running the command:
+   ```
+   poetry install
+   ```
+6. Run Airflow. Airflow comes with the `standalone` command. This should not be used as it seems to use the SequentialExecutor by default. To have our local config being use, we must run all services together :
+
+   ```
+       poetry run airflow webserver
+       poetry run airflow triggerer
+       poetry run airflow scheduler
+   ```
 
 ### Script
 

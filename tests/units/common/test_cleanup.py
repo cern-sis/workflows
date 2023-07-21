@@ -97,9 +97,9 @@ def test_convert_html_subsripts_to_latex(test_input, expected):
 
 
 xml = "<div><p>example<h1> h1 example</h1></p></div>"
-xml_just_p = "<p>example h1 example</p>"
-xml_just_div = "<div>example h1 example</div>"
-xml_div_and_h1 = "<div>example<h1> h1 example</h1></div>"
+xml_just_p = "<p>example\n h1 example</p>"
+xml_just_div = "<div>\nexample\n h1 example</div>"
+xml_div_and_h1 = "<div>\nexample<h1> h1 example</h1></div>"
 xml_title = "<article-title id='1'><label>example</label></article-title>"
 xml_just_title = "<article-title>example</article-title>"
 xml_just_title_with_id = '<article-title id="1">example</article-title>'
@@ -108,17 +108,17 @@ xml_just_title_with_id = '<article-title id="1">example</article-title>'
 @pytest.mark.parametrize(
     "test_input, expected, tags, attributes",
     [
-        pytest.param(xml, xml_just_p, ["p"], [], id="test_keep_p"),
-        pytest.param(xml, xml_just_div, ["div"], [], id="test_keep_div"),
-        pytest.param(xml, xml_div_and_h1, ["div", "h1"], [], id="test_keep_div_and_h1"),
+        pytest.param(xml, xml_just_p, {"p"}, {}, id="test_keep_p"),
+        pytest.param(xml, xml_just_div, {"div"}, {}, id="test_keep_div"),
+        pytest.param(xml, xml_div_and_h1, {"div", "h1"}, {}, id="test_keep_div_and_h1"),
         pytest.param(
-            xml_title, xml_just_title, ["article-title"], [], id="test_keep_just_title"
+            xml_title, xml_just_title, {"article-title"}, {}, id="test_keep_just_title"
         ),
         pytest.param(
             xml_title,
             xml_just_title_with_id,
-            ["article-title"],
-            ["id"],
+            {"article-title"},
+            {"article-title": ["id"]},
             id="test_keep_just_title_with_id",
         ),
     ],

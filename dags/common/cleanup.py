@@ -23,8 +23,8 @@ def clean_collaboration(input):
 
 
 def remove_specific_tags(value, tags=None, attributes=None):
-    tags = tags or []
-    attributes = attributes or []
+    tags = tags or {}
+    attributes = attributes or {}
     return clean(value, tags=tags, attributes=attributes, strip=True)
 
 
@@ -43,7 +43,7 @@ class RemoveLabelTagsContentFilter(Filter):
 
 def clean_affiliation_for_author(input):
     cleaner = Cleaner(
-        filters=[RemoveLabelTagsContentFilter], tags=["label"], strip=True
+        filters=[RemoveLabelTagsContentFilter], tags={"label"}, strip=True
     )
     cleaned_label_content = cleaner.clean(input)
     return clean_whitespace_characters(remove_specific_tags(cleaned_label_content))
