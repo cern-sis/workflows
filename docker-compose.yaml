@@ -169,7 +169,7 @@ services:
       test:
         [
           "CMD-SHELL",
-          'airflow jobs check --job-type SchedulerJob --hostname "$${HOSTNAME}"',
+          'poetry run airflow jobs check --job-type SchedulerJob --hostname "$${HOSTNAME}"',
         ]
       interval: 10s
       timeout: 10s
@@ -186,7 +186,7 @@ services:
     healthcheck:
       test:
         - "CMD-SHELL"
-        - 'celery --app airflow.executors.celery_executor.app inspect ping -d "celery@$${HOSTNAME}"'
+        - 'poetry run celery --app airflow.executors.celery_executor.app inspect ping -d "celery@$${HOSTNAME}"'
       interval: 10s
       timeout: 10s
       retries: 5
@@ -208,7 +208,7 @@ services:
       test:
         [
           "CMD-SHELL",
-          'airflow jobs check --job-type TriggererJob --hostname "$${HOSTNAME}"',
+          'poetry run airflow jobs check --job-type TriggererJob --hostname "$${HOSTNAME}"',
         ]
       interval: 10s
       timeout: 10s
