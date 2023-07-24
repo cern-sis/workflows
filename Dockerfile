@@ -13,6 +13,7 @@ COPY dags ./dags
 RUN pip install --upgrade pip &&\
     pip install --no-cache-dir --upgrade setuptools==59.1.1 &&\
     pip install --no-cache-dir --upgrade wheel &&\
-    pip install --no-cache-dir poetry
+    pip install --no-cache-dir poetry && \
+    poetry config virtualenvs.create false --local
 
 RUN poetry install
