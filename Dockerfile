@@ -17,3 +17,4 @@ RUN pip install --upgrade pip &&\
     poetry config virtualenvs.create false --local
 
 RUN poetry install
+ENTRYPOINT ["airflow"]
