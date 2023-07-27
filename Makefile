@@ -10,6 +10,8 @@ FLOWER_PID=airflow-flower.pid
 init:
 	pyenv install ${PYTHON_VERSION}
 	pyenv global $(PYTHON_VERSION)
+	pyenv virtualenv ${PYTHON_VERSION} workflows
+	pyenv activate workflows
 	export AIRFLOW_HOME=${PWD}
 
 start: compose sleep airflow
@@ -21,19 +23,19 @@ buckets:
 	docker-compose up -d create_buckets
 
 airflow:
-	poetry run airflow db init
-	poetry run airflow webserver -D
-	poetry run airflow triggerer -D
-	poetry run airflow scheduler -D
-	poetry run airflow celery worker -D
-	poetry run airflow celery flower -D
+	airflow db init
+	airflow webserver -D
+	airflow triggerer -D
+	airflow scheduler -D
+	airflow celery worker -D
+	airflow celery flower -D
 	echo -e "\033[0;32m Airflow Started. \033[0m"
 
 compose:
 	docker-compose up -d redis postgres sftp ftp s3 create_buckets
 
 create_user:
-	poetry run airflow users create \
+	airflow users create \
 		--username admin \
 		--password admin \
 		--role Admin \

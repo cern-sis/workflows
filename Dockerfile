@@ -1,20 +1,14 @@
-FROM python:3.10
-
-WORKDIR /opt/airflow/
-ENV AIRFLOW_HOME=/opt/airflow/
+FROM apache/airflow:2.6.0-python3.10
 
 ENV PYTHONBUFFERED=0
 ENV AIRFLOW_UID=501
+ENV PYTHONASYNCIODEBUG=1
 
-COPY pyproject.toml ./pyproject.toml
-COPY poetry.lock ./poetry.lock
-
+COPY requirements.txt ./requirements.txt
+COPY requirements-test.txt ./requirements-test.txt
 COPY dags ./dags
+USER airflow
 RUN pip install --upgrade pip &&\
     pip install --no-cache-dir --upgrade setuptools==59.1.1 &&\
     pip install --no-cache-dir --upgrade wheel &&\
-    pip install --no-cache-dir poetry && \
-    poetry config virtualenvs.create false --local
-
-RUN poetry install
-ENTRYPOINT ["airflow"]
+    pip install --no-cache-dir --user -r requirements.txt -r requirements-test.txt

@@ -1,4 +1,5 @@
 import json
+import time
 
 import pytest
 from airflow import DAG
@@ -19,20 +20,25 @@ def dag():
     return dagbag.get_dag(dag_id=DAG_NAME)
 
 
+@pytest.fixture
+def aps_empty_repo():
+    repo = APSRepository()
+    repo.delete_all()
+    yield repo
+
+
 def test_dag_loaded(dag: DAG):
     assert dag is not None
     assert len(dag.tasks) == 3
 
 
 @pytest.mark.vcr
-def test_aps_fetch_api(dag: DAG):
+def test_aps_fetch_api(dag: DAG, aps_empty_repo):
     dates = {
         "from_date": "2022-02-05",
         "until_date": "2022-03-05",
     }
-    repo = APSRepository()
-    repo.delete_all()
-    assert len(repo.find_all()) == 0
+    assert len(aps_empty_repo.find_all()) == 0
     parameters = APSParams(
         from_date=dates["from_date"],
         until_date=dates["until_date"],
@@ -41,20 +47,18 @@ def test_aps_fetch_api(dag: DAG):
     articles_metadata = str.encode(
         json.dumps(aps_api_client.get_articles_metadata(parameters))
     )
-    save_file_in_s3(articles_metadata, repo)
-    assert len(repo.find_all()) == 1
+    save_file_in_s3(articles_metadata, aps_empty_repo)
+    assert len(aps_empty_repo.find_all()) == 1
 
 
 @pytest.mark.vcr
-def test_dag_run(dag: DAG):
-    repo = APSRepository()
-    repo.delete_all()
-    assert len(repo.find_all()) == 0
+def test_dag_run(dag: DAG, aps_empty_repo):
+    assert len(aps_empty_repo.find_all()) == 0
     dag.clear()
     dag.test(
         run_conf={
-            "from_date": "2022-02-05",
-            "until_date": "2022-03-05",
+            "from_date": "2022-02-07",
+            "until_date": "2022-02-07",
         }
     )
-    assert len(repo.find_all()) == 1
+    assert len(aps_empty_repo.find_all()) == 1

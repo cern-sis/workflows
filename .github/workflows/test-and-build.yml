@@ -34,9 +34,10 @@ jobs:
 
       - name: Install python dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install poetry
-          poetry install
+          pip install --upgrade pip
+          pip install --no-cache-dir --upgrade setuptools
+          pip install --no-cache-dir --upgrade wheel
+          pip install -r requirements.txt -r requirements-test.txt -r requirements-airflow.txt
 
       - name: Run services for IT Tests, create buckets
         run: make start
@@ -62,9 +63,9 @@ jobs:
           -v "$(pwd)"/tests:/opt/airflow/tests
           -v "$(pwd)"/data:/opt/airflow/data
           -v "$(pwd)"/airflow.cfg:/opt/airflow/airflow.cfg
-          --entrypoint poetry
+          --entrypoint pytest
           $REGISTRY/$IMAGE@${{ steps.build.outputs.image-digest }}
-          run pytest tests
+          tests
           --cov=./
           --cov-report=xml
 
