@@ -59,6 +59,7 @@ def test_dag_run(dag: DAG, aps_empty_repo):
         run_conf={
             "from_date": "2022-02-07",
             "until_date": "2022-02-07",
+            "per_page": "1",
         }
     )
     assert len(aps_empty_repo.find_all()) == 1

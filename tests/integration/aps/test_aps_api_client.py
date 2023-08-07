@@ -11,7 +11,7 @@ def aps_api_client_fixture():
     yield APSApiClient()
 
 
-@pytest.mark.vcr
+# @pytest.mark.vcr
 def test_get_articles_metadata(aps_api_client_fixture, shared_datadir):
     parameters = APSParams(
         from_date="2021-04-10", until_date="2022-04-10", per_page=1
@@ -20,7 +20,9 @@ def test_get_articles_metadata(aps_api_client_fixture, shared_datadir):
     file_path = os.path.join(shared_datadir, "test_json.json")
     with open(file_path, "rb") as json_file:
         content = json_file.read()
-        assert json.loads(content) == metadata_value
+        json_content = json.loads(content)
+        assert json_content == metadata_value
+        assert len( metadata_value["data"]) == 1
 
 
 @pytest.mark.vcr

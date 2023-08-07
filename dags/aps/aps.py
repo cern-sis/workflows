@@ -15,7 +15,7 @@ from common.utils import set_harvesting_interval
 @dag(
     start_date=pendulum.today("UTC").add(days=-1),
     schedule="@hourly",
-    params={"from_date": None, "until_date": None, "record_doi": None},
+    params={"from_date": None, "until_date": None, "per_page": None},
 )
 def aps_fetch_api():
     @task()
@@ -23,10 +23,11 @@ def aps_fetch_api():
         return set_harvesting_interval(repo=repo, **kwargs)
 
     @task()
-    def save_json_in_s3(dates: dict, repo: IRepository = APSRepository()):
+    def save_json_in_s3(dates: dict, repo: IRepository = APSRepository(), **kwargs):
         parameters = APSParams(
             from_date=dates["from_date"],
             until_date=dates["until_date"],
+            per_page=kwargs.get("per_page", None),
         ).get_params()
         rest_api = APSApiClient(
             base_url=os.getenv("APS_API_BASE_URL", "http://harvest.aps.org")
