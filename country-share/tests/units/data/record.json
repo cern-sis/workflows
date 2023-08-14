@@ -1,0 +1,50 @@
+{
+  "control_number": "example control_number",
+  "record_creation_date": "2022-03-22T09: 42: 37.121372",
+  "dois": [
+    {
+      "value": "dois example"
+    }
+  ],
+  "arxiv_eprints": [
+    {
+      "categories": ["hep-ph"],
+      "value": "value"
+    }
+  ],
+  "publication_info": [
+    {
+      "journal_volume": "2021",
+      "artid": "0000",
+      "material": "article",
+      "year": 2021,
+      "journal_issue": "12",
+      "journal_title": "Experimental Physics"
+    }
+  ],
+  "authors": [
+    {
+      "full_name": "NNNN, SSSS",
+      "surname": "NNNN",
+      "affiliations": [
+        {
+          "country": "Japan",
+          "value": "Department of Physics"
+        }
+      ],
+      "given_names": "Yuta"
+    },
+    {
+      "full_name": "HHHH, OOOOO",
+      "surname": "HHHH",
+      "affiliations": [
+        {
+          "country": "Japan",
+          "value": "Department of Physics"
+        }
+      ],
+      "given_names": "OOOOO",
+      "email": "email.com"
+    }
+  ]
+}
