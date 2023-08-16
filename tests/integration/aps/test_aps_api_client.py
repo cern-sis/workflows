@@ -22,7 +22,7 @@ def test_get_articles_metadata(aps_api_client_fixture, shared_datadir):
         content = json_file.read()
         json_content = json.loads(content)
         assert json_content == metadata_value
-        assert len( metadata_value["data"]) == 1
+        assert len(metadata_value["data"]) == 1
 
 
 @pytest.mark.vcr
