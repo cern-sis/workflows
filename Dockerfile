@@ -1,8 +1,10 @@
-FROM apache/airflow:2.6.0-python3.10
+FROM apache/airflow:2.5.3-python3.10
 
 ENV PYTHONBUFFERED=0
 ENV AIRFLOW_UID=501
 ENV PYTHONASYNCIODEBUG=1
+ENV AIRFLOW__LOGGING__LOGGING_LEVEL=DEBUG
+ENV AIRFLOW__WEBSERVER__SESSION_BACKEND=securecookie
 
 COPY requirements.txt ./requirements.txt
 COPY requirements-test.txt ./requirements-test.txt
