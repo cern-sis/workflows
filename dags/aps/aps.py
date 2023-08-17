@@ -37,7 +37,6 @@ def aps_fetch_api():
             articles_metadata = json.dumps(
                 rest_api.get_articles_metadata(parameters)
             ).encode()
-
             return save_file_in_s3(data=articles_metadata, repo=repo)
         return None
 
