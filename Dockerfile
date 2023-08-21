@@ -4,7 +4,6 @@ ENV PYTHONBUFFERED=0
 ENV AIRFLOW_UID=501
 ENV PYTHONASYNCIODEBUG=1
 ENV AIRFLOW__LOGGING__LOGGING_LEVEL=DEBUG
-ENV AIRFLOW__WEBSERVER__SESSION_BACKEND=securecookie
 
 COPY requirements.txt ./requirements.txt
 COPY requirements-test.txt ./requirements-test.txt
