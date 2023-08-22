@@ -45,6 +45,9 @@ jobs:
       - name: List services for IT Tests
         run: docker ps
 
+      - name: List all dags
+        run: airflow dags list
+
       - name: Build Image
         id: build
         uses: cern-sis/gh-workflows/.github/actions/docker-build@v6
@@ -63,7 +66,6 @@ jobs:
           --network=host
           -v "$(pwd)"/tests:/opt/airflow/tests
           -v "$(pwd)"/data:/opt/airflow/data
-          -v "$(pwd)"/airflow.cfg:/opt/airflow/airflow.cfg
           --entrypoint pytest
           $REGISTRY/$IMAGE@${{ steps.build.outputs.image-digest }}
           tests
