@@ -89,8 +89,11 @@ if __name__ == "__main__":
     )
     sid = data["_scroll_id"]
     scroll_size = len(data["hits"]["hits"])
-
-    with open("results.csv", "w") as file:
+    count = 0
+    count_exception = 0
+    countries_error = []
+    file_name = "results.csv"
+    with open(file_name , "w") as file:
         writer = csv.writer(file)
         header = [
             "doi",
@@ -127,8 +130,8 @@ if __name__ == "__main__":
                         + build_countries_list_values(countries, full_country_list)
                     )
                 except Exception as e:
-                    print("Exception occured", e)
-                    print("Record metadata: ", hit["_source"])
+                    print("Exception occured", e ,". Most likely need to change countries mapping!")
+                    count_exception+=1
 
             data = client.scroll(scroll_id=sid, scroll="2m")
             sid = data["_scroll_id"]

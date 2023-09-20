@@ -37,9 +37,8 @@ def get_affiliations(authors):
 
 
 def get_country_with_highest_gdp(countries, gdps):
-    values = [(country, gdps[country]) for country in countries]
-    return max(values, key=lambda t: t[1])[0]
-
+        values = [(country, gdps[country]) for country in countries]
+        return max(values, key=lambda t: t[1])[0]
 
 def get_most_important_country(countries, gdps):
     hep_institutes = {
