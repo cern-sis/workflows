@@ -1,6 +1,6 @@
 import base64
 import io
-import os
+import tarfile
 import zipfile
 from datetime import datetime
 
@@ -8,34 +8,40 @@ from airflow.api.common import trigger_dag
 from common.ftp_service import FTPService
 from common.repository import IRepository
 from common.sftp_service import SFTPService
+from common.utils import process_archive
 from structlog import PrintLogger
 
 SFTP_FTP_TYPE = (FTPService, SFTPService)
 
 
 def migrate_files(
-    filenames,
+    archives_names,
     s_ftp: SFTP_FTP_TYPE,
     repo: IRepository,
     logger: PrintLogger,
 ):
-    logger.msg("Processing files.", filenames=filenames)
+    logger.msg("Processing files.", filenames=archives_names)
     extracted_filenames = []
-    for _file in filenames:
-        logger.msg("Getting file from SFTP.", file=_file)
-        file_bytes = s_ftp.get_file(_file)
-        if not zipfile.is_zipfile(file_bytes):
-            logger.msg("File is not a zipfile, processing next file.")
-            continue
-        with zipfile.ZipFile(file_bytes) as zip:
-            for zip_filename in zip.namelist():
-                file_prefix = ".".join(_file.split(".")[:-1])
-                file_content = zip.read(zip_filename)
-                s3_filename = os.path.join(file_prefix, zip_filename)
-                repo.save(s3_filename, io.BytesIO(file_content))
+
+    for archive_name in archives_names:
+        logger.msg("Getting file from SFTP.", file=archive_name)
+        file_bytes = s_ftp.get_file(archive_name)
+
+        if zipfile.is_zipfile(file_bytes) or tarfile.is_tarfile(file_bytes):
+            for (archive_file_content, s3_filename) in process_archive(
+                file_bytes=file_bytes, file_name=archive_name
+            ):
+                repo.save(s3_filename, io.BytesIO(archive_file_content))
                 if repo.is_meta(s3_filename):
                     extracted_filenames.append("extracted/" + s3_filename)
-        repo.save(_file, file_bytes)
+            repo.save(archive_name, file_bytes)
+
+        else:
+            logger.info(
+                "File is not zip or tar, processing the next one", file_name=archive_name
+            )
+            continue
+
     return extracted_filenames
 
 

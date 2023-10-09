@@ -5,15 +5,15 @@ from typing import IO
 from common.repository import IRepository
 from common.s3_service import S3Service
 from common.utils import find_extension
+from common.exceptions import UnknownFileExtension
 
-
-class IOPRepository(IRepository):
+class ElsevierRepository(IRepository):
     ZIPED_DIR: str = "raw/"
     EXTRACTED_DIR: str = "extracted/"
 
     def __init__(self) -> None:
         super().__init__()
-        self.s3 = S3Service(os.getenv("IOP_BUCKET_NAME", "iop"))
+        self.s3 = S3Service(os.getenv("ELSEVIER_BUCKET_NAME", "elsevier"))
 
     def get_all_raw_filenames(self):
         return [
@@ -26,15 +26,18 @@ class IOPRepository(IRepository):
         filenames = (
             filenames_to_process
             if filenames_to_process
-            else self.__find_all_extracted_files()
+            else self._find_all_extracted_files()
         )
-        for file in filenames:
-            last_part = os.path.basename(file)
-            filename_without_extension = last_part.split(".")[0]
-            if filename_without_extension not in grouped_files:
-                grouped_files[filename_without_extension] = {}
-            extension = find_extension(last_part)
-            grouped_files[filename_without_extension][extension] = file
+        try:
+            for file in filenames:
+                last_part = os.path.basename(file)
+                filename_without_extension = last_part.split(".")[0]
+                if filename_without_extension not in grouped_files:
+                    grouped_files[filename_without_extension] = {}
+                extension = find_extension(last_part)
+                grouped_files[filename_without_extension][extension] = file
+        except (IndexError, UnknownFileExtension):
+            self.logger.error()
         return list(grouped_files.values())
 
     def get_by_id(self, id: str):
@@ -43,18 +46,16 @@ class IOPRepository(IRepository):
         return retfile
 
     def save(self, filename: str, obj: IO):
-        prefix = self.ZIPED_DIR if ".zip" in filename else self.EXTRACTED_DIR
+        obj.seek(0)
+        prefix = self.ZIPED_DIR if ".tar" in filename else self.EXTRACTED_DIR
         self.s3.upload_fileobj(obj, prefix + filename)
 
     def delete_all(self):
         self.s3.objects.all().delete()
 
-    def __find_all_extracted_files(self):
+    def _find_all_extracted_files(self):
         return [
             f.key
             for f in self.s3.objects.filter(Prefix=self.EXTRACTED_DIR).all()
-            if self.is_meta(f.key) or ".pdf" in f.key
+            if ".xml" in f.key or ".pdf" in f.key
         ]
-
-    def is_meta(self, filename: str):
-        return ".xml" in filename

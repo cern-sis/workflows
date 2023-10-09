@@ -1,7 +1,10 @@
 import datetime
 import json
+import os
 import re
+import tarfile
 import xml.etree.ElementTree as ET
+import zipfile
 from ftplib import error_perm
 from io import StringIO
 from os.path import basename
@@ -198,3 +201,30 @@ def check_dagrun_state(dagrun: DagRun, not_allowed_states=[], allowed_states=[])
         value = dagrun.get_state() == dag_run_states[allowed_state]
         states_values.append(value)
     return all(states_values)
+
+
+def process_zip_file(file_bytes, file_name):
+    file_bytes.seek(0)
+    with zipfile.ZipFile(file_bytes) as zip:
+        for filename in zip.namelist():
+            file_prefix = ".".join(file_name.split(".")[:-1])
+            zip_file_content = zip.read(filename)
+            s3_filename = os.path.join(file_prefix, filename)
+            yield (zip_file_content, s3_filename)
+
+
+def process_tar_file(file_bytes, file_name):
+    file_bytes.seek(0)
+    with tarfile.open(fileobj=file_bytes, mode="r") as tar:
+        for filename in tar.getnames():
+            file_prefix = ".".join(file_name.split(".")[:-1])
+            tar_file_content = tar.extractfile(filename).read()
+            s3_filename = os.path.join(file_prefix, filename)
+            yield (tar_file_content, s3_filename)
+
+
+def process_archive(file_bytes, file_name):
+    if zipfile.is_zipfile(file_bytes):
+        return process_zip_file(file_bytes, file_name)
+    if tarfile.is_tarfile(file_bytes):
+        return process_tar_file(file_bytes, file_name)

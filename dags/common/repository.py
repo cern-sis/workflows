@@ -18,4 +18,4 @@ class IRepository:
         raise NotImplementedError
 
     def is_meta(self, filename):
-        raise NotImplementedError
+        pass

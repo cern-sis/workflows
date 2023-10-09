@@ -163,7 +163,7 @@ services:
     depends_on:
       - s3
     entrypoint: >
-      /bin/sh -c " sleep 10; /usr/bin/mc alias set airflow http://s3:9000 airflow Airflow01; /usr/bin/mc mb airflow/springer; /usr/bin/mc mb airflow/aps; /usr/bin/mc mb airflow/hindawi; /usr/bin/mc mb airflow/iop; /usr/bin/mc mb airflow/oup; exit 0; "
+      /bin/sh -c " sleep 10; /usr/bin/mc alias set airflow http://s3:9000 airflow Airflow01; /usr/bin/mc mb airflow/springer; /usr/bin/mc mb airflow/aps; /usr/bin/mc mb airflow/hindawi; /usr/bin/mc mb airflow/iop; /usr/bin/mc mb airflow/elsevier; /usr/bin/mc mb airflow/oup; exit 0; "
 
   airflow-webserver:
     <<: *airflow-common
