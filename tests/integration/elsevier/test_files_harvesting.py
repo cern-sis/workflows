@@ -31,7 +31,7 @@ def elsevier_empty_repo():
 
 def test_dag_loaded(dag: DAG):
     assert dag is not None
-    assert len(dag.tasks) == 1
+    assert len(dag.tasks) == 2
 
 
 def test_dag_run(dag: DAG, dag_was_paused: bool, elsevier_empty_repo: IRepository):

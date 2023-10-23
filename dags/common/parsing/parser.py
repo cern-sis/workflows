@@ -47,17 +47,16 @@ class IParser:
             return publisher_parsed_article.get(field, default)
 
         parsed_article = publisher_parsed_article.copy()
-
         parsed_article.update(
             {
                 "authors": list(map(parse_author, get("authors", []))),
-                "abstract": clean_whitespace_characters(get("abstract")),
+                "abstract": clean_whitespace_characters(get("abstract", "")),
                 "collaborations": pipe_functions(
                     [lambda x: map(clean_collaboration, x), list_to_value_dict],
                     get("collaborations"),
                 ),
                 "collections": list_to_value_dict(get("collections"), "primary"),
-                "title": clean_whitespace_characters(get("title")),
+                "title": clean_whitespace_characters(get("title", "")),
                 "subtitle": pipe_functions(
                     [lambda x: map(clean_whitespace_characters, x), take_first],
                     get("subtitle"),

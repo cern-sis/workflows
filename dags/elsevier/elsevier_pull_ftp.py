@@ -48,6 +48,7 @@ def elsevier_pull_ftp():
         )
 
     filenames = migrate_from_ftp()
+    trigger_file_processing(filenames=filenames)
 
 
 dag_taskflow = elsevier_pull_ftp()

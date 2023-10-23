@@ -2,10 +2,11 @@ import os
 from io import BytesIO
 from typing import IO
 
+from common.exceptions import UnknownFileExtension
 from common.repository import IRepository
 from common.s3_service import S3Service
 from common.utils import find_extension
-from common.exceptions import UnknownFileExtension
+
 
 class ElsevierRepository(IRepository):
     ZIPED_DIR: str = "raw/"

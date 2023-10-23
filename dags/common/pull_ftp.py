@@ -38,7 +38,8 @@ def migrate_files(
 
         else:
             logger.info(
-                "File is not zip or tar, processing the next one", file_name=archive_name
+                "File is not zip or tar, processing the next one",
+                file_name=archive_name,
             )
             continue
 
@@ -130,6 +131,7 @@ def trigger_file_processing(
         files = filenames
     else:
         files = list(map(lambda x: x["xml"], repo.find_all()))
+
     for filename in files:
         logger.msg("Running processing.", filename=filename)
         file_bytes = repo.get_by_id(filename)
@@ -140,7 +142,7 @@ def trigger_file_processing(
             trigger_dag.trigger_dag(
                 dag_id=f"{publisher}_process_file",
                 run_id=_id,
-                conf={"file": encoded_article},
+                conf={"file": encoded_article, "file_name": filename},
                 replace_microseconds=False,
             )
     return files

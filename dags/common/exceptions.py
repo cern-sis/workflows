@@ -24,3 +24,8 @@ class UnknownLicense(Exception):
     def __init__(self, license):
         super().__init__(f"Unknown license type: {license}")
         self.license = license
+
+class EmptyOutputFromPreviousTask(Exception):
+    def __init__(self, taks_name):
+        super().__init__(f"The output from previous task is empty: {taks_name}")
+
