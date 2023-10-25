@@ -3,7 +3,7 @@ import pendulum
 from airflow.decorators import dag, task
 from common.ftp_service import FTPService
 from common.repository import IRepository
-from elsevier.ftp_service import ElsevierFTPService
+from elsevier.sftp_service import ElsevierSFTPService
 from elsevier.repository import ElsevierRepository
 from structlog import get_logger
 
@@ -21,7 +21,7 @@ def elsevier_pull_ftp():
 
     @task()
     def migrate_from_ftp(
-        ftp: FTPService = ElsevierFTPService(),
+        sftp: FTPService = ElsevierSFTPService(),
         repo: IRepository = ElsevierRepository(),
         **kwargs
     ):
@@ -35,8 +35,8 @@ def elsevier_pull_ftp():
             specific_files_names = pull_ftp.reprocess_files(repo, logger, **kwargs)
             return specific_files_names
 
-        with ftp:
-            return pull_ftp.migrate_from_ftp(ftp, repo, logger, **kwargs)
+        with sftp:
+            return pull_ftp.migrate_from_ftp(sftp, repo, logger, **kwargs)
 
     @task()
     def trigger_file_processing(

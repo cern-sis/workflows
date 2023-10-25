@@ -3,7 +3,7 @@ from airflow import DAG
 from airflow.models import DagBag
 from common.pull_ftp import migrate_from_ftp, trigger_file_processing
 from common.repository import IRepository
-from elsevier.ftp_service import ElsevierFTPService
+from elsevier.sftp_service import ElsevierSFTPService
 from elsevier.repository import ElsevierRepository
 from structlog import get_logger
 
@@ -50,7 +50,7 @@ def test_dag_run(dag: DAG, dag_was_paused: bool, elsevier_empty_repo: IRepositor
 
 def test_dag_migrate_from_FTP(elsevier_empty_repo):
     assert len(elsevier_empty_repo.find_all()) == 0
-    with ElsevierFTPService() as ftp:
+    with ElsevierSFTPService() as ftp:
         migrate_from_ftp(
             ftp,
             elsevier_empty_repo,
