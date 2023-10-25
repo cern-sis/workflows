@@ -224,7 +224,7 @@ def process_tar_file(file_bytes, file_name):
 
 
 def process_archive(file_bytes, file_name):
-    if zipfile.is_zipfile(file_bytes):
+    if zipfile.is_zipfile(file_bytes) and '.zip' in file_name:
         return process_zip_file(file_bytes, file_name)
-    if tarfile.is_tarfile(file_bytes):
+    if tarfile.is_tarfile(file_bytes) and '.tar' in file_name:
         return process_tar_file(file_bytes, file_name)
