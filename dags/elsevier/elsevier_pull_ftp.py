@@ -3,8 +3,8 @@ import pendulum
 from airflow.decorators import dag, task
 from common.ftp_service import FTPService
 from common.repository import IRepository
-from elsevier.sftp_service import ElsevierSFTPService
 from elsevier.repository import ElsevierRepository
+from elsevier.sftp_service import ElsevierSFTPService
 from structlog import get_logger
 
 

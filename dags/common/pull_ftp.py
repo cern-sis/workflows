@@ -22,12 +22,16 @@ def migrate_files(
 ):
     logger.msg("Processing files.", filenames=archives_names)
     extracted_filenames = []
-
     for archive_name in archives_names:
         logger.msg("Getting file from SFTP.", file=archive_name)
         file_bytes = s_ftp.get_file(archive_name)
 
-        if zipfile.is_zipfile(file_bytes) or tarfile.is_tarfile(file_bytes):
+        if (
+            ".zip" in archive_name
+            and zipfile.is_zipfile(file_bytes)
+            or ".tar" in archive_name
+            and tarfile.is_tarfile(file_bytes)
+        ):
             for (archive_file_content, s3_filename) in process_archive(
                 file_bytes=file_bytes, file_name=archive_name
             ):

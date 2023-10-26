@@ -54,6 +54,10 @@ class ElsevierRepository(IRepository):
     def delete_all(self):
         self.s3.objects.all().delete()
 
+    def is_meta(self, file):
+        if ".xml" in file:
+            return file
+
     def _find_all_extracted_files(self):
         return [
             f.key

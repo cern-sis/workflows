@@ -1,5 +1,3 @@
-from os import listdir
-
 from common.utils import parse_without_names_spaces
 from elsevier.parser import ElsevierParser
 from pytest import fixture, mark, param

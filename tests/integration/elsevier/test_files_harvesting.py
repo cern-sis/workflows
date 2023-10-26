@@ -3,8 +3,8 @@ from airflow import DAG
 from airflow.models import DagBag
 from common.pull_ftp import migrate_from_ftp, trigger_file_processing
 from common.repository import IRepository
-from elsevier.sftp_service import ElsevierSFTPService
 from elsevier.repository import ElsevierRepository
+from elsevier.sftp_service import ElsevierSFTPService
 from structlog import get_logger
 
 DAG_NAME = "elsevier_pull_ftp"

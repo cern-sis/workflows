@@ -34,7 +34,6 @@ def parsed_article(shared_datadir, parser, metadata_parser):
         )
         full_parsed_file = {**parsed_file, **parsed_file_with_metadata}
         enhanced_file = Enhancer()("Elsevier", full_parsed_file)
-        print(parsed_file)
         return Enricher()(enhanced_file)
 
 
