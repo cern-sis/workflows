@@ -56,11 +56,7 @@ def clean_all_affiliations_for_author(data):
 
 
 def remove_unnecessary_fields(obj):
-    fieldnames = [
-        "curated",
-        "citeable",
-        "files",
-    ]
+    fieldnames = ["curated", "citeable", "files", "date_published", "source_file_path"]
     [obj.pop(field, None) for field in fieldnames]
     return obj
 

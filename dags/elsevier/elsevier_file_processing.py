@@ -15,8 +15,10 @@ from jsonschema import validate
 
 
 def parse_elsevier(**kwargs):
-    if "params" not in kwargs or "file" or "file_name" not in kwargs["params"]:
-        raise KeyError("There was no 'file' or 'file_name' parameter. Exiting run.")
+    if "params" not in kwargs or "file" not in kwargs["params"]:
+        raise KeyError("There was no 'file' parameter. Exiting run.")
+    if "params" not in kwargs or "file_name" not in kwargs["params"]:
+        raise KeyError("There was 'file_name' parameter. Exiting run.")
     encoded_xml = kwargs["params"]["file"]
     file_name = kwargs["params"]["file_name"]
     xml_bytes = base64.b64decode(encoded_xml)
@@ -39,11 +41,14 @@ def elsevier_parse_metadata(enriched_file, repo):
     file_path = enriched_file["source_file_path"]
     dataset_file_path = file_path.split("/")[:-2]
     dataset_path_parts = dataset_file_path + ["dataset.xml"]
-    file = repo.get_by_id("/".join(*dataset_path_parts))
-    xml_bytes = base64.b64decode(file)
+    full_path = "/".join((dataset_path_parts))
+    file = repo.get_by_id(full_path)
+    xml_bytes = base64.b64decode(base64.b64encode(file.getvalue()).decode())
     xml = parse_without_names_spaces(xml_bytes.decode("utf-8"))
-    parser = ElsevierMetadataParser()
-    metadata = parser.parse(xml, file_path)
+    parser = ElsevierMetadataParser(
+        file_path=file_path, doi=enriched_file["dois"][0]["value"]
+    )
+    metadata = parser.parse(xml)
     return {**enriched_file, **metadata}
 
 
@@ -59,33 +64,33 @@ def elsevier_process_file():
         return parse_elsevier(**kwargs)
 
     @task()
-    def enchance(parsed_file):
+    def parse_metadata(parsed_file, repo: IRepository = ElsevierRepository()):
         if parsed_file:
-            return parsed_file and enhance_elsevier(parsed_file)
+            return elsevier_parse_metadata(parsed_file, repo)
         raise EmptyOutputFromPreviousTask("parsed_file")
 
     @task()
-    def enrich(enhanced_file):
-        if enhanced_file:
-            return enrich_elsevier(enhanced_file)
-        raise EmptyOutputFromPreviousTask("enhanced_file")
+    def enhance(parsed_file_with_metadata):
+        if parsed_file_with_metadata:
+            return parsed_file and enhance_elsevier(parsed_file_with_metadata)
+        raise EmptyOutputFromPreviousTask("parse_metadata")
 
     @task()
-    def parse_metadata(enriched_file, repo: IRepository = ElsevierRepository()):
-        if enriched_file:
-            return elsevier_parse_metadata(enriched_file, repo)
-        raise EmptyOutputFromPreviousTask("enriched_file")
+    def enrich(enhanced_file_with_metadata):
+        if enhanced_file_with_metadata:
+            return enrich_elsevier(enhanced_file_with_metadata)
+        raise EmptyOutputFromPreviousTask("enhanced_file_with_metadata")
 
     @task()
     def validate_record(enriched_file_with_metadata):
         if enriched_file_with_metadata:
-            return elsevier_validate_record(enriched_file)
+            return elsevier_validate_record(enriched_file_with_metadata)
         raise EmptyOutputFromPreviousTask("enriched_file_with_metadata")
 
     parsed_file = parse()
-    enhanced_file = enchance(parsed_file)
-    enriched_file = enrich(enhanced_file)
-    enriched_file_with_metadata = parse_metadata(enriched_file)
+    parsed_file_with_metadata = parse_metadata(parsed_file)
+    enhanced_file_with_metadata = enhance(parsed_file_with_metadata)
+    enriched_file_with_metadata = enrich(enhanced_file_with_metadata)
     validate_record(enriched_file_with_metadata)
 
 
