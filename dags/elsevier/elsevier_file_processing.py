@@ -39,7 +39,7 @@ def enrich_elsevier(enhanced_file):
 
 def elsevier_parse_metadata(enriched_file, repo):
     file_path = enriched_file["source_file_path"]
-    dataset_file_path = file_path.split("/")[:4]
+    dataset_file_path = file_path.split("/")[:3]
     dataset_path_parts = dataset_file_path + ["dataset.xml"]
     full_path = "/".join((dataset_path_parts))
     file = repo.get_by_id(full_path)
