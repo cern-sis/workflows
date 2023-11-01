@@ -51,7 +51,6 @@ def elsevier_parse_metadata(enriched_file, repo):
     metadata = parser.parse(xml)
     return {**enriched_file, **metadata}
 
-
 def elsevier_validate_record(file_with_metadata):
     schema = requests.get(file_with_metadata["$schema"]).json()
     validate(file_with_metadata, schema)

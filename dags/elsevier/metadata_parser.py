@@ -56,7 +56,7 @@ class ElsevierMetadataParser(IParser):
                 extracted_value = {
                     extractor.destination: value
                     for extractor in self.extractors
-                    if (value := extractor.extract(journal_issue)) is not None
+                   if (value := extractor.extract(journal_issue)) is not None
                 }
                 break
         return self._generic_parsing(extracted_value)
@@ -101,17 +101,18 @@ class ElsevierMetadataParser(IParser):
         return [get_license_type_and_version_from_url(url)]
 
     def _get_local_files(self, article):
-        xml = article.find("files-info/ml/pathname").text
+        pdf_file_path = os.path.join(self.file_path, article.find("files-info/web-pdf/pathname").text)
+
         pdf = {
             "filetype": "pdf",
-            "path": os.path.join(
-                self.file_path, article.find("files-info/web-pdf/pathname").text
-            ),
+            "path": pdf_file_path
         }
         xml = {
             "filetype": "xml",
-            "path": os.path.join(
-                self.file_path, article.find("files-info/ml/pathname").text
-            ),
+            "path": pdf_file_path,
         }
-        return [pdf, xml]
+        pdfa = {
+            "filetype": "pdfa",
+            "path" : os.path.join(os.path.split(pdf_file_path)[0], 'main_a-2b.pdf')
+        }
+        return [pdf, xml, pdfa]

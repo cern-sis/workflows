@@ -50,22 +50,11 @@ def parsed_article(parser, article):
             "license",
             id="test_license",
         ),
-        # param(
-        #     [
-        #         [
-        #             {
-        #                 "filetype": "pdf",
-        #                 "path": "extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323000643/main.pdf",
-        #             },
-        #             {
-        #                 "filetype": "xml",
-        #                 "path": "extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323000643/main.xml",
-        #             },
-        #         ],
-        #     ],
-        #     "local_files",
-        #     id="test_local_files",
-        # ),
+        param(
+              [{'value': {'filetype': 'pdf', 'path': 'extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323000643/main.pdf'}}, {'value': {'filetype': 'xml', 'path': 'extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323000643/main.pdf'}}, {'value': {'filetype': 'pdfa', 'path': 'extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323000643/main_a-2b.pdf'}}],
+            "local_files",
+            id="test_local_files",
+        ),
     ],
 )
 def test_elsevier_dataset_parsing(parsed_article, expected, key):
