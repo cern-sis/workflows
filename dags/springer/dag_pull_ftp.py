@@ -11,6 +11,7 @@ from structlog import get_logger
     schedule="30 */3 * * *",
     params={
         "excluded_directories": [],
+        "excluded_extensions": [],
         "force_pull": False,
         "filenames_pull": {"enabled": False, "filenames": [], "force_from_ftp": False},
     },

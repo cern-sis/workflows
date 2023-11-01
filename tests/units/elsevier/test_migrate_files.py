@@ -20,7 +20,11 @@ def test_migrate_files(elsevier_empty_repo):
     archives_names = ["CERNQ000000010011A.tar", "CERNQ000000010669A.tar", "empty.xml"]
     with ElsevierSFTPService() as sftp:
         extracted_filenames = migrate_files(
-            archives_names, sftp, elsevier_empty_repo, logger=get_logger()
+            archives_names,
+            sftp,
+            elsevier_empty_repo,
+            excluded_extensions=[".zip"],
+            logger=get_logger(),
         )
         assert extracted_filenames == [
             "extracted/CERNQ000000010011A/CERNQ000000010011/dataset.xml",
@@ -33,3 +37,16 @@ def test_migrate_files(elsevier_empty_repo):
             "extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323005075/main.xml",
             "extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323005099/main.xml",
         ]
+
+
+def test_migrate_zip_files(elsevier_empty_repo):
+    archives_names = ["vtex00577479_a-2b.zip"]
+    with ElsevierSFTPService() as sftp:
+        migrate_files(
+            archives_names,
+            sftp,
+            elsevier_empty_repo,
+            excluded_extensions=[".zip"],
+            logger=get_logger(),
+        )
+        assert len(elsevier_empty_repo.get_all_raw_filenames()) == 0

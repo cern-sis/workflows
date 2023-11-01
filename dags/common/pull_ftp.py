@@ -18,10 +18,18 @@ def migrate_files(
     archives_names,
     s_ftp: SFTP_FTP_TYPE,
     repo: IRepository,
+    excluded_extensions: list,
     logger: PrintLogger,
 ):
     logger.msg("Processing files.", filenames=archives_names)
     extracted_filenames = []
+    extracted_xml_filenames = []
+
+    for excluded_extension in excluded_extensions:
+        for index, archive_name in enumerate(archives_names):
+            if excluded_extension in archive_name:
+                archives_names.pop(index)
+
     for archive_name in archives_names:
         logger.msg("Getting file from SFTP.", file=archive_name)
         file_bytes = s_ftp.get_file(archive_name)
@@ -38,6 +46,8 @@ def migrate_files(
                 repo.save(s3_filename, io.BytesIO(archive_file_content))
                 if repo.is_meta(s3_filename):
                     extracted_filenames.append("extracted/" + s3_filename)
+                    if ".xml" in s3_filename:
+                        extracted_xml_filenames.append("extracted/" + s3_filename)
             repo.save(archive_name, file_bytes)
 
         else:
@@ -46,8 +56,12 @@ def migrate_files(
                 file_name=archive_name,
             )
             continue
+    logger.info("Extracted files ", extracted_filenames=extracted_filenames)
+    logger.info(
+        "Files parsed for parser", extracted_xml_filenames=extracted_xml_filenames
+    )
 
-    return extracted_filenames
+    return extracted_xml_filenames
 
 
 def migrate_from_ftp(
@@ -83,7 +97,8 @@ def _force_pull(s_ftp: SFTP_FTP_TYPE, repo: IRepository, logger: PrintLogger, **
     logger.msg("Force Pulling from SFTP.")
     excluded_directories = kwargs["params"]["excluded_directories"]
     filenames = s_ftp.list_files(excluded_directories=excluded_directories)
-    return migrate_files(filenames, s_ftp, repo, logger)
+    excluded_extensions = kwargs["params"]["excluded_extensions"]
+    return migrate_files(filenames, s_ftp, repo, excluded_extensions, logger)
 
 
 def _filenames_pull(
@@ -95,7 +110,8 @@ def _filenames_pull(
     filenames_pull_params = kwargs["params"]["filenames_pull"]
     filenames = filenames_pull_params["filenames"]
     logger.msg("Pulling specified filenames from SFTP")
-    return migrate_files(filenames, s_ftp, repo, logger)
+    excluded_extensions = kwargs["params"]["excluded_extensions"]
+    return migrate_files(filenames, s_ftp, repo, excluded_extensions, logger)
 
 
 def _find_files_in_zip(filenames, repo: IRepository):
@@ -120,7 +136,8 @@ def _differential_pull(
     sftp_files = s_ftp.list_files(excluded_directories=excluded_directories)
     s3_files = repo.get_all_raw_filenames()
     diff_files = list(filter(lambda x: x not in s3_files, sftp_files))
-    return migrate_files(diff_files, s_ftp, repo, logger)
+    excluded_extensions = kwargs["params"]["excluded_extensions"]
+    return migrate_files(diff_files, s_ftp, repo, excluded_extensions, logger)
 
 
 def trigger_file_processing(

@@ -40,11 +40,11 @@ class ElsevierMetadataParser(IParser):
                 extraction_function=self._get_license,
                 required=True,
             ),
-            # CustomExtractor(
-            #     destination="local_files",
-            #     extraction_function=self._get_local_files,
-            #     # required=True,
-            # ),
+            CustomExtractor(
+                destination="local_files",
+                extraction_function=self._get_local_files,
+                # required=True,
+            ),
         ]
 
     def parse(self, article):

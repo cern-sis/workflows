@@ -66,6 +66,7 @@ def test_migrate_from_ftp(
                 "params": {
                     "force_pull": False,
                     "excluded_directories": [],
+                    "excluded_extensions": [],
                     "force_pull": False,
                     "filenames_pull": {
                         "enabled": False,
@@ -101,6 +102,7 @@ def test_migrate_from_ftp_only_one_file(
                 "params": {
                     "force_pull": False,
                     "excluded_directories": [],
+                    "excluded_extensions": [],
                     "force_pull": False,
                     "filenames_pull": {
                         "enabled": False,
@@ -139,6 +141,7 @@ def test_migrate_from_ftp_only_one_file_but_force_flag(
             **{
                 "params": {
                     "excluded_directories": [],
+                    "excluded_extensions": [],
                     "force_pull": True,
                     "filenames_pull": {
                         "enabled": False,
@@ -176,6 +179,7 @@ def test_migrate_from_ftp_specified_file_force_from_ftp(
                 "params": {
                     "force_pull": False,
                     "excluded_directories": [],
+                    "excluded_extensions": [],
                     "filenames_pull": {
                         "enabled": True,
                         "filenames": ["file1.zip"],
@@ -214,6 +218,7 @@ def test_migrate_from_ftp_specified_file(
             "params": {
                 "force_pull": False,
                 "excluded_directories": [],
+                "excluded_extensions": [],
                 "filenames_pull": {
                     "enabled": True,
                     "filenames": ["file1.zip"],
