@@ -10,7 +10,7 @@ from structlog import get_logger
     start_date=pendulum.today("UTC").add(days=-1),
     params={
         "excluded_directories": [],
-        "excluded_extensions": [],
+        "not_to_extract_files_with_extensions": [],
         "force_pull": False,
         "filenames_pull": {"enabled": False, "filenames": [], "force_from_ftp": False},
     },

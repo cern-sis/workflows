@@ -100,7 +100,7 @@ def test_dag_migrate_from_FTP(iop_empty_repo):
             **{
                 "params": {
                     "excluded_directories": [],
-                    "excluded_extensions": [],
+                    "not_to_extract_files_with_extensions": [],
                     "force_pull": False,
                     "filenames_pull": {
                         "enabled": False,

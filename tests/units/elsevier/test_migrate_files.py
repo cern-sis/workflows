@@ -23,7 +23,7 @@ def test_migrate_files(elsevier_empty_repo):
             archives_names,
             sftp,
             elsevier_empty_repo,
-            excluded_extensions=[".zip"],
+            not_to_extract_files_with_extensions=[".zip"],
             logger=get_logger(),
         )
         assert extracted_filenames == [
@@ -46,7 +46,7 @@ def test_migrate_zip_files(elsevier_empty_repo):
             archives_names,
             sftp,
             elsevier_empty_repo,
-            excluded_extensions=[".zip"],
+            not_to_extract_files_with_extensions=[".zip"],
             logger=get_logger(),
         )
         assert len(elsevier_empty_repo.get_all_raw_filenames()) == 0

@@ -58,7 +58,7 @@ def test_dag_migrate_from_FTP(elsevier_empty_repo):
             **{
                 "params": {
                     "excluded_directories": [],
-                    "excluded_extensions": [".zip"],
+                    "not_to_extract_files_with_extensions": [".zip"],
                     "force_pull": False,
                     "filenames_pull": {
                         "enabled": False,

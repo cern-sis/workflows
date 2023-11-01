@@ -22,7 +22,7 @@ def test_pull_from_sftp(iop_empty_repo):
                 "params": {
                     "force_pull": False,
                     "excluded_directories": [],
-                    "excluded_extensions": [],
+                    "not_to_extract_files_with_extensions": [],
                     "filenames_pull": {
                         "enabled": False,
                         "filenames": [],
