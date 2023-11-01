@@ -48,7 +48,11 @@ class ElsevierRepository(IRepository):
 
     def save(self, filename: str, obj: IO):
         obj.seek(0)
-        prefix = self.ZIPED_DIR if ".tar" or ".zip" in filename else self.EXTRACTED_DIR
+        prefix = (
+            self.ZIPED_DIR
+            if ".tar" in filename or ".zip" in filename
+            else self.EXTRACTED_DIR
+        )
         self.s3.upload_fileobj(obj, prefix + filename)
 
     def delete_all(self):
