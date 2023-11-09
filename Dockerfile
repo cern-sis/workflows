@@ -8,10 +8,12 @@ ENV AIRFLOW__LOGGING__LOGGING_LEVEL=DEBUG
 
 COPY requirements.txt ./requirements.txt
 COPY requirements-test.txt ./requirements-test.txt
+COPY requirements-airflow.txt ./requirements-airflow.txt
+
 COPY dags ./dags
 COPY airflow.cfg ./airflow.cfg
 
 RUN pip install --upgrade pip &&\
     pip install --no-cache-dir --upgrade setuptools==59.1.1 &&\
     pip install --no-cache-dir --upgrade wheel &&\
-    pip install --no-cache-dir --user -r requirements.txt -r requirements-test.txt
+    pip install --no-cache-dir --user -r requirements.txt -r requirements-test.txt -r requirements-airflow.txt

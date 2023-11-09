@@ -1,2 +1,2 @@
-psycopg2==2.9.6
-apache-airflow[celery]==2.6.0 --constraint https://raw.githubusercontent.com/apache/airflow/constraints-2.6.0/constraints-3.10.txt
+-c https://raw.githubusercontent.com/apache/airflow/constraints-2.6.0/constraints-3.10.txt
+apache-airflow[celery, postgres]==2.6.0
