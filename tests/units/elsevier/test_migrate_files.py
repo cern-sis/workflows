@@ -1,8 +1,4 @@
-import io
-from os import listdir
-
 from common.pull_ftp import migrate_files
-from common.repository import IRepository
 from elsevier.repository import ElsevierRepository
 from elsevier.sftp_service import ElsevierSFTPService
 from pytest import fixture

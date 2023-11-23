@@ -8,14 +8,18 @@ from structlog import get_logger
 
 
 class ElsevierMetadataParser(IParser):
-    def __init__(self, doi, file_path) -> None:
-        self.dois = doi
+    def __init__(self, file_path) -> None:
         self.file_path = file_path
         self.year = None
         self.journal_doctype = None
         self.collaborations = []
         self.logger = get_logger().bind(class_name=type(self).__name__)
         self.extractors = [
+            CustomExtractor(
+                destination="dois",
+                extraction_function=self._get_dois,
+                required=True,
+            ),
             CustomExtractor(
                 destination="journal_title",
                 extraction_function=self._get_journal_title,
@@ -40,26 +44,36 @@ class ElsevierMetadataParser(IParser):
                 extraction_function=self._get_license,
                 required=True,
             ),
-            # CustomExtractor(
-            #     destination="local_files",
-            #     extraction_function=self._get_local_files,
-            #     # required=True,
-            # ),
+            CustomExtractor(
+                destination="files",
+                extraction_function=self._get_local_files,
+                required=True,
+            ),
         ]
 
     def parse(self, article):
         extracted_value = {}
         journal_issues = article.findall("dataset-content/journal-item")
+        parsed_articles = []
         for journal_issue in journal_issues:
-            doi = journal_issue.find("journal-item-unique-ids/doi")
-            if doi.text == self.dois:
-                extracted_value = {
-                    extractor.destination: value
-                    for extractor in self.extractors
-                    if (value := extractor.extract(journal_issue)) is not None
-                }
-                break
-        return self._generic_parsing(extracted_value)
+            extracted_value = {
+                extractor.destination: value
+                for extractor in self.extractors
+                if (value := extractor.extract(journal_issue)) is not None
+            }
+            parsed_articles.append(self._generic_parsing(extracted_value))
+        return parsed_articles
+
+    def _get_dois(self, article):
+        node = article.find("journal-item-unique-ids/doi")
+        if node is None:
+            return
+        dois = node.text
+        if dois:
+            self.logger.msg("Parsing dois for article", dois=dois)
+            self.dois = dois
+            return [dois]
+        return
 
     def _get_published_date(self, article):
         date = extract_text(
@@ -101,17 +115,20 @@ class ElsevierMetadataParser(IParser):
         return [get_license_type_and_version_from_url(url)]
 
     def _get_local_files(self, article):
-        xml = article.find("files-info/ml/pathname").text
-        pdf = {
-            "filetype": "pdf",
-            "path": os.path.join(
-                self.file_path, article.find("files-info/web-pdf/pathname").text
-            ),
-        }
-        xml = {
-            "filetype": "xml",
-            "path": os.path.join(
+        if self.file_path.endswith("A.tar"):
+            self.file_path = self.file_path.replace("A.tar", "")
+        if  self.file_path.endswith(".zip"):
+            self.file_path = self.file_path.replace(".zip", "")
+        if  self.file_path.startswith("raw"):
+            self.file_path = self.file_path.replace("raw/", "")
+
+        pdf_file_path = os.path.join(
+            self.file_path, article.find("files-info/web-pdf/pathname").text
+        )
+        return {
+            "pdf": pdf_file_path,
+            "pdfa": os.path.join(os.path.split(pdf_file_path)[0], "main_a-2b.pdf"),
+            "xml": os.path.join(
                 self.file_path, article.find("files-info/ml/pathname").text
             ),
         }
-        return [pdf, xml]

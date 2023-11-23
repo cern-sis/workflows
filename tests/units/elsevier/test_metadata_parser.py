@@ -1,12 +1,12 @@
 from common.utils import parse_without_names_spaces
 from elsevier.metadata_parser import ElsevierMetadataParser
+from freezegun import freeze_time
 from pytest import fixture, mark, param
 
 
 @fixture(scope="module")
 def parser():
     return ElsevierMetadataParser(
-        doi="10.1016/j.physletb.2023.137730",
         file_path="extracted/CERNQ000000010669A/CERNQ000000010669",
     )
 
@@ -17,56 +17,109 @@ def article(shared_datadir):
         return parse_without_names_spaces(file.read())
 
 
-@fixture()
-def parsed_article(parser, article):
-    return parser.parse(article)
+@fixture
+@freeze_time("2023-11-02")
+def parsed_articles(parser, article):
+    return [article for article in parser.parse(article)]
 
 
 @mark.parametrize(
     "expected, key",
     [
         param(
-            [{"journal_title": "PLB", "year": 2023}],
+            [
+                [{"value": "10.1016/j.nuclphysb.2023.116106"}],
+                [{"value": "10.1016/j.nuclphysb.2023.116107"}],
+                [{"value": "10.1016/j.physletb.2023.137730"}],
+                [{"value": "10.1016/j.physletb.2023.137751"}],
+            ],
+            "dois",
+            id="test_get_dois",
+        ),
+        param(
+            [
+                [{"journal_title": "NUPHB", "year": 2023}],
+                [{"journal_title": "NUPHB", "year": 2023}],
+                [{"journal_title": "PLB", "year": 2023}],
+                [{"journal_title": "PLB", "year": 2023}],
+            ],
             "publication_info",
             id="test_publication_info",
         ),
         param(
-            "2023-02-04",
+            ["2023-11-02", "2023-11-02", "2023-02-04", "2023-11-02"],
             "date_published",
             id="test_published_date",
         ),
         param(
-            [{"primary": "PLB"}],
+            [
+                [{"primary": "NUPHB"}],
+                [{"primary": "NUPHB"}],
+                [{"primary": "PLB"}],
+                [{"primary": "PLB"}],
+            ],
             "collections",
             id="test_collections",
         ),
         param(
             [
-                {
-                    "license": "CC-BY-3.0",
-                    "url": "http://creativecommons.org/licenses/by/3.0/",
-                }
+                [
+                    {
+                        "license": "CC-BY-3.0",
+                        "url": "http://creativecommons.org/licenses/by/3.0/",
+                    }
+                ],
+                [
+                    {
+                        "license": "CC-BY-3.0",
+                        "url": "http://creativecommons.org/licenses/by/3.0/",
+                    }
+                ],
+                [
+                    {
+                        "license": "CC-BY-3.0",
+                        "url": "http://creativecommons.org/licenses/by/3.0/",
+                    }
+                ],
+                [
+                    {
+                        "license": "CC-BY-3.0",
+                        "url": "http://creativecommons.org/licenses/by/3.0/",
+                    }
+                ],
             ],
             "license",
             id="test_license",
         ),
-        # param(
-        #     [
-        #         [
-        #             {
-        #                 "filetype": "pdf",
-        #                 "path": "extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323000643/main.pdf",
-        #             },
-        #             {
-        #                 "filetype": "xml",
-        #                 "path": "extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323000643/main.xml",
-        #             },
-        #         ],
-        #     ],
-        #     "local_files",
-        #     id="test_local_files",
-        # ),
+        param(
+            [
+                {
+                    "pdf": "extracted/CERNQ000000010669A/CERNQ000000010669/S0550321323000354/main.pdf",
+                    "pdfa": "extracted/CERNQ000000010669A/CERNQ000000010669/S0550321323000354/main_a-2b.pdf",
+                    "xml": "extracted/CERNQ000000010669A/CERNQ000000010669/S0550321323000354/main.xml",
+                },
+                {
+                    "pdf": "extracted/CERNQ000000010669A/CERNQ000000010669/S0550321323000366/main.pdf",
+                    "pdfa": "extracted/CERNQ000000010669A/CERNQ000000010669/S0550321323000366/main_a-2b.pdf",
+                    "xml": "extracted/CERNQ000000010669A/CERNQ000000010669/S0550321323000366/main.xml",
+                },
+                {
+                    "pdf": "extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323000643/main.pdf",
+                    "pdfa": "extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323000643/main_a-2b.pdf",
+                    "xml": "extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323000643/main.xml",
+                },
+                {
+                    "pdf": "extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323000850/main.pdf",
+                    "pdfa": "extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323000850/main_a-2b.pdf",
+                    "xml": "extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323000850/main.xml",
+                },
+            ],
+            "files",
+            id="test_files",
+        ),
     ],
 )
-def test_elsevier_dataset_parsing(parsed_article, expected, key):
-    assert parsed_article[key] == expected
+@freeze_time("2023-11-02")
+def test_elsevier_dataset_parsing(parsed_articles, expected, key):
+    for (parsed_article, expected_article) in zip(parsed_articles, expected):
+        assert expected_article == parsed_article[key]

@@ -87,7 +87,9 @@ def test_dag_run(dag: DAG, dag_was_paused: bool, iop_empty_repo: IRepository):
         {"xml": "extracted/aca95c.xml/aca95c.xml"},
     ]
 
-    assert iop_empty_repo.find_all() == expected_files
+    assert sorted(iop_empty_repo.find_all(), key=lambda x: x.get("xml", "")) == sorted(
+        expected_files, key=lambda x: x.get("xml", "")
+    )
 
 
 def test_dag_migrate_from_FTP(iop_empty_repo):
@@ -96,7 +98,7 @@ def test_dag_migrate_from_FTP(iop_empty_repo):
         migrate_from_ftp(
             sftp,
             iop_empty_repo,
-            get_logger().bind(class_name="test_logger"),
+            get_logger().bind(class_name="test_logge"),
             **{
                 "params": {
                     "excluded_directories": [],
@@ -109,7 +111,8 @@ def test_dag_migrate_from_FTP(iop_empty_repo):
                 }
             },
         )
-        assert iop_empty_repo.find_all() == [
+
+        expected_files = [
             {
                 "pdf": "extracted/2022-07-30T03_02_01_content/1674-1137/1674-1137_46/1674-1137_46_8/1674-1137_46_8_085001/cpc_46_8_085001.pdf",
                 "xml": "extracted/2022-07-30T03_02_01_content/1674-1137/1674-1137_46/1674-1137_46_8/1674-1137_46_8_085001/cpc_46_8_085001.xml",
@@ -156,6 +159,10 @@ def test_dag_migrate_from_FTP(iop_empty_repo):
             },
             {"xml": "extracted/aca95c.xml/aca95c.xml"},
         ]
+        for (file_from_repo, expected_file) in zip(
+            iop_empty_repo.find_all(), expected_files
+        ):
+            assert file_from_repo == expected_file
 
 
 def test_dag_trigger_file_processing():

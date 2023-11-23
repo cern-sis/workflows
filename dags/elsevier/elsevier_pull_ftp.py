@@ -1,10 +1,12 @@
-import common.pull_ftp as pull_ftp
 import pendulum
 from airflow.decorators import dag, task
 from common.ftp_service import FTPService
+from common.pull_ftp import migrate_from_ftp as migrate_from_ftp_common
+from common.pull_ftp import reprocess_files
 from common.repository import IRepository
 from elsevier.repository import ElsevierRepository
 from elsevier.sftp_service import ElsevierSFTPService
+from elsevier.trigger_file_processing import trigger_file_processing_elsevier
 from structlog import get_logger
 
 
@@ -32,23 +34,25 @@ def elsevier_pull_ftp():
             and not params["filenames_pull"]["force_from_ftp"]
         )
         if specific_files:
-            specific_files_names = pull_ftp.reprocess_files(repo, logger, **kwargs)
+            specific_files_names = reprocess_files(repo, logger, **kwargs)
             return specific_files_names
 
         with sftp:
-            return pull_ftp.migrate_from_ftp(sftp, repo, logger, **kwargs)
+            return migrate_from_ftp_common(
+                sftp, repo, logger, publisher="elsevier", **kwargs
+            )
 
     @task()
     def trigger_file_processing(
         repo: IRepository = ElsevierRepository(),
         filenames=None,
     ):
-        return pull_ftp.trigger_file_processing(
+        return trigger_file_processing_elsevier(
             publisher="elsevier", repo=repo, logger=logger, filenames=filenames or []
         )
 
-    filenames = migrate_from_ftp()
-    trigger_file_processing(filenames=filenames)
+    archive_names = migrate_from_ftp()
+    trigger_file_processing(filenames=archive_names)
 
 
 dag_taskflow = elsevier_pull_ftp()

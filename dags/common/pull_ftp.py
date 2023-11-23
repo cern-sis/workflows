@@ -1,5 +1,6 @@
 import base64
 import io
+import os
 import tarfile
 import zipfile
 from datetime import datetime
@@ -19,9 +20,10 @@ def migrate_files(
     s_ftp: SFTP_FTP_TYPE,
     repo: IRepository,
     logger: PrintLogger,
+    process_archives: bool = True,
 ):
     logger.msg("Processing files.", filenames=archives_names)
-    extracted_filenames = []
+    extracted_or_downloaded_filenames = []
     for archive_name in archives_names:
         logger.msg("Getting file from SFTP.", file=archive_name)
         file_bytes = s_ftp.get_file(archive_name)
@@ -32,13 +34,21 @@ def migrate_files(
             or ".tar" in archive_name
             and tarfile.is_tarfile(file_bytes)
         ):
-            for (archive_file_content, s3_filename) in process_archive(
-                file_bytes=file_bytes, file_name=archive_name
-            ):
-                repo.save(s3_filename, io.BytesIO(archive_file_content))
-                if repo.is_meta(s3_filename):
-                    extracted_filenames.append("extracted/" + s3_filename)
-            repo.save(archive_name, file_bytes)
+            if process_archives:
+                for (archive_file_content, s3_filename) in process_archive(
+                    file_bytes=file_bytes, file_name=archive_name
+                ):
+                    repo.save(s3_filename, io.BytesIO(archive_file_content))
+                    if repo.is_meta(s3_filename):
+                        extracted_or_downloaded_filenames.append(
+                            os.path.join("extracted/", s3_filename)
+                        )
+                repo.save(archive_name, file_bytes)
+            else:
+                extracted_or_downloaded_filenames.append(
+                    os.path.join("raw", archive_name)
+                )
+                repo.save(archive_name, file_bytes)
 
         else:
             logger.info(
@@ -46,12 +56,15 @@ def migrate_files(
                 file_name=archive_name,
             )
             continue
-
-    return extracted_filenames
+    return extracted_or_downloaded_filenames
 
 
 def migrate_from_ftp(
-    s_ftp: SFTP_FTP_TYPE, repo: IRepository, logger: PrintLogger, **kwargs
+    s_ftp: SFTP_FTP_TYPE,
+    repo: IRepository,
+    logger: PrintLogger,
+    publisher=None,
+    **kwargs,
 ):
     params = kwargs["params"]
     force_pull_specific_files = (
@@ -66,10 +79,10 @@ def migrate_from_ftp(
     )
 
     if force_pull_all_files:
-        return _force_pull(s_ftp, repo, logger, **kwargs)
+        return _force_pull(s_ftp, repo, logger, publisher, **kwargs)
     elif force_pull_specific_files:
-        return _filenames_pull(s_ftp, repo, logger, **kwargs)
-    return _differential_pull(s_ftp, repo, logger, **kwargs)
+        return _filenames_pull(s_ftp, repo, logger, publisher, **kwargs)
+    return _differential_pull(s_ftp, repo, logger, publisher, **kwargs)
 
 
 def reprocess_files(repo: IRepository, logger: PrintLogger, **kwargs):
@@ -79,23 +92,36 @@ def reprocess_files(repo: IRepository, logger: PrintLogger, **kwargs):
     return _find_files_in_zip(filenames, repo)
 
 
-def _force_pull(s_ftp: SFTP_FTP_TYPE, repo: IRepository, logger: PrintLogger, **kwargs):
+def _force_pull(
+    s_ftp: SFTP_FTP_TYPE,
+    repo: IRepository,
+    logger: PrintLogger,
+    publisher: str,
+    **kwargs,
+):
     logger.msg("Force Pulling from SFTP.")
     excluded_directories = kwargs["params"]["excluded_directories"]
     filenames = s_ftp.list_files(excluded_directories=excluded_directories)
-    return migrate_files(filenames, s_ftp, repo, logger)
+    process_archives = publisher != "elsevier"
+    return migrate_files(
+        filenames, s_ftp, repo, logger, process_archives=process_archives
+    )
 
 
 def _filenames_pull(
     s_ftp: SFTP_FTP_TYPE,
     repo: IRepository,
     logger: PrintLogger,
+    publisher: str,
     **kwargs,
 ):
     filenames_pull_params = kwargs["params"]["filenames_pull"]
     filenames = filenames_pull_params["filenames"]
     logger.msg("Pulling specified filenames from SFTP")
-    return migrate_files(filenames, s_ftp, repo, logger)
+    process_archives = publisher != "elsevier"
+    return migrate_files(
+        filenames, s_ftp, repo, logger, process_archives=process_archives
+    )
 
 
 def _find_files_in_zip(filenames, repo: IRepository):
@@ -113,14 +139,21 @@ def _find_files_in_zip(filenames, repo: IRepository):
 
 
 def _differential_pull(
-    s_ftp: SFTP_FTP_TYPE, repo: IRepository, logger: PrintLogger, **kwargs
+    s_ftp: SFTP_FTP_TYPE,
+    repo: IRepository,
+    logger: PrintLogger,
+    publisher: str,
+    **kwargs,
 ):
     logger.msg("Pulling missing files only.")
     excluded_directories = kwargs["params"]["excluded_directories"]
     sftp_files = s_ftp.list_files(excluded_directories=excluded_directories)
     s3_files = repo.get_all_raw_filenames()
     diff_files = list(filter(lambda x: x not in s3_files, sftp_files))
-    return migrate_files(diff_files, s_ftp, repo, logger)
+    process_archives = publisher != "elsevier"
+    return migrate_files(
+        diff_files, s_ftp, repo, logger, process_archives=process_archives
+    )
 
 
 def trigger_file_processing(

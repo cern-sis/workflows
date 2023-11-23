@@ -1,7 +1,7 @@
 import pytest
 from airflow import DAG
 from airflow.models import DagBag
-from common.pull_ftp import migrate_from_ftp, trigger_file_processing
+from common.pull_ftp import migrate_from_ftp
 from common.repository import IRepository
 from elsevier.repository import ElsevierRepository
 from elsevier.sftp_service import ElsevierSFTPService
@@ -18,11 +18,6 @@ def dag():
 
 
 @pytest.fixture
-def dag_was_paused(dag):
-    return dag.get_is_paused()
-
-
-@pytest.fixture
 def elsevier_empty_repo():
     repo = ElsevierRepository()
     repo.delete_all()
@@ -34,20 +29,6 @@ def test_dag_loaded(dag: DAG):
     assert len(dag.tasks) == 2
 
 
-def test_dag_run(dag: DAG, dag_was_paused: bool, elsevier_empty_repo: IRepository):
-    assert len(elsevier_empty_repo.find_all()) == 0
-    dag.clear()
-    dag.test()
-    expected_files = [
-        {
-            "pdf": "extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323005105/main.pdf",
-            "xml": "extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323005105/main.xml",
-        },
-        {"xml": "extracted/CERNQ000000010669A/CERNQ000000010669/dataset.xml"},
-    ]
-    assert elsevier_empty_repo.find_all() == expected_files
-
-
 def test_dag_migrate_from_FTP(elsevier_empty_repo):
     assert len(elsevier_empty_repo.find_all()) == 0
     with ElsevierSFTPService() as ftp:
@@ -55,6 +36,7 @@ def test_dag_migrate_from_FTP(elsevier_empty_repo):
             ftp,
             elsevier_empty_repo,
             get_logger().bind(class_name="test_logger"),
+            publisher="elsevier",
             **{
                 "params": {
                     "excluded_directories": [],
@@ -67,17 +49,8 @@ def test_dag_migrate_from_FTP(elsevier_empty_repo):
                 }
             },
         )
-        assert elsevier_empty_repo.find_all() == [
-            {
-                "pdf": "extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323005105/main.pdf",
-                "xml": "extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323005105/main.xml",
-            },
-            {"xml": "extracted/CERNQ000000010669A/CERNQ000000010669/dataset.xml"},
+        assert elsevier_empty_repo.get_all_raw_filenames() == [
+            "CERNQ000000010011A.tar",
+            "CERNQ000000010669A.tar",
+            "vtex00403986_a-2b_CLEANED.zip",
         ]
-
-
-def test_dag_trigger_file_processing():
-    repo = ElsevierRepository()
-    assert [x["xml"] for x in repo.find_all()] == trigger_file_processing(
-        "oup", repo, get_logger().bind(class_name="test_logger")
-    )

@@ -139,11 +139,24 @@ class ElsevierParser(IParser):
                 field_name="country",
                 dois=self.dois,
             )
-            affiliations.append(
-                {
-                    "value": affiliation_value,
-                    "organization": organization,
-                    "country": country,
-                }
-            )
+            if affiliation_value and organization and country:
+                affiliations.append(
+                    {
+                        "value": affiliation_value,
+                        "organization": organization,
+                        "country": country,
+                    }
+                )
+            else:
+                affiliation_value = extract_text(
+                    article=author,
+                    path=f"affiliation/[@id='{ref_id}']/affiliation/address-line",
+                    field_name="affiliation_value",
+                    dois=self.dois,
+                )
+                affiliations.append(
+                    {
+                        "value": affiliation_value,
+                    }
+                )
         return affiliations

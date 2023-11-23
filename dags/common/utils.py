@@ -7,7 +7,6 @@ import xml.etree.ElementTree as ET
 import zipfile
 from ftplib import error_perm
 from io import StringIO
-from os.path import basename
 from stat import S_ISDIR, S_ISREG
 
 from airflow.models.dagrun import DagRun
@@ -111,7 +110,7 @@ def walk_ftp(ftp, remotedir, paths):
             walk_ftp(ftp=ftp, remotedir=entry, paths=paths)
         except error_perm:
             ftp.cwd("/")
-            paths.append(basename(entry))
+            paths.append(os.path.basename(entry))
 
 
 def construct_license(license_type, version, url=None):
@@ -203,28 +202,34 @@ def check_dagrun_state(dagrun: DagRun, not_allowed_states=[], allowed_states=[])
     return all(states_values)
 
 
-def process_zip_file(file_bytes, file_name):
+def process_zip_file(file_bytes, file_name, **kwargs):
     file_bytes.seek(0)
+    only_specific_file = kwargs.get("only_specific_file")
     with zipfile.ZipFile(file_bytes) as zip:
         for filename in zip.namelist():
-            file_prefix = ".".join(file_name.split(".")[:-1])
+            if only_specific_file and only_specific_file not in filename:
+                continue
             zip_file_content = zip.read(filename)
+            file_prefix = ".".join(file_name.split(".")[:-1])
             s3_filename = os.path.join(file_prefix, filename)
             yield (zip_file_content, s3_filename)
 
 
-def process_tar_file(file_bytes, file_name):
+def process_tar_file(file_bytes, file_name, **kwargs):
     file_bytes.seek(0)
+    only_specific_file = kwargs.get("only_specific_file")
     with tarfile.open(fileobj=file_bytes, mode="r") as tar:
         for filename in tar.getnames():
-            file_prefix = ".".join(file_name.split(".")[:-1])
+            if only_specific_file and only_specific_file not in filename:
+                continue
             tar_file_content = tar.extractfile(filename).read()
+            file_prefix = ".".join(file_name.split(".")[:-1])
             s3_filename = os.path.join(file_prefix, filename)
             yield (tar_file_content, s3_filename)
 
 
-def process_archive(file_bytes, file_name):
+def process_archive(file_bytes, file_name, **kwargs):
     if zipfile.is_zipfile(file_bytes):
-        return process_zip_file(file_bytes, file_name)
+        return process_zip_file(file_bytes, file_name, **kwargs)
     if tarfile.is_tarfile(file_bytes):
-        return process_tar_file(file_bytes, file_name)
+        return process_tar_file(file_bytes, file_name, **kwargs)

@@ -16,11 +16,6 @@ def dag():
     yield dagbag.get_dag(dag_id=DAG_NAME)
 
 
-@pytest.fixture
-def dag_was_paused(dag):
-    return dag.get_is_paused()
-
-
 def test_dag_loaded(dag: DAG):
     assert dag is not None
     assert len(dag.tasks) == 2
@@ -28,7 +23,6 @@ def test_dag_loaded(dag: DAG):
 
 def test_dag_run(
     dag: DAG,
-    dag_was_paused: bool,
 ):
     repo = OUPRepository()
     repo.delete_all()

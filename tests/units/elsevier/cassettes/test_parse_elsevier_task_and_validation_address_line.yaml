@@ -446,18 +446,18 @@ interactions:
         content-type:
           - application/json
         date:
-          - Tue, 07 Nov 2023 08:46:32 GMT
+          - Tue, 21 Nov 2023 09:58:33 GMT
         etag:
           - '"1689603451.0-31231-3384283821"'
         expires:
-          - Tue, 07 Nov 2023 20:46:32 GMT
+          - Tue, 21 Nov 2023 21:58:33 GMT
         last-modified:
           - Mon, 17 Jul 2023 14:17:31 GMT
         server:
           - gunicorn/19.6.0
         set-cookie:
-          - session=1e3084177167145b_6549f968.NsHfocebJgPUrVrq1X7GdmXWtxw; Domain=.repo.qa.scoap3.org;
-            Expires=Fri, 08-Dec-2023 08:46:32 GMT; HttpOnly; Path=/
+          - session=63284f8ffed75edf_655c7f49.ClG63pKPSM_gkQdKptJBnVOZsec; Domain=.repo.qa.scoap3.org;
+            Expires=Fri, 22-Dec-2023 09:58:33 GMT; HttpOnly; Path=/
         x-proxy-backend:
           - scoap3-qa_scoap3-web_http
       status:
@@ -522,18 +522,18 @@ interactions:
         content-type:
           - application/json
         date:
-          - Tue, 07 Nov 2023 08:46:32 GMT
+          - Tue, 21 Nov 2023 09:58:34 GMT
         etag:
-          - '"1689598543.0-486-3404142481"'
+          - '"1689603451.0-486-3404142481"'
         expires:
-          - Tue, 07 Nov 2023 20:46:32 GMT
+          - Tue, 21 Nov 2023 21:58:34 GMT
         last-modified:
-          - Mon, 17 Jul 2023 12:55:43 GMT
+          - Mon, 17 Jul 2023 14:17:31 GMT
         server:
           - gunicorn/19.6.0
         set-cookie:
-          - session=49b39f243a2583bd_6549f968.JSAbIjtqh4XPf0EkjY7YeGBRiV8; Domain=.repo.scoap3.org;
-            Expires=Fri, 08-Dec-2023 08:46:32 GMT; HttpOnly; Path=/
+          - session=b8374d16be2424fa_655c7f4a.xQ3IrJY3koU-gZUuTulzn4a53Oo; Domain=.repo.scoap3.org;
+            Expires=Fri, 22-Dec-2023 09:58:34 GMT; HttpOnly; Path=/
         x-proxy-backend:
           - scoap3-prod_scoap3-web_http
       status:
