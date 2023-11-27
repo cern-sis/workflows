@@ -14,3 +14,12 @@ def test_case_instance():
 @pytest.fixture(scope="session")
 def assertListEqual(test_case_instance):
     return lambda first, second: test_case_instance.assertCountEqual(first, second)
+
+@pytest.fixture(scope="session")
+def vcr_config():
+    return {
+        "ignore_localhost": True,
+        "decode_compressed_response": True,
+        "filter_headers": ("Authorization", "X-Amz-Date"),
+        "record_mode": "once",
+    }

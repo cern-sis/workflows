@@ -50,7 +50,7 @@ def article(parser):
 
 def test_dag_loaded(dag: DAG):
     assert dag
-    assert len(dag.tasks) == 4
+    assert len(dag.tasks) == 5
 
 
 @pytest.mark.vcr

@@ -14,4 +14,4 @@ def dag():
 
 def test_dag_loaded(dag: DAG):
     assert dag is not None
-    assert len(dag.tasks) == 4
+    assert len(dag.tasks) == 5

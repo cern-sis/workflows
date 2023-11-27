@@ -5,7 +5,7 @@ import requests
 from airflow.decorators import dag, task
 from common.enhancer import Enhancer
 from common.enricher import Enricher
-from common.utils import parse_without_names_spaces
+from common.utils import create_or_update_article, parse_without_names_spaces
 from jsonschema import validate
 from oup.parser import OUPParser
 
@@ -54,10 +54,15 @@ def oup_process_file():
     def validate_record(enriched_file):
         oup_validate_record(enriched_file)
 
+    @task()
+    def create_or_update(enriched_file):
+        create_or_update_article(enriched_file)
+
     parsed_file = parse_file()
     enhanced_file = enhance_file(parsed_file)
     enriched_file = enrich_file(enhanced_file)
     validate_record(enriched_file)
+    create_or_update(enriched_file)
 
 
 dag_taskflow = oup_process_file()

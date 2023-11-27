@@ -9,6 +9,8 @@ from ftplib import error_perm
 from io import StringIO
 from stat import S_ISDIR, S_ISREG
 
+import backoff
+import requests
 from airflow.models.dagrun import DagRun
 from airflow.utils.state import DagRunState
 from common.constants import (
@@ -233,3 +235,23 @@ def process_archive(file_bytes, file_name, **kwargs):
         return process_zip_file(file_bytes, file_name, **kwargs)
     if tarfile.is_tarfile(file_bytes):
         return process_tar_file(file_bytes, file_name, **kwargs)
+
+
+@backoff.on_exception(
+    backoff.expo,
+    (requests.exceptions.ConnectionError, requests.exceptions.Timeout),
+    max_tries=5,
+)
+def create_or_update_article(data):
+    backend_url = os.getenv(
+        "BACKEND_URL", "http://localhost:8000/api/article-workflow-import/"
+    )
+    token = os.getenv("BACKEND_TOKEN", "CHANGE_ME")
+    headers = {"Content-Type": "application/json", "Authorization": f"Token {token}"}
+    response = requests.post(
+        f"{backend_url}",
+        data=json.dumps(data),
+        headers=headers,
+    )
+    response.raise_for_status()
+    return response.json()

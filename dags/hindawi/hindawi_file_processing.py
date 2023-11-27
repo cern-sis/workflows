@@ -5,6 +5,7 @@ import requests
 from airflow.decorators import dag, task
 from common.enhancer import Enhancer
 from common.enricher import Enricher
+from common.utils import create_or_update_article
 from hindawi.parser import HindawiParser
 from jsonschema import validate
 
@@ -49,10 +50,15 @@ def hindawi_file_processing():
     def validate_record(enriched_file):
         return enriched_file and hindawi_validate_record(enriched_file)
 
+    @task()
+    def create_or_update(enriched_file):
+        create_or_update_article(enriched_file)
+
     parsed_file = parse()
     enhanced_file = enchance(parsed_file)
     enriched_file = enrich(enhanced_file)
     validate_record(enriched_file)
+    create_or_update(enriched_file)
 
 
 Hindawi_file_processing = hindawi_file_processing()

@@ -6,7 +6,7 @@ from airflow.decorators import dag, task
 from common.enhancer import Enhancer
 from common.enricher import Enricher
 from common.exceptions import EmptyOutputFromPreviousTask
-from common.utils import parse_without_names_spaces
+from common.utils import create_or_update_article, parse_without_names_spaces
 from elsevier.parser import ElsevierParser
 from jsonschema import validate
 
@@ -64,10 +64,15 @@ def elsevier_process_file():
             return elsevier_validate_record(enriched_file)
         raise EmptyOutputFromPreviousTask("enriched_file_with_metadata")
 
+    @task()
+    def create_or_update(enriched_file):
+        create_or_update_article(enriched_file)
+
     parsed_file = parse()
     enhanced_file = enhance(parsed_file)
     enriched_file = enrich(enhanced_file)
     validate_record(enriched_file)
+    create_or_update(enriched_file)
 
 
 Elsevier_file_processing = elsevier_process_file()

@@ -6,6 +6,7 @@ from airflow.decorators import dag, task
 from aps.parser import APSParser
 from common.enhancer import Enhancer
 from common.enricher import Enricher
+from common.utils import create_or_update_article
 from jsonschema import validate
 
 
@@ -48,10 +49,15 @@ def aps_process_file():
     def validate_record(enriched_file):
         return enriched_file and aps_validate_record(enriched_file)
 
+    @task()
+    def create_or_update(enriched_file):
+        create_or_update_article(enriched_file)
+
     parsed_file = parse()
     enhanced_file = enchance(parsed_file)
     enriched_file = enrich(enhanced_file)
     validate_record(enriched_file)
+    create_or_update(enriched_file)
 
 
 dag_for_aps_files_processing = aps_process_file()

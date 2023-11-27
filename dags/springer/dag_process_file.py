@@ -6,6 +6,7 @@ import requests
 from airflow.decorators import dag, task
 from common.enhancer import Enhancer
 from common.enricher import Enricher
+from common.utils import create_or_update_article
 from jsonschema import validate
 from springer.parser import SpringerParser
 
@@ -54,10 +55,15 @@ def springer_process_file():
     def validate_record(enriched_file):
         springer_validate_record(enriched_file)
 
+    @task()
+    def create_or_update(enriched_file):
+        create_or_update_article(enriched_file)
+
     parsed_file = parse_file()
     enhanced_file = enhance_file(parsed_file)
     enriched_file = enrich_file(enhanced_file)
     validate_record(enriched_file)
+    create_or_update(enriched_file)
 
 
 dag_taskflow = springer_process_file()

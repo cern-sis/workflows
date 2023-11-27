@@ -6,6 +6,7 @@ import requests
 from airflow.decorators import dag, task
 from common.enhancer import Enhancer
 from common.enricher import Enricher
+from common.utils import create_or_update_article
 from iop.parser import IOPParser
 from jsonschema import validate
 
@@ -54,10 +55,15 @@ def iop_process_file():
     def validate_record(enriched_file):
         iop_validate_record(enriched_file)
 
+    @task()
+    def create_or_update(enriched_file):
+        create_or_update_article(enriched_file)
+
     parsed_file = parse_file()
     enhanced_file = enhance_file(parsed_file)
     enriched_file = enrich_file(enhanced_file)
     validate_record(enriched_file)
+    create_or_update(enriched_file)
 
 
 dag_taskflow = iop_process_file()
