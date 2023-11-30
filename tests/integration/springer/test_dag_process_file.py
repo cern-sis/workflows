@@ -61,7 +61,7 @@ def test_dag_loaded(dag: DAG):
 @pytest.mark.skip(reason="It does not test anything.")
 def test_dag_run(dag: DAG, dag_was_paused: bool, article: ET):
     dag_run_id = datetime.datetime.utcnow().strftime(
-        "test_springer_dag_process_file_%Y-%m-%dT%H:%M:%S.%f"
+        "test_springer_dag_process_file_%Y-%m-%dT%H:%M:%S.%f%z"
     )
     if dag.get_is_paused():
         DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=False)
@@ -82,7 +82,7 @@ def test_dag_run_no_input_file(dag: DAG, dag_was_paused: bool):
     if dag.get_is_paused():
         DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=False)
     dag_run_id = datetime.datetime.utcnow().strftime(
-        "test_springer_dag_process_file_%Y-%m-%dT%H:%M:%S.%f"
+        "test_springer_dag_process_file_%Y-%m-%dT%H:%M:%S.%f%z"
     )
     dagrun = dag.create_dagrun(DagRunState.QUEUED, run_id=dag_run_id)
     wait().at_most(60, SECOND).until(

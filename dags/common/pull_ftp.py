@@ -3,7 +3,7 @@ import io
 import os
 import tarfile
 import zipfile
-from datetime import datetime
+from datetime import datetime, timezone
 
 from airflow.api.common import trigger_dag
 from common.ftp_service import FTPService
@@ -186,4 +186,5 @@ def trigger_file_processing(
 
 
 def _generate_id(publisher: str):
-    return datetime.utcnow().strftime(f"{publisher}_%Y-%m-%dT%H:%M:%S.%f")
+    logs_date = datetime.utcnow().astimezone(timezone.utc)
+    return f'{publisher}__{logs_date.strftime("%Y-%m-%dT%H:%M:%S.%f%z")}'

@@ -117,9 +117,9 @@ class ElsevierMetadataParser(IParser):
     def _get_local_files(self, article):
         if self.file_path.endswith("A.tar"):
             self.file_path = self.file_path.replace("A.tar", "")
-        if  self.file_path.endswith(".zip"):
+        if self.file_path.endswith(".zip"):
             self.file_path = self.file_path.replace(".zip", "")
-        if  self.file_path.startswith("raw"):
+        if self.file_path.startswith("raw"):
             self.file_path = self.file_path.replace("raw/", "")
 
         pdf_file_path = os.path.join(
