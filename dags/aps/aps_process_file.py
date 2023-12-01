@@ -27,6 +27,7 @@ def enrich_aps(enhanced_file):
 def aps_validate_record(enriched_file):
     schema = requests.get(enriched_file["$schema"]).json()
     validate(enriched_file, schema)
+    return enriched_file
 
 
 @dag(schedule=None, start_date=pendulum.today("UTC").add(days=-1))
@@ -56,8 +57,8 @@ def aps_process_file():
     parsed_file = parse()
     enhanced_file = enchance(parsed_file)
     enriched_file = enrich(enhanced_file)
-    validate_record(enriched_file)
-    create_or_update(enriched_file)
+    validated_record = validate_record(enriched_file)
+    create_or_update(validated_record)
 
 
 dag_for_aps_files_processing = aps_process_file()

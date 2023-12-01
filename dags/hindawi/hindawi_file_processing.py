@@ -26,6 +26,7 @@ def enrich_hindawi(enhanced_file):
 def hindawi_validate_record(enriched_file):
     schema = requests.get(enriched_file["$schema"]).json()
     validate(enriched_file, schema)
+    return enriched_file
 
 
 @dag(schedule=None, start_date=pendulum.today("UTC").add(days=-1))
@@ -57,8 +58,8 @@ def hindawi_file_processing():
     parsed_file = parse()
     enhanced_file = enchance(parsed_file)
     enriched_file = enrich(enhanced_file)
-    validate_record(enriched_file)
-    create_or_update(enriched_file)
+    validated_record = validate_record(enriched_file)
+    create_or_update(validated_record)
 
 
 Hindawi_file_processing = hindawi_file_processing()
