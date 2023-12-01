@@ -11,7 +11,7 @@ def parser():
 @fixture
 def articles(shared_datadir):
     articles = []
-    file_names = ["main2.xml", "main.xml", "main_rjjlr.xml"]
+    file_names = ["main2.xml", "main.xml", "main_rjjlr.xml", "j.physletb.2023.138109.xml"]
     for filename in file_names:
         with open(shared_datadir / filename) as file:
             articles.append(parse_without_names_spaces(file.read()))
@@ -31,6 +31,8 @@ def parsed_articles(parser, articles):
                 ["10.1016/j.physletb.2023.137730"],
                 ["10.1016/j.physletb.2023.138173"],
                 ["10.1016/j.physletb.2022.137649"],
+                ["10.1016/j.physletb.2023.138109"]
+
             ],
             "dois",
             id="test_dois",
@@ -40,6 +42,7 @@ def parsed_articles(parser, articles):
                 "We present the first systematic comparison of the charged-particle pseudorapidity densities for three widely different collision systems, pp, p <glyph name='sbnd' />Pb, and Pb <glyph name='sbnd' />Pb, at the top energy of the Large Hadron Collider ( <math altimg='si1.svg'><msqrt><mrow><msub><mrow><mi>s</mi></mrow><mrow><mi mathvariant='normal'>NN</mi></mrow></msub></mrow></msqrt><mo linebreak='goodbreak' linebreakstyle='after'>=</mo><mn>5.02</mn><mspace width='0.2em' /><mtext>TeV</mtext></math>) measured over a wide pseudorapidity range ( <math altimg='si3.svg'><mo linebreak='badbreak' linebreakstyle='after'>&#8722;</mo><mn>3.5</mn><mo linebreak='goodbreak' linebreakstyle='after'>&lt;</mo><mi>&#951;</mi><mo linebreak='goodbreak' linebreakstyle='after'>&lt;</mo><mn>5</mn></math>), the widest possible among the four experiments at that facility. The systematic uncertainties are minimised since the measurements are recorded by the same experimental apparatus (ALICE). The distributions for p <glyph name='sbnd' />Pb and Pb <glyph name='sbnd' />Pb collisions are determined as a function of the centrality of the collisions, while results from pp collisions are reported for inelastic events with at least one charged particle at midrapidity. The charged-particle pseudorapidity densities are, under simple and robust assumptions, transformed to charged-particle rapidity densities. This allows for the calculation and the presentation of the evolution of the width of the rapidity distributions and of a lower bound on the Bjorken energy density, as a function of the number of participants in all three collision systems. We find a decreasing width of the particle production, and roughly a smooth ten fold increase in the energy density, as the system size grows, which is consistent with a gradually higher dense phase of matter.",
                 "One of the leading issues in quantum field theory and cosmology is the mismatch between the observed and calculated values for the cosmological constant in Einstein's field equations of up to 120 orders of magnitude. In this paper, we discuss new methods to potentially bridge this chasm using the generalized uncertainty principle (GUP). We find that if quantum gravity GUP models are the solution to this puzzle, then it may require the gravitationally modified position operator undergoes a parity transformation at high energies.",
                 "This letter reports measurements which characterize the underlying event associated with hard scatterings at mid-pseudorapidity ( <math altimg='si2.svg'><mo stretchy='false'>|</mo><mi>&#951;</mi><mo stretchy='false'>|</mo><mo linebreak='goodbreak' linebreakstyle='after'>&lt;</mo><mn>0.8</mn></math>) in pp, p&#8211;Pb and Pb&#8211;Pb collisions at centre-of-mass energy per nucleon pair,  <math altimg='si1.svg'><msqrt><mrow><msub><mrow><mi>s</mi></mrow><mrow><mi mathvariant='normal'>NN</mi></mrow></msub></mrow></msqrt><mo linebreak='goodbreak' linebreakstyle='after'>=</mo><mn>5.02</mn></math> <hsp sp='0.20' />TeV. The measurements are performed with ALICE at the LHC. Different multiplicity classes are defined based on the event activity measured at forward rapidities. The hard scatterings are identified by the leading particle defined as the charged particle with the largest transverse momentum ( <math altimg='si3.svg'><msub><mrow><mi>p</mi></mrow><mrow><mi mathvariant='normal'>T</mi></mrow></msub></math>) in the collision and having 8  <math altimg='si4.svg'><mo linebreak='badbreak' linebreakstyle='after'>&lt;</mo><msub><mrow><mi>p</mi></mrow><mrow><mi mathvariant='normal'>T</mi></mrow></msub><mo linebreak='goodbreak' linebreakstyle='after'>&lt;</mo><mn>15</mn></math> <hsp sp='0.20' />GeV/ <italic>c</italic>. The  <math altimg='si3.svg'><msub><mrow><mi>p</mi></mrow><mrow><mi mathvariant='normal'>T</mi></mrow></msub></math> spectra of associated particles (0.5  <math altimg='si5.svg'><mo>&#8804;</mo><msub><mrow><mi>p</mi></mrow><mrow><mi mathvariant='normal'>T</mi></mrow></msub><mo linebreak='goodbreak' linebreakstyle='after'>&lt;</mo><mn>6</mn></math> <hsp sp='0.20' />GeV/ <italic>c</italic>) are measured in different azimuthal regions defined with respect to the leading particle direction: toward, transverse, and away. The associated charged particle yields in the transverse region are subtracted from those of the away and toward regions. The remaining jet-like yields are reported as a function of the multiplicity measured in the transverse region. The measurements show a suppression of the jet-like yield in the away region and an enhancement of high- <math altimg='si3.svg'><msub><mrow><mi>p</mi></mrow><mrow><mi mathvariant='normal'>T</mi></mrow></msub></math> associated particles in the toward region in central Pb&#8211;Pb collisions, as compared to minimum-bias pp collisions. These observations are consistent with previous measurements that used two-particle correlations, and with an interpretation in terms of parton energy loss in a high-density quark gluon plasma. These yield modifications vanish in peripheral Pb&#8211;Pb collisions and are not observed in either high-multiplicity pp or p&#8211;Pb collisions.",
+                "We investigate the stability of the electroweak vacuum in metric-affine gravity in which the Standard Model Higgs boson can be non-minimally coupled to both the Ricci scalar and the Holst invariant. We find that vacuum stability is improved in this framework across a wide range of model parameters."
             ],
             "abstract",
             id="test_abstract",
@@ -49,6 +52,7 @@ def parsed_articles(parser, articles):
                 "System-size dependence of the charged-particle pseudorapidity density at  <math altimg='si1.svg'><msqrt><mrow><msub><mrow><mi>s</mi></mrow><mrow><mi mathvariant='normal'>NN</mi></mrow></msub></mrow></msqrt><mo linebreak='goodbreak' linebreakstyle='after'>=</mo><mn>5.02</mn><mspace width='0.2em' /><mtext>TeV</mtext></math> for pp, p <glyph name='sbnd' />Pb, and Pb <glyph name='sbnd' />Pb collisions",
                 "Quantum gravity, the cosmological constant, and parity transformation",
                 "Study of charged particle production at high  <italic>p</italic> <inf>T</inf> using event topology in pp, p&#8211;Pb and Pb&#8211;Pb collisions at  <math altimg='si1.svg'><msqrt><mrow><msub><mrow><mi>s</mi></mrow><mrow><mi mathvariant='normal'>NN</mi></mrow></msub></mrow></msqrt><mo linebreak='goodbreak' linebreakstyle='after'>=</mo><mn>5.02</mn></math> <hsp sp='0.20' />TeV",
+                "Electroweak vacuum decay in metric-affine gravity"
             ],
             "title",
             id="test_tilte",
@@ -11530,6 +11534,36 @@ def parsed_articles(parser, articles):
                         ],
                     },
                 ],
+                [
+                    {
+                        "surname": "Gialamas",
+                        "given_names": "Ioannis D.",
+                        "affiliations": [
+                            {
+                                "value": "None"
+                            }
+                        ],
+                        "email": "ioannis.gialamas@kbfi.ee"
+                    },
+                    {
+                        "surname": "Veermäe",
+                        "given_names": "Hardi",
+                        "email": "hardi.veermae@cern.ch"
+                    }
+                ][
+                    {
+                        "surname": "Gialamas",
+                        "given_names": "Ioannis D.",
+                        "email": "ioannis.gialamas@kbfi.ee",
+                        "full_name": "Gialamas, Ioannis D."
+                    },
+                    {
+                        "surname": "Veermäe",
+                        "given_names": "Hardi",
+                        "email": "hardi.veermae@cern.ch",
+                        "full_name": "Veermäe, Hardi"
+                    }
+                ]
             ],
             "authors",
             id="test_authors",
@@ -11553,12 +11587,13 @@ def parsed_articles(parser, articles):
                 "European Center of Nuclear Research, ALICE experiment",
                 "The Author(s)",
                 "The Author(s)",
+                "The Author(s)"
             ],
             "copyright_statement",
             id="test_copyright_statement",
         ),
         param(
-            ["137730", "138173", "137649"],
+            ["137730", "138173", "137649", "138109"],
             "journal_artid",
             id="test_journal_artid",
         ),
@@ -11566,4 +11601,5 @@ def parsed_articles(parser, articles):
 )
 def test_elsevier_parsing(parsed_articles, expected, key):
     for (expected_value, article) in zip(expected, parsed_articles):
+        print(article[key], expected_value)
         assert article[key] == expected_value
