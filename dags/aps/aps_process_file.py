@@ -6,6 +6,7 @@ from airflow.decorators import dag, task
 from aps.parser import APSParser
 from common.enhancer import Enhancer
 from common.enricher import Enricher
+from common.exceptions import EmptyOutputFromPreviousTask
 from common.utils import create_or_update_article
 from jsonschema import validate
 
@@ -39,23 +40,29 @@ def aps_process_file():
             return parse_aps(article)
 
     @task()
-    def enchance(parsed_file):
-        return parsed_file and enhance_aps(parsed_file)
+    def enhance(parsed_file):
+        if not parsed_file:
+            raise EmptyOutputFromPreviousTask("parse")
+        return enhance_aps(parsed_file)
 
     @task()
     def enrich(enhanced_file):
-        return enhanced_file and enrich_aps(enhanced_file)
+        if not enhanced_file:
+            raise EmptyOutputFromPreviousTask("enhance")
+        return enrich_aps(enhanced_file)
 
     @task()
     def validate_record(enriched_file):
-        return enriched_file and aps_validate_record(enriched_file)
+        if enriched_file:
+            raise EmptyOutputFromPreviousTask("enrich")
+        return aps_validate_record(enriched_file)
 
     @task()
     def create_or_update(enriched_file):
         create_or_update_article(enriched_file)
 
     parsed_file = parse()
-    enhanced_file = enchance(parsed_file)
+    enhanced_file = enhance(parsed_file)
     enriched_file = enrich(enhanced_file)
     validated_record = validate_record(enriched_file)
     create_or_update(validated_record)

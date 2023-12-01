@@ -5,6 +5,7 @@ import requests
 from airflow.decorators import dag, task
 from common.enhancer import Enhancer
 from common.enricher import Enricher
+from common.exceptions import EmptyOutputFromPreviousTask
 from common.utils import create_or_update_article, parse_without_names_spaces
 from jsonschema import validate
 from oup.parser import OUPParser
@@ -45,15 +46,21 @@ def oup_process_file():
 
     @task()
     def enhance_file(parsed_file):
+        if not parsed_file:
+            raise EmptyOutputFromPreviousTask("parse_file")
         return oup_enhance_file(parsed_file)
 
     @task()
     def enrich_file(enhanced_file):
+        if not enhanced_file:
+            raise EmptyOutputFromPreviousTask("enhance_file")
         return oup_enrich_file(enhanced_file)
 
     @task()
     def validate_record(enriched_file):
-        return enriched_file and oup_validate_record(enriched_file)
+        if not enriched_file:
+            raise EmptyOutputFromPreviousTask("enrich_file")
+        return oup_validate_record(enriched_file)
 
     @task()
     def create_or_update(enriched_file):
