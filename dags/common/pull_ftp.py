@@ -186,5 +186,5 @@ def trigger_file_processing(
 
 
 def _generate_id(publisher: str):
-    logs_date = datetime.utcnow().astimezone(timezone.utc)
+    logs_date = datetime.now(timezone.utc)
     return f'{publisher}__{logs_date.strftime("%Y-%m-%dT%H:%M:%S.%f%z")}'
