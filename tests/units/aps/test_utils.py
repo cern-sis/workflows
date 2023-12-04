@@ -3,6 +3,7 @@ from io import BytesIO
 
 from aps.utils import save_file_in_s3, split_json
 from common.utils import set_harvesting_interval
+from freezegun import freeze_time
 
 DAG_NAME = "aps_fetch_api"
 TRIGGERED_DAG_NAME = "aps_process_file"
@@ -57,10 +58,10 @@ def test_save_file_in_s3():
     assert key == expected_key
 
 
-def test_split_json():
-    doi = "10.1103/PhysRevLett.126.153601"
-    today = datetime.now().strftime("%Y-%m-%dT%H:%M")
+@freeze_time("2023-12-04")
+def test_split_json(monkeypatch):
+    monkeypatch.setenv("TZ", "GMT")
     ids_and_articles = split_json(repo=MockedRepo(), key="key/key")
-    expected_id = f"APS_{doi}_{today}"
+    expected_id = f"APS__2023-12-04T00:00:00.000000+0000"
     assert ids_and_articles[0]["id"] == expected_id
     assert len(ids_and_articles) == 1

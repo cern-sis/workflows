@@ -1,6 +1,7 @@
 import json
 import random
 import string
+from datetime import datetime, timedelta, timezone
 from io import BytesIO
 from unittest.mock import patch
 
@@ -9,6 +10,7 @@ from airflow.models.dagrun import DagRun
 from aps.utils import split_json, trigger_file_processing_DAG
 from common.repository import IRepository
 from freezegun import freeze_time
+from pytest import fixture
 
 
 class S3BucketResultObj:
@@ -23,18 +25,6 @@ pseudo_article = {
     "data": [{"identifiers": {"doi": "100"}}, {"identifiers": {"doi": "100"}}]
 }
 file = BytesIO(json.dumps(pseudo_article).encode("utf-8"))
-
-
-@freeze_time("2023-02-22T15:41")
-@patch.object(IRepository, attribute="get_by_id", return_value=file)
-def test_split_json_(*args):
-    repo = IRepository()
-    ids_and_articles = split_json(repo, "key")
-    assert ids_and_articles == [
-        {"article": {"identifiers": {"doi": "100"}}, "id": "APS_100_2023-02-22T15:41"},
-        {"article": {"identifiers": {"doi": "100"}}, "id": "APS_100_2023-02-22T15:41"},
-    ]
-
 
 TRIGGERED_DAG_NAME = "aps_process_file"
 

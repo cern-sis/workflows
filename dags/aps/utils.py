@@ -3,6 +3,7 @@ from datetime import date, datetime
 from io import BytesIO
 
 from airflow.api.common import trigger_dag
+from common.pull_ftp import _generate_id
 
 
 def save_file_in_s3(data, repo):
@@ -24,7 +25,7 @@ def split_json(repo, key):
     for article in data:
         doi = article["identifiers"]["doi"]
         today = datetime.now().strftime("%Y-%m-%dT%H:%M")
-        _id = f"APS_{doi}_{today}"
+        _id = _generate_id("APS")
         ids_and_articles.append({"id": _id, "article": article})
     return ids_and_articles
 

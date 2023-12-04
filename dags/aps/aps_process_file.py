@@ -53,7 +53,7 @@ def aps_process_file():
 
     @task()
     def validate_record(enriched_file):
-        if enriched_file:
+        if not enriched_file:
             raise EmptyOutputFromPreviousTask("enrich")
         return aps_validate_record(enriched_file)
 
