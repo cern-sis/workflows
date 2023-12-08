@@ -121,42 +121,52 @@ class ElsevierParser(IParser):
     def _get_affiliations(self, ref_ids, author):
         affiliations = []
         for ref_id in ref_ids:
+            self._get_affiliation(
+                article=author, ref_id=ref_id, affiliations=affiliations
+            )
+        if not affiliations:
+            for affiliation in author.findall("affiliation"):
+                self._get_affiliation(article=affiliation, affiliations=affiliations)
+        return affiliations
+
+    def _get_affiliation(self, article, ref_id="", affiliations=[]):
+        ref_id_value = f"affiliation/[@id='{ref_id}']/" if ref_id else ""
+        affiliation_value = extract_text(
+            article=article,
+            path=f"{ref_id_value}textfn",
+            field_name="affiliation_value",
+            dois=self.dois,
+        )
+        organization = extract_text(
+            article=article,
+            path=f"{ref_id_value}affiliation/organization",
+            field_name="organization",
+            dois=self.dois,
+        )
+        country = extract_text(
+            article=article,
+            path=f"{ref_id_value}affiliation/country",
+            field_name="country",
+            dois=self.dois,
+        )
+        if affiliation_value and organization and country:
+            affiliations.append(
+                {
+                    "value": affiliation_value,
+                    "organization": organization,
+                    "country": country,
+                }
+            )
+        else:
             affiliation_value = extract_text(
-                article=author,
-                path=f"affiliation/[@id='{ref_id}']/textfn",
+                article=article,
+                path=f"{ref_id_value}affiliation/address-line",
                 field_name="affiliation_value",
                 dois=self.dois,
             )
-            organization = extract_text(
-                article=author,
-                path=f"affiliation/[@id='{ref_id}']/affiliation/organization",
-                field_name="organization",
-                dois=self.dois,
-            )
-            country = extract_text(
-                article=author,
-                path=f"affiliation/[@id='{ref_id}']/affiliation/country",
-                field_name="country",
-                dois=self.dois,
-            )
-            if affiliation_value and organization and country:
-                affiliations.append(
-                    {
-                        "value": affiliation_value,
-                        "organization": organization,
-                        "country": country,
-                    }
-                )
-            else:
-                affiliation_value = extract_text(
-                    article=author,
-                    path=f"affiliation/[@id='{ref_id}']/affiliation/address-line",
-                    field_name="affiliation_value",
-                    dois=self.dois,
-                )
+            if affiliation_value:
                 affiliations.append(
                     {
                         "value": affiliation_value,
                     }
                 )
-        return affiliations
