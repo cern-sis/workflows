@@ -11,8 +11,6 @@ class ElsevierMetadataParser(IParser):
     def __init__(self, file_path) -> None:
         self.file_path = file_path
         self.year = None
-        self.journal_doctype = None
-        self.collaborations = []
         self.logger = get_logger().bind(class_name=type(self).__name__)
         self.extractors = [
             CustomExtractor(
@@ -23,6 +21,11 @@ class ElsevierMetadataParser(IParser):
             CustomExtractor(
                 destination="journal_title",
                 extraction_function=self._get_journal_title,
+                required=True,
+            ),
+            CustomExtractor(
+                destination="journal_artid",
+                extraction_function=self._get_journal_aid,
                 required=True,
             ),
             CustomExtractor(
@@ -61,6 +64,7 @@ class ElsevierMetadataParser(IParser):
                 for extractor in self.extractors
                 if (value := extractor.extract(journal_issue)) is not None
             }
+            extracted_value["journal_volume"] = self._get_journal_volume(article.find("dataset-content"))
             parsed_articles.append(self._generic_parsing(extracted_value))
         return parsed_articles
 
@@ -101,11 +105,36 @@ class ElsevierMetadataParser(IParser):
         journal_title = extract_text(
             article=article,
             path="journal-item-unique-ids/jid-aid/jid",
-            field_name="collections",
+            field_name="journal_title",
             dois=self.dois,
         )
         self.journal_title = journal_title
         return journal_title
+
+    def _get_journal_aid(self, article):
+        journal_aid = extract_text(
+            article=article,
+            path="journal-item-unique-ids/jid-aid/aid",
+            field_name="journal_aid",
+            dois=self.dois,
+        )
+        return journal_aid
+
+    def _get_journal_volume(self, article):
+        vol_first = extract_text(
+            article=article,
+            path="journal-issue/journal-issue-properties/volume-issue-number/vol-first",
+            field_name="volume_vol_first",
+            dois=None
+        )
+        suppl = extract_text(
+            article=article,
+            path="journal-issue/journal-issue-properties/volume-issue-number/suppl",
+            field_name="volume_suppl",
+            dois=None
+        )
+
+        return f"{vol_first} {suppl}"
 
     def _get_collections(self, article):
         return [self.journal_title]
@@ -123,7 +152,8 @@ class ElsevierMetadataParser(IParser):
             self.file_path = self.file_path.replace("raw/", "")
 
         pdf_file_path = os.path.join(
-            self.file_path, article.find("files-info/web-pdf/pathname").text
+            self.file_path,
+            article.find("files-info/web-pdf/pathname").text,
         )
         return {
             "pdf": pdf_file_path,

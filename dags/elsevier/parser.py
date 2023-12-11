@@ -14,9 +14,45 @@ class ElsevierParser(IParser):
     def __init__(self) -> None:
         self.dois = None
         self.year = None
-        self.journal_doctype = None
-        self.collaborations = []
         self.logger = get_logger().bind(class_name=type(self).__name__)
+        self.article_type_mapping = {
+            "article": "article",
+            "sco": "article",
+            "fla": "article",
+            "abs": "article",
+            "rev": "article",
+            "add": "addendum",
+            "edb": "editorial",
+            "edi": "editorial",
+            "err": "erratum",
+            "ret": "retraction",
+            "rem": "retraction",
+            "adv": "other",
+            "ann": "other",
+            "brv": "other",
+            "cal": "other",
+            "chp": "other",
+            "cnf": "other",
+            "con": "other",
+            "cop": "other",
+            "cor": "other",
+            "crp": "other",
+            "dis": "other",
+            "dup": "other",
+            "exm": "other",
+            "ind": "other",
+            "lit": "other",
+            "mis": "other",
+            "nws": "other",
+            "ocn": "other",
+            "pgl": "other",
+            "pnt": "other",
+            "prp": "other",
+            "prv": "other",
+            "pub": "other",
+            "req": "other",
+            "ssu": "other",
+        }
         extractors = [
             CustomExtractor(
                 destination="dois",
@@ -54,9 +90,9 @@ class ElsevierParser(IParser):
                 destination="copyright_statement",
                 source="item-info/copyright",
             ),
-            TextExtractor(
-                destination="journal_artid",
-                source="item-info/aid",
+            CustomExtractor(
+                destination="journal_doctype",
+                extraction_function=self._get_journal_doctype,
             ),
         ]
         super().__init__(extractors)
@@ -170,3 +206,19 @@ class ElsevierParser(IParser):
                         "value": affiliation_value,
                     }
                 )
+
+    def _get_journal_doctype(self, article):
+        node = article.find(".")
+        value = node.get("docsubtype")
+        if not value:
+            self.logger.error("Article-type is not found in XML", dois=self.dois)
+            return None
+        try:
+            self.journal_doctype = self.article_type_mapping[value]
+            return self.journal_doctype
+        except KeyError:
+            self.logger.error(
+                "Unmapped article type", dois=self.dois, article_type=value
+            )
+        except Exception:
+            self.logger.error("Unknown error", dois=self.dois)

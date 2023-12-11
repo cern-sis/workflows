@@ -11586,9 +11586,14 @@ def parsed_articles(parser, articles):
             id="test_copyright_statement",
         ),
         param(
-            ["137730", "138173", "137649", "138109"],
-            "journal_artid",
-            id="test_journal_artid",
+            [
+                "article",
+                "article",
+                "article",
+                "article",
+            ],
+            "journal_doctype",
+            id="test_journal_doctype",
         ),
     ],
 )

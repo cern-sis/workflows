@@ -38,10 +38,38 @@ def parsed_articles(parser, article):
         ),
         param(
             [
-                [{"journal_title": "NUPHB", "year": 2023}],
-                [{"journal_title": "NUPHB", "year": 2023}],
-                [{"journal_title": "PLB", "year": 2023}],
-                [{"journal_title": "PLB", "year": 2023}],
+                [
+                    {
+                        "journal_title": "NUPHB",
+                        "year": 2023,
+                        "artid": "116106",
+                        "journal_volume": "None None",
+                    }
+                ],
+                [
+                    {
+                        "journal_title": "NUPHB",
+                        "year": 2023,
+                        "artid": "116107",
+                        "journal_volume": "None None",
+                    }
+                ],
+                [
+                    {
+                        "journal_title": "PLB",
+                        "year": 2023,
+                        "artid": "137730",
+                        "journal_volume": "None None",
+                    }
+                ],
+                [
+                    {
+                        "journal_title": "PLB",
+                        "year": 2023,
+                        "artid": "137751",
+                        "journal_volume": "None None",
+                    }
+                ],
             ],
             "publication_info",
             id="test_publication_info",
@@ -122,4 +150,45 @@ def parsed_articles(parser, article):
 @freeze_time("2023-11-02")
 def test_elsevier_dataset_parsing(parsed_articles, expected, key):
     for (parsed_article, expected_article) in zip(parsed_articles, expected):
+        assert expected_article == parsed_article[key]
+
+
+@fixture
+def articles_with_volume(shared_datadir):
+    with open(shared_datadir / "dataset_bfrqq.xml") as file:
+        return parse_without_names_spaces(file.read())
+
+
+@fixture
+@freeze_time("2023-11-02")
+def parsed_articles_with_volume(parser, articles_with_volume):
+    return [article for article in parser.parse(articles_with_volume)]
+
+
+@mark.parametrize(
+    "expected, key",
+    [
+        param(
+            [
+                [
+                    {
+                        "journal_title": "PLB",
+                        "journal_volume": "845 C",
+                        "year": 2023,
+                        "artid": "138110",
+                    }
+                ]
+            ],
+            "publication_info",
+            id="test_publication_info",
+        ),
+    ],
+)
+@freeze_time("2023-11-02")
+def test_elsevier_dataset_parsing_with_volume(
+    parsed_articles_with_volume, expected, key
+):
+    for (parsed_article, expected_article) in zip(
+        parsed_articles_with_volume, expected
+    ):
         assert expected_article == parsed_article[key]
