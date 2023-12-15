@@ -133,7 +133,7 @@ class HindawiParser(IParser):
             self.prefixes,
         )
         if not arxivs:
-            self.logger.error("No arxiv id_get_copyright_statement found.")
+            self.logger.error("No arxiv id found.")
             return None
 
         return [

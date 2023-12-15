@@ -80,8 +80,8 @@
 
 | Reference                      | Subfield | Value                                            |
 | ------------------------------ | -------- | ------------------------------------------------ |
-| <a id="57" href="#57">[57]</a> | source   | Constant: Springer                               |
-| <a id="58" href="#58">[58]</a> | method   | Constant: Springer                               |
+| <a id="57" href="#57">[57]</a> | source   | Constant: IOP                               |
+| <a id="58" href="#58">[58]</a> | method   | Constant: IOP                               |
 | <a id="59" href="#59">[59]</a> | date     | <code>datetime.datetime.now().isoformat()</code> |
 
 ### [\_\_construct_copyright](#__construct_copyright)
