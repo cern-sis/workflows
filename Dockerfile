@@ -4,7 +4,7 @@ ENV AIRFLOW_HOME=/opt/airflow
 WORKDIR /opt/airflow
 
 ENV PYTHONBUFFERED=0
-ENV AIRFLOW__LOGGING__LOGGING_LEVEL=DEBUG
+ENV AIRFLOW__LOGGING__LOGGING_LEVEL=INFO
 
 COPY requirements.txt ./requirements.txt
 COPY requirements-test.txt ./requirements-test.txt
