@@ -10,7 +10,7 @@ LOG_DIR = "logs"
 logs_dir = f"{AIRFLOW_HOME}/{LOG_DIR}"
 
 
-@dag(start_date=pendulum.today("UTC").add(days=-1), schedule="@monthly", catchup=False)
+@dag(start_date=pendulum.today("UTC").add(days=-1), schedule="@daily", catchup=False)
 def cleanup_logs():
     BashOperator(
         task_id="cleanup_logs",
