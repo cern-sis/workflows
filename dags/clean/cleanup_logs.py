@@ -16,7 +16,7 @@ def cleanup_logs():
         task_id="cleanup_logs",
         bash_command=f"""
     logs_dir="{logs_dir}"
-    find "$logs_dir" -type d -mtime +30 -exec rm -r {{}} \; 2>/dev/null
+    find "$logs_dir" -type d -mtime +30 -exec rm -r {{}} \;
     """,
     )
 
