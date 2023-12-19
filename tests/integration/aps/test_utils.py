@@ -8,8 +8,8 @@ from aps.aps_params import APSParams
 from aps.repository import APSRepository
 from aps.utils import save_file_in_s3
 
-DAG_NAME = "aps_fetch_api"
-TRIGGERED_DAG_NAME = "aps_fetch_api"
+DAG_NAME = "aps_full_api"
+TRIGGERED_DAG_NAME = "aps_pull_api"
 
 
 @pytest.fixture
@@ -25,7 +25,7 @@ def test_dag_loaded(dag: DAG):
 
 
 @pytest.mark.vcr
-def test_aps_fetch_api(dag: DAG):
+def test_aps_pull_api(dag: DAG):
     repo = APSRepository()
     repo.delete_all()
     dates = {

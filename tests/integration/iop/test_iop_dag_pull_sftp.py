@@ -7,7 +7,7 @@ from iop.repository import IOPRepository
 from iop.sftp_service import IOPSFTPService
 from structlog import get_logger
 
-DAG_NAME = "iop_pull_ftp"
+DAG_NAME = "iop_pull_sftp"
 
 
 @pytest.fixture

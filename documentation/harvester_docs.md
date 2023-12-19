@@ -16,7 +16,7 @@
   ![airflow_running_with_customize_params](./airflow_running_with_customize_params.png)
 
 - Running a DAG using the API:
-  - POST: `api/v1/dags/aps_fetch_api/dagRuns`
+  - POST: `api/v1/dags/aps_pull_api/dagRuns`
   - Header: `{Content-Type : application/json, Accept : application/json}`
   - Body:
     ```json
@@ -36,7 +36,7 @@
         "execution_date": "2023-08-01T12:56:22Z",
         "conf": {"from_date": "2023-01-01", "until_date": "2023-02-01"},
         "note": "string"
-    }' --user "admin:admin" http://localhost:8080/api/v1/dags/aps_fetch_api/dagRuns
+    }' --user "admin:admin" http://localhost:8080/api/v1/dags/aps_pull_api/dagRuns
     ```
 
 3. Trigger a DAG Run from UI:

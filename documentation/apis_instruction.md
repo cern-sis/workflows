@@ -89,7 +89,7 @@ We can just restart tasks, which are still running or failed.
 ## Restart a run from the beginning
 
 1. Restart run from the beggining:
-   - api: `/api/v1/dags/aps_fetch_api/dagRuns`
+   - api: `/api/v1/dags/aps_pull_api/dagRuns`
    - header
      - Content-Type : application/json
      - Accept : application/json
@@ -108,7 +108,7 @@ We can just restart tasks, which are still running or failed.
 Same as Restart a run from the beginning, just passing wanted parameters in conf field:
 
 1. Restart run from the beggining:
-   - api: `/api/v1/dags/aps_fetch_api/dagRuns`
+   - api: `/api/v1/dags/aps_pull_api/dagRuns`
    - header
      - Content-Type : application/json
      - Accept : application/json

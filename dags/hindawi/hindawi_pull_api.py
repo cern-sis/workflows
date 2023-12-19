@@ -16,7 +16,7 @@ from hindawi.utils import save_file_in_s3, split_xmls, trigger_file_processing_D
     schedule="30 */3 * * *",
     params={"from_date": None, "until_date": None, "record_doi": None},
 )
-def hindawi_fetch_api():
+def hindawi_pull_api():
     @task()
     def set_fetching_intervals(repo: IRepository = HindawiRepository(), **kwargs):
         return set_harvesting_interval(repo=repo, **kwargs)
@@ -49,4 +49,4 @@ def hindawi_fetch_api():
     trigger_files_processing(key)
 
 
-hindawi_download_files_dag = hindawi_fetch_api()
+hindawi_download_files_dag = hindawi_pull_api()

@@ -15,8 +15,8 @@ from structlog import get_logger
         "filenames_pull": {"enabled": False, "filenames": [], "force_from_ftp": False},
     },
 )
-def springer_pull_ftp():
-    logger = get_logger().bind(class_name="springer_pull_ftp")
+def springer_pull_sftp():
+    logger = get_logger().bind(class_name="springer_pull_sftp")
 
     @task()
     def migrate_from_ftp(
@@ -44,4 +44,4 @@ def springer_pull_ftp():
     trigger_file_processing(filenames=filenames)
 
 
-dag_taskflow = springer_pull_ftp()
+dag_taskflow = springer_pull_sftp()

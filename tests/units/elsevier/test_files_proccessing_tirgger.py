@@ -20,7 +20,7 @@ def elsevier_empty_repo():
 
 @fixture
 def logger():
-    return get_logger().bind(class_name="elsevier_pull_ftp")
+    return get_logger().bind(class_name="elsevier_pull_sftp")
 
 
 @fixture
@@ -39,7 +39,7 @@ def test_trigger_file_processing_elsevier(elsevier_empty_repo, migrated_files):
     files = trigger_file_processing_elsevier(
         publisher="elsevier",
         repo=elsevier_empty_repo,
-        logger=get_logger().bind(class_name="elsevier_pull_ftp"),
+        logger=get_logger().bind(class_name="elsevier_pull_sftp"),
         filenames=migrated_files,
     )
     assert sorted(files) == sorted(

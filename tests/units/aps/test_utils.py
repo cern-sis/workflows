@@ -5,7 +5,7 @@ from aps.utils import save_file_in_s3, split_json
 from common.utils import set_harvesting_interval
 from freezegun import freeze_time
 
-DAG_NAME = "aps_fetch_api"
+DAG_NAME = "aps_pull_api"
 TRIGGERED_DAG_NAME = "aps_process_file"
 
 

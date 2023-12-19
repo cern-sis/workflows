@@ -4,7 +4,7 @@ from io import BytesIO
 from common.utils import set_harvesting_interval
 from hindawi.utils import save_file_in_s3, split_xmls
 
-DAG_NAME = "hindawi_fetch_api"
+DAG_NAME = "hindawi_pull_api"
 TRIGGERED_DAG_NAME = "hindawi_file_processing"
 hindawi_xml = "<wrapper><ListRecords><record>record</record></ListRecords></wrapper>"
 

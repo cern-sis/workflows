@@ -14,8 +14,8 @@ from structlog import get_logger
         "filenames_pull": {"enabled": False, "filenames": [], "force_from_ftp": False},
     },
 )
-def iop_pull_ftp():
-    logger = get_logger().bind(class_name="iop_pull_ftp")
+def iop_pull_sftp():
+    logger = get_logger().bind(class_name="iop_pull_sftp")
 
     @task()
     def migrate_from_ftp(repo=IOPRepository(), sftp=IOPSFTPService(), **kwargs):
@@ -45,4 +45,4 @@ def iop_pull_ftp():
     trigger_file_processing(filenames=filenames)
 
 
-dag_taskflow = iop_pull_ftp()
+dag_taskflow = iop_pull_sftp()

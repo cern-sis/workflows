@@ -18,8 +18,8 @@ from structlog import get_logger
         "filenames_pull": {"enabled": False, "filenames": [], "force_from_ftp": False},
     },
 )
-def elsevier_pull_ftp():
-    logger = get_logger().bind(class_name="elsevier_pull_ftp")
+def elsevier_pull_sftp():
+    logger = get_logger().bind(class_name="elsevier_pull_sftp")
 
     @task()
     def migrate_from_ftp(
@@ -55,4 +55,4 @@ def elsevier_pull_ftp():
     trigger_file_processing(filenames=archive_names)
 
 
-dag_taskflow = elsevier_pull_ftp()
+dag_taskflow = elsevier_pull_sftp()
