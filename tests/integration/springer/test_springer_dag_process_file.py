@@ -11,7 +11,7 @@ from busypie import SECOND, wait
 from common.utils import check_dagrun_state
 from freezegun import freeze_time
 from pytest import fixture, raises
-from springer.dag_process_file import (
+from springer.springer_process_file import (
     springer_enhance_file,
     springer_enrich_file,
     springer_parse_file,
