@@ -4,7 +4,7 @@
 
 The following image describes the process for each publishers. Please note that the number of tasks is the minimum, more tasks can be implemented if the need raises.
 
-![DAG Architecture](./airflow_workflows.png)
+![DAG Architecture](./documentation/airflow_workflows.png)
 
 ## Run with docker-compose
 
