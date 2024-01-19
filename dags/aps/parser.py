@@ -3,6 +3,7 @@ import re
 from common.parsing.json_extractors import CustomExtractor, NestedValueExtractor
 from common.parsing.parser import IParser
 from common.utils import construct_license
+from common.utils import parse_country_from_value
 from inspire_utils.record import get_value
 from structlog import get_logger
 
@@ -101,7 +102,7 @@ class APSParser(IParser):
             {
                 "value": affiliation["name"],
                 "organization": (",").join(affiliation["name"].split(",")[:-1]),
-                "country": affiliation["name"].split(", ")[-1:][0],
+                "country": parse_country_from_value(affiliation["name"])
             }
             for affiliation in article["affiliations"]
             if affiliation["id"] in affiliationIds

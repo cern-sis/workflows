@@ -3,11 +3,13 @@ import json
 import os
 import re
 import tarfile
+import pycountry
 import xml.etree.ElementTree as ET
 import zipfile
 from ftplib import error_perm
 from io import StringIO
 from stat import S_ISDIR, S_ISREG
+from common.countries_mapping import COUNTRIES_DEFAULT_MAPPING
 
 import backoff
 import requests
@@ -19,7 +21,8 @@ from common.constants import (
     CREATIVE_COMMONS_PATTERN,
     LICENSE_PATTERN,
 )
-from common.exceptions import UnknownFileExtension, UnknownLicense
+from common.exceptions import UnknownFileExtension, UnknownLicense, FoundMoreThanOneMatchOrNone
+from common.constants import COUNTRY_PARSING_PATTERN
 from structlog import get_logger
 
 logger = get_logger()
@@ -255,3 +258,18 @@ def create_or_update_article(data):
     )
     response.raise_for_status()
     return response.json()
+
+def parse_country_from_value(affiliation_value):
+    country = COUNTRY_PARSING_PATTERN.search(affiliation_value).group(0)
+    try:
+        mapped_countries = pycountry.countries.search_fuzzy(country)
+        if len(mapped_countries) > 1 or len(mapped_countries) == 0:
+            raise FoundMoreThanOneMatchOrNone(affiliation_value)
+        return COUNTRIES_DEFAULT_MAPPING[mapped_countries[0].name]
+    except:
+        return find_country_match_from_mapping(affiliation_value)
+
+def find_country_match_from_mapping(affiliation_value):
+    for key in COUNTRIES_DEFAULT_MAPPING:
+        if re.search(r'\b%s\b' % key, affiliation_value, flags=re.IGNORECASE):
+            return COUNTRIES_DEFAULT_MAPPING[key]

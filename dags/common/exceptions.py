@@ -29,3 +29,8 @@ class UnknownLicense(Exception):
 class EmptyOutputFromPreviousTask(Exception):
     def __init__(self, taks_name):
         super().__init__(f"The output from previous task is empty: {taks_name}")
+
+class FoundMoreThanOneMatchOrNone(Exception):
+    def __init__(self, country_value):
+        super().__init__(f"Found more than one or zero match for a country: {country_value}")
+

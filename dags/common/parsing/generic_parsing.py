@@ -1,7 +1,5 @@
 import re
 from datetime import date
-
-
 def take_first(arr):
     try:
         return next(filter(None, arr))

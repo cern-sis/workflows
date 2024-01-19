@@ -1,6 +1,7 @@
 COUNTRIES_DEFAULT_MAPPING = {
     "INFN": "Italy",
     "Democratic People's Republic of Korea": "North Korea",
+    "Korea, Democratic People's Republic of": "North Korea",
     "DPR Korea": "North Korea",
     "DPR. Korea": "North Korea",
     "CERN": "CERN",
