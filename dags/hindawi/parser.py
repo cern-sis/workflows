@@ -1,9 +1,10 @@
 import re
 import xml.etree.ElementTree as ET
 
-from common.constants import COUNTRY_PARSING_PATTERN, ORGANIZATION_PARSING_PATTERN
+from common.constants import ORGANIZATION_PARSING_PATTERN
 from common.parsing.parser import IParser
 from common.parsing.xml_extractors import ConstantExtractor, CustomExtractor
+from common.utils import parse_country_from_value
 from hindawi.xml_extractors import HindawiTextExtractor as TextExtractor
 from structlog import get_logger
 
@@ -121,7 +122,7 @@ class HindawiParser(IParser):
             {
                 "value": affiliation.text,
                 "organization": ORGANIZATION_PARSING_PATTERN.sub("", affiliation.text),
-                "country": COUNTRY_PARSING_PATTERN.search(affiliation.text).group(0),
+                "country": parse_country_from_value(affiliation.text),
             }
             for affiliation in affiliations
         ]

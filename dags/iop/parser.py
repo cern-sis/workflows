@@ -18,6 +18,7 @@ from common.utils import (
     get_license_type,
     get_license_type_and_version_from_url,
     parse_to_int,
+    parse_country_from_value
 )
 from idutils import is_arxiv
 from inspire_utils.date import PartialDate
@@ -303,12 +304,15 @@ class IOPParser(IParser):
         )
 
     def _get_country(self, article, id):
-        return extract_text(
+        country = extract_text(
             article=article,
             path=f"front/article-meta/contrib-group/aff[@id='{id}']/country",
             field_name="country",
             dois=self.dois,
         )
+        if not country:
+            return
+        return parse_country_from_value(country)
 
     def _extract_copyright_year(self, article):
         return extract_text(

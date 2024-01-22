@@ -9,7 +9,7 @@ from common.parsing.xml_extractors import (
     CustomExtractor,
     TextExtractor,
 )
-from common.utils import construct_license
+from common.utils import construct_license, parse_country_from_value
 from structlog import get_logger
 
 
@@ -171,12 +171,12 @@ class SpringerParser(IParser):
                 city_node,
                 state_node,
                 postcode_node,
-                country_node,
             ]
             if node is not None
         ]
-
-        return ", ".join(result), org_name_node.text, country_node.text
+        country = parse_country_from_value(country_node.text)
+        result.append(country)
+        return ", ".join(result), org_name_node.text, country
 
     def _get_published_date(self, article: ET.Element):
         year = article.find(
