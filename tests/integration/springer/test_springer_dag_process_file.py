@@ -236,9 +236,9 @@ def test_dag_validate_file_pass(article):
                 "email": "nosaka@yukawa.kyoto-u.ac.jp",
                 "affiliations": [
                     {
-                        "value": "School of Physics, Korea Institute for Advanced Study, Dongdaemun-gu, Seoul, 02455, Korea",
+                        "value": "School of Physics, Korea Institute for Advanced Study, Dongdaemun-gu, Seoul, 02455, South Korea",
                         "organization": "School of Physics, Korea Institute for Advanced Study",
-                        "country": "Korea",
+                        "country": "South Korea",
                     }
                 ],
                 "full_name": "Nosaka, Tomoki",

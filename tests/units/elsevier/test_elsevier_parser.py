@@ -231,7 +231,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Korea Institute of Science and Technology Information, Daejeon, Republic of Korea",
                                 "organization": "Korea Institute of Science and Technology Information",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -242,7 +242,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Faculty of Science, P.J. Šafárik University, Košice, Slovak Republic",
                                 "organization": "Faculty of Science",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -251,7 +251,8 @@ def parsed_articles(parser, articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -271,7 +272,8 @@ def parsed_articles(parser, articles):
                         "given_names": "D.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -348,7 +350,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Houston, Houston, TX, United States",
                                 "organization": "University of Houston",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -401,7 +403,8 @@ def parsed_articles(parser, articles):
                         "given_names": "I.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -489,7 +492,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Lawrence Berkeley National Laboratory, Berkeley, CA, United States",
                                 "organization": "Lawrence Berkeley National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -555,7 +558,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Yale University, New Haven, CT, United States",
                                 "organization": "Yale University",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -621,7 +624,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Gangneung-Wonju National University, Gangneung, Republic of Korea",
                                 "organization": "Gangneung-Wonju National University",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -775,7 +778,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Nuclear Physics Group, STFC Daresbury Laboratory, Daresbury, United Kingdom",
                                 "organization": "Nuclear Physics Group",
-                                "country": "United Kingdom",
+                                "country": "UK",
                             }
                         ],
                     },
@@ -808,7 +811,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Liverpool, Liverpool, United Kingdom",
                                 "organization": "University of Liverpool",
-                                "country": "United Kingdom",
+                                "country": "UK",
                             }
                         ],
                     },
@@ -894,7 +897,8 @@ def parsed_articles(parser, articles):
                         "given_names": "B.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
+                                "country": "CERN"
                             }
                         ],
                     },
@@ -938,7 +942,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Yale University, New Haven, CT, United States",
                                 "organization": "Yale University",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -1004,7 +1008,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Houston, Houston, TX, United States",
                                 "organization": "University of Houston",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -1013,7 +1017,8 @@ def parsed_articles(parser, articles):
                         "given_names": "S.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -1022,7 +1027,8 @@ def parsed_articles(parser, articles):
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -1069,7 +1075,8 @@ def parsed_articles(parser, articles):
                         "given_names": "Y.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -1267,7 +1274,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "The University of Texas at Austin, Austin, TX, United States",
                                 "organization": "The University of Texas at Austin",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -1276,7 +1283,8 @@ def parsed_articles(parser, articles):
                         "given_names": "D.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -1336,7 +1344,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Oak Ridge National Laboratory, Oak Ridge, TN, United States",
                                 "organization": "Oak Ridge National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -1356,7 +1364,8 @@ def parsed_articles(parser, articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -1378,7 +1387,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Inha University, Incheon, Republic of Korea",
                                 "organization": "Inha University",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -1398,7 +1407,8 @@ def parsed_articles(parser, articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -1409,7 +1419,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Faculty of Science, P.J. Šafárik University, Košice, Slovak Republic",
                                 "organization": "Faculty of Science",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -1456,7 +1466,8 @@ def parsed_articles(parser, articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -1467,7 +1478,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Yale University, New Haven, CT, United States",
                                 "organization": "Yale University",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -1549,7 +1560,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Liverpool, Liverpool, United Kingdom",
                                 "organization": "University of Liverpool",
-                                "country": "United Kingdom",
+                                "country": "UK",
                             }
                         ],
                     },
@@ -1558,7 +1569,8 @@ def parsed_articles(parser, articles):
                         "given_names": "D.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -1640,7 +1652,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Kansas, Lawrence, KS, United States",
                                 "organization": "University of Kansas",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -1678,7 +1690,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Yale University, New Haven, CT, United States",
                                 "organization": "Yale University",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -1813,7 +1825,8 @@ def parsed_articles(parser, articles):
                         "given_names": "C.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
+                                "country": "CERN"
                             }
                         ],
                     },
@@ -1824,7 +1837,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Lawrence Berkeley National Laboratory, Berkeley, CA, United States",
                                 "organization": "Lawrence Berkeley National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -1868,7 +1881,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Liverpool, Liverpool, United Kingdom",
                                 "organization": "University of Liverpool",
-                                "country": "United Kingdom",
+                                "country": "UK",
                             }
                         ],
                     },
@@ -1978,7 +1991,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Inha University, Incheon, Republic of Korea",
                                 "organization": "Inha University",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -1989,7 +2002,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Inha University, Incheon, Republic of Korea",
                                 "organization": "Inha University",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -2132,7 +2145,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "School of Physics and Astronomy, University of Birmingham, Birmingham, United Kingdom",
                                 "organization": "School of Physics and Astronomy",
-                                "country": "United Kingdom",
+                                "country": "UK",
                             }
                         ],
                     },
@@ -2159,7 +2172,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Lawrence Berkeley National Laboratory, Berkeley, CA, United States",
                                 "organization": "Lawrence Berkeley National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -2247,7 +2260,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Oak Ridge National Laboratory, Oak Ridge, TN, United States",
                                 "organization": "Oak Ridge National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -2323,7 +2336,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Lawrence Berkeley National Laboratory, Berkeley, CA, United States",
                                 "organization": "Lawrence Berkeley National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -2356,7 +2369,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Oak Ridge National Laboratory, Oak Ridge, TN, United States",
                                 "organization": "Oak Ridge National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -2620,7 +2633,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Department of Physics, University of California, Berkeley, CA, United States",
                                 "organization": "Department of Physics",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -2651,7 +2664,8 @@ def parsed_articles(parser, articles):
                         "given_names": "R.A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
+                                "country": "CERN"
                             },
                             {
                                 "value": "Centro de Aplicaciones Tecnológicas y Desarrollo Nuclear (CEADEN), Havana, Cuba",
@@ -2705,7 +2719,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Department of Physics, University of California, Berkeley, CA, United States",
                                 "organization": "Department of Physics",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -2725,7 +2739,8 @@ def parsed_articles(parser, articles):
                         "given_names": "U.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -2813,7 +2828,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Technical University of Košice, Košice, Slovak Republic",
                                 "organization": "Technical University of Košice",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -2824,7 +2839,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Comenius University Bratislava, Faculty of Mathematics, Physics and Informatics, Bratislava, Slovak Republic",
                                 "organization": "Comenius University Bratislava",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -2846,7 +2861,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Oak Ridge National Laboratory, Oak Ridge, TN, United States",
                                 "organization": "Oak Ridge National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -2956,7 +2971,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "School of Physics and Astronomy, University of Birmingham, Birmingham, United Kingdom",
                                 "organization": "School of Physics and Astronomy",
-                                "country": "United Kingdom",
+                                "country": "UK",
                             }
                         ],
                     },
@@ -2965,7 +2980,8 @@ def parsed_articles(parser, articles):
                         "given_names": "S.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -3020,7 +3036,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Lawrence Berkeley National Laboratory, Berkeley, CA, United States",
                                 "organization": "Lawrence Berkeley National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -3042,7 +3058,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Oak Ridge National Laboratory, Oak Ridge, TN, United States",
                                 "organization": "Oak Ridge National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -3073,7 +3089,8 @@ def parsed_articles(parser, articles):
                         "given_names": "G.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -3159,7 +3176,8 @@ def parsed_articles(parser, articles):
                         "given_names": "D.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -3192,7 +3210,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Houston, Houston, TX, United States",
                                 "organization": "University of Houston",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -3203,7 +3221,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "The University of Texas at Austin, Austin, TX, United States",
                                 "organization": "The University of Texas at Austin",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -3234,7 +3252,8 @@ def parsed_articles(parser, articles):
                         "given_names": "S.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -3298,7 +3317,8 @@ def parsed_articles(parser, articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -3397,7 +3417,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Chicago State University, Chicago, IL, United States",
                                 "organization": "Chicago State University",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -3452,7 +3472,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "The University of Texas at Austin, Austin, TX, United States",
                                 "organization": "The University of Texas at Austin",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -3463,7 +3483,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Kansas, Lawrence, KS, United States",
                                 "organization": "University of Kansas",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -3578,7 +3598,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Tennessee, Knoxville, TN, United States",
                                 "organization": "University of Tennessee",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -3600,7 +3620,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Wayne State University, Detroit, MI, United States",
                                 "organization": "Wayne State University",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -3699,7 +3719,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Lawrence Berkeley National Laboratory, Berkeley, CA, United States",
                                 "organization": "Lawrence Berkeley National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -3730,7 +3750,8 @@ def parsed_articles(parser, articles):
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -3739,7 +3760,8 @@ def parsed_articles(parser, articles):
                         "given_names": "S.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
+                                "country": "CERN"
                             },
                             {
                                 "value": "A.I. Alikhanyan National Science Laboratory (Yerevan Physics Institute) Foundation, Yerevan, Armenia",
@@ -3953,7 +3975,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Yonsei University, Seoul, Republic of Korea",
                                 "organization": "Yonsei University",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -3964,7 +3986,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "The University of Texas at Austin, Austin, TX, United States",
                                 "organization": "The University of Texas at Austin",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -3997,7 +4019,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Yale University, New Haven, CT, United States",
                                 "organization": "Yale University",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -4008,7 +4030,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Chicago State University, Chicago, IL, United States",
                                 "organization": "Chicago State University",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -4030,7 +4052,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Oak Ridge National Laboratory, Oak Ridge, TN, United States",
                                 "organization": "Oak Ridge National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -4063,7 +4085,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Yale University, New Haven, CT, United States",
                                 "organization": "Yale University",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -4173,7 +4195,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Liverpool, Liverpool, United Kingdom",
                                 "organization": "University of Liverpool",
-                                "country": "United Kingdom",
+                                "country": "UK",
                             }
                         ],
                     },
@@ -4228,7 +4250,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Yonsei University, Seoul, Republic of Korea",
                                 "organization": "Yonsei University",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -4261,7 +4283,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Creighton University, Omaha, NE, United States",
                                 "organization": "Creighton University",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -4294,7 +4316,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Tennessee, Knoxville, TN, United States",
                                 "organization": "University of Tennessee",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -4338,7 +4360,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Ohio State University, Columbus, OH, United States",
                                 "organization": "Ohio State University",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -4360,7 +4382,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Houston, Houston, TX, United States",
                                 "organization": "University of Houston",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -4382,7 +4404,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Liverpool, Liverpool, United Kingdom",
                                 "organization": "University of Liverpool",
-                                "country": "United Kingdom",
+                                "country": "UK",
                             }
                         ],
                     },
@@ -4391,7 +4413,8 @@ def parsed_articles(parser, articles):
                         "given_names": "R.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -4433,7 +4456,8 @@ def parsed_articles(parser, articles):
                         "given_names": "M.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -4455,7 +4479,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Kansas, Lawrence, KS, United States",
                                 "organization": "University of Kansas",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -4486,7 +4510,8 @@ def parsed_articles(parser, articles):
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -4495,7 +4520,8 @@ def parsed_articles(parser, articles):
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -4517,7 +4543,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Lawrence Berkeley National Laboratory, Berkeley, CA, United States",
                                 "organization": "Lawrence Berkeley National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -4539,7 +4565,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Lawrence Berkeley National Laboratory, Berkeley, CA, United States",
                                 "organization": "Lawrence Berkeley National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -4550,7 +4576,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Technical University of Košice, Košice, Slovak Republic",
                                 "organization": "Technical University of Košice",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -4561,7 +4587,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Technical University of Košice, Košice, Slovak Republic",
                                 "organization": "Technical University of Košice",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -4627,7 +4653,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "School of Physics and Astronomy, University of Birmingham, Birmingham, United Kingdom",
                                 "organization": "School of Physics and Astronomy",
-                                "country": "United Kingdom",
+                                "country": "UK",
                             }
                         ],
                     },
@@ -4649,7 +4675,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Oak Ridge National Laboratory, Oak Ridge, TN, United States",
                                 "organization": "Oak Ridge National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             },
                             {
                                 "value": "Westfälische Wilhelms-Universität Münster, Institut für Kernphysik, Münster, Germany",
@@ -4665,7 +4691,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "School of Physics and Astronomy, University of Birmingham, Birmingham, United Kingdom",
                                 "organization": "School of Physics and Astronomy",
-                                "country": "United Kingdom",
+                                "country": "UK",
                             }
                         ],
                     },
@@ -4725,7 +4751,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "School of Physics and Astronomy, University of Birmingham, Birmingham, United Kingdom",
                                 "organization": "School of Physics and Astronomy",
-                                "country": "United Kingdom",
+                                "country": "UK",
                             }
                         ],
                     },
@@ -4763,7 +4789,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Institute of Experimental Physics, Slovak Academy of Sciences, Košice, Slovak Republic",
                                 "organization": "Institute of Experimental Physics",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -4794,7 +4820,8 @@ def parsed_articles(parser, articles):
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -4825,7 +4852,8 @@ def parsed_articles(parser, articles):
                         "given_names": "O.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -4834,7 +4862,8 @@ def parsed_articles(parser, articles):
                         "given_names": "T.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -4854,7 +4883,8 @@ def parsed_articles(parser, articles):
                         "given_names": "E.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -4874,7 +4904,8 @@ def parsed_articles(parser, articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -4960,7 +4991,8 @@ def parsed_articles(parser, articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -4969,7 +5001,8 @@ def parsed_articles(parser, articles):
                         "given_names": "Y.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -5013,7 +5046,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Department of Physics, Pusan National University, Pusan, Republic of Korea",
                                 "organization": "Department of Physics",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -5024,7 +5057,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Department of Physics, Pusan National University, Pusan, Republic of Korea",
                                 "organization": "Department of Physics",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -5046,7 +5079,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Jeonbuk National University, Jeonju, Republic of Korea",
                                 "organization": "Jeonbuk National University",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -5057,7 +5090,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Yonsei University, Seoul, Republic of Korea",
                                 "organization": "Yonsei University",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -5068,7 +5101,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Gangneung-Wonju National University, Gangneung, Republic of Korea",
                                 "organization": "Gangneung-Wonju National University",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -5090,7 +5123,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Jeonbuk National University, Jeonju, Republic of Korea",
                                 "organization": "Jeonbuk National University",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -5112,7 +5145,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Department of Physics, Sejong University, Seoul, Republic of Korea",
                                 "organization": "Department of Physics",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -5123,7 +5156,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Yonsei University, Seoul, Republic of Korea",
                                 "organization": "Yonsei University",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -5154,7 +5187,8 @@ def parsed_articles(parser, articles):
                         "given_names": "S.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -5187,7 +5221,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "California Polytechnic State University, San Luis Obispo, CA, United States",
                                 "organization": "California Polytechnic State University",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -5209,7 +5243,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Lawrence Berkeley National Laboratory, Berkeley, CA, United States",
                                 "organization": "Lawrence Berkeley National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -5264,7 +5298,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Houston, Houston, TX, United States",
                                 "organization": "University of Houston",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -5295,7 +5329,8 @@ def parsed_articles(parser, articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
+                                "country": "CERN"
                             }
                         ],
                     },
@@ -5304,7 +5339,8 @@ def parsed_articles(parser, articles):
                         "given_names": "N.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -5313,7 +5349,8 @@ def parsed_articles(parser, articles):
                         "given_names": "E.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -5399,7 +5436,8 @@ def parsed_articles(parser, articles):
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -5421,7 +5459,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Institute of Experimental Physics, Slovak Academy of Sciences, Košice, Slovak Republic",
                                 "organization": "Institute of Experimental Physics",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -5432,7 +5470,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Faculty of Science, P.J. Šafárik University, Košice, Slovak Republic",
                                 "organization": "Faculty of Science",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -5454,12 +5492,12 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "School of Physics and Astronomy, University of Birmingham, Birmingham, United Kingdom",
                                 "organization": "School of Physics and Astronomy",
-                                "country": "United Kingdom",
+                                "country": "UK",
                             },
                             {
                                 "value": "Institute of Experimental Physics, Slovak Academy of Sciences, Košice, Slovak Republic",
                                 "organization": "Institute of Experimental Physics",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             },
                         ],
                     },
@@ -5523,7 +5561,8 @@ def parsed_articles(parser, articles):
                         "given_names": "E.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -5642,7 +5681,8 @@ def parsed_articles(parser, articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -5651,7 +5691,8 @@ def parsed_articles(parser, articles):
                         "given_names": "A.B.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -5673,7 +5714,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "School of Physics and Astronomy, University of Birmingham, Birmingham, United Kingdom",
                                 "organization": "School of Physics and Astronomy",
-                                "country": "United Kingdom",
+                                "country": "UK",
                             }
                         ],
                     },
@@ -5684,7 +5725,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Inha University, Incheon, Republic of Korea",
                                 "organization": "Inha University",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -5695,7 +5736,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Inha University, Incheon, Republic of Korea",
                                 "organization": "Inha University",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -5706,7 +5747,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Yonsei University, Seoul, Republic of Korea",
                                 "organization": "Yonsei University",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -5739,7 +5780,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Lawrence Berkeley National Laboratory, Berkeley, CA, United States",
                                 "organization": "Lawrence Berkeley National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -5830,7 +5871,8 @@ def parsed_articles(parser, articles):
                         "given_names": "T.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -5868,7 +5910,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Nuclear Physics Group, STFC Daresbury Laboratory, Daresbury, United Kingdom",
                                 "organization": "Nuclear Physics Group",
-                                "country": "United Kingdom",
+                                "country": "UK",
                             }
                         ],
                     },
@@ -5901,7 +5943,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Department of Physics, University of California, Berkeley, CA, United States",
                                 "organization": "Department of Physics",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -5967,7 +6009,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "School of Physics and Astronomy, University of Birmingham, Birmingham, United Kingdom",
                                 "organization": "School of Physics and Astronomy",
-                                "country": "United Kingdom",
+                                "country": "UK",
                             }
                         ],
                     },
@@ -5978,7 +6020,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Department of Physics, Pusan National University, Pusan, Republic of Korea",
                                 "organization": "Department of Physics",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -5989,7 +6031,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Department of Physics, Pusan National University, Pusan, Republic of Korea",
                                 "organization": "Department of Physics",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -6033,7 +6075,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Department of Physics, University of California, Berkeley, CA, United States",
                                 "organization": "Department of Physics",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -6055,7 +6097,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Liverpool, Liverpool, United Kingdom",
                                 "organization": "University of Liverpool",
-                                "country": "United Kingdom",
+                                "country": "UK",
                             }
                         ],
                     },
@@ -6075,7 +6117,8 @@ def parsed_articles(parser, articles):
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -6086,7 +6129,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Oak Ridge National Laboratory, Oak Ridge, TN, United States",
                                 "organization": "Oak Ridge National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -6199,7 +6242,8 @@ def parsed_articles(parser, articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -6241,7 +6285,8 @@ def parsed_articles(parser, articles):
                         "given_names": "M.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -6283,7 +6328,8 @@ def parsed_articles(parser, articles):
                         "given_names": "L.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
+                                "country": "CERN"
                             }
                         ],
                     },
@@ -6292,7 +6338,8 @@ def parsed_articles(parser, articles):
                         "given_names": "D.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -6339,7 +6386,8 @@ def parsed_articles(parser, articles):
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -6416,7 +6464,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "The University of Texas at Austin, Austin, TX, United States",
                                 "organization": "The University of Texas at Austin",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -6460,7 +6508,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Houston, Houston, TX, United States",
                                 "organization": "University of Houston",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -6661,7 +6709,8 @@ def parsed_articles(parser, articles):
                         "given_names": "Y.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -6699,7 +6748,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Houston, Houston, TX, United States",
                                 "organization": "University of Houston",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -6710,7 +6759,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Comenius University Bratislava, Faculty of Mathematics, Physics and Informatics, Bratislava, Slovak Republic",
                                 "organization": "Comenius University Bratislava",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -6779,10 +6828,12 @@ def parsed_articles(parser, articles):
                         "given_names": "K.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
+                                "country": "CERN"
                             },
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             },
                         ],
                     },
@@ -6901,7 +6952,8 @@ def parsed_articles(parser, articles):
                         "given_names": "I.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -6967,7 +7019,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Lawrence Berkeley National Laboratory, Berkeley, CA, United States",
                                 "organization": "Lawrence Berkeley National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -7044,7 +7096,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Institute of Experimental Physics, Slovak Academy of Sciences, Košice, Slovak Republic",
                                 "organization": "Institute of Experimental Physics",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -7143,7 +7195,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Tennessee, Knoxville, TN, United States",
                                 "organization": "University of Tennessee",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -7207,7 +7259,8 @@ def parsed_articles(parser, articles):
                         "given_names": "D.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -7238,7 +7291,8 @@ def parsed_articles(parser, articles):
                         "given_names": "S.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -7247,7 +7301,8 @@ def parsed_articles(parser, articles):
                         "given_names": "S.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -7256,7 +7311,8 @@ def parsed_articles(parser, articles):
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -7278,7 +7334,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Chungbuk National University, Cheongju, Republic of Korea",
                                 "organization": "Chungbuk National University",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -7287,7 +7343,8 @@ def parsed_articles(parser, articles):
                         "given_names": "P.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
+                                "country": "CERN"
                             }
                         ],
                     },
@@ -7298,7 +7355,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Liverpool, Liverpool, United Kingdom",
                                 "organization": "University of Liverpool",
-                                "country": "United Kingdom",
+                                "country": "UK",
                             }
                         ],
                     },
@@ -7329,7 +7386,8 @@ def parsed_articles(parser, articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -7371,7 +7429,8 @@ def parsed_articles(parser, articles):
                         "given_names": "V.A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -7393,7 +7452,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Tennessee, Knoxville, TN, United States",
                                 "organization": "University of Tennessee",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -7404,7 +7463,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Yale University, New Haven, CT, United States",
                                 "organization": "Yale University",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -7563,7 +7622,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Inha University, Incheon, Republic of Korea",
                                 "organization": "Inha University",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -7590,7 +7649,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Houston, Houston, TX, United States",
                                 "organization": "University of Houston",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -7676,7 +7735,8 @@ def parsed_articles(parser, articles):
                         "given_names": "D.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -7707,7 +7767,8 @@ def parsed_articles(parser, articles):
                         "given_names": "Y.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -7727,7 +7788,8 @@ def parsed_articles(parser, articles):
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -7776,7 +7838,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Comenius University Bratislava, Faculty of Mathematics, Physics and Informatics, Bratislava, Slovak Republic",
                                 "organization": "Comenius University Bratislava",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -7814,7 +7876,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Houston, Houston, TX, United States",
                                 "organization": "University of Houston",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -7852,7 +7914,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Lawrence Berkeley National Laboratory, Berkeley, CA, United States",
                                 "organization": "Lawrence Berkeley National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -7885,7 +7947,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Oak Ridge National Laboratory, Oak Ridge, TN, United States",
                                 "organization": "Oak Ridge National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -7940,7 +8002,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Lawrence Berkeley National Laboratory, Berkeley, CA, United States",
                                 "organization": "Lawrence Berkeley National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -7949,7 +8011,8 @@ def parsed_articles(parser, articles):
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
+                                "country": "CERN"
                             }
                         ],
                     },
@@ -8004,7 +8067,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Wayne State University, Detroit, MI, United States",
                                 "organization": "Wayne State University",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -8013,7 +8076,8 @@ def parsed_articles(parser, articles):
                         "given_names": "I.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -8057,7 +8121,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Houston, Houston, TX, United States",
                                 "organization": "University of Houston",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -8068,7 +8132,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "School of Physics and Astronomy, University of Birmingham, Birmingham, United Kingdom",
                                 "organization": "School of Physics and Astronomy",
-                                "country": "United Kingdom",
+                                "country": "UK",
                             }
                         ],
                     },
@@ -8194,12 +8258,12 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Oak Ridge National Laboratory, Oak Ridge, TN, United States",
                                 "organization": "Oak Ridge National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             },
                             {
                                 "value": "University of Tennessee, Knoxville, TN, United States",
                                 "organization": "University of Tennessee",
-                                "country": "United States",
+                                "country": "USA",
                             },
                         ],
                     },
@@ -8276,7 +8340,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Faculty of Science, P.J. Šafárik University, Košice, Slovak Republic",
                                 "organization": "Faculty of Science",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -8296,7 +8360,8 @@ def parsed_articles(parser, articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -8305,7 +8370,8 @@ def parsed_articles(parser, articles):
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -8402,7 +8468,8 @@ def parsed_articles(parser, articles):
                         "given_names": "R.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -8411,7 +8478,8 @@ def parsed_articles(parser, articles):
                         "given_names": "E.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
+                                "country": "CERN"
                             }
                         ],
                     },
@@ -8612,7 +8680,8 @@ def parsed_articles(parser, articles):
                         "given_names": "B.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
+                                "country": "CERN"
                             }
                         ],
                     },
@@ -8654,7 +8723,8 @@ def parsed_articles(parser, articles):
                         "given_names": "E.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -8663,7 +8733,8 @@ def parsed_articles(parser, articles):
                         "given_names": "Y.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -8727,7 +8798,8 @@ def parsed_articles(parser, articles):
                         "given_names": "S.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -8859,7 +8931,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Faculty of Science, P.J. Šafárik University, Košice, Slovak Republic",
                                 "organization": "Faculty of Science",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -8914,7 +8986,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Wayne State University, Detroit, MI, United States",
                                 "organization": "Wayne State University",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -8969,7 +9041,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Yale University, New Haven, CT, United States",
                                 "organization": "Yale University",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -8980,7 +9052,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Oak Ridge National Laboratory, Oak Ridge, TN, United States",
                                 "organization": "Oak Ridge National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -9079,7 +9151,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Oak Ridge National Laboratory, Oak Ridge, TN, United States",
                                 "organization": "Oak Ridge National Laboratory",
-                                "country": "United States",
+                                "country": "USA",
                             },
                             {
                                 "value": "Institut für Kernphysik, Johann Wolfgang Goethe-Universität Frankfurt, Frankfurt, Germany",
@@ -9095,7 +9167,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Tennessee, Knoxville, TN, United States",
                                 "organization": "University of Tennessee",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -9172,7 +9244,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Creighton University, Omaha, NE, United States",
                                 "organization": "Creighton University",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -9208,7 +9280,8 @@ def parsed_articles(parser, articles):
                                 "country": "Germany",
                             },
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             },
                         ],
                     },
@@ -9230,7 +9303,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Inha University, Incheon, Republic of Korea",
                                 "organization": "Inha University",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -9239,7 +9312,8 @@ def parsed_articles(parser, articles):
                         "given_names": "D.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -9281,7 +9355,8 @@ def parsed_articles(parser, articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -9323,7 +9398,8 @@ def parsed_articles(parser, articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -9422,7 +9498,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Houston, Houston, TX, United States",
                                 "organization": "University of Houston",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -9453,7 +9529,8 @@ def parsed_articles(parser, articles):
                         "given_names": "S.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -9473,7 +9550,8 @@ def parsed_articles(parser, articles):
                         "given_names": "Y.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -9649,7 +9727,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Comenius University Bratislava, Faculty of Mathematics, Physics and Informatics, Bratislava, Slovak Republic",
                                 "organization": "Comenius University Bratislava",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -9709,7 +9787,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Yale University, New Haven, CT, United States",
                                 "organization": "Yale University",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -9753,7 +9831,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Houston, Houston, TX, United States",
                                 "organization": "University of Houston",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -9786,7 +9864,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Tennessee, Knoxville, TN, United States",
                                 "organization": "University of Tennessee",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -9852,7 +9930,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Tennessee, Knoxville, TN, United States",
                                 "organization": "University of Tennessee",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -9960,7 +10038,8 @@ def parsed_articles(parser, articles):
                         "given_names": "M.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -10015,7 +10094,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Comenius University Bratislava, Faculty of Mathematics, Physics and Informatics, Bratislava, Slovak Republic",
                                 "organization": "Comenius University Bratislava",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -10026,7 +10105,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Comenius University Bratislava, Faculty of Mathematics, Physics and Informatics, Bratislava, Slovak Republic",
                                 "organization": "Comenius University Bratislava",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -10124,7 +10203,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Kansas, Lawrence, KS, United States",
                                 "organization": "University of Kansas",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -10201,7 +10280,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Houston, Houston, TX, United States",
                                 "organization": "University of Houston",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -10234,7 +10313,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "The University of Texas at Austin, Austin, TX, United States",
                                 "organization": "The University of Texas at Austin",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -10254,7 +10333,8 @@ def parsed_articles(parser, articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -10265,7 +10345,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "University of Houston, Houston, TX, United States",
                                 "organization": "University of Houston",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -10276,7 +10356,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Technical University of Košice, Košice, Slovak Republic",
                                 "organization": "Technical University of Košice",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -10287,7 +10367,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Technical University of Košice, Košice, Slovak Republic",
                                 "organization": "Technical University of Košice",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -10307,7 +10387,8 @@ def parsed_articles(parser, articles):
                         "given_names": "N.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -10329,7 +10410,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Department of Physics, University of California, Berkeley, CA, United States",
                                 "organization": "Department of Physics",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -10542,7 +10623,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Faculty of Science, P.J. Šafárik University, Košice, Slovak Republic",
                                 "organization": "Faculty of Science",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -10672,7 +10753,8 @@ def parsed_articles(parser, articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -10692,7 +10774,8 @@ def parsed_articles(parser, articles):
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -10780,7 +10863,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "School of Physics and Astronomy, University of Birmingham, Birmingham, United Kingdom",
                                 "organization": "School of Physics and Astronomy",
-                                "country": "United Kingdom",
+                                "country": "UK",
                             }
                         ],
                     },
@@ -10800,7 +10883,8 @@ def parsed_articles(parser, articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -10831,7 +10915,8 @@ def parsed_articles(parser, articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
+                                "country": "CERN"
                             }
                         ],
                     },
@@ -10862,7 +10947,8 @@ def parsed_articles(parser, articles):
                         "given_names": "K.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -10873,7 +10959,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Wayne State University, Detroit, MI, United States",
                                 "organization": "Wayne State University",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -10915,7 +11001,8 @@ def parsed_articles(parser, articles):
                         "given_names": "N.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -10926,7 +11013,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Faculty of Science, P.J. Šafárik University, Košice, Slovak Republic",
                                 "organization": "Faculty of Science",
-                                "country": "Slovak Republic",
+                                "country": "Slovakia",
                             }
                         ],
                     },
@@ -11025,7 +11112,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Yale University, New Haven, CT, United States",
                                 "organization": "Yale University",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -11113,7 +11200,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "The University of Texas at Austin, Austin, TX, United States",
                                 "organization": "The University of Texas at Austin",
-                                "country": "United States",
+                                "country": "USA",
                             }
                         ],
                     },
@@ -11234,7 +11321,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Department of Physics, Pusan National University, Pusan, Republic of Korea",
                                 "organization": "Department of Physics",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -11245,7 +11332,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Inha University, Incheon, Republic of Korea",
                                 "organization": "Inha University",
-                                "country": "Republic of Korea",
+                                "country": "South Korea",
                             }
                         ],
                     },
@@ -11327,7 +11414,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "School of Physics and Astronomy, University of Birmingham, Birmingham, United Kingdom",
                                 "organization": "School of Physics and Astronomy",
-                                "country": "United Kingdom",
+                                "country": "UK",
                             },
                         ],
                     },
@@ -11336,7 +11423,8 @@ def parsed_articles(parser, articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -11356,7 +11444,8 @@ def parsed_articles(parser, articles):
                         "given_names": "N.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -11365,7 +11454,8 @@ def parsed_articles(parser, articles):
                         "given_names": "M.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -11429,7 +11519,8 @@ def parsed_articles(parser, articles):
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },
@@ -11449,7 +11540,8 @@ def parsed_articles(parser, articles):
                         "given_names": "N.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
+                                "country": "CERN",
                             }
                         ],
                     },

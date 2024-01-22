@@ -5,8 +5,8 @@ from common.pull_ftp import migrate_from_ftp
 from common.repository import IRepository
 from elsevier.repository import ElsevierRepository
 from elsevier.sftp_service import ElsevierSFTPService
-from structlog import get_logger
 from pytest import fixture
+from structlog import get_logger
 
 DAG_NAME = "elsevier_pull_sftp"
 

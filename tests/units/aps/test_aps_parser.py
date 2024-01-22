@@ -101,7 +101,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Department of Physics, University of Toronto, Toronto, Ontario, Canada M5S1A7",
                                 "organization": "Department of Physics, University of Toronto, Toronto, Ontario",
-                                "country": "Canada M5S1A7",
+                                "country": "Canada",
                             }
                         ],
                     },
@@ -113,7 +113,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Department of Physics, University of Toronto, Toronto, Ontario, Canada M5S1A7",
                                 "organization": "Department of Physics, University of Toronto, Toronto, Ontario",
-                                "country": "Canada M5S1A7",
+                                "country": "Canada",
                             }
                         ],
                     },
@@ -125,7 +125,7 @@ def parsed_articles(parser, articles):
                             {
                                 "value": "Department of Physics, University of Toronto, Toronto, Ontario, Canada M5S1A7",
                                 "organization": "Department of Physics, University of Toronto, Toronto, Ontario",
-                                "country": "Canada M5S1A7",
+                                "country": "Canada",
                             }
                         ],
                     },

@@ -72,8 +72,8 @@ def test_authors(parsed_articles):
                 "affiliations": [
                     {
                         "organization": "School of Physics, Korea Institute for Advanced Study",
-                        "value": "School of Physics, Korea Institute for Advanced Study, Dongdaemun-gu, Seoul, 02455, Korea",
-                        "country": "Korea",
+                        "value": "School of Physics, Korea Institute for Advanced Study, Dongdaemun-gu, Seoul, 02455, South Korea",
+                        "country": "South Korea",
                     }
                 ],
                 "surname": "Nosaka",
