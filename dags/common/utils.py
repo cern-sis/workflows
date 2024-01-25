@@ -253,5 +253,9 @@ def create_or_update_article(data):
         data=json.dumps(data),
         headers=headers,
     )
-    response.raise_for_status()
-    return response.json()
+    try:
+        response.raise_for_status()
+        return response.json()
+    except requests.HTTPError:
+        logger.error(response.content)
+        raise
