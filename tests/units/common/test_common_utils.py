@@ -111,7 +111,31 @@ def test_create_article():
         "BACKEND_TOKEN": "CHANGE_ME",
     },
 )
-def test_update_article():
+@pytest.fixture
+def mock_response_create_fail():
+    response = mock.Mock()
+    response.raise_for_status.side_effect = requests.HTTPError("Create failed")
+    response.json.return_value = {"message": "Create failed", "article_id": "81153"}
+    return response
+
+
+@pytest.fixture
+def mock_response_update_success():
+    """Mock response for successful update request."""
+    response = mock.Mock()
+    response.raise_for_status.return_value = None
+    response.json.return_value = {"title": "New title", "id": "81153"}
+    return response
+
+
+@mock.patch("requests.post")
+@mock.patch("requests.put")
+def test_update_article(
+    mock_put, mock_post, mock_response_create_fail, mock_response_update_success
+):
+    mock_post.return_value = mock_response_create_fail
+    mock_put.return_value = mock_response_update_success
+
     data = {
         "_oai": {
             "updated": "2023-11-14T00:15:03Z",
@@ -192,16 +216,14 @@ def test_update_article():
         ],
         "imprints": [{"date": "2023-10-27", "publisher": "Hindawi"}],
     }
-    article = create_or_update_article(data)
-    assert (
-        article["title"]
-        == "Theoretical and Experimental Challenges in the Measurement of Neutrino Mass"
-    )
-    assert article["id"] == 81153
-
     data["titles"][0]["title"] = "New title"
     article = create_or_update_article(data)
+
     assert article["title"] == "New title"
+    assert article["id"] == "81153"
+
+    mock_post.assert_called_once()
+    mock_put.assert_called_once()
 
 
 @pytest.mark.vcr

@@ -248,14 +248,41 @@ def create_or_update_article(data):
     )
     token = os.getenv("BACKEND_TOKEN", "CHANGE_ME")
     headers = {"Content-Type": "application/json", "Authorization": f"Token {token}"}
+
     response = requests.post(
-        f"{backend_url}",
+        backend_url,
+        data=json.dumps(data),
+        headers=headers,
+    )
+
+    try:
+        response.raise_for_status()
+        return response.json()
+    except requests.HTTPError as e:
+        error_content = response.json()
+        logger.error(f"Error message: {error_content.get('message')}")
+        if "article_id" in error_content:
+            return update_article(data, backend_url, error_content, headers)
+        raise requests.HTTPError(
+            f"Create failed: {error_content.get('message')}", response=e.response
+        )
+
+
+def update_article(data, backend_url, error_content, headers):
+    article_id = error_content["article_id"]
+    logger.info(f"Attempting to update article with ID: {article_id}")
+    update_url = f"{backend_url}{article_id}/"
+    update_response = requests.put(
+        update_url,
         data=json.dumps(data),
         headers=headers,
     )
     try:
-        response.raise_for_status()
-        return response.json()
+        update_response.raise_for_status()
+        return update_response.json()
     except requests.HTTPError:
-        logger.error(response.content)
-        raise
+        logger.error(f"Update failed: {update_response.content}")
+        raise requests.HTTPError(
+            f"Update failed: {update_response.content}",
+            response=update_response,
+        )
