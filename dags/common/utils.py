@@ -242,12 +242,16 @@ def process_archive(file_bytes, file_name, **kwargs):
     (requests.exceptions.ConnectionError, requests.exceptions.Timeout),
     max_tries=5,
 )
+def construct_headers(token):
+    return {"Content-Type": "application/json", "Authorization": f"Token {token}"}
+
+
 def create_or_update_article(data):
     backend_url = os.getenv(
         "BACKEND_URL", "http://localhost:8000/api/article-workflow-import/"
     )
     token = os.getenv("BACKEND_TOKEN", "CHANGE_ME")
-    headers = {"Content-Type": "application/json", "Authorization": f"Token {token}"}
+    headers = construct_headers(token)
 
     response = requests.post(
         backend_url,
@@ -262,14 +266,20 @@ def create_or_update_article(data):
         error_content = response.json()
         logger.error(f"Error message: {error_content.get('message')}")
         if "article_id" in error_content:
-            return update_article(data, backend_url, error_content, headers)
+            article_id = error_content["article_id"]
+            return update_article(article_id, data)
         raise requests.HTTPError(
             f"Create failed: {error_content.get('message')}", response=e.response
         )
 
 
-def update_article(data, backend_url, error_content, headers):
-    article_id = error_content["article_id"]
+def update_article(article_id, data):
+    token = os.getenv("BACKEND_TOKEN", "CHANGE_ME")
+    backend_url = os.getenv(
+        "BACKEND_URL", "http://localhost:8000/api/article-workflow-import/"
+    )
+    headers = construct_headers(token)
+
     logger.info(f"Attempting to update article with ID: {article_id}")
     update_url = f"{backend_url}{article_id}/"
     update_response = requests.put(
