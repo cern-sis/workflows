@@ -14,7 +14,7 @@ from common.utils import set_harvesting_interval
 
 @dag(
     start_date=pendulum.today("UTC").add(days=-1),
-    schedule="@hourly",
+    schedule="30 */2 * * *",
     params={"from_date": None, "until_date": None, "per_page": None},
 )
 def aps_pull_api():

@@ -13,7 +13,7 @@ from hindawi.utils import save_file_in_s3, split_xmls, trigger_file_processing_D
 
 @dag(
     start_date=pendulum.today("UTC").add(days=-1),
-    schedule="30 */3 * * *",
+    schedule="15 */3 * * *",
     params={"from_date": None, "until_date": None, "record_doi": None},
 )
 def hindawi_pull_api():

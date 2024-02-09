@@ -10,6 +10,7 @@ from structlog import get_logger
 
 @dag(
     start_date=pendulum.today("UTC").add(days=-1),
+    schedule="30 */3 * * *",
     params={
         "excluded_directories": [],
         "force_pull": False,
