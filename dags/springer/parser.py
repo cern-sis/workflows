@@ -1,6 +1,5 @@
 import datetime
 import re
-import xml.etree.ElementTree as ET
 
 from common.exceptions import UnknownLicense
 from common.parsing.parser import IParser, ObjectExtractor
@@ -14,7 +13,7 @@ from structlog import get_logger
 
 
 class SpringerParser(IParser):
-    def __init__(self) -> None:
+    def __init__(self):
         self.logger = get_logger().bind(class_name=type(self).__name__)
         self.dois = None
         article_type_mapping = {
@@ -115,7 +114,7 @@ class SpringerParser(IParser):
         ]
         super().__init__(extractors)
 
-    def get_dois(self, article: ET.Element):
+    def get_dois(self, article):
         source = "./Journal/Volume/Issue/Article/ArticleInfo/ArticleDOI"
         doi_element = article.find(source)
         if doi_element is None:
@@ -125,8 +124,8 @@ class SpringerParser(IParser):
         self.dois = dois
         return [dois]
 
-    def _get_abstract(self, article: ET.Element):
-        def is_latex_node(node: ET.Element):
+    def _get_abstract(self, article):
+        def is_latex_node(node):
             return node.tag == "EquationSource" and node.attrib["Format"] == "TEX"
 
         paragraph = article.find(
@@ -145,7 +144,7 @@ class SpringerParser(IParser):
         )
         return re.sub("\\s+", " ", abstract)
 
-    def _get_arxiv_eprints(self, article: ET.Element):
+    def _get_arxiv_eprints(self, article):
         arxiv_eprints = []
         for arxiv in article.findall(
             "./Journal/Volume/Issue/Article/ArticleInfo/ArticleExternalID[@Type='arXiv']"
@@ -153,7 +152,7 @@ class SpringerParser(IParser):
             arxiv_eprints.append({"value": arxiv.text})
         return arxiv_eprints
 
-    def _clean_aff(self, article: ET.Element):
+    def _clean_aff(self, article):
         org_div_node = article.find("./OrgDivision")
         org_name_node = article.find("./OrgName")
         street_node = article.find("./OrgAddress/Street")
@@ -178,7 +177,7 @@ class SpringerParser(IParser):
 
         return ", ".join(result), org_name_node.text, country_node.text
 
-    def _get_published_date(self, article: ET.Element):
+    def _get_published_date(self, article):
         year = article.find(
             "./Journal/Volume/Issue/Article/ArticleInfo/*/OnlineDate/Year"
         ).text
@@ -190,7 +189,7 @@ class SpringerParser(IParser):
         ).text
         return datetime.date(day=int(day), month=int(month), year=int(year)).isoformat()
 
-    def _get_affiliations(self, author_group: ET.Element, contrib: ET.Element):
+    def _get_affiliations(self, author_group, contrib):
         affiliations = []
         referred_id = contrib.get("AffiliationIDS")
 
@@ -212,7 +211,7 @@ class SpringerParser(IParser):
 
         return mapped_affiliations
 
-    def _get_authors(self, article: ET.Element):
+    def _get_authors(self, article):
         authors = []
         for contrib in article.findall(
             "./Journal/Volume/Issue/Article/ArticleHeader/AuthorGroup/Author"
@@ -243,7 +242,7 @@ class SpringerParser(IParser):
 
         return authors
 
-    def _get_page_nrs(self, article: ET.Element):
+    def _get_page_nrs(self, article):
         first_page_node = article.find(
             "./Journal/Volume/Issue/Article/ArticleInfo/ArticleFirstPage"
         )
@@ -257,7 +256,7 @@ class SpringerParser(IParser):
         self.logger.warning("No first/last page found. Returning empty page_nrs.")
         return []
 
-    def _get_license(self, article: ET.Element):
+    def _get_license(self, article):
         license_node = article.find(
             "./Journal/Volume/Issue/Article/ArticleInfo/ArticleCopyright/License"
         )

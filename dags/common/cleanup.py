@@ -5,7 +5,7 @@ from bleach.html5lib_shim import Filter
 from bleach.sanitizer import Cleaner
 
 
-def clean_whitespace_characters(input: str):
+def clean_whitespace_characters(input):
     return " ".join(input.split())
 
 

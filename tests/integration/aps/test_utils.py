@@ -1,7 +1,6 @@
 import json
 
 import pytest
-from airflow import DAG
 from airflow.models import DagBag
 from aps.aps_api_client import APSApiClient
 from aps.aps_params import APSParams
@@ -19,13 +18,13 @@ def dag():
     return dagbag.get_dag(dag_id=DAG_NAME)
 
 
-def test_dag_loaded(dag: DAG):
+def test_dag_loaded(dag):
     assert dag is not None
     assert len(dag.tasks) == 3
 
 
 @pytest.mark.vcr
-def test_aps_pull_api(dag: DAG):
+def test_aps_pull_api(dag):
     repo = APSRepository()
     repo.delete_all()
     dates = {
@@ -47,7 +46,7 @@ def test_aps_pull_api(dag: DAG):
 
 @pytest.mark.skip("Flaky test: passes locally, but not on github actions")
 @pytest.mark.vcr
-def test_dag_run(dag: DAG):
+def test_dag_run(dag):
     repo = APSRepository()
     repo.delete_all()
     assert len(repo.find_all()) == 0

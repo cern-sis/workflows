@@ -1,7 +1,6 @@
 from zipfile import ZipFile
 
 import pytest
-from airflow import DAG
 from airflow.models import DagBag
 from common.utils import parse_to_ET_element
 from freezegun import freeze_time
@@ -46,7 +45,7 @@ def article(parser):
     return enriched_file
 
 
-def test_dag_loaded(dag: DAG):
+def test_dag_loaded(dag):
     assert dag is not None
     assert len(dag.tasks) == 5
 

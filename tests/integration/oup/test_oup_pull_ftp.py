@@ -1,5 +1,4 @@
 import pytest
-from airflow import DAG
 from airflow.models import DagBag
 from common.pull_ftp import migrate_from_ftp
 from oup.ftp_service import OUPFTPService
@@ -16,13 +15,13 @@ def dag():
     yield dagbag.get_dag(dag_id=DAG_NAME)
 
 
-def test_dag_loaded(dag: DAG):
+def test_dag_loaded(dag):
     assert dag is not None
     assert len(dag.tasks) == 2
 
 
 def test_dag_run(
-    dag: DAG,
+    dag,
 ):
     repo = OUPRepository()
     repo.delete_all()

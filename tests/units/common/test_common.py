@@ -1,7 +1,7 @@
 import zipfile
 from io import BytesIO
 from typing import List
-from unittest.mock import MagicMock, Mock, patch
+from unittest.mock import Mock, patch
 
 import pytest
 from common.pull_ftp import migrate_from_ftp, reprocess_files, trigger_file_processing
@@ -34,7 +34,7 @@ def zip_fixture():
 @pytest.fixture
 def ftp_get_file_fixture():
     with patch.object(SFTPService, attribute="get_file") as patched:
-        patched: MagicMock = patched
+        patched = patched
         mem_zip = BytesIO()
         with zipfile.ZipFile(mem_zip, mode="w", compression=zipfile.ZIP_DEFLATED) as zf:
             zf.writestr("test.data", b"test")
@@ -49,7 +49,7 @@ def ftp_get_file_fixture():
 @patch.object(IRepository, attribute="get_all_raw_filenames")
 @patch.object(IRepository, attribute="save")
 def test_migrate_from_ftp(
-    repo_save: MagicMock,
+    repo_save,
     repo_get_all,
     repo_is_meta,
     sftp_list_files,
@@ -84,8 +84,8 @@ def test_migrate_from_ftp(
 @patch.object(IRepository, attribute="get_all_raw_filenames", return_value=[])
 @patch.object(IRepository, attribute="save")
 def test_migrate_from_ftp_only_one_file(
-    repo_save: MagicMock,
-    repo_get_all_raw: MagicMock,
+    repo_save,
+    repo_get_all_raw,
     repo_is_meta,
     find_all,
     sftp_list_files,
@@ -122,8 +122,8 @@ def test_migrate_from_ftp_only_one_file(
 @patch.object(IRepository, attribute="get_all_raw_filenames")
 @patch.object(IRepository, attribute="save")
 def test_migrate_from_ftp_only_one_file_but_force_flag(
-    repo_save: MagicMock,
-    repo_get_all: MagicMock,
+    repo_save,
+    repo_get_all,
     repo_is_meta,
     sftp_list_files,
     ftp_get_file_fixture,
@@ -158,8 +158,8 @@ def test_migrate_from_ftp_only_one_file_but_force_flag(
 @patch.object(IRepository, attribute="get_all_raw_filenames")
 @patch.object(IRepository, attribute="save")
 def test_migrate_from_ftp_specified_file_force_from_ftp(
-    repo_save: MagicMock,
-    repo_get_all: MagicMock,
+    repo_save,
+    repo_get_all,
     repo_is_meta,
     sftp_list_files,
     ftp_get_file_fixture,
@@ -196,10 +196,10 @@ def test_migrate_from_ftp_specified_file_force_from_ftp(
 @patch.object(IRepository, attribute="get_all_raw_filenames")
 @patch.object(IRepository, attribute="save")
 def test_migrate_from_ftp_specified_file(
-    repo_save: MagicMock,
-    repo_get_all: MagicMock,
-    repo_is_meta: MagicMock,
-    repo_find_by_id: MagicMock,
+    repo_save,
+    repo_get_all,
+    repo_is_meta,
+    repo_find_by_id,
     sftp_list_files,
     ftp_init,
     ftp_get_file_fixture,

@@ -11,9 +11,9 @@ from structlog import PrintLogger
 
 
 def trigger_file_processing_elsevier(
-    publisher: str,
-    repo: IRepository,
-    logger: PrintLogger,
+    publisher,
+    repo,
+    logger,
     filenames=None,
 ):
     files = []

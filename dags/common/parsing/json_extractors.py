@@ -16,7 +16,7 @@ class NestedValueExtractor(IExtractor):
         self.required = required
         self.extra_function = extra_function
 
-    def extract(self, article: dict):
+    def extract(self, article):
         return self.extra_function(get_value(article, self.json_path, default=""))
 
 
@@ -26,5 +26,5 @@ class CustomExtractor(IExtractor):
         self.destination = destination
         self.extraction_function = extraction_function
 
-    def extract(self, article: dict):
+    def extract(self, article):
         return self.extraction_function(article)

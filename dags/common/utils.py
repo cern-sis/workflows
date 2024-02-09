@@ -154,7 +154,7 @@ def get_license_type_and_version_from_url(url):
     return construct_license(license_type=license_type, version=version, url=url)
 
 
-def preserve_cdata(article: str):
+def preserve_cdata(article):
     matches = CDATA_PATTERN.finditer(article)
     for match in matches:
         cdata_content_with_escaped_escape_chars = match.group(1).replace("\\", "\\\\")
@@ -164,11 +164,11 @@ def preserve_cdata(article: str):
     return article
 
 
-def parse_to_ET_element(article: str):
+def parse_to_ET_element(article):
     return ET.fromstring(preserve_cdata(article))
 
 
-def parse_without_names_spaces(xml: str):
+def parse_without_names_spaces(xml):
     it = ET.iterparse(StringIO(xml))
     for _, el in it:
         el.tag = el.tag.rpartition("}")[-1]
@@ -176,7 +176,7 @@ def parse_without_names_spaces(xml: str):
     return root
 
 
-def get_text_value(element: ET.Element):
+def get_text_value(element):
     if element is not None:
         if element.text:
             return clean_text(element.text)

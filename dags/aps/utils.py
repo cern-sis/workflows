@@ -23,8 +23,6 @@ def split_json(repo, key):
     data = json.loads(_file.getvalue().decode("utf-8"))["data"]
     ids_and_articles = []
     for article in data:
-        doi = article["identifiers"]["doi"]
-        today = datetime.now().strftime("%Y-%m-%dT%H:%M")
         _id = _generate_id("APS")
         ids_and_articles.append({"id": _id, "article": article})
     return ids_and_articles

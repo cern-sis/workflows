@@ -1,8 +1,6 @@
 import pytest
-from airflow import DAG
 from airflow.models import DagBag
 from common.pull_ftp import migrate_from_ftp, trigger_file_processing
-from common.repository import IRepository
 from oup.ftp_service import OUPFTPService
 from oup.repository import OUPRepository
 from structlog import get_logger
@@ -29,12 +27,12 @@ def oup_empty_repo():
     yield repo
 
 
-def test_dag_loaded(dag: DAG):
+def test_dag_loaded(dag):
     assert dag is not None
     assert len(dag.tasks) == 2
 
 
-def test_dag_run(dag: DAG, dag_was_paused: bool, oup_empty_repo: IRepository):
+def test_dag_run(dag, dag_was_paused, oup_empty_repo):
     assert len(oup_empty_repo.find_all()) == 0
     dag.clear()
     dag.test()

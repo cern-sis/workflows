@@ -17,7 +17,7 @@ class TextExtractor(IExtractor):
         extra_function=lambda s: s,
         prefixes=None,
         all_content_between_tags=False,
-    ) -> None:
+    ):
         super().__init__(destination)
 
         self.destination = destination
@@ -57,7 +57,7 @@ class TextExtractor(IExtractor):
             except Exception:
                 self.logger.error("Error in extra function with value", text=text)
 
-    def extract(self, article: ET.Element):
+    def extract(self, article):
         if self.prefixes:
             node_with_prefix = self.extra_function(
                 article.find(self.source, self.prefixes).text
@@ -86,7 +86,7 @@ class AttributeExtractor(IExtractor):
         default_value=None,
         required=False,
         extra_function=lambda x: x,
-    ) -> None:
+    ) :
         super().__init__(destination)
         self.destination = destination
         self.source = source
@@ -111,7 +111,7 @@ class AttributeExtractor(IExtractor):
                     "Error in extra function with value", attribute=attribute
                 )
 
-    def extract(self, article: ET.Element):
+    def extract(self, article):
         node = article.find(self.source)
         value = self._get_attribute_value(node)
         processed_value = self._process_attribute_with_extra_function(value)
@@ -126,14 +126,14 @@ class AttributeExtractor(IExtractor):
 class CustomExtractor(IExtractor):
     def __init__(
         self, destination, extraction_function, required=False, default_value=None
-    ) -> None:
+    ) :
         super().__init__(destination)
         self.destination = destination
         self.extraction_function = extraction_function
         self.default_value = default_value
         self.required = required
 
-    def extract(self, article: ET.Element):
+    def extract(self, article):
         value = self.extraction_function(article)
         if check_value(value):
             return value
@@ -148,13 +148,13 @@ class ConstantExtractor(IExtractor):
         destination,
         value,
         required=False,
-    ) -> None:
+    ) :
         super().__init__(destination)
         self.destination = destination
         self.required = required
         self.value = value
 
-    def extract(self, article: ET.Element):
+    def extract(self, article):
         if not self.value and self.required:
             raise RequiredFieldNotFoundExtractionError(self.destination)
         return self.value

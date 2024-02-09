@@ -1,5 +1,4 @@
 import datetime
-import xml.etree.ElementTree as ET
 
 from common.parsing.parser import IParser
 from common.parsing.xml_extractors import (
@@ -114,7 +113,7 @@ class OUPParser(IParser):
         ]
         super().__init__(extractors)
 
-    def _get_dois(self, article: ET.Element):
+    def _get_dois(self, article):
         source = "front/article-meta/article-id/[@pub-id-type='doi']"
         doi_element = article.find(source)
         doi = get_text_value(doi_element)
@@ -124,7 +123,7 @@ class OUPParser(IParser):
         self.dois = doi
         return [doi]
 
-    def _get_journal_doctype(self, article: ET.Element):
+    def _get_journal_doctype(self, article):
         self.logger.msg("Parsing journal doctype for article", dois=self.dois)
         journal_doctype_raw = article.find("front/..").get("article-type")
         if not journal_doctype_raw:
@@ -140,7 +139,7 @@ class OUPParser(IParser):
             )
         return journal_doctype
 
-    def _get_arxiv_eprints(self, article: ET.Element):
+    def _get_arxiv_eprints(self, article):
         arxiv_eprints = []
         arxivs_raw = article.findall(
             "front/article-meta/article-id/[@pub-id-type='arxiv']"
@@ -152,7 +151,7 @@ class OUPParser(IParser):
                 arxiv_eprints.append({"value": arxiv_eprint})
         return arxiv_eprints
 
-    def _get_authors(self, article: ET.Element):
+    def _get_authors(self, article):
         contributions = article.findall(
             "front/article-meta/contrib-group/contrib[@contrib-type='author']"
         )
@@ -202,7 +201,7 @@ class OUPParser(IParser):
                 day=int(day), month=int(month), year=int(year)
             ).isoformat()
 
-    def _get_published_date(self, article: ET.Element):
+    def _get_published_date(self, article):
         date = (
             article.find("front/article-meta/pub-date/[@pub-type='epub']")
             or article.find("front/article-meta/date/[@date-type='published']")
@@ -219,7 +218,7 @@ class OUPParser(IParser):
     def _get_journal_year(self, article):
         return self.year
 
-    def _get_journal_title(self, article: ET.Element):
+    def _get_journal_title(self, article):
         journal_title = get_text_value(
             article.find(
                 "front/journal-meta/journal-title-group/journal-title",
@@ -243,7 +242,7 @@ class OUPParser(IParser):
         if journal_publisher:
             return clean_text(journal_publisher)
 
-    def _get_license(self, article: ET.Element):
+    def _get_license(self, article):
         licenses = []
         licenses_nodes = article.findall(
             "front/article-meta/permissions/license/license-p/ext-link"

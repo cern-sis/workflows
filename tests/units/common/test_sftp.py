@@ -1,4 +1,4 @@
-from unittest.mock import MagicMock, patch
+from unittest.mock import patch
 
 from common.sftp_service import DirectoryNotFoundException, SFTPService
 from paramiko import SFTPClient
@@ -14,7 +14,7 @@ def test_connect():
 
 
 @patch.object(SFTPClient, attribute="stat", side_effect=FileNotFoundError)
-def test_connect_should_crash(connection_mock: MagicMock, *args):
+def test_connect_should_crash(connection_mock, *args):
     def initiate_sftp_service():
         with SFTPService():
             pass

@@ -8,7 +8,7 @@ from structlog import get_logger
 
 
 class ElsevierMetadataParser(IParser):
-    def __init__(self, file_path) -> None:
+    def __init__(self, file_path):
         self.file_path = file_path
         self.year = None
         self.logger = get_logger().bind(class_name=type(self).__name__)

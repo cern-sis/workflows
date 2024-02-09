@@ -18,7 +18,7 @@ class APSRepository(IRepository):
             files.append(file_name)
         return files
 
-    def get_by_id(self, id: str):
+    def get_by_id(self, id):
         retfile = io.BytesIO()
         self.s3_bucket.download_fileobj(id, retfile)
         return retfile
@@ -30,7 +30,7 @@ class APSRepository(IRepository):
         dates = [obj.last_modified.strftime("%Y-%m-%d") for obj in objects]
         return max(dates)
 
-    def save(self, key: str, obj: IO):
+    def save(self, key, obj):
         self.s3_bucket.upload_fileobj(obj, key)
 
     def delete_all(self):

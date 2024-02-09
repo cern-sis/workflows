@@ -1,5 +1,4 @@
 import re
-import xml.etree.ElementTree as ET
 
 from common.constants import COUNTRY_PARSING_PATTERN, ORGANIZATION_PARSING_PATTERN
 from common.parsing.parser import IParser
@@ -16,7 +15,7 @@ class HindawiParser(IParser):
         "xsi": "http://www.w3.org/2001/XMLSchema-instance",
     }
 
-    def __init__(self) -> None:
+    def __init__(self):
         self.logger = get_logger().bind(class_name=type(self).__name__)
         extractors = [
             TextExtractor(
@@ -92,7 +91,7 @@ class HindawiParser(IParser):
         ]
         super().__init__(extractors)
 
-    def _get_authors(self, article: ET.Element):
+    def _get_authors(self, article):
         authors_all = article.findall(
             "ns0:metadata/ns1:record/ns0:datafield/[@tag='100']", self.prefixes
         ) + article.findall(
@@ -127,7 +126,7 @@ class HindawiParser(IParser):
         ]
         return parsed_affiliations
 
-    def _get_arxiv(self, article: ET.Element):
+    def _get_arxiv(self, article):
         arxivs = article.findall(
             "ns0:metadata/ns1:record/ns0:datafield/[@tag='037']/ns0:subfield/[@code='9']",
             self.prefixes,
@@ -149,7 +148,7 @@ class HindawiParser(IParser):
             is not None
         ]
 
-    def _get_journal_pages(self, article: ET.Element):
+    def _get_journal_pages(self, article):
         journal_pages = article.find(
             "ns0:metadata/ns1:record/ns0:datafield/[@tag='773']/ns0:subfield/[@code='c']",
             self.prefixes,
@@ -165,7 +164,7 @@ class HindawiParser(IParser):
                 "license": f"CC-{license_type}-{version}",
             }
 
-    def _get_license(self, article: ET.Element):
+    def _get_license(self, article):
         licenses = []
         license_urls = article.findall(
             "ns0:metadata/ns1:record/ns0:datafield/[@tag='540']/ns0:subfield/[@code='u']",

@@ -8,7 +8,6 @@ from aps.aps_api_client import APSApiClient
 from aps.aps_params import APSParams
 from aps.repository import APSRepository
 from aps.utils import save_file_in_s3, split_json, trigger_file_processing_DAG
-from common.repository import IRepository
 from common.utils import set_harvesting_interval
 
 
@@ -19,11 +18,11 @@ from common.utils import set_harvesting_interval
 )
 def aps_pull_api():
     @task()
-    def set_fetching_intervals(repo: IRepository = APSRepository(), **kwargs):
+    def set_fetching_intervals(repo = APSRepository(), **kwargs):
         return set_harvesting_interval(repo=repo, **kwargs)
 
     @task()
-    def save_json_in_s3(dates: dict, repo: IRepository = APSRepository(), **kwargs):
+    def save_json_in_s3(dates: dict, repo = APSRepository(), **kwargs):
         parameters = APSParams(
             from_date=dates["from_date"],
             until_date=dates["until_date"],
@@ -41,7 +40,7 @@ def aps_pull_api():
         return None
 
     @task()
-    def trigger_files_processing(key, repo: IRepository = APSRepository()):
+    def trigger_files_processing(key, repo = APSRepository()):
         if key is None:
             logging.warning("No new files were downloaded to s3")
             return

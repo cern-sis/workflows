@@ -1,6 +1,5 @@
 import os
 from io import BytesIO
-from typing import IO
 
 from common.exceptions import UnknownFileExtension
 from common.repository import IRepository
@@ -9,10 +8,10 @@ from common.utils import find_extension
 
 
 class ElsevierRepository(IRepository):
-    ZIPED_DIR: str = "raw/"
-    EXTRACTED_DIR: str = "extracted/"
+    ZIPED_DIR = "raw/"
+    EXTRACTED_DIR = "extracted/"
 
-    def __init__(self) -> None:
+    def __init__(self):
         super().__init__()
         self.s3 = S3Service(os.getenv("ELSEVIER_BUCKET_NAME", "elsevier"))
 
@@ -41,12 +40,12 @@ class ElsevierRepository(IRepository):
             self.logger.error()
         return list(grouped_files.values())
 
-    def get_by_id(self, id: str):
+    def get_by_id(self, id):
         retfile = BytesIO()
         self.s3.download_fileobj(id, retfile)
         return retfile
 
-    def save(self, filename: str, obj: IO):
+    def save(self, filename, obj):
         obj.seek(0)
         prefix = (
             self.ZIPED_DIR

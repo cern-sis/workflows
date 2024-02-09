@@ -1,7 +1,6 @@
 import os
 import re
 import xml.etree.ElementTree as ET
-from typing import Dict
 
 import backoff
 import requests
@@ -11,7 +10,7 @@ from structlog import get_logger
 
 
 class Enricher(object):
-    def __init__(self) -> None:
+    def __init__(self):
         self.logger = get_logger().bind(class_name=type(self).__name__)
 
     def _get_schema(self):
@@ -25,7 +24,7 @@ class Enricher(object):
         except AttributeError:
             return None
 
-    def _get_arxiv_categories_from_response_xml(self, xml: ET.Element):
+    def _get_arxiv_categories_from_response_xml(self, xml):
         xml_namespaces = {
             "arxiv": "http://arxiv.org/schemas/atom",
             "w3": "http://www.w3.org/2005/Atom",
@@ -102,13 +101,13 @@ class Enricher(object):
             response.raise_for_status()
         return categories
 
-    def _set_categories(self, eprint: Dict):
+    def _set_categories(self, eprint):
         if eprint["value"]:
             eprint["categories"] = self._get_arxiv_categories(eprint["value"])
             eprint["value"] = self._clean_arxiv(eprint["value"])
         return eprint
 
-    def __call__(self, article: Dict):
+    def __call__(self, article):
         enriched_article = article.copy()
         enriched_article.update(
             {

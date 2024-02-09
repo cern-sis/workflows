@@ -1,12 +1,12 @@
 from io import BytesIO
-from unittest.mock import MagicMock, patch
+from unittest.mock import patch
 
 import pytest
 from hindawi.repository import HindawiRepository
 
 
 class S3BucketResultObj:
-    def __init__(self, key) -> None:
+    def __init__(self, key):
         self.key = key
 
 
@@ -29,7 +29,7 @@ def test_find_all(boto3_fixture):
     assert repo.find_all() == S3_RETURNED_VALUES
 
 
-def test_save_json_file(boto3_fixture: MagicMock):
+def test_save_json_file(boto3_fixture):
     upload_mock = boto3_fixture.resource.return_value.Bucket.return_value.upload_fileobj
     key = "2022-01-01_00:00:00/test.xml"
     repo = HindawiRepository()
@@ -37,7 +37,7 @@ def test_save_json_file(boto3_fixture: MagicMock):
     upload_mock.assert_called_with(expected_file, key)
 
 
-def test_find_by_id(boto3_fixture: MagicMock):
+def test_find_by_id(boto3_fixture):
     repo = HindawiRepository()
     file = repo.get_by_id(id="1")
     assert isinstance(file, BytesIO)

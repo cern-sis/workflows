@@ -1,16 +1,15 @@
 import os
 from io import BytesIO
-from typing import IO
 
 from common.repository import IRepository
 from common.s3_service import S3Service
 
 
 class OUPRepository(IRepository):
-    ZIPED_DIR: str = "raw/"
-    EXTRACTED_DIR: str = "extracted/"
+    ZIPED_DIR = "raw/"
+    EXTRACTED_DIR = "extracted/"
 
-    def __init__(self) -> None:
+    def __init__(self):
         super().__init__()
         self.s3 = S3Service(os.getenv("OUP_BUCKET_NAME", "oup"))
 
@@ -38,12 +37,12 @@ class OUPRepository(IRepository):
             grouped_files[filename_without_extension][extension] = file
         return list(grouped_files.values())
 
-    def get_by_id(self, id: str):
+    def get_by_id(self, id):
         retfile = BytesIO()
         self.s3.download_fileobj(id, retfile)
         return retfile
 
-    def save(self, filename: str, obj: IO):
+    def save(self, filename, obj):
         prefix = self.ZIPED_DIR if ".zip" in filename else self.EXTRACTED_DIR
         self.s3.upload_fileobj(obj, prefix + filename)
 
@@ -57,5 +56,5 @@ class OUPRepository(IRepository):
             if self.is_meta(f.key) or ".pdf" in f.key
         ]
 
-    def is_meta(self, filename: str):
+    def is_meta(self, filename):
         return ".xml" in filename

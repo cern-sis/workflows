@@ -3,7 +3,6 @@ import os
 
 import pendulum
 from airflow.decorators import dag, task
-from common.repository import IRepository
 from common.utils import set_harvesting_interval
 from hindawi.hindawi_api_client import HindawiApiClient
 from hindawi.hindawi_params import HindawiParams
@@ -18,11 +17,11 @@ from hindawi.utils import save_file_in_s3, split_xmls, trigger_file_processing_D
 )
 def hindawi_pull_api():
     @task()
-    def set_fetching_intervals(repo: IRepository = HindawiRepository(), **kwargs):
+    def set_fetching_intervals(repo= HindawiRepository(), **kwargs):
         return set_harvesting_interval(repo=repo, **kwargs)
 
     @task()
-    def save_xml_in_s3(dates: dict, repo: IRepository = HindawiRepository(), **kwargs):
+    def save_xml_in_s3(dates: dict, repo= HindawiRepository(), **kwargs):
         record = kwargs["params"]["record_doi"]
         parameters = HindawiParams(
             from_date=dates["from_date"], until_date=dates["until_date"], record=record
@@ -37,7 +36,7 @@ def hindawi_pull_api():
         return save_file_in_s3(data=articles_metadata, repo=repo)
 
     @task()
-    def trigger_files_processing(key, repo: IRepository = HindawiRepository()):
+    def trigger_files_processing(key, repo= HindawiRepository()):
         if not key:
             logging.warning("No new files were downloaded to s3")
             return

@@ -1,4 +1,3 @@
-import xml.etree.ElementTree as ET
 from typing import Dict, List
 
 from common.cleanup import (
@@ -31,10 +30,10 @@ def pipe_functions(functions, value):
 class IParser:
     extractors: List[IExtractor]
 
-    def __init__(self, extractors) -> None:
+    def __init__(self, extractors):
         self.extractors = extractors
 
-    def _publisher_specific_parsing(self, article: ET.Element):
+    def _publisher_specific_parsing(self, article):
         extracted_value = {
             extractor.destination: value
             for extractor in self.extractors
@@ -93,17 +92,17 @@ class IParser:
 
         return parsed_article
 
-    def parse(self, article: ET.Element):
+    def parse(self, article):
         publisher_parsed_article = self._publisher_specific_parsing(article)
         return self._generic_parsing(publisher_parsed_article)
 
 
 class ObjectExtractor(IParser, IExtractor):
-    def __init__(self, destination, extractors, extra_function=lambda x: x) -> None:
+    def __init__(self, destination, extractors, extra_function=lambda x: x):
         super().__init__(destination)
         self.destination = destination
         self.extractors = extractors
         self.extra_function = extra_function
 
-    def extract(self, article: ET.Element):
+    def extract(self, article):
         return self.extra_function(super()._publisher_specific_parsing(article))

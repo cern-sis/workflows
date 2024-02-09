@@ -4,7 +4,6 @@ import xml.etree.ElementTree as ET
 from zipfile import ZipFile
 
 import pytest
-from airflow import DAG
 from airflow.models import DagBag, DagModel
 from airflow.utils.state import DagRunState
 from busypie import SECOND, wait
@@ -53,13 +52,13 @@ def article():
     return article
 
 
-def test_dag_loaded(dag: DAG):
+def test_dag_loaded(dag):
     assert dag is not None
     assert len(dag.tasks) == 5
 
 
 @pytest.mark.skip(reason="It does not test anything.")
-def test_dag_run(dag: DAG, dag_was_paused: bool, article: ET):
+def test_dag_run(dag, dag_was_paused, article):
     dag_run_id = datetime.datetime.utcnow().strftime(
         "test_springer_dag_process_file_%Y-%m-%dT%H:%M:%S.%f%z"
     )
@@ -78,7 +77,7 @@ def test_dag_run(dag: DAG, dag_was_paused: bool, article: ET):
 
 
 @pytest.mark.skip(reason="It does not test anything.")
-def test_dag_run_no_input_file(dag: DAG, dag_was_paused: bool):
+def test_dag_run_no_input_file(dag, dag_was_paused):
     if dag.get_is_paused():
         DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=False)
     dag_run_id = datetime.datetime.utcnow().strftime(

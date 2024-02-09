@@ -1,13 +1,12 @@
 import io
 import os
-from typing import IO
 
 from common.repository import IRepository
 from common.s3_service import S3Service
 
 
 class HindawiRepository(IRepository):
-    def __init__(self) -> None:
+    def __init__(self):
         super().__init__()
         self.s3_bucket = S3Service(os.getenv("HINDAWI_BUCKET_NAME", "hindawi"))
 
@@ -18,7 +17,7 @@ class HindawiRepository(IRepository):
             files.append(file_name)
         return files
 
-    def get_by_id(self, id: str):
+    def get_by_id(self, id):
         retfile = io.BytesIO()
         self.s3_bucket.download_fileobj(id, retfile)
         return retfile
@@ -30,7 +29,7 @@ class HindawiRepository(IRepository):
         dates = [obj.last_modified.strftime("%Y-%m-%d") for obj in objects]
         return max(dates)
 
-    def save(self, key: str, obj: IO):
+    def save(self, key, obj):
         self.s3_bucket.upload_fileobj(obj, key)
 
     def delete_all(self):

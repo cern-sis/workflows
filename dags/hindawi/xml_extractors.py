@@ -26,7 +26,7 @@ class HindawiTextExtractor(TextExtractor):
         self.logger.info("Extracted value", field=self.destination, value=final_value)
         return final_value
 
-    def extract(self, article: ET.Element):
+    def extract(self, article):
         if self.prefixes:
             node = article.find(self.source, self.prefixes)
             return self._get_extracted_value(node)

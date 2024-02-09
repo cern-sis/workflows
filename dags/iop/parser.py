@@ -34,7 +34,7 @@ class IOPParser(IParser):
         "editorial": "editorial",
     }
 
-    def __init__(self) -> None:
+    def __init__(self):
         self.dois = None
         self.year = None
         self.journal_doctype = None
@@ -132,7 +132,7 @@ class IOPParser(IParser):
         ]
         super().__init__(extractors)
 
-    def _get_dois(self, article: ET.Element):
+    def _get_dois(self, article):
         node = article.find("front/article-meta/article-id/[@pub-id-type='doi']")
         if node is None:
             return
@@ -143,7 +143,7 @@ class IOPParser(IParser):
             return [dois]
         return
 
-    def _get_journal_doctype(self, article: ET.Element):
+    def _get_journal_doctype(self, article):
         node = article.find(".")
         value = node.get("article-type")
         if not value:
@@ -382,7 +382,7 @@ class IOPParser(IParser):
         version = LICENSE_VERSION_PATTERN.search(license_text).group(0)
         return construct_license(license_type=license_type, version=version)
 
-    def _get_license(self, article: ET.Element):
+    def _get_license(self, article):
         licenses = []
         licenses_nodes = article.findall("front/article-meta/permissions/license")
         for license_node in licenses_nodes:

@@ -1,20 +1,14 @@
 import json
 import random
 import string
-from datetime import datetime, timedelta, timezone
 from io import BytesIO
-from unittest.mock import patch
 
 from airflow.models import DagBag
 from airflow.models.dagrun import DagRun
-from aps.utils import split_json, trigger_file_processing_DAG
-from common.repository import IRepository
-from freezegun import freeze_time
-from pytest import fixture
-
+from aps.utils import trigger_file_processing_DAG
 
 class S3BucketResultObj:
-    def __init__(self, key) -> None:
+    def __init__(self, key):
         self.key = key
 
 

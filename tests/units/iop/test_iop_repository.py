@@ -1,12 +1,12 @@
 from io import BytesIO
-from unittest.mock import MagicMock, patch
+from unittest.mock import patch
 
 import pytest
 from iop.repository import IOPRepository
 
 
 class S3BucketResultObj:
-    def __init__(self, key) -> None:
+    def __init__(self, key):
         self.key = key
 
 
@@ -56,7 +56,7 @@ def test_find_all_extracted_files(boto3_fixture):
     )
 
 
-def test_save_zip_file(boto3_fixture: MagicMock):
+def test_save_zip_file(boto3_fixture):
     upload_mock = boto3_fixture.resource.return_value.Bucket.return_value.upload_fileobj
     key = "2022-07-30T03_02_01_content.zip"
     repo = IOPRepository()
@@ -64,7 +64,7 @@ def test_save_zip_file(boto3_fixture: MagicMock):
     upload_mock.assert_called_with(expected_file, f"raw/{key}")
 
 
-def test_save_file(boto3_fixture: MagicMock):
+def test_save_file(boto3_fixture):
     upload_mock = boto3_fixture.resource.return_value.Bucket.return_value.upload_fileobj
     file = BytesIO()
     filename = "test.pdf"

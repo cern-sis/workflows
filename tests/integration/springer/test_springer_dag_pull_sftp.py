@@ -1,5 +1,4 @@
 import pytest
-from airflow import DAG
 from airflow.models import DagBag
 from common.pull_ftp import migrate_from_ftp, reprocess_files, trigger_file_processing
 from springer.repository import SpringerRepository
@@ -16,12 +15,12 @@ def dag():
     return dagbag.get_dag(dag_id=DAG_NAME)
 
 
-def test_dag_loaded(dag: DAG):
+def test_dag_loaded(dag):
     assert dag is not None
     assert len(dag.tasks) == 2
 
 
-def test_dag_run(dag: DAG):
+def test_dag_run(dag):
     repo = SpringerRepository()
     repo.delete_all()
     assert len(repo.find_all()) == 0

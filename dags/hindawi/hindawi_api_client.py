@@ -56,6 +56,6 @@ class HindawiApiClient:
         except RequestException:
             self.logger.error("Request failed with exception.")
 
-    def __repr__(self) -> str:
+    def __repr__(self):
         return f"<HindawiApiClient base_url={self.base_url}, \
                     parameters={self.parameters}>"

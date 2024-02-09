@@ -4,11 +4,11 @@ from datetime import date, timedelta
 class APSParams:
     def __init__(
         self,
-        from_date: str = (date.today() - timedelta(days=1)).strftime("%Y-%m-%d"),
-        until_date: str = date.today().strftime("%Y-%m-%d"),
-        date: str = "modified",
-        journals: str = "",
-        set: str = "scoap3",
+        from_date= (date.today() - timedelta(days=1)).strftime("%Y-%m-%d"),
+        until_date= date.today().strftime("%Y-%m-%d"),
+        date= "modified",
+        journals= "",
+        set= "scoap3",
         per_page: int = 100,
     ):
         self.from_date = from_date
@@ -18,7 +18,7 @@ class APSParams:
         self.set = set
         self.per_page = per_page
 
-    def get_params(self) -> dict:
+    def get_params(self):
         params = {
             "from": self.from_date,
             "until": self.until_date,

@@ -34,6 +34,6 @@ def rest_api_with_params_fixture(rest_api_fixture):
 
 
 @pytest.mark.vcr
-def test_get_response(rest_api_with_params_fixture: Request):
+def test_get_response(rest_api_with_params_fixture):
     reponse = rest_api_with_params_fixture.get_response()
     assert reponse.status_code == 200

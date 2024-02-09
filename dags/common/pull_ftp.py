@@ -6,21 +6,16 @@ import zipfile
 from datetime import datetime, timezone
 
 from airflow.api.common import trigger_dag
-from common.ftp_service import FTPService
-from common.repository import IRepository
-from common.sftp_service import SFTPService
 from common.utils import process_archive
 from structlog import PrintLogger
-
-SFTP_FTP_TYPE = (FTPService, SFTPService)
 
 
 def migrate_files(
     archives_names,
-    s_ftp: SFTP_FTP_TYPE,
-    repo: IRepository,
+    s_ftp,
+    repo,
     logger: PrintLogger,
-    process_archives: bool = True,
+    process_archives = True,
 ):
     logger.msg("Processing files.", filenames=archives_names)
     extracted_or_downloaded_filenames = []
@@ -60,9 +55,9 @@ def migrate_files(
 
 
 def migrate_from_ftp(
-    s_ftp: SFTP_FTP_TYPE,
-    repo: IRepository,
-    logger: PrintLogger,
+    s_ftp,
+    repo,
+    logger,
     publisher=None,
     **kwargs,
 ):
@@ -85,7 +80,7 @@ def migrate_from_ftp(
     return _differential_pull(s_ftp, repo, logger, publisher, **kwargs)
 
 
-def reprocess_files(repo: IRepository, logger: PrintLogger, **kwargs):
+def reprocess_files(repo, logger, **kwargs):
     logger.msg("Processing specified filenames.")
     filenames_pull_params = kwargs["params"]["filenames_pull"]
     filenames = filenames_pull_params["filenames"]
@@ -93,10 +88,10 @@ def reprocess_files(repo: IRepository, logger: PrintLogger, **kwargs):
 
 
 def _force_pull(
-    s_ftp: SFTP_FTP_TYPE,
-    repo: IRepository,
-    logger: PrintLogger,
-    publisher: str,
+    s_ftp,
+    repo,
+    logger,
+    publisher,
     **kwargs,
 ):
     logger.msg("Force Pulling from SFTP.")
@@ -109,10 +104,10 @@ def _force_pull(
 
 
 def _filenames_pull(
-    s_ftp: SFTP_FTP_TYPE,
-    repo: IRepository,
-    logger: PrintLogger,
-    publisher: str,
+    s_ftp,
+    repo,
+    logger,
+    publisher,
     **kwargs,
 ):
     filenames_pull_params = kwargs["params"]["filenames_pull"]
@@ -124,10 +119,10 @@ def _filenames_pull(
     )
 
 
-def _find_files_in_zip(filenames, repo: IRepository):
+def _find_files_in_zip(filenames, repo):
     extracted_filenames = []
     for zipped_filename in filenames:
-        zipped_file: str = repo.get_by_id(f"raw/{zipped_filename}")
+        zipped_file = repo.get_by_id(f"raw/{zipped_filename}")
         with zipfile.ZipFile(zipped_file) as zip:
             for zip_filename in zip.namelist():
                 if repo.is_meta(zip_filename):
@@ -139,10 +134,10 @@ def _find_files_in_zip(filenames, repo: IRepository):
 
 
 def _differential_pull(
-    s_ftp: SFTP_FTP_TYPE,
-    repo: IRepository,
-    logger: PrintLogger,
-    publisher: str,
+    s_ftp,
+    repo,
+    logger,
+    publisher,
     **kwargs,
 ):
     logger.msg("Pulling missing files only.")
@@ -157,9 +152,9 @@ def _differential_pull(
 
 
 def trigger_file_processing(
-    publisher: str,
-    repo: IRepository,
-    logger: PrintLogger,
+    publisher,
+    repo,
+    logger,
     filenames=None,
     article_splitter_function=lambda x: [x],
 ):
@@ -185,6 +180,6 @@ def trigger_file_processing(
     return files
 
 
-def _generate_id(publisher: str):
+def _generate_id(publisher):
     logs_date = datetime.now(timezone.utc)
     return f'{publisher}__{logs_date.strftime("%Y-%m-%dT%H:%M:%S.%f%z")}'

@@ -1,5 +1,4 @@
 import pytest
-from airflow import DAG
 from airflow.models import DagBag
 
 DAG_NAME = "aps_process_file"
@@ -12,6 +11,6 @@ def dag():
     return dagbag.get_dag(dag_id=DAG_NAME)
 
 
-def test_dag_loaded(dag: DAG):
+def test_dag_loaded(dag):
     assert dag is not None
     assert len(dag.tasks) == 5

@@ -1,5 +1,3 @@
-import xml.etree.ElementTree as ET
-
 from common.parsing.parser import IParser
 from common.parsing.xml_extractors import (
     AttributeExtractor,
@@ -11,7 +9,7 @@ from structlog import get_logger
 
 
 class ElsevierParser(IParser):
-    def __init__(self) -> None:
+    def __init__(self):
         self.dois = None
         self.year = None
         self.logger = get_logger().bind(class_name=type(self).__name__)
@@ -97,7 +95,7 @@ class ElsevierParser(IParser):
         ]
         super().__init__(extractors)
 
-    def _get_dois(self, article: ET.Element):
+    def _get_dois(self, article):
         node = article.find("item-info/doi")
         if node is None:
             return
@@ -108,7 +106,7 @@ class ElsevierParser(IParser):
             return [dois]
         return
 
-    def _get_authors(self, article: ET.Element):
+    def _get_authors(self, article):
         """Get the authors."""
         authors = []
         author_group = article.find("head/author-group")

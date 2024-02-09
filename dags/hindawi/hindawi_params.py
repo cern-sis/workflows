@@ -4,12 +4,12 @@ from datetime import date, timedelta
 class HindawiParams:
     def __init__(
         self,
-        from_date: str = (date.today() - timedelta(days=1)).strftime("%Y-%m-%d"),
-        until_date: str = date.today().strftime("%Y-%m-%d"),
-        verb: str = "listrecords",
-        set: str = "HINDAWI.AHEP",
-        metadataprefix: str = "marc21",
-        record: str = "",
+        from_date= (date.today() - timedelta(days=1)).strftime("%Y-%m-%d"),
+        until_date= date.today().strftime("%Y-%m-%d"),
+        verb= "listrecords",
+        set= "HINDAWI.AHEP",
+        metadataprefix= "marc21",
+        record= "",
     ):
         self.from_date = from_date
         self.until_date = until_date
@@ -37,7 +37,7 @@ class HindawiParams:
         }
         return params
 
-    def get_params(self) -> dict:
+    def get_params(self):
         if self.record:
             identifier = f"oai:hindawi.com:{self.record}"
             params = self._single_record_payload(identifier)

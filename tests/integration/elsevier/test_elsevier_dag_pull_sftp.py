@@ -1,8 +1,5 @@
-import pytest
-from airflow import DAG
 from airflow.models import DagBag
 from common.pull_ftp import migrate_from_ftp
-from common.repository import IRepository
 from elsevier.repository import ElsevierRepository
 from elsevier.sftp_service import ElsevierSFTPService
 from structlog import get_logger
@@ -25,7 +22,7 @@ def elsevier_empty_repo():
     yield repo
 
 
-def test_dag_loaded(dag: DAG):
+def test_dag_loaded(dag):
     assert dag is not None
     assert len(dag.tasks) == 2
 

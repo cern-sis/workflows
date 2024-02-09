@@ -48,7 +48,7 @@ def article(parser):
     return enriched_file
 
 
-def test_dag_loaded(dag: DAG):
+def test_dag_loaded(dag):
     assert dag
     assert len(dag.tasks) == 5
 
