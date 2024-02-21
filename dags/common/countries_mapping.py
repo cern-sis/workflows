@@ -6,6 +6,7 @@ COUNTRIES_DEFAULT_MAPPING = {
     "DPR. Korea": "North Korea",
     "CERN": "CERN",
     "European Organization for Nuclear Research": "CERN",
+    "Conseil Européen pour la Recherche Nucléaire": "CERN",
     "KEK": "Japan",
     "DESY": "Germany",
     "FERMILAB": "USA",
