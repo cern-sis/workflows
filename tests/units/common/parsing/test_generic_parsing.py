@@ -228,6 +228,62 @@ def test_parse_thesis_supervisors(test_input, expected):
         ),
         param(
             {
+                "journal_title": "NUPHB",
+                "journal_volume": "Test Value",
+                "journal_year": "2022",
+                "journal_issue": "Test Value",
+                "journal_artid": "",
+                "journal_fpage": "",
+                "journal_lpage": "",
+                "journal_doctype": "",
+                "pubinfo_freetext": "",
+                "another_field": "Test Another Field",
+            },
+            [
+                {
+                    "journal_title": "Nuclear Physics B",
+                    "journal_volume": "Test Value",
+                    "year": 2022,
+                    "journal_issue": "Test Value",
+                    "artid": "",
+                    "page_start": "",
+                    "page_end": "",
+                    "material": "",
+                    "pubinfo_freetext": "",
+                }
+            ],
+            id="Test journal title NUPHB to Nuclear Physics B",
+        ),
+        param(
+            {
+                "journal_title": "PLB",
+                "journal_volume": "Test Value",
+                "journal_year": "2022",
+                "journal_issue": "Test Value",
+                "journal_artid": "",
+                "journal_fpage": "",
+                "journal_lpage": "",
+                "journal_doctype": "",
+                "pubinfo_freetext": "",
+                "another_field": "Test Another Field",
+            },
+            [
+                {
+                    "journal_title": "Physics Letters B",
+                    "journal_volume": "Test Value",
+                    "year": 2022,
+                    "journal_issue": "Test Value",
+                    "artid": "",
+                    "page_start": "",
+                    "page_end": "",
+                    "material": "",
+                    "pubinfo_freetext": "",
+                }
+            ],
+            id="Test journal title PLB to Physics Letters B",
+        ),
+        param(
+            {
                 "journal_title": "Test Value",
                 "journal_volume": "Test Value",
                 "journal_year": "2022",

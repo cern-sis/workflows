@@ -1,6 +1,8 @@
 import re
 from datetime import date
 
+from common.constants import JOURNAL_MAPPING
+
 
 def take_first(arr):
     try:
@@ -82,9 +84,13 @@ def parse_thesis_supervisors(value):
 def publication_info(article):
     if "publication_info" in article:
         return article["publication_info"]
+
+    journal_title = article.get("journal_title", "")
+    journal_title = JOURNAL_MAPPING.get(journal_title, journal_title)
+
     return [
         {
-            "journal_title": article.get("journal_title", ""),
+            "journal_title": journal_title,
             "journal_volume": article.get("journal_volume", ""),
             "year": int(article.get("journal_year", 0)) or "",
             "journal_issue": article.get("journal_issue", ""),

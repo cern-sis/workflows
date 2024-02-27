@@ -12,3 +12,5 @@ BY_PATTERN = re.compile(r".*(attribution).*", flags=re.I)
 WHITE_SPACES = re.compile(r"[\n\t]{1,}" + r"\s{2,}")
 CDATA_PATTERN = re.compile(r"<\?CDATA(.*)\?>")
 FN_REGEX = re.compile(r"<fn.*<\/fn>")
+
+JOURNAL_MAPPING = {"PLB": "Physics Letters B", "NUPHB": "Nuclear Physics B"}

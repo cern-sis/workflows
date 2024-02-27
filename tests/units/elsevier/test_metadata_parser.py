@@ -40,7 +40,7 @@ def parsed_articles(parser, article):
             [
                 [
                     {
-                        "journal_title": "NUPHB",
+                        "journal_title": "Nuclear Physics B",
                         "year": 2023,
                         "artid": "116106",
                         "journal_volume": "None None",
@@ -48,7 +48,7 @@ def parsed_articles(parser, article):
                 ],
                 [
                     {
-                        "journal_title": "NUPHB",
+                        "journal_title": "Nuclear Physics B",
                         "year": 2023,
                         "artid": "116107",
                         "journal_volume": "None None",
@@ -56,7 +56,7 @@ def parsed_articles(parser, article):
                 ],
                 [
                     {
-                        "journal_title": "PLB",
+                        "journal_title": "Physics Letters B",
                         "year": 2023,
                         "artid": "137730",
                         "journal_volume": "None None",
@@ -64,7 +64,7 @@ def parsed_articles(parser, article):
                 ],
                 [
                     {
-                        "journal_title": "PLB",
+                        "journal_title": "Physics Letters B",
                         "year": 2023,
                         "artid": "137751",
                         "journal_volume": "None None",
@@ -172,7 +172,7 @@ def parsed_articles_with_volume(parser, articles_with_volume):
             [
                 [
                     {
-                        "journal_title": "PLB",
+                        "journal_title": "Physics Letters B",
                         "journal_volume": "845 C",
                         "year": 2023,
                         "artid": "138110",
