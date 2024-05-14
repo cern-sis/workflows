@@ -4,7 +4,11 @@ from common.enhancer import Enhancer
 from common.enricher import Enricher
 from common.exceptions import EmptyOutputFromPreviousTask
 from common.scoap3_s3 import Scoap3Repository
-from common.utils import create_or_update_article, parse_without_names_spaces
+from common.utils import (
+    create_or_update_article,
+    parse_without_names_spaces,
+    upload_json_to_s3,
+)
 from elsevier.parser import ElsevierParser
 from elsevier.repository import ElsevierRepository
 from inspire_utils.record import get_value
@@ -77,6 +81,10 @@ def elsevier_process_file():
         raise EmptyOutputFromPreviousTask("enhanced_file_with_metadata")
 
     @task()
+    def save_to_s3(enriched_file):
+        upload_json_to_s3(json_record=enriched_file, repo=s3_client)
+
+    @task()
     def create_or_update(enriched_file):
         create_or_update_article(enriched_file)
 
@@ -84,6 +92,7 @@ def elsevier_process_file():
     enhanced_file = enhance(parsed_file)
     enhanced_file_with_files = populate_files(enhanced_file)
     enriched_file = enrich(enhanced_file_with_files)
+    save_to_s3(enriched_file=enriched_file)
     create_or_update(enriched_file)
 
 

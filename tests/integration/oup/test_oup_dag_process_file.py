@@ -81,7 +81,7 @@ def test_affiliation_countries_in_enriched(parser, articles):
 
 def test_dag_loaded(dag):
     assert dag
-    assert len(dag.tasks) == 5
+    assert len(dag.tasks) == 6
 
 
 publisher = "OUP"

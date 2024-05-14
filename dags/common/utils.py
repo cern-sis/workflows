@@ -1,4 +1,5 @@
 import datetime
+import io
 import json
 import os
 import re
@@ -17,13 +18,11 @@ from airflow.utils.state import DagRunState
 from common.constants import (
     BY_PATTERN,
     CDATA_PATTERN,
+    COUNTRIES_DEFAULT_MAPPING,
     COUNTRY_PARSING_PATTERN,
     CREATIVE_COMMONS_PATTERN,
-    LICENSE_PATTERN,
-)
-from common.constants import (
-    COUNTRIES_DEFAULT_MAPPING,
     INSTITUTIONS_AND_COUNTRIES_MAPPING,
+    LICENSE_PATTERN,
 )
 from common.exceptions import (
     FoundMoreThanOneMatchOrNone,
@@ -275,14 +274,13 @@ def create_or_update_article(data):
         raise
 
 
-
 def parse_country_from_value(affiliation_value):
     for key, val in INSTITUTIONS_AND_COUNTRIES_MAPPING.items():
-        if re.search(r'\b%s\b' % key, affiliation_value, flags=re.IGNORECASE):
+        if re.search(r"\b%s\b" % key, affiliation_value, flags=re.IGNORECASE):
             return val
     country = affiliation_value.split(",")[-1].strip()
     for key, val in COUNTRIES_DEFAULT_MAPPING.items():
-        if re.search(r'\b%s\b' % key, country, flags=re.IGNORECASE):
+        if re.search(r"\b%s\b" % key, country, flags=re.IGNORECASE):
             return val
 
     try:
@@ -299,8 +297,21 @@ def find_country_match_from_mapping(affiliation_value):
         if re.search(r"\b%s\b" % key, affiliation_value, flags=re.IGNORECASE):
             return COUNTRIES_DEFAULT_MAPPING[key]
 
+
 def get_country_ISO_name(country):
     if COUNTRIES_DEFAULT_MAPPING.get(country):
         return COUNTRIES_DEFAULT_MAPPING[country]
     else:
         return country
+
+
+def upload_json_to_s3(repo, json_record):
+    file_in_bytes = io.BytesIO(json.dumps(json_record, indent=2).encode("utf-8"))
+    current_date = datetime.datetime.now().date()
+    current_date_str = current_date.strftime("%Y-%m-%d")
+    current_date_and_time_str = current_date.strftime("%Y-%m-%d_%H:%M:%S")
+    doi = json_record["dois"][0]["value"]
+    file_key = os.path.join(
+        "parsed", current_date_str, f"{doi}__{current_date_and_time_str}.json"
+    )
+    repo.save(file_key, file_in_bytes)

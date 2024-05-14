@@ -3,11 +3,12 @@ import json
 import pendulum
 from airflow.decorators import dag, task
 from aps.parser import APSParser
+from aps.repository import APSRepository
 from common.enhancer import Enhancer
 from common.enricher import Enricher
 from common.exceptions import EmptyOutputFromPreviousTask
 from common.scoap3_s3 import Scoap3Repository
-from common.utils import create_or_update_article
+from common.utils import create_or_update_article, upload_json_to_s3
 from inspire_utils.record import get_value
 from structlog import get_logger
 
@@ -30,6 +31,8 @@ def enrich_aps(enhanced_file):
 
 @dag(schedule=None, start_date=pendulum.today("UTC").add(days=-1))
 def aps_process_file():
+    s3_client = APSRepository()
+
     @task()
     def parse(**kwargs):
         if "params" in kwargs and "article" in kwargs["params"]:
@@ -67,6 +70,10 @@ def aps_process_file():
         return parsed_file
 
     @task()
+    def save_to_s3(enriched_file):
+        upload_json_to_s3(json_record=enriched_file, repo=s3_client)
+
+    @task()
     def create_or_update(enriched_file):
         create_or_update_article(enriched_file)
 
@@ -74,6 +81,7 @@ def aps_process_file():
     enhanced_file = enhance(parsed_file)
     enhanced_file_with_files = populate_files(enhanced_file)
     enriched_file = enrich(enhanced_file_with_files)
+    save_to_s3(enriched_file=enriched_file)
     create_or_update(enriched_file)
 
 

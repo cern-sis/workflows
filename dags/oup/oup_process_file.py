@@ -7,7 +7,11 @@ from common.enhancer import Enhancer
 from common.enricher import Enricher
 from common.exceptions import EmptyOutputFromPreviousTask
 from common.scoap3_s3 import Scoap3Repository
-from common.utils import create_or_update_article, parse_without_names_spaces
+from common.utils import (
+    create_or_update_article,
+    parse_without_names_spaces,
+    upload_json_to_s3,
+)
 from inspire_utils.record import get_value
 from jsonschema import validate
 from oup.parser import OUPParser
@@ -47,6 +51,8 @@ def oup_validate_record(enriched_file):
 
 @dag(schedule=None, start_date=pendulum.today("UTC").add(days=-1))
 def oup_process_file():
+    s3_client = OUPRepository()
+
     @task()
     def parse_file(**kwargs):
         return oup_parse_file(**kwargs)
@@ -85,10 +91,15 @@ def oup_process_file():
     def create_or_update(enriched_file):
         create_or_update_article(enriched_file)
 
+    @task()
+    def save_to_s3(enriched_file):
+        upload_json_to_s3(json_record=enriched_file, repo=s3_client)
+
     parsed_file = parse_file()
     enhanced_file = enhance_file(parsed_file)
     enhanced_file_with_files = populate_files(enhanced_file)
     enriched_file = enrich_file(enhanced_file_with_files)
+    save_to_s3(enriched_file=enriched_file)
     create_or_update(enriched_file)
 
 

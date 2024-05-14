@@ -6,8 +6,9 @@ from common.enhancer import Enhancer
 from common.enricher import Enricher
 from common.exceptions import EmptyOutputFromPreviousTask
 from common.scoap3_s3 import Scoap3Repository
-from common.utils import create_or_update_article
+from common.utils import create_or_update_article, upload_json_to_s3
 from hindawi.parser import HindawiParser
+from hindawi.repository import HindawiRepository
 from inspire_utils.record import get_value
 from structlog import get_logger
 
@@ -29,6 +30,8 @@ def enrich_hindawi(enhanced_file):
 
 @dag(schedule=None, start_date=pendulum.today("UTC").add(days=-1))
 def hindawi_file_processing():
+    s3_client = HindawiRepository()
+
     @task()
     def parse(**kwargs):
         record = kwargs.get("params", {}).get("record")
@@ -69,6 +72,10 @@ def hindawi_file_processing():
         return parsed_file
 
     @task()
+    def save_to_s3(enriched_file):
+        upload_json_to_s3(json_record=enriched_file, repo=s3_client)
+
+    @task()
     def create_or_update(enriched_file):
         create_or_update_article(enriched_file)
 
@@ -76,6 +83,7 @@ def hindawi_file_processing():
     enhanced_file = enhance(parsed_file)
     enhanced_file_with_files = populate_files(enhanced_file)
     enriched_file = enrich(enhanced_file_with_files)
+    save_to_s3(enriched_file=enriched_file)
     create_or_update(enriched_file)
 
 
