@@ -9,6 +9,7 @@ import zipfile
 from ftplib import error_perm
 from io import StringIO
 from stat import S_ISDIR, S_ISREG
+from inspire_utils.record import get_value
 
 import backoff
 import pycountry
@@ -305,12 +306,12 @@ def get_country_ISO_name(country):
         return country
 
 
-def upload_json_to_s3(repo, json_record):
+def upload_json_to_s3(json_record, repo):
     file_in_bytes = io.BytesIO(json.dumps(json_record, indent=2).encode("utf-8"))
-    current_date = datetime.datetime.now().date()
+    current_date = datetime.now().date()
     current_date_str = current_date.strftime("%Y-%m-%d")
     current_date_and_time_str = current_date.strftime("%Y-%m-%d_%H:%M:%S")
-    doi = json_record["dois"][0]["value"]
+    doi = get_value(json_record, "dois.value[0]")
     file_key = os.path.join(
         "parsed", current_date_str, f"{doi}__{current_date_and_time_str}.json"
     )
