@@ -21,7 +21,7 @@ from common.utils import (
     parse_country_from_value
 )
 from idutils import is_arxiv
-from inspire_utils.date import PartialDate
+from inspire_utils.inspire_utils.date import PartialDate
 from structlog import get_logger
 
 

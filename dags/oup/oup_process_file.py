@@ -12,7 +12,7 @@ from common.utils import (
     parse_without_names_spaces,
     upload_json_to_s3,
 )
-from inspire_utils.record import get_value
+from inspire_utils.inspire_utils import get_value
 from jsonschema import validate
 from oup.parser import OUPParser
 from oup.repository import OUPRepository

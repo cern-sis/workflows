@@ -11,7 +11,7 @@ from common.utils import (
 )
 from elsevier.parser import ElsevierParser
 from elsevier.repository import ElsevierRepository
-from inspire_utils.record import get_value
+from inspire_utils.inspire_utils import get_value
 from structlog import get_logger
 
 logger = get_logger()

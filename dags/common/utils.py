@@ -9,7 +9,7 @@ import zipfile
 from ftplib import error_perm
 from io import StringIO
 from stat import S_ISDIR, S_ISREG
-from inspire_utils.record import get_value
+from inspire_utils.inspire_utils import get_value
 
 import backoff
 import pycountry

@@ -9,7 +9,7 @@ from common.enricher import Enricher
 from common.exceptions import EmptyOutputFromPreviousTask
 from common.scoap3_s3 import Scoap3Repository
 from common.utils import create_or_update_article, upload_json_to_s3
-from inspire_utils.record import get_value
+from inspire_utils.inspire_utils import get_value
 from jsonschema import validate
 from springer.parser import SpringerParser
 from springer.repository import SpringerRepository
