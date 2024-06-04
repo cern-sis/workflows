@@ -11707,16 +11707,16 @@ def test_elsevier_parsing(parsed_articles, expected, key):
         ]
 
         if key not in SKIP_ENHANCE_FOR:
-            if key is "authors":
+            if key =="authors":
                 for author in expected_value:
                     for aff in author.get("affiliations", []):
-                        if aff.get("country") is "Republic of Korea":
+                        if aff.get("country") == "Republic of Korea":
                             aff["country"] = "South Korea"
-                        if aff.get("country") is "Slovak Republic":
+                        if aff.get("country") == "Slovak Republic":
                             aff["country"] = "Slovakia"
-                        if aff.get("country") is "United States":
+                        if aff.get("country") == "United States":
                             aff["country"] = "USA"
-                        if aff.get("country") is "United Kingdom":
+                        if aff.get("country") == "United Kingdom":
                             aff["country"] = "UK"
 
             assert Enhancer()("Elsevier", article)[key] == expected_value
