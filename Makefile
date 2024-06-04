@@ -1,4 +1,4 @@
-export PYTHON_VERSION=3.10.11
+export PYTHON_VERSION=3.8.16
 
 
 WEBSERVER_PID=airflow-webserver-monitor.pid
