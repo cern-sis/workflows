@@ -132,7 +132,7 @@ def test_authors(parsed_articles):
 
         for author in authors:
             for aff in author.get("affiliations", []):
-                if aff.get("country") is "Korea":
+                if aff.get("country") == "Korea":
                     aff["country"] = "South Korea"
 
         assert Enhancer()("Springer", parsed_article)["authors"] == authors
