@@ -1,4 +1,4 @@
-FROM apache/airflow:2.6.0-python3.10
+FROM registry.cern.ch/cern-sis/airflow-base:2.8.3
 
 ENV AIRFLOW_HOME=/opt/airflow
 WORKDIR /opt/airflow
