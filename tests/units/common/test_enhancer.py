@@ -834,6 +834,7 @@ def test_all_contructors(test_input, expected, publisher):
     enhanced = enhancement(item=test_input, publisher=publisher)
     assert enhanced == expected
 
+
 @pytest.mark.skip
 @pytest.mark.parametrize(
     "test_input, expected, publisher",
@@ -846,7 +847,9 @@ def test_all_contructors(test_input, expected, publisher):
     ],
 )
 @freeze_time("2022-05-20")
-def test_all_contructors_failing_with_wrong_affiliation_value(test_input, expected, publisher):
+def test_all_contructors_failing_with_wrong_affiliation_value(
+    test_input, expected, publisher
+):
     enhancement = Enhancer()
     enhanced = enhancement(item=test_input, publisher=publisher)
     assert enhanced == expected

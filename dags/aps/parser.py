@@ -1,9 +1,9 @@
 import re
 
+from inspire_utils.inspire_utils import get_value
 from common.parsing.json_extractors import CustomExtractor, NestedValueExtractor
 from common.parsing.parser import IParser
 from common.utils import construct_license
-from inspire_utils.record import get_value
 from structlog import get_logger
 
 logger = get_logger()

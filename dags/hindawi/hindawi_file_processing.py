@@ -2,6 +2,7 @@ import xml.etree.ElementTree as ET
 
 import pendulum
 from airflow.decorators import dag, task
+from inspire_utils.inspire_utils import get_value
 from common.enhancer import Enhancer
 from common.enricher import Enricher
 from common.exceptions import EmptyOutputFromPreviousTask
@@ -9,7 +10,6 @@ from common.scoap3_s3 import Scoap3Repository
 from common.utils import create_or_update_article, upload_json_to_s3
 from hindawi.parser import HindawiParser
 from hindawi.repository import HindawiRepository
-from inspire_utils.record import get_value
 from structlog import get_logger
 
 logger = get_logger()
@@ -29,7 +29,7 @@ def enrich_hindawi(enhanced_file):
 
 
 @dag(schedule=None, start_date=pendulum.today("UTC").add(days=-1))
-def hindawi_file_processing():
+def scoap3_hindawi_file_processing():
     s3_client = HindawiRepository()
 
     @task()
@@ -87,4 +87,4 @@ def hindawi_file_processing():
     create_or_update(enriched_file)
 
 
-Hindawi_file_processing = hindawi_file_processing()
+Hindawi_file_processing = scoap3_hindawi_file_processing()

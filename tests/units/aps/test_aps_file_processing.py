@@ -1,8 +1,8 @@
 import json
 
+from pytest import fixture
 from aps.aps_process_file import enhance_aps, enrich_aps
 from aps.parser import APSParser
-from pytest import fixture
 
 
 @fixture

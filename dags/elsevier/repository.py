@@ -21,7 +21,7 @@ class ElsevierRepository(IRepository):
 
     def get_all_raw_filenames(self):
         return [
-            f.key.removeprefix("raw/")
+            f.key.replace("raw/", "")
             for f in self.s3.objects.filter(Prefix=self.ZIPED_DIR).all()
         ]
 

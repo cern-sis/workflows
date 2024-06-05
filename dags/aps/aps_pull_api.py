@@ -16,13 +16,13 @@ from common.utils import set_harvesting_interval
     schedule="30 */2 * * *",
     params={"from_date": None, "until_date": None, "per_page": None},
 )
-def aps_pull_api():
+def scoap3_aps_pull_api():
     @task()
-    def set_fetching_intervals(repo = APSRepository(), **kwargs):
+    def set_fetching_intervals(repo=APSRepository(), **kwargs):
         return set_harvesting_interval(repo=repo, **kwargs)
 
     @task()
-    def save_json_in_s3(dates: dict, repo = APSRepository(), **kwargs):
+    def save_json_in_s3(dates: dict, repo=APSRepository(), **kwargs):
         parameters = APSParams(
             from_date=dates["from_date"],
             until_date=dates["until_date"],
@@ -40,7 +40,7 @@ def aps_pull_api():
         return None
 
     @task()
-    def trigger_files_processing(key, repo = APSRepository()):
+    def trigger_files_processing(key, repo=APSRepository()):
         if key is None:
             logging.warning("No new files were downloaded to s3")
             return
@@ -52,4 +52,4 @@ def aps_pull_api():
     trigger_files_processing(key)
 
 
-APS_download_files_dag = aps_pull_api()
+APS_download_files_dag = scoap3_aps_pull_api()

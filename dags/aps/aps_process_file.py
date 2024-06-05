@@ -2,6 +2,7 @@ import json
 
 import pendulum
 from airflow.decorators import dag, task
+from inspire_utils.inspire_utils import get_value
 from aps.parser import APSParser
 from aps.repository import APSRepository
 from common.enhancer import Enhancer
@@ -9,7 +10,6 @@ from common.enricher import Enricher
 from common.exceptions import EmptyOutputFromPreviousTask
 from common.scoap3_s3 import Scoap3Repository
 from common.utils import create_or_update_article, upload_json_to_s3
-from inspire_utils.record import get_value
 from structlog import get_logger
 
 logger = get_logger()
@@ -30,7 +30,7 @@ def enrich_aps(enhanced_file):
 
 
 @dag(schedule=None, start_date=pendulum.today("UTC").add(days=-1))
-def aps_process_file():
+def scoap3_aps_process_file():
     s3_client = APSRepository()
 
     @task()
@@ -85,4 +85,4 @@ def aps_process_file():
     create_or_update(enriched_file)
 
 
-dag_for_aps_files_processing = aps_process_file()
+dag_for_aps_files_processing = scoap3_aps_process_file()

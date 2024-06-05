@@ -4,13 +4,13 @@ import xml.etree.ElementTree as ET
 import pendulum
 import requests
 from airflow.decorators import dag, task
+from inspire_utils.inspire_utils import get_value
+from jsonschema import validate
 from common.enhancer import Enhancer
 from common.enricher import Enricher
 from common.exceptions import EmptyOutputFromPreviousTask
 from common.scoap3_s3 import Scoap3Repository
 from common.utils import create_or_update_article, upload_json_to_s3
-from inspire_utils.record import get_value
-from jsonschema import validate
 from springer.parser import SpringerParser
 from springer.repository import SpringerRepository
 from structlog import get_logger
@@ -47,7 +47,7 @@ def springer_validate_record(enriched_file):
 
 
 @dag(schedule=None, start_date=pendulum.today("UTC").add(days=-1))
-def springer_process_file():
+def scoap3_springer_process_file():
     s3_client = SpringerRepository()
 
     @task()
@@ -100,4 +100,4 @@ def springer_process_file():
     create_or_update(enriched_file)
 
 
-dag_taskflow = springer_process_file()
+dag_taskflow = scoap3_springer_process_file()

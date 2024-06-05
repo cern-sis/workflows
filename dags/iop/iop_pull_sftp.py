@@ -15,7 +15,7 @@ from structlog import get_logger
         "filenames_pull": {"enabled": False, "filenames": [], "force_from_ftp": False},
     },
 )
-def iop_pull_sftp():
+def scoap3_iop_pull_sftp():
     logger = get_logger().bind(class_name="iop_pull_sftp")
 
     @task()
@@ -46,4 +46,4 @@ def iop_pull_sftp():
     trigger_file_processing(filenames=filenames)
 
 
-dag_taskflow = iop_pull_sftp()
+dag_taskflow = scoap3_iop_pull_sftp()

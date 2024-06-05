@@ -1,2 +1,5 @@
--c https://raw.githubusercontent.com/apache/airflow/constraints-2.6.0/constraints-3.10.txt
-apache-airflow[celery, postgres]==2.6.0
+-c https://raw.githubusercontent.com/apache/airflow/constraints-2.8.3/constraints-3.8.txt
+apache-airflow[celery, postgres, redis, cncf.kubernetes]
+alembic
+airflow-provider-alembic
+elementpath

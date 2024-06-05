@@ -1,8 +1,8 @@
 from os import getenv
 from xml.etree import ElementTree
 
-from common.request import Request
 from requests.exceptions import RequestException
+from common.request import Request
 from structlog import get_logger
 
 
@@ -25,10 +25,14 @@ class HindawiApiClient:
         empty_xml = True
         if doi:
             path_segments.append(doi)
+        headers = {
+            'User-Agent': 'curl/7.64.1'
+        }
         request = Request(
             base_url=self.base_url,
             path_segments=path_segments,
             parameters=parameters,
+            headers=headers
         )
         if "until" not in parameters and "identifier" not in parameters:
             raise AttributeError("until date is required")

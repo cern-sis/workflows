@@ -1,9 +1,9 @@
 import xml.etree.ElementTree as ET
 from os import listdir
 
+from common.enhancer import Enhancer
 from pytest import fixture
 from springer.parser import SpringerParser
-from common.enhancer import Enhancer
 
 
 @fixture(scope="module")
@@ -132,7 +132,7 @@ def test_authors(parsed_articles):
 
         for author in authors:
             for aff in author.get("affiliations", []):
-                if aff.get("country") is "Korea":
+                if aff.get("country") == "Korea":
                     aff["country"] = "South Korea"
 
         assert Enhancer()("Springer", parsed_article)["authors"] == authors

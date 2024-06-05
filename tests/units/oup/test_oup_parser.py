@@ -3,8 +3,8 @@ import xml.etree.ElementTree as ET
 
 from common.parsing.xml_extractors import RequiredFieldNotFoundExtractionError
 from common.utils import parse_without_names_spaces
-from oup.parser import OUPParser
 from pytest import fixture, raises
+from oup.parser import OUPParser
 
 
 @fixture(scope="module")

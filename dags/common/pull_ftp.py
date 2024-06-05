@@ -1,12 +1,11 @@
 import base64
 import io
 import os
-import tarfile
 import zipfile
 from datetime import datetime, timezone
 
 from airflow.api.common import trigger_dag
-from common.utils import process_archive
+from common.utils import process_archive, is_tar
 from structlog import PrintLogger
 
 
@@ -27,7 +26,7 @@ def migrate_files(
             ".zip" in archive_name
             and zipfile.is_zipfile(file_bytes)
             or ".tar" in archive_name
-            and tarfile.is_tarfile(file_bytes)
+            and is_tar(file_bytes)
         ):
             if process_archives:
                 for (archive_file_content, s3_filename) in process_archive(
@@ -159,7 +158,7 @@ def trigger_file_processing(
             _id = _generate_id(publisher)
             encoded_article = base64.b64encode(article.getvalue()).decode()
             trigger_dag.trigger_dag(
-                dag_id=f"{publisher}_process_file",
+                dag_id=f"scoap3_{publisher}_process_file",
                 run_id=_id,
                 conf={"file": encoded_article, "file_name": filename},
                 replace_microseconds=False,

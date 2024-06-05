@@ -5,7 +5,7 @@ from springer.repository import SpringerRepository
 from springer.sftp_service import SpringerSFTPService
 from structlog import get_logger
 
-DAG_NAME = "springer_pull_sftp"
+DAG_NAME = "scoap3_springer_pull_sftp"
 
 
 @pytest.fixture

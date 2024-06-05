@@ -1,5 +1,6 @@
 import pendulum
 from airflow.decorators import dag, task
+from inspire_utils.inspire_utils import get_value
 from common.enhancer import Enhancer
 from common.enricher import Enricher
 from common.exceptions import EmptyOutputFromPreviousTask
@@ -11,7 +12,6 @@ from common.utils import (
 )
 from elsevier.parser import ElsevierParser
 from elsevier.repository import ElsevierRepository
-from inspire_utils.record import get_value
 from structlog import get_logger
 
 logger = get_logger()
@@ -39,7 +39,7 @@ def enrich_elsevier(enhanced_file):
 
 
 @dag(schedule=None, start_date=pendulum.today("UTC").add(days=-1))
-def elsevier_process_file():
+def scoap3_elsevier_process_file():
 
     s3_client = ElsevierRepository()
 
@@ -96,4 +96,4 @@ def elsevier_process_file():
     create_or_update(enriched_file)
 
 
-Elsevier_file_processing = elsevier_process_file()
+Elsevier_file_processing = scoap3_elsevier_process_file()

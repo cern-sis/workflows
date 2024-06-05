@@ -3,6 +3,8 @@ import base64
 import pendulum
 import requests
 from airflow.decorators import dag, task
+from inspire_utils.inspire_utils import get_value
+from jsonschema import validate
 from common.enhancer import Enhancer
 from common.enricher import Enricher
 from common.exceptions import EmptyOutputFromPreviousTask
@@ -12,8 +14,6 @@ from common.utils import (
     parse_without_names_spaces,
     upload_json_to_s3,
 )
-from inspire_utils.record import get_value
-from jsonschema import validate
 from oup.parser import OUPParser
 from oup.repository import OUPRepository
 from structlog import get_logger
@@ -50,7 +50,7 @@ def oup_validate_record(enriched_file):
 
 
 @dag(schedule=None, start_date=pendulum.today("UTC").add(days=-1))
-def oup_process_file():
+def scoap3_oup_process_file():
     s3_client = OUPRepository()
 
     @task()
@@ -103,4 +103,4 @@ def oup_process_file():
     create_or_update(enriched_file)
 
 
-dag_taskflow = oup_process_file()
+dag_taskflow = scoap3_oup_process_file()

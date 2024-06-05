@@ -1,5 +1,5 @@
+from inspire_utils.inspire_utils import get_value
 from common.parsing.extractor import IExtractor
-from inspire_utils.record import get_value
 
 
 class NestedValueExtractor(IExtractor):

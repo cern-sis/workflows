@@ -37,7 +37,7 @@ def trigger_file_processing_DAG(records):
         return
     for record in records:
         trigger_dag.trigger_dag(
-            dag_id="hindawi_file_processing",
+            dag_id="scoap3_hindawi_file_processing",
             conf={"record": record},
             replace_microseconds=False,
         )

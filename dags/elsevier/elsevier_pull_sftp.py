@@ -17,14 +17,12 @@ from structlog import get_logger
         "filenames_pull": {"enabled": False, "filenames": [], "force_from_ftp": False},
     },
 )
-def elsevier_pull_sftp():
+def scoap3_elsevier_pull_sftp():
     logger = get_logger().bind(class_name="elsevier_pull_sftp")
 
     @task()
     def migrate_from_ftp(
-        sftp = ElsevierSFTPService(),
-        repo = ElsevierRepository(),
-        **kwargs
+        sftp=ElsevierSFTPService(), repo=ElsevierRepository(), **kwargs
     ):
         params = kwargs["params"]
         specific_files = (
@@ -43,7 +41,7 @@ def elsevier_pull_sftp():
 
     @task()
     def trigger_file_processing(
-        repo = ElsevierRepository(),
+        repo=ElsevierRepository(),
         filenames=None,
     ):
         return trigger_file_processing_elsevier(
@@ -54,4 +52,4 @@ def elsevier_pull_sftp():
     trigger_file_processing(filenames=archive_names)
 
 
-dag_taskflow = elsevier_pull_sftp()
+dag_taskflow = scoap3_elsevier_pull_sftp()

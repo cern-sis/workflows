@@ -9,7 +9,7 @@ from pytest import fixture
 @fixture
 def dag():
     dagbag = DagBag(dag_folder="dags/", include_examples=False)
-    assert dagbag.import_errors.get(f"dags/cleanup_logs.py") is None
+    assert dagbag.import_errors.get("dags/cleanup_logs.py") is None
     clean_dag = dagbag.get_dag(dag_id="cleanup_logs")
     return clean_dag
 

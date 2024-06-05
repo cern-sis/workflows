@@ -211,7 +211,11 @@ class SpringerParser(IParser):
                 affiliations.append(cleaned_aff)
 
         mapped_affiliations = [
-            {"value": aff, "organization": org, **({"country": country} if country else {})}
+            {
+                "value": aff,
+                "organization": org,
+                **({"country": country} if country else {}),
+            }
             for aff, org, country, in affiliations
         ]
 

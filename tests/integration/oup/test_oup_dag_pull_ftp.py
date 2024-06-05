@@ -5,7 +5,7 @@ from oup.ftp_service import OUPFTPService
 from oup.repository import OUPRepository
 from structlog import get_logger
 
-DAG_NAME = "oup_pull_ftp"
+DAG_NAME = "scoap3_oup_pull_ftp"
 
 
 @pytest.fixture
@@ -13,12 +13,6 @@ def dag():
     dagbag = DagBag(dag_folder="dags/", include_examples=False)
     assert dagbag.import_errors.get(f"dags/{DAG_NAME}.py") is None
     return dagbag.get_dag(dag_id=DAG_NAME)
-
-
-@pytest.fixture
-def dag_was_paused(dag):
-    return dag.get_is_paused()
-
 
 @pytest.fixture
 def oup_empty_repo():
@@ -32,7 +26,7 @@ def test_dag_loaded(dag):
     assert len(dag.tasks) == 2
 
 
-def test_dag_run(dag, dag_was_paused, oup_empty_repo):
+def test_dag_run(dag, oup_empty_repo):
     assert len(oup_empty_repo.find_all()) == 0
     dag.clear()
     dag.test()

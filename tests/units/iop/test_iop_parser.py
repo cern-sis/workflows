@@ -5,8 +5,8 @@ from common.enhancer import Enhancer
 from common.exceptions import UnknownLicense
 from common.parsing.xml_extractors import RequiredFieldNotFoundExtractionError
 from common.utils import parse_to_ET_element
-from iop.parser import IOPParser
 from pytest import fixture, mark, param, raises
+from iop.parser import IOPParser
 
 
 @fixture

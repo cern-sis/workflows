@@ -8,11 +8,8 @@ from structlog import get_logger
 
 logger = get_logger()
 
-FILE_EXTENSIONS = {
-    "pdf": ".pdf",
-    "xml": ".xml",
-    "pdfa": ".pdf"
-}
+FILE_EXTENSIONS = {"pdf": ".pdf", "xml": ".xml", "pdfa": ".pdf"}
+
 
 def update_filename_extension(filename, type):
     extension = FILE_EXTENSIONS.get(type, "")
@@ -20,8 +17,9 @@ def update_filename_extension(filename, type):
         return filename
     elif extension:
         if type == "pdfa":
-            extension = f".a-2b.pdf"
+            extension = ".a-2b.pdf"
         return f"{filename}{extension}"
+
 
 class Scoap3Repository(IRepository):
     def __init__(self):
@@ -55,7 +53,7 @@ class Scoap3Repository(IRepository):
                     "source_key": source_key,
                 },
                 "MetadataDirective": "REPLACE",
-                "ACL": "public-read"
+                "ACL": "public-read",
             },
         )
         logger.info(
@@ -67,7 +65,9 @@ class Scoap3Repository(IRepository):
         copied_files = {}
         for type, path in files.items():
             try:
-                copied_files[type] = self.copy_file(bucket, path, prefix=prefix, type=type)
+                copied_files[type] = self.copy_file(
+                    bucket, path, prefix=prefix, type=type
+                )
             except Exception as e:
                 logger.error("Failed to copy file.", error=str(e), type=type, path=path)
         return copied_files

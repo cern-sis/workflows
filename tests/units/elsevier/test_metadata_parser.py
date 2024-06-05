@@ -1,7 +1,7 @@
 from common.utils import parse_without_names_spaces
-from elsevier.metadata_parser import ElsevierMetadataParser
 from freezegun import freeze_time
 from pytest import fixture, mark, param
+from elsevier.metadata_parser import ElsevierMetadataParser
 
 
 @fixture(scope="module")

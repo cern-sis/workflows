@@ -1,5 +1,7 @@
 import os
 
+from idutils import is_arxiv
+from inspire_utils.date import PartialDate
 from common.constants import (
     ARXIV_EXTRACTION_PATTERN,
     LICENSE_VERSION_PATTERN,
@@ -17,11 +19,9 @@ from common.utils import (
     extract_text,
     get_license_type,
     get_license_type_and_version_from_url,
+    parse_country_from_value,
     parse_to_int,
-    parse_country_from_value
 )
-from idutils import is_arxiv
-from inspire_utils.date import PartialDate
 from structlog import get_logger
 
 

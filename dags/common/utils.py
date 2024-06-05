@@ -9,18 +9,17 @@ import zipfile
 from ftplib import error_perm
 from io import StringIO
 from stat import S_ISDIR, S_ISREG
-from inspire_utils.record import get_value
 
 import backoff
 import pycountry
 import requests
 from airflow.models.dagrun import DagRun
 from airflow.utils.state import DagRunState
+from inspire_utils.inspire_utils import get_value
 from common.constants import (
     BY_PATTERN,
     CDATA_PATTERN,
     COUNTRIES_DEFAULT_MAPPING,
-    COUNTRY_PARSING_PATTERN,
     CREATIVE_COMMONS_PATTERN,
     INSTITUTIONS_AND_COUNTRIES_MAPPING,
     LICENSE_PATTERN,
@@ -246,8 +245,16 @@ def process_tar_file(file_bytes, file_name, **kwargs):
 def process_archive(file_bytes, file_name, **kwargs):
     if zipfile.is_zipfile(file_bytes):
         return process_zip_file(file_bytes, file_name, **kwargs)
-    if tarfile.is_tarfile(file_bytes):
+    if is_tar(file_bytes):
         return process_tar_file(file_bytes, file_name, **kwargs)
+
+
+def is_tar(file_bytes):
+    try:
+        tarfile.open(fileobj=file_bytes, mode="r")
+        return True
+    except tarfile.ReadError:
+        return False
 
 
 @backoff.on_exception(
@@ -308,7 +315,7 @@ def get_country_ISO_name(country):
 
 def upload_json_to_s3(json_record, repo):
     file_in_bytes = io.BytesIO(json.dumps(json_record, indent=2).encode("utf-8"))
-    current_date = datetime.now().date()
+    current_date = datetime.datetime.now().date()
     current_date_str = current_date.strftime("%Y-%m-%d")
     current_date_and_time_str = current_date.strftime("%Y-%m-%d_%H:%M:%S")
     doi = get_value(json_record, "dois.value[0]")
