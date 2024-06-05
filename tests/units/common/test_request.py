@@ -12,7 +12,7 @@ def mocked_get_response(*args, **kwrgs):
     return mocked_response
 
 
-@mock.patch("common.request.requests.get", side_effect=mocked_get_response)
+@mock.patch("scoap3.common.request.requests.get", side_effect=mocked_get_response)
 def test_get_url_forming(mocked_requests):
     base_url = "https://www.test.com"
     path_segments = ["a", "b", "c"]
@@ -24,7 +24,7 @@ def test_get_url_forming(mocked_requests):
     assert response.url == expected_url
 
 
-@mock.patch("common.request.requests.get", side_effect=mocked_get_response)
+@mock.patch("scoap3.common.request.requests.get", side_effect=mocked_get_response)
 def test_get_response_content(mocked_response):
     base_url = "https://www.test.com"
     path_segments = ["a", "b", "c"]

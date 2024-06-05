@@ -29,7 +29,7 @@ expected_file = BytesIO()
 
 @pytest.fixture
 def boto3_fixture():
-    with patch("common.s3_service.boto3", autospec=True) as boto3_mock:
+    with patch("scoap3.common.s3_service.boto3", autospec=True) as boto3_mock:
         boto3_mock.resource.return_value.Bucket.return_value.objects.filter.return_value.all.return_value = [
             S3BucketResultObj(file) for file in S3_RETURNED_VALUES
         ]

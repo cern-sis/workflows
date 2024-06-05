@@ -4,11 +4,11 @@ import pytest
 from airflow.models import DagBag
 from common.utils import parse_without_names_spaces
 from freezegun import freeze_time
+from pytest import fixture
 from oup.oup_process_file import oup_enhance_file, oup_enrich_file
 from oup.parser import OUPParser
-from pytest import fixture
 
-DAG_NAME = "oup_process_file"
+DAG_NAME = "scoap3_oup_process_file"
 
 
 @fixture
@@ -78,6 +78,7 @@ def test_affiliation_countries_in_enriched(parser, articles):
         for author in authors:
             for aff in author.get("affiliations"):
                 assert aff.get("country") is not None
+
 
 def test_dag_loaded(dag):
     assert dag

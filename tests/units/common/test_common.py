@@ -227,7 +227,7 @@ def test_migrate_from_ftp_specified_file(
     assert repo_is_meta.call_count == 2
 
 
-@patch("common.pull_ftp.trigger_dag.trigger_dag")
+@patch("scoap3.common.pull_ftp.trigger_dag.trigger_dag")
 @patch.object(IRepository, attribute="get_by_id", return_value=BytesIO())
 @patch.object(
     IRepository, attribute="find_all", return_value=REPO_FIND_ALL_RETURN_VALUE

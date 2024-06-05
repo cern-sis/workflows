@@ -4,11 +4,11 @@ import pytest
 from airflow.models import DagBag
 from common.utils import parse_to_ET_element
 from freezegun import freeze_time
+from pytest import fixture
 from iop.iop_process_file import iop_enhance_file, iop_enrich_file
 from iop.parser import IOPParser
-from pytest import fixture
 
-DAG_NAME = "iop_process_file"
+DAG_NAME = "scoap3_iop_process_file"
 
 
 @fixture

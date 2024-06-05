@@ -17,7 +17,7 @@ from springer.springer_process_file import (
     springer_validate_record,
 )
 
-DAG_NAME = "springer_process_file"
+DAG_NAME = "scoap3_springer_process_file"
 
 
 @fixture
@@ -25,11 +25,6 @@ def dag():
     dagbag = DagBag(dag_folder="dags/", include_examples=False)
     assert dagbag.import_errors.get(f"dags/{DAG_NAME}.py") is None
     return dagbag.get_dag(dag_id=DAG_NAME)
-
-
-@pytest.fixture
-def dag_was_paused(dag):
-    return dag.get_is_paused()
 
 
 @fixture
@@ -55,41 +50,6 @@ def article():
 def test_dag_loaded(dag):
     assert dag is not None
     assert len(dag.tasks) == 6
-
-
-@pytest.mark.skip(reason="It does not test anything.")
-def test_dag_run(dag, dag_was_paused, article):
-    dag_run_id = datetime.datetime.utcnow().strftime(
-        "test_springer_dag_process_file_%Y-%m-%dT%H:%M:%S.%f%z"
-    )
-    if dag.get_is_paused():
-        DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=False)
-    dagrun = dag.create_dagrun(
-        DagRunState.QUEUED,
-        run_id=dag_run_id,
-        conf={"file": base64.b64encode(ET.tostring(article)).decode()},
-    )
-    wait().at_most(60, SECOND).until(
-        lambda: check_dagrun_state(dagrun, not_allowed_states=["queued", "running"])
-    )
-    if dag_was_paused:
-        DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=True)
-
-
-@pytest.mark.skip(reason="It does not test anything.")
-def test_dag_run_no_input_file(dag, dag_was_paused):
-    if dag.get_is_paused():
-        DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=False)
-    dag_run_id = datetime.datetime.utcnow().strftime(
-        "test_springer_dag_process_file_%Y-%m-%dT%H:%M:%S.%f%z"
-    )
-    dagrun = dag.create_dagrun(DagRunState.QUEUED, run_id=dag_run_id)
-    wait().at_most(60, SECOND).until(
-        lambda: check_dagrun_state(dagrun, not_allowed_states=["failed"])
-    )
-    if dag_was_paused:
-        DagModel.get_dagmodel(dag.dag_id).set_is_paused(is_paused=True)
-
 
 publisher = "Springer"
 generic_pseudo_parser_output = {

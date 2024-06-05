@@ -19,7 +19,7 @@ def mocked_response(*args, **kwrgs):
     return mocked_response
 
 
-@mock.patch("common.request.requests.get", side_effect=mocked_response)
+@mock.patch("scoap3.common.request.requests.get", side_effect=mocked_response)
 def test_get_articles_metadata(mocked_response):
     parameters = APSParams(
         from_date="2021-01-01",
@@ -41,7 +41,7 @@ def mocked_empty_response(*args, **kwrgs):
     return mocked_response
 
 
-@mock.patch("common.request.requests.get", side_effect=mocked_empty_response)
+@mock.patch("scoap3.common.request.requests.get", side_effect=mocked_empty_response)
 def test_get_articles_metadata_empty(mocked_response):
     parameters = APSParams(
         from_date="2021-01-01",

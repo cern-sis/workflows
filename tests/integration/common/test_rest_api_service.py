@@ -1,8 +1,8 @@
 import os
 
 import pytest
-from aps.aps_params import APSParams
 from common.request import Request
+from aps.aps_params import APSParams
 
 dates = {
     "from_date": "2022-02-05",

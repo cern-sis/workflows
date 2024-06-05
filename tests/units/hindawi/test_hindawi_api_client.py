@@ -1,6 +1,6 @@
+from pytest import fixture, mark, raises
 from hindawi.hindawi_api_client import HindawiApiClient
 from hindawi.hindawi_params import HindawiParams
-from pytest import fixture, mark, raises
 
 
 @fixture

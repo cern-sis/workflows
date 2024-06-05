@@ -1,9 +1,9 @@
 import xml.etree.ElementTree as ET
 from os import listdir
 
+from common.enhancer import Enhancer
 from pytest import fixture
 from springer.parser import SpringerParser
-from common.enhancer import Enhancer
 
 
 @fixture(scope="module")

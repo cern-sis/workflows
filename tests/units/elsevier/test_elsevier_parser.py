@@ -1,7 +1,7 @@
-from common.utils import parse_without_names_spaces
-from elsevier.parser import ElsevierParser
-from pytest import fixture, mark, param
 from common.enhancer import Enhancer
+from common.utils import parse_without_names_spaces
+from pytest import fixture, mark, param
+from elsevier.parser import ElsevierParser
 
 
 @fixture(scope="module")
@@ -28,9 +28,13 @@ def articles(shared_datadir):
 def parsed_articles(parser, articles):
     return [parser._publisher_specific_parsing(article) for article in articles]
 
+
 @fixture()
 def enhanced_articles(parser, parsed_articles):
-    return [Enhancer()("Elsevier", parser._publisher_specific_parsing(article)) for article in parsed_articles]
+    return [
+        Enhancer()("Elsevier", parser._publisher_specific_parsing(article))
+        for article in parsed_articles
+    ]
 
 
 @mark.parametrize(
@@ -11707,7 +11711,7 @@ def test_elsevier_parsing(parsed_articles, expected, key):
         ]
 
         if key not in SKIP_ENHANCE_FOR:
-            if key =="authors":
+            if key == "authors":
                 for author in expected_value:
                     for aff in author.get("affiliations", []):
                         if aff.get("country") == "Republic of Korea":

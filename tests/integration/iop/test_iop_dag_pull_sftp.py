@@ -5,7 +5,7 @@ from iop.repository import IOPRepository
 from iop.sftp_service import IOPSFTPService
 from structlog import get_logger
 
-DAG_NAME = "iop_pull_sftp"
+DAG_NAME = "scoap3_iop_pull_sftp"
 
 
 @pytest.fixture
@@ -14,12 +14,6 @@ def dag():
     assert dagbag.import_errors.get(f"dags/{DAG_NAME}.py") is None
     iop_dag = dagbag.get_dag(dag_id=DAG_NAME)
     return iop_dag
-
-
-@pytest.fixture
-def dag_was_paused(dag):
-    return dag.get_is_paused()
-
 
 @pytest.fixture
 def iop_empty_repo():
@@ -33,7 +27,7 @@ def test_dag_loaded(dag):
     assert len(dag.tasks) == 2
 
 
-def test_dag_run(dag, dag_was_paused: bool, iop_empty_repo):
+def test_dag_run(dag, iop_empty_repo):
     assert len(iop_empty_repo.find_all()) == 0
     dag.clear()
     dag.test()
@@ -82,7 +76,7 @@ def test_dag_run(dag, dag_was_paused: bool, iop_empty_repo):
             "pdf": "extracted/2022-09-24T03_01_43_content/1674-1137/1674-1137_46/1674-1137_46_10/1674-1137_46_10_103108/cpc_46_10_103108.pdf",
             "xml": "extracted/2022-09-24T03_01_43_content/1674-1137/1674-1137_46/1674-1137_46_10/1674-1137_46_10_103108/cpc_46_10_103108.xml",
         },
-        {"xml": "extracted/aca95c.xml/aca95c.xml"},
+        {"xml": "extracted/aca95c/aca95c.xml"},
     ]
 
     assert sorted(iop_empty_repo.find_all(), key=lambda x: x.get("xml", "")) == sorted(
@@ -96,7 +90,7 @@ def test_dag_migrate_from_FTP(iop_empty_repo):
         migrate_from_ftp(
             sftp,
             iop_empty_repo,
-            get_logger().bind(class_name="test_logge"),
+            get_logger().bind(class_name="test_logger"),
             **{
                 "params": {
                     "excluded_directories": [],
@@ -155,7 +149,7 @@ def test_dag_migrate_from_FTP(iop_empty_repo):
                 "pdf": "extracted/2022-09-24T03_01_43_content/1674-1137/1674-1137_46/1674-1137_46_10/1674-1137_46_10_103108/cpc_46_10_103108.pdf",
                 "xml": "extracted/2022-09-24T03_01_43_content/1674-1137/1674-1137_46/1674-1137_46_10/1674-1137_46_10_103108/cpc_46_10_103108.xml",
             },
-            {"xml": "extracted/aca95c.xml/aca95c.xml"},
+            {"xml": "extracted/aca95c/aca95c.xml"},
         ]
         for (file_from_repo, expected_file) in zip(
             iop_empty_repo.find_all(), expected_files
