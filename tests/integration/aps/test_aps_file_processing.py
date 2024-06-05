@@ -1,7 +1,7 @@
 import pytest
 from airflow.models import DagBag
 
-DAG_NAME = "scoap3_aps_process_file"
+DAG_NAME = "aps_process_file"
 
 
 @pytest.fixture

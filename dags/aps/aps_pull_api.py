@@ -16,7 +16,7 @@ from common.utils import set_harvesting_interval
     schedule="30 */2 * * *",
     params={"from_date": None, "until_date": None, "per_page": None},
 )
-def scoap3_aps_pull_api():
+def aps_pull_api():
     @task()
     def set_fetching_intervals(repo=APSRepository(), **kwargs):
         return set_harvesting_interval(repo=repo, **kwargs)
@@ -52,4 +52,4 @@ def scoap3_aps_pull_api():
     trigger_files_processing(key)
 
 
-APS_download_files_dag = scoap3_aps_pull_api()
+APS_download_files_dag = aps_pull_api()

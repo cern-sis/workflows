@@ -30,7 +30,7 @@ def trigger_file_processing_elsevier(
             logger.msg("Processing file", file=full_file_path)
             _id = _generate_id(publisher)
             trigger_dag.trigger_dag(
-                dag_id=f"scoap3_{publisher}_process_file",
+                dag_id=f"{publisher}_process_file",
                 run_id=_id,
                 conf={
                     "file_name": full_file_path,

@@ -29,7 +29,7 @@ def enrich_hindawi(enhanced_file):
 
 
 @dag(schedule=None, start_date=pendulum.today("UTC").add(days=-1))
-def scoap3_hindawi_file_processing():
+def hindawi_file_processing():
     s3_client = HindawiRepository()
 
     @task()
@@ -87,4 +87,4 @@ def scoap3_hindawi_file_processing():
     create_or_update(enriched_file)
 
 
-Hindawi_file_processing = scoap3_hindawi_file_processing()
+Hindawi_file_processing = hindawi_file_processing()

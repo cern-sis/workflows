@@ -31,7 +31,7 @@ def split_json(repo, key):
 def trigger_file_processing_DAG(ids_and_articles):
     for data in ids_and_articles:
         trigger_dag.trigger_dag(
-            dag_id="scoap3_aps_process_file",
+            dag_id="aps_process_file",
             run_id=data["id"],
             conf={"article": json.dumps(data["article"])},
             replace_microseconds=False,

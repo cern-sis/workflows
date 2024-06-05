@@ -8,7 +8,7 @@ from pytest import fixture
 from iop.iop_process_file import iop_enhance_file, iop_enrich_file
 from iop.parser import IOPParser
 
-DAG_NAME = "scoap3_iop_process_file"
+DAG_NAME = "iop_process_file"
 
 
 @fixture

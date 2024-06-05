@@ -39,7 +39,7 @@ def iop_enrich_file(enhanced_file):
 
 
 @dag(schedule=None, start_date=pendulum.today("UTC").add(days=-1))
-def scoap3_iop_process_file():
+def iop_process_file():
     s3_client = IOPRepository()
 
     @task()
@@ -92,4 +92,4 @@ def scoap3_iop_process_file():
     create_or_update(enriched_file)
 
 
-dag_taskflow = scoap3_iop_process_file()
+dag_taskflow = iop_process_file()

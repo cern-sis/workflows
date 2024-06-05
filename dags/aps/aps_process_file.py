@@ -30,7 +30,7 @@ def enrich_aps(enhanced_file):
 
 
 @dag(schedule=None, start_date=pendulum.today("UTC").add(days=-1))
-def scoap3_aps_process_file():
+def aps_process_file():
     s3_client = APSRepository()
 
     @task()
@@ -85,4 +85,4 @@ def scoap3_aps_process_file():
     create_or_update(enriched_file)
 
 
-dag_for_aps_files_processing = scoap3_aps_process_file()
+dag_for_aps_files_processing = aps_process_file()

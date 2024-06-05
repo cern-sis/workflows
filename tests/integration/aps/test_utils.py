@@ -7,8 +7,8 @@ from aps.aps_params import APSParams
 from aps.repository import APSRepository
 from aps.utils import save_file_in_s3
 
-DAG_NAME = "scoap3_aps_pull_api"
-TRIGGERED_DAG_NAME = "scoap3_aps_pull_api"
+DAG_NAME = "aps_pull_api"
+TRIGGERED_DAG_NAME = "aps_pull_api"
 
 
 @pytest.fixture

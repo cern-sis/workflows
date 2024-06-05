@@ -158,7 +158,7 @@ def trigger_file_processing(
             _id = _generate_id(publisher)
             encoded_article = base64.b64encode(article.getvalue()).decode()
             trigger_dag.trigger_dag(
-                dag_id=f"scoap3_{publisher}_process_file",
+                dag_id=f"{publisher}_process_file",
                 run_id=_id,
                 conf={"file": encoded_article, "file_name": filename},
                 replace_microseconds=False,

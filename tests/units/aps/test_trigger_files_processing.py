@@ -21,7 +21,7 @@ pseudo_article = {
 }
 file = BytesIO(json.dumps(pseudo_article).encode("utf-8"))
 
-TRIGGERED_DAG_NAME = "scoap3_aps_process_file"
+TRIGGERED_DAG_NAME = "aps_process_file"
 
 
 def get_dag_runs(dag_id, states=[]):

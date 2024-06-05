@@ -19,7 +19,7 @@ from hindawi.utils import (
     schedule="15 */3 * * *",
     params={"from_date": None, "until_date": None, "record_doi": None},
 )
-def scoap3_hindawi_pull_api():
+def hindawi_pull_api():
     @task()
     def set_fetching_intervals(repo=HindawiRepository(), **kwargs):
         return set_harvesting_interval(repo=repo, **kwargs)
@@ -52,4 +52,4 @@ def scoap3_hindawi_pull_api():
     trigger_files_processing(key)
 
 
-hindawi_download_files_dag = scoap3_hindawi_pull_api()
+hindawi_download_files_dag = hindawi_pull_api()

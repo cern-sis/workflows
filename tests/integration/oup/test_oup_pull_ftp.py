@@ -5,7 +5,7 @@ from oup.ftp_service import OUPFTPService
 from oup.repository import OUPRepository
 from structlog import get_logger
 
-DAG_NAME = "scoap3_oup_pull_ftp"
+DAG_NAME = "oup_pull_ftp"
 
 
 @pytest.fixture

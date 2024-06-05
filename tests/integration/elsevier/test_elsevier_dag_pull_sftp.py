@@ -5,7 +5,7 @@ from elsevier.repository import ElsevierRepository
 from elsevier.sftp_service import ElsevierSFTPService
 from structlog import get_logger
 
-DAG_NAME = "scoap3_elsevier_pull_sftp"
+DAG_NAME = "elsevier_pull_sftp"
 
 
 @fixture

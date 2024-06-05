@@ -39,7 +39,7 @@ def enrich_elsevier(enhanced_file):
 
 
 @dag(schedule=None, start_date=pendulum.today("UTC").add(days=-1))
-def scoap3_elsevier_process_file():
+def elsevier_process_file():
 
     s3_client = ElsevierRepository()
 
@@ -96,4 +96,4 @@ def scoap3_elsevier_process_file():
     create_or_update(enriched_file)
 
 
-Elsevier_file_processing = scoap3_elsevier_process_file()
+Elsevier_file_processing = elsevier_process_file()
