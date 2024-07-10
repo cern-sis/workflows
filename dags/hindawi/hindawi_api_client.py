@@ -13,7 +13,7 @@ class HindawiApiClient:
         files_url=None,
     ):
         self.base_url = base_url or getenv(
-            "HINDAWI_API_BASE_URL", "https://www.hindawi.com"
+            "HINDAWI_API_BASE_URL", "https://oaipmh.hindawi.com"
         )
         self.files_url = files_url or getenv(
             "HINDAWI_API_FILES_URL", "http://downloads.hindawi.com"
