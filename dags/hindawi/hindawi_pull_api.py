@@ -17,17 +17,17 @@ from hindawi.utils import save_file_in_s3, split_xmls, trigger_file_processing_D
 )
 def hindawi_pull_api():
     @task()
-    def set_fetching_intervals(repo= HindawiRepository(), **kwargs):
+    def set_fetching_intervals(repo=HindawiRepository(), **kwargs):
         return set_harvesting_interval(repo=repo, **kwargs)
 
     @task()
-    def save_xml_in_s3(dates: dict, repo= HindawiRepository(), **kwargs):
+    def save_xml_in_s3(dates: dict, repo=HindawiRepository(), **kwargs):
         record = kwargs["params"]["record_doi"]
         parameters = HindawiParams(
             from_date=dates["from_date"], until_date=dates["until_date"], record=record
         ).get_params()
         rest_api = HindawiApiClient(
-            base_url=os.getenv("HINDAWI_API_BASE_URL", "https://www.hindawi.com")
+            base_url=os.getenv("HINDAWI_API_BASE_URL", "https://oaipmh.hindawi.com")
         )
         articles_metadata = rest_api.get_articles_metadata(parameters)
         if not articles_metadata:
@@ -36,7 +36,7 @@ def hindawi_pull_api():
         return save_file_in_s3(data=articles_metadata, repo=repo)
 
     @task()
-    def trigger_files_processing(key, repo= HindawiRepository()):
+    def trigger_files_processing(key, repo=HindawiRepository()):
         if not key:
             logging.warning("No new files were downloaded to s3")
             return

@@ -19,6 +19,10 @@ class HindawiApiClient:
             "HINDAWI_API_FILES_URL", "http://downloads.hindawi.com"
         )
         self.logger = get_logger().bind(class_name=type(self).__name__)
+        self.headers = {
+            "Accept": "application/xml",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0"
+        }
 
     def get_articles_metadata(self, parameters, doi=None):
         path_segments = ["oai-pmh", "oai.aspx"]
@@ -27,6 +31,7 @@ class HindawiApiClient:
             path_segments.append(doi)
         request = Request(
             base_url=self.base_url,
+            headers=self.headers,
             path_segments=path_segments,
             parameters=parameters,
         )
