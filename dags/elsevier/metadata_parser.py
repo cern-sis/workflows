@@ -31,7 +31,6 @@ class ElsevierMetadataParser(IParser):
             CustomExtractor(
                 destination="date_published",
                 extraction_function=self._get_published_date,
-                required=True,
             ),
             CustomExtractor(
                 destination="journal_year",
