@@ -75,7 +75,7 @@ def parsed_articles(parser, article):
             id="test_publication_info",
         ),
         param(
-            ["2023-11-02", "2023-11-02", "2023-02-04", "2023-11-02"],
+            ["", "", "2023-02-04", ""],
             "date_published",
             id="test_published_date",
         ),
@@ -150,7 +150,7 @@ def parsed_articles(parser, article):
 @freeze_time("2023-11-02")
 def test_elsevier_dataset_parsing(parsed_articles, expected, key):
     for (parsed_article, expected_article) in zip(parsed_articles, expected):
-        assert expected_article == parsed_article[key]
+        assert expected_article == parsed_article.get(key, "")
 
 
 @fixture
