@@ -122,6 +122,7 @@ class ElsevierParser(IParser):
     def _get_authors_details(self, author_group):
         authors = []
         for author in author_group.findall("author"):
+            orcid = author.get("orcid")
             surname = extract_text(
                 article=author, path="surname", field_name="surname", dois=self.dois
             )
@@ -146,6 +147,8 @@ class ElsevierParser(IParser):
                 auth_dict["affiliations"] = affiliations
             if emails:
                 auth_dict["email"] = emails
+            if orcid:
+                auth_dict["orcid"] = orcid
             authors.append(auth_dict)
 
         if not authors:

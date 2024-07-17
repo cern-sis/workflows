@@ -1,7 +1,7 @@
+from common.enhancer import Enhancer
 from common.utils import parse_without_names_spaces
 from elsevier.parser import ElsevierParser
 from pytest import fixture, mark, param
-from common.enhancer import Enhancer
 
 
 @fixture(scope="module")
@@ -28,9 +28,13 @@ def articles(shared_datadir):
 def parsed_articles(parser, articles):
     return [parser._publisher_specific_parsing(article) for article in articles]
 
+
 @fixture()
 def enhanced_articles(parser, parsed_articles):
-    return [Enhancer()("Elsevier", parser._publisher_specific_parsing(article)) for article in parsed_articles]
+    return [
+        Enhancer()("Elsevier", parser._publisher_specific_parsing(article))
+        for article in parsed_articles
+    ]
 
 
 @mark.parametrize(
@@ -151,6 +155,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             },
                         ],
+                        "orcid": "0000-0002-9213-5329",
                     },
                     {
                         "surname": "Adamová",
@@ -162,6 +167,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Czech Republic",
                             }
                         ],
+                        "orcid": "0000-0002-0504-7428",
                     },
                     {
                         "surname": "Adler",
@@ -184,6 +190,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-9611-3696",
                     },
                     {
                         "surname": "Agnello",
@@ -195,6 +202,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-0760-5075",
                     },
                     {
                         "surname": "Agrawal",
@@ -206,6 +214,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-0348-9836",
                     },
                     {
                         "surname": "Ahammed",
@@ -217,6 +226,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0001-5241-7412",
                     },
                     {
                         "surname": "Ahmad",
@@ -228,6 +238,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0003-0497-5705",
                     },
                     {
                         "surname": "Ahn",
@@ -239,6 +250,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0000-0001-8847-489X",
                     },
                     {
                         "surname": "Ahuja",
@@ -250,16 +262,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Slovak Republic",
                             }
                         ],
+                        "orcid": "0000-0002-4417-1392",
                     },
                     {
                         "surname": "Akindinov",
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-7388-3022",
                     },
                     {
                         "surname": "Al-Turany",
@@ -271,16 +284,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-8071-4497",
                     },
                     {
                         "surname": "Aleksandrov",
                         "given_names": "D.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-9719-7035",
                     },
                     {
                         "surname": "Alessandro",
@@ -292,6 +306,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-9680-4940",
                     },
                     {
                         "surname": "Alfanda",
@@ -303,6 +318,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0002-5659-2119",
                     },
                     {
                         "surname": "Alfaro Molina",
@@ -314,6 +330,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Mexico",
                             }
                         ],
+                        "orcid": "0000-0002-4713-7069",
                     },
                     {
                         "surname": "Ali",
@@ -325,6 +342,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-0877-7979",
                     },
                     {
                         "surname": "Ali",
@@ -347,6 +365,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-3618-4617",
                     },
                     {
                         "surname": "Alizadehvandchali",
@@ -358,6 +377,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0009-0000-7365-1064",
                     },
                     {
                         "surname": "Alkin",
@@ -369,6 +389,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-2205-5761",
                     },
                     {
                         "surname": "Alme",
@@ -380,6 +401,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0000-0003-0177-0536",
                     },
                     {
                         "surname": "Alocco",
@@ -391,6 +413,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-8910-9173",
                     },
                     {
                         "surname": "Alt",
@@ -402,16 +425,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0005-4862-5370",
                     },
                     {
                         "surname": "Altsybeev",
                         "given_names": "I.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-8079-7026",
                     },
                     {
                         "surname": "Anaam",
@@ -423,6 +447,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0002-6180-4243",
                     },
                     {
                         "surname": "Andrei",
@@ -434,6 +459,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Romania",
                             }
                         ],
+                        "orcid": "0000-0001-8535-0680",
                     },
                     {
                         "surname": "Andronic",
@@ -445,6 +471,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-2372-6117",
                     },
                     {
                         "surname": "Anguelov",
@@ -456,6 +483,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0006-0236-2680",
                     },
                     {
                         "surname": "Antinori",
@@ -467,6 +495,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-7366-8891",
                     },
                     {
                         "surname": "Antonioli",
@@ -478,6 +507,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-7516-3726",
                     },
                     {
                         "surname": "Anuj",
@@ -489,6 +519,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-2205-4419",
                     },
                     {
                         "surname": "Apadula",
@@ -500,6 +531,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-5478-6120",
                     },
                     {
                         "surname": "Aphecetche",
@@ -511,6 +543,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0001-7662-3878",
                     },
                     {
                         "surname": "Appelshäuser",
@@ -522,6 +555,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-0614-7671",
                     },
                     {
                         "surname": "Arcelli",
@@ -533,6 +567,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-6367-9215",
                     },
                     {
                         "surname": "Arnaldi",
@@ -544,6 +579,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-6698-9577",
                     },
                     {
                         "surname": "Arsene",
@@ -555,6 +591,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0000-0003-2316-9565",
                     },
                     {
                         "surname": "Arslandok",
@@ -566,6 +603,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-3888-8303",
                     },
                     {
                         "surname": "Augustinus",
@@ -577,6 +615,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0009-0008-5460-6805",
                     },
                     {
                         "surname": "Averbeck",
@@ -588,6 +627,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-4277-4963",
                     },
                     {
                         "surname": "Aziz",
@@ -599,6 +639,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-4333-8090",
                     },
                     {
                         "surname": "Azmi",
@@ -610,6 +651,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-2501-6856",
                     },
                     {
                         "surname": "Badalà",
@@ -621,6 +663,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-0569-4828",
                     },
                     {
                         "surname": "Baek",
@@ -632,6 +675,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0000-0002-4343-4883",
                     },
                     {
                         "surname": "Bai",
@@ -643,6 +687,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0009-9085-079X",
                     },
                     {
                         "surname": "Bailhache",
@@ -654,6 +699,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0001-7987-4592",
                     },
                     {
                         "surname": "Bailung",
@@ -665,6 +711,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0003-1172-0225",
                     },
                     {
                         "surname": "Bala",
@@ -676,6 +723,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-4116-2861",
                     },
                     {
                         "surname": "Balbino",
@@ -687,6 +735,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-0359-1403",
                     },
                     {
                         "surname": "Baldisseri",
@@ -698,6 +747,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-6186-289X",
                     },
                     {
                         "surname": "Balis",
@@ -709,6 +759,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0002-3082-4209",
                     },
                     {
                         "surname": "Banerjee",
@@ -720,6 +771,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0001-5743-7578",
                     },
                     {
                         "surname": "Banoo",
@@ -731,6 +783,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-7178-3001",
                     },
                     {
                         "surname": "Barbera",
@@ -742,6 +795,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-5971-6415",
                     },
                     {
                         "surname": "Barioglio",
@@ -753,6 +807,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-7328-9154",
                     },
                     {
                         "surname": "Barlou",
@@ -775,6 +830,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Hungary",
                             }
                         ],
+                        "orcid": "0000-0001-9223-6480",
                     },
                     {
                         "surname": "Barnby",
@@ -786,6 +842,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United Kingdom",
                             }
                         ],
+                        "orcid": "0000-0001-7357-9904",
                     },
                     {
                         "surname": "Barret",
@@ -797,6 +854,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0003-0611-9283",
                     },
                     {
                         "surname": "Barreto",
@@ -808,6 +866,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Brazil",
                             }
                         ],
+                        "orcid": "0000-0002-6454-0052",
                     },
                     {
                         "surname": "Bartels",
@@ -819,6 +878,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United Kingdom",
                             }
                         ],
+                        "orcid": "0009-0002-3371-4483",
                     },
                     {
                         "surname": "Barth",
@@ -830,6 +890,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0001-7633-1189",
                     },
                     {
                         "surname": "Bartsch",
@@ -841,6 +902,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0006-7928-4203",
                     },
                     {
                         "surname": "Baruffaldi",
@@ -852,6 +914,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-7790-1152",
                     },
                     {
                         "surname": "Bastid",
@@ -863,6 +926,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-6905-8345",
                     },
                     {
                         "surname": "Basu",
@@ -874,6 +938,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Sweden",
                             }
                         ],
+                        "orcid": "0000-0003-0687-8124",
                     },
                     {
                         "surname": "Batigne",
@@ -885,6 +950,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0001-8638-6300",
                     },
                     {
                         "surname": "Battistini",
@@ -896,16 +962,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0000-0199-3372",
                     },
                     {
                         "surname": "Batyunya",
                         "given_names": "B.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
-                                # "country": "CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0009-0009-2974-6985",
                     },
                     {
                         "surname": "Bauri",
@@ -928,6 +995,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Peru",
                             }
                         ],
+                        "orcid": "0000-0001-9148-9101",
                     },
                     {
                         "surname": "Bearden",
@@ -939,6 +1007,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Denmark",
                             }
                         ],
+                        "orcid": "0000-0003-2784-3094",
                     },
                     {
                         "surname": "Beattie",
@@ -950,6 +1019,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0001-7431-4051",
                     },
                     {
                         "surname": "Becht",
@@ -961,6 +1031,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-7908-3288",
                     },
                     {
                         "surname": "Behera",
@@ -972,6 +1043,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-2599-7957",
                     },
                     {
                         "surname": "Belikov",
@@ -983,6 +1055,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0009-0005-5922-8936",
                     },
                     {
                         "surname": "Bell Hechavarria",
@@ -994,6 +1067,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-0442-6549",
                     },
                     {
                         "surname": "Bellini",
@@ -1005,6 +1079,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-3498-4661",
                     },
                     {
                         "surname": "Bellwied",
@@ -1016,26 +1091,27 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-3156-0188",
                     },
                     {
                         "surname": "Belokurova",
                         "given_names": "S.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-4862-3384",
                     },
                     {
                         "surname": "Belyaev",
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0003-2843-9667",
                     },
                     {
                         "surname": "Bencedi",
@@ -1052,6 +1128,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Mexico",
                             },
                         ],
+                        "orcid": "0000-0002-9040-5292",
                     },
                     {
                         "surname": "Beole",
@@ -1063,6 +1140,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-4673-8038",
                     },
                     {
                         "surname": "Bercuci",
@@ -1074,16 +1152,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Romania",
                             }
                         ],
+                        "orcid": "0000-0002-4911-7766",
                     },
                     {
                         "surname": "Berdnikov",
                         "given_names": "Y.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0003-0309-5917",
                     },
                     {
                         "surname": "Berdnikova",
@@ -1095,6 +1174,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-3705-7898",
                     },
                     {
                         "surname": "Bergmann",
@@ -1106,6 +1186,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0004-5511-2496",
                     },
                     {
                         "surname": "Besoiu",
@@ -1117,6 +1198,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Romania",
                             }
                         ],
+                        "orcid": "0000-0001-5253-2517",
                     },
                     {
                         "surname": "Betev",
@@ -1128,6 +1210,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-1373-1844",
                     },
                     {
                         "surname": "Bhaduri",
@@ -1139,6 +1222,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0001-7883-3190",
                     },
                     {
                         "surname": "Bhasin",
@@ -1150,6 +1234,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-3687-8179",
                     },
                     {
                         "surname": "Bhat",
@@ -1172,6 +1257,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-3643-1502",
                     },
                     {
                         "surname": "Bhattacharjee",
@@ -1183,6 +1269,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-3755-0992",
                     },
                     {
                         "surname": "Bianchi",
@@ -1194,6 +1281,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-1664-8189",
                     },
                     {
                         "surname": "Bianchi",
@@ -1205,6 +1293,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-6861-2810",
                     },
                     {
                         "surname": "Bielčík",
@@ -1216,6 +1305,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Czech Republic",
                             }
                         ],
+                        "orcid": "0000-0003-4940-2441",
                     },
                     {
                         "surname": "Bielčíková",
@@ -1227,6 +1317,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Czech Republic",
                             }
                         ],
+                        "orcid": "0000-0003-1659-0394",
                     },
                     {
                         "surname": "Biernat",
@@ -1238,6 +1329,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0001-5613-7629",
                     },
                     {
                         "surname": "Bilandzic",
@@ -1249,6 +1341,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-0002-4654",
                     },
                     {
                         "surname": "Biro",
@@ -1260,6 +1353,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Hungary",
                             }
                         ],
+                        "orcid": "0000-0003-2849-0120",
                     },
                     {
                         "surname": "Biswas",
@@ -1271,6 +1365,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0003-3578-5373",
                     },
                     {
                         "surname": "Blair",
@@ -1282,16 +1377,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-4681-3002",
                     },
                     {
                         "surname": "Blau",
                         "given_names": "D.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-4266-8338",
                     },
                     {
                         "surname": "Blidaru",
@@ -1303,6 +1399,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-8085-8597",
                     },
                     {
                         "surname": "Bluhme",
@@ -1325,6 +1422,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-6800-3465",
                     },
                     {
                         "surname": "Boca",
@@ -1341,6 +1439,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             },
                         ],
+                        "orcid": "0000-0002-2829-5950",
                     },
                     {
                         "surname": "Bock",
@@ -1352,6 +1451,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0003-4185-2093",
                     },
                     {
                         "surname": "Bodova",
@@ -1363,14 +1463,14 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0009-0001-4479-0417",
                     },
                     {
                         "surname": "Bogdanov",
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
                     },
@@ -1384,6 +1484,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-5942-812X",
                     },
                     {
                         "surname": "Bok",
@@ -1395,6 +1496,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0000-0001-6283-2927",
                     },
                     {
                         "surname": "Boldizsár",
@@ -1406,16 +1508,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Hungary",
                             }
                         ],
+                        "orcid": "0009-0009-8669-3875",
                     },
                     {
                         "surname": "Bolozdynya",
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-8224-4302",
                     },
                     {
                         "surname": "Bombara",
@@ -1427,6 +1530,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Slovak Republic",
                             }
                         ],
+                        "orcid": "0000-0001-7333-224X",
                     },
                     {
                         "surname": "Bond",
@@ -1438,6 +1542,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0009-0004-0514-1723",
                     },
                     {
                         "surname": "Bonomi",
@@ -1454,6 +1559,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             },
                         ],
+                        "orcid": "0000-0003-1618-9648",
                     },
                     {
                         "surname": "Borel",
@@ -1465,16 +1571,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0001-8879-6290",
                     },
                     {
                         "surname": "Borissov",
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0003-2881-9635",
                     },
                     {
                         "surname": "Bossi",
@@ -1486,6 +1593,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0001-7602-6432",
                     },
                     {
                         "surname": "Botta",
@@ -1497,6 +1605,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-5054-1521",
                     },
                     {
                         "surname": "Bratrud",
@@ -1508,6 +1617,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-3069-5822",
                     },
                     {
                         "surname": "Braun-Munzinger",
@@ -1519,6 +1629,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-2527-0720",
                     },
                     {
                         "surname": "Bregant",
@@ -1530,6 +1641,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Brazil",
                             }
                         ],
+                        "orcid": "0000-0001-9610-5218",
                     },
                     {
                         "surname": "Broz",
@@ -1541,6 +1653,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Czech Republic",
                             }
                         ],
+                        "orcid": "0000-0002-3075-1556",
                     },
                     {
                         "surname": "Bruno",
@@ -1557,6 +1670,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             },
                         ],
+                        "orcid": "0000-0001-6247-9633",
                     },
                     {
                         "surname": "Buckland",
@@ -1568,16 +1682,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United Kingdom",
                             }
                         ],
+                        "orcid": "0009-0008-2547-0419",
                     },
                     {
                         "surname": "Budnikov",
                         "given_names": "D.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0009-0009-7215-3122",
                     },
                     {
                         "surname": "Buesching",
@@ -1589,6 +1704,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0009-4284-8943",
                     },
                     {
                         "surname": "Bufalino",
@@ -1600,6 +1716,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-0413-9478",
                     },
                     {
                         "surname": "Bugnon",
@@ -1622,6 +1739,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Austria",
                             }
                         ],
+                        "orcid": "0000-0003-2049-1380",
                     },
                     {
                         "surname": "Buthelezi",
@@ -1638,6 +1756,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "South Africa",
                             },
                         ],
+                        "orcid": "0000-0002-8880-1608",
                     },
                     {
                         "surname": "Butt",
@@ -1660,6 +1779,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0001-6286-120X",
                     },
                     {
                         "surname": "Bysiak",
@@ -1687,6 +1807,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             },
                         ],
+                        "orcid": "0009-0001-3424-1553",
                     },
                     {
                         "surname": "Caines",
@@ -1698,6 +1819,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-1595-411X",
                     },
                     {
                         "surname": "Caliva",
@@ -1709,6 +1831,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-2543-0336",
                     },
                     {
                         "surname": "Calvo Villar",
@@ -1720,6 +1843,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Peru",
                             }
                         ],
+                        "orcid": "0000-0002-5269-9779",
                     },
                     {
                         "surname": "Camacho",
@@ -1731,6 +1855,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Mexico",
                             }
                         ],
+                        "orcid": "0000-0001-5945-3424",
                     },
                     {
                         "surname": "Camacho",
@@ -1753,6 +1878,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-9261-9497",
                     },
                     {
                         "surname": "Canedo",
@@ -1764,6 +1890,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Brazil",
                             }
                         ],
+                        "orcid": "0000-0003-0604-2044",
                     },
                     {
                         "surname": "Carabas",
@@ -1775,6 +1902,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Romania",
                             }
                         ],
+                        "orcid": "0000-0002-4008-9922",
                     },
                     {
                         "surname": "Carnesecchi",
@@ -1786,6 +1914,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0001-9981-7536",
                     },
                     {
                         "surname": "Caron",
@@ -1802,6 +1931,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             },
                         ],
+                        "orcid": "0000-0001-7610-8673",
                     },
                     {
                         "surname": "Castillo Castellanos",
@@ -1813,6 +1943,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-5187-2779",
                     },
                     {
                         "surname": "Catalano",
@@ -1824,16 +1955,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-0722-7692",
                     },
                     {
                         "surname": "Ceballos Sanchez",
                         "given_names": "C.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
-                                # "country": "CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-0985-4155",
                     },
                     {
                         "surname": "Chakaberia",
@@ -1845,6 +1977,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-9614-4046",
                     },
                     {
                         "surname": "Chakraborty",
@@ -1856,6 +1989,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-3311-1175",
                     },
                     {
                         "surname": "Chandra",
@@ -1867,6 +2001,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0003-4238-2302",
                     },
                     {
                         "surname": "Chapeland",
@@ -1878,6 +2013,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0003-4511-4784",
                     },
                     {
                         "surname": "Chartier",
@@ -1889,6 +2025,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United Kingdom",
                             }
                         ],
+                        "orcid": "0000-0003-0578-5567",
                     },
                     {
                         "surname": "Chattopadhyay",
@@ -1900,6 +2037,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0003-1097-8806",
                     },
                     {
                         "surname": "Chattopadhyay",
@@ -1911,6 +2049,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-8789-0004",
                     },
                     {
                         "surname": "Chavez",
@@ -1922,6 +2061,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Mexico",
                             }
                         ],
+                        "orcid": "0000-0002-6224-1577",
                     },
                     {
                         "surname": "Cheng",
@@ -1933,6 +2073,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0009-0004-0724-7003",
                     },
                     {
                         "surname": "Cheshkov",
@@ -1944,6 +2085,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0009-0002-8368-9407",
                     },
                     {
                         "surname": "Cheynis",
@@ -1955,6 +2097,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-4891-5168",
                     },
                     {
                         "surname": "Chibante Barroso",
@@ -1966,6 +2109,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0001-6837-3362",
                     },
                     {
                         "surname": "Chinellato",
@@ -1977,6 +2121,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Brazil",
                             }
                         ],
+                        "orcid": "0000-0002-9982-9577",
                     },
                     {
                         "surname": "Chizzali",
@@ -1988,6 +2133,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0009-7059-0601",
                     },
                     {
                         "surname": "Cho",
@@ -1999,6 +2145,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0009-0001-4181-8891",
                     },
                     {
                         "surname": "Cho",
@@ -2010,6 +2157,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0000-0003-0000-2674",
                     },
                     {
                         "surname": "Chochula",
@@ -2021,6 +2169,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0009-0009-5292-9579",
                     },
                     {
                         "surname": "Christakoglou",
@@ -2032,6 +2181,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Netherlands",
                             }
                         ],
+                        "orcid": "0000-0002-4325-0646",
                     },
                     {
                         "surname": "Christensen",
@@ -2043,6 +2193,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Denmark",
                             }
                         ],
+                        "orcid": "0000-0002-1850-0121",
                     },
                     {
                         "surname": "Christiansen",
@@ -2054,6 +2205,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Sweden",
                             }
                         ],
+                        "orcid": "0000-0001-7066-3473",
                     },
                     {
                         "surname": "Chujo",
@@ -2065,6 +2217,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Japan",
                             }
                         ],
+                        "orcid": "0000-0001-5433-969X",
                     },
                     {
                         "surname": "Ciacco",
@@ -2076,6 +2229,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-8804-1100",
                     },
                     {
                         "surname": "Cicalo",
@@ -2087,6 +2241,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-5129-1723",
                     },
                     {
                         "surname": "Cifarelli",
@@ -2098,6 +2253,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-6806-3206",
                     },
                     {
                         "surname": "Cindolo",
@@ -2109,6 +2265,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-4255-7347",
                     },
                     {
                         "surname": "Ciupek",
@@ -2142,6 +2299,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-2677-7961",
                     },
                     {
                         "surname": "Colburn",
@@ -2169,6 +2327,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             },
                         ],
+                        "orcid": "0000-0001-9102-9500",
                     },
                     {
                         "surname": "Collu",
@@ -2191,6 +2350,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0001-7804-0721",
                     },
                     {
                         "surname": "Concas",
@@ -2202,6 +2362,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-4167-9665",
                     },
                     {
                         "surname": "Conesa Balbastre",
@@ -2213,6 +2374,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0001-5283-3520",
                     },
                     {
                         "surname": "Conesa del Valle",
@@ -2224,6 +2386,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-7602-2930",
                     },
                     {
                         "surname": "Contin",
@@ -2235,6 +2398,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-9504-2702",
                     },
                     {
                         "surname": "Contreras",
@@ -2246,6 +2410,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Czech Republic",
                             }
                         ],
+                        "orcid": "0000-0002-9677-5294",
                     },
                     {
                         "surname": "Coquet",
@@ -2257,6 +2422,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-8343-8758",
                     },
                     {
                         "surname": "Cormier",
@@ -2284,6 +2450,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             },
                         ],
+                        "orcid": "0000-0003-2778-6421",
                     },
                     {
                         "surname": "Cosentino",
@@ -2295,6 +2462,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Brazil",
                             }
                         ],
+                        "orcid": "0000-0002-7880-8611",
                     },
                     {
                         "surname": "Costa",
@@ -2306,6 +2474,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0001-6955-3314",
                     },
                     {
                         "surname": "Costanza",
@@ -2322,6 +2491,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             },
                         ],
+                        "orcid": "0000-0002-5860-585X",
                     },
                     {
                         "surname": "Crochet",
@@ -2333,6 +2503,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0001-7528-6523",
                     },
                     {
                         "surname": "Cruz-Torres",
@@ -2344,6 +2515,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0001-6359-0608",
                     },
                     {
                         "surname": "Cuautle",
@@ -2366,6 +2538,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0001-5140-9816",
                     },
                     {
                         "surname": "Cunqueiro",
@@ -2388,6 +2561,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-2166-1874",
                     },
                     {
                         "surname": "Danisch",
@@ -2399,6 +2573,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-5165-6638",
                     },
                     {
                         "surname": "Danu",
@@ -2410,6 +2585,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Romania",
                             }
                         ],
+                        "orcid": "0000-0002-8899-3654",
                     },
                     {
                         "surname": "Das",
@@ -2421,6 +2597,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0009-0002-3904-8872",
                     },
                     {
                         "surname": "Das",
@@ -2432,6 +2609,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0003-2771-9069",
                     },
                     {
                         "surname": "Das",
@@ -2443,6 +2621,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-2678-6780",
                     },
                     {
                         "surname": "Dash",
@@ -2454,6 +2633,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0001-5008-6859",
                     },
                     {
                         "surname": "David",
@@ -2476,6 +2656,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-7865-4202",
                     },
                     {
                         "surname": "de Cataldo",
@@ -2487,6 +2668,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-3220-4505",
                     },
                     {
                         "surname": "De Cilladi",
@@ -2498,6 +2680,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-5986-3842",
                     },
                     {
                         "surname": "de Cuveland",
@@ -2520,6 +2703,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-0830-4872",
                     },
                     {
                         "surname": "De Gruttola",
@@ -2531,6 +2715,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-7055-6181",
                     },
                     {
                         "surname": "De Marco",
@@ -2542,6 +2727,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-5884-4404",
                     },
                     {
                         "surname": "De Martin",
@@ -2553,6 +2739,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-0711-4022",
                     },
                     {
                         "surname": "De Pasquale",
@@ -2564,6 +2751,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-9236-0748",
                     },
                     {
                         "surname": "Deb",
@@ -2575,6 +2763,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-0175-3712",
                     },
                     {
                         "surname": "Degenhardt",
@@ -2608,6 +2797,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-7599-2716",
                     },
                     {
                         "surname": "Dello Stritto",
@@ -2619,6 +2809,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-6700-7950",
                     },
                     {
                         "surname": "Deng",
@@ -2630,6 +2821,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0003-2860-9881",
                     },
                     {
                         "surname": "Dhankher",
@@ -2641,6 +2833,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-6562-5082",
                     },
                     {
                         "surname": "Di Bari",
@@ -2652,6 +2845,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-5559-8906",
                     },
                     {
                         "surname": "Di Mauro",
@@ -2663,14 +2857,14 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0003-0348-092X",
                     },
                     {
                         "surname": "Diaz",
                         "given_names": "R.A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
-                                # "country": "CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
                             },
                             {
                                 "value": "Centro de Aplicaciones Tecnológicas y Desarrollo Nuclear (CEADEN), Havana, Cuba",
@@ -2678,6 +2872,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Cuba",
                             },
                         ],
+                        "orcid": "0000-0002-4886-6052",
                     },
                     {
                         "surname": "Dietel",
@@ -2689,6 +2884,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "South Africa",
                             }
                         ],
+                        "orcid": "0000-0002-2065-6256",
                     },
                     {
                         "surname": "Ding",
@@ -2705,6 +2901,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             },
                         ],
+                        "orcid": "0009-0005-3775-1945",
                     },
                     {
                         "surname": "Divià",
@@ -2716,6 +2913,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-6357-7857",
                     },
                     {
                         "surname": "Dixit",
@@ -2727,6 +2925,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0009-0000-1217-7768",
                     },
                     {
                         "surname": "Djuvsland",
@@ -2744,10 +2943,10 @@ def enhanced_articles(parser, parsed_articles):
                         "given_names": "U.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0001-6853-8905",
                     },
                     {
                         "surname": "Dobrin",
@@ -2759,6 +2958,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Romania",
                             }
                         ],
+                        "orcid": "0000-0003-4432-4026",
                     },
                     {
                         "surname": "Dönigus",
@@ -2770,6 +2970,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-0739-0120",
                     },
                     {
                         "surname": "Dubey",
@@ -2781,6 +2982,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0009-0001-6339-1104",
                     },
                     {
                         "surname": "Dubinski",
@@ -2792,6 +2994,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0002-2568-0132",
                     },
                     {
                         "surname": "Dubla",
@@ -2803,6 +3006,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-9582-8948",
                     },
                     {
                         "surname": "Dudi",
@@ -2814,6 +3018,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0009-0007-4091-5327",
                     },
                     {
                         "surname": "Dupieux",
@@ -2825,6 +3030,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-0207-2871",
                     },
                     {
                         "surname": "Durkac",
@@ -2858,6 +3064,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0008-9752-4391",
                     },
                     {
                         "surname": "Ehlers",
@@ -2869,6 +3076,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-3897-0876",
                     },
                     {
                         "surname": "Eikeland",
@@ -2891,6 +3099,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0006-9458-8723",
                     },
                     {
                         "surname": "Elia",
@@ -2902,6 +3111,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-6351-2378",
                     },
                     {
                         "surname": "Erazmus",
@@ -2913,6 +3123,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0009-0003-4464-3366",
                     },
                     {
                         "surname": "Ercolessi",
@@ -2924,6 +3135,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-7873-0968",
                     },
                     {
                         "surname": "Erhardt",
@@ -2935,6 +3147,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Croatia",
                             }
                         ],
+                        "orcid": "0000-0001-9410-246X",
                     },
                     {
                         "surname": "Ersdal",
@@ -2957,6 +3170,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0003-2449-3172",
                     },
                     {
                         "surname": "Eulisse",
@@ -2968,6 +3182,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0003-1795-6212",
                     },
                     {
                         "surname": "Evans",
@@ -2979,16 +3194,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United Kingdom",
                             }
                         ],
+                        "orcid": "0000-0002-8427-322X",
                     },
                     {
                         "surname": "Evdokimov",
                         "given_names": "S.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-4239-6424",
                     },
                     {
                         "surname": "Fabbietti",
@@ -3000,6 +3216,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-2325-8368",
                     },
                     {
                         "surname": "Faggin",
@@ -3011,6 +3228,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-2202-5906",
                     },
                     {
                         "surname": "Faivre",
@@ -3022,6 +3240,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0009-0007-8219-3334",
                     },
                     {
                         "surname": "Fan",
@@ -3033,6 +3252,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0003-3573-3389",
                     },
                     {
                         "surname": "Fan",
@@ -3044,6 +3264,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-0844-3282",
                     },
                     {
                         "surname": "Fantoni",
@@ -3055,6 +3276,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-6270-9283",
                     },
                     {
                         "surname": "Fasel",
@@ -3066,6 +3288,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0009-0005-4586-0930",
                     },
                     {
                         "surname": "Fecchio",
@@ -3088,16 +3311,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-5823-9733",
                     },
                     {
                         "surname": "Feofilov",
                         "given_names": "G.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0003-3700-8623",
                     },
                     {
                         "surname": "Fernández Téllez",
@@ -3109,6 +3333,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Mexico",
                             }
                         ],
+                        "orcid": "0000-0003-0152-4220",
                     },
                     {
                         "surname": "Ferrer",
@@ -3120,6 +3345,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0001-9723-1291",
                     },
                     {
                         "surname": "Ferrero",
@@ -3131,6 +3357,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0003-1089-6632",
                     },
                     {
                         "surname": "Ferretti",
@@ -3142,6 +3369,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-9084-5784",
                     },
                     {
                         "surname": "Feuillard",
@@ -3153,6 +3381,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0002-0542-4454",
                     },
                     {
                         "surname": "Figiel",
@@ -3164,6 +3393,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0002-7692-0079",
                     },
                     {
                         "surname": "Filova",
@@ -3175,16 +3405,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Czech Republic",
                             }
                         ],
+                        "orcid": "0000-0002-6444-4669",
                     },
                     {
                         "surname": "Finogeev",
                         "given_names": "D.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-7104-7477",
                     },
                     {
                         "surname": "Fionda",
@@ -3196,6 +3427,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-8632-5580",
                     },
                     {
                         "surname": "Fiorenza",
@@ -3218,6 +3450,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-0194-1318",
                     },
                     {
                         "surname": "Flores",
@@ -3229,6 +3462,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0009-0006-6140-676X",
                     },
                     {
                         "surname": "Foertsch",
@@ -3240,6 +3474,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "South Africa",
                             }
                         ],
+                        "orcid": "0009-0007-2053-4869",
                     },
                     {
                         "surname": "Fokin",
@@ -3251,16 +3486,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-0642-2047",
                     },
                     {
                         "surname": "Fokin",
                         "given_names": "S.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-2136-778X",
                     },
                     {
                         "surname": "Fragiacomo",
@@ -3272,6 +3508,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-8216-396X",
                     },
                     {
                         "surname": "Frajna",
@@ -3283,6 +3520,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Hungary",
                             }
                         ],
+                        "orcid": "0000-0002-3420-6301",
                     },
                     {
                         "surname": "Fuchs",
@@ -3294,6 +3532,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0009-0005-2155-0460",
                     },
                     {
                         "surname": "Funicello",
@@ -3305,6 +3544,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-7814-319X",
                     },
                     {
                         "surname": "Furget",
@@ -3316,16 +3556,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0009-0004-9666-7156",
                     },
                     {
                         "surname": "Furs",
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-2582-1927",
                     },
                     {
                         "surname": "Gaardhøje",
@@ -3337,6 +3578,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Denmark",
                             }
                         ],
+                        "orcid": "0000-0001-6122-4698",
                     },
                     {
                         "surname": "Gagliardi",
@@ -3348,6 +3590,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-6314-7419",
                     },
                     {
                         "surname": "Gago",
@@ -3359,6 +3602,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Peru",
                             }
                         ],
+                        "orcid": "0000-0002-0019-9692",
                     },
                     {
                         "surname": "Gal",
@@ -3381,6 +3625,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Mexico",
                             }
                         ],
+                        "orcid": "0000-0001-5496-8533",
                     },
                     {
                         "surname": "Ganoti",
@@ -3392,6 +3637,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Greece",
                             }
                         ],
+                        "orcid": "0000-0003-4871-4064",
                     },
                     {
                         "surname": "Garabatos",
@@ -3403,6 +3649,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0007-2395-8130",
                     },
                     {
                         "surname": "Garcia",
@@ -3414,6 +3661,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Mexico",
                             }
                         ],
+                        "orcid": "0000-0002-5038-1337",
                     },
                     {
                         "surname": "Garcia-Solis",
@@ -3425,6 +3673,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-6847-8671",
                     },
                     {
                         "surname": "Garg",
@@ -3436,6 +3685,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-8512-8219",
                     },
                     {
                         "surname": "Gargiulo",
@@ -3447,6 +3697,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0009-0001-4753-577X",
                     },
                     {
                         "surname": "Garibli",
@@ -3480,6 +3731,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-0015-6713",
                     },
                     {
                         "surname": "Gautam",
@@ -3491,6 +3743,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0001-7039-535X",
                     },
                     {
                         "surname": "Gay Ducati",
@@ -3502,6 +3755,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Brazil",
                             }
                         ],
+                        "orcid": "0000-0002-8450-5318",
                     },
                     {
                         "surname": "Germain",
@@ -3513,6 +3767,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0001-7382-1609",
                     },
                     {
                         "surname": "Ghosh",
@@ -3535,6 +3790,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-4831-5808",
                     },
                     {
                         "surname": "Gianotti",
@@ -3546,6 +3802,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-4167-7176",
                     },
                     {
                         "surname": "Giubellino",
@@ -3562,6 +3819,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             },
                         ],
+                        "orcid": "0000-0002-1383-6160",
                     },
                     {
                         "surname": "Giubilato",
@@ -3573,6 +3831,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-4358-5355",
                     },
                     {
                         "surname": "Glaenzer",
@@ -3584,6 +3843,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0001-7400-7019",
                     },
                     {
                         "surname": "Glässel",
@@ -3595,6 +3855,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-3793-5291",
                     },
                     {
                         "surname": "Glimos",
@@ -3606,6 +3867,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0009-0008-1162-7067",
                     },
                     {
                         "surname": "Goh",
@@ -3628,6 +3890,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-7607-3965",
                     },
                     {
                         "surname": "González-Trueba",
@@ -3639,6 +3902,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Mexico",
                             }
                         ],
+                        "orcid": "0009-0006-9202-262X",
                     },
                     {
                         "surname": "Gorbunov",
@@ -3661,6 +3925,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0003-1746-1279",
                     },
                     {
                         "surname": "Görlich",
@@ -3672,6 +3937,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0001-7792-2247",
                     },
                     {
                         "surname": "Gotovac",
@@ -3694,6 +3960,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Mexico",
                             }
                         ],
+                        "orcid": "0000-0002-9581-0879",
                     },
                     {
                         "surname": "Graczykowski",
@@ -3705,6 +3972,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0002-4442-5727",
                     },
                     {
                         "surname": "Grecka",
@@ -3716,6 +3984,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Czech Republic",
                             }
                         ],
+                        "orcid": "0009-0002-9826-4989",
                     },
                     {
                         "surname": "Greiner",
@@ -3727,6 +3996,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0003-1476-6245",
                     },
                     {
                         "surname": "Grelli",
@@ -3738,6 +4008,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Netherlands",
                             }
                         ],
+                        "orcid": "0000-0003-0562-9820",
                     },
                     {
                         "surname": "Grigoras",
@@ -3749,24 +4020,24 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0009-0006-9035-556X",
                     },
                     {
                         "surname": "Grigoriev",
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-0661-5220",
                     },
                     {
                         "surname": "Grigoryan",
                         "given_names": "S.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
-                                # "country": "CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
                             },
                             {
                                 "value": "A.I. Alikhanyan National Science Laboratory (Yerevan Physics Institute) Foundation, Yerevan, Armenia",
@@ -3774,6 +4045,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Armenia",
                             },
                         ],
+                        "orcid": "0000-0002-0658-5949",
                     },
                     {
                         "surname": "Grosa",
@@ -3785,6 +4057,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-1469-9022",
                     },
                     {
                         "surname": "Grosse-Oetringhaus",
@@ -3796,6 +4069,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0001-8372-5135",
                     },
                     {
                         "surname": "Grosso",
@@ -3807,6 +4081,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0001-9960-2594",
                     },
                     {
                         "surname": "Grund",
@@ -3818,6 +4093,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Czech Republic",
                             }
                         ],
+                        "orcid": "0000-0001-9785-2215",
                     },
                     {
                         "surname": "Guardiano",
@@ -3829,6 +4105,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Brazil",
                             }
                         ],
+                        "orcid": "0000-0002-5298-2881",
                     },
                     {
                         "surname": "Guernane",
@@ -3840,6 +4117,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0003-0626-9724",
                     },
                     {
                         "surname": "Guilbaud",
@@ -3851,6 +4129,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0001-5990-482X",
                     },
                     {
                         "surname": "Gulbrandsen",
@@ -3862,6 +4141,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Denmark",
                             }
                         ],
+                        "orcid": "0000-0002-3809-4984",
                     },
                     {
                         "surname": "Gunji",
@@ -3873,6 +4153,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Japan",
                             }
                         ],
+                        "orcid": "0000-0002-6769-599X",
                     },
                     {
                         "surname": "Guo",
@@ -3884,6 +4165,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0002-2843-2556",
                     },
                     {
                         "surname": "Gupta",
@@ -3895,6 +4177,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0001-6178-648X",
                     },
                     {
                         "surname": "Gupta",
@@ -3906,6 +4189,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0001-7474-0755",
                     },
                     {
                         "surname": "Guzman",
@@ -3917,6 +4201,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Mexico",
                             }
                         ],
+                        "orcid": "0009-0008-0106-3130",
                     },
                     {
                         "surname": "Gyulai",
@@ -3928,6 +4213,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Hungary",
                             }
                         ],
+                        "orcid": "0000-0002-2420-7650",
                     },
                     {
                         "surname": "Habib",
@@ -3950,6 +4236,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-9336-5169",
                     },
                     {
                         "surname": "Hamagaki",
@@ -3961,6 +4248,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Japan",
                             }
                         ],
+                        "orcid": "0000-0003-3808-7917",
                     },
                     {
                         "surname": "Hamid",
@@ -3983,6 +4271,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0009-0008-6551-4180",
                     },
                     {
                         "surname": "Hannigan",
@@ -3994,6 +4283,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0003-4518-3528",
                     },
                     {
                         "surname": "Haque",
@@ -4005,6 +4295,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0001-7978-9638",
                     },
                     {
                         "surname": "Harlenderova",
@@ -4027,6 +4318,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-8535-3061",
                     },
                     {
                         "surname": "Harton",
@@ -4038,6 +4330,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0009-0004-3528-4709",
                     },
                     {
                         "surname": "Hasenbichler",
@@ -4060,6 +4353,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-6529-560X",
                     },
                     {
                         "surname": "Hatzifotiadou",
@@ -4071,6 +4365,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-7638-2047",
                     },
                     {
                         "surname": "Hauer",
@@ -4082,6 +4377,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0001-9593-6730",
                     },
                     {
                         "surname": "Havener",
@@ -4093,6 +4389,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-4743-2885",
                     },
                     {
                         "surname": "Heckel",
@@ -4104,6 +4401,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-9083-4484",
                     },
                     {
                         "surname": "Hellbär",
@@ -4115,6 +4413,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-7404-8723",
                     },
                     {
                         "surname": "Helstrup",
@@ -4126,6 +4425,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0000-0002-9335-9076",
                     },
                     {
                         "surname": "Herman",
@@ -4137,6 +4437,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Czech Republic",
                             }
                         ],
+                        "orcid": "0000-0003-4004-5265",
                     },
                     {
                         "surname": "Herrera Corral",
@@ -4148,6 +4449,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Mexico",
                             }
                         ],
+                        "orcid": "0000-0003-4692-7410",
                     },
                     {
                         "surname": "Herrmann",
@@ -4170,6 +4472,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0009-0004-3122-4872",
                     },
                     {
                         "surname": "Heybeck",
@@ -4181,6 +4484,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0009-1031-8307",
                     },
                     {
                         "surname": "Hillemanns",
@@ -4192,6 +4496,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-6527-1245",
                     },
                     {
                         "surname": "Hills",
@@ -4203,6 +4508,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United Kingdom",
                             }
                         ],
+                        "orcid": "0000-0003-4647-4159",
                     },
                     {
                         "surname": "Hippolyte",
@@ -4214,6 +4520,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0003-4562-2922",
                     },
                     {
                         "surname": "Hofman",
@@ -4225,6 +4532,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Netherlands",
                             }
                         ],
+                        "orcid": "0000-0002-3850-8884",
                     },
                     {
                         "surname": "Hohlweger",
@@ -4236,6 +4544,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Netherlands",
                             }
                         ],
+                        "orcid": "0000-0001-6925-3469",
                     },
                     {
                         "surname": "Honermann",
@@ -4247,6 +4556,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-1437-6108",
                     },
                     {
                         "surname": "Hong",
@@ -4258,6 +4568,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0000-0002-3632-4547",
                     },
                     {
                         "surname": "Horak",
@@ -4269,6 +4580,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Czech Republic",
                             }
                         ],
+                        "orcid": "0000-0002-7078-3093",
                     },
                     {
                         "surname": "Horzyk",
@@ -4280,6 +4592,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0001-9001-4198",
                     },
                     {
                         "surname": "Hosokawa",
@@ -4302,6 +4615,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0009-0003-2644-3643",
                     },
                     {
                         "surname": "Hristov",
@@ -4313,6 +4627,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0003-1477-8414",
                     },
                     {
                         "surname": "Hughes",
@@ -4324,6 +4639,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-2442-4583",
                     },
                     {
                         "surname": "Huhn",
@@ -4346,6 +4662,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Finland",
                             }
                         ],
+                        "orcid": "0000-0001-9352-5049",
                     },
                     {
                         "surname": "Hulse",
@@ -4357,6 +4674,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-5397-6782",
                     },
                     {
                         "surname": "Humanic",
@@ -4368,6 +4686,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0003-1008-5119",
                     },
                     {
                         "surname": "Hushnud",
@@ -4390,6 +4709,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0009-0008-7787-9304",
                     },
                     {
                         "surname": "Hutter",
@@ -4401,6 +4721,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-1488-4009",
                     },
                     {
                         "surname": "Iddon",
@@ -4412,14 +4733,14 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United Kingdom",
                             }
                         ],
+                        "orcid": "0000-0002-2851-5554",
                     },
                     {
                         "surname": "Ilkaev",
                         "given_names": "R.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
                     },
@@ -4433,6 +4754,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Pakistan",
                             }
                         ],
+                        "orcid": "0000-0002-3693-2649",
                     },
                     {
                         "surname": "Inaba",
@@ -4444,6 +4766,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Japan",
                             }
                         ],
+                        "orcid": "0000-0003-3895-9092",
                     },
                     {
                         "surname": "Innocenti",
@@ -4455,16 +4778,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0003-2478-9651",
                     },
                     {
                         "surname": "Ippolitov",
                         "given_names": "M.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0001-9059-2414",
                     },
                     {
                         "surname": "Isakov",
@@ -4476,6 +4800,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Czech Republic",
                             }
                         ],
+                        "orcid": "0000-0002-2134-967X",
                     },
                     {
                         "surname": "Isidori",
@@ -4487,6 +4812,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-7934-4038",
                     },
                     {
                         "surname": "Islam",
@@ -4498,6 +4824,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0001-9047-4856",
                     },
                     {
                         "surname": "Ivanov",
@@ -4509,24 +4836,24 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0001-7461-7327",
                     },
                     {
                         "surname": "Ivanov",
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0009-0002-2983-9494",
                     },
                     {
                         "surname": "Izucheev",
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
                     },
@@ -4540,6 +4867,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0003-2406-911X",
                     },
                     {
                         "surname": "Jacak",
@@ -4551,6 +4879,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0003-2889-2234",
                     },
                     {
                         "surname": "Jacazio",
@@ -4562,6 +4891,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-3066-855X",
                     },
                     {
                         "surname": "Jacobs",
@@ -4573,6 +4903,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0001-9980-5199",
                     },
                     {
                         "surname": "Jadlovska",
@@ -4617,6 +4948,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Brazil",
                             }
                         ],
+                        "orcid": "0000-0003-1969-6960",
                     },
                     {
                         "surname": "Janik",
@@ -4628,6 +4960,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0001-9087-4665",
                     },
                     {
                         "surname": "Janson",
@@ -4672,6 +5005,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Mexico",
                             }
                         ],
+                        "orcid": "0000-0002-7685-0808",
                     },
                     {
                         "surname": "Jonas",
@@ -4688,6 +5022,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             },
                         ],
+                        "orcid": "0000-0002-1605-5837",
                     },
                     {
                         "surname": "Jones",
@@ -4715,6 +5050,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             },
                         ],
+                        "orcid": "0000-0002-9492-3775",
                     },
                     {
                         "surname": "Jung",
@@ -4726,6 +5062,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0001-6811-5240",
                     },
                     {
                         "surname": "Jung",
@@ -4737,6 +5074,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0004-0872-2785",
                     },
                     {
                         "surname": "Junique",
@@ -4748,6 +5086,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0009-0002-4730-9489",
                     },
                     {
                         "surname": "Jusko",
@@ -4759,6 +5098,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United Kingdom",
                             }
                         ],
+                        "orcid": "0009-0009-3972-0631",
                     },
                     {
                         "surname": "Kabus",
@@ -4775,6 +5115,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             },
                         ],
+                        "orcid": "0000-0001-7602-1121",
                     },
                     {
                         "surname": "Kaewjai",
@@ -4797,6 +5138,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Slovak Republic",
                             }
                         ],
+                        "orcid": "0000-0002-0559-6697",
                     },
                     {
                         "surname": "Kalteyer",
@@ -4808,6 +5150,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-0618-4843",
                     },
                     {
                         "surname": "Kalweit",
@@ -4819,16 +5162,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0001-6907-0486",
                     },
                     {
                         "surname": "Kaplin",
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-1513-2845",
                     },
                     {
                         "surname": "Karasu Uysal",
@@ -4840,6 +5184,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Turkey",
                             }
                         ],
+                        "orcid": "0000-0001-6297-2532",
                     },
                     {
                         "surname": "Karatovic",
@@ -4851,26 +5196,27 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Croatia",
                             }
                         ],
+                        "orcid": "0000-0002-1726-5684",
                     },
                     {
                         "surname": "Karavichev",
                         "given_names": "O.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-5629-5181",
                     },
                     {
                         "surname": "Karavicheva",
                         "given_names": "T.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-9355-6379",
                     },
                     {
                         "surname": "Karczmarczyk",
@@ -4882,16 +5228,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0002-9057-9719",
                     },
                     {
                         "surname": "Karpechev",
                         "given_names": "E.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-6603-6693",
                     },
                     {
                         "surname": "Kashyap",
@@ -4909,8 +5256,7 @@ def enhanced_articles(parser, parsed_articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
                     },
@@ -4924,6 +5270,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-1831-7957",
                     },
                     {
                         "surname": "Keidel",
@@ -4935,6 +5282,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-1474-6191",
                     },
                     {
                         "surname": "Keijdener",
@@ -4957,6 +5305,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0009-0003-1055-0356",
                     },
                     {
                         "surname": "Ketzer",
@@ -4968,6 +5317,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-3493-3891",
                     },
                     {
                         "surname": "Khan",
@@ -4979,6 +5329,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0001-6189-3242",
                     },
                     {
                         "surname": "Khan",
@@ -4990,26 +5341,27 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0003-3075-2871",
                     },
                     {
                         "surname": "Khanzadeev",
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-5741-7144",
                     },
                     {
                         "surname": "Kharlov",
                         "given_names": "Y.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0001-6653-6164",
                     },
                     {
                         "surname": "Khatun",
@@ -5021,6 +5373,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-2724-668X",
                     },
                     {
                         "surname": "Khuntia",
@@ -5032,6 +5385,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0003-0996-8547",
                     },
                     {
                         "surname": "Kileng",
@@ -5043,6 +5397,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0009-0009-9098-9839",
                     },
                     {
                         "surname": "Kim",
@@ -5054,6 +5409,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0000-0002-7504-2809",
                     },
                     {
                         "surname": "Kim",
@@ -5065,6 +5421,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0000-0002-6434-7084",
                     },
                     {
                         "surname": "Kim",
@@ -5076,6 +5433,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Finland",
                             }
                         ],
+                        "orcid": "0000-0002-4816-283X",
                     },
                     {
                         "surname": "Kim",
@@ -5087,6 +5445,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0000-0003-1433-6018",
                     },
                     {
                         "surname": "Kim",
@@ -5098,6 +5457,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0009-0000-0438-5567",
                     },
                     {
                         "surname": "Kim",
@@ -5109,6 +5469,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0009-0006-7951-7118",
                     },
                     {
                         "surname": "Kim",
@@ -5120,6 +5481,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0001-9676-3309",
                     },
                     {
                         "surname": "Kim",
@@ -5131,6 +5493,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0000-0003-0078-8398",
                     },
                     {
                         "surname": "Kim",
@@ -5142,6 +5505,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-0906-062X",
                     },
                     {
                         "surname": "Kim",
@@ -5153,6 +5517,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0000-0002-2102-7398",
                     },
                     {
                         "surname": "Kim",
@@ -5164,6 +5529,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0000-0003-4558-7856",
                     },
                     {
                         "surname": "Kirsch",
@@ -5175,6 +5541,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0003-8978-9852",
                     },
                     {
                         "surname": "Kisel",
@@ -5186,16 +5553,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-4808-419X",
                     },
                     {
                         "surname": "Kiselev",
                         "given_names": "S.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-8354-7786",
                     },
                     {
                         "surname": "Kisiel",
@@ -5207,6 +5575,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0001-8322-9510",
                     },
                     {
                         "surname": "Kitowski",
@@ -5218,6 +5587,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0003-3902-8310",
                     },
                     {
                         "surname": "Klay",
@@ -5229,6 +5599,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-5592-0758",
                     },
                     {
                         "surname": "Klein",
@@ -5240,6 +5611,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-1301-1636",
                     },
                     {
                         "surname": "Klein",
@@ -5251,6 +5623,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0003-2841-6553",
                     },
                     {
                         "surname": "Klein-Bösing",
@@ -5262,6 +5635,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-7285-3411",
                     },
                     {
                         "surname": "Kleiner",
@@ -5273,6 +5647,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0003-0133-319X",
                     },
                     {
                         "surname": "Klemenz",
@@ -5284,6 +5659,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-4116-7002",
                     },
                     {
                         "surname": "Kluge",
@@ -5295,6 +5671,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-6497-3974",
                     },
                     {
                         "surname": "Knospe",
@@ -5306,6 +5683,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-2211-715X",
                     },
                     {
                         "surname": "Kobdaj",
@@ -5317,6 +5695,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Thailand",
                             }
                         ],
+                        "orcid": "0000-0001-7296-5248",
                     },
                     {
                         "surname": "Kollegger",
@@ -5334,30 +5713,30 @@ def enhanced_articles(parser, parsed_articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
-                                # "country": "CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0001-6203-9160",
                     },
                     {
                         "surname": "Kondratyeva",
                         "given_names": "N.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0009-0001-5996-0685",
                     },
                     {
                         "surname": "Kondratyuk",
                         "given_names": "E.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-9249-0435",
                     },
                     {
                         "surname": "Konig",
@@ -5369,6 +5748,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-8831-4009",
                     },
                     {
                         "surname": "Konigstorfer",
@@ -5380,6 +5760,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-4824-2458",
                     },
                     {
                         "surname": "Konopka",
@@ -5391,6 +5772,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0001-8738-7268",
                     },
                     {
                         "surname": "Kornakov",
@@ -5402,6 +5784,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0002-3652-6683",
                     },
                     {
                         "surname": "Koryciak",
@@ -5413,6 +5796,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0001-6810-6897",
                     },
                     {
                         "surname": "Kotliarov",
@@ -5424,6 +5808,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Czech Republic",
                             }
                         ],
+                        "orcid": "0000-0003-3576-4185",
                     },
                     {
                         "surname": "Kovalenko",
@@ -5435,16 +5820,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0009-0005-8435-0001",
                     },
                     {
                         "surname": "Kovalenko",
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0001-6012-6615",
                     },
                     {
                         "surname": "Kowalski",
@@ -5456,6 +5842,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0002-7568-7498",
                     },
                     {
                         "surname": "Králik",
@@ -5467,6 +5854,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Slovak Republic",
                             }
                         ],
+                        "orcid": "0000-0001-6441-9300",
                     },
                     {
                         "surname": "Kravčáková",
@@ -5478,6 +5866,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Slovak Republic",
                             }
                         ],
+                        "orcid": "0000-0002-1381-3436",
                     },
                     {
                         "surname": "Kreis",
@@ -5505,6 +5894,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Slovak Republic",
                             },
                         ],
+                        "orcid": "0000-0001-5091-4159",
                     },
                     {
                         "surname": "Krizek",
@@ -5516,6 +5906,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Czech Republic",
                             }
                         ],
+                        "orcid": "0000-0001-6593-4574",
                     },
                     {
                         "surname": "Krizkova Gajdosova",
@@ -5527,6 +5918,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Czech Republic",
                             }
                         ],
+                        "orcid": "0000-0002-5569-1254",
                     },
                     {
                         "surname": "Kroesen",
@@ -5538,6 +5930,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0001-6795-6109",
                     },
                     {
                         "surname": "Krüger",
@@ -5549,6 +5942,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0001-7174-6617",
                     },
                     {
                         "surname": "Krupova",
@@ -5560,16 +5954,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Czech Republic",
                             }
                         ],
+                        "orcid": "0000-0002-1706-4428",
                     },
                     {
                         "surname": "Kryshen",
                         "given_names": "E.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-2197-4109",
                     },
                     {
                         "surname": "Krzewicki",
@@ -5592,6 +5987,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-3567-5177",
                     },
                     {
                         "surname": "Kuhn",
@@ -5603,6 +5999,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-7998-5046",
                     },
                     {
                         "surname": "Kuijer",
@@ -5614,6 +6011,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Netherlands",
                             }
                         ],
+                        "orcid": "0000-0002-6987-2048",
                     },
                     {
                         "surname": "Kumaoka",
@@ -5647,6 +6045,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-2746-9840",
                     },
                     {
                         "surname": "Kumar",
@@ -5669,6 +6068,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0003-3150-2831",
                     },
                     {
                         "surname": "Kurashvili",
@@ -5680,26 +6080,27 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0002-0613-5278",
                     },
                     {
                         "surname": "Kurepin",
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0001-7672-2067",
                     },
                     {
                         "surname": "Kurepin",
                         "given_names": "A.B.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-1851-4136",
                     },
                     {
                         "surname": "Kushpil",
@@ -5711,6 +6112,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Czech Republic",
                             }
                         ],
+                        "orcid": "0000-0001-9289-2840",
                     },
                     {
                         "surname": "Kvapil",
@@ -5722,6 +6124,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United Kingdom",
                             }
                         ],
+                        "orcid": "0000-0002-0298-9073",
                     },
                     {
                         "surname": "Kweon",
@@ -5733,6 +6136,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0000-0002-8958-4190",
                     },
                     {
                         "surname": "Kwon",
@@ -5744,6 +6148,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0000-0002-6586-9300",
                     },
                     {
                         "surname": "Kwon",
@@ -5755,6 +6160,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0009-0001-4180-0413",
                     },
                     {
                         "surname": "La Pointe",
@@ -5766,6 +6172,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-5267-0140",
                     },
                     {
                         "surname": "La Rocca",
@@ -5777,6 +6184,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-7291-8166",
                     },
                     {
                         "surname": "Lai",
@@ -5810,6 +6218,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0009-0006-1840-462X",
                     },
                     {
                         "surname": "Langoy",
@@ -5821,6 +6230,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0000-0001-9471-1804",
                     },
                     {
                         "surname": "Larionov",
@@ -5832,6 +6242,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-5489-3751",
                     },
                     {
                         "surname": "Laudi",
@@ -5843,6 +6254,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0009-0006-8424-015X",
                     },
                     {
                         "surname": "Lautner",
@@ -5859,6 +6271,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             },
                         ],
+                        "orcid": "0000-0002-7017-4183",
                     },
                     {
                         "surname": "Lavicka",
@@ -5870,16 +6283,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Austria",
                             }
                         ],
+                        "orcid": "0000-0002-8384-0384",
                     },
                     {
                         "surname": "Lazareva",
                         "given_names": "T.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-8068-8786",
                     },
                     {
                         "surname": "Lea",
@@ -5896,6 +6310,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             },
                         ],
+                        "orcid": "0000-0001-5955-0769",
                     },
                     {
                         "surname": "Lehrbach",
@@ -5907,6 +6322,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0001-3545-3275",
                     },
                     {
                         "surname": "Lemmon",
@@ -5918,6 +6334,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United Kingdom",
                             }
                         ],
+                        "orcid": "0000-0002-1259-979X",
                     },
                     {
                         "surname": "León Monzón",
@@ -5929,6 +6346,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Mexico",
                             }
                         ],
+                        "orcid": "0000-0002-7919-2150",
                     },
                     {
                         "surname": "Lesch",
@@ -5940,6 +6358,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-7480-7558",
                     },
                     {
                         "surname": "Lesser",
@@ -5951,6 +6370,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0001-8367-8703",
                     },
                     {
                         "surname": "Lettrich",
@@ -5973,6 +6393,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Hungary",
                             }
                         ],
+                        "orcid": "0009-0006-9345-9620",
                     },
                     {
                         "surname": "Li",
@@ -6006,6 +6427,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0000-0002-0425-9138",
                     },
                     {
                         "surname": "Lietava",
@@ -6017,6 +6439,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United Kingdom",
                             }
                         ],
+                        "orcid": "0000-0002-9188-9428",
                     },
                     {
                         "surname": "Lim",
@@ -6028,6 +6451,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0000-0002-1904-296X",
                     },
                     {
                         "surname": "Lim",
@@ -6039,6 +6463,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0000-0001-6335-7427",
                     },
                     {
                         "surname": "Lindenstruth",
@@ -6050,6 +6475,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0006-7301-988X",
                     },
                     {
                         "surname": "Lindner",
@@ -6072,6 +6498,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-0062-0536",
                     },
                     {
                         "surname": "Liu",
@@ -6083,6 +6510,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0001-6895-4829",
                     },
                     {
                         "surname": "Liu",
@@ -6094,6 +6522,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0009-0006-6383-6069",
                     },
                     {
                         "surname": "Liu",
@@ -6105,6 +6534,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United Kingdom",
                             }
                         ],
+                        "orcid": "0000-0002-8397-7620",
                     },
                     {
                         "surname": "Lofnes",
@@ -6116,14 +6546,14 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0000-0002-9063-1599",
                     },
                     {
                         "surname": "Loginov",
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
                     },
@@ -6137,6 +6567,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0001-8635-8465",
                     },
                     {
                         "surname": "Loncar",
@@ -6148,6 +6579,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Croatia",
                             }
                         ],
+                        "orcid": "0000-0001-6486-2230",
                     },
                     {
                         "surname": "Lopez",
@@ -6159,6 +6591,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-5648-4206",
                     },
                     {
                         "surname": "Lopez",
@@ -6170,6 +6603,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0001-8159-8603",
                     },
                     {
                         "surname": "López Torres",
@@ -6181,6 +6615,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Cuba",
                             }
                         ],
+                        "orcid": "0000-0002-2850-4222",
                     },
                     {
                         "surname": "Lu",
@@ -6197,6 +6632,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             },
                         ],
+                        "orcid": "0000-0002-7002-0061",
                     },
                     {
                         "surname": "Luhder",
@@ -6208,6 +6644,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0006-1802-5857",
                     },
                     {
                         "surname": "Lunardon",
@@ -6219,6 +6656,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-6027-0024",
                     },
                     {
                         "surname": "Luparello",
@@ -6230,6 +6668,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-9901-2014",
                     },
                     {
                         "surname": "Ma",
@@ -6241,14 +6680,14 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0002-0233-9900",
                     },
                     {
                         "surname": "Maevskaya",
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
                     },
@@ -6262,6 +6701,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0009-0002-2291-691X",
                     },
                     {
                         "surname": "Mahmoud",
@@ -6284,16 +6724,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-4831-2367",
                     },
                     {
                         "surname": "Malaev",
                         "given_names": "M.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0009-0001-9974-0169",
                     },
                     {
                         "surname": "Malik",
@@ -6305,6 +6746,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0001-5682-0903",
                     },
                     {
                         "surname": "Malik",
@@ -6327,26 +6769,27 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0003-0311-9552",
                     },
                     {
                         "surname": "Malinina",
                         "given_names": "L.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
-                                # "country": "CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0003-1723-4121",
                     },
                     {
                         "surname": "Mal'Kevich",
                         "given_names": "D.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-6683-7626",
                     },
                     {
                         "surname": "Mallick",
@@ -6358,6 +6801,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-4256-052X",
                     },
                     {
                         "surname": "Mallick",
@@ -6369,6 +6813,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0003-2706-1025",
                     },
                     {
                         "surname": "Mandaglio",
@@ -6385,16 +6830,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             },
                         ],
+                        "orcid": "0000-0003-4486-4807",
                     },
                     {
                         "surname": "Manko",
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-4772-3615",
                     },
                     {
                         "surname": "Manso",
@@ -6406,6 +6852,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0009-0008-5115-943X",
                     },
                     {
                         "surname": "Manzari",
@@ -6417,6 +6864,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-3102-1504",
                     },
                     {
                         "surname": "Mao",
@@ -6428,6 +6876,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0002-0786-8545",
                     },
                     {
                         "surname": "Margagliotti",
@@ -6439,6 +6888,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-1965-7953",
                     },
                     {
                         "surname": "Margotti",
@@ -6450,6 +6900,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-2146-0391",
                     },
                     {
                         "surname": "Marín",
@@ -6461,6 +6912,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-9069-0353",
                     },
                     {
                         "surname": "Markert",
@@ -6472,6 +6924,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0001-9675-4322",
                     },
                     {
                         "surname": "Marquard",
@@ -6505,6 +6958,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0003-0288-202X",
                     },
                     {
                         "surname": "Martinez",
@@ -6527,6 +6981,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Mexico",
                             }
                         ],
+                        "orcid": "0000-0002-8503-3009",
                     },
                     {
                         "surname": "Martínez García",
@@ -6538,6 +6993,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-8657-6742",
                     },
                     {
                         "surname": "Masciocchi",
@@ -6549,6 +7005,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-2064-6517",
                     },
                     {
                         "surname": "Masera",
@@ -6560,6 +7017,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-1880-5467",
                     },
                     {
                         "surname": "Masoni",
@@ -6571,6 +7029,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-2699-1522",
                     },
                     {
                         "surname": "Massacrier",
@@ -6582,6 +7041,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-5475-5092",
                     },
                     {
                         "surname": "Mastroserio",
@@ -6598,6 +7058,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             },
                         ],
+                        "orcid": "0000-0003-3711-8902",
                     },
                     {
                         "surname": "Mathis",
@@ -6609,6 +7070,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0001-7604-9116",
                     },
                     {
                         "surname": "Matonoha",
@@ -6620,6 +7082,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Sweden",
                             }
                         ],
+                        "orcid": "0000-0002-0015-9367",
                     },
                     {
                         "surname": "Matuoka",
@@ -6642,6 +7105,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0002-4524-563X",
                     },
                     {
                         "surname": "Mayer",
@@ -6653,6 +7117,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0003-2570-8278",
                     },
                     {
                         "surname": "Mazuecos",
@@ -6664,6 +7129,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0009-0009-7230-3792",
                     },
                     {
                         "surname": "Mazzaschi",
@@ -6675,6 +7141,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-2613-2901",
                     },
                     {
                         "surname": "Mazzilli",
@@ -6686,6 +7153,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-1415-4559",
                     },
                     {
                         "surname": "Mdhluli",
@@ -6697,6 +7165,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "South Africa",
                             }
                         ],
+                        "orcid": "0000-0002-9745-0504",
                     },
                     {
                         "surname": "Mechler",
@@ -6714,10 +7183,10 @@ def enhanced_articles(parser, parsed_articles):
                         "given_names": "Y.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-4165-505X",
                     },
                     {
                         "surname": "Menchaca-Rocha",
@@ -6729,6 +7198,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Mexico",
                             }
                         ],
+                        "orcid": "0000-0002-4856-8055",
                     },
                     {
                         "surname": "Meninno",
@@ -6745,6 +7215,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             },
                         ],
+                        "orcid": "0000-0003-4389-7711",
                     },
                     {
                         "surname": "Menon",
@@ -6756,6 +7227,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0009-0003-3911-1744",
                     },
                     {
                         "surname": "Meres",
@@ -6767,6 +7239,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Slovak Republic",
                             }
                         ],
+                        "orcid": "0009-0005-3106-8571",
                     },
                     {
                         "surname": "Mhlanga",
@@ -6805,6 +7278,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-1430-6655",
                     },
                     {
                         "surname": "Migliorin",
@@ -6827,20 +7301,20 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0004-2669-5696",
                     },
                     {
                         "surname": "Mikhaylov",
                         "given_names": "K.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
-                                # "country": "CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
                             },
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             },
                         ],
+                        "orcid": "0000-0002-6726-6407",
                     },
                     {
                         "surname": "Mishra",
@@ -6852,6 +7326,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Hungary",
                             }
                         ],
+                        "orcid": "0000-0002-3892-2719",
                     },
                     {
                         "surname": "Miśkowiec",
@@ -6863,6 +7338,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-8627-9721",
                     },
                     {
                         "surname": "Modak",
@@ -6874,6 +7350,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0003-3056-8353",
                     },
                     {
                         "surname": "Mohanty",
@@ -6885,6 +7362,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Netherlands",
                             }
                         ],
+                        "orcid": "0000-0002-7634-8949",
                     },
                     {
                         "surname": "Mohanty",
@@ -6907,6 +7385,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-4767-1464",
                     },
                     {
                         "surname": "Molander",
@@ -6918,6 +7397,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Finland",
                             }
                         ],
+                        "orcid": "0000-0003-2845-8702",
                     },
                     {
                         "surname": "Moravcova",
@@ -6929,6 +7409,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Denmark",
                             }
                         ],
+                        "orcid": "0000-0002-4512-1645",
                     },
                     {
                         "surname": "Mordasini",
@@ -6940,6 +7421,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-3265-9614",
                     },
                     {
                         "surname": "Moreira De Godoy",
@@ -6951,16 +7433,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-3941-7607",
                     },
                     {
                         "surname": "Morozov",
                         "given_names": "I.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0001-7286-4543",
                     },
                     {
                         "surname": "Morsch",
@@ -6972,6 +7455,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-3276-0464",
                     },
                     {
                         "surname": "Mrnjavac",
@@ -6983,6 +7467,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0003-1281-8291",
                     },
                     {
                         "surname": "Muccifora",
@@ -6994,6 +7479,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-5624-6486",
                     },
                     {
                         "surname": "Mudnic",
@@ -7016,6 +7502,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0003-2378-9553",
                     },
                     {
                         "surname": "Mulligan",
@@ -7027,6 +7514,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-6905-4352",
                     },
                     {
                         "surname": "Mulliri",
@@ -7049,6 +7537,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Brazil",
                             }
                         ],
+                        "orcid": "0000-0003-3695-3180",
                     },
                     {
                         "surname": "Munzer",
@@ -7060,6 +7549,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-8334-6933",
                     },
                     {
                         "surname": "Murakami",
@@ -7071,6 +7561,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Japan",
                             }
                         ],
+                        "orcid": "0000-0001-6548-6775",
                     },
                     {
                         "surname": "Murray",
@@ -7082,6 +7573,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "South Africa",
                             }
                         ],
+                        "orcid": "0000-0003-0548-588X",
                     },
                     {
                         "surname": "Musa",
@@ -7093,6 +7585,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0001-8814-2254",
                     },
                     {
                         "surname": "Musinsky",
@@ -7104,6 +7597,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Slovak Republic",
                             }
                         ],
+                        "orcid": "0000-0002-5729-4535",
                     },
                     {
                         "surname": "Myrcha",
@@ -7115,6 +7609,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0001-8506-2275",
                     },
                     {
                         "surname": "Naik",
@@ -7126,6 +7621,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "South Africa",
                             }
                         ],
+                        "orcid": "0000-0002-0172-6976",
                     },
                     {
                         "surname": "Nair",
@@ -7137,6 +7633,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0001-8326-9846",
                     },
                     {
                         "surname": "Nandi",
@@ -7148,6 +7645,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0009-0007-3988-5095",
                     },
                     {
                         "surname": "Nania",
@@ -7159,6 +7657,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-6039-190X",
                     },
                     {
                         "surname": "Nappi",
@@ -7170,6 +7669,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-2080-9010",
                     },
                     {
                         "surname": "Nassirpour",
@@ -7181,6 +7681,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Sweden",
                             }
                         ],
+                        "orcid": "0000-0001-8927-2798",
                     },
                     {
                         "surname": "Nath",
@@ -7192,6 +7693,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0005-1524-5654",
                     },
                     {
                         "surname": "Nattrass",
@@ -7203,6 +7705,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-8768-6468",
                     },
                     {
                         "surname": "Neagu",
@@ -7236,6 +7739,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Mexico",
                             }
                         ],
+                        "orcid": "0000-0003-1059-8731",
                     },
                     {
                         "surname": "Nesbo",
@@ -7258,16 +7762,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0001-8585-7991",
                     },
                     {
                         "surname": "Nesterov",
                         "given_names": "D.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0009-0008-6321-4889",
                     },
                     {
                         "surname": "Nielsen",
@@ -7279,6 +7784,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Denmark",
                             }
                         ],
+                        "orcid": "0000-0002-0091-1934",
                     },
                     {
                         "surname": "Nielsen",
@@ -7290,36 +7796,37 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Denmark",
                             }
                         ],
+                        "orcid": "0000-0002-9394-1066",
                     },
                     {
                         "surname": "Nikolaev",
                         "given_names": "S.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0003-1242-4866",
                     },
                     {
                         "surname": "Nikulin",
                         "given_names": "S.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0001-8573-0851",
                     },
                     {
                         "surname": "Nikulin",
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-4826-6516",
                     },
                     {
                         "surname": "Noferini",
@@ -7331,6 +7838,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-6704-0256",
                     },
                     {
                         "surname": "Noh",
@@ -7342,16 +7850,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0000-0001-6104-1752",
                     },
                     {
                         "surname": "Nomokonov",
                         "given_names": "P.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
-                                # "country": "CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0009-0002-1220-1443",
                     },
                     {
                         "surname": "Norman",
@@ -7363,6 +7872,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United Kingdom",
                             }
                         ],
+                        "orcid": "0000-0002-3783-5760",
                     },
                     {
                         "surname": "Novitzky",
@@ -7374,6 +7884,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Japan",
                             }
                         ],
+                        "orcid": "0000-0002-9609-566X",
                     },
                     {
                         "surname": "Nowakowski",
@@ -7385,16 +7896,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0001-8971-0874",
                     },
                     {
                         "surname": "Nyanin",
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-7877-2006",
                     },
                     {
                         "surname": "Nystrand",
@@ -7406,6 +7918,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0009-0005-4425-586X",
                     },
                     {
                         "surname": "Ogino",
@@ -7417,6 +7930,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Japan",
                             }
                         ],
+                        "orcid": "0000-0003-3390-2804",
                     },
                     {
                         "surname": "Ohlson",
@@ -7428,16 +7942,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Sweden",
                             }
                         ],
+                        "orcid": "0000-0002-4214-5844",
                     },
                     {
                         "surname": "Okorokov",
                         "given_names": "V.A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-7162-5345",
                     },
                     {
                         "surname": "Oleniacz",
@@ -7449,6 +7964,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0003-2966-4903",
                     },
                     {
                         "surname": "Oliveira Da Silva",
@@ -7460,6 +7976,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-9421-5568",
                     },
                     {
                         "surname": "Oliver",
@@ -7471,6 +7988,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0001-5241-6735",
                     },
                     {
                         "surname": "Onnerstad",
@@ -7482,6 +8000,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Finland",
                             }
                         ],
+                        "orcid": "0000-0002-8848-1800",
                     },
                     {
                         "surname": "Oppedisano",
@@ -7493,6 +8012,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-6194-4601",
                     },
                     {
                         "surname": "Ortiz Velasquez",
@@ -7504,6 +8024,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Mexico",
                             }
                         ],
+                        "orcid": "0000-0002-4788-7943",
                     },
                     {
                         "surname": "Oskarsson",
@@ -7526,6 +8047,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0002-5471-6595",
                     },
                     {
                         "surname": "Oya",
@@ -7548,6 +8070,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Japan",
                             }
                         ],
+                        "orcid": "0000-0002-8576-1268",
                     },
                     {
                         "surname": "Pachmayer",
@@ -7559,6 +8082,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0001-6142-1528",
                     },
                     {
                         "surname": "Padhan",
@@ -7570,6 +8094,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0009-0007-8144-2829",
                     },
                     {
                         "surname": "Pagano",
@@ -7586,6 +8111,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             },
                         ],
+                        "orcid": "0000-0003-0333-448X",
                     },
                     {
                         "surname": "Paić",
@@ -7597,6 +8123,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Mexico",
                             }
                         ],
+                        "orcid": "0000-0003-2513-2459",
                     },
                     {
                         "surname": "Palasciano",
@@ -7608,6 +8135,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-5686-6626",
                     },
                     {
                         "surname": "Panebianco",
@@ -7619,6 +8147,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-0343-2082",
                     },
                     {
                         "surname": "Park",
@@ -7630,6 +8159,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0000-0002-2540-2394",
                     },
                     {
                         "surname": "Parkkila",
@@ -7646,6 +8176,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Finland",
                             },
                         ],
+                        "orcid": "0000-0002-5166-5788",
                     },
                     {
                         "surname": "Pathak",
@@ -7679,6 +8210,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-1461-3743",
                     },
                     {
                         "surname": "Pei",
@@ -7690,6 +8222,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0002-5078-3336",
                     },
                     {
                         "surname": "Peitzmann",
@@ -7701,6 +8234,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Netherlands",
                             }
                         ],
+                        "orcid": "0000-0002-7116-899X",
                     },
                     {
                         "surname": "Peng",
@@ -7712,6 +8246,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0003-0759-2283",
                     },
                     {
                         "surname": "Pereira",
@@ -7723,6 +8258,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Brazil",
                             }
                         ],
+                        "orcid": "0000-0001-5496-580X",
                     },
                     {
                         "surname": "Pereira Da Costa",
@@ -7734,16 +8270,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-3863-352X",
                     },
                     {
                         "surname": "Peresunko",
                         "given_names": "D.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0003-3709-5130",
                     },
                     {
                         "surname": "Perez",
@@ -7755,6 +8292,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Cuba",
                             }
                         ],
+                        "orcid": "0000-0001-8817-5013",
                     },
                     {
                         "surname": "Perrin",
@@ -7766,14 +8304,14 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-1192-137X",
                     },
                     {
                         "surname": "Pestov",
                         "given_names": "Y.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
                     },
@@ -7787,16 +8325,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Czech Republic",
                             }
                         ],
+                        "orcid": "0000-0002-4057-3415",
                     },
                     {
                         "surname": "Petrov",
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0009-0001-4054-2336",
                     },
                     {
                         "surname": "Petrovici",
@@ -7808,6 +8347,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Romania",
                             }
                         ],
+                        "orcid": "0000-0002-2291-6955",
                     },
                     {
                         "surname": "Pezzi",
@@ -7824,6 +8364,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Brazil",
                             },
                         ],
+                        "orcid": "0000-0002-0452-3103",
                     },
                     {
                         "surname": "Piano",
@@ -7835,6 +8376,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-4903-9865",
                     },
                     {
                         "surname": "Pikna",
@@ -7846,6 +8388,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Slovak Republic",
                             }
                         ],
+                        "orcid": "0009-0004-8574-2392",
                     },
                     {
                         "surname": "Pillot",
@@ -7857,6 +8400,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-9067-0803",
                     },
                     {
                         "surname": "Pinazza",
@@ -7873,6 +8417,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             },
                         ],
+                        "orcid": "0000-0001-8923-4003",
                     },
                     {
                         "surname": "Pinsky",
@@ -7900,6 +8445,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             },
                         ],
+                        "orcid": "0000-0001-7454-4324",
                     },
                     {
                         "surname": "Pisano",
@@ -7911,6 +8457,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-4080-6562",
                     },
                     {
                         "surname": "Płoskoń",
@@ -7922,6 +8469,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0003-3161-9183",
                     },
                     {
                         "surname": "Planinic",
@@ -7955,6 +8503,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-1832-595X",
                     },
                     {
                         "surname": "Politano",
@@ -7966,6 +8515,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-0414-5525",
                     },
                     {
                         "surname": "Poljak",
@@ -7977,6 +8527,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Croatia",
                             }
                         ],
+                        "orcid": "0000-0002-4512-9620",
                     },
                     {
                         "surname": "Pop",
@@ -7988,6 +8539,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Romania",
                             }
                         ],
+                        "orcid": "0000-0003-0425-5724",
                     },
                     {
                         "surname": "Porteboeuf-Houssais",
@@ -7999,6 +8551,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-2646-6189",
                     },
                     {
                         "surname": "Porter",
@@ -8010,16 +8563,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-6265-8794",
                     },
                     {
                         "surname": "Pozdniakov",
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
-                                # "country": "CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-3362-7411",
                     },
                     {
                         "surname": "Prasad",
@@ -8031,6 +8585,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-7394-8834",
                     },
                     {
                         "surname": "Prasad",
@@ -8042,6 +8597,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0003-0607-2841",
                     },
                     {
                         "surname": "Preghenella",
@@ -8053,6 +8609,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-1539-9275",
                     },
                     {
                         "surname": "Prino",
@@ -8064,6 +8621,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-6179-150X",
                     },
                     {
                         "surname": "Pruneau",
@@ -8075,16 +8633,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-0458-538X",
                     },
                     {
                         "surname": "Pshenichnov",
                         "given_names": "I.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0003-1752-4524",
                     },
                     {
                         "surname": "Puccio",
@@ -8096,6 +8655,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-8118-9049",
                     },
                     {
                         "surname": "Qiu",
@@ -8107,6 +8667,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Netherlands",
                             }
                         ],
+                        "orcid": "0000-0003-1401-5900",
                     },
                     {
                         "surname": "Quaglia",
@@ -8118,6 +8679,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-0793-8275",
                     },
                     {
                         "surname": "Quishpe",
@@ -8140,6 +8702,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United Kingdom",
                             }
                         ],
+                        "orcid": "0000-0001-9765-5668",
                     },
                     {
                         "surname": "Rakotozafindrabe",
@@ -8151,6 +8714,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0003-4484-6430",
                     },
                     {
                         "surname": "Ramello",
@@ -8167,6 +8731,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             },
                         ],
+                        "orcid": "0000-0003-2325-8680",
                     },
                     {
                         "surname": "Rami",
@@ -8178,6 +8743,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-6101-5981",
                     },
                     {
                         "surname": "Ramirez",
@@ -8189,6 +8755,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Mexico",
                             }
                         ],
+                        "orcid": "0000-0003-2864-8565",
                     },
                     {
                         "surname": "Rancien",
@@ -8211,6 +8778,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-9172-5474",
                     },
                     {
                         "surname": "Raniwala",
@@ -8233,6 +8801,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Finland",
                             }
                         ],
+                        "orcid": "0000-0001-6792-7773",
                     },
                     {
                         "surname": "Rath",
@@ -8244,6 +8813,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-0118-3131",
                     },
                     {
                         "surname": "Ravasenga",
@@ -8255,6 +8825,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Netherlands",
                             }
                         ],
+                        "orcid": "0000-0001-6120-4726",
                     },
                     {
                         "surname": "Read",
@@ -8271,6 +8842,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             },
                         ],
+                        "orcid": "0000-0002-3358-7667",
                     },
                     {
                         "surname": "Redelbach",
@@ -8282,6 +8854,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-8102-9686",
                     },
                     {
                         "surname": "Redlich",
@@ -8293,6 +8866,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0002-2629-1710",
                     },
                     {
                         "surname": "Rehman",
@@ -8326,6 +8900,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-5263-3593",
                     },
                     {
                         "surname": "Reme-Ness",
@@ -8337,6 +8912,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0009-0006-8025-735X",
                     },
                     {
                         "surname": "Rescakova",
@@ -8359,26 +8935,27 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0001-9808-1811",
                     },
                     {
                         "surname": "Riabov",
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0009-0007-9874-9819",
                     },
                     {
                         "surname": "Riabov",
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-8142-6374",
                     },
                     {
                         "surname": "Ricci",
@@ -8390,6 +8967,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-5208-6657",
                     },
                     {
                         "surname": "Richert",
@@ -8412,6 +8990,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0009-0008-3492-3758",
                     },
                     {
                         "surname": "Riegler",
@@ -8423,6 +9002,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0009-0002-1824-0822",
                     },
                     {
                         "surname": "Riggi",
@@ -8434,6 +9014,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-0030-8377",
                     },
                     {
                         "surname": "Ristea",
@@ -8445,6 +9026,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Romania",
                             }
                         ],
+                        "orcid": "0000-0002-9760-645X",
                     },
                     {
                         "surname": "Rodríguez Cahuantzi",
@@ -8456,6 +9038,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Mexico",
                             }
                         ],
+                        "orcid": "0000-0002-9596-1060",
                     },
                     {
                         "surname": "Røed",
@@ -8467,26 +9050,27 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0000-0001-7803-9640",
                     },
                     {
                         "surname": "Rogalev",
                         "given_names": "R.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-4680-4413",
                     },
                     {
                         "surname": "Rogochaya",
                         "given_names": "E.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
-                                # "country": "CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-4278-5999",
                     },
                     {
                         "surname": "Rogoschinski",
@@ -8498,6 +9082,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-0649-2283",
                     },
                     {
                         "surname": "Rohr",
@@ -8509,6 +9094,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0003-4101-0160",
                     },
                     {
                         "surname": "Röhrich",
@@ -8520,6 +9106,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0000-0003-4966-9584",
                     },
                     {
                         "surname": "Rojas",
@@ -8542,6 +9129,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Czech Republic",
                             }
                         ],
+                        "orcid": "0000-0002-2361-2662",
                     },
                     {
                         "surname": "Rokita",
@@ -8553,6 +9141,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0002-4433-2133",
                     },
                     {
                         "surname": "Ronchetti",
@@ -8564,6 +9153,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-5245-8441",
                     },
                     {
                         "surname": "Rosano",
@@ -8580,6 +9170,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             },
                         ],
+                        "orcid": "0000-0002-6467-2418",
                     },
                     {
                         "surname": "Rosas",
@@ -8602,6 +9193,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-6067-6294",
                     },
                     {
                         "surname": "Roy",
@@ -8613,6 +9205,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-1142-3186",
                     },
                     {
                         "surname": "Roy",
@@ -8635,6 +9228,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0009-0002-1397-8334",
                     },
                     {
                         "surname": "Rubini",
@@ -8646,6 +9240,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-9874-7249",
                     },
                     {
                         "surname": "Rueda",
@@ -8657,6 +9252,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Sweden",
                             }
                         ],
+                        "orcid": "0000-0002-6365-3258",
                     },
                     {
                         "surname": "Ruggiano",
@@ -8668,6 +9264,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0001-7082-5890",
                     },
                     {
                         "surname": "Rui",
@@ -8679,14 +9276,14 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-6993-0332",
                     },
                     {
                         "surname": "Rumyantsev",
                         "given_names": "B.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
-                                # "country": "CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
                             }
                         ],
                     },
@@ -8700,6 +9297,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0003-3858-4278",
                     },
                     {
                         "surname": "Russo",
@@ -8711,6 +9309,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Netherlands",
                             }
                         ],
+                        "orcid": "0000-0002-7492-974X",
                     },
                     {
                         "surname": "Rustamov",
@@ -8722,26 +9321,27 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Azerbaijan",
                             }
                         ],
+                        "orcid": "0000-0001-8678-6400",
                     },
                     {
                         "surname": "Ryabinkin",
                         "given_names": "E.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0009-0006-8982-9510",
                     },
                     {
                         "surname": "Ryabov",
                         "given_names": "Y.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-3028-8776",
                     },
                     {
                         "surname": "Rybicki",
@@ -8753,6 +9353,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0003-3076-0505",
                     },
                     {
                         "surname": "Rytkonen",
@@ -8764,6 +9365,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Finland",
                             }
                         ],
+                        "orcid": "0000-0001-7493-5552",
                     },
                     {
                         "surname": "Rzesa",
@@ -8775,6 +9377,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0002-3274-9986",
                     },
                     {
                         "surname": "Saarimaki",
@@ -8786,6 +9389,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Finland",
                             }
                         ],
+                        "orcid": "0000-0003-3346-3645",
                     },
                     {
                         "surname": "Sadek",
@@ -8797,16 +9401,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0003-0438-8359",
                     },
                     {
                         "surname": "Sadovsky",
                         "given_names": "S.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-6781-416X",
                     },
                     {
                         "surname": "Saetre",
@@ -8818,6 +9423,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0000-0001-8769-0865",
                     },
                     {
                         "surname": "Šafařík",
@@ -8829,6 +9435,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Czech Republic",
                             }
                         ],
+                        "orcid": "0000-0003-2512-5451",
                     },
                     {
                         "surname": "Saha",
@@ -8840,6 +9447,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0009-0005-0580-829X",
                     },
                     {
                         "surname": "Saha",
@@ -8851,6 +9459,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-4159-3549",
                     },
                     {
                         "surname": "Sahoo",
@@ -8862,6 +9471,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0001-7383-4418",
                     },
                     {
                         "surname": "Sahoo",
@@ -8884,6 +9494,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0003-3334-0661",
                     },
                     {
                         "surname": "Sahoo",
@@ -8906,6 +9517,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0001-8980-1362",
                     },
                     {
                         "surname": "Sahu",
@@ -8917,6 +9529,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0003-3546-3390",
                     },
                     {
                         "surname": "Saini",
@@ -8928,6 +9541,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0003-3266-9959",
                     },
                     {
                         "surname": "Sajdakova",
@@ -8950,6 +9564,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Japan",
                             }
                         ],
+                        "orcid": "0000-0003-1380-0392",
                     },
                     {
                         "surname": "Salvan",
@@ -8961,6 +9576,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-8111-5576",
                     },
                     {
                         "surname": "Sambyal",
@@ -8972,6 +9588,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-5018-6902",
                     },
                     {
                         "surname": "Saramela",
@@ -8994,6 +9611,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-2393-0804",
                     },
                     {
                         "surname": "Sarkar",
@@ -9016,6 +9634,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-3191-4513",
                     },
                     {
                         "surname": "Sarritzu",
@@ -9027,6 +9646,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-9879-1119",
                     },
                     {
                         "surname": "Sarti",
@@ -9038,6 +9658,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0001-8438-3966",
                     },
                     {
                         "surname": "Sas",
@@ -9049,6 +9670,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0003-1419-2085",
                     },
                     {
                         "surname": "Schambach",
@@ -9060,6 +9682,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0003-3266-1332",
                     },
                     {
                         "surname": "Scheid",
@@ -9071,6 +9694,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-1184-9627",
                     },
                     {
                         "surname": "Schiaua",
@@ -9082,6 +9706,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Romania",
                             }
                         ],
+                        "orcid": "0009-0009-3728-8849",
                     },
                     {
                         "surname": "Schicker",
@@ -9093,6 +9718,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-1230-4274",
                     },
                     {
                         "surname": "Schmah",
@@ -9115,6 +9741,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-2295-6199",
                     },
                     {
                         "surname": "Schmidt",
@@ -9137,6 +9764,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0001-5335-1515",
                     },
                     {
                         "surname": "Schmidt",
@@ -9164,6 +9792,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             },
                         ],
+                        "orcid": "0000-0002-5795-4871",
                     },
                     {
                         "surname": "Schmier",
@@ -9175,6 +9804,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0001-9093-4461",
                     },
                     {
                         "surname": "Schotter",
@@ -9186,6 +9816,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-4791-5481",
                     },
                     {
                         "surname": "Schukraft",
@@ -9197,6 +9828,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-6638-2932",
                     },
                     {
                         "surname": "Schwarz",
@@ -9219,6 +9851,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0001-9935-6995",
                     },
                     {
                         "surname": "Scioli",
@@ -9230,6 +9863,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-0144-0713",
                     },
                     {
                         "surname": "Scomparin",
@@ -9241,6 +9875,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0001-9015-9610",
                     },
                     {
                         "surname": "Seger",
@@ -9252,6 +9887,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0003-1423-6973",
                     },
                     {
                         "surname": "Sekiguchi",
@@ -9274,6 +9910,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Japan",
                             }
                         ],
+                        "orcid": "0009-0000-9692-8812",
                     },
                     {
                         "surname": "Selyuzhenkov",
@@ -9285,10 +9922,10 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             },
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             },
                         ],
+                        "orcid": "0000-0002-8042-4924",
                     },
                     {
                         "surname": "Senyukov",
@@ -9300,6 +9937,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0003-1907-9786",
                     },
                     {
                         "surname": "Seo",
@@ -9311,16 +9949,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0000-0002-6368-3350",
                     },
                     {
                         "surname": "Serebryakov",
                         "given_names": "D.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-5546-6524",
                     },
                     {
                         "surname": "Šerkšnytė",
@@ -9332,6 +9971,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-5657-5351",
                     },
                     {
                         "surname": "Sevcenco",
@@ -9343,6 +9983,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Romania",
                             }
                         ],
+                        "orcid": "0000-0002-4151-1056",
                     },
                     {
                         "surname": "Shaba",
@@ -9354,14 +9995,14 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "South Africa",
                             }
                         ],
+                        "orcid": "0000-0003-2290-9031",
                     },
                     {
                         "surname": "Shabanov",
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
                     },
@@ -9375,6 +10016,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0003-3069-726X",
                     },
                     {
                         "surname": "Shahoyan",
@@ -9403,10 +10045,10 @@ def enhanced_articles(parser, parsed_articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-5053-7506",
                     },
                     {
                         "surname": "Sharma",
@@ -9429,6 +10071,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0009-0001-9105-0729",
                     },
                     {
                         "surname": "Sharma",
@@ -9440,6 +10083,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0003-2753-4283",
                     },
                     {
                         "surname": "Sharma",
@@ -9451,6 +10095,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-8256-8200",
                     },
                     {
                         "surname": "Sharma",
@@ -9462,6 +10107,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0001-8046-1752",
                     },
                     {
                         "surname": "Sharma",
@@ -9473,6 +10119,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-7159-6839",
                     },
                     {
                         "surname": "Sharma",
@@ -9484,6 +10131,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0001-7686-070X",
                     },
                     {
                         "surname": "Shatat",
@@ -9495,6 +10143,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0001-7432-6669",
                     },
                     {
                         "surname": "Sheibani",
@@ -9517,6 +10166,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Japan",
                             }
                         ],
+                        "orcid": "0000-0001-8416-8617",
                     },
                     {
                         "surname": "Shimomura",
@@ -9534,10 +10184,10 @@ def enhanced_articles(parser, parsed_articles):
                         "given_names": "S.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0009-0006-0106-6054",
                     },
                     {
                         "surname": "Shou",
@@ -9549,16 +10199,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0001-5128-6238",
                     },
                     {
                         "surname": "Sibiriak",
                         "given_names": "Y.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-3348-1221",
                     },
                     {
                         "surname": "Siddhanta",
@@ -9570,6 +10221,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-0543-9245",
                     },
                     {
                         "surname": "Siemiarczuk",
@@ -9581,6 +10233,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0002-2014-5229",
                     },
                     {
                         "surname": "Silva",
@@ -9592,6 +10245,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Brazil",
                             }
                         ],
+                        "orcid": "0000-0002-7643-2198",
                     },
                     {
                         "surname": "Silvermyr",
@@ -9603,6 +10257,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Sweden",
                             }
                         ],
+                        "orcid": "0000-0002-0526-5791",
                     },
                     {
                         "surname": "Simantathammakul",
@@ -9625,6 +10280,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Bulgaria",
                             }
                         ],
+                        "orcid": "0000-0001-7729-5503",
                     },
                     {
                         "surname": "Simonetti",
@@ -9658,6 +10314,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0001-8997-0019",
                     },
                     {
                         "surname": "Singh",
@@ -9669,6 +10326,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0009-0007-7617-1577",
                     },
                     {
                         "surname": "Singh",
@@ -9680,6 +10338,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-6904-9879",
                     },
                     {
                         "surname": "Singh",
@@ -9691,6 +10350,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-6746-6847",
                     },
                     {
                         "surname": "Singh",
@@ -9702,6 +10362,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-5783-3551",
                     },
                     {
                         "surname": "Singhal",
@@ -9713,6 +10374,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-6315-9671",
                     },
                     {
                         "surname": "Sinha",
@@ -9724,6 +10386,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-1290-8388",
                     },
                     {
                         "surname": "Sitar",
@@ -9735,6 +10398,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Slovak Republic",
                             }
                         ],
+                        "orcid": "0009-0002-7519-0796",
                     },
                     {
                         "surname": "Sitta",
@@ -9751,6 +10415,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             },
                         ],
+                        "orcid": "0000-0002-4175-148X",
                     },
                     {
                         "surname": "Skaali",
@@ -9773,6 +10438,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0001-5747-4096",
                     },
                     {
                         "surname": "Slupecki",
@@ -9784,6 +10450,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Finland",
                             }
                         ],
+                        "orcid": "0000-0003-2966-8445",
                     },
                     {
                         "surname": "Smirnov",
@@ -9795,6 +10462,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-1361-0305",
                     },
                     {
                         "surname": "Snellings",
@@ -9806,6 +10474,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Netherlands",
                             }
                         ],
+                        "orcid": "0000-0001-9720-0604",
                     },
                     {
                         "surname": "Solheim",
@@ -9817,6 +10486,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0000-0001-6002-8732",
                     },
                     {
                         "surname": "Soncco",
@@ -9839,6 +10509,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-2847-2291",
                     },
                     {
                         "surname": "Songmoolnak",
@@ -9861,6 +10532,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-1018-0987",
                     },
                     {
                         "surname": "Sorensen",
@@ -9872,6 +10544,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-5595-5643",
                     },
                     {
                         "surname": "Spijkers",
@@ -9883,6 +10556,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Netherlands",
                             }
                         ],
+                        "orcid": "0000-0001-8625-763X",
                     },
                     {
                         "surname": "Sputowska",
@@ -9894,6 +10568,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0002-7590-7171",
                     },
                     {
                         "surname": "Staa",
@@ -9905,6 +10580,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Sweden",
                             }
                         ],
+                        "orcid": "0000-0001-8476-3547",
                     },
                     {
                         "surname": "Stachel",
@@ -9916,6 +10592,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-0750-6664",
                     },
                     {
                         "surname": "Stan",
@@ -9927,6 +10604,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Romania",
                             }
                         ],
+                        "orcid": "0000-0003-1336-4092",
                     },
                     {
                         "surname": "Steffanic",
@@ -9938,6 +10616,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-6814-1040",
                     },
                     {
                         "surname": "Stiefelmaier",
@@ -9949,6 +10628,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-2269-1490",
                     },
                     {
                         "surname": "Stocco",
@@ -9960,6 +10640,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-5377-5163",
                     },
                     {
                         "surname": "Storehaug",
@@ -9971,6 +10652,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0000-0002-3254-7305",
                     },
                     {
                         "surname": "Storetvedt",
@@ -9982,6 +10664,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0009-0006-4489-2858",
                     },
                     {
                         "surname": "Stratmann",
@@ -9993,6 +10676,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0002-1978-3351",
                     },
                     {
                         "surname": "Strazzi",
@@ -10004,6 +10688,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-2329-0330",
                     },
                     {
                         "surname": "Stylianidis",
@@ -10026,6 +10711,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Brazil",
                             }
                         ],
+                        "orcid": "0000-0003-2847-6556",
                     },
                     {
                         "surname": "Suire",
@@ -10037,16 +10723,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0003-1675-503X",
                     },
                     {
                         "surname": "Sukhanov",
                         "given_names": "M.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-4506-8071",
                     },
                     {
                         "surname": "Suljic",
@@ -10058,6 +10745,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-4490-1930",
                     },
                     {
                         "surname": "Sumberia",
@@ -10069,6 +10757,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0001-6779-208X",
                     },
                     {
                         "surname": "Sumowidagdo",
@@ -10080,6 +10769,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Indonesia",
                             }
                         ],
+                        "orcid": "0000-0003-4252-8877",
                     },
                     {
                         "surname": "Swain",
@@ -10113,6 +10803,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Slovak Republic",
                             }
                         ],
+                        "orcid": "0009-0006-4361-0257",
                     },
                     {
                         "surname": "Tabassam",
@@ -10135,6 +10826,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-2642-5720",
                     },
                     {
                         "surname": "Taillepied",
@@ -10151,6 +10843,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             },
                         ],
+                        "orcid": "0000-0003-3470-2230",
                     },
                     {
                         "surname": "Takahashi",
@@ -10162,6 +10855,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Brazil",
                             }
                         ],
+                        "orcid": "0000-0002-4091-1779",
                     },
                     {
                         "surname": "Tambave",
@@ -10173,6 +10867,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0000-0001-7174-3379",
                     },
                     {
                         "surname": "Tang",
@@ -10189,6 +10884,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             },
                         ],
+                        "orcid": "0000-0002-9413-9534",
                     },
                     {
                         "surname": "Tang",
@@ -10200,6 +10896,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0002-4247-0081",
                     },
                     {
                         "surname": "Tapia Takaki",
@@ -10211,6 +10908,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-0098-4279",
                     },
                     {
                         "surname": "Tapus",
@@ -10233,6 +10931,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0001-5086-8658",
                     },
                     {
                         "surname": "Tarzila",
@@ -10244,6 +10943,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Romania",
                             }
                         ],
+                        "orcid": "0000-0002-8865-9613",
                     },
                     {
                         "surname": "Tauro",
@@ -10255,6 +10955,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0009-0000-3124-9093",
                     },
                     {
                         "surname": "Telesca",
@@ -10266,6 +10967,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-6783-7230",
                     },
                     {
                         "surname": "Terlizzi",
@@ -10277,6 +10979,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-4119-7228",
                     },
                     {
                         "surname": "Terrevoli",
@@ -10288,6 +10991,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-1318-684X",
                     },
                     {
                         "surname": "Tersimonov",
@@ -10310,6 +11014,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0009-0008-2329-5039",
                     },
                     {
                         "surname": "Thomas",
@@ -10321,6 +11026,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0003-3408-3097",
                     },
                     {
                         "surname": "Tieulent",
@@ -10332,16 +11038,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-2106-5415",
                     },
                     {
                         "surname": "Tikhonov",
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0001-7799-8858",
                     },
                     {
                         "surname": "Timmins",
@@ -10353,6 +11060,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0003-1305-8757",
                     },
                     {
                         "surname": "Tkacik",
@@ -10375,6 +11083,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Slovak Republic",
                             }
                         ],
+                        "orcid": "0000-0001-8308-7882",
                     },
                     {
                         "surname": "Toia",
@@ -10386,16 +11095,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0001-9567-3360",
                     },
                     {
                         "surname": "Topilskaya",
                         "given_names": "N.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-5137-3582",
                     },
                     {
                         "surname": "Toppi",
@@ -10407,6 +11117,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-0392-0895",
                     },
                     {
                         "surname": "Torales-Acosta",
@@ -10429,6 +11140,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0001-9753-329X",
                     },
                     {
                         "surname": "Torres Ramos",
@@ -10440,6 +11152,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-3997-0883",
                     },
                     {
                         "surname": "Trifiró",
@@ -10456,6 +11169,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             },
                         ],
+                        "orcid": "0000-0003-1078-1157",
                     },
                     {
                         "surname": "Triolo",
@@ -10472,6 +11186,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             },
                         ],
+                        "orcid": "0009-0002-7570-5972",
                     },
                     {
                         "surname": "Tripathy",
@@ -10483,6 +11198,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-0061-5107",
                     },
                     {
                         "surname": "Tripathy",
@@ -10494,6 +11210,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0000-0002-6719-7130",
                     },
                     {
                         "surname": "Trogolo",
@@ -10505,6 +11222,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0001-7474-5361",
                     },
                     {
                         "surname": "Trubnikov",
@@ -10516,6 +11234,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Ukraine",
                             }
                         ],
+                        "orcid": "0009-0008-8143-0956",
                     },
                     {
                         "surname": "Trzaska",
@@ -10527,6 +11246,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Finland",
                             }
                         ],
+                        "orcid": "0000-0003-0672-9137",
                     },
                     {
                         "surname": "Trzcinski",
@@ -10538,6 +11258,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0002-1486-8906",
                     },
                     {
                         "surname": "Turrisi",
@@ -10549,6 +11270,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-5272-337X",
                     },
                     {
                         "surname": "Tveter",
@@ -10560,6 +11282,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0009-0003-7140-8644",
                     },
                     {
                         "surname": "Ullaland",
@@ -10571,6 +11294,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0000-0002-0002-8834",
                     },
                     {
                         "surname": "Ulukutlu",
@@ -10582,6 +11306,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0001-9554-2256",
                     },
                     {
                         "surname": "Uras",
@@ -10593,6 +11318,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0001-7552-0228",
                     },
                     {
                         "surname": "Urioni",
@@ -10609,6 +11335,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             },
                         ],
+                        "orcid": "0000-0002-4455-7383",
                     },
                     {
                         "surname": "Usai",
@@ -10620,6 +11347,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-8659-8378",
                     },
                     {
                         "surname": "Vala",
@@ -10642,6 +11370,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-4041-4788",
                     },
                     {
                         "surname": "Vallero",
@@ -10653,6 +11382,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-1264-9651",
                     },
                     {
                         "surname": "van Doremalen",
@@ -10675,6 +11405,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Netherlands",
                             }
                         ],
+                        "orcid": "0000-0002-5222-4888",
                     },
                     {
                         "surname": "van Veen",
@@ -10686,6 +11417,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-1199-4445",
                     },
                     {
                         "surname": "van Weelden",
@@ -10697,6 +11429,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Netherlands",
                             }
                         ],
+                        "orcid": "0000-0003-4389-203X",
                     },
                     {
                         "surname": "Vande Vyvre",
@@ -10708,6 +11441,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0001-7277-7706",
                     },
                     {
                         "surname": "Varga",
@@ -10719,6 +11453,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Hungary",
                             }
                         ],
+                        "orcid": "0000-0002-2450-1331",
                     },
                     {
                         "surname": "Varga",
@@ -10730,6 +11465,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Hungary",
                             }
                         ],
+                        "orcid": "0000-0002-1501-5569",
                     },
                     {
                         "surname": "Varga-Kofarago",
@@ -10741,6 +11477,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Hungary",
                             }
                         ],
+                        "orcid": "0000-0002-5638-4440",
                     },
                     {
                         "surname": "Vasileiou",
@@ -10752,16 +11489,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Greece",
                             }
                         ],
+                        "orcid": "0000-0002-3160-8524",
                     },
                     {
                         "surname": "Vasiliev",
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0009-0000-1676-234X",
                     },
                     {
                         "surname": "Vázquez Doce",
@@ -10773,16 +11511,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0001-6459-8134",
                     },
                     {
                         "surname": "Vechernin",
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0003-1458-8055",
                     },
                     {
                         "surname": "Vercellin",
@@ -10794,6 +11533,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-9030-5347",
                     },
                     {
                         "surname": "Vergara Limón",
@@ -10816,6 +11556,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Netherlands",
                             }
                         ],
+                        "orcid": "0000-0002-2640-1342",
                     },
                     {
                         "surname": "Vértesi",
@@ -10827,6 +11568,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Hungary",
                             }
                         ],
+                        "orcid": "0000-0003-3706-5265",
                     },
                     {
                         "surname": "Verweij",
@@ -10838,6 +11580,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Netherlands",
                             }
                         ],
+                        "orcid": "0000-0002-1504-3420",
                     },
                     {
                         "surname": "Vickovic",
@@ -10871,6 +11614,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United Kingdom",
                             }
                         ],
+                        "orcid": "0000-0002-0983-6504",
                     },
                     {
                         "surname": "Vino",
@@ -10882,16 +11626,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-8470-3648",
                     },
                     {
                         "surname": "Vinogradov",
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-8850-8540",
                     },
                     {
                         "surname": "Virgili",
@@ -10903,6 +11648,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-0471-7052",
                     },
                     {
                         "surname": "Vislavicius",
@@ -10920,10 +11666,10 @@ def enhanced_articles(parser, parsed_articles):
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN",
-                                # "country": "CERN"
+                                "value": "Affiliated with an international laboratory covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0009-0003-4952-2563",
                     },
                     {
                         "surname": "Volkel",
@@ -10935,6 +11681,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-8982-5548",
                     },
                     {
                         "surname": "Völkl",
@@ -10946,14 +11693,14 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-3478-4259",
                     },
                     {
                         "surname": "Voloshin",
                         "given_names": "K.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
                     },
@@ -10967,6 +11714,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0002-1330-9096",
                     },
                     {
                         "surname": "Volpe",
@@ -10978,6 +11726,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0002-2921-2475",
                     },
                     {
                         "surname": "von Haller",
@@ -10989,6 +11738,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-3422-4585",
                     },
                     {
                         "surname": "Vorobyev",
@@ -11000,16 +11750,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0002-2218-6905",
                     },
                     {
                         "surname": "Vozniuk",
                         "given_names": "N.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-2784-4516",
                     },
                     {
                         "surname": "Vrláková",
@@ -11021,6 +11772,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Slovak Republic",
                             }
                         ],
+                        "orcid": "0000-0002-5846-8496",
                     },
                     {
                         "surname": "Wagner",
@@ -11043,6 +11795,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0001-5383-0970",
                     },
                     {
                         "surname": "Wang",
@@ -11065,6 +11818,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Austria",
                             }
                         ],
+                        "orcid": "0000-0001-5742-294X",
                     },
                     {
                         "surname": "Wegrzynek",
@@ -11076,6 +11830,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-3155-0887",
                     },
                     {
                         "surname": "Weiglhofer",
@@ -11098,6 +11853,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-3495-4131",
                     },
                     {
                         "surname": "Wessels",
@@ -11109,6 +11865,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-1339-286X",
                     },
                     {
                         "surname": "Weyhmiller",
@@ -11120,6 +11877,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0000-0001-5405-3480",
                     },
                     {
                         "surname": "Wiechula",
@@ -11131,6 +11889,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0001-9201-8114",
                     },
                     {
                         "surname": "Wikne",
@@ -11142,6 +11901,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Norway",
                             }
                         ],
+                        "orcid": "0009-0005-9617-3102",
                     },
                     {
                         "surname": "Wilk",
@@ -11153,6 +11913,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Poland",
                             }
                         ],
+                        "orcid": "0000-0001-5584-2860",
                     },
                     {
                         "surname": "Wilkinson",
@@ -11164,6 +11925,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0003-0689-2858",
                     },
                     {
                         "surname": "Willems",
@@ -11175,6 +11937,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0000-9939-3892",
                     },
                     {
                         "surname": "Windelband",
@@ -11186,6 +11949,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0007-2759-5453",
                     },
                     {
                         "surname": "Winn",
@@ -11197,6 +11961,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "France",
                             }
                         ],
+                        "orcid": "0000-0002-2207-0101",
                     },
                     {
                         "surname": "Wright",
@@ -11208,6 +11973,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United States",
                             }
                         ],
+                        "orcid": "0009-0006-9351-6517",
                     },
                     {
                         "surname": "Wu",
@@ -11230,6 +11996,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0003-2991-9849",
                     },
                     {
                         "surname": "Xu",
@@ -11241,6 +12008,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0003-4674-9482",
                     },
                     {
                         "surname": "Yadav",
@@ -11252,6 +12020,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "India",
                             }
                         ],
+                        "orcid": "0009-0003-9300-0439",
                     },
                     {
                         "surname": "Yalcin",
@@ -11263,6 +12032,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Turkey",
                             }
                         ],
+                        "orcid": "0000-0001-8905-8089",
                     },
                     {
                         "surname": "Yamaguchi",
@@ -11274,6 +12044,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Japan",
                             }
                         ],
+                        "orcid": "0009-0009-3842-7345",
                     },
                     {
                         "surname": "Yamakawa",
@@ -11307,6 +12078,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Japan",
                             }
                         ],
+                        "orcid": "0000-0002-5563-1884",
                     },
                     {
                         "surname": "Yin",
@@ -11318,6 +12090,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0003-4532-7544",
                     },
                     {
                         "surname": "Yoo",
@@ -11329,6 +12102,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0000-0002-2835-5941",
                     },
                     {
                         "surname": "Yoon",
@@ -11340,6 +12114,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Republic of Korea",
                             }
                         ],
+                        "orcid": "0000-0001-7676-0821",
                     },
                     {
                         "surname": "Yuan",
@@ -11362,6 +12137,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0000-0001-9696-9331",
                     },
                     {
                         "surname": "Zaccolo",
@@ -11373,6 +12149,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             }
                         ],
+                        "orcid": "0000-0003-3128-3157",
                     },
                     {
                         "surname": "Zampolli",
@@ -11384,6 +12161,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Switzerland",
                             }
                         ],
+                        "orcid": "0000-0002-2608-4834",
                     },
                     {
                         "surname": "Zanoli",
@@ -11406,6 +12184,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Germany",
                             }
                         ],
+                        "orcid": "0009-0005-9061-1060",
                     },
                     {
                         "surname": "Zardoshti",
@@ -11422,16 +12201,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "United Kingdom",
                             },
                         ],
+                        "orcid": "0009-0006-3929-209X",
                     },
                     {
                         "surname": "Zarochentsev",
                         "given_names": "A.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-3502-8084",
                     },
                     {
                         "surname": "Závada",
@@ -11443,14 +12223,14 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Czech Republic",
                             }
                         ],
+                        "orcid": "0000-0002-8296-2128",
                     },
                     {
                         "surname": "Zaviyalov",
                         "given_names": "N.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
                     },
@@ -11459,10 +12239,10 @@ def enhanced_articles(parser, parsed_articles):
                         "given_names": "M.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0003-0419-321X",
                     },
                     {
                         "surname": "Zhang",
@@ -11474,6 +12254,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0001-6097-1878",
                     },
                     {
                         "surname": "Zhang",
@@ -11485,6 +12266,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0003-2782-7801",
                     },
                     {
                         "surname": "Zhang",
@@ -11496,6 +12278,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0002-1881-8711",
                     },
                     {
                         "surname": "Zhang",
@@ -11518,16 +12301,17 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0000-0002-2858-2167",
                     },
                     {
                         "surname": "Zherebchevskii",
                         "given_names": "V.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
+                        "orcid": "0000-0002-6021-5113",
                     },
                     {
                         "surname": "Zhi",
@@ -11545,8 +12329,7 @@ def enhanced_articles(parser, parsed_articles):
                         "given_names": "N.",
                         "affiliations": [
                             {
-                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN",
-                                # "country": "CERN",
+                                "value": "Affiliated with an institute covered by a cooperation agreement with CERN"
                             }
                         ],
                     },
@@ -11560,6 +12343,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             }
                         ],
+                        "orcid": "0009-0009-2528-906X",
                     },
                     {
                         "surname": "Zhou",
@@ -11571,6 +12355,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Denmark",
                             }
                         ],
+                        "orcid": "0000-0002-7868-6706",
                     },
                     {
                         "surname": "Zhu",
@@ -11587,6 +12372,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "China",
                             },
                         ],
+                        "orcid": "0000-0001-9358-5762",
                     },
                     {
                         "surname": "Zhu",
@@ -11625,6 +12411,7 @@ def enhanced_articles(parser, parsed_articles):
                                 "country": "Italy",
                             },
                         ],
+                        "orcid": "0000-0002-7478-2493",
                     },
                 ],
                 [
@@ -11639,6 +12426,7 @@ def enhanced_articles(parser, parsed_articles):
                             }
                         ],
                         "email": "ioannis.gialamas@kbfi.ee",
+                        "orcid": "0000-0002-2957-5276",
                     },
                     {
                         "surname": "Veermäe",
@@ -11707,16 +12495,16 @@ def test_elsevier_parsing(parsed_articles, expected, key):
         ]
 
         if key not in SKIP_ENHANCE_FOR:
-            if key is "authors":
+            if key == "authors":
                 for author in expected_value:
                     for aff in author.get("affiliations", []):
-                        if aff.get("country") is "Republic of Korea":
+                        if aff.get("country") == "Republic of Korea":
                             aff["country"] = "South Korea"
-                        if aff.get("country") is "Slovak Republic":
+                        if aff.get("country") == "Slovak Republic":
                             aff["country"] = "Slovakia"
-                        if aff.get("country") is "United States":
+                        if aff.get("country") == "United States":
                             aff["country"] = "USA"
-                        if aff.get("country") is "United Kingdom":
+                        if aff.get("country") == "United Kingdom":
                             aff["country"] = "UK"
 
             assert Enhancer()("Elsevier", article)[key] == expected_value

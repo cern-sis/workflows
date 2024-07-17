@@ -132,7 +132,7 @@ def test_authors(parsed_articles):
 
         for author in authors:
             for aff in author.get("affiliations", []):
-                if aff.get("country") is "Korea":
+                if aff.get("country") == "Korea":
                     aff["country"] = "South Korea"
 
         assert Enhancer()("Springer", parsed_article)["authors"] == authors
@@ -328,3 +328,95 @@ def test_abstract(parsed_articles):
     for abstract, article in zip(abstracts, parsed_articles):
         assert "abstract" in article
         assert article["abstract"] == abstract
+
+
+@fixture
+def article_with_orcid(parser, datadir):
+    with open(datadir / "s10052-024-12692-y.xml") as file:
+        yield parser._generic_parsing(parser._publisher_specific_parsing(ET.fromstring(file.read())))
+
+
+def test_article_with_cleaned_orcid(article_with_orcid):
+    expected_output = [{
+        "surname": "Hong",
+        "given_names": "T.",
+        "email": "tthong@agu.edu.vn",
+        "affiliations": [
+            {
+                "value": "An Giang University, Long Xuyen, 880000, Vietnam",
+                "organization": "An Giang University",
+                "country": "Vietnam"
+            },
+            {
+                "value": "Vietnam National University, Ho Chi Minh City, 700000, Vietnam",
+                "organization": "Vietnam National University",
+                "country": "Vietnam"
+            }
+        ],
+        "full_name": "Hong, T."
+    },
+        {
+        "surname": "Tran",
+        "given_names": "Q.",
+        "email": "tqduyet@agu.edu.vn",
+        "affiliations": [
+            {
+                "value": "An Giang University, Long Xuyen, 880000, Vietnam",
+                "organization": "An Giang University",
+                "country": "Vietnam"
+            },
+            {
+                "value": "Vietnam National University, Ho Chi Minh City, 700000, Vietnam",
+                "organization": "Vietnam National University",
+                "country": "Vietnam"
+            }
+        ],
+        "full_name": "Tran, Q."
+    },
+        {
+        "surname": "Nguyen",
+        "given_names": "T.",
+        "email": "thanhphong@ctu.edu.vn",
+        "affiliations": [
+            {
+                "value": "Department of Physics, Can Tho University, 3/2 Street, Can Tho, Vietnam",
+                "organization": "Can Tho University",
+                "country": "Vietnam"
+            }
+        ],
+        "full_name": "Nguyen, T."
+    },
+        {
+        "surname": "Hue",
+        "given_names": "L.",
+        "email": "lethohue@vlu.edu.vn",
+        "affiliations": [
+            {
+                "value": "Subatomic Physics Research Group, Science and Technology Advanced Institute, Van Lang University, Ho Chi Minh City, Vietnam",
+                "organization": "Van Lang University",
+                "country": "Vietnam"
+            }
+        ],
+        "full_name": "Hue, L."
+    },
+        {
+        "orcid": "0009-0005-5993-6895",
+        "surname": "Nha",
+        "given_names": "N.",
+        "email": "nguyenhuathanhnha@vlu.edu.vn",
+        "affiliations": [
+            {
+                "value": "Subatomic Physics Research Group, Science and Technology Advanced Institute, Van Lang University, Ho Chi Minh City, Vietnam",
+                "organization": "Van Lang University",
+                "country": "Vietnam"
+            },
+            {
+                "value": "Faculty of Applied Technology, School of Technology, Van Lang University, Ho Chi Minh City, Vietnam",
+                "organization": "Van Lang University",
+                "country": "Vietnam"
+            }
+        ],
+        "full_name": "Nha, N."
+    }]
+
+    assert expected_output == article_with_orcid["authors"]

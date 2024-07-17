@@ -163,6 +163,7 @@ class OUPParser(IParser):
         )
         authors = []
         for contribution in contributions:
+            orcid = get_text_value(contribution.find("contrib-id"))
             surname = get_text_value(contribution.find("name/surname"))
             given_names = get_text_value(contribution.find("name/given-names"))
             email = get_text_value(contribution.find("email"))
@@ -183,20 +184,20 @@ class OUPParser(IParser):
                 if country:
                     country = country.capitalize()
                     _aff["country"] = country
-                
                 full_affiliation.append(_aff)
 
             if not all([surname, given_names, email]) and not full_affiliation:
                 pass
             else:
-                authors.append(
-                    {
-                        "surname": surname,
-                        "given_names": given_names,
-                        "email": email,
-                        "affiliations": full_affiliation,
-                    }
-                )
+                author = {
+                    "surname": surname,
+                    "given_names": given_names,
+                    "email": email,
+                    "affiliations": full_affiliation,
+                }
+                if orcid:
+                    author.update({"orcid": orcid})
+                authors.append(author)
         return authors
 
     def _get_date(self, article):

@@ -619,3 +619,98 @@ def test_collections(parsed_articles):
         article["collections"][0] for article in parsed_articles
     ]
     assert set(collections) == set(collections_parsed_article)
+
+
+@fixture
+def article_with_orcid(parser, shared_datadir):
+    with open(os.path.join(shared_datadir, "oup_orcid.xml")) as file:
+        content = parse_without_names_spaces(file.read())
+        article = parser._publisher_specific_parsing(content)
+        yield parser._generic_parsing(article)
+
+
+def test_authors_parsing_with_orcid(article_with_orcid):
+    expected_output = [
+        {
+            "surname": "Hong",
+            "given_names": "T T",
+            "affiliations": [
+                {
+                    "institution": "An Giang University",
+                    "country": "Vietnam"
+                },
+                {
+                    "institution": "Vietnam National University",
+                    "country": "Vietnam"
+                }
+            ],
+            "orcid": "0000-0002-7719-4160",
+            "full_name": "Hong, T T"
+        },
+        {
+            "surname": "Le",
+            "given_names": "V K",
+            "affiliations": [
+                {
+                    "institution": "An Giang University",
+                    "country": "Vietnam"
+                },
+                {
+                    "institution": "Binh Thuy Junior High School",
+                    "country": "Vietnam"
+                }
+            ],
+            "full_name": "Le, V K"
+        },
+        {
+            "surname": "Phuong",
+            "given_names": "L T T",
+            "affiliations": [
+                {
+                    "institution": "An Giang University",
+                    "country": "Vietnam"
+                }
+            ],
+            "full_name": "Phuong, L T T"
+        },
+        {
+            "surname": "Hoi",
+            "given_names": "N C",
+            "affiliations": [
+                {
+                    "institution": "An Giang University",
+                    "country": "Vietnam"
+                }
+            ],
+            "full_name": "Hoi, N C"
+        },
+        {
+            "surname": "Ngan",
+            "given_names": "N T K",
+            "affiliations": [
+                {
+                    "institution": "Department of Physics, Can Tho University",
+                    "country": "Vietnam"
+                }
+            ],
+            "full_name": "Ngan, N T K"
+        },
+        {
+            "surname": "Nha",
+            "given_names": "N H T",
+            "email": "nguyenhuathanhnha@vlu.edu.vn",
+            "affiliations": [
+                {
+                    "institution": "Subatomic Physics Research Group, Science and Technology Advanced Institute, Van Lang University",
+                    "country": "Vietnam"
+                },
+                {
+                    "institution": "Faculty of Applied Technology, School of Engineering and Technology, Van Lang University",
+                    "country": "Vietnam"
+                }
+            ],
+            "orcid": "0009-0005-5993-6895",
+            "full_name": "Nha, N H T"
+        }
+    ]
+    assert article_with_orcid["authors"] == expected_output
