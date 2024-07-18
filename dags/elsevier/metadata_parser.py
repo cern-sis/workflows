@@ -31,7 +31,6 @@ class ElsevierMetadataParser(IParser):
             CustomExtractor(
                 destination="date_published",
                 extraction_function=self._get_published_date,
-                required=True,
             ),
             CustomExtractor(
                 destination="journal_year",
@@ -88,14 +87,11 @@ class ElsevierMetadataParser(IParser):
             field_name="published_date",
             dois=self.dois,
         )
-        if not date:
-            self.published_date = datetime.now().strftime("%Y-%m-%d")
-            self.year = datetime.now().strftime("%Y")
+        if date:
+            date = datetime.fromisoformat(date[:-1])
+            self.published_date = date.strftime("%Y-%m-%d")
+            self.year = date.strftime("%Y")
             return self.published_date
-        date = datetime.fromisoformat(date[:-1])
-        self.published_date = date.strftime("%Y-%m-%d")
-        self.year = date.strftime("%Y")
-        return self.published_date
 
     def _get_journal_year(self, article):
         return self.year
