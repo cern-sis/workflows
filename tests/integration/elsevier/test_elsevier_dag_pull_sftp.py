@@ -77,7 +77,7 @@ def test_dag_migrate_from_FTP_specific_folder(elsevier_empty_repo):
         )
         assert elsevier_empty_repo.get_all_raw_filenames() == ["CERNQ000000010669A.tar"]
 
-        reprocess_files(
+        files = reprocess_files(
             elsevier_empty_repo,
             get_logger().bind(class_name="test_logger"),
             **{
@@ -92,5 +92,11 @@ def test_dag_migrate_from_FTP_specific_folder(elsevier_empty_repo):
                 }
             },
         )
+        assert files == ['extracted/CERNQ000000010669A/CERNQ000000010669/dataset.xml',
+                         'extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323005105/main.xml',
+                         'extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323005075/main.xml',
+                         'extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323005099/main.xml',]
         assert elsevier_empty_repo.get_all_raw_filenames() == ["CERNQ000000010669A.tar"]
-        assert elsevier_empty_repo.find_all() == [{'pdf': 'extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323005105/main.pdf', 'xml': 'extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323005105/main.xml'}, {'xml': 'extracted/CERNQ000000010669A/CERNQ000000010669/dataset.xml'}]
+        assert elsevier_empty_repo.find_all() == [{'pdf': 'extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323005105/main.pdf',
+                                                   'xml': 'extracted/CERNQ000000010669A/CERNQ000000010669/S0370269323005105/main.xml'},
+                                                  {'xml': 'extracted/CERNQ000000010669A/CERNQ000000010669/dataset.xml'}]
