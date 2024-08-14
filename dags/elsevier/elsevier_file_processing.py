@@ -11,6 +11,7 @@ from common.utils import (
 )
 from elsevier.parser import ElsevierParser
 from elsevier.repository import ElsevierRepository
+from executor_config import kubernetes_executor_config
 from inspire_utils.record import get_value
 from structlog import get_logger
 
@@ -43,20 +44,20 @@ def elsevier_process_file():
 
     s3_client = ElsevierRepository()
 
-    @task()
+    @task(executor_config=kubernetes_executor_config)
     def parse(**kwargs):
         xml_path = kwargs["params"]["file_name"]
         xml_content_bytes = s3_client.get_by_id(xml_path)
         kwargs["params"]["file_content"] = xml_content_bytes
         return parse_elsevier(**kwargs)
 
-    @task()
+    @task(executor_config=kubernetes_executor_config)
     def enhance(parsed_file):
         if parsed_file:
             return parsed_file and enhance_elsevier(parsed_file)
         raise EmptyOutputFromPreviousTask("parse_metadata")
 
-    @task()
+    @task(executor_config=kubernetes_executor_config)
     def populate_files(parsed_file):
         if "files" not in parsed_file:
             logger.info("No files to populate")
@@ -74,17 +75,17 @@ def elsevier_process_file():
         logger.info("Files populated", files=parsed_file["files"])
         return parsed_file
 
-    @task()
+    @task(executor_config=kubernetes_executor_config)
     def enrich(enhanced_file):
         if enhanced_file:
             return enrich_elsevier(enhanced_file)
         raise EmptyOutputFromPreviousTask("enhanced_file_with_metadata")
 
-    @task()
+    @task(executor_config=kubernetes_executor_config)
     def save_to_s3(enriched_file):
         upload_json_to_s3(json_record=enriched_file, repo=s3_client)
 
-    @task()
+    @task(executor_config=kubernetes_executor_config)
     def create_or_update(enriched_file):
         create_or_update_article(enriched_file)
 

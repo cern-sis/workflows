@@ -20,7 +20,7 @@ sleep:
 	sleep 5
 
 buckets:
-	docker-compose up -d create_buckets
+	docker compose up -d create_buckets
 
 airflow:
 	airflow db init
@@ -32,7 +32,7 @@ airflow:
 	echo -e "\033[0;32m Airflow Started. \033[0m"
 
 compose:
-	docker-compose up -d redis postgres sftp ftp s3 create_buckets
+	docker compose up -d redis postgres sftp ftp s3 create_buckets
 
 create_user:
 	airflow users create \
@@ -44,7 +44,7 @@ create_user:
 		--email admin@worfklows.cern
 
 stop:
-	-docker-compose down
+	-docker compose down
 	-cat $(WEBSERVER_PID) | xargs kill  -9
 	-cat $(TRIGGERER_PID) | xargs kill -9
 	-cat $(SCHEDULER_PID) | xargs kill -9

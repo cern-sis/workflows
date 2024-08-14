@@ -5,6 +5,7 @@ from common.pull_ftp import reprocess_files
 from elsevier.repository import ElsevierRepository
 from elsevier.sftp_service import ElsevierSFTPService
 from elsevier.trigger_file_processing import trigger_file_processing_elsevier
+from executor_config import kubernetes_executor_config
 from structlog import get_logger
 
 
@@ -20,7 +21,7 @@ from structlog import get_logger
 def elsevier_pull_sftp():
     logger = get_logger().bind(class_name="elsevier_pull_sftp")
 
-    @task()
+    @task(executor_config=kubernetes_executor_config)
     def migrate_from_ftp(
         sftp = ElsevierSFTPService(),
         repo = ElsevierRepository(),
@@ -41,7 +42,7 @@ def elsevier_pull_sftp():
                 sftp, repo, logger, publisher="elsevier", **kwargs
             )
 
-    @task()
+    @task(executor_config=kubernetes_executor_config)
     def trigger_file_processing(
         repo = ElsevierRepository(),
         filenames=None,

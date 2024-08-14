@@ -4,6 +4,7 @@ from elsevier.repository import ElsevierRepository
 from elsevier.sftp_service import ElsevierSFTPService
 from pytest import fixture
 from structlog import get_logger
+import time
 
 DAG_NAME = "elsevier_pull_sftp"
 
