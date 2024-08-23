@@ -12,7 +12,7 @@ from stat import S_ISDIR, S_ISREG
 from inspire_utils.record import get_value
 
 import backoff
-import pycountry
+import country_converter as coco
 import requests
 from airflow.models.dagrun import DagRun
 from airflow.utils.state import DagRunState
@@ -33,7 +33,7 @@ from common.exceptions import (
 from structlog import get_logger
 
 logger = get_logger()
-
+cc = coco.CountryConverter()
 
 def set_harvesting_interval(repo, **kwargs):
     if (
@@ -308,7 +308,14 @@ def parse_country_from_value(affiliation_value):
             return val
 
     try:
-        mapped_countries = pycountry.countries.search_fuzzy(country)
+        country_code = cc.convert(country, to="iso2")
+        mapped_countries = []
+        if country_code != "not found":
+            mapped_countries = [{
+                "code": country_code,
+                "name": cc.convert(country, to="name_short"),
+            }]
+
         if len(mapped_countries) > 1 or len(mapped_countries) == 0:
             raise FoundMoreThanOneMatchOrNone(affiliation_value)
         return mapped_countries[0].name
