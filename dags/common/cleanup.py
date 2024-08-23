@@ -9,7 +9,7 @@ def clean_whitespace_characters(input):
     return " ".join(input.split())
 
 
-def convert_html_subsripts_to_latex(input):
+def convert_html_subscripts_to_latex(input):
     input = re.sub("<sub>(.*?)</sub>", r"$_{\1}$", input)
     input = re.sub("<inf>(.*?)</inf>", r"$_{\1}$", input)
     input = re.sub("<sup>(.*?)</sup>", r"$^{\1}$", input)

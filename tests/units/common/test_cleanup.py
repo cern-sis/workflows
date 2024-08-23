@@ -4,7 +4,7 @@ from common.cleanup import (
     clean_all_affiliations_for_author,
     clean_collaboration,
     clean_whitespace_characters,
-    convert_html_subsripts_to_latex,
+    convert_html_subscripts_to_latex,
     remove_orcid_prefix,
     remove_specific_tags,
     remove_unnecessary_fields,
@@ -64,36 +64,36 @@ no_tags = '<p content-type="scoap3">Article funded by SCOAP</p>'
     "test_input, expected",
     [
         pytest.param(
-            sup, expected_string_sup, id="test_convert_html_subsripts_to_latex_sup"
+            sup, expected_string_sup, id="test_convert_html_subscripts_to_latex_sup"
         ),
         pytest.param(
-            sub, expected_string_sub, id="test_convert_html_subsripts_to_latex_sub"
+            sub, expected_string_sub, id="test_convert_html_subscripts_to_latex_sub"
         ),
         pytest.param(
-            inf, expected_string_inf, id="test_convert_html_subsripts_to_latex_inf"
+            inf, expected_string_inf, id="test_convert_html_subscripts_to_latex_inf"
         ),
         pytest.param(
             sup_extended,
             expected_string_sup_extended,
-            id="test_convert_html_subsripts_to_latex_sup_extended",
+            id="test_convert_html_subscripts_to_latex_sup_extended",
         ),
         pytest.param(
             sub_extended,
             expected_string_sub_extended,
-            id="test_convert_html_subsripts_to_latex_sub_extended",
+            id="test_convert_html_subscripts_to_latex_sub_extended",
         ),
         pytest.param(
             inf_extended,
             expected_string_inf_extended,
-            id="test_convert_html_subsripts_to_latex_inf_extended",
+            id="test_convert_html_subscripts_to_latex_inf_extended",
         ),
         pytest.param(
-            no_tags, no_tags, id="test_convert_html_subsripts_to_latex_no_tags"
+            no_tags, no_tags, id="test_convert_html_subscripts_to_latex_no_tags"
         ),
     ],
 )
-def test_convert_html_subsripts_to_latex(test_input, expected):
-    assert convert_html_subsripts_to_latex(test_input) == expected
+def test_convert_html_subscripts_to_latex(test_input, expected):
+    assert convert_html_subscripts_to_latex(test_input) == expected
 
 
 xml = "<div><p>example<h1> h1 example</h1></p></div>"
