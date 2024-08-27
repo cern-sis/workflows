@@ -138,6 +138,7 @@ class Scoap3Repository(IRepository):
                 Metadata={
                     "source_url": url,
                 },
+                ACL="public-read",
             )
             return f"{self.bucket}/{destination_key}"
         except Exception as e:
