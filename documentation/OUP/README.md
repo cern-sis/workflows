@@ -1,4 +1,4 @@
-![oup_dags_process](./oup_diagram.png)
+![oup_dags_process](./oup_doc_diagram.png)
 
 # Final fields
 

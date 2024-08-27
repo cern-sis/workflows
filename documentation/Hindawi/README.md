@@ -1,3 +1,5 @@
+![hindawi_doc_diagram](./hindawi_doc_diagram.png)
+
 # [Final fields](#final_fields)
 
 | Field                | Processed                                                                                                                          | Subfield       | Subsubfield |
