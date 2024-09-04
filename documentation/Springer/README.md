@@ -1,4 +1,4 @@
-![springer_dags_process](./springer_diagram.png)
+![springer_dags_process](./springer_doc_diagram.png)
 
 # Final fields
 

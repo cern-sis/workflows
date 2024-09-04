@@ -1,4 +1,4 @@
-![iop_dags_process](./iop_diagram.png)
+![iop_dags_process](./iop_doc_diagram.png)
 
 # [Final fields](#final_fields)
 

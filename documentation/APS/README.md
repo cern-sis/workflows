@@ -1,6 +1,6 @@
 # APS data processing flow
 
-![aps_dags_process](./aps_diagram.png)
+![aps_dags_process](./aps_doc_diagram.png)
 
 # Final fields
 
