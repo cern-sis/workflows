@@ -46,6 +46,7 @@ class APSApiClient:
         )
         response_content = request.get_response_bytes()
         return response_content
+    
 
     def __repr__(self):
         return f"<APSApiClient base_url={self.base_url}, \
