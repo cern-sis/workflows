@@ -3,10 +3,10 @@ import xml.etree.ElementTree as ET
 import pytest
 from common.parsing.xml_extractors import RequiredFieldNotFoundExtractionError
 from hindawi.hindawi_file_processing import (
-    enhance_hindawi,
+    enhance_hindawi, hindawi_file_processing
 )
 from hindawi.parser import HindawiParser
-
+from unittest.mock import patch
 
 @pytest.fixture(scope="module")
 def hindawi_parser():
@@ -146,3 +146,36 @@ def test_hindawi_parsing(parsed_articles, expected, key):
         article,
     ) in zip(expected, parsed_articles):
         assert enhance_hindawi(article).get(key) == expected_value
+
+
+@pytest.fixture
+def parsed_file_fixture():
+    return {
+        "dois": {
+            "value": ["10.1155/2022/2755821"]
+        }
+    }
+
+
+def test_populate_files_naming(parsed_file_fixture):
+    s3_mock = patch("hindawi.hindawi_file_processing.Scoap3Repository").start()
+
+    # Mock the download_files method to return a test dictionary for downloaded files
+    s3_mock.return_value.download_files.return_value = {
+        "pdf": "https://s3.amazonaws.com/downloads.hindawi.com/journals/ahep/2755821.pdf",
+        "pdfa": "https://s3.amazonaws.com/downloads.hindawi.com/journals/ahep/2755821_a.pdf",
+        "xml": "https://s3.amazonaws.com/downloads.hindawi.com/journals/ahep/2755821.xml",
+    }
+
+    # Instantiate the workflow function
+    workflow = hindawi_file_processing()
+
+    # Run the populate_files task
+    result = workflow.populate_files(parsed_file_fixture)
+
+    # Check if the PDF/A file is correctly named
+    assert result["files"]["pdfa"] == "https://s3.amazonaws.com/downloads.hindawi.com/journals/ahep/2755821_a.pdf"
+    
+    # Stop the patching of Scoap3Repository
+    patch.stopall()
+

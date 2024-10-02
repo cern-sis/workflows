@@ -62,7 +62,7 @@ def hindawi_file_processing():
         doi_part = doi.split("10.1155/")[1]
         files = {
             "pdf": f"https://s3.amazonaws.com/downloads.hindawi.com/journals/ahep/{doi_part}.pdf",
-            "pdfa": f"https://s3.amazonaws.com/downloads.hindawi.com/journals/ahep/{doi_part}.a.pdf",
+            "pdfa": f"https://s3.amazonaws.com/downloads.hindawi.com/journals/ahep/{doi_part}_a.pdf",
             "xml": f"https://s3.amazonaws.com/downloads.hindawi.com/journals/ahep/{doi_part}.xml",
         }
         s3_scoap3_client = Scoap3Repository()
