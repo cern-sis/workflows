@@ -97,11 +97,27 @@ class APSParser(IParser):
             if author["type"] == "Person"
         ]
 
+
+    def extract_organization_and_ror(self, text):
+        pattern = r'<a href="([^"]+)">(.*?)</a>'
+        
+        ror_url = None
+        
+        def replace_and_capture(match):
+            nonlocal ror_url
+            ror_url = match.group(1)
+            return match.group(2)
+        
+        modified_text = re.sub(pattern, replace_and_capture, text)
+        
+        return modified_text, ror_url
+
     def _get_affiliations(self, article, affiliationIds):
         parsed_affiliations = [
             {
                 "value": affiliation["name"],
-                "organization": (",").join(affiliation["name"].split(",")[:-1]),
+                "organization": self.extract_organization_and_ror(affiliation["name"])[0],
+                "ror": self.extract_organization_and_ror(affiliation["name"])[1],
             }
             for affiliation in article["affiliations"]
             if affiliation["id"] in affiliationIds
