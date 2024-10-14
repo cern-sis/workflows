@@ -133,8 +133,11 @@ def _differential_pull(
     logger.msg("Pulling missing files only.")
     excluded_directories = kwargs["params"]["excluded_directories"]
     sftp_files = s_ftp.list_files(excluded_directories=excluded_directories)
+    logger.msg(sftp_files)
     s3_files = repo.get_all_raw_filenames()
+    logger.msg(s3_files)
     diff_files = list(filter(lambda x: x not in s3_files, sftp_files))
+    logger.msg(diff_files)
     return migrate_files(diff_files, s_ftp, repo, logger)
 
 
