@@ -71,6 +71,7 @@ jobs:
           tests
           --cov=./
           --cov-report=xml
+          -s
 
       - name: Copy test coverage file to host machine
         run: docker cp workflows:/opt/airflow/coverage.xml .
