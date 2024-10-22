@@ -1,6 +1,6 @@
-import re
+# import re
 
-from gitlint.rules import CommitRule, RuleViolation
+# from gitlint.rules import CommitRule, RuleViolation
 
 # EXAMPLE GITLINT CONFIGURATION
 

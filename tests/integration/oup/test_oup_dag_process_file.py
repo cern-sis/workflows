@@ -79,6 +79,7 @@ def test_affiliation_countries_in_enriched(parser, articles):
             for aff in author.get("affiliations"):
                 assert aff.get("country") is not None
 
+
 def test_dag_loaded(dag):
     assert dag
     assert len(dag.tasks) == 6

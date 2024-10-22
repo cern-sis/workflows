@@ -9,7 +9,7 @@ kubernetes_executor_config = {
                     resources=k8s.V1ResourceRequirements(
                         requests={"memory": "1500Mi"},
                         limits={"memory": "2Gi"},
-                    )
+                    ),
                 )
             ],
         )

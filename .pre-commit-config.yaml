@@ -31,4 +31,3 @@ repos:
         entry: gitlint
         stages: [commit-msg]
         args: [--msg-filename]
-
