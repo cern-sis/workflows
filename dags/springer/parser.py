@@ -9,7 +9,7 @@ from common.parsing.xml_extractors import (
     CustomExtractor,
     TextExtractor,
 )
-from common.utils import construct_license, clean_text
+from common.utils import clean_text, construct_license
 from structlog import get_logger
 
 
@@ -211,7 +211,11 @@ class SpringerParser(IParser):
                 affiliations.append(cleaned_aff)
 
         mapped_affiliations = [
-            {"value": clean_text(aff), "organization": clean_text(org), **({"country": country} if country else {})}
+            {
+                "value": clean_text(aff),
+                "organization": clean_text(org),
+                **({"country": country} if country else {}),
+            }
             for aff, org, country, in affiliations
         ]
 

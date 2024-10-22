@@ -1,13 +1,13 @@
 import xml.etree.ElementTree as ET
 
+from common.cleanup import replace_cdata_format
 from common.constants import ARXIV_EXTRACTION_PATTERN
 from common.enhancer import Enhancer
 from common.exceptions import UnknownLicense
 from common.parsing.xml_extractors import RequiredFieldNotFoundExtractionError
 from common.utils import parse_element_text, parse_to_ET_element
-from common.cleanup import replace_cdata_format
-from iop.parser import IOPParser
 from iop.iop_process_file import process_xml
+from iop.parser import IOPParser
 from pytest import fixture, mark, param, raises
 
 
@@ -541,7 +541,6 @@ def test_no_authors(shared_datadir, parser):
         parser._publisher_specific_parsing(article)
 
 
-
 def test_title(shared_datadir, parser):
     content = (shared_datadir / "title_and_abstract_with_cdata.xml").read_text()
     content = replace_cdata_format(content)
@@ -805,7 +804,7 @@ def test_no_collaborations_value(shared_datadir, parser):
     assert "collaborations" not in parsed_article
 
 
-def test_title(shared_datadir, parser):
+def test_title_required(shared_datadir, parser):
     content = (shared_datadir / "just_required_fields.xml").read_text()
     article = ET.fromstring(content)
     parsed_article = parser._publisher_specific_parsing(article)
@@ -894,10 +893,10 @@ def test_cdata_abstract_title(shared_datadir):
     content = replace_cdata_format(content)
     ET_article = parse_to_ET_element(content)
 
-
     abstract_element = ET_article.find("front/article-meta/abstract/p")
     abstract_text = parse_element_text(abstract_element)
-    assert (abstract_text
+    assert (
+        abstract_text
         == "Recently, the experimental measurements of the branching ratios and different"
         " polarization asymmetries for processes occurring through flavor-changing-charged"
         " current $ (b\\rightarrow c\\tau\\overline{\\nu}_{\\tau}) $ transitions by BABAR,"
@@ -931,11 +930,13 @@ def test_cdata_abstract_title(shared_datadir):
     )
     title_element = ET_article.find("front/article-meta/title-group/article-title")
     title_text = parse_element_text(title_element)
-    assert (title_text
-            == "Analysis of ${{\\boldsymbol b}{\\bf\\rightarrow} {\\boldsymbol c}{\\boldsymbol\\tau}\\bar"
-            "{\\boldsymbol\\nu}_{\\boldsymbol\\tau}}$ anomalies using weak effective Hamiltonian with "
-            "complex couplings and their impact on various physical observables"
+    assert (
+        title_text
+        == "Analysis of ${{\\boldsymbol b}{\\bf\\rightarrow} {\\boldsymbol c}{\\boldsymbol\\tau}\\bar"
+        "{\\boldsymbol\\nu}_{\\boldsymbol\\tau}}$ anomalies using weak effective Hamiltonian with "
+        "complex couplings and their impact on various physical observables"
     )
+
 
 def test_cdata_without_regex():
     paseudo_aricle = """

@@ -61,9 +61,9 @@ def parsed_articles(parser, articles):
                         "surname": "Wu",
                         "affiliations": [
                             {
-                                "value": "Department of Physics and Astronomy, <a href=\"https://ror.org/02vm5rt34\">Vanderbilt University</a>, Nashville, Tennessee 37240, USA",
+                                "value": 'Department of Physics and Astronomy, <a href="https://ror.org/02vm5rt34">Vanderbilt University</a>, Nashville, Tennessee 37240, USA',
                                 "organization": "Department of Physics and Astronomy, Vanderbilt University, Nashville, Tennessee 37240, USA",
-                                "ror": "https://ror.org/02vm5rt34"
+                                "ror": "https://ror.org/02vm5rt34",
                             }
                         ],
                     },
@@ -73,9 +73,9 @@ def parsed_articles(parser, articles):
                         "surname": "Turner",
                         "affiliations": [
                             {
-                                "value": "Department of Physics and Astronomy, <a href=\"https://ror.org/02vm5rt34\">Vanderbilt University</a>, Nashville, Tennessee 37240, USA",
+                                "value": 'Department of Physics and Astronomy, <a href="https://ror.org/02vm5rt34">Vanderbilt University</a>, Nashville, Tennessee 37240, USA',
                                 "organization": "Department of Physics and Astronomy, Vanderbilt University, Nashville, Tennessee 37240, USA",
-                                "ror": "https://ror.org/02vm5rt34"
+                                "ror": "https://ror.org/02vm5rt34",
                             }
                         ],
                     },
@@ -85,9 +85,9 @@ def parsed_articles(parser, articles):
                         "surname": "Wang",
                         "affiliations": [
                             {
-                                "value": "Department of Physics and Astronomy, <a href=\"https://ror.org/02vm5rt34\">Vanderbilt University</a>, Nashville, Tennessee 37240, USA",
+                                "value": 'Department of Physics and Astronomy, <a href="https://ror.org/02vm5rt34">Vanderbilt University</a>, Nashville, Tennessee 37240, USA',
                                 "organization": "Department of Physics and Astronomy, Vanderbilt University, Nashville, Tennessee 37240, USA",
-                                "ror": "https://ror.org/02vm5rt34"
+                                "ror": "https://ror.org/02vm5rt34",
                             }
                         ],
                     },
@@ -97,9 +97,9 @@ def parsed_articles(parser, articles):
                         "surname": "Borel",
                         "affiliations": [
                             {
-                                "value": "Department of Physics and Astronomy, <a href=\"https://ror.org/02vm5rt34\">Vanderbilt University</a>, Nashville, Tennessee 37240, USA",
+                                "value": 'Department of Physics and Astronomy, <a href="https://ror.org/02vm5rt34">Vanderbilt University</a>, Nashville, Tennessee 37240, USA',
                                 "organization": "Department of Physics and Astronomy, Vanderbilt University, Nashville, Tennessee 37240, USA",
-                                "ror": "https://ror.org/02vm5rt34"
+                                "ror": "https://ror.org/02vm5rt34",
                             }
                         ],
                     },
@@ -111,9 +111,9 @@ def parsed_articles(parser, articles):
                         "surname": "Boudjada",
                         "affiliations": [
                             {
-                                "value": "Department of Physics and Astronomy, <a href=\"https://ror.org/02vm5rt34\">Vanderbilt University</a>, Nashville, Tennessee 37240, USA",
+                                "value": 'Department of Physics and Astronomy, <a href="https://ror.org/02vm5rt34">Vanderbilt University</a>, Nashville, Tennessee 37240, USA',
                                 "organization": "Department of Physics and Astronomy, Vanderbilt University, Nashville, Tennessee 37240, USA",
-                                "ror": "https://ror.org/02vm5rt34"
+                                "ror": "https://ror.org/02vm5rt34",
                             }
                         ],
                     },
@@ -123,9 +123,9 @@ def parsed_articles(parser, articles):
                         "surname": "Buessen",
                         "affiliations": [
                             {
-                                "value": "Department of Physics and Astronomy, <a href=\"https://ror.org/02vm5rt34\">Vanderbilt University</a>, Nashville, Tennessee 37240, USA",
+                                "value": 'Department of Physics and Astronomy, <a href="https://ror.org/02vm5rt34">Vanderbilt University</a>, Nashville, Tennessee 37240, USA',
                                 "organization": "Department of Physics and Astronomy, Vanderbilt University, Nashville, Tennessee 37240, USA",
-                                "ror": "https://ror.org/02vm5rt34"
+                                "ror": "https://ror.org/02vm5rt34",
                             }
                         ],
                     },
@@ -135,9 +135,9 @@ def parsed_articles(parser, articles):
                         "surname": "Paramekanti",
                         "affiliations": [
                             {
-                                "value": "Department of Physics and Astronomy, <a href=\"https://ror.org/02vm5rt34\">Vanderbilt University</a>, Nashville, Tennessee 37240, USA",
+                                "value": 'Department of Physics and Astronomy, <a href="https://ror.org/02vm5rt34">Vanderbilt University</a>, Nashville, Tennessee 37240, USA',
                                 "organization": "Department of Physics and Astronomy, Vanderbilt University, Nashville, Tennessee 37240, USA",
-                                "ror": "https://ror.org/02vm5rt34"
+                                "ror": "https://ror.org/02vm5rt34",
                             }
                         ],
                     },

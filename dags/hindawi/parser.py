@@ -216,9 +216,7 @@ class HindawiParser(IParser):
                 "journal_volume": journal.find(
                     "./ns0:subfield/[@code='v']", self.prefixes
                 ).text,
-                "year": journal.find(
-                    "./ns0:subfield/[@code='y']", self.prefixes
-                ).text,
+                "year": journal.find("./ns0:subfield/[@code='y']", self.prefixes).text,
             }
             for journal in journals
         ]

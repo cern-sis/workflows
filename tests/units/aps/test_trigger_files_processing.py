@@ -7,6 +7,7 @@ from airflow.models import DagBag
 from airflow.models.dagrun import DagRun
 from aps.utils import trigger_file_processing_DAG
 
+
 class S3BucketResultObj:
     def __init__(self, key):
         self.key = key
