@@ -2,7 +2,7 @@ import datetime
 import re
 
 from common.constants import FN_REGEX
-from common.utils import parse_country_from_value, get_country_ISO_name
+from common.utils import get_country_ISO_name, parse_country_from_value
 
 
 class Enhancer:
@@ -47,7 +47,7 @@ class Enhancer:
     def __construct_authors(self, item):
         # add_nations(item)
         pattern_for_cern_cooperation_agreement = re.compile(
-            r'cooperation agreement with cern', re.IGNORECASE
+            r"cooperation agreement with cern", re.IGNORECASE
         )
         for author in item.get("authors", []):
             for affiliation in author.get("affiliations", []):
@@ -65,10 +65,11 @@ class Enhancer:
                         affiliation["country"] = _parsed_country
 
                 if affiliation.get("country"):
-                    affiliation["country"] = get_country_ISO_name(affiliation["country"])
+                    affiliation["country"] = get_country_ISO_name(
+                        affiliation["country"]
+                    )
 
         return item
-
 
     def __call__(self, publisher, item):
         creation_date = datetime.datetime.now().isoformat()

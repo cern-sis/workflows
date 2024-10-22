@@ -2,7 +2,6 @@ import os
 
 import pendulum
 from airflow.decorators import dag
-from airflow.operators.bash import BashOperator
 from airflow.operators.bash_operator import BashOperator
 
 AIRFLOW_HOME = os.getenv("AIRFLOW_HOME")
@@ -14,7 +13,7 @@ logs_dir = f"{AIRFLOW_HOME}/{LOG_DIR}"
 def cleanup_logs():
     BashOperator(
         task_id="cleanup_logs",
-        bash_command=f"""
+        bash_command=rf"""
     logs_dir="{logs_dir}"
     find "$logs_dir" -type d -mtime +30 -exec rm -r {{}} \;
     """,

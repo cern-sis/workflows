@@ -1,6 +1,5 @@
 import io
 import os
-from typing import IO
 
 from common.repository import IRepository
 from common.s3_service import S3Service
