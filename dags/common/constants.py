@@ -91,7 +91,7 @@ COUNTRIES_DEFAULT_MAPPING = OrderedDict(
         ("Brazil", "Brazil"),
         ("Brasil", "Brazil"),
         ("Benin", "Benin"),
-        (u"Bénin", "Benin"),
+        ("Bénin", "Benin"),
         ("Bulgaria", "Bulgaria"),
         ("Bosnia and Herzegovina", "Bosnia and Herzegovina"),
         ("Canada", "Canada"),
@@ -141,7 +141,7 @@ COUNTRIES_DEFAULT_MAPPING = OrderedDict(
         ("Luxembourg", "Luxembourg"),
         ("Macedonia", "Macedonia"),
         ("Mexico", "Mexico"),
-        (u"México", "Mexico"),
+        ("México", "Mexico"),
         ("Monaco", "Monaco"),
         ("Montenegro", "Montenegro"),
         ("Morocco", "Morocco"),
@@ -161,7 +161,7 @@ COUNTRIES_DEFAULT_MAPPING = OrderedDict(
         ("Portugalo", "Portugal"),
         ("Portugal", "Portugal"),
         ("P.R.China", "China"),
-        (u"People’s Republic of China", "China"),
+        ("People’s Republic of China", "China"),
         ("Republic of Belarus", "Belarus"),
         ("Republic of Benin", "Benin"),
         ("Republic of Korea", "South Korea"),
@@ -181,7 +181,7 @@ COUNTRIES_DEFAULT_MAPPING = OrderedDict(
         ("Slovenia", "Slovenia"),
         ("South Africa", "South Africa"),
         ("Africa", "South Africa"),
-        (u"España", "Spain"),
+        ("España", "Spain"),
         ("Spain", "Spain"),
         ("Sudan", "Sudan"),
         ("Sweden", "Sweden"),
@@ -233,19 +233,21 @@ COUNTRIES_DEFAULT_MAPPING = OrderedDict(
     ]
 )
 
-INSTITUTIONS_AND_COUNTRIES_MAPPING = OrderedDict([
-    ("INFN", "Italy"),
-    ("European Organization for Nuclear Research", "CERN"),
-    ("Conseil Européen pour la Recherche Nucléaire", "CERN"),
-    ("CERN", "CERN"),
-    ("KEK", "Japan"),
-    ("DESY", "Germany"),
-    ("FERMILAB", "USA"),
-    ("FNAL", "USA"),
-    ("SLACK", "USA"),
-    ("Stanford Linear Accelerator Center", "USA"),
-    ("Joint Institute for Nuclear Research", "JINR"),
-    ("JINR", "JINR"),
-    ("ROC", "Taiwan"),
-    ("R.O.C", "Taiwan"),
-])
+INSTITUTIONS_AND_COUNTRIES_MAPPING = OrderedDict(
+    [
+        ("INFN", "Italy"),
+        ("European Organization for Nuclear Research", "CERN"),
+        ("Conseil Européen pour la Recherche Nucléaire", "CERN"),
+        ("CERN", "CERN"),
+        ("KEK", "Japan"),
+        ("DESY", "Germany"),
+        ("FERMILAB", "USA"),
+        ("FNAL", "USA"),
+        ("SLACK", "USA"),
+        ("Stanford Linear Accelerator Center", "USA"),
+        ("Joint Institute for Nuclear Research", "JINR"),
+        ("JINR", "JINR"),
+        ("ROC", "Taiwan"),
+        ("R.O.C", "Taiwan"),
+    ]
+)

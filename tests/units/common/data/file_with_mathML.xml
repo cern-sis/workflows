@@ -1,6 +1,6 @@
 <title>
     <math>
-		
+
 		<!-- Creating Matrix -->
 		<mrow>
 			<mi id=['this will be removed as well']>A</mi>
@@ -31,7 +31,7 @@
 
 			</mfenced>
 		</mrow>
-		
+
 		<!-- Creating equation -->
 		<br><br>
 		<msub>

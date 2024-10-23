@@ -61,6 +61,6 @@ def test_save_file_in_s3():
 @freeze_time("2023-12-04 10:00")
 def test_split_json():
     ids_and_articles = split_json(repo=MockedRepo(), key="key/key")
-    expected_id = f"APS__2023-12-04T10:00:00.000000+0000"
+    expected_id = "APS__2023-12-04T10:00:00.000000+0000"
     assert ids_and_articles[0]["id"] == expected_id
     assert len(ids_and_articles) == 1

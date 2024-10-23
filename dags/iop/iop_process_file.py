@@ -3,16 +3,16 @@ import xml.etree.ElementTree as ET
 
 import pendulum
 from airflow.decorators import dag, task
+from common.cleanup import (
+    convert_html_italics_to_latex,
+    convert_html_subscripts_to_latex,
+    replace_cdata_format,
+)
 from common.enhancer import Enhancer
 from common.enricher import Enricher
 from common.exceptions import EmptyOutputFromPreviousTask
 from common.scoap3_s3 import Scoap3Repository
 from common.utils import create_or_update_article, upload_json_to_s3
-from common.cleanup import (
-    replace_cdata_format,
-    convert_html_subscripts_to_latex,
-    convert_html_italics_to_latex,
-)
 from inspire_utils.record import get_value
 from iop.parser import IOPParser
 from iop.repository import IOPRepository
@@ -20,11 +20,13 @@ from structlog import get_logger
 
 logger = get_logger()
 
+
 def process_xml(input):
     input = convert_html_subscripts_to_latex(input)
     input = convert_html_italics_to_latex(input)
     input = replace_cdata_format(input)
     return input
+
 
 def iop_parse_file(**kwargs):
     if "params" not in kwargs or "file" not in kwargs["params"]:
@@ -33,7 +35,7 @@ def iop_parse_file(**kwargs):
     file_name = kwargs["params"]["file_name"]
     xml_bytes = base64.b64decode(encoded_xml)
     if isinstance(xml_bytes, bytes):
-        xml_bytes = xml_bytes.decode('utf-8')
+        xml_bytes = xml_bytes.decode("utf-8")
     xml_bytes = process_xml(xml_bytes)
     xml = ET.fromstring(xml_bytes)
 

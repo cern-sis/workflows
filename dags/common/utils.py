@@ -1,4 +1,3 @@
-from datetime import date, datetime
 import io
 import json
 import os
@@ -6,10 +5,10 @@ import re
 import tarfile
 import xml.etree.ElementTree as ET
 import zipfile
+from datetime import date, datetime
 from ftplib import error_perm
 from io import StringIO
 from stat import S_ISDIR, S_ISREG
-from inspire_utils.record import get_value
 
 import backoff
 import country_converter as coco
@@ -20,7 +19,6 @@ from common.constants import (
     BY_PATTERN,
     CDATA_PATTERN,
     COUNTRIES_DEFAULT_MAPPING,
-    COUNTRY_PARSING_PATTERN,
     CREATIVE_COMMONS_PATTERN,
     INSTITUTIONS_AND_COUNTRIES_MAPPING,
     LICENSE_PATTERN,
@@ -30,10 +28,12 @@ from common.exceptions import (
     UnknownFileExtension,
     UnknownLicense,
 )
+from inspire_utils.record import get_value
 from structlog import get_logger
 
 logger = get_logger()
 cc = coco.CountryConverter()
+
 
 def set_harvesting_interval(repo, **kwargs):
     if (
@@ -268,7 +268,7 @@ def parse_element_text(item):
     iterate_element(item)
 
     title_part = [i for i in title_parts if i]
-    full_text = ' '.join(title_part).strip()
+    full_text = " ".join(title_part).strip()
 
     return full_text
 
@@ -311,10 +311,12 @@ def parse_country_from_value(affiliation_value):
         country_code = cc.convert(country, to="iso2")
         mapped_countries = []
         if country_code != "not found":
-            mapped_countries = [{
-                "code": country_code,
-                "name": cc.convert(country, to="name_short"),
-            }]
+            mapped_countries = [
+                {
+                    "code": country_code,
+                    "name": cc.convert(country, to="name_short"),
+                }
+            ]
 
         if len(mapped_countries) > 1 or len(mapped_countries) == 0:
             raise FoundMoreThanOneMatchOrNone(affiliation_value)

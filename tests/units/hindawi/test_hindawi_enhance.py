@@ -1,10 +1,7 @@
 import xml.etree.ElementTree as ET
 
 import pytest
-from common.parsing.xml_extractors import RequiredFieldNotFoundExtractionError
-from hindawi.hindawi_file_processing import (
-    enhance_hindawi,
-)
+from hindawi.hindawi_file_processing import enhance_hindawi
 from hindawi.parser import HindawiParser
 
 

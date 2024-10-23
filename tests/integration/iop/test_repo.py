@@ -1,9 +1,10 @@
+import time
+
 from common.pull_ftp import migrate_from_ftp
 from iop.repository import IOPRepository
 from iop.sftp_service import IOPSFTPService
 from pytest import fixture
 from structlog import get_logger
-import time
 
 
 @fixture
@@ -16,7 +17,7 @@ def iop_empty_repo():
 def test_pull_from_sftp(iop_empty_repo):
     iop_empty_repo.delete_all()
     assert len(iop_empty_repo.find_all()) == 0
-    
+
     with IOPSFTPService() as sftp:
         migrate_from_ftp(
             sftp,
@@ -49,7 +50,8 @@ def test_pull_from_sftp(iop_empty_repo):
             {
                 "pdf": "extracted/2022-07-30T03_02_01_content/1674-1137/1674-1137_46/1674-1137_46_8/1674-1137_46_8_085106/cpc_46_8_085106.pdf",
                 "xml": "extracted/2022-07-30T03_02_01_content/1674-1137/1674-1137_46/1674-1137_46_8/1674-1137_46_8_085106/cpc_46_8_085106.xml",
-            }, {
+            },
+            {
                 "pdf": "extracted/2022-09-01T03_01_40_content/1674-1137/1674-1137_46/1674-1137_46_9/1674-1137_46_9_093111/cpc_46_9_093111.pdf",
                 "xml": "extracted/2022-09-01T03_01_40_content/1674-1137/1674-1137_46/1674-1137_46_9/1674-1137_46_9_093111/cpc_46_9_093111.xml",
             },
@@ -82,17 +84,24 @@ def test_pull_from_sftp(iop_empty_repo):
                 "xml": "extracted/2022-09-24T03_01_43_content/1674-1137/1674-1137_46/1674-1137_46_10/1674-1137_46_10_103108/cpc_46_10_103108.xml",
             },
             {"xml": "extracted/aca95c/aca95c.xml"},
-
         ]
-        
+
         assert len(iop_empty_repo.find_all()) == len(expected_files)
 
-        iop_pdf_files = sorted(item["pdf"] for item in iop_empty_repo.find_all() if "pdf" in item)
-        expected_pdf_files = sorted(item["pdf"] for item in expected_files if "pdf" in item)
+        iop_pdf_files = sorted(
+            item["pdf"] for item in iop_empty_repo.find_all() if "pdf" in item
+        )
+        expected_pdf_files = sorted(
+            item["pdf"] for item in expected_files if "pdf" in item
+        )
         assert iop_pdf_files == expected_pdf_files
 
-        iop_xml_files = sorted(item["xml"] for item in iop_empty_repo.find_all() if "xml" in item)
-        expected_xml_files = sorted(item["xml"] for item in expected_files if "xml" in item)
+        iop_xml_files = sorted(
+            item["xml"] for item in iop_empty_repo.find_all() if "xml" in item
+        )
+        expected_xml_files = sorted(
+            item["xml"] for item in expected_files if "xml" in item
+        )
         assert iop_xml_files == expected_xml_files
 
         assert sorted(iop_empty_repo.get_all_raw_filenames()) == sorted(

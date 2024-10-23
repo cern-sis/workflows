@@ -4,12 +4,12 @@ from datetime import date, timedelta
 class HindawiParams:
     def __init__(
         self,
-        from_date= (date.today() - timedelta(days=1)).strftime("%Y-%m-%d"),
-        until_date= date.today().strftime("%Y-%m-%d"),
-        verb= "listrecords",
-        set= "HINDAWI.AHEP",
-        metadataprefix= "marc21",
-        record= "",
+        from_date=(date.today() - timedelta(days=1)).strftime("%Y-%m-%d"),
+        until_date=date.today().strftime("%Y-%m-%d"),
+        verb="listrecords",
+        set="HINDAWI.AHEP",
+        metadataprefix="marc21",
+        record="",
     ):
         self.from_date = from_date
         self.until_date = until_date

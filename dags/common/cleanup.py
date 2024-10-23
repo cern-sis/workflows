@@ -35,7 +35,7 @@ def replace_cdata_format(text):
     CDATA_PATTERN = re.compile(r"<\?CDATA(.*)\?>")
     # pattern = re.compile(r'<\?CDATA\s(.*?)\s\?>', re.DOTALL)
 
-    replaced_text = CDATA_PATTERN.sub(r'<![CDATA[ \1 ]]>', text)
+    replaced_text = CDATA_PATTERN.sub(r"<![CDATA[ \1 ]]>", text)
 
     return replaced_text
 

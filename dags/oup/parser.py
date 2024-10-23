@@ -163,7 +163,9 @@ class OUPParser(IParser):
         )
         authors = []
         for contribution in contributions:
-            orcid = get_text_value(contribution.find("contrib-id[@contrib-id-type='orcid']"))
+            orcid = get_text_value(
+                contribution.find("contrib-id[@contrib-id-type='orcid']")
+            )
             surname = get_text_value(contribution.find("name/surname"))
             given_names = get_text_value(contribution.find("name/given-names"))
             email = get_text_value(contribution.find("email"))

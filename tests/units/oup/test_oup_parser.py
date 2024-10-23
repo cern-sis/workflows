@@ -635,54 +635,36 @@ def test_authors_parsing_with_orcid(article_with_orcid):
             "surname": "Hong",
             "given_names": "T T",
             "affiliations": [
-                {
-                    "organization": "An Giang University",
-                    "country": "Vietnam"
-                },
-                {
-                    "organization": "Vietnam National University",
-                    "country": "Vietnam"
-                }
+                {"organization": "An Giang University", "country": "Vietnam"},
+                {"organization": "Vietnam National University", "country": "Vietnam"},
             ],
             "orcid": "0000-0002-7719-4160",
-            "full_name": "Hong, T T"
+            "full_name": "Hong, T T",
         },
         {
             "surname": "Le",
             "given_names": "V K",
             "affiliations": [
-                {
-                    "organization": "An Giang University",
-                    "country": "Vietnam"
-                },
-                {
-                    "organization": "Binh Thuy Junior High School",
-                    "country": "Vietnam"
-                }
+                {"organization": "An Giang University", "country": "Vietnam"},
+                {"organization": "Binh Thuy Junior High School", "country": "Vietnam"},
             ],
-            "full_name": "Le, V K"
+            "full_name": "Le, V K",
         },
         {
             "surname": "Phuong",
             "given_names": "L T T",
             "affiliations": [
-                {
-                    "organization": "An Giang University",
-                    "country": "Vietnam"
-                }
+                {"organization": "An Giang University", "country": "Vietnam"}
             ],
-            "full_name": "Phuong, L T T"
+            "full_name": "Phuong, L T T",
         },
         {
             "surname": "Hoi",
             "given_names": "N C",
             "affiliations": [
-                {
-                    "organization": "An Giang University",
-                    "country": "Vietnam"
-                }
+                {"organization": "An Giang University", "country": "Vietnam"}
             ],
-            "full_name": "Hoi, N C"
+            "full_name": "Hoi, N C",
         },
         {
             "surname": "Ngan",
@@ -690,10 +672,10 @@ def test_authors_parsing_with_orcid(article_with_orcid):
             "affiliations": [
                 {
                     "organization": "Department of Physics, Can Tho University",
-                    "country": "Vietnam"
+                    "country": "Vietnam",
                 }
             ],
-            "full_name": "Ngan, N T K"
+            "full_name": "Ngan, N T K",
         },
         {
             "surname": "Nha",
@@ -702,15 +684,15 @@ def test_authors_parsing_with_orcid(article_with_orcid):
             "affiliations": [
                 {
                     "organization": "Subatomic Physics Research Group, Science and Technology Advanced Institute, Van Lang University",
-                    "country": "Vietnam"
+                    "country": "Vietnam",
                 },
                 {
                     "organization": "Faculty of Applied Technology, School of Engineering and Technology, Van Lang University",
-                    "country": "Vietnam"
-                }
+                    "country": "Vietnam",
+                },
             ],
             "orcid": "0009-0005-5993-6895",
-            "full_name": "Nha, N H T"
-        }
+            "full_name": "Nha, N H T",
+        },
     ]
     assert article_with_orcid["authors"] == expected_output

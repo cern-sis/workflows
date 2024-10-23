@@ -17,7 +17,7 @@ class TextExtractor(IExtractor):
         extra_function=lambda s: s,
         prefixes=None,
         all_content_between_tags=False,
-        remove_tags=False
+        remove_tags=False,
     ):
         super().__init__(destination)
 
@@ -92,7 +92,7 @@ class AttributeExtractor(IExtractor):
         default_value=None,
         required=False,
         extra_function=lambda x: x,
-    ) :
+    ):
         super().__init__(destination)
         self.destination = destination
         self.source = source
@@ -132,7 +132,7 @@ class AttributeExtractor(IExtractor):
 class CustomExtractor(IExtractor):
     def __init__(
         self, destination, extraction_function, required=False, default_value=None
-    ) :
+    ):
         super().__init__(destination)
         self.destination = destination
         self.extraction_function = extraction_function
@@ -154,7 +154,7 @@ class ConstantExtractor(IExtractor):
         destination,
         value,
         required=False,
-    ) :
+    ):
         super().__init__(destination)
         self.destination = destination
         self.required = required

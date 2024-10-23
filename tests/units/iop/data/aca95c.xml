@@ -24,14 +24,14 @@
                <tex-math><?CDATA $ U(1)_R $?></tex-math>
                <inline-graphic xlink:href="cpc_47_4_043105_M3.jpg" xlink:type="simple"/>
             </inline-formula> symmetry, we show that the Kahler potential and superpotential in the RNMSSM change as follows:</p><p>
-            <disp-formula> 
-               <label>1</label> 
+            <disp-formula>
+               <label>1</label>
                <tex-math id="cpc_47_4_043105_E1"> <?CDATA $ K=K_{{\rm{MSSM}}} + N^{\dagger}N+\delta K, $?> </tex-math>
                <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E1.jpg" xlink:type="simple"/>
             </disp-formula>
          </p><p>
-            <disp-formula> 
-               <label>2</label> 
+            <disp-formula>
+               <label>2</label>
                <tex-math id="cpc_47_4_043105_E2"> <?CDATA $ W=W_{{\rm{MSSM}}}+\lambda NH_{u}H_{d}+\delta W, $?> </tex-math>
                <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E2.jpg" xlink:type="simple"/>
             </disp-formula>
@@ -102,24 +102,24 @@
                         <inline-formula>
                            <tex-math><?CDATA $ {\rm{Field}} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M175.jpg" xlink:type="simple"/>
-                        </inline-formula>       
+                        </inline-formula>
                      </th><th align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $({S U}(3)_{c}, {S U}(2)_{L})_{U(1)_{Y}}$?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M176.jpg" xlink:type="simple"/>
-                        </inline-formula>     
+                        </inline-formula>
                      </th><th align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA ${U}(1)_{R}$?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M177.jpg" xlink:type="simple"/>
                         </inline-formula>
                      </th></tr></thead><tbody><tr><td align="center" colspan="1" rowspan="1" valign="middle">
-                        <italic toggle="yes">Q</italic>   
+                        <italic toggle="yes">Q</italic>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ (3,2)_{1/6} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M178.jpg" xlink:type="simple"/>
-                        </inline-formula>       
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ 1 $?></tex-math>
@@ -129,12 +129,12 @@
                         <inline-formula>
                            <tex-math><?CDATA $ \bar{u} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M180.jpg" xlink:type="simple"/>
-                        </inline-formula>   
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ (\bar{3},1)_{-2/3} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M181.jpg" xlink:type="simple"/>
-                        </inline-formula>        
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ 1 $?></tex-math>
@@ -144,24 +144,24 @@
                         <inline-formula>
                            <tex-math><?CDATA $ \bar{d} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M183.jpg" xlink:type="simple"/>
-                        </inline-formula>   
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ (\bar{3},1)_{1/3} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M184.jpg" xlink:type="simple"/>
-                        </inline-formula>        
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ 1 $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M185.jpg" xlink:type="simple"/>
                         </inline-formula>
                      </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
-                        <italic toggle="yes">L</italic>   
+                        <italic toggle="yes">L</italic>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ (1,2)_{-1/2} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M186.jpg" xlink:type="simple"/>
-                        </inline-formula>       
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ 1 $?></tex-math>
@@ -171,12 +171,12 @@
                         <inline-formula>
                            <tex-math><?CDATA $ \bar{e} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M188.jpg" xlink:type="simple"/>
-                        </inline-formula>   
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ (1,1)_{1} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M189.jpg" xlink:type="simple"/>
-                        </inline-formula>        
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ 1 $?></tex-math>
@@ -186,12 +186,12 @@
                         <inline-formula>
                            <tex-math><?CDATA $ H_{u} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M191.jpg" xlink:type="simple"/>
-                        </inline-formula>   
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ (1,2)_{1/2} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M192.jpg" xlink:type="simple"/>
-                        </inline-formula>       
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ 0 $?></tex-math>
@@ -201,24 +201,24 @@
                         <inline-formula>
                            <tex-math><?CDATA $ H_{d} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M194.jpg" xlink:type="simple"/>
-                        </inline-formula>   
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ (1,2)_{-1/2} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M195.jpg" xlink:type="simple"/>
-                        </inline-formula>        
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ 0 $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M196.jpg" xlink:type="simple"/>
                         </inline-formula>
                      </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
-                        <italic toggle="yes">N</italic>   
+                        <italic toggle="yes">N</italic>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ (1,1)_{0} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M197.jpg" xlink:type="simple"/>
-                        </inline-formula>       
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ 2 $?></tex-math>
@@ -228,12 +228,12 @@
                         <inline-formula>
                            <tex-math><?CDATA $ \sigma_{1} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M199.jpg" xlink:type="simple"/>
-                        </inline-formula>   
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ (1, 1)_{0} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M200.jpg" xlink:type="simple"/>
-                        </inline-formula>        
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ 0 $?></tex-math>
@@ -243,24 +243,24 @@
                         <inline-formula>
                            <tex-math><?CDATA $ \sigma_{3} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M202.jpg" xlink:type="simple"/>
-                        </inline-formula>   
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ (1, 3)_{0} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M203.jpg" xlink:type="simple"/>
-                        </inline-formula>        
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ 0 $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M204.jpg" xlink:type="simple"/>
                         </inline-formula>
                      </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
-                        <italic toggle="yes">T</italic>   
+                        <italic toggle="yes">T</italic>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ (1,3)_{0} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M205.jpg" xlink:type="simple"/>
-                        </inline-formula>        
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ 2 $?></tex-math>
@@ -270,12 +270,12 @@
                         <inline-formula>
                            <tex-math><?CDATA $ \sigma_{8} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M207.jpg" xlink:type="simple"/>
-                        </inline-formula>   
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ (8,1)_{0} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M208.jpg" xlink:type="simple"/>
-                        </inline-formula>        
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ 0 $?></tex-math>
@@ -297,8 +297,8 @@
                   <tex-math><?CDATA $ \sigma_i $?></tex-math>
                   <inline-graphic xlink:href="cpc_47_4_043105_M22.jpg" xlink:type="simple"/>
                </inline-formula> as</p><p>
-               <disp-formula> 
-                  <label>3</label> 
+               <disp-formula>
+                  <label>3</label>
                   <tex-math id="cpc_47_4_043105_E3"> <?CDATA $ \begin{array}{*{20}{l}} { } \mathcal{L}_{{\rm{soft}}} \supset m_{1}\tilde{\sigma}_{1}\tilde{B}+ m_{2}\tilde{\sigma}_{3}\tilde{W}+m_{3}\tilde{\sigma}_{8}\tilde{g}. \end{array} $?> </tex-math>
                   <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E3.jpg" xlink:type="simple"/>
                </disp-formula>
@@ -306,8 +306,8 @@
                   <tex-math><?CDATA $ m_i $?></tex-math>
                   <inline-graphic xlink:href="cpc_47_4_043105_M23.jpg" xlink:type="simple"/>
                </inline-formula> in Eq. (3) are read from soft SUSY-breaking operators such as</p><p>
-               <disp-formula> 
-                  <label>4</label> 
+               <disp-formula>
+                  <label>4</label>
                   <tex-math id="cpc_47_4_043105_E4"> <?CDATA $ \int {\rm d}^{2}\theta \frac{D_{\alpha}X}{M} W^{\alpha}_{i}\sigma^{i}+\int {\rm d}^{4}\theta \frac{X^{\dagger}X}{M^{2}}\sigma^{\dagger}_{i}\sigma_{i}, $?> </tex-math>
                   <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E4.jpg" xlink:type="simple"/>
                </disp-formula>
@@ -329,8 +329,8 @@
                   <tex-math><?CDATA $S U(2)_L$?></tex-math>
                   <inline-graphic xlink:href="cpc_47_4_043105_M28.jpg" xlink:type="simple"/>
                </inline-formula> triplet <italic toggle="yes">T</italic> shown in <xref ref-type="table" rid="cpc_47_4_043105_t1">Table 1</xref>, the determinant of the charged chargino mass matrix vanishes owing to the unbroken <italic toggle="yes">R</italic> symmetry. This mass issue can be resolved by an extension of the matter content. The simplest way to achieve this is via the addition of the triplet <italic toggle="yes">T</italic> [<xref ref-type="bibr" rid="cpc_47_4_043105_bib16">16</xref>], which couples to the Higgs doublets as</p><p>
-               <disp-formula> 
-                  <label>5</label> 
+               <disp-formula>
+                  <label>5</label>
                   <tex-math id="cpc_47_4_043105_E5"> <?CDATA $ \delta W=\int {\rm d}^{2}\theta \; y_{T}H_{d}TH_{u}. $?> </tex-math>
                   <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E5.jpg" xlink:type="simple"/>
                </disp-formula>
@@ -338,8 +338,8 @@
                   <tex-math><?CDATA $ +2 $?></tex-math>
                   <inline-graphic xlink:href="cpc_47_4_043105_M29.jpg" xlink:type="simple"/>
                </inline-formula>. With the quantum numbers of <italic toggle="yes">T</italic>, one can infer its soft masses from the SUSY-breaking operators,</p><p>
-               <disp-formula> 
-                  <label>6</label> 
+               <disp-formula>
+                  <label>6</label>
                   <tex-math id="cpc_47_4_043105_E6"> <?CDATA $ \int {\rm d}^{4}\theta \frac{X^{\dagger}X}{M^{2}} T^{\dagger}T+ \int {\rm d}^{2}\theta \frac{D^{2}X}{M}{\rm{tr}}\left(T\sigma_{3}\right), $?> </tex-math>
                   <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E6.jpg" xlink:type="simple"/>
                </disp-formula>
@@ -368,14 +368,14 @@
                   <tex-math><?CDATA $ T^{\pm} $?></tex-math>
                   <inline-graphic xlink:href="cpc_47_4_043105_M43.jpg" xlink:type="simple"/>
                </inline-formula>, respectively. With the new superpotential term in Eq. (5) taken into account, the chargino and neutralino mass matrices are now given as</p><p>
-               <disp-formula> 
-                  <label>7</label> 
+               <disp-formula>
+                  <label>7</label>
                   <tex-math id="cpc_47_4_043105_E7"> <?CDATA $ \begin{array}{*{20}{l}} \left(\begin{array}{cccc} \tilde{\sigma}^-_{3} & \tilde{T}^- & \tilde{W}^- & \tilde{H}_{d}^-\end{array}\right) \left( \begin{array}{cccc} 0 & m'_{2} & m_{2} & 0 \\ m'_{2} & 0 & 0 & y_{T}\upsilon_{d} \\ m_{2} & 0 & 0 & \sqrt{2}m_{W}\sin\beta \\ 0 & -y_{T}\upsilon_{u} & \sqrt{2}m_{W}\cos\beta & 0 \\ \end{array}\right) \left(\begin{array}{c} \tilde{\sigma}^+_{3}\\ \tilde{T}^+\\ \tilde{W}^+ \\ \tilde{H}_{u}^+ \\ \end{array}\right), \end{array} $?> </tex-math>
                   <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E7.jpg" xlink:type="simple"/>
                </disp-formula>
             </p><p>
-               <disp-formula> 
-                  <label>8</label> 
+               <disp-formula>
+                  <label>8</label>
                   <tex-math id="cpc_47_4_043105_E8"> <?CDATA $ \begin{array}{*{20}{l}} \left(\begin{array}{cccc} \tilde{\sigma}^{0}_{1} & \tilde{\sigma}^{0}_{3} & \tilde{H}_{u}^{0} & \tilde{H}_{d}^{0}\end{array}\right) \left( \begin{array}{cccc} m_{1 } & 0 & 0 & 0\\ 0 & m_{2} & 0 & m'_{2} \\ m_{Z}\sin\theta_{W} \cos\beta & -m_{Z}\cos\theta_{W} \sin\beta & -\lambda\upsilon_{d} & -y_{T}\upsilon_{d}\\ -m_{Z}\sin\theta_{W} \cos\beta & m_{Z}\cos\theta_{W} \cos\beta & -\lambda\upsilon_{u} & -y_{T}\upsilon_{u} \\ \end{array}\right) \left(\begin{array}{c} \tilde{B}^{0}\\ \tilde{W}^{0} \\ \tilde{N}^{0} \\ \tilde{T}^{0} \\ \end{array}\right), \end{array} $?> </tex-math>
                   <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E8.jpg" xlink:type="simple"/>
                </disp-formula>
@@ -389,8 +389,8 @@
                   <tex-math><?CDATA $ \tan\beta=\upsilon_{u}/\upsilon_{d} $?></tex-math>
                   <inline-graphic xlink:href="cpc_47_4_043105_M46.jpg" xlink:type="simple"/>
                </inline-formula>, and we simply assume the singlet vevs</p><p>
-               <disp-formula> 
-                  <label>9</label> 
+               <disp-formula>
+                  <label>9</label>
                   <tex-math id="cpc_47_4_043105_E9"> <?CDATA $ \begin{array}{*{20}{l}} { } \left \lt \sigma^{0}_{1}\right \gt =\left \lt \sigma^{0}_{3}\right \gt =0. \end{array} $?> </tex-math>
                   <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E9.jpg" xlink:type="simple"/>
                </disp-formula>
@@ -542,7 +542,7 @@
                            <inline-formula>
                               <tex-math><?CDATA ${\rm{Parameter} }$?></tex-math>
                               <inline-graphic xlink:href="cpc_47_4_043105_M211.jpg" xlink:type="simple"/>
-                           </inline-formula>     
+                           </inline-formula>
                         </th><th align="center" colspan="1" rowspan="1" valign="middle">
                            <inline-formula>
                               <tex-math><?CDATA ${\rm{Range} }$?></tex-math>
@@ -552,7 +552,7 @@
                            <inline-formula>
                               <tex-math><?CDATA $ m_1 $?></tex-math>
                               <inline-graphic xlink:href="cpc_47_4_043105_M213.jpg" xlink:type="simple"/>
-                           </inline-formula>     
+                           </inline-formula>
                         </td><td align="center" colspan="1" rowspan="1" valign="middle">
                            <inline-formula>
                               <tex-math><?CDATA $ [-490.8, 490.3] $?></tex-math>
@@ -562,7 +562,7 @@
                            <inline-formula>
                               <tex-math><?CDATA $ m_2 $?></tex-math>
                               <inline-graphic xlink:href="cpc_47_4_043105_M215.jpg" xlink:type="simple"/>
-                           </inline-formula>     
+                           </inline-formula>
                         </td><td align="center" colspan="1" rowspan="1" valign="middle">
                            <inline-formula>
                               <tex-math><?CDATA $ [-137.6, 157.1] $?></tex-math>
@@ -572,7 +572,7 @@
                            <inline-formula>
                               <tex-math><?CDATA $ m'_2 $?></tex-math>
                               <inline-graphic xlink:href="cpc_47_4_043105_M217.jpg" xlink:type="simple"/>
-                           </inline-formula>     
+                           </inline-formula>
                         </td><td align="center" colspan="1" rowspan="1" valign="middle">
                            <inline-formula>
                               <tex-math><?CDATA $ [-430, 409] $?></tex-math>
@@ -582,14 +582,14 @@
                            <inline-formula>
                               <tex-math><?CDATA $ \tan\beta $?></tex-math>
                               <inline-graphic xlink:href="cpc_47_4_043105_M219.jpg" xlink:type="simple"/>
-                           </inline-formula>     
+                           </inline-formula>
                         </td><td align="center" colspan="1" rowspan="1" valign="middle">
                            <inline-formula>
                               <tex-math><?CDATA $ (1, 10] $?></tex-math>
                               <inline-graphic xlink:href="cpc_47_4_043105_M220.jpg" xlink:type="simple"/>
                            </inline-formula>
                         </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
-                           <italic toggle="yes">λ</italic>     
+                           <italic toggle="yes">λ</italic>
                         </td><td align="center" colspan="1" rowspan="1" valign="middle">
                            <inline-formula>
                               <tex-math><?CDATA $ [0.5, 0.7] $?></tex-math>
@@ -599,7 +599,7 @@
                            <inline-formula>
                               <tex-math><?CDATA $ y_T $?></tex-math>
                               <inline-graphic xlink:href="cpc_47_4_043105_M222.jpg" xlink:type="simple"/>
-                           </inline-formula>     
+                           </inline-formula>
                         </td><td align="center" colspan="1" rowspan="1" valign="middle">
                            <inline-formula>
                               <tex-math><?CDATA $ [0.49, 1.0] $?></tex-math>
@@ -642,8 +642,8 @@
                   <tex-math><?CDATA $ \chi^{0}_1 $?></tex-math>
                   <inline-graphic xlink:href="cpc_47_4_043105_M99.jpg" xlink:type="simple"/>
                </inline-formula> pair is dominated by lepton final states [<xref ref-type="bibr" rid="cpc_47_4_043105_bib36">36</xref>]</p><p>
-               <disp-formula> 
-                  <label>10</label> 
+               <disp-formula>
+                  <label>10</label>
                   <tex-math id="cpc_47_4_043105_E10"> <?CDATA $ \sigma_{\ell\bar{\ell}}\upsilon_{{\rm{rel}}}\approx \frac{g'^{4}m^{2}_{\chi^{0}_{1}}}{8\pi}\left[\frac{1}{16(m^{2}_{\chi^{0}_{1}}+m^{2}_{\tilde{\ell}_{L}})^{2}}+ \frac{1}{(m^{2}_{\chi^{0}_{1}}+m^{2}_{\tilde{\ell}_{R}})^{2}}\right],\\ $?> </tex-math>
                   <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E10.jpg" xlink:type="simple"/>
                </disp-formula>
@@ -738,14 +738,14 @@
                         <tex-math><?CDATA $ \sigma_{\tau^{+}\tau^{-}}\upsilon_{{\rm{rel}}} $?></tex-math>
                         <inline-graphic xlink:href="cpc_47_4_043105_M128.jpg" xlink:type="simple"/>
                      </inline-formula> (in purple).</p></caption><graphic content-type="print" id="cpc_47_4_043105_f2_eps" orientation="portrait" position="float" xlink:href="cpc_47_4_043105_f2.eps" xlink:type="simple"/><graphic content-type="online" id="cpc_47_4_043105_f2_online" orientation="portrait" position="float" xlink:href="cpc_47_4_043105_f2.jpg" xlink:type="simple"/></fig></sec><sec id="cpc_47_4_043105_s03-03"><label>C.</label><title>Higgs</title><p>Compared to the <italic toggle="yes">R</italic>-symmetric MSSM (RMSSM) [<xref ref-type="bibr" rid="cpc_47_4_043105_bib43">43</xref>–<xref ref-type="bibr" rid="cpc_47_4_043105_bib47">47</xref>] or conventional NMSSM, the scalar mass spectrum of the Higgs sector in the minimal RNMSSM is different. Let us begin with relevant soft masses in our model.</p><p>
-               <disp-formula> 
-                  <label>11</label> 
+               <disp-formula>
+                  <label>11</label>
                   <tex-math id="cpc_47_4_043105_E11"> <?CDATA $ \begin{array}{*{20}{l}} { } \mathcal{L}_{{\rm{soft}}}\supset m^{2}_{H_{u}}H^{\dagger}_{u}H_{u}+m^{2}_{H_{d}}H^{\dagger}_{d}H_{d}+m^{2}_{N}N^{\dagger}N+b H_{u}H_{d} + m^{2}_{T}T^{\dagger}T, \end{array} $?> </tex-math>
                   <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E11.jpg" xlink:type="simple"/>
                </disp-formula>
             </p><p>where the first three terms arise from the following soft SUSY-breaking operators:</p><p>
-               <disp-formula> 
-                  <label>12</label> 
+               <disp-formula>
+                  <label>12</label>
                   <tex-math id="cpc_47_4_043105_E12"> <?CDATA $ \int {\rm d}^{4}\theta \frac{X^{\dagger}X}{M^{2}}\left[N^{\dagger}N+H_{u}^{\dagger}H_{u}+H_{d}^{\dagger}H_{d}\right]. $?> </tex-math>
                   <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E12.jpg" xlink:type="simple"/>
                </disp-formula>
@@ -759,14 +759,14 @@
                   <tex-math><?CDATA $ 2 $?></tex-math>
                   <inline-graphic xlink:href="cpc_47_4_043105_M137.jpg" xlink:type="simple"/>
                </inline-formula> are given by</p><p>
-               <disp-formula> 
-                  <label>13</label> 
+               <disp-formula>
+                  <label>13</label>
                   <tex-math id="cpc_47_4_043105_E13"> <?CDATA $ \begin{array}{*{20}{l}} \left(\begin{array}{cc} H^{0}_{uR} & H^{0}_{dR} \end{array}\right) \left( \begin{array}{cc} m_{Z}^{2}\cos^{2}\beta+b\tan\beta & \left[\left(\lambda^{2}+y_{T}^{2}\right)\upsilon^{2}-\dfrac{m^{2}_{Z}}{2}\right]\sin2\beta-b \\ * & m_{Z}^{2}\sin^{2}\beta+b\cot\beta \\ \end{array}\right) \left(\begin{array}{c} H^{0}_{uR}\\ H^{0}_{dR} \\ \end{array}\right), \end{array} $?> </tex-math>
                   <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E13.jpg" xlink:type="simple"/>
                </disp-formula>
             </p><p>and</p><p>
-               <disp-formula> 
-                  <label>14</label> 
+               <disp-formula>
+                  <label>14</label>
                   <tex-math id="cpc_47_4_043105_E14"> <?CDATA $ \begin{array}{*{20}{l}} \left(\begin{array}{cc} N_{R} & T^{0}_{R} \end{array}\right) \left( \begin{array}{cc} m^{2}_{N}+\lambda^{2}\upsilon^{2} & \lambda y_{T}\upsilon^{2} \\ * & m^{2}_{T}+m'^{2}_{2}+y_{T}^{2}\upsilon^{2} \\ \end{array}\right) \left(\begin{array}{c} N_{R}\\ T^{0}_{R} \\ \end{array}\right), \\ \end{array} $?> </tex-math>
                   <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E14.jpg" xlink:type="simple"/>
                </disp-formula>
@@ -777,14 +777,14 @@
                   <tex-math><?CDATA $ m^{2}_{H_{d}} $?></tex-math>
                   <inline-graphic xlink:href="cpc_47_4_043105_M139.jpg" xlink:type="simple"/>
                </inline-formula> are eliminated by the <italic toggle="yes">b</italic> term because of the conditions of electroweak symmetry breaking.</p><p>Second, the mass squared matrices for the <italic toggle="yes">CP</italic>-odd scalars are</p><p>
-               <disp-formula> 
-                  <label>15</label> 
+               <disp-formula>
+                  <label>15</label>
                   <tex-math id="cpc_47_4_043105_E15"> <?CDATA $ \begin{array}{*{20}{l}} \left(\begin{array}{cc} H^{0}_{uI} & H^{0}_{dI} \end{array}\right) \left( \begin{array}{cc} b\tan\beta & b \\ * & b\cot\beta \\ \end{array}\right) \left(\begin{array}{c} H^{0}_{uI} \\ H^{0}_{dI} \\ \end{array}\right), \end{array} $?> </tex-math>
                   <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E15.jpg" xlink:type="simple"/>
                </disp-formula>
             </p><p>which contain a massless Goldstone mode, and</p><p>
-               <disp-formula> 
-                  <label>16</label> 
+               <disp-formula>
+                  <label>16</label>
                   <tex-math id="cpc_47_4_043105_E16"> <?CDATA $ \begin{array}{*{20}{l}} \left(\begin{array}{cc} N_{I} & T^{0}_{I} \end{array}\right) \left( \begin{array}{cc} m^{2}_{N}+\lambda^{2}\upsilon^{2} & y_{T}\lambda\upsilon^{2} \\ * & m^{2}_{T}+m'^{2}_{2}+y_{T}^{2}\upsilon^{2} \\ \end{array}\right) \left(\begin{array}{c} N_{I} \\ T^{0}_{I} \\ \end{array}\right). \\ \end{array} $?> </tex-math>
                   <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E16.jpg" xlink:type="simple"/>
                </disp-formula>
@@ -792,8 +792,8 @@
                   <tex-math><?CDATA $ (H^{+}_{u}, H^{-*}_{d}) $?></tex-math>
                   <inline-graphic xlink:href="cpc_47_4_043105_M140.jpg" xlink:type="simple"/>
                </inline-formula> is given by</p><p>
-               <disp-formula> 
-                  <label>17</label> 
+               <disp-formula>
+                  <label>17</label>
                   <tex-math id="cpc_47_4_043105_E17"> <?CDATA $ \mathcal{M}^{2}_{H^{\pm}}=\left[b+\left(\frac{g^{2}_{2}}{2}+y^{2}_{T}-\lambda^{2}\right)\upsilon_{u}\upsilon_{d}\right] \left(\begin{array}{cc} \cot\beta & 1 \\ 1 & \tan\beta \\ \end{array} \right), $?> </tex-math>
                   <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E17.jpg" xlink:type="simple"/>
                </disp-formula>
@@ -893,14 +893,14 @@
                            <inline-formula>
                               <tex-math><?CDATA ${\rm{Parameter} }$?></tex-math>
                               <inline-graphic xlink:href="cpc_47_4_043105_M224.jpg" xlink:type="simple"/>
-                           </inline-formula>     
+                           </inline-formula>
                         </th><th align="center" colspan="1" rowspan="1" valign="middle">
                            <inline-formula>
                               <tex-math><?CDATA ${\rm{Range} }$?></tex-math>
                               <inline-graphic xlink:href="cpc_47_4_043105_M225.jpg" xlink:type="simple"/>
                            </inline-formula>
                         </th></tr></thead><tbody><tr><td align="center" colspan="1" rowspan="1" valign="middle">
-                           <italic toggle="yes">b</italic>     
+                           <italic toggle="yes">b</italic>
                         </td><td align="center" colspan="1" rowspan="1" valign="middle">
                            <inline-formula>
                               <tex-math><?CDATA $[5\times 10^{4}, 10^{5}] \; {\rm{GeV} }^{2}$?></tex-math>
@@ -910,14 +910,14 @@
                            <inline-formula>
                               <tex-math><?CDATA $ \tan\beta $?></tex-math>
                               <inline-graphic xlink:href="cpc_47_4_043105_M227.jpg" xlink:type="simple"/>
-                           </inline-formula>     
+                           </inline-formula>
                         </td><td align="center" colspan="1" rowspan="1" valign="middle">
                            <inline-formula>
                               <tex-math><?CDATA $ [1.6, 4.0] $?></tex-math>
                               <inline-graphic xlink:href="cpc_47_4_043105_M228.jpg" xlink:type="simple"/>
                            </inline-formula>
                         </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
-                           <italic toggle="yes">λ</italic>     
+                           <italic toggle="yes">λ</italic>
                         </td><td align="center" colspan="1" rowspan="1" valign="middle">
                            <inline-formula>
                               <tex-math><?CDATA $ [0.5, 0.7] $?></tex-math>
@@ -927,7 +927,7 @@
                            <inline-formula>
                               <tex-math><?CDATA $ y_{T} $?></tex-math>
                               <inline-graphic xlink:href="cpc_47_4_043105_M230.jpg" xlink:type="simple"/>
-                           </inline-formula>     
+                           </inline-formula>
                         </td><td align="center" colspan="1" rowspan="1" valign="middle">
                            <inline-formula>
                               <tex-math><?CDATA $ [0.42, 1.0] $?></tex-math>
@@ -937,8 +937,8 @@
                   <tex-math><?CDATA $ \Delta=\max\{\Delta_P\} $?></tex-math>
                   <inline-graphic xlink:href="cpc_47_4_043105_M165.jpg" xlink:type="simple"/>
                </inline-formula>, with</p><p>
-               <disp-formula> 
-                  <label>18</label> 
+               <disp-formula>
+                  <label>18</label>
                   <tex-math id="cpc_47_4_043105_E18"> <?CDATA $ \Delta_{P}=\bigg|\frac{\partial \ln m^{2}_{Z}}{\partial \ln P}\bigg|, $?> </tex-math>
                   <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E18.jpg" xlink:type="simple"/>
                </disp-formula>
@@ -949,14 +949,14 @@
                   <tex-math><?CDATA $ \Delta_{b}\sim \tan\beta(b/ 4m^{2}_{Z}) \leq 12.5 $?></tex-math>
                   <inline-graphic xlink:href="cpc_47_4_043105_M167.jpg" xlink:type="simple"/>
                </inline-formula>.</p></sec><sec id="cpc_47_4_043105_s03-04"><label>D.</label><title>Sfermions</title><p>Apart from Majorana gaugino masses, <italic toggle="yes">R</italic> symmetry also prohibits holomorphic soft masses, such as <italic toggle="yes">A</italic> terms related to sfermions. It only allows scalar soft masses</p><p>
-               <disp-formula> 
-                  <label>19</label> 
+               <disp-formula>
+                  <label>19</label>
                   <tex-math id="cpc_47_4_043105_E19"> <?CDATA $ \begin{array}{*{20}{l}} { } \mathcal{L}_{{\rm{soft}}}\supset m^{2}_{\tilde{f}} f^{\dagger}f,\; \; { {f}}=Q,\bar{u},\cdots \end{array} $?> </tex-math>
                   <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E19.jpg" xlink:type="simple"/>
                </disp-formula>
             </p><p>which arise from soft SUSY-breaking operators such as</p><p>
-               <disp-formula> 
-                  <label>20</label> 
+               <disp-formula>
+                  <label>20</label>
                   <tex-math id="cpc_47_4_043105_E20"> <?CDATA $ \int {\rm d}^{4}\theta \frac{X^{\dagger}X}{M^{2}}f^{\dagger}f. $?> </tex-math>
                   <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E20.jpg" xlink:type="simple"/>
                </disp-formula>
@@ -975,7 +975,7 @@
                         <inline-formula>
                            <tex-math><?CDATA $ {\rm{MSSM}} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M237.jpg" xlink:type="simple"/>
-                        </inline-formula>  
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ {\rm{yes}} $?></tex-math>
@@ -1000,7 +1000,7 @@
                         <inline-formula>
                            <tex-math><?CDATA $ {\rm{NMSSM}} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M242.jpg" xlink:type="simple"/>
-                        </inline-formula>  
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ {\rm{no}} $?></tex-math>
@@ -1025,7 +1025,7 @@
                         <inline-formula>
                            <tex-math><?CDATA $ {\rm{RMSSM}} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M247.jpg" xlink:type="simple"/>
-                        </inline-formula>  
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ {\rm{yes}} $?></tex-math>
@@ -1050,7 +1050,7 @@
                         <inline-formula>
                            <tex-math><?CDATA $ {\rm{RNMSSM}} $?></tex-math>
                            <inline-graphic xlink:href="cpc_47_4_043105_M252.jpg" xlink:type="simple"/>
-                        </inline-formula> 
+                        </inline-formula>
                      </td><td align="center" colspan="1" rowspan="1" valign="middle">
                         <inline-formula>
                            <tex-math><?CDATA $ {\rm{no}} $?></tex-math>

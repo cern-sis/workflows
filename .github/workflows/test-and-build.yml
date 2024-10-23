@@ -1,11 +1,11 @@
 name: Build and Test
 on:
-  push:
-    branches:
-      - main
-  pull_request_target:
-    branches:
-      - main
+  workflow_call:
+    inputs:
+      ref:
+        description: The reference to build
+        type: string
+        required: true
 
 env:
   AIRFLOW_HOME: /home/runner/work/workflows/workflows

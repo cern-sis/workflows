@@ -7,7 +7,7 @@
 | Field                | Reference                                                    | Subfields      | Subsubfields |
 | -------------------- | ------------------------------------------------------------ | -------------- | ------------ |
 | dois                 | [Generic parsing](#generic_parsing) : <a href="#64">[64]</a> | value          |              |
-| page_nr              | [Parsing](#parsing) : <a href="#3">[3]</a>                   |                |              |
+| page_nr              | [Pardsing](#parsing) : <a href="#3">[3]</a>                  |                |              |
 | arxiv_eprints        | [Enricher](#enricher) : <a href="#33">[33]</a>               | value          |              |
 |                      |                                                              | categories     |              |
 | authors              | [Parsing](#parsing) : <a href="#7">[7]</a>                   | full_name      |              |

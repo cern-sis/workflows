@@ -23,9 +23,7 @@ def elsevier_pull_sftp():
 
     @task(executor_config=kubernetes_executor_config)
     def migrate_from_ftp(
-        sftp = ElsevierSFTPService(),
-        repo = ElsevierRepository(),
-        **kwargs
+        sftp=ElsevierSFTPService(), repo=ElsevierRepository(), **kwargs
     ):
         params = kwargs["params"]
         specific_files = (
@@ -44,7 +42,7 @@ def elsevier_pull_sftp():
 
     @task(executor_config=kubernetes_executor_config)
     def trigger_file_processing(
-        repo = ElsevierRepository(),
+        repo=ElsevierRepository(),
         filenames=None,
     ):
         return trigger_file_processing_elsevier(

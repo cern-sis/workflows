@@ -29,7 +29,7 @@ class HindawiApiClient:
             base_url=self.base_url,
             headers={
                 "Accept": "application/xml",
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0"
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0",
             },
             path_segments=path_segments,
             parameters=parameters,

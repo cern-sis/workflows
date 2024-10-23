@@ -1,10 +1,11 @@
+import time
+
 import pytest
 from airflow.models import DagBag
 from common.pull_ftp import migrate_from_ftp, trigger_file_processing
 from iop.repository import IOPRepository
 from iop.sftp_service import IOPSFTPService
 from structlog import get_logger
-import time
 
 DAG_NAME = "iop_pull_sftp"
 
@@ -94,7 +95,7 @@ def test_dag_run(dag, dag_was_paused: bool, iop_empty_repo):
 def test_dag_migrate_from_FTP(iop_empty_repo):
     iop_empty_repo.delete_all()
     assert len(iop_empty_repo.find_all()) == 0
-    
+
     with IOPSFTPService() as sftp:
         migrate_from_ftp(
             sftp,
@@ -165,12 +166,20 @@ def test_dag_migrate_from_FTP(iop_empty_repo):
 
         assert len(iop_empty_repo.find_all()) == len(expected_files)
 
-        iop_pdf_files = sorted(item["pdf"] for item in iop_empty_repo.find_all() if "pdf" in item)
-        expected_pdf_files = sorted(item["pdf"] for item in expected_files if "pdf" in item)
+        iop_pdf_files = sorted(
+            item["pdf"] for item in iop_empty_repo.find_all() if "pdf" in item
+        )
+        expected_pdf_files = sorted(
+            item["pdf"] for item in expected_files if "pdf" in item
+        )
         assert iop_pdf_files == expected_pdf_files
 
-        iop_xml_files = sorted(item["xml"] for item in iop_empty_repo.find_all() if "xml" in item)
-        expected_xml_files = sorted(item["xml"] for item in expected_files if "xml" in item)
+        iop_xml_files = sorted(
+            item["xml"] for item in iop_empty_repo.find_all() if "xml" in item
+        )
+        expected_xml_files = sorted(
+            item["xml"] for item in expected_files if "xml" in item
+        )
         assert iop_xml_files == expected_xml_files
 
 

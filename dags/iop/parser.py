@@ -17,8 +17,8 @@ from common.utils import (
     extract_text,
     get_license_type,
     get_license_type_and_version_from_url,
+    parse_country_from_value,
     parse_to_int,
-    parse_country_from_value
 )
 from idutils import is_arxiv
 from inspire_utils.date import PartialDate
@@ -114,7 +114,7 @@ class IOPParser(IParser):
                 required=True,
                 all_content_between_tags=True,
                 source="front/article-meta/title-group/article-title",
-                remove_tags=True
+                remove_tags=True,
             ),
             TextExtractor(
                 destination="subtitle",
@@ -131,7 +131,7 @@ class IOPParser(IParser):
                 source="front/article-meta/abstract/p",
                 all_content_between_tags=True,
                 extra_function=lambda x: x,
-                remove_tags=True
+                remove_tags=True,
             ),
             CustomExtractor(
                 destination="files",
