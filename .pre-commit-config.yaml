@@ -7,6 +7,7 @@ repos:
     rev: "v2.7.1"
     hooks:
       - id: prettier
+        stages: [commit]
   - repo: https://github.com/pycqa/isort
     rev: "5.12.0"
     hooks:
@@ -22,3 +23,12 @@ repos:
       - id: check-merge-conflict
       - id: end-of-file-fixer
       - id: trailing-whitespace
+  - repo: https://github.com/jorisroovers/gitlint
+    rev: "v0.17.0"
+    hooks:
+      - id: gitlint
+        language: python
+        entry: gitlint
+        stages: [commit-msg]
+        args: [--msg-filename]
+
