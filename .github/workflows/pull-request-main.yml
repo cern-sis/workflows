@@ -3,7 +3,7 @@ name: Pull request main
 on:
   pull_request_target:
     branches: [main]
-    paths-ignore: [ "docs/**" ]
+    paths-ignore: ["docs/**"]
 
 jobs:
   test:
@@ -17,4 +17,3 @@ jobs:
     with:
       ref: ${{ github.event.pull_request.head.sha }}
     secrets: inherit
-    
