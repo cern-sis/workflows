@@ -1,9 +1,9 @@
 import xml.etree.ElementTree as ET
 from os import listdir
 
+from common.enhancer import Enhancer
 from pytest import fixture
 from springer.parser import SpringerParser
-from common.enhancer import Enhancer
 
 
 @fixture(scope="module")
@@ -333,90 +333,100 @@ def test_abstract(parsed_articles):
 @fixture
 def article_with_orcid(parser, datadir):
     with open(datadir / "s10052-024-12692-y.xml") as file:
-        yield parser._generic_parsing(parser._publisher_specific_parsing(ET.fromstring(file.read())))
+        yield parser._generic_parsing(
+            parser._publisher_specific_parsing(ET.fromstring(file.read()))
+        )
 
 
 def test_article_with_cleaned_orcid(article_with_orcid):
-    expected_output = [{
-        "surname": "Hong",
-        "given_names": "T.",
-        "email": "tthong@agu.edu.vn",
-        "affiliations": [
-            {
-                "value": "An Giang University, Long Xuyen, 880000, Vietnam",
-                "organization": "An Giang University",
-                "country": "Vietnam"
-            },
-            {
-                "value": "Vietnam National University, Ho Chi Minh City, 700000, Vietnam",
-                "organization": "Vietnam National University",
-                "country": "Vietnam"
-            }
-        ],
-        "full_name": "Hong, T."
-    },
+    expected_output = [
         {
-        "surname": "Tran",
-        "given_names": "Q.",
-        "email": "tqduyet@agu.edu.vn",
-        "affiliations": [
-            {
-                "value": "An Giang University, Long Xuyen, 880000, Vietnam",
-                "organization": "An Giang University",
-                "country": "Vietnam"
-            },
-            {
-                "value": "Vietnam National University, Ho Chi Minh City, 700000, Vietnam",
-                "organization": "Vietnam National University",
-                "country": "Vietnam"
-            }
-        ],
-        "full_name": "Tran, Q."
-    },
+            "surname": "Hong",
+            "given_names": "T.",
+            "email": "tthong@agu.edu.vn",
+            "affiliations": [
+                {
+                    "value": "An Giang University, Long Xuyen, 880000, Vietnam",
+                    "organization": "An Giang University",
+                    "country": "Vietnam",
+                    "ror": "https://ror.org/023pm6532",
+                },
+                {
+                    "value": "Vietnam National University, Ho Chi Minh City, 700000, Vietnam",
+                    "organization": "Vietnam National University",
+                    "country": "Vietnam",
+                },
+            ],
+            "full_name": "Hong, T.",
+        },
         {
-        "surname": "Nguyen",
-        "given_names": "T.",
-        "email": "thanhphong@ctu.edu.vn",
-        "affiliations": [
-            {
-                "value": "Department of Physics, Can Tho University, 3/2 Street, Can Tho, Vietnam",
-                "organization": "Can Tho University",
-                "country": "Vietnam"
-            }
-        ],
-        "full_name": "Nguyen, T."
-    },
+            "surname": "Tran",
+            "given_names": "Q.",
+            "email": "tqduyet@agu.edu.vn",
+            "affiliations": [
+                {
+                    "value": "An Giang University, Long Xuyen, 880000, Vietnam",
+                    "organization": "An Giang University",
+                    "country": "Vietnam",
+                    "ror": "https://ror.org/023pm6532",
+                },
+                {
+                    "value": "Vietnam National University, Ho Chi Minh City, 700000, Vietnam",
+                    "organization": "Vietnam National University",
+                    "country": "Vietnam",
+                },
+            ],
+            "full_name": "Tran, Q.",
+        },
         {
-        "surname": "Hue",
-        "given_names": "L.",
-        "email": "lethohue@vlu.edu.vn",
-        "affiliations": [
-            {
-                "value": "Subatomic Physics Research Group, Science and Technology Advanced Institute, Van Lang University, Ho Chi Minh City, Vietnam",
-                "organization": "Van Lang University",
-                "country": "Vietnam"
-            }
-        ],
-        "full_name": "Hue, L."
-    },
+            "surname": "Nguyen",
+            "given_names": "T.",
+            "email": "thanhphong@ctu.edu.vn",
+            "affiliations": [
+                {
+                    "value": "Department of Physics, Can Tho University, 3/2 Street, Can Tho, Vietnam",
+                    "organization": "Can Tho University",
+                    "country": "Vietnam",
+                    "ror": "https://ror.org/0071qz696",
+                }
+            ],
+            "full_name": "Nguyen, T.",
+        },
         {
-        "orcid": "0009-0005-5993-6895",
-        "surname": "Nha",
-        "given_names": "N.",
-        "email": "nguyenhuathanhnha@vlu.edu.vn",
-        "affiliations": [
-            {
-                "value": "Subatomic Physics Research Group, Science and Technology Advanced Institute, Van Lang University, Ho Chi Minh City, Vietnam",
-                "organization": "Van Lang University",
-                "country": "Vietnam"
-            },
-            {
-                "value": "Faculty of Applied Technology, School of Technology, Van Lang University, Ho Chi Minh City, Vietnam",
-                "organization": "Van Lang University",
-                "country": "Vietnam"
-            }
-        ],
-        "full_name": "Nha, N."
-    }]
+            "surname": "Hue",
+            "given_names": "L.",
+            "email": "lethohue@vlu.edu.vn",
+            "affiliations": [
+                {
+                    "value": "Subatomic Physics Research Group, Science and Technology Advanced Institute, Van Lang University, Ho Chi Minh City, Vietnam",
+                    "organization": "Van Lang University",
+                    "country": "Vietnam",
+                    "ror": "https://ror.org/02ryrf141",
+                }
+            ],
+            "full_name": "Hue, L.",
+        },
+        {
+            "orcid": "0009-0005-5993-6895",
+            "surname": "Nha",
+            "given_names": "N.",
+            "email": "nguyenhuathanhnha@vlu.edu.vn",
+            "affiliations": [
+                {
+                    "value": "Subatomic Physics Research Group, Science and Technology Advanced Institute, Van Lang University, Ho Chi Minh City, Vietnam",
+                    "organization": "Van Lang University",
+                    "country": "Vietnam",
+                    "ror": "https://ror.org/02ryrf141",
+                },
+                {
+                    "value": "Faculty of Applied Technology, School of Technology, Van Lang University, Ho Chi Minh City, Vietnam",
+                    "organization": "Van Lang University",
+                    "country": "Vietnam",
+                    "ror": "https://ror.org/02ryrf141",
+                },
+            ],
+            "full_name": "Nha, N.",
+        },
+    ]
 
     assert expected_output == article_with_orcid["authors"]
