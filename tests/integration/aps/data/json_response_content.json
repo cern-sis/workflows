@@ -1,0 +1,294 @@
+{
+  "data": [
+    {
+      "abstract": {
+        "value": "<p>We propose and theoretically analyze the use of coherent population trapping of a single diamond nitrogen-vacancy (NV) center for continuous real-time sensing. The formation of the dark state in coherent population trapping prevents optical emissions from the NV center. Fluctuating magnetic fields, however, can kick the NV center out of the dark state, leading to a sequence of single-photon emissions. A time series of the photon counts detected can be used for magnetic field estimations, even when the average photon count per update time interval is much smaller than 1. For a theoretical demonstration, the nuclear spin bath in a diamond lattice is used as a model fluctuating magnetic environment. For fluctuations with known statistical properties, such as an Ornstein-Uhlenbeck process, Bayesian inference-based estimators can lead to an estimation variance that approaches the classical Cramer-Rao lower bound and can update dynamical information in real time with the detection of just a single photon. Real-time sensing using coherent population trapping adds a powerful tool to the emerging technology of quantum sensing.</p>",
+        "format": "html"
+      },
+      "articleType": "article",
+      "authors": [
+        {
+          "type": "Person",
+          "name": "Shu-Hao Wu",
+          "firstname": "Shu-Hao",
+          "surname": "Wu",
+          "affiliationIds": ["a1", "a1"]
+        },
+        {
+          "type": "Person",
+          "name": "Ethan Turner",
+          "firstname": "Ethan",
+          "surname": "Turner",
+          "affiliationIds": ["a1", "a1"]
+        },
+        {
+          "type": "Person",
+          "name": "Hailin Wang",
+          "firstname": "Hailin",
+          "surname": "Wang",
+          "affiliationIds": ["a1", "a1"]
+        },
+        {
+          "type": "Person",
+          "name": "Tim R. Borel",
+          "firstname": "Tim R.",
+          "surname": "Borel",
+          "affiliationIds": ["a2"]
+        }
+      ],
+      "affiliations": [
+        {
+          "name": "Department of Physics and Astronomy, <a href=\"https://ror.org/02vm5rt34\">Vanderbilt University</a>, Nashville, Tennessee 37240, USA",
+          "id": "a1"
+        },
+        {
+          "name": "Department of Physics and Astronomy, <a href=\"https://ror.org/02vm5rt34\">Vanderbilt University</a>, Nashville, Tennessee 37240, USA",
+          "id": "a2"
+        }
+      ],
+      "date": "2021-04-12",
+      "fundings": [
+        {
+          "funderId": "http://dx.doi.org/10.13039/100000183",
+          "funderName": "Army Research Office",
+          "awards": ["W911NF-18-1-0218"]
+        }
+      ],
+      "type": "article",
+      "metadata_last_modified_at": "2021-04-12T14:02:31+0000",
+      "last_modified_at": "2021-04-12T14:02:31+0000",
+      "id": "10.1103/PhysRevA.103.042607",
+      "identifiers": {
+        "doi": "10.1103/PhysRevA.103.042607",
+        "arxiv": "arXiv:2102.07212"
+      },
+      "issue": {
+        "number": "4"
+      },
+      "pageStart": "042607",
+      "hasArticleId": true,
+      "numPages": 10,
+      "classificationSchemes": {
+        "physh": {
+          "concepts": [
+            {
+              "id": "65920eff-f184-41cd-9ec0-b33bb0679565",
+              "facet": {
+                "id": "f45b3c40-959c-4e90-ba0e-38232980802a"
+              },
+              "primary": false
+            },
+            {
+              "id": "2c0e953d-44fd-4611-bfb0-3e39cfb9374a",
+              "facet": {
+                "id": "bdb1ef91-b776-4e36-8f8f-3e93666bac1e"
+              },
+              "primary": false
+            },
+            {
+              "id": "1fa8daba-8a48-4d9f-ada9-03a9d3259ca3",
+              "facet": {
+                "id": "bdb1ef91-b776-4e36-8f8f-3e93666bac1e"
+              },
+              "primary": false
+            },
+            {
+              "id": "9b6aaf50-04bd-4aaa-b4c3-d6fa9b7f7303",
+              "facet": {
+                "id": "bdb1ef91-b776-4e36-8f8f-3e93666bac1e"
+              },
+              "primary": true
+            },
+            {
+              "id": "632f74d1-d16b-4b92-a295-b24729a93d8d",
+              "facet": {
+                "id": "bdb1ef91-b776-4e36-8f8f-3e93666bac1e"
+              },
+              "primary": false
+            }
+          ],
+          "disciplines": [
+            "510fc218-8774-4547-ab09-fc6cef0c9a03",
+            "8ab3d2b7-b50b-460e-b086-8990cfcbd350",
+            "a48f173e-6459-4642-a711-a6e731807625"
+          ]
+        }
+      },
+      "publisher": {
+        "name": "APS"
+      },
+      "rights": {
+        "rightsStatement": "©2021 American Physical Society",
+        "copyrightYear": 2021,
+        "copyrightHolders": [
+          {
+            "name": "American Physical Society"
+          }
+        ],
+        "creativeCommons": false,
+        "licenses": [
+          {
+            "url": "http://link.aps.org/licenses/aps-default-license"
+          }
+        ]
+      },
+      "journal": {
+        "id": "PRA",
+        "abbreviatedName": "Phys. Rev. A",
+        "name": "Physical Review A"
+      },
+      "title": {
+        "value": "Continuous real-time sensing with a nitrogen-vacancy center via coherent population trapping",
+        "format": "html"
+      },
+      "tocSection": {
+        "label": "Quantum technologies"
+      },
+      "volume": {
+        "number": "103"
+      }
+    },
+    {
+      "abstract": {
+        "value": "<p>Recent advances in ultracold atoms in optical lattices and developments in surface science have allowed for the creation of artificial lattices as well as the control of many-body interactions. Such systems provide new settings to investigate interaction-driven instabilities and nontrivial topology. In this paper, we explore the interplay between molecular electric dipoles on a two-dimensional triangular lattice with fermions hopping on the dual decorated honeycomb lattice which hosts Dirac and flat band states. We show that short-range dipole-dipole interaction can lead to ordering into various stripe and vortex crystal ground states. We study these ordered states and their thermal transitions as a function of the interaction range using simulated annealing and Monte Carlo methods. For the special case of zero-wave-vector ferrodipolar order, incorporating dipole-electron interactions and integrating out the electrons leads to a six-state clock model for the dipole ordering. Finally, we discuss the impact of the various dipole orders on the electronic band structure and the local tunneling density of states. Our work may be relevant to studies of “molecular graphene”—CO molecules arranged on the Cu(111) surface—which have been explored using scanning tunneling spectroscopy, as well as ultracold molecule-fermion mixtures in optical lattices.</p>",
+        "format": "html"
+      },
+      "articleType": "article",
+      "authors": [
+        {
+          "type": "Person",
+          "name": "Nazim Boudjada",
+          "firstname": "Nazim",
+          "surname": "Boudjada",
+          "affiliationIds": ["a1"]
+        },
+        {
+          "type": "Person",
+          "name": "Finn Lasse Buessen",
+          "firstname": "Finn Lasse",
+          "surname": "Buessen",
+          "affiliationIds": ["a1"]
+        },
+        {
+          "type": "Person",
+          "name": "Arun Paramekanti",
+          "firstname": "Arun",
+          "surname": "Paramekanti",
+          "affiliationIds": ["a1"]
+        }
+      ],
+      "affiliations": [
+        {
+          "name": "Department of Physics and Astronomy, <a href=\"https://ror.org/02vm5rt34\">Vanderbilt University</a>, Nashville, Tennessee 37240, USA",
+          "id": "a1"
+        }
+      ],
+      "notes": [
+        {
+          "format": "html",
+          "value": "<p>arunp@physics.utoronto.ca</p>",
+          "label": "*",
+          "id": "n1",
+          "type": "contrib"
+        }
+      ],
+      "date": "2021-04-12",
+      "fundings": [
+        {
+          "funderId": "http://dx.doi.org/10.13039/501100000038",
+          "funderName": "Natural Sciences and Engineering Research Council of Canada",
+          "awards": []
+        }
+      ],
+      "type": "article",
+      "metadata_last_modified_at": "2021-04-12T14:02:31+0000",
+      "last_modified_at": "2021-04-12T14:02:30+0000",
+      "id": "10.1103/PhysRevB.103.165408",
+      "identifiers": {
+        "doi": "10.1103/PhysRevB.103.165408",
+        "arxiv": "arXiv:2012.07847"
+      },
+      "issue": {
+        "number": "16"
+      },
+      "pageStart": "165408",
+      "hasArticleId": true,
+      "numPages": 11,
+      "classificationSchemes": {
+        "physh": {
+          "concepts": [
+            {
+              "id": "eb9bd2e1-eedd-4bd0-997d-58b44ffa3ebb",
+              "facet": {
+                "id": "233a6cd0-b7fe-491b-b5fd-85fd6b2a7c79"
+              },
+              "primary": false
+            },
+            {
+              "id": "7b1d5a31-bb4e-4b73-ae62-1c68e9c6006e",
+              "facet": {
+                "id": "f45b3c40-959c-4e90-ba0e-38232980802a"
+              },
+              "primary": false
+            },
+            {
+              "id": "273474b6-f607-4b62-b5b6-8de8bca28814",
+              "facet": {
+                "id": "f45b3c40-959c-4e90-ba0e-38232980802a"
+              },
+              "primary": false
+            },
+            {
+              "id": "0030808d-6a1a-4ce5-974a-748b5ef3eeba",
+              "facet": {
+                "id": "bdb1ef91-b776-4e36-8f8f-3e93666bac1e"
+              },
+              "primary": false
+            },
+            {
+              "id": "979074fa-fadd-4ebe-acf1-0a9c92fb1848",
+              "facet": {
+                "id": "bdb1ef91-b776-4e36-8f8f-3e93666bac1e"
+              },
+              "primary": true
+            }
+          ],
+          "disciplines": ["a48f173e-6459-4642-a711-a6e731807625"]
+        }
+      },
+      "publisher": {
+        "name": "APS"
+      },
+      "rights": {
+        "rightsStatement": "©2021 American Physical Society",
+        "copyrightYear": 2021,
+        "copyrightHolders": [
+          {
+            "name": "American Physical Society"
+          }
+        ],
+        "creativeCommons": false,
+        "licenses": [
+          {
+            "url": "http://link.aps.org/licenses/aps-default-license"
+          }
+        ]
+      },
+      "journal": {
+        "id": "PRB",
+        "abbreviatedName": "Phys. Rev. B",
+        "name": "Physical Review B"
+      },
+      "title": {
+        "value": "Molecular dipoles in designer honeycomb lattices",
+        "format": "html"
+      },
+      "tocSection": {
+        "label": "Surface physics, nanoscale physics, low-dimensional systems"
+      },
+      "volume": {
+        "number": "103"
+      }
+    }
+  ]
+}
