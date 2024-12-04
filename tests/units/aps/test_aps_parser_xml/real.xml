@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with OASIS Tables with MathML3 v1.3 20210610//EN" "JATS-journalpublishing-oasis-article1-3-mathml3.dtd">
+<article article-type="research-article"
+	xmlns:mml="http://www.w3.org/1998/Math/MathML"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:oasis="http://www.niso.org/standards/z39-96/ns/oasis-exchange/table">
+	<front>
+		<journal-meta>
+			<journal-id journal-id-type="publisher-id">PRD</journal-id>
+			<journal-id journal-id-type="coden">PRVDAQ</journal-id>
+			<journal-title-group>
+				<journal-title>Physical Review D</journal-title>
+				<abbrev-journal-title>Phys. Rev. D</abbrev-journal-title>
+			</journal-title-group>
+			<issn pub-type="ppub">2470-0010</issn>
+			<issn pub-type="epub">2470-0029</issn>
+			<publisher>
+				<publisher-name>American Physical Society</publisher-name>
+			</publisher>
+		</journal-meta>
+		<article-meta>
+			<article-id pub-id-type="doi">10.1103/PhysRevD.110.102006</article-id>
+			<article-categories>
+				<subj-group subj-group-type="toc-major">
+					<subject>ARTICLES</subject>
+				</subj-group>
+				<subj-group subj-group-type="toc-minor">
+					<subject>Experiments in gravity, cosmology, cosmic rays</subject>
+				</subj-group>
+			</article-categories>
+			<title-group>
+				<article-title>Search for dark matter annual modulation with DarkSide-50</article-title>
+				<alt-title alt-title-type="running-title">SEARCH FOR DARK MATTER ANNUAL MODULATION WITH …</alt-title>
+				<alt-title alt-title-type="running-author">P. AGNES 
+					<italic>et al.</italic>
+				</alt-title>
+			</title-group>
+			<contrib-group>
+				<contrib contrib-type="author">
+					<name>
+						<surname>Agnes</surname>
+						<given-names>P.</given-names>
+					</name>
+					<xref ref-type="aff" rid="a1">
+						<sup>1</sup>
+					</xref>
+				</contrib>
+				<contrib contrib-type="author">
+					<contrib-id authenticated="true" contrib-id-type="orcid">https://orcid.org/0000-0002-7015-633X</contrib-id>
+					<name>
+						<surname>Kimura</surname>
+						<given-names>M.</given-names>
+					</name>
+					<xref ref-type="aff" rid="a39">
+						<sup>39</sup>
+					</xref>
+				</contrib>
+				<aff id="a1">
+					<label>
+						<sup>1</sup>
+					</label>Department of Physics, 
+					<institution>Royal Holloway University of London</institution>, Egham TW20 0EX, United Kingdom
+				</aff>
+				<aff id="a39">
+					<label>
+						<sup>39</sup>
+					</label>AstroCeNT, 
+					<institution-wrap>
+						<institution>Nicolaus Copernicus Astronomical Center of the Polish Academy of Sciences</institution>
+						<institution-id institution-id-type="ror">https://ror.org/040r57n67</institution-id>
+					</institution-wrap>, 00-614 Warsaw, Poland
+				</aff>
+			</contrib-group>
+			<pub-date iso-8601-date="2024-11-21" date-type="pub" publication-format="electronic">
+				<day>21</day>
+				<month>November</month>
+				<year>2024</year>
+			</pub-date>
+			<pub-date iso-8601-date="2024-11-15" date-type="pub" publication-format="print">
+				<day>15</day>
+				<month>November</month>
+				<year>2024</year>
+			</pub-date>
+			<volume>110</volume>
+			<issue>10</issue>
+			<elocation-id>102006</elocation-id>
+			<pub-history>
+				<event>
+					<date iso-8601-date="2023-07-26" date-type="received">
+						<day>26</day>
+						<month>July</month>
+						<year>2023</year>
+					</date>
+				</event>
+				<event>
+					<date iso-8601-date="2024-10-11" date-type="accepted">
+						<day>11</day>
+						<month>October</month>
+						<year>2024</year>
+					</date>
+				</event>
+			</pub-history>
+		</article-meta>
+	</front>
+</article>
