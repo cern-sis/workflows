@@ -237,7 +237,9 @@ class SpringerParser(IParser):
                         destination="surname", source="./AuthorName/FamilyName"
                     ),
                     TextExtractor(
-                        destination="given_names", source="./AuthorName/GivenName"
+                        destination="given_names",
+                        source="./AuthorName/GivenName",
+                        required=False,
                     ),
                     TextExtractor(
                         destination="email", source="./Contact/Email", required=False
