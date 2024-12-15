@@ -61,6 +61,7 @@ class ElsevierParser(IParser):
                 destination="abstract",
                 source="head/abstract/abstract-sec/simple-para",
                 all_content_between_tags=True,
+                required=False,
             ),
             TextExtractor(
                 destination="title", source="head/title", all_content_between_tags=True
