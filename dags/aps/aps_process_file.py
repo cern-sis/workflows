@@ -3,6 +3,7 @@ import json
 import pendulum
 from airflow.decorators import dag, task
 from aps.parser import APSParser
+from aps.xml_parser import APSParserXML
 from aps.repository import APSRepository
 from common.enhancer import Enhancer
 from common.enricher import Enricher
@@ -29,6 +30,12 @@ def enrich_aps(enhanced_file):
     return Enricher()(enhanced_file)
 
 
+def replace_authors(parsed_file, parsed_xml):
+    parsed_file["authors"] = parsed_xml["authors"]
+
+    return parsed_file
+
+
 @dag(schedule=None, start_date=pendulum.today("UTC").add(days=-1))
 def aps_process_file():
     s3_client = APSRepository()
@@ -44,12 +51,6 @@ def aps_process_file():
         if not parsed_file:
             raise EmptyOutputFromPreviousTask("parse")
         return enhance_aps(parsed_file)
-
-    @task()
-    def enrich(enhanced_file):
-        if not enhanced_file:
-            raise EmptyOutputFromPreviousTask("enhance")
-        return enrich_aps(enhanced_file)
 
     @task()
     def populate_files(parsed_file):
@@ -68,21 +69,40 @@ def aps_process_file():
         parsed_file["files"] = downloaded_files
         logger.info("Files populated", files=parsed_file["files"])
         return parsed_file
+    
+    @task()
+    def enrich(enhanced_file):
+        if not enhanced_file:
+            raise EmptyOutputFromPreviousTask("enhance")
+        return enrich_aps(enhanced_file)
+    
+    @task()
+    def parse_xml(xml_file):
+        parser = APSParserXML()
+        parsed = parser.parse(xml_file)
+
+        return parsed
+    
+    @task
+    def replace_authors(parsed_file, parsed_xml):
+        replace_authors(parsed_file, parsed_xml)
 
     @task()
-    def save_to_s3(enriched_file):
-        upload_json_to_s3(json_record=enriched_file, repo=s3_client)
+    def save_to_s3(complete_file):
+        upload_json_to_s3(json_record=complete_file, repo=s3_client)
 
     @task()
-    def create_or_update(enriched_file):
-        create_or_update_article(enriched_file)
+    def create_or_update(complete_file):
+        create_or_update_article(complete_file)
 
     parsed_file = parse()
     enhanced_file = enhance(parsed_file)
     enhanced_file_with_files = populate_files(enhanced_file)
     enriched_file = enrich(enhanced_file_with_files)
-    save_to_s3(enriched_file=enriched_file)
-    create_or_update(enriched_file)
+    parsed_xml = parse_xml(enriched_file["files"]["xml"])
+    complete_file = replace_authors(enriched_file, parsed_xml)
+    save_to_s3(complete_file)
+    create_or_update(complete_file)
 
 
 dag_for_aps_files_processing = aps_process_file()
