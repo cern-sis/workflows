@@ -15,7 +15,6 @@ For it docker-compose has to be installed.After just run in it the command bello
 docker-compose up --build
 ```
 
-
 Currently the docker-compose performance isn't very good. Thus, for local dev, it is advised to run it locally.
 
 ## Run it locally
