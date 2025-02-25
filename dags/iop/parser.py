@@ -192,10 +192,17 @@ class IOPParser(IParser):
         except AttributeError:
             self.logger.error("No arXiv eprints found", dois=self.dois)
 
-    def _get_date_published(self, article):
-        date_element = article.find(
-            "front/article-meta/pub-date/[@pub-type='open-access']"
+    def _get_date_element(self, article):
+        date = (
+            article.find("front/article-meta/history/date[@date-type='published']")
+            or article.find("front/article-meta/history/date[@date-type='epub']")
+            or article.find("front/article-meta/history/pub-date[@pub-type='ppub']")
+            or article.find("front/article-meta/pub-date")
         )
+        return date
+
+    def _get_date_published(self, article):
+        date_element = self._get_date_element(article)
         return self._get_date(date_element)
 
     def _get_date(self, date):

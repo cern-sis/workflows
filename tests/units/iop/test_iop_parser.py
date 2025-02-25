@@ -169,7 +169,7 @@ def test_date_published(shared_datadir, parser):
     content = (shared_datadir / "all_fields.xml").read_text()
     article = ET.fromstring(content)
     parsed_article = parser._publisher_specific_parsing(article)
-    assert parsed_article["date_published"] == "2022-06-01"
+    assert parsed_article["date_published"] == "2022-08-01"
     assert parsed_article["journal_year"] == 2022
 
 
