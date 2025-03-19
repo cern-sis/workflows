@@ -3,8 +3,8 @@ import json
 import pendulum
 from airflow.decorators import dag, task
 from aps.parser import APSParser
-from aps.xml_parser import APSParserXML
 from aps.repository import APSRepository
+from aps.xml_parser import APSParserXML
 from common.enhancer import Enhancer
 from common.enricher import Enricher
 from common.exceptions import EmptyOutputFromPreviousTask
@@ -69,20 +69,20 @@ def aps_process_file():
         parsed_file["files"] = downloaded_files
         logger.info("Files populated", files=parsed_file["files"])
         return parsed_file
-    
+
     @task()
     def enrich(enhanced_file):
         if not enhanced_file:
             raise EmptyOutputFromPreviousTask("enhance")
         return enrich_aps(enhanced_file)
-    
+
     @task()
     def parse_xml(xml_file):
         parser = APSParserXML()
         parsed = parser.parse(xml_file)
 
         return parsed
-    
+
     @task
     def replace_authors(parsed_file, parsed_xml):
         replace_authors(parsed_file, parsed_xml)

@@ -1,17 +1,14 @@
-import pytest
-from pytest import fixture
-from airflow.models import DagBag
+import base64
+import json
+import xml.etree.ElementTree as ET
 
+import pytest
+from airflow.models import DagBag
+from aps.aps_api_client import APSApiClient
 from aps.aps_process_file import enhance_aps, enrich_aps, replace_authors
 from aps.parser import APSParser
 from aps.xml_parser import APSParserXML
-import xml.etree.ElementTree as ET
-
-import json
-import base64
-
-from aps.parser import APSParser
-from aps.aps_api_client import APSApiClient
+from pytest import fixture
 
 DAG_NAME = "aps_process_file"
 
@@ -74,7 +71,9 @@ def enriched_article(populated_file):
 
 @fixture()
 def parsed_article_xml(xml_parser, enriched_article):
-    return xml_parser._publisher_specific_parsing(ET.fromstring(enriched_article["files"]["xml"]))
+    return xml_parser._publisher_specific_parsing(
+        ET.fromstring(enriched_article["files"]["xml"])
+    )
 
 
 @fixture
@@ -100,7 +99,7 @@ def remove_ignored_fields(data, fields_to_ignore):
         return [remove_ignored_fields(item, fields_to_ignore) for item in data]
     else:
         return data
-    
+
 
 def encode_binary(data):
     if isinstance(data, bytes):
@@ -119,7 +118,9 @@ def test_process_file(enriched_article, parsed_article_xml, shared_datadir):
 
     serialized_output = json.dumps(complete_file_serializable, sort_keys=True)
 
-    expected_output = json.loads((shared_datadir / "expected_json_output.json").read_text())
+    expected_output = json.loads(
+        (shared_datadir / "expected_json_output.json").read_text()
+    )
 
     fields_to_ignore = ["acquisition_source", "record_creation_date"]
 
