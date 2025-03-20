@@ -37,7 +37,7 @@ class Enhancer:
     def __construct_titles(self, item, publisher):
         item["titles"] = [
             {
-                # removing footer notes (fn tag with its content)
+                # removing foote notes (fn tag with its content)
                 "title": FN_REGEX.sub("", item.pop("title", "")).strip(),
                 "subtitle": item.pop("subtitle", ""),
                 "source": publisher,
