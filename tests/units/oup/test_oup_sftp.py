@@ -1,8 +1,8 @@
-from oup.ftp_service import OUPFTPService
+from oup.ftp_service import OUPSFTPService
 
 
 def test_oup_sftp_path():
-    with OUPFTPService() as ftp:
+    with OUPSFTPService() as ftp:
         files = ftp.list_files()
     assert sorted(files) == sorted(
         [

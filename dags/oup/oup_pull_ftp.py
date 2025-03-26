@@ -1,7 +1,7 @@
 import common.pull_ftp as pull_ftp
 import pendulum
 from airflow.decorators import dag, task
-from oup.ftp_service import OUPFTPService
+from oup.ftp_service import OUPSFTPService
 from oup.repository import OUPRepository
 from structlog import get_logger
 
@@ -19,7 +19,7 @@ def oup_pull_ftp():
     logger = get_logger().bind(class_name="oup_pull_ftp")
 
     @task()
-    def migrate_from_ftp(ftp=OUPFTPService(), repo=OUPRepository(), **kwargs):
+    def migrate_from_ftp(ftp=OUPSFTPService(), repo=OUPRepository(), **kwargs):
         params = kwargs["params"]
         specific_files = (
             "filenames_pull" in params
