@@ -1,7 +1,7 @@
 import pytest
 from airflow.models import DagBag
 from common.pull_ftp import migrate_from_ftp
-from oup.ftp_service import OUPFTPService
+from oup.ftp_service import OUPSFTPService
 from oup.repository import OUPRepository
 from structlog import get_logger
 
@@ -36,9 +36,9 @@ def test_dag_migrate_from_FTP():
     repo = OUPRepository()
     repo.delete_all()
     assert len(repo.find_all()) == 0
-    with OUPFTPService() as ftp:
+    with OUPSFTPService() as sftp:
         migrate_from_ftp(
-            ftp,
+            sftp,
             repo,
             get_logger().bind(class_name="test_logger"),
             **{
