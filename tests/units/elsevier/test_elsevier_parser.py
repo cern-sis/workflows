@@ -1,3 +1,5 @@
+import json
+
 from common.enhancer import Enhancer
 from common.utils import parse_without_names_spaces
 from elsevier.parser import ElsevierParser
@@ -12566,3 +12568,14 @@ def test_elsevier_parsing(parsed_articles, expected, key):
                             aff["country"] = "UK"
 
             assert Enhancer()("Elsevier", article)[key] == expected_value
+
+
+def test_wrong_namespaces(shared_datadir, parser):
+    with open(shared_datadir / "wrong_namespaces.xml") as file:
+        article = parse_without_names_spaces(file.read())
+
+    parsed_article = parser._publisher_specific_parsing(article)
+
+    with open(shared_datadir / "no_namespaces_expected.json") as file:
+        expected_article = json.loads(file.read())
+    assert parsed_article == expected_article

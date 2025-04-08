@@ -178,14 +178,35 @@ def parse_to_ET_element(article):
     return ET.fromstring(preserve_cdata(article))
 
 
-def parse_without_names_spaces(xml):
-    if type(xml) == str:
-        it = ET.iterparse(StringIO(xml))
+def remove_xml_namespaces(xml_content_bytes):
+    if isinstance(xml_content_bytes, bytes):
+        xml_content = xml_content_bytes.decode("utf-8")
     else:
-        it = ET.iterparse(StringIO(xml.getvalue().decode("utf-8")))
-    for _, el in it:
-        el.tag = el.tag.rpartition("}")[-1]
-    root = it.root
+        xml_content = xml_content_bytes
+
+    cleaned_content = re.sub(r"<(/?)([^:>\s]+):([^>\s]+)", r"<\1\3", xml_content)
+
+    return cleaned_content
+
+
+def parse_without_names_spaces(xml):
+    try:
+        if type(xml) == str:
+            it = ET.iterparse(StringIO(xml))
+        else:
+            it = ET.iterparse(StringIO(xml.getvalue().decode("utf-8")))
+        for _, el in it:
+            el.tag = el.tag.rpartition("}")[-1]
+        root = it.root
+    except ET.ParseError:
+        xml = remove_xml_namespaces(xml)
+        if type(xml) == str:
+            it = ET.iterparse(StringIO(xml))
+        else:
+            it = ET.iterparse(StringIO(xml.getvalue().decode("utf-8")))
+        for _, el in it:
+            el.tag = el.tag.rpartition("}")[-1]
+        root = it.root
     return root
 
 
