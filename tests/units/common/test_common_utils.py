@@ -3,7 +3,7 @@ from unittest import mock
 
 import pytest
 import requests
-from common.utils import create_or_update_article
+from common.utils import create_or_update_article, remove_xml_namespaces
 
 
 @pytest.mark.vcr
@@ -215,3 +215,22 @@ def test_update_article():
 def test_create_or_update_article_with_error():
     with pytest.raises(requests.exceptions.HTTPError):
         create_or_update_article({})
+
+
+def test_remove_xml_namespaces(shared_datadir):
+    with open(shared_datadir / "xml_with_namespaces.xml") as file1:
+        with open(shared_datadir / "expected_xml_without_namespaces") as file2:
+            assert remove_xml_namespaces(file1.read()) == file2.read()
+
+
+def test_parse_without_names_spaces_wrong_namespaces(shared_datadir, monkeypatch):
+    import common.utils
+
+    mock_remove = mock.Mock(wraps=common.utils.remove_xml_namespaces)
+
+    monkeypatch.setattr(common.utils, "remove_xml_namespaces", mock_remove)
+
+    with open(shared_datadir / "wrong_namespaces.xml") as file:
+        common.utils.parse_without_names_spaces(file.read())
+
+    mock_remove.assert_called()

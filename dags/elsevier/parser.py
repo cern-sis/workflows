@@ -123,20 +123,23 @@ class ElsevierParser(IParser):
     def _get_authors(self, article):
         """Get the authors."""
         authors = []
-        author_group = article.find("head/author-group")
-        if author_group is None:
-            author_group = article.find("simple-head/author-group")
-        author_collab_group = article.find(
+
+        author_groups = article.findall("head/author-group")
+        if not author_groups:
+            author_groups = article.findall("simple-head/author-group")
+
+        author_collab_groups = article.findall(
             "head/author-group/collaboration/author-group"
         )
-        if author_collab_group is None:
-            author_collab_group = article.find(
+        if not author_collab_groups:
+            author_collab_groups = article.findall(
                 "simple-head/author-group/collaboration/author-group"
             )
-        for author_group_ in [author_group, author_collab_group]:
-            if not author_group_:
-                continue
-            authors += self._get_authors_details(author_group_)
+
+        for author_group in author_groups + author_collab_groups:
+            if author_group is not None:
+                authors += self._get_authors_details(author_group)
+
         return authors
 
     def _get_authors_details(self, author_group):
