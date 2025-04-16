@@ -214,7 +214,7 @@ class SpringerParser(IParser):
 
         for ref in referred_id.split():
             cleaned_aff = self._clean_aff(
-                author_group.find(f"./Affiliation[@ID='{ref}']")
+                author_group.find(f".//Affiliation[@ID='{ref}']")
             )
             if cleaned_aff not in affiliations:
                 affiliations.append(cleaned_aff)
@@ -235,6 +235,8 @@ class SpringerParser(IParser):
         authors = []
         for contrib in article.findall(
             "./Journal/Volume/Issue/Article/ArticleHeader/AuthorGroup/Author"
+        ) + article.findall(
+            "./Journal/Volume/Issue/Article/ArticleHeader/AuthorGroup/InstitutionalAuthor/Author"
         ):
             author = ObjectExtractor(
                 None,

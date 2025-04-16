@@ -122,50 +122,52 @@
                </ArticleInfo>
                <ArticleHeader>
                   <AuthorGroup>
-                     <Author AffiliationIDS="Aff1" ID="Au1">
-                        <AuthorName DisplayOrder="Western">
-                           <GivenName>Cédric</GivenName>
-                           <FamilyName>Lorcé</FamilyName>
-                        </AuthorName>
-                     </Author>
-                     <Author AffiliationIDS="Aff2" ID="Au2">
-                        <AuthorName DisplayOrder="Western">
-                           <GivenName>Hervé</GivenName>
-                           <FamilyName>Moutarde</FamilyName>
-                        </AuthorName>
-                     </Author>
-                     <Author AffiliationIDS="Aff1 Aff2" CorrespondingAffiliationID="Aff1" ID="Au3">
-                        <AuthorName DisplayOrder="Western">
-                           <GivenName>Arkadiusz</GivenName>
-                           <GivenName>P.</GivenName>
-                           <FamilyName>Trawiński</FamilyName>
-                        </AuthorName>
-                        <Contact>
-                           <Email>Arkadiusz.Trawinski@cea.fr</Email>
-                        </Contact>
-                     </Author>
-                     <Affiliation ID="Aff1">
-                        <OrgID Level="Institution" Type="ISNI">0000 0004 4910 6535</OrgID>
-                        <OrgID Level="Institution" Type="GRID">grid.460789.4</OrgID>
-                        <OrgDivision>Centre de Physique Théorique, École polytechnique, CNRS</OrgDivision>
-                        <OrgName>Université Paris-Saclay</OrgName>
-                        <OrgAddress>
-                           <Postcode>91128</Postcode>
-                           <City>Palaiseau</City>
-                           <Country Code="FR">France</Country>
-                        </OrgAddress>
-                     </Affiliation>
-                     <Affiliation ID="Aff2">
-                        <OrgID Level="Institution" Type="ISNI">0000 0004 4910 6535</OrgID>
-                        <OrgID Level="Institution" Type="GRID">grid.460789.4</OrgID>
-                        <OrgDivision>IRFU, CEA</OrgDivision>
-                        <OrgName>Université Paris-Saclay</OrgName>
-                        <OrgAddress>
-                           <Postcode>91191</Postcode>
-                           <City>Gif-sur-Yvette</City>
-                           <Country Code="FR">France</Country>
-                        </OrgAddress>
-                     </Affiliation>
+                      <InstitutionalAuthor>
+                        <Author AffiliationIDS="Aff1" ID="Au1">
+                           <AuthorName DisplayOrder="Western">
+                              <GivenName>Cédric</GivenName>
+                              <FamilyName>Lorcé</FamilyName>
+                           </AuthorName>
+                        </Author>
+                        <Author AffiliationIDS="Aff2" ID="Au2">
+                           <AuthorName DisplayOrder="Western">
+                              <GivenName>Hervé</GivenName>
+                              <FamilyName>Moutarde</FamilyName>
+                           </AuthorName>
+                        </Author>
+                        <Author AffiliationIDS="Aff1 Aff2" CorrespondingAffiliationID="Aff1" ID="Au3">
+                           <AuthorName DisplayOrder="Western">
+                              <GivenName>Arkadiusz</GivenName>
+                              <GivenName>P.</GivenName>
+                              <FamilyName>Trawiński</FamilyName>
+                           </AuthorName>
+                           <Contact>
+                              <Email>Arkadiusz.Trawinski@cea.fr</Email>
+                           </Contact>
+                        </Author>
+                        <Affiliation ID="Aff1">
+                           <OrgID Level="Institution" Type="ISNI">0000 0004 4910 6535</OrgID>
+                           <OrgID Level="Institution" Type="GRID">grid.460789.4</OrgID>
+                           <OrgDivision>Centre de Physique Théorique, École polytechnique, CNRS</OrgDivision>
+                           <OrgName>Université Paris-Saclay</OrgName>
+                           <OrgAddress>
+                              <Postcode>91128</Postcode>
+                              <City>Palaiseau</City>
+                              <Country Code="FR">France</Country>
+                           </OrgAddress>
+                        </Affiliation>
+                        <Affiliation ID="Aff2">
+                           <OrgID Level="Institution" Type="ISNI">0000 0004 4910 6535</OrgID>
+                           <OrgID Level="Institution" Type="GRID">grid.460789.4</OrgID>
+                           <OrgDivision>IRFU, CEA</OrgDivision>
+                           <OrgName>Université Paris-Saclay</OrgName>
+                           <OrgAddress>
+                              <Postcode>91191</Postcode>
+                              <City>Gif-sur-Yvette</City>
+                              <Country Code="FR">France</Country>
+                           </OrgAddress>
+                        </Affiliation>
+                     </InstitutionalAuthor>
                   </AuthorGroup>
                   <Abstract ID="Abs1" Language="En" OutputMedium="All">
                      <Heading>Abstract</Heading>
