@@ -21,11 +21,13 @@ from jsonschema import validate
 from springer.parser import SpringerParser
 from springer.repository import SpringerRepository
 from structlog import get_logger
+from common.utils import parse_without_names_spaces
 
 logger = get_logger()
 
 
 def process_xml(input):
+    input = parse_without_names_spaces(input)
     input = convert_html_subscripts_to_latex(input)
     input = convert_html_italics_to_latex(input)
     input = replace_cdata_format(input)
