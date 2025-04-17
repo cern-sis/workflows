@@ -15,7 +15,11 @@ from common.enhancer import Enhancer
 from common.enricher import Enricher
 from common.exceptions import EmptyOutputFromPreviousTask
 from common.scoap3_s3 import Scoap3Repository
-from common.utils import create_or_update_article, upload_json_to_s3
+from common.utils import (
+    create_or_update_article,
+    remove_xml_namespaces,
+    upload_json_to_s3,
+)
 from inspire_utils.record import get_value
 from jsonschema import validate
 from springer.parser import SpringerParser
@@ -26,6 +30,7 @@ logger = get_logger()
 
 
 def process_xml(input):
+    input = remove_xml_namespaces(input)
     input = convert_html_subscripts_to_latex(input)
     input = convert_html_italics_to_latex(input)
     input = replace_cdata_format(input)

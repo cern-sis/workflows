@@ -1,3 +1,4 @@
+import html
 import re
 
 from bleach import clean
@@ -17,22 +18,29 @@ def convert_html_subscripts_to_latex(input):
 
 
 def clean_inline_expressions(input):
+    def replace_tex(match):
+        content = match.group(1)
+        return html.escape(content)  # escape <, >, &, etc.
+
+    # Replace TEX CDATA safely
     input = re.sub(
-        r"<InlineEquation.*?>(.*?)</InlineEquation>", r"\1", input, flags=re.DOTALL
-    )
-    input = re.sub(
-        r"<EquationSource Format=\"TEX\"><!\[CDATA\[(.*?)\]\]></EquationSource>",
-        r"\1",
+        r'<EquationSource Format="TEX"><!\[CDATA\[(.*?)\]\]></EquationSource>',
+        replace_tex,
         input,
+        flags=re.DOTALL,
     )
+
     input = re.sub(
         r"<EquationSource Format=\"MATHML\">.*?</EquationSource>",
         "",
         input,
         flags=re.DOTALL,
     )
-    input = input.replace("\n", "").replace("\r", "")
 
+    input = re.sub(
+        r"<InlineEquation.*?>(.*?)</InlineEquation>", r"\1", input, flags=re.DOTALL
+    )
+    input = input.replace("\n", "").replace("\r", "")
     return input
 
 

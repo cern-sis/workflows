@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Publisher
+  PUBLIC "-//Springer-Verlag//DTD A++ V2.4//EN" "http://devel.springer.de/A++/V2.4/DTD/A++V2.4.dtd">
+<Publisher>
+   <PublisherInfo>
+      <PublisherName>Springer Berlin Heidelberg</PublisherName>
+      <PublisherLocation>Berlin/Heidelberg</PublisherLocation>
+      <PublisherImprintName>Springer</PublisherImprintName>
+   </PublisherInfo>
+   <Journal OutputMedium="Online">
+      <JournalInfo JournalProductType="NonStandardArchiveJournal" NumberingStyle="ContentOnly"
+                   OutputMedium="Online">
+         <JournalID>10052</JournalID>
+         <JournalDOI>10.1007/10052.1434-6052</JournalDOI>
+         <JournalElectronicISSN>1434-6052</JournalElectronicISSN>
+         <JournalSPIN>30312819</JournalSPIN>
+         <JournalTitle>The European Physical Journal C</JournalTitle>
+         <JournalSubTitle>Particles and Fields</JournalSubTitle>
+         <JournalAbbreviatedTitle>Eur. Phys. J. C</JournalAbbreviatedTitle>
+         <JournalSubjectGroup>
+            <JournalSubject Code="SCP" Type="Primary">Physics</JournalSubject>
+            <JournalSubject Code="SCP23029" Priority="1" Type="Secondary">Elementary Particles, Quantum Field Theory</JournalSubject>
+            <JournalSubject Code="SCP23010" Priority="2" Type="Secondary">Nuclear Physics, Heavy Ions, Hadrons</JournalSubject>
+            <JournalSubject Code="SCP19048" Priority="3" Type="Secondary">Quantum Field Theories, String Theory</JournalSubject>
+            <JournalSubject Code="SCP31040" Priority="4" Type="Secondary">Measurement Science and Instrumentation</JournalSubject>
+            <JournalSubject Code="SCP22006" Priority="5" Type="Secondary">Astronomy, Astrophysics and Cosmology</JournalSubject>
+            <JournalSubject Code="SC113000" Priority="6" Type="Secondary">Nuclear Energy</JournalSubject>
+            <SubjectCollection Code="SC12">Physics and Astronomy</SubjectCollection>
+         </JournalSubjectGroup>
+      </JournalInfo>
+      <Volume OutputMedium="Online">
+         <VolumeInfo OutputMedium="Online" TocLevels="0" VolumeType="Regular">
+            <VolumeIDStart>85</VolumeIDStart>
+            <VolumeIDEnd>85</VolumeIDEnd>
+            <VolumeIssueCount>12</VolumeIssueCount>
+         </VolumeInfo>
+         <Issue IssueType="Regular" OutputMedium="Online">
+            <IssueInfo IssueType="Regular" OutputMedium="Online" TocLevels="0">
+               <IssueIDStart>4</IssueIDStart>
+               <IssueIDEnd>4</IssueIDEnd>
+               <IssueArticleCount>60</IssueArticleCount>
+               <IssueHistory>
+                  <CoverDate>
+                     <Year>2025</Year>
+                     <Month>4</Month>
+                  </CoverDate>
+                  <PricelistYear>2025</PricelistYear>
+               </IssueHistory>
+               <IssueCopyright>
+                  <CopyrightHolderName>EDP Sciences, Societa Italiana di Fisica (SIF) and Springer-Verlag GmbH, DE, part of Springer Nature</CopyrightHolderName>
+                  <CopyrightYear>2025</CopyrightYear>
+               </IssueCopyright>
+            </IssueInfo>
+            <Article ID="s10052-025-14118-9">
+               <ArticleInfo ArticleType="OriginalPaper" ContainsESM="No" Language="En"
+                            NumberingStyle="ContentOnly"
+                            OutputMedium="Online"
+                            TocLevels="0">
+                  <ArticleID>14118</ArticleID>
+                  <ArticleExternalID Type="arXiv">2412.08205</ArticleExternalID>
+                  <ArticleDOI>10.1140/epjc/s10052-025-14118-9</ArticleDOI>
+                  <ArticleCitationID>425</ArticleCitationID>
+                  <ArticleSequenceNumber>60</ArticleSequenceNumber>
+                  <ArticleTitle Language="En" OutputMedium="All">Quasi-normal modes of slowly-rotating Johannsen black holes</ArticleTitle>
+                  <ArticleCategory>Regular Article - Theoretical Physics</ArticleCategory>
+                  <ArticleSubCategory>Theoretical Physics</ArticleSubCategory>
+                  <ArticleFirstPage>1</ArticleFirstPage>
+                  <ArticleLastPage>16</ArticleLastPage>
+                  <ArticleHistory>
+                     <RegistrationDate>
+                        <Year>2025</Year>
+                        <Month>3</Month>
+                        <Day>24</Day>
+                     </RegistrationDate>
+                     <Received>
+                        <Year>2025</Year>
+                        <Month>1</Month>
+                        <Day>5</Day>
+                     </Received>
+                     <Accepted>
+                        <Year>2025</Year>
+                        <Month>3</Month>
+                        <Day>23</Day>
+                     </Accepted>
+                     <OnlineDate>
+                        <Year>2025</Year>
+                        <Month>4</Month>
+                        <Day>16</Day>
+                     </OnlineDate>
+                  </ArticleHistory>
+                  <ArticleFundingInformation>
+                     <Fund>
+                        <FunderName FundRefID="http://dx.doi.org/10.13039/100007219">Natural Science Foundation of Shanghai Municipality</FunderName>
+                        <GrantNumber Type="FundRef">22ZR1403400</GrantNumber>
+                     </Fund>
+                     <Fund>
+                        <FunderName FundRefID="http://dx.doi.org/10.13039/501100001809">National Natural Science Foundation of China</FunderName>
+                        <GrantNumber Type="FundRef">12250610185</GrantNumber>
+                        <GrantNumber Type="FundRef">12261131497</GrantNumber>
+                     </Fund>
+                  </ArticleFundingInformation>
+                  <ArticleCopyright>
+                     <CopyrightHolderName>The Author(s)</CopyrightHolderName>
+                     <CopyrightYear>2025</CopyrightYear>
+                     <License SubType="CC BY" Type="OpenAccess" Version="4.0">
+                        <SimplePara>
+                           <Emphasis Type="Bold">Open Access</Emphasis> This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit <ExternalRef>
+                              <RefSource>http://creativecommons.org/licenses/by/4.0/</RefSource>
+                              <RefTarget Address="http://creativecommons.org/licenses/by/4.0/" TargetType="URL"/>
+                           </ExternalRef>.</SimplePara>
+                        <SimplePara>Funded by SCOAP<Superscript>3</Superscript>.</SimplePara>
+                     </License>
+                  </ArticleCopyright>
+                  <ArticleGrants Type="OpenChoice">
+                     <MetadataGrant Grant="OpenAccess"/>
+                     <AbstractGrant Grant="OpenAccess"/>
+                     <BodyPDFGrant Grant="OpenAccess"/>
+                     <BodyHTMLGrant Grant="OpenAccess"/>
+                     <BibliographyGrant Grant="OpenAccess"/>
+                     <ESMGrant Grant="OpenAccess"/>
+                  </ArticleGrants>
+                  <ArticleContext>
+                     <JournalID>10052</JournalID>
+                     <VolumeIDStart>85</VolumeIDStart>
+                     <VolumeIDEnd>85</VolumeIDEnd>
+                     <IssueIDStart>4</IssueIDStart>
+                     <IssueIDEnd>4</IssueIDEnd>
+                  </ArticleContext>
+               </ArticleInfo>
+               <ArticleHeader>
+                  <AuthorGroup>
+                     <Author AffiliationIDS="Aff1" ID="Au1">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Yuhao</GivenName>
+                           <FamilyName>Guo</FamilyName>
+                        </AuthorName>
+                        <Contact>
+                           <Email>yhguo21@m.fudan.edu.cn</Email>
+                        </Contact>
+                     </Author>
+                     <Author AffiliationIDS="Aff1" ID="Au2" ORCID="http://orcid.org/0000-0003-3402-7212">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Swarnim</GivenName>
+                           <FamilyName>Shashank</FamilyName>
+                        </AuthorName>
+                        <Contact>
+                           <Email>swarnim@fudan.edu.cn</Email>
+                        </Contact>
+                     </Author>
+                     <Author AffiliationIDS="Aff1 Aff2" CorrespondingAffiliationID="Aff2" ID="Au3"
+                             ORCID="http://orcid.org/0000-0002-3180-9502">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Cosimo</GivenName>
+                           <FamilyName>Bambi</FamilyName>
+                        </AuthorName>
+                        <Contact>
+                           <Email>bambi@fudan.edu.cn</Email>
+                        </Contact>
+                     </Author>
+                     <Affiliation ID="Aff1">
+                        <OrgID Level="Institution" Type="ROR">https://ror.org/013q1eq08</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.8547.e</OrgID>
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 0125 2443</OrgID>
+                        <OrgDivision>Center for Astronomy and Astrophysics, Center for Field Theory and Particle Physics, and Department of Physics</OrgDivision>
+                        <OrgName>Fudan University</OrgName>
+                        <OrgAddress>
+                           <City>Shanghai</City>
+                           <Postcode>200438</Postcode>
+                           <Country Code="CN">China</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff2">
+                        <OrgID Level="Institution" Type="ROR">https://ror.org/035v3tr79</OrgID>
+                        <OrgID Level="Institution" Type="ISNI">0000 0005 0985 3584</OrgID>
+                        <OrgDivision>School of Natural Sciences and Humanities</OrgDivision>
+                        <OrgName>New Uzbekistan University</OrgName>
+                        <OrgAddress>
+                           <Postcode>100007</Postcode>
+                           <City>Tashkent</City>
+                           <Country Code="UZ">Uzbekistan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                  </AuthorGroup>
+                  <Abstract ID="Abs1" Language="En" OutputMedium="All">
+                     <Heading>Abstract</Heading>
+                     <Para ID="Par1">The detection of gravitational waves with ground-based laser interferometers has opened a new window to test and constrain General Relativity (GR) in the strong, dynamical, and non-linear regime. In this paper, we follow an agnostic approach and we study the quasi-normal modes of gravitational perturbations of Johannsen black holes under the assumptions of the validity of the Einstein Equations and of low values of the black hole spin parameter and deformation parameters. We find that the deformation parameter <InlineEquation ID="IEq1">
+                           <EquationSource Format="TEX"><![CDATA[$$\alpha _{13}$$]]></EquationSource>
+                           <EquationSource Format="MATHML">
+                              <math xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <msub>
+                                    <mi>α</mi>
+                                    <mn>13</mn>
+                                 </msub>
+                              </math>
+                           </EquationSource>
+                        </InlineEquation> has a stronger impact on the quasi-normal modes than the other leading order deformation parameters (<InlineEquation ID="IEq2">
+                           <EquationSource Format="TEX"><![CDATA[$$\alpha _{22}$$]]></EquationSource>
+                           <EquationSource Format="MATHML">
+                              <math xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <msub>
+                                    <mi>α</mi>
+                                    <mn>22</mn>
+                                 </msub>
+                              </math>
+                           </EquationSource>
+                        </InlineEquation>, <InlineEquation ID="IEq3">
+                           <EquationSource Format="TEX"><![CDATA[$$\alpha _{52}$$]]></EquationSource>
+                           <EquationSource Format="MATHML">
+                              <math xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <msub>
+                                    <mi>α</mi>
+                                    <mn>52</mn>
+                                 </msub>
+                              </math>
+                           </EquationSource>
+                        </InlineEquation>, and <InlineEquation ID="IEq4">
+                           <EquationSource Format="TEX"><![CDATA[$$\epsilon _{3}$$]]></EquationSource>
+                           <EquationSource Format="MATHML">
+                              <math xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <msub>
+                                    <mi>ϵ</mi>
+                                    <mn>3</mn>
+                                 </msub>
+                              </math>
+                           </EquationSource>
+                        </InlineEquation>). We derive a fitting formula for the fundamental modes with <InlineEquation ID="IEq5">
+                           <EquationSource Format="TEX"><![CDATA[$$l=2$$]]></EquationSource>
+                           <EquationSource Format="MATHML">
+                              <math xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <mrow>
+                                    <mi>l</mi>
+                                    <mo>=</mo>
+                                    <mn>2</mn>
+                                 </mrow>
+                              </math>
+                           </EquationSource>
+                        </InlineEquation> and <InlineEquation ID="IEq6">
+                           <EquationSource Format="TEX"><![CDATA[$$l=3$$]]></EquationSource>
+                           <EquationSource Format="MATHML">
+                              <math xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <mrow>
+                                    <mi>l</mi>
+                                    <mo>=</mo>
+                                    <mn>3</mn>
+                                 </mrow>
+                              </math>
+                           </EquationSource>
+                        </InlineEquation> for the deformation parameter <InlineEquation ID="IEq7">
+                           <EquationSource Format="TEX"><![CDATA[$$\alpha _{13}$$]]></EquationSource>
+                           <EquationSource Format="MATHML">
+                              <math xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <msub>
+                                    <mi>α</mi>
+                                    <mn>13</mn>
+                                 </msub>
+                              </math>
+                           </EquationSource>
+                        </InlineEquation> valid in the slow rotation approximation (<InlineEquation ID="IEq8">
+                           <EquationSource Format="TEX"><![CDATA[$$a_* < 0.4$$]]></EquationSource>
+                           <EquationSource Format="MATHML">
+                              <math xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <mrow>
+                                    <mmultiscripts>
+                                       <mi>a</mi>
+                                       <mrow>
+                                          <mrow/>
+                                          <mo>∗</mo>
+                                       </mrow>
+                                       <mrow/>
+                                    </mmultiscripts>
+                                    <mo>&lt;</mo>
+                                    <mn>0.4</mn>
+                                 </mrow>
+                              </math>
+                           </EquationSource>
+                        </InlineEquation>). Finally, we constrain <InlineEquation ID="IEq9">
+                           <EquationSource Format="TEX"><![CDATA[$$\alpha _{13}$$]]></EquationSource>
+                           <EquationSource Format="MATHML">
+                              <math xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <msub>
+                                    <mi>α</mi>
+                                    <mn>13</mn>
+                                 </msub>
+                              </math>
+                           </EquationSource>
+                        </InlineEquation> from the event GW170104; within our analysis, we find that the data of GW170104 are consistent with the predictions of GR.
+</Para>
+                  </Abstract>
+               </ArticleHeader>
+               <NoBody/>
+            </Article>
+         </Issue>
+      </Volume>
+   </Journal>
+</Publisher>

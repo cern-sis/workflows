@@ -37,6 +37,7 @@ def test_weird_titles(parsed_articles):
             "Higgs doublet model with inverse seesaw neutrinos",
             " $$\\Lambda $$ polarization in very high energy heavy ion collisions as a probe of the quark–gluon plasma formation and properties",
             "A strategy for a general search for new phenomena using data-derived signal regions and its application within the ATLAS experiment",
+            "Quasi-normal modes of slowly-rotating Johannsen black holes",
             "Revisiting the mechanical properties of the nucleon",
             "Symmetry breaking in quantum curves and super Chern-Simons matrix models",
         ]
@@ -342,6 +343,15 @@ def test_abstract(parsed_articles):
         "for 3.2 fb $$^{-1}$$ of proton–proton collision data at a centre-of-mass energy of 13 $$\\text {TeV}$$ collected with the ATLAS detector "
         "at the LHC in 2015, in which more than 700 event classes and more than $$10^5$$ regions have been analysed. No significant "
         "deviations are found and consequently no data-derived signal regions for a follow-up analysis have been defined.",
+        "The detection of gravitational waves with ground-based laser interferometers has opened a new window to test and constrain"
+        " General Relativity (GR) in the strong, dynamical, and non-linear regime. In this paper, we follow an agnostic approach and"
+        " we study the quasi-normal modes of gravitational perturbations of Johannsen black holes under the assumptions of the validity"
+        " of the Einstein Equations and of low values of the black hole spin parameter and deformation parameters. We find that the"
+        " deformation parameter $$\\alpha _{13}$$ has a stronger impact on the quasi-normal modes than the other leading order deformation"
+        " parameters ( $$\\alpha _{22}$$ , $$\\alpha _{52}$$ , and $$\\epsilon _{3}$$ ). We derive a fitting formula for the fundamental"
+        " modes with $$l=2$$ and $$l=3$$ for the deformation parameter $$\\alpha _{13}$$ valid in the slow rotation approximation"
+        " ( $$a_* < 0.4$$ ). Finally, we constrain $$\\alpha _{13}$$ from the event GW170104; within our analysis, we find that"
+        " the data of GW170104 are consistent with the predictions of GR.",
         "The lepton flavor violating decays $$h\\rightarrow e_b^\\pm "
         "e_a^\\mp $$ , $$Z\\rightarrow e_b^\\pm e_a^\\mp $$ , and "
         "$$e_b\\rightarrow e_a \\gamma $$ will be discussed in the "
