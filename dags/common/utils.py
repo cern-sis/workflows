@@ -194,11 +194,13 @@ def parse_without_names_spaces(xml):
         if type(xml) == str:
             it = ET.iterparse(StringIO(xml))
         else:
-            it = ET.iterparse(StringIO(xml.getvalue().decode("utf-8")))
+            it = ET.iterparse(xml, events=("start", "end"))
         for _, el in it:
             el.tag = el.tag.rpartition("}")[-1]
         root = it.root
     except ET.ParseError:
+        if isinstance(xml, io.BytesIO):
+            xml = xml.getvalue().decode("utf-8")
         xml = remove_xml_namespaces(xml)
         if type(xml) == str:
             it = ET.iterparse(StringIO(xml))

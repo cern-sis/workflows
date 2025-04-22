@@ -1,4 +1,5 @@
 import json
+from io import BytesIO
 
 from common.enhancer import Enhancer
 from common.utils import parse_without_names_spaces
@@ -20,10 +21,13 @@ def articles(shared_datadir):
         "main_rjjlr.xml",
         "j.physletb.2023.138109.xml",
         "main_simple_head.xml",
+        "main-3.xml",
     ]
     for filename in file_names:
-        with open(shared_datadir / filename) as file:
-            articles.append(parse_without_names_spaces(file.read()))
+        with open(shared_datadir / filename, "rb") as file:
+            xml_content_bytes = BytesIO(file.read())
+            xml = parse_without_names_spaces(xml_content_bytes)
+            articles.append(xml)
     return articles
 
 
@@ -50,6 +54,7 @@ def enhanced_articles(parser, parsed_articles):
                 ["10.1016/j.physletb.2022.137649"],
                 ["10.1016/j.physletb.2023.138109"],
                 ["10.1016/j.physletb.2025.139258"],
+                ["10.1016/j.physletb.2025.139355"],
             ],
             "dois",
             id="test_dois",
@@ -12571,8 +12576,9 @@ def test_elsevier_parsing(parsed_articles, expected, key):
 
 
 def test_multiple_author_groups(shared_datadir, parser):
-    with open(shared_datadir / "multiple_author_groups.xml") as file:
-        article = parse_without_names_spaces(file.read())
+    with open(shared_datadir / "multiple_author_groups.xml", "rb") as file:
+        xml_content_bytes = BytesIO(file.read())
+        article = parse_without_names_spaces(xml_content_bytes)
 
     parsed_multiple_author_groups_articles = parser._publisher_specific_parsing(article)
 
@@ -12582,10 +12588,11 @@ def test_multiple_author_groups(shared_datadir, parser):
 
 
 def test_wrong_namespaces(shared_datadir, parser):
-    with open(shared_datadir / "wrong_namespaces.xml") as file:
-        article = parse_without_names_spaces(file.read())
+    with open(shared_datadir / "wrong_namespaces.xml", "rb") as file:
+        xml_content_bytes = BytesIO(file.read())
+        article = parse_without_names_spaces(xml_content_bytes)
 
-    parsed_article = parser._publisher_specific_parsing(article)
+        parsed_article = parser._publisher_specific_parsing(article)
 
     with open(shared_datadir / "no_namespaces_expected.json") as file:
         expected_article = json.loads(file.read())
