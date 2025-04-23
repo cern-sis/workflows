@@ -28,6 +28,47 @@ def parsed_articles(parser, articles):
     return [parser._publisher_specific_parsing(article) for article in articles]
 
 
+def test_equation_and_italic_removal():
+    input_expected = [
+        (
+            """
+            <ArticleTitle Language="En" OutputMedium="All">
+                Measurement of the inclusive branching fractions for
+                <InlineEquation ID="IEq1">
+                    <EquationSource Format="TEX"><![CDATA[$${B}_{s}^{0}$$]]></EquationSource>
+                </InlineEquation>
+                decays into <Emphasis Type="Italic">D</Emphasis> mesons via hadronic tagging
+            </ArticleTitle>
+        """,
+            """
+            <ArticleTitle Language="En" OutputMedium="All"> Measurement of the inclusive branching fractions for $${B}_{s}^{0}$$ decays into $\\textit{D}$ mesons via hadronic tagging </ArticleTitle>
+        """.replace(
+                "\n", ""
+            ).strip(),
+        ),
+        (
+            """
+        <ArticleTitle Language="En" OutputMedium="All">
+            Measurement of the inclusive branching fractions for
+            <InlineEquation ID="IEq1">
+                <EquationSource Format="TEX">$${B}_{s}^{0}$$</EquationSource>
+            </InlineEquation>
+            decays into <Emphasis Type="Italic">D</Emphasis> mesons via hadronic tagging
+        </ArticleTitle>
+        """,
+            """
+            <ArticleTitle Language="En" OutputMedium="All"> Measurement of the inclusive branching fractions for $${B}_{s}^{0}$$ decays into $\\textit{D}$ mesons via hadronic tagging </ArticleTitle>
+        """.replace(
+                "\n", ""
+            ).strip(),
+        ),
+    ]
+
+    for input_str, expected in input_expected:
+        result = process_xml(input_str)
+        assert result == expected
+
+
 def test_weird_titles(parsed_articles):
     parsed_titles = sorted([a.get("title") for a in parsed_articles])
     expected_results = sorted(
@@ -37,6 +78,7 @@ def test_weird_titles(parsed_articles):
             "Higgs doublet model with inverse seesaw neutrinos",
             " $$\\Lambda $$ polarization in very high energy heavy ion collisions as a probe of the quark–gluon plasma formation and properties",
             "A strategy for a general search for new phenomena using data-derived signal regions and its application within the ATLAS experiment",
+            "Measurement of the inclusive branching fractions for $${B}_{s}^{0}$$ decays into $\\textit{D}$ mesons via hadronic tagging",
             "Quasi-normal modes of slowly-rotating Johannsen black holes",
             "Revisiting the mechanical properties of the nucleon",
             "Symmetry breaking in quantum curves and super Chern-Simons matrix models",
@@ -352,6 +394,19 @@ def test_abstract(parsed_articles):
         " modes with $$l=2$$ and $$l=3$$ for the deformation parameter $$\\alpha _{13}$$ valid in the slow rotation approximation"
         " ( $$a_* < 0.4$$ ). Finally, we constrain $$\\alpha _{13}$$ from the event GW170104; within our analysis, we find that"
         " the data of GW170104 are consistent with the predictions of GR.",
+        "We report measurements of the absolute branching fractions $$\\mathcal{B}\\left({B}_{s}^{0}\\to {D}_{s}^{\\pm }X\\right)$$ , "
+        "$$\\mathcal{B}\\left({B}_{s}^{0}\\to {D}^{0}/{\\overline{D} }^{0}X\\right)$$ , and $$\\mathcal{B}\\left({B}_{s}^{0}\\to {D}^{\\pm "
+        "}X\\right)$$ , where the latter is measured for the first time. The results are based on a 121.4 fb data sample collected "
+        "at the Υ(10860) resonance by the Belle detector at the KEKB asymmetric-energy $\\textit{e}$ $\\textit{e}$ collider. We "
+        "reconstruct one $${B}_{s}^{0}$$ meson in $${e}^{+}{e}^{-}\\to \\Upsilon\\left(10860\\right)\\to {B}_{s}^{*}{\\overline{B} }_{s}^{*}$$"
+        " events and measure yields of $${D}_{s}^{+}$$ , $\\textit{D}$ , and $\\textit{D}$ mesons in the rest of the event. We obtain"
+        " $$\\mathcal{B}\\left({B}_{s}^{0}\\to {D}_{s}^{\\pm }X\\right)=\\left(68.6\\pm 7.2\\pm 4.0\\right)\\%$$ , $$\\mathcal{B}\\le"
+        "ft({B}_{s}^{0}\\to {D}^{0}/{\\overline{D} }^{0}X\\right)=\\left(21.5\\pm 6.1\\pm 1.8\\right)\\%$$ , and $$\\mathcal{B}\\le"
+        "ft({B}_{s}^{0}\\to {D}^{\\pm }X\\right)=\\left(12.6\\pm 4.6\\pm 1.3\\right)\\%$$ , where the first uncertainty is statis"
+        "tical and the second is systematic. Averaging with previous Belle measurements gives $$\\mathcal{B}\\left({B}_{s}"
+        "^{0}\\to {D}_{s}^{\\pm }X\\right)=\\left(63.4\\pm 4.5\\pm 2.2\\right)\\%$$ and $$\\mathcal{B}\\left({B}_{s}^{0}\\to {D}^{0}/{"
+        "\\overline{D} }^{0}X\\right)=\\left(23.9\\pm 4.1\\pm 1.8\\right)\\%$$ . For the $${B}_{s}^{0}$$ production fraction at the"
+        " Υ(10860), we find $${f}_{s}=\\left({21.4}_{-1.7}^{+1.5}\\right)\\%$$ .",
         "The lepton flavor violating decays $$h\\rightarrow e_b^\\pm "
         "e_a^\\mp $$ , $$Z\\rightarrow e_b^\\pm e_a^\\mp $$ , and "
         "$$e_b\\rightarrow e_a \\gamma $$ will be discussed in the "
@@ -472,3 +527,68 @@ def test_article_with_cleaned_orcid(article_with_orcid):
     ]
 
     assert expected_output == article_with_orcid["authors"]
+
+
+@fixture
+def article_with_no_affiliations(parser, datadir):
+    with open(datadir / "country_issue.xml") as file:
+        xml = process_xml(file.read())
+        yield parser._generic_parsing(
+            parser._publisher_specific_parsing(ET.fromstring(xml))
+        )
+
+
+def test_article_with_no_affiliations(article_with_no_affiliations):
+    expected_output = [
+        {
+            "orcid": "0000-0001-7742-2998",
+            "full_name": "Bettarini, S.",
+            "surname": "Bettarini",
+            "given_names": "S.",
+        },
+        {
+            "orcid": "0000-0001-8857-8621",
+            "full_name": "Bhardwaj, V.",
+            "surname": "Bhardwaj",
+            "given_names": "V.",
+        },
+        {
+            "orcid": "0000-0001-6254-3594",
+            "full_name": "Bhuyan, B.",
+            "surname": "Bhuyan",
+            "given_names": "B.",
+        },
+        {
+            "orcid": "0000-0002-1524-6236",
+            "full_name": "Bianchi, F.",
+            "surname": "Bianchi",
+            "given_names": "F.",
+        },
+        {
+            "orcid": "0009-0003-0192-9073",
+            "full_name": "Bierwirth, L.",
+            "surname": "Bierwirth",
+            "given_names": "L.",
+        },
+        {
+            "orcid": "0000-0003-1449-6986",
+            "full_name": "Bilka, T.",
+            "surname": "Bilka",
+            "given_names": "T.",
+        },
+        {
+            "orcid": "0000-0002-7543-3471",
+            "full_name": "Biswas, D.",
+            "surname": "Biswas",
+            "given_names": "D.",
+        },
+        {
+            "orcid": "0000-0001-5735-8386",
+            "full_name": "Bobrov, A.",
+            "surname": "Bobrov",
+            "given_names": "A.",
+        },
+    ]
+
+    for d in expected_output:
+        assert d in article_with_no_affiliations["authors"]

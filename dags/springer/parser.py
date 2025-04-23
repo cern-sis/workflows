@@ -188,9 +188,11 @@ class SpringerParser(IParser):
             if node is not None
         ]
         country = country_node.text if country_node is not None else None
-        result.append(country)
+        org_name = org_name_node.text if org_name_node is not None else None
+        if country is not None:
+            result.append(country)
 
-        return ", ".join(result), org_name_node.text, country, ror
+        return ", ".join(result), org_name, country, ror
 
     def _get_published_date(self, article):
         year = article.find(
@@ -227,6 +229,7 @@ class SpringerParser(IParser):
                 **({"ror": ror} if ror else {}),
             }
             for aff, org, country, ror in affiliations
+            if any((aff, org))
         ]
 
         return mapped_affiliations

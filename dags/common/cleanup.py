@@ -20,9 +20,8 @@ def convert_html_subscripts_to_latex(input):
 def clean_inline_expressions(input):
     def replace_tex(match):
         content = match.group(1)
-        return html.escape(content)  # escape <, >, &, etc.
+        return html.escape(content)
 
-    # Replace TEX CDATA safely
     input = re.sub(
         r'<EquationSource Format="TEX"><!\[CDATA\[(.*?)\]\]></EquationSource>',
         replace_tex,
@@ -31,7 +30,14 @@ def clean_inline_expressions(input):
     )
 
     input = re.sub(
-        r"<EquationSource Format=\"MATHML\">.*?</EquationSource>",
+        r'<EquationSource\s+Format="TEX">(.*?)</EquationSource>',
+        replace_tex,
+        input,
+        flags=re.DOTALL,
+    )
+
+    input = re.sub(
+        r'<EquationSource Format="MATHML">.*?</EquationSource>',
         "",
         input,
         flags=re.DOTALL,
@@ -40,12 +46,17 @@ def clean_inline_expressions(input):
     input = re.sub(
         r"<InlineEquation.*?>(.*?)</InlineEquation>", r"\1", input, flags=re.DOTALL
     )
-    input = input.replace("\n", "").replace("\r", "")
+
+    input = input.replace("\n", "").replace("\r", "").strip()
+
     return input
 
 
 def convert_html_italics_to_latex(input):
     input = re.sub(r"<italic\b[^>]*>(.*?)</italic>", r"$\\textit{\1}$", input)
+    input = re.sub(
+        r'<Emphasis\s+Type="Italic">(.*?)</Emphasis>', r"$\\textit{\1}$", input
+    )
     return input
 
 
