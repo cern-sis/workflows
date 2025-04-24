@@ -223,8 +223,8 @@ class SpringerParser(IParser):
 
         mapped_affiliations = [
             {
-                "value": clean_text(aff),
-                "organization": clean_text(org),
+                **({"value": clean_text(aff)} if aff else {}),
+                **({"organization": clean_text(org)} if org else {}),
                 **({"country": country} if country else {}),
                 **({"ror": ror} if ror else {}),
             }

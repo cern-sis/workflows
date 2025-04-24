@@ -81,6 +81,7 @@ def test_weird_titles(parsed_articles):
             "Measurement of the inclusive branching fractions for $${B}_{s}^{0}$$ decays into $\\textit{D}$ mesons via hadronic tagging",
             "Quasi-normal modes of slowly-rotating Johannsen black holes",
             "Revisiting the mechanical properties of the nucleon",
+            "Spin one matter fields",
             "Symmetry breaking in quantum curves and super Chern-Simons matrix models",
         ]
     )
@@ -394,6 +395,14 @@ def test_abstract(parsed_articles):
         " modes with $$l=2$$ and $$l=3$$ for the deformation parameter $$\\alpha _{13}$$ valid in the slow rotation approximation"
         " ( $$a_* < 0.4$$ ). Finally, we constrain $$\\alpha _{13}$$ from the event GW170104; within our analysis, we find that"
         " the data of GW170104 are consistent with the predictions of GR.",
+        "It is shown how spin one vector matter fields can be coupled to a Yang–Mills theory. Such matter fields are defined as "
+        "belonging to a representation $\\textit{R}$ of this Yang–Mills gauge algebra $$\\mathfrak {g}$$ . It is also required that"
+        " these fields together with the original gauge fields be the gauge fields of an embedding total gauge algebra"
+        " $$\\mathfrak {g}_{\\textrm{tot}}$$ . The existence of a physically consistent Yang–Mills action for the total algebra"
+        " is finally required. These conditions are rather restrictive, as shown in some examples: non-trivial solutions may"
+        " or may not exist depending on the choice of the original algebra $$\\mathfrak {g}$$ and of the representation $\\textit{R}$."
+        " Some examples are shown, the case of the initial algebra $$\\mathfrak {g}$$ = $$\\mathfrak {u}(1)\\oplus \\mathfrak {su}(2)$$ "
+        "being treated in more detail.",
         "We report measurements of the absolute branching fractions $$\\mathcal{B}\\left({B}_{s}^{0}\\to {D}_{s}^{\\pm }X\\right)$$ , "
         "$$\\mathcal{B}\\left({B}_{s}^{0}\\to {D}^{0}/{\\overline{D} }^{0}X\\right)$$ , and $$\\mathcal{B}\\left({B}_{s}^{0}\\to {D}^{\\pm "
         "}X\\right)$$ , where the latter is measured for the first time. The results are based on a 121.4 fb data sample collected "

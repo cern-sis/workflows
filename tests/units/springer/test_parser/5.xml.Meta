@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Publisher
+  PUBLIC "-//Springer-Verlag//DTD A++ V2.4//EN" "http://devel.springer.de/A++/V2.4/DTD/A++V2.4.dtd">
+<Publisher>
+   <PublisherInfo>
+      <PublisherName>Springer Berlin Heidelberg</PublisherName>
+      <PublisherLocation>Berlin/Heidelberg</PublisherLocation>
+      <PublisherImprintName>Springer</PublisherImprintName>
+   </PublisherInfo>
+   <Journal OutputMedium="Online">
+      <JournalInfo JournalProductType="NonStandardArchiveJournal" NumberingStyle="ContentOnly"
+                   OutputMedium="Online">
+         <JournalID>10052</JournalID>
+         <JournalDOI>10.1007/10052.1434-6052</JournalDOI>
+         <JournalElectronicISSN>1434-6052</JournalElectronicISSN>
+         <JournalSPIN>30312819</JournalSPIN>
+         <JournalTitle>The European Physical Journal C</JournalTitle>
+         <JournalSubTitle>Particles and Fields</JournalSubTitle>
+         <JournalAbbreviatedTitle>Eur. Phys. J. C</JournalAbbreviatedTitle>
+         <JournalSubjectGroup>
+            <JournalSubject Code="SCP" Type="Primary">Physics</JournalSubject>
+            <JournalSubject Code="SCP23029" Priority="1" Type="Secondary">Elementary Particles, Quantum Field Theory</JournalSubject>
+            <JournalSubject Code="SCP23010" Priority="2" Type="Secondary">Nuclear Physics, Heavy Ions, Hadrons</JournalSubject>
+            <JournalSubject Code="SCP19048" Priority="3" Type="Secondary">Quantum Field Theories, String Theory</JournalSubject>
+            <JournalSubject Code="SCP31040" Priority="4" Type="Secondary">Measurement Science and Instrumentation</JournalSubject>
+            <JournalSubject Code="SCP22006" Priority="5" Type="Secondary">Astronomy, Astrophysics and Cosmology</JournalSubject>
+            <JournalSubject Code="SC113000" Priority="6" Type="Secondary">Nuclear Energy</JournalSubject>
+            <SubjectCollection Code="SC12">Physics and Astronomy</SubjectCollection>
+         </JournalSubjectGroup>
+      </JournalInfo>
+      <Volume OutputMedium="Online">
+         <VolumeInfo OutputMedium="Online" TocLevels="0" VolumeType="Regular">
+            <VolumeIDStart>85</VolumeIDStart>
+            <VolumeIDEnd>85</VolumeIDEnd>
+            <VolumeIssueCount>12</VolumeIssueCount>
+         </VolumeInfo>
+         <Issue IssueType="Regular" OutputMedium="Online">
+            <IssueInfo IssueType="Regular" OutputMedium="Online" TocLevels="0">
+               <IssueIDStart>4</IssueIDStart>
+               <IssueIDEnd>4</IssueIDEnd>
+               <IssueArticleCount>43</IssueArticleCount>
+               <IssueHistory>
+                  <CoverDate>
+                     <Year>2025</Year>
+                     <Month>4</Month>
+                  </CoverDate>
+                  <PricelistYear>2025</PricelistYear>
+               </IssueHistory>
+               <IssueCopyright>
+                  <CopyrightHolderName>EDP Sciences, Societa Italiana di Fisica (SIF) and Springer-Verlag GmbH, DE, part of Springer Nature</CopyrightHolderName>
+                  <CopyrightYear>2025</CopyrightYear>
+               </IssueCopyright>
+            </IssueInfo>
+            <Article ID="s10052-025-14045-9">
+               <ArticleInfo ArticleType="OriginalPaper" ContainsESM="Yes" Language="En"
+                            NumberingStyle="ContentOnly"
+                            OutputMedium="Online"
+                            TocLevels="0">
+                  <ArticleID>14045</ArticleID>
+                  <ArticleExternalID Type="arXiv">2410.15407</ArticleExternalID>
+                  <ArticleDOI>10.1140/epjc/s10052-025-14045-9</ArticleDOI>
+                  <ArticleCitationID>408</ArticleCitationID>
+                  <ArticleSequenceNumber>43</ArticleSequenceNumber>
+                  <ArticleTitle Language="En" OutputMedium="All">Spin one matter fields</ArticleTitle>
+                  <ArticleCategory>Regular Article - Theoretical Physics</ArticleCategory>
+                  <ArticleSubCategory>Theoretical Physics</ArticleSubCategory>
+                  <ArticleFirstPage>1</ArticleFirstPage>
+                  <ArticleLastPage>12</ArticleLastPage>
+                  <ArticleHistory>
+                     <RegistrationDate>
+                        <Year>2025</Year>
+                        <Month>3</Month>
+                        <Day>10</Day>
+                     </RegistrationDate>
+                     <Received>
+                        <Year>2024</Year>
+                        <Month>11</Month>
+                        <Day>27</Day>
+                     </Received>
+                     <Accepted>
+                        <Year>2025</Year>
+                        <Month>3</Month>
+                        <Day>6</Day>
+                     </Accepted>
+                     <OnlineDate>
+                        <Year>2025</Year>
+                        <Month>4</Month>
+                        <Day>10</Day>
+                     </OnlineDate>
+                  </ArticleHistory>
+                  <ArticleFundingInformation>
+                     <Fund>
+                        <FunderName>Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - Brasil (CAPES)</FunderName>
+                        <GrantNumber Type="FundRef">Finance Code 001</GrantNumber>
+                     </Fund>
+                  </ArticleFundingInformation>
+                  <ArticleCopyright>
+                     <CopyrightHolderName>The Author(s)</CopyrightHolderName>
+                     <CopyrightYear>2025</CopyrightYear>
+                     <License SubType="CC BY" Type="OpenAccess" Version="4.0">
+                        <SimplePara>
+                           <Emphasis Type="Bold">Open Access</Emphasis> This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit <ExternalRef>
+                              <RefSource>http://creativecommons.org/licenses/by/4.0/</RefSource>
+                              <RefTarget Address="http://creativecommons.org/licenses/by/4.0/" TargetType="URL"/>
+                           </ExternalRef>.</SimplePara>
+                        <SimplePara>Funded by SCOAP<Superscript>3</Superscript>.</SimplePara>
+                     </License>
+                  </ArticleCopyright>
+                  <ArticleGrants Type="OpenChoice">
+                     <MetadataGrant Grant="OpenAccess"/>
+                     <AbstractGrant Grant="OpenAccess"/>
+                     <BodyPDFGrant Grant="OpenAccess"/>
+                     <BodyHTMLGrant Grant="OpenAccess"/>
+                     <BibliographyGrant Grant="OpenAccess"/>
+                     <ESMGrant Grant="OpenAccess"/>
+                  </ArticleGrants>
+                  <ArticleContext>
+                     <JournalID>10052</JournalID>
+                     <VolumeIDStart>85</VolumeIDStart>
+                     <VolumeIDEnd>85</VolumeIDEnd>
+                     <IssueIDStart>4</IssueIDStart>
+                     <IssueIDEnd>4</IssueIDEnd>
+                  </ArticleContext>
+               </ArticleInfo>
+               <ArticleHeader>
+                  <AuthorGroup>
+                     <Author AffiliationIDS="Aff1" ID="Au1" ORCID="http://orcid.org/0009-0000-0633-654X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Daniel</GivenName>
+                           <GivenName>O.</GivenName>
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Azevedo</FamilyName>
+                        </AuthorName>
+                        <Contact>
+                           <Email>daniel.azevedo@ufv.br</Email>
+                        </Contact>
+                     </Author>
+                     <Author AffiliationIDS="Aff1" ID="Au2" ORCID="http://orcid.org/0000-0002-9540-6083">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Oswaldo</GivenName>
+                           <GivenName>M.</GivenName>
+                           <Particle>Del</Particle>
+                           <FamilyName>Cima</FamilyName>
+                        </AuthorName>
+                        <Contact>
+                           <Email>oswaldo.delcima@ufv.br</Email>
+                        </Contact>
+                     </Author>
+                     <Author AffiliationIDS="Aff1" ID="Au3" ORCID="http://orcid.org/0009-0007-8582-6934">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Thadeu</GivenName>
+                           <GivenName>D.</GivenName>
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Dias</FamilyName>
+                        </AuthorName>
+                        <Contact>
+                           <Email>thadeu.dias@ufv.br</Email>
+                        </Contact>
+                     </Author>
+                     <Author AffiliationIDS="Aff1" ID="Au4" ORCID="http://orcid.org/0000-0003-0877-4492">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Daniel</GivenName>
+                           <GivenName>H.</GivenName>
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Franco</FamilyName>
+                        </AuthorName>
+                        <Contact>
+                           <Email>daniel.franco@ufv.br</Email>
+                        </Contact>
+                     </Author>
+                     <Author AffiliationIDS="Aff1" ID="Au5" ORCID="http://orcid.org/0009-0008-7079-8608">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Emílio</GivenName>
+                           <GivenName>D.</GivenName>
+                           <FamilyName>Pereira</FamilyName>
+                        </AuthorName>
+                        <Contact>
+                           <Email>emilio.drumond@ufv.br</Email>
+                        </Contact>
+                     </Author>
+                     <Author AffiliationIDS="Aff1 Aff2" CorrespondingAffiliationID="Aff2" ID="Au6"
+                             ORCID="http://orcid.org/0000-0002-4305-7897">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Olivier</GivenName>
+                           <FamilyName>Piguet</FamilyName>
+                        </AuthorName>
+                        <Contact>
+                           <Email>opiguet@yahoo.com</Email>
+                        </Contact>
+                     </Author>
+                     <Affiliation ID="Aff1">
+                        <OrgID Level="Institution" Type="ROR">https://ror.org/0409dgb37</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.12799.34</OrgID>
+                        <OrgID Level="Institution" Type="ISNI">0000 0000 8338 6359</OrgID>
+                        <OrgDivision>Departamento de Física</OrgDivision>
+                        <OrgName>Universidade Federal de Viçosa</OrgName>
+                        <OrgAddress>
+                           <Street>Campus Universitário, Avenida Peter Henry Rolfs s/n</Street>
+                           <City>Viçosa</City>
+                           <State>MG</State>
+                           <Postcode>36570-900</Postcode>
+                           <Country Code="BR">Brazil</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff2">
+                        <OrgAddress>
+                           <Street> Praça Graccho Cardoso 76/504</Street>
+                           <City>Aracaju</City>
+                           <State>SE</State>
+                           <Postcode>49015-180</Postcode>
+                           <Country Code="BR">Brazil</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                  </AuthorGroup>
+                  <Abstract ID="Abs1" Language="En" OutputMedium="All">
+                     <Heading>Abstract</Heading>
+                     <Para ID="Par1">It is shown how spin one vector matter fields can be coupled to a Yang–Mills theory. Such matter fields are defined as belonging to a representation <Emphasis Type="Italic">R</Emphasis> of this Yang–Mills gauge algebra <InlineEquation ID="IEq1">
+                           <EquationSource Format="TEX"><![CDATA[$$\mathfrak {g}$$]]></EquationSource>
+                           <EquationSource Format="MATHML">
+                              <math xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <mi mathvariant="fraktur">g</mi>
+                              </math>
+                           </EquationSource>
+                        </InlineEquation>. It is also  required that these fields together with the original gauge fields be the gauge fields of an embedding total gauge algebra <InlineEquation ID="IEq2">
+                           <EquationSource Format="TEX"><![CDATA[$$\mathfrak {g}_{\textrm{tot}}$$]]></EquationSource>
+                           <EquationSource Format="MATHML">
+                              <math xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <msub>
+                                    <mi mathvariant="fraktur">g</mi>
+                                    <mtext>tot</mtext>
+                                 </msub>
+                              </math>
+                           </EquationSource>
+                        </InlineEquation>. The existence of a physically consistent Yang–Mills action for the total algebra is finally required. These conditions are rather restrictive, as shown in some examples: non-trivial solutions may or may not exist depending on the choice of the original algebra <InlineEquation ID="IEq3">
+                           <EquationSource Format="TEX"><![CDATA[$$\mathfrak {g}$$]]></EquationSource>
+                           <EquationSource Format="MATHML">
+                              <math xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <mi mathvariant="fraktur">g</mi>
+                              </math>
+                           </EquationSource>
+                        </InlineEquation> and of the representation <Emphasis Type="Italic">R</Emphasis>. Some examples are shown, the case of the initial algebra <InlineEquation ID="IEq4">
+                           <EquationSource Format="TEX"><![CDATA[$$\mathfrak {g}$$]]></EquationSource>
+                           <EquationSource Format="MATHML">
+                              <math xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <mi mathvariant="fraktur">g</mi>
+                              </math>
+                           </EquationSource>
+                        </InlineEquation> = <InlineEquation ID="IEq5">
+                           <EquationSource Format="TEX"><![CDATA[$$\mathfrak {u}(1)\oplus \mathfrak {su}(2)$$]]></EquationSource>
+                           <EquationSource Format="MATHML">
+                              <math xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <mrow>
+                                    <mi mathvariant="fraktur">u</mi>
+                                    <mo stretchy="false">(</mo>
+                                    <mn>1</mn>
+                                    <mo stretchy="false">)</mo>
+                                    <mo>⊕</mo>
+                                    <mi mathvariant="fraktur">su</mi>
+                                    <mo stretchy="false">(</mo>
+                                    <mn>2</mn>
+                                    <mo stretchy="false">)</mo>
+                                 </mrow>
+                              </math>
+                           </EquationSource>
+                        </InlineEquation> being treated in more detail.
+</Para>
+                  </Abstract>
+                  <ArticleNote Type="ESMHint">
+                     <Heading>Supplementary Information</Heading>
+                     <SimplePara>The online version contains supplementary material available at <ExternalRef>
+                           <RefSource>https://doi.org/10.1140/epjc/s10052-025-14045-9</RefSource>
+                           <RefTarget Address="10.1140/epjc/s10052-025-14045-9" TargetType="DOI"/>
+                        </ExternalRef>.</SimplePara>
+                  </ArticleNote>
+               </ArticleHeader>
+               <NoBody/>
+            </Article>
+         </Issue>
+      </Volume>
+   </Journal>
+</Publisher>
