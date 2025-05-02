@@ -1,5 +1,6 @@
 import re
 
+import requests
 from common.parsing.json_extractors import CustomExtractor, NestedValueExtractor
 from common.parsing.parser import IParser
 from common.utils import construct_license
@@ -11,6 +12,7 @@ logger = get_logger()
 class JagiellonianParser(IParser):
     def __init__(self) -> None:
         self.logger = get_logger().bind(class_name=type(self).__name__)
+        self._ror_cache = {}
         article_type_mapping = {
             "journal-article": "article",
             "erratum": "erratum",
@@ -236,30 +238,44 @@ class JagiellonianParser(IParser):
     def extract_organization_and_ror(self, affiliation):
         org_name = affiliation.get("name", "")
         ror_id = None
+        country = None
 
-        if "id" in affiliation:
-            for id_obj in affiliation["id"]:
-                if id_obj.get("id-type") == "ROR":
-                    ror_id = id_obj.get("id")
-                    break
+        for id_obj in affiliation.get("id", []):
+            if id_obj.get("id-type") == "ROR":
+                ror_id = id_obj.get("id")
+                break
 
-        return org_name, ror_id
+        if ror_id:
+            if ror_id in self._ror_cache:
+                country = self._ror_cache[ror_id]
+            else:
+                try:
+                    resp = requests.get(
+                        f"https://api.ror.org/v2/organizations/{ror_id}"
+                    )
+                    data = resp.json()
+                    locs = data.get("locations", [])
+                    if locs:
+                        country = (
+                            locs[0].get("geonames_details", {}).get("country_code")
+                        )
+                    self._ror_cache[ror_id] = country
+                except Exception:
+                    self.logger.error(f"Error fetching country for ROR {ror_id}")
+        return org_name, ror_id, country
 
     def _get_affiliations(self, author):
         if "affiliation" not in author:
             return []
-
         parsed_affiliations = []
         for affiliation in author["affiliation"]:
-            org_name, ror_id = self.extract_organization_and_ror(affiliation)
-
+            org_name, ror_id, country = self.extract_organization_and_ror(affiliation)
             aff_data = {"value": org_name, "organization": org_name}
-
             if ror_id:
                 aff_data["ror"] = ror_id
-
+            if country:
+                aff_data["country"] = country
             parsed_affiliations.append(aff_data)
-
         return parsed_affiliations
 
     def _get_field_categories(self, article):
