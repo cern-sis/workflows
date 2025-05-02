@@ -1,0 +1,22 @@
+{
+  "aws_s3_minio": {
+    "conn_type": "aws",
+    "description": "",
+    "login": "airflow",
+    "password": "Airflow01",
+    "host": "s3",
+    "port": 9000,
+    "schema": "",
+    "extra": "{\"endpoint_url\": \"http://s3:9000\", \"region_name\": \"us-east-1\", \"verify\": false}"
+  },
+  "crossref_api": {
+    "conn_type": "http",
+    "description": "",
+    "login": "",
+    "password": null,
+    "host": "https://api.production.crossref.org",
+    "port": null,
+    "schema": "",
+    "extra": "{}"
+  }
+}
