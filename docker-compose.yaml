@@ -82,6 +82,7 @@ x-airflow-common: &airflow-common
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
     - ./airflow.cfg:/opt/airflow/airflow.cfg
+    - ./tests:/opt/airflow/tests
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on: &airflow-common-depends-on
     redis:
@@ -163,7 +164,7 @@ services:
     depends_on:
       - s3
     entrypoint: >
-      /bin/sh -c " sleep 10; /usr/bin/mc alias set airflow http://s3:9000 airflow Airflow01; /usr/bin/mc mb airflow/springer; /usr/bin/mc mb airflow/aps; /usr/bin/mc mb airflow/hindawi; /usr/bin/mc mb airflow/iop; /usr/bin/mc mb airflow/elsevier; /usr/bin/mc mb airflow/oup; exit 0; "
+      /bin/sh -c " sleep 10; /usr/bin/mc alias set airflow http://s3:9000 airflow Airflow01; /usr/bin/mc mb airflow/scoap3; /usr/bin/mc mb airflow/springer; /usr/bin/mc mb airflow/aps; /usr/bin/mc mb airflow/hindawi; /usr/bin/mc mb airflow/iop; /usr/bin/mc mb airflow/elsevier; /usr/bin/mc mb airflow/oup; /usr/bin/mc mb airflow/jagiellonian; /usr/bin/mc anonymous set download airflow/scoap3; /usr/bin/mc anonymous set download airflow/springer; /usr/bin/mc anonymous set download airflow/aps; /usr/bin/mc anonymous set download airflow/hindawi; /usr/bin/mc anonymous set download airflow/iop; /usr/bin/mc anonymous set download airflow/elsevier; /usr/bin/mc anonymous set download airflow/oup; /usr/bin/mc anonymous set download airflow/jagiellonian; exit 0; "
 
   airflow-webserver:
     <<: *airflow-common
@@ -307,6 +308,9 @@ services:
         fi
         mkdir -p /sources/logs /sources/dags /sources/plugins
         chown -R "${AIRFLOW_UID}:0" /sources/{logs,dags,plugins}
+        if [ -f /opt/airflow/connections.json ]; then
+          exec /entrypoint connections import /opt/airflow/connections.json
+        fi
         exec /entrypoint airflow version
     # yamllint enable rule:line-length
     environment:
@@ -319,6 +323,7 @@ services:
     user: "0:0"
     volumes:
       - ${AIRFLOW_PROJ_DIR:-.}:/sources
+      - ./connections.json:/opt/airflow/connections.json
 
   airflow-cli:
     <<: *airflow-common
