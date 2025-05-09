@@ -16,6 +16,23 @@ jobs:
   build_test:
     name: Build and Test
     runs-on: ubuntu-latest
+
+    services:
+      s3:
+        image: minio/minio:latest
+        ports:
+          - 9000:9000
+          - 9001:9001 # Console/UI
+        env:
+          MINIO_ROOT_USER: airflow
+          MINIO_ROOT_PASSWORD: Airflow01
+        options: >-
+          --health-cmd "curl -f http://localhost:9000/minio/health/live || exit 1"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        command: server /data --console-address ":9001"
+
     steps:
       - name: Checkout
         if: ${{ github.event_name == 'push' }}
