@@ -66,6 +66,7 @@ jobs:
           docker run
           --name workflows
           --network=host
+          -e MINIO_HOST=localhost
           -v "$(pwd)"/tests:/opt/airflow/tests
           -v "$(pwd)"/data:/opt/airflow/data
           --entrypoint pytest
