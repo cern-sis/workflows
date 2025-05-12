@@ -66,7 +66,7 @@ jobs:
           docker run
           --name workflows
           --network=host
-          -e MINIO_HOST=localhost
+          -e S3_ENDPOINT=http://localhost:9000
           -v "$(pwd)"/tests:/opt/airflow/tests
           -v "$(pwd)"/data:/opt/airflow/data
           --entrypoint pytest
