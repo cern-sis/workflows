@@ -276,7 +276,7 @@ class OUPParser(IParser):
         dir_path = os.path.dirname(self.file_path)
         file_name = os.path.basename(self.file_path).split(".")[0]
         pdf_dir_path = dir_path.replace("xml", "pdf")
-        pdfa_dir_path = dir_path.replace(".xml", "_archival")
+        pdfa_dir_path = dir_path.replace(".xml", ".archival")
         pdf_path = os.path.join(pdf_dir_path, f"{file_name}.pdf")
         pdfa_path = os.path.join(pdfa_dir_path, f"{file_name}.pdf")
 
