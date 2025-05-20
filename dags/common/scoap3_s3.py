@@ -12,12 +12,13 @@ FILE_EXTENSIONS = {"pdf": ".pdf", "xml": ".xml", "pdfa": ".pdf"}
 
 
 def update_filename_extension(filename, type):
+    if type == "pdfa":
+        return filename.replace(".pdf", "_a.pdf")
+
     extension = FILE_EXTENSIONS.get(type, "")
     if filename.endswith(extension):
         return filename
     elif extension:
-        if type == "pdfa":
-            extension = ".a-2b.pdf"
         return f"{filename}{extension}"
 
 
