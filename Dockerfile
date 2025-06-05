@@ -16,4 +16,6 @@ COPY airflow.cfg ./airflow.cfg
 RUN pip install --upgrade pip &&\
     pip install --no-cache-dir --upgrade setuptools==59.1.1 &&\
     pip install --no-cache-dir --upgrade wheel &&\
-    pip install --no-cache-dir --user -r requirements.txt -r requirements-test.txt -r requirements-airflow.txt
+    pip install --no-cache-dir --user -r requirements-airflow.txt &&\
+    pip install --no-cache-dir --user -r requirements.txt &&\
+    pip install --no-cache-dir --user -r requirements-test.txt
