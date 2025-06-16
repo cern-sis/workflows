@@ -11,4 +11,3 @@ jsonschema
 plyvel
 country_converter
 inspire-utils
-elasticsearch<8,>=7.17.0 # for logging needed because of content type
