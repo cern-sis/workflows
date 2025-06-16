@@ -24,7 +24,7 @@
 # The following variables are supported:
 #
 # AIRFLOW_IMAGE_NAME           - Docker image name used to run Airflow.
-#                                Default: apache/airflow:2.6.0
+#                                Default: apache/airflow:2.10.5
 # AIRFLOW_UID                  - User ID in Airflow containers
 #                                Default: 50000
 # AIRFLOW_PROJ_DIR             - Base path to which all the files will be volumed.
@@ -44,31 +44,27 @@
 #
 # Feel free to modify this file to suit your needs.
 ---
-version: "3.8"
 x-airflow-common: &airflow-common
   # In order to add custom dependencies or upgrade provider packages you can use your extended image.
   # Comment the image line, place your Dockerfile in the directory where you placed the docker-compose.yaml
   # and uncomment the "build" line below, Then run `docker-compose build` to build the images.
-  # image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:2.6.0}
+  # image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:2.10.5}
   build: .
   environment: &airflow-common-env
     AIRFLOW__CORE__EXECUTOR: CeleryExecutor
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-    # For backward compatibility, with Airflow <2.3
-    AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
     AIRFLOW__CORE__FERNET_KEY: ""
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "true"
     AIRFLOW__CORE__LOAD_EXAMPLES: "false"
-    AIRFLOW__API__AUTH_BACKENDS: "airflow.api.auth.backend.basic_auth"
+    AIRFLOW__API__AUTH_BACKENDS: "airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session"
     IOP_FTP_HOST: "sftp"
     SPRINGER_FTP_HOST: "sftp"
     OUP_FTP_HOST: "sftp"
     S3_ENDPOINT: "http://s3:9000"
     SPRINGER_FTP_PORT: 22
     IOP_FTP_PORT: 22
-
     # yamllint disable rule:line-length
     # Use simple http server on scheduler for health checks
     # See https://airflow.apache.org/docs/apache-airflow/stable/administration-and-deployment/logging-monitoring/check-health.html#scheduler-health-check-server
@@ -77,12 +73,14 @@ x-airflow-common: &airflow-common
     # WARNING: Use _PIP_ADDITIONAL_REQUIREMENTS option ONLY for a quick checks
     # for other purpose (development, test and especially production usage) build/extend Airflow image.
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
+    # The following line can be used to set a custom config file, stored in the local config folder
+    # If you want to use it, outcomment it and replace airflow.cfg with the name of your config file
+    # AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
   volumes:
-    - ./dags:/opt/airflow/dags
-    - ./logs:/opt/airflow/logs
-    - ./plugins:/opt/airflow/plugins
-    - ./airflow.cfg:/opt/airflow/airflow.cfg
-    - ./tests:/opt/airflow/tests
+    - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
+    - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
+    - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
+    - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on: &airflow-common-depends-on
     redis:
@@ -92,7 +90,7 @@ x-airflow-common: &airflow-common
 
 services:
   postgres:
-    image: docker.io/library/postgres:13
+    image: postgres:13
     environment:
       POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
@@ -111,7 +109,10 @@ services:
     restart: always
 
   redis:
-    image: docker.io/library/redis:latest
+    # Redis is limited to 7.2-bookworm due to licencing change
+    # https://redis.io/blog/redis-adopts-dual-source-available-licensing/
+    image: redis:latest
+    # image: redis:7.2-bookworm
     expose:
       - 6379
     ports:
@@ -123,48 +124,6 @@ services:
       retries: 50
       start_period: 30s
     restart: always
-
-  sftp:
-    image: atmoz/sftp
-    ports:
-      - "2222:22"
-    volumes:
-      - ./data:/home/airflow/upload
-    command: airflow:airflow:::upload
-    restart: always
-
-  ftp:
-    container_name: ftp-server
-    image: garethflowers/ftp-server
-    environment:
-      - FTP_USER=airflow
-      - FTP_PASS=airflow
-    restart: always
-    ports:
-      - "20-21:20-21/tcp"
-      - "40000-40009:40000-40009/tcp" # passive mode
-    volumes:
-      - ./data:/home/airflow/upload
-
-  s3:
-    image: minio/minio
-    expose:
-      - 9000
-      - 9001
-    ports:
-      - 9000:9000
-      - 9001:9001
-    environment:
-      - MINIO_ROOT_USER=airflow
-      - MINIO_ROOT_PASSWORD=Airflow01
-    command: server /data --console-address ":9001"
-
-  create_buckets:
-    image: minio/mc
-    depends_on:
-      - s3
-    entrypoint: >
-      /bin/sh -c " sleep 10; /usr/bin/mc alias set airflow http://s3:9000 airflow Airflow01; /usr/bin/mc mb airflow/scoap3; /usr/bin/mc mb airflow/springer; /usr/bin/mc mb airflow/aps; /usr/bin/mc mb airflow/hindawi; /usr/bin/mc mb airflow/iop; /usr/bin/mc mb airflow/elsevier; /usr/bin/mc mb airflow/oup; /usr/bin/mc mb airflow/jagiellonian; /usr/bin/mc anonymous set download airflow/scoap3; /usr/bin/mc anonymous set download airflow/springer; /usr/bin/mc anonymous set download airflow/aps; /usr/bin/mc anonymous set download airflow/hindawi; /usr/bin/mc anonymous set download airflow/iop; /usr/bin/mc anonymous set download airflow/elsevier; /usr/bin/mc anonymous set download airflow/oup; /usr/bin/mc anonymous set download airflow/jagiellonian; exit 0; "
 
   airflow-webserver:
     <<: *airflow-common
@@ -187,11 +146,7 @@ services:
     <<: *airflow-common
     command: scheduler
     healthcheck:
-      test:
-        [
-          "CMD-SHELL",
-          'airflow jobs check --job-type SchedulerJob --hostname "$${HOSTNAME}"',
-        ]
+      test: ["CMD", "curl", "--fail", "http://localhost:8974/health"]
       interval: 30s
       timeout: 10s
       retries: 5
@@ -206,9 +161,10 @@ services:
     <<: *airflow-common
     command: celery worker
     healthcheck:
+      # yamllint disable rule:line-length
       test:
         - "CMD-SHELL"
-        - 'celery --app airflow.executors.celery_executor.app inspect ping -d "celery@$${HOSTNAME}"'
+        - 'celery --app airflow.providers.celery.executors.celery_executor.app inspect ping -d "celery@$${HOSTNAME}" || celery --app airflow.executors.celery_executor.app inspect ping -d "celery@$${HOSTNAME}"'
       interval: 30s
       timeout: 10s
       retries: 5
@@ -250,20 +206,6 @@ services:
     command:
       - -c
       - |
-        function ver() {
-          printf "%04d%04d%04d%04d" $${1//./ }
-        }
-        airflow_version=$$(AIRFLOW__LOGGING__LOGGING_LEVEL=INFO && gosu airflow airflow version)
-        airflow_version_comparable=$$(ver $${airflow_version})
-        min_airflow_version=2.2.0
-        min_airflow_version_comparable=$$(ver $${min_airflow_version})
-        if (( airflow_version_comparable < min_airflow_version_comparable )); then
-          echo
-          echo -e "\033[1;31mERROR!!!: Too old Airflow version $${airflow_version}!\e[0m"
-          echo "The minimum Airflow version supported: $${min_airflow_version}. Only use this or higher!"
-          echo
-          exit 1
-        fi
         if [[ -z "${AIRFLOW_UID}" ]]; then
           echo
           echo -e "\033[1;33mWARNING!!!: AIRFLOW_UID not set!\e[0m"
@@ -315,7 +257,7 @@ services:
     # yamllint enable rule:line-length
     environment:
       <<: *airflow-common-env
-      _AIRFLOW_DB_UPGRADE: "true"
+      _AIRFLOW_DB_MIGRATE: "true"
       _AIRFLOW_WWW_USER_CREATE: "true"
       _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflow}
       _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow}
@@ -359,6 +301,48 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+
+  sftp:
+    image: atmoz/sftp
+    ports:
+      - "2222:22"
+    volumes:
+      - ./data:/home/airflow/upload
+    command: airflow:airflow:::upload
+    restart: always
+
+  ftp:
+    container_name: ftp-server
+    image: garethflowers/ftp-server
+    environment:
+      - FTP_USER=airflow
+      - FTP_PASS=airflow
+    restart: always
+    ports:
+      - "20-21:20-21/tcp"
+      - "40000-40009:40000-40009/tcp" # passive mode
+    volumes:
+      - ./data:/home/airflow/upload
+
+  s3:
+    image: minio/minio
+    expose:
+      - 9000
+      - 9001
+    ports:
+      - 9000:9000
+      - 9001:9001
+    environment:
+      - MINIO_ROOT_USER=airflow
+      - MINIO_ROOT_PASSWORD=Airflow01
+    command: server /data --console-address ":9001"
+
+  create_buckets:
+    image: minio/mc
+    depends_on:
+      - s3
+    entrypoint: >
+      /bin/sh -c " sleep 10; /usr/bin/mc alias set airflow http://s3:9000 airflow Airflow01; /usr/bin/mc mb airflow/springer; /usr/bin/mc mb airflow/aps; /usr/bin/mc mb airflow/hindawi; /usr/bin/mc mb airflow/iop; /usr/bin/mc mb airflow/elsevier; /usr/bin/mc mb airflow/oup; exit 0; "
 
 volumes:
   postgres-db-volume:
