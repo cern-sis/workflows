@@ -696,3 +696,68 @@ def test_authors_parsing_with_orcid(article_with_orcid):
         },
     ]
     assert article_with_orcid["authors"] == expected_output
+
+
+def test_author_parsing_with_ror(shared_datadir, parser):
+    article_name = "ror_article.xml"
+    with open(shared_datadir / article_name) as file:
+        content = parse_without_names_spaces(file.read())
+        article = parser._publisher_specific_parsing(content)
+
+        expected_authors = [
+            {
+                "surname": "Takeuchi",
+                "given_names": "Hiroki",
+                "email": None,
+                "affiliations": [
+                    {
+                        "organization": "Kyoto University",
+                        "country": "Japan",
+                        "ror": "02kpeqv85",
+                    }
+                ],
+            },
+            {
+                "surname": "Suzuki",
+                "given_names": "Junya",
+                "email": None,
+                "affiliations": [
+                    {
+                        "organization": "Kyoto University",
+                        "country": "Japan",
+                        "ror": "02kpeqv85",
+                    }
+                ],
+            },
+            {
+                "surname": "Adachi",
+                "given_names": "Shunsuke",
+                "email": None,
+                "affiliations": [
+                    {
+                        "organization": "Kyoto University",
+                        "country": "Japan",
+                        "ror": "02kpeqv85",
+                    },
+                    {
+                        "organization": "Kyoto University",
+                        "country": "Japan",
+                        "ror": "02kpeqv85",
+                    },
+                ],
+            },
+            {
+                "surname": "Tajima",
+                "given_names": "Osamu",
+                "email": None,
+                "affiliations": [
+                    {
+                        "organization": "Kyoto University",
+                        "country": "Japan",
+                        "ror": "02kpeqv85",
+                    }
+                ],
+            },
+        ]
+
+        assert article["authors"] == expected_authors
