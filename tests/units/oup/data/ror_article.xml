@@ -1,0 +1,1048 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+File produced by pipelineRunner package (for JATS 2 SCJATS with pipeline SCJATS)
+At: 2025-05-28T08:05:10.631Z
+
+Version        : 1.16.1
+Last update    : 2024-08-27
+Modified by    : dunnm
+
+-->
+<article xmlns="http://specifications.silverchair.com/xsd/1/42/SCJATS-journalpublishing-mathml3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://specifications.silverchair.com/xsd/1/42/SCJATS-journalpublishing-mathml3.xsd 1/42/SCJATS-journalpublishing-mathml3.xsd" article-type="research-article" xml:lang="en">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">ptep</journal-id>
+      <journal-title-group>
+        <journal-title>Progress of Theoretical and Experimental Physics</journal-title>
+        <abbrev-journal-title abbrev-type="pubmed">Prog. Theor. Exp. Phys.</abbrev-journal-title>
+        <abbrev-journal-title abbrev-type="publisher">PTEPHY</abbrev-journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">2050-3911</issn>
+      <publisher>
+        <publisher-name>Oxford University Press</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="doi">10.1093/ptep/ptaf065</article-id>
+      <article-id pub-id-type="publisher-id">ptaf065</article-id>
+      <article-categories>
+        <subj-group subj-group-type="category-toc-heading">
+          <subject>Paper</subject>
+          <subj-group subj-group-type="category-toc-heading">
+            <subject>Instrumentations and Technologies for Physics</subject>
+          </subj-group>
+        </subj-group>
+        <subj-group subj-group-type="category-taxonomy-collection">
+          <subject>PTEP/F40</subject>
+          <subject>PTEP/F41</subject>
+          <subject>PTEP/H33</subject>
+          <subject>PTEP/H34</subject>
+        </subj-group>
+        <subj-group subj-group-type="category-taxonomy-collection">
+          <subject>AcademicSubjects/SCI01970</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Broadband, Dead-Time-Free Spectrometer Using RFSoC for WISP Dark Matter Searches</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Takeuchi</surname>
+            <given-names>Hiroki</given-names>
+          </name>
+          <aff>Department of Physics, Faculty of Science, <institution>Kyoto University</institution>, <addr-line>Kyoto 606-8502, https://ror.org/02kpeqv85</addr-line>, <country country="JP">Japan</country></aff>
+          <xref ref-type="fn" rid="afn1" />
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Suzuki</surname>
+            <given-names>Junya</given-names>
+          </name>
+          <aff>Department of Physics, Faculty of Science, <institution>Kyoto University</institution>, <addr-line>Kyoto 606-8502, https://ror.org/02kpeqv85</addr-line>, <country country="JP">Japan</country></aff>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Adachi</surname>
+            <given-names>Shunsuke</given-names>
+          </name>
+          <aff>Department of Physics, Faculty of Science, <institution>Kyoto University</institution>, <addr-line>Kyoto 606-8502, https://ror.org/02kpeqv85</addr-line>, <country country="JP">Japan</country></aff>
+          <aff>Hakubi Center for Advanced Research, <institution>Kyoto University</institution>, <addr-line>Kyoto 606-8501, https://ror.org/02kpeqv85</addr-line>, <country country="JP">Japan</country></aff>
+        </contrib>
+        <contrib contrib-type="author">
+          <name>
+            <surname>Tajima</surname>
+            <given-names>Osamu</given-names>
+          </name>
+          <aff>Department of Physics, Faculty of Science, <institution>Kyoto University</institution>, <addr-line>Kyoto 606-8502, https://ror.org/02kpeqv85</addr-line>, <country country="JP">Japan</country></aff>
+        </contrib>
+      </contrib-group>
+      <author-notes>
+        <fn id="afn1">
+          <p>E-mail: <email xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple">takeuchi.hiroki.74w@st.kyoto-u.ac.jp</email></p>
+        </fn>
+      </author-notes>
+      <pub-date pub-type="cover">
+        <month>May</month>
+        <year>2025</year>
+      </pub-date>
+      <pub-date pub-type="collection" iso-8601-date="2025-05-08">
+        <day>08</day>
+        <month>05</month>
+        <year>2025</year>
+      </pub-date>
+      <pub-date pub-type="epub" iso-8601-date="2025-04-29">
+        <day>29</day>
+        <month>04</month>
+        <year>2025</year>
+      </pub-date>
+      <volume>2025</volume>
+      <issue>5</issue>
+      <elocation-id>053H02</elocation-id>
+      <history>
+        <date date-type="accepted">
+          <day>17</day>
+          <month>04</month>
+          <year>2025</year>
+        </date>
+        <date date-type="received">
+          <day>22</day>
+          <month>01</month>
+          <year>2025</year>
+        </date>
+        <date date-type="rev-recd">
+          <day>9</day>
+          <month>04</month>
+          <year>2025</year>
+        </date>
+        <date date-type="corrected-typeset">
+          <day>26</day>
+          <month>05</month>
+          <year>2025</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>© The Author(s) 2025. Published by Oxford University Press on behalf of the Physical Society of Japan.</copyright-statement>
+        <copyright-year>2025</copyright-year>
+        <license xmlns:xlink="http://www.w3.org/1999/xlink" license-type="cc-by" xlink:href="https://creativecommons.org/licenses/by/4.0/">
+          <license-p>This is an Open Access article distributed under the terms of the Creative Commons Attribution License (<ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</ext-link>), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p>
+        </license>
+      </permissions>
+      <self-uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ptaf065.pdf" />
+      <abstract abstract-type="abstract">
+        <title>Abstract</title>
+        <p>Ultra-light dark matter candidates, such as axions and dark photons, particularly within the mass range of <inline-formula><tex-math id="TM0001" notation="LaTeX"><![CDATA[$\mu 10^{\rm V}$]]></tex-math></inline-formula> to <inline-formula><tex-math id="TM0002" notation="LaTeX"><![CDATA[${\rm meV}$]]></tex-math></inline-formula>, have garnered significant research interest. Detection approaches such as the dish-antenna method benefit from broadband spectrometers, allowing for efficient scanning across a broad dark matter mass range. This study presents a novel spectrometer solution based on an RFSoC. The spectrometer’s programmable logic implements an optimized fast Fourier transform (FFT) that minimizes memory usage, enabling an instantaneous bandwidth of <inline-formula><tex-math id="TM0003" notation="LaTeX"><![CDATA[$4 \,{\rm GHz}$]]></tex-math></inline-formula> with a frequency resolution of <inline-formula><tex-math id="TM0004" notation="LaTeX"><![CDATA[$16 \,{\rm kHz}$]]></tex-math></inline-formula>. This configuration achieves more than 99.6% time efficiency, effectively doubling search efficiency, compared with traditional approaches. This paper provides a comprehensive description of the hardware architecture, FPGA firmware, and software implementation, with a focus on the resource-efficient pipelined FFT algorithm. Performance validation results are also presented, demonstrating the accuracy and time efficiency of the developed spectrometer, highlighting its potential for advancing dark matter search.</p>
+      </abstract>
+      <funding-group>
+        <award-group award-type="grant">
+          <funding-source>
+            <institution-wrap>
+              <institution>JSPS</institution>
+              <institution-id institution-id-type="DOI">10.13039/501100001691</institution-id>
+            </institution-wrap>
+          </funding-source>
+          <award-id>21H05460</award-id>
+          <award-id>22K18713</award-id>
+          <award-id>23H00111</award-id>
+          <award-id>24KK0066</award-id>
+          <award-id>24KJ1452</award-id>
+        </award-group>
+        <award-group award-type="grant">
+          <funding-source>
+            <institution-wrap>
+              <institution>JST</institution>
+              <institution-id institution-id-type="DOI">10.13039/501100001695</institution-id>
+            </institution-wrap>
+          </funding-source>
+        </award-group>
+        <award-group award-type="grant">
+          <funding-source>
+            <institution-wrap>
+              <institution>CREST</institution>
+              <institution-id institution-id-type="DOI">10.13039/100016995</institution-id>
+            </institution-wrap>
+          </funding-source>
+          <award-id>JPMJCR23I3</award-id>
+        </award-group>
+        <award-group award-type="grant">
+          <funding-source>
+            <institution-wrap>
+              <institution>Murata and Sumitomo Foundations</institution>
+            </institution-wrap>
+          </funding-source>
+        </award-group>
+        <award-group award-type="grant">
+          <funding-source>
+            <institution-wrap>
+              <institution>Kyoto University</institution>
+              <institution-id institution-id-type="DOI">10.13039/501100005683</institution-id>
+            </institution-wrap>
+          </funding-source>
+        </award-group>
+      </funding-group>
+      <counts>
+        <page-count count="16" />
+      </counts>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="sec1" sec-type="intro">
+      <label>1.</label>
+      <title>Introduction</title>
+      <p>Dark matter constitutes <inline-formula><tex-math id="TM0005" notation="LaTeX"><![CDATA[$26.8\%$]]></tex-math></inline-formula> of the total energy density of the universe [<xref ref-type="bibr" rid="bib1">1</xref>], yet its nature remains elusive. Understanding dark matter is a crucial issue in both cosmology and particle physics. Owing to the limited knowledge about the properties of dark matter, researchers are exploring a wide range of potential candidates with varying mass scales for the particle. In recent years, a group of particles, known as weakly interacting slim particles (WISPs), has attracted attention as a dark matter candidate [<xref ref-type="bibr" rid="bib2">2</xref>], including axions and dark photons.</p>
+      <p>Axions and dark photons can be converted into ordinary photons, allowing for experiments aimed at detecting dark matter candidates. Specifically, for axions the production of conversion photons is mediated by the inverse Primakoff effect under an external magnetic field, whereas for dark photons the conversion is driven by kinetic mixing with the electromagnetic field [<xref ref-type="bibr" rid="bib2">2</xref>,<xref ref-type="bibr" rid="bib3">3</xref>]. The dish-antenna method proposed in Ref. [<xref ref-type="bibr" rid="bib4">4</xref>] enables the exploration of a broad range of particle masses (<inline-formula><tex-math id="TM0006" notation="LaTeX"><![CDATA[$\mu {\rm eV}$]]></tex-math></inline-formula>–<inline-formula><tex-math id="TM0007" notation="LaTeX"><![CDATA[$10^{\rm V}$]]></tex-math></inline-formula>). The experimental setup involves a mirror (with a magnet for axion searches), receiver circuit, and spectrometer. The frequency distribution of the conversion photon displays a sharp peak at <inline-formula><tex-math id="TM0008" notation="LaTeX"><![CDATA[$\nu _0 = m_\mathrm{DM}c^2 / h$]]></tex-math></inline-formula> with a full width at half maximum of <inline-formula><tex-math id="TM0009" notation="LaTeX"><![CDATA[$\Delta \nu / \nu _0 \sim 10^{-6}$]]></tex-math></inline-formula> when assuming the isothermal halo model for the velocity distribution of dark matter. Here, <inline-formula><tex-math id="TM0010" notation="LaTeX"><![CDATA[$m_\mathrm{DM}$]]></tex-math></inline-formula> represents the mass of a particle, and <inline-formula><tex-math id="TM0011" notation="LaTeX"><![CDATA[$c$]]></tex-math></inline-formula> represents the speed of light. <inline-formula><tex-math id="TM0012" notation="LaTeX"><![CDATA[$h$]]></tex-math></inline-formula> denotes the Planck’s constant. Therefore, the detection of axions or dark photons can be achieved by observing the signal spectrum received by a spectrometer and identifying this spectral peak. The dark photon and axion are characterized by two main parameters: their mass and coupling constant with photons, denoted as <inline-formula><tex-math id="TM0013" notation="LaTeX"><![CDATA[$\chi$]]></tex-math></inline-formula> and <inline-formula><tex-math id="TM0014" notation="LaTeX"><![CDATA[$g_{a\gamma \gamma }$]]></tex-math></inline-formula> for the dark photon and axion, respectively. When a spectral peak is detected, the mass <inline-formula><tex-math id="TM0015" notation="LaTeX"><![CDATA[$m_{DM}$]]></tex-math></inline-formula> can be determined by the peak frequency, whereas the coupling constant <inline-formula><tex-math id="TM0016" notation="LaTeX"><![CDATA[$\chi$]]></tex-math></inline-formula> or <inline-formula><tex-math id="TM0017" notation="LaTeX"><![CDATA[$g_{a\gamma \gamma }$]]></tex-math></inline-formula> can be determined by the intensity of the conversion photon. Past studies [<xref ref-type="bibr" rid="bib5 bib6 bib7 bib8 bib9 bib10">5–10</xref>] utilizing the dish-antenna method have achieved direct searches with a sensitivity that surpasses the indirect constraints of cosmology [<xref ref-type="bibr" rid="bib2">2</xref>,<xref ref-type="bibr" rid="bib11">11</xref>].</p>
+      <p>Similar studies using the dish-antenna method, were limited to a maximum of 2 MHz bandwidth, due to the spectrometer and signal analyzers employed and therefore could not fully benefit from the wide-band nature of the dish-antenna method (e.g. Ref. [<xref ref-type="bibr" rid="bib7">7</xref>,<xref ref-type="bibr" rid="bib8">8</xref>]). In contrast, an antenna and radio-frequency (RF) circuit can cover a wide frequency range of <inline-formula><tex-math id="TM0018" notation="LaTeX"><![CDATA[$O({\rm GHz})$]]></tex-math></inline-formula>, allowing for simultaneous searches across the full spectrum. For these experiments, a spectrometer capable of analyzing over <inline-formula><tex-math id="TM0019" notation="LaTeX"><![CDATA[$1 \,{\rm GHz}$]]></tex-math></inline-formula> bandwidth simultaneously is needed. Notable attempts to develop such a wide-band spectrometer include Fourier transform versions that require graphical processing units (GPUs) or field-programmable gate arrays (FPGAs). For example, in Ref. [<xref ref-type="bibr" rid="bib9">9</xref>], a GPU was used to analyze a <inline-formula><tex-math id="TM0020" notation="LaTeX"><![CDATA[$4 \,{\rm GHz}$]]></tex-math></inline-formula> band with a time efficiency of <inline-formula><tex-math id="TM0021" notation="LaTeX"><![CDATA[$60\%$]]></tex-math></inline-formula>. Notably, commercial FPGA-based spectrometers can provide dead-time-free analyses over a <inline-formula><tex-math id="TM0022" notation="LaTeX"><![CDATA[$2.5 \,{\rm GHz}$]]></tex-math></inline-formula> bandwidth [<xref ref-type="bibr" rid="bib12">12</xref>].</p>
+      <p>This study presents a dead-time free spectrometer with <inline-formula><tex-math id="TM0023" notation="LaTeX"><![CDATA[$4 \,{\rm GHz}$]]></tex-math></inline-formula> bandwidth. The spectrometer is built on an RFSoC 2x2 board, utilizing an RFSoC chip that integrates high-speed data converters, FPGA, and CPU [<xref ref-type="bibr" rid="bib13">13</xref>]. The performance evaluation of this spectrometer is also discussed in detail.</p>
+    </sec>
+    <sec id="sec2">
+      <label>2.</label>
+      <title>Design strategy and implementation method</title>
+      <sec id="sec2-1">
+        <label>2.1.</label>
+        <title>Requirements</title>
+        <p>Several requirements were taken into account for the design strategy: instantaneous bandwidth (the range of frequencies captured at once), signal processing efficiency, and frequency resolution. Instantaneous bandwidth determines the mass range accessible in a single observation, and achieving a fine frequency resolution is vital to accurately identify the characteristic peaks associated with dark matter. In addition, minimizing dead time is critical to extend the effective observation period and acquire high-statistics data.</p>
+        <p>The upper limit of the instantaneous bandwidth is determined by the sampling rate of the analog-to-digital converter (ADC), responsible for converting analog signals to digital signals. Given the bandwidth capabilities of current high-speed ADCs, our goal was to achieve a bandwidth in the range of several <inline-formula><tex-math id="TM0024" notation="LaTeX"><![CDATA[${\rm GHz}$]]></tex-math></inline-formula>. In this study, a <inline-formula><tex-math id="TM0025" notation="LaTeX"><![CDATA[$4 \,{\rm GSPS}$]]></tex-math></inline-formula> ADC was employed, and a instantaneous bandwidth of <inline-formula><tex-math id="TM0026" notation="LaTeX"><![CDATA[$4 \,{\rm GHz}$]]></tex-math></inline-formula> was targeted.</p>
+        <p>To search for signals around <inline-formula><tex-math id="TM0027" notation="LaTeX"><![CDATA[$30 \,{\rm GHz}$]]></tex-math></inline-formula>, a frequency resolution of <inline-formula><tex-math id="TM0028" notation="LaTeX"><![CDATA[$30 \,{\rm kHz}$]]></tex-math></inline-formula> is required. This specific frequency range has not been explored in previous studies on axion or dark photon searches. With the target instantaneous bandwidth of <inline-formula><tex-math id="TM0029" notation="LaTeX"><![CDATA[$4 \,{\rm GHz}$]]></tex-math></inline-formula>, dividing the band into <inline-formula><tex-math id="TM0030" notation="LaTeX"><![CDATA[$1.3 \times 10^5$]]></tex-math></inline-formula> points is necessary to achieve the desired resolution.</p>
+      </sec>
+      <sec id="sec2-2">
+        <label>2.2.</label>
+        <title>Hardware design</title>
+        <p>To satisfy the above requirements, a high-speed ADC capable of several giga-samples per second (GSPS) is needed, along with a high-performance FPGA capable of processing the ADC output. For this, we employed an AMD Xilinx chip known as the RFSoC [<xref ref-type="bibr" rid="bib13">13</xref>], which integrates a CPU, FPGA, ADCs, DACs, and other RF circuits into a single system on chip (SoC). Additionally, the processing system (PS) housing the CPU and the programmable logic (PL) housing the FPGA were both connected to external dynamic random access memory (DRAM) chips.</p>
+        <p>An overview of the spectrometer design and a photograph of the developed spectrometer setup are shown in Fig. <xref ref-type="fig" rid="fig1">1</xref>. Detailed descriptions of each block will be provided in the following sections. The spectrometer components were selected to target a frequency of approximately <inline-formula><tex-math id="TM0031" notation="LaTeX"><![CDATA[$30 \,{\rm GHz}$]]></tex-math></inline-formula>, and a Marki microwave MMIQ-1040LS was utilized as the IQ mixer. Notably, with different IQ mixer models, the spectrometer can be utilized for a variety of frequency bands. A HiTech Global RFSoC 2x2 board [<xref ref-type="bibr" rid="bib14">14</xref>] equipped with the ZYNQ UltraScale+ RFSoC XCZU28DR, was used, featuring two 12-bit <inline-formula><tex-math id="TM0032" notation="LaTeX"><![CDATA[$4.096 \,{\rm GSPS}$]]></tex-math></inline-formula> ADCs, and a <inline-formula><tex-math id="TM0033" notation="LaTeX"><![CDATA[$1 \,{\rm Gbps}$]]></tex-math></inline-formula> Ethernet cable was used for external communications. ADC synchronization was achieved using the reference clock on the RFSoC board. The IQ mixer and ADCs are connected through SMA cables, with a low-pass filter (Mini-Circuits VLFG-1800+) inserted between them to limit the signal to below <inline-formula><tex-math id="TM0034" notation="LaTeX"><![CDATA[$2 \,{\rm GHz}$]]></tex-math></inline-formula>. The low-pass filter eliminates aliases from the outside of the first Nyquist zone of the ADC.</p>
+        <fig id="fig1">
+          <label>Fig. 1.</label>
+          <caption>
+            <p>(Left) Schematic of RF circuits and digital signal processing. The input signal is down-converted by utilizing the IQ mixer and sent to the RFSoC. There, the down-converted signals are converted to digital time-series signals by the <inline-formula><tex-math id="TM0035" notation="LaTeX"><![CDATA[$4 \,{\rm GSPS}$]]></tex-math></inline-formula> ADCs, and the power spectrum is obtained using the parallel FFT circuit on the FPGA. An accumulator circuit calculates the time average, with the obtained power spectrum transferred to the embedded CPU, which is then sent to an external computer over Ethernet. (Right) Photo of our proposed spectrometer.</p>
+          </caption>
+          <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ptaf065fig1.jpeg" mimetype="image" />
+        </fig>
+        <p>To detect spectral peaks with a width of approximately <inline-formula><tex-math id="TM0036" notation="LaTeX"><![CDATA[$10^{-6}$]]></tex-math></inline-formula> times <inline-formula><tex-math id="TM0037" notation="LaTeX"><![CDATA[$30 \,{\rm GHz}$]]></tex-math></inline-formula>, we set the FFT size to <inline-formula><tex-math id="TM0038" notation="LaTeX"><![CDATA[$N = 2^{17}$]]></tex-math></inline-formula> to achieve a frequency resolution of <inline-formula><tex-math id="TM0039" notation="LaTeX"><![CDATA[$31.25 \,{\rm kHz}$]]></tex-math></inline-formula><xref ref-type="fn" rid="fn1"><sup>1</sup></xref>. Subsequently, we developed a high-resolution version with an FFT size of <inline-formula><tex-math id="TM0040" notation="LaTeX"><![CDATA[$N = 2^{18}$]]></tex-math></inline-formula>, providing a frequency resolution of <inline-formula><tex-math id="TM0041" notation="LaTeX"><![CDATA[$15.625 \,{\rm kHz}$]]></tex-math></inline-formula>. Depending on the specific application, one of these two configurations is selected and programmed into the RFSoC accordingly.</p>
+      </sec>
+      <sec id="sec2-3">
+        <label>2.3.</label>
+        <title>Firmware design</title>
+        <p>The FPGA firmware architecture consists of three stages: initial parallelization of the data from the ADC, processing through a Fast Fourier Transform (FFT), and compression through an accumulator circuit for efficient external data transfer. Implementing these circuits within the constraints of available FPGA resources necessitates the development of efficient algorithms that optimize resource utilization.</p>
+        <sec id="sec2-3-1">
+          <label>2.3.1.</label>
+          <title>Data parallelization and FFT</title>
+          <p>The data acquired by the ADCs were streamed to the PL through the RF data converter’s intellectual property (IP) core, whose output was <inline-formula><tex-math id="TM0042" notation="LaTeX"><![CDATA[$512 \,{\rm MHz}$]]></tex-math></inline-formula> with eight time points per clock cycle (Fig. <xref ref-type="fig" rid="fig2">2</xref>). Operating signal processing at <inline-formula><tex-math id="TM0043" notation="LaTeX"><![CDATA[$512 \,{\rm MHz}$]]></tex-math></inline-formula> presents challenges in satisfying PL-resource timing constraints. To address this issue, we utilized input distribution and asynchronous first-in-first-out (FIFO) logic to increase the number of data lanes to 16 while reducing the clock frequency by half.</p>
+          <fig id="fig2">
+            <label>Fig. 2.</label>
+            <caption>
+              <p>Signal handling by the RF data converter. The ADC receives data at <inline-formula><tex-math id="TM0044" notation="LaTeX"><![CDATA[$4.096 \,{\rm GSPS}$]]></tex-math></inline-formula> and transmits it to the RF data converter on the FPGA. The RF data converter operates at <inline-formula><tex-math id="TM0045" notation="LaTeX"><![CDATA[$512 \,{\rm MHz}$]]></tex-math></inline-formula>, which corresponds to <inline-formula><tex-math id="TM0046" notation="LaTeX"><![CDATA[$1/8$]]></tex-math></inline-formula> of the ADC clock frequency, and outputs data from eight time points per clock cycle.</p>
+            </caption>
+            <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ptaf065fig2.jpeg" mimetype="image" />
+          </fig>
+          <p>Subsequently, ADC signals were converted into a power spectrum using an FFT block. Further details regarding the FFT circuit can be found in Section <xref ref-type="sec" rid="sec3">3</xref>. Following the FFT computation, the power spectrum was determined from the resulting complex spectrum. The block diagram is shown in Fig. <xref ref-type="fig" rid="fig3">3</xref>. The input distribution circuit, secondary sub-FFT circuits, and power spectrum calculation circuits were implemented through high-level synthesis (HLS), which involves converting C++ code into a hardware description language. A Vitis HLS was used, and existing IPs were integrated for clock conversions and initial sub-FFT computations.</p>
+          <fig id="fig3">
+            <label>Fig. 3.</label>
+            <caption>
+              <p>Block diagram of the FFT block. Signal processing is performed by four types of IPs from left to right: input distribution circuit (asynchronous FIFO), first sub-FFT circuit (serial FFT), second sub-FFT (parallel FFT), and power spectrum calculation circuit.</p>
+            </caption>
+            <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ptaf065fig3.jpeg" mimetype="image" />
+          </fig>
+          <p>To align the output to the accumulator circuit, it was configured as a <inline-formula><tex-math id="TM0047" notation="LaTeX"><![CDATA[$54 \,{\rm bit}$]]></tex-math></inline-formula> fixed-point number for the <inline-formula><tex-math id="TM0048" notation="LaTeX"><![CDATA[$N = 2^{17}$]]></tex-math></inline-formula> FFT circuit specification or a <inline-formula><tex-math id="TM0049" notation="LaTeX"><![CDATA[$32 \,{\rm bit}$]]></tex-math></inline-formula> floating-point number for the <inline-formula><tex-math id="TM0050" notation="LaTeX"><![CDATA[$N = 2^{18}$]]></tex-math></inline-formula> FFT circuit specification. These specifications are listed in Table <xref ref-type="table" rid="tbl1">1</xref>.</p>
+          <table-wrap id="tbl1">
+            <label>Table 1.</label>
+            <caption>
+              <p>Specifications of the FFT block.</p>
+            </caption>
+            <table frame="hsides">
+              <thead>
+                <tr>
+                  <th align="left">Specification</th>
+                  <th align="center">
+                    <inline-formula>
+                      <tex-math id="TM0051" notation="LaTeX"><![CDATA[$N = 2^{17}$]]></tex-math>
+                    </inline-formula>
+                  </th>
+                  <th align="center">
+                    <inline-formula>
+                      <tex-math id="TM0052" notation="LaTeX"><![CDATA[$N = 2^{18}$]]></tex-math>
+                    </inline-formula>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Parallel channels</td>
+                  <td>16</td>
+                  <td>16</td>
+                </tr>
+                <tr>
+                  <td>Input format</td>
+                  <td>Fixed-point</td>
+                  <td>Fixed-point</td>
+                </tr>
+                <tr>
+                  <td>Input bit width</td>
+                  <td>12 bits</td>
+                  <td>12 bits</td>
+                </tr>
+                <tr>
+                  <td>Format at FFT completion</td>
+                  <td>Fixed-point</td>
+                  <td>Fixed-point</td>
+                </tr>
+                <tr>
+                  <td>Bit width at FFT completion</td>
+                  <td>29 bits</td>
+                  <td>30 bits</td>
+                </tr>
+                <tr>
+                  <td>Output format</td>
+                  <td>Fixed-point</td>
+                  <td>Floating-point</td>
+                </tr>
+                <tr>
+                  <td>Output bit width</td>
+                  <td>54 bits</td>
+                  <td>32 bits</td>
+                </tr>
+              </tbody>
+            </table>
+          </table-wrap>
+        </sec>
+        <sec id="sec2-3-2">
+          <label>2.3.2.</label>
+          <title>Accumulator block</title>
+          <p>An accumulator circuit calculates the time average (sum) of the power spectrum, effectively reducing the data rate before transferring it to the PS. An overview of the accumulator circuit is shown in Fig. <xref ref-type="fig" rid="fig4">4</xref>. Initially, the power spectrum was fed from the FFT circuit, with the partial sum temporarily stored in the UltraRAM (URAM) on the PL. After accumulating data from <inline-formula><tex-math id="TM0053" notation="LaTeX"><![CDATA[$M$]]></tex-math></inline-formula> iterations, the final result was then transferred to a data buffer, constructed using the URAM resource. This entire process was performed simultaneously for 16 values at a frequency index ok <inline-formula><tex-math id="TM0054" notation="LaTeX"><![CDATA[$k$]]></tex-math></inline-formula>.</p>
+          <fig id="fig4">
+            <label>Fig. 4.</label>
+            <caption>
+              <p>Overview of the accumulator circuit. The time average of the power spectrum output from the FFT circuit was calculated on the FPGA and transferred to the DRAM in the PS through DMA for processing by the CPU.</p>
+            </caption>
+            <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ptaf065fig4.jpeg" mimetype="image" />
+          </fig>
+          <p>For a set averaging count of <inline-formula><tex-math id="TM0055" notation="LaTeX"><![CDATA[$M=1024$]]></tex-math></inline-formula> and an <inline-formula><tex-math id="TM0056" notation="LaTeX"><![CDATA[$N=2^{17}$]]></tex-math></inline-formula> FFT circuit, the input width is <inline-formula><tex-math id="TM0057" notation="LaTeX"><![CDATA[$54 \,{\rm bit}$]]></tex-math></inline-formula>, and the output width is <inline-formula><tex-math id="TM0058" notation="LaTeX"><![CDATA[$64 \,{\rm bit}$]]></tex-math></inline-formula>. However, for an FFT circuit with <inline-formula><tex-math id="TM0059" notation="LaTeX"><![CDATA[$N=2^{18}$]]></tex-math></inline-formula>, both input and output utilize <inline-formula><tex-math id="TM0060" notation="LaTeX"><![CDATA[$32 \,{\rm bit}$]]></tex-math></inline-formula> floating-point numbers (Table <xref ref-type="table" rid="tbl2">2</xref>). Notably, the accumulator circuit was implemented entirely through high-level synthesis.</p>
+          <table-wrap id="tbl2">
+            <label>Table 2.</label>
+            <caption>
+              <p>Specifications of the accumulator circuit.</p>
+            </caption>
+            <table frame="hsides">
+              <thead>
+                <tr>
+                  <th align="left">Specification</th>
+                  <th align="center">
+                    <inline-formula>
+                      <tex-math id="TM0061" notation="LaTeX"><![CDATA[$N = 2^{17}$]]></tex-math>
+                    </inline-formula>
+                  </th>
+                  <th align="center">
+                    <inline-formula>
+                      <tex-math id="TM0062" notation="LaTeX"><![CDATA[$N = 2^{18}$]]></tex-math>
+                    </inline-formula>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Averaging count <inline-formula><tex-math id="TM0063" notation="LaTeX"><![CDATA[$M$]]></tex-math></inline-formula></td>
+                  <td>1024</td>
+                  <td>1024</td>
+                </tr>
+                <tr>
+                  <td>Input format</td>
+                  <td>Fixed-point</td>
+                  <td>Floating-point</td>
+                </tr>
+                <tr>
+                  <td>Input bit width</td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0064" notation="LaTeX"><![CDATA[$54 \,{\rm bit}$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0065" notation="LaTeX"><![CDATA[$32 \,{\rm bit}$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Output format</td>
+                  <td>Fixed-point</td>
+                  <td>Floating-point</td>
+                </tr>
+                <tr>
+                  <td>Output bit width</td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0066" notation="LaTeX"><![CDATA[$64 \,{\rm bit}$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0067" notation="LaTeX"><![CDATA[$32 \,{\rm bit}$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </table-wrap>
+        </sec>
+        <sec id="sec2-3-3">
+          <label>2.3.3.</label>
+          <title>Resource usage</title>
+          <p>The total amount of resources in the FPGA of the RFSoC and the amount of resources utilized are listed in Table <xref ref-type="table" rid="tbl3">3</xref>. Apart from the URAM, which stores FFT results in the accumulation block, each resource type was utilized at less than 50%, which allows for expansion through parallelization, as well as increasing the FFT size. URAM was primarily allocated for storing FFT results in the accumulation block, and its resource consumption could be minimized by decreasing the arithmetic precision of the stored data. We successfully implemented firmware with FFT circuits with <inline-formula><tex-math id="TM0068" notation="LaTeX"><![CDATA[$N = 2^{17}$]]></tex-math></inline-formula> at <inline-formula><tex-math id="TM0069" notation="LaTeX"><![CDATA[$64 \,{\rm bit}$]]></tex-math></inline-formula> fixed-point numbers and <inline-formula><tex-math id="TM0070" notation="LaTeX"><![CDATA[$N = 2^{18}$]]></tex-math></inline-formula>, with precision limited to <inline-formula><tex-math id="TM0071" notation="LaTeX"><![CDATA[$32 \,{\rm bit}$]]></tex-math></inline-formula> floating-point numbers. Our spectrometer specifications are listed in Table <xref ref-type="table" rid="tbl4">4</xref>.</p>
+          <table-wrap id="tbl3">
+            <label>Table 3.</label>
+            <caption>
+              <p>FPGA resource utilization of the spectrometer</p>
+            </caption>
+            <table frame="hsides">
+              <thead>
+                <tr>
+                  <td />
+                  <th colspan="2" align="center">Utilization</th>
+                  <th colspan="2" align="center">Usage</th>
+                  <td />
+                </tr>
+                <tr>
+                  <th align="left">Resource Type</th>
+                  <th align="center">
+                    <inline-formula>
+                      <tex-math id="TM0072" notation="LaTeX"><![CDATA[$N=2^{17}$]]></tex-math>
+                    </inline-formula>
+                  </th>
+                  <th align="center">
+                    <inline-formula>
+                      <tex-math id="TM0073" notation="LaTeX"><![CDATA[$N=2^{18}$]]></tex-math>
+                    </inline-formula>
+                  </th>
+                  <th align="center">
+                    <inline-formula>
+                      <tex-math id="TM0074" notation="LaTeX"><![CDATA[$N=2^{17}$]]></tex-math>
+                    </inline-formula>
+                  </th>
+                  <th align="center">
+                    <inline-formula>
+                      <tex-math id="TM0075" notation="LaTeX"><![CDATA[$N=2^{18}$]]></tex-math>
+                    </inline-formula>
+                  </th>
+                  <th align="center">Available</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>LUT</td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0076" notation="LaTeX"><![CDATA[$20.0\%$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0077" notation="LaTeX"><![CDATA[$25.5\%$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0078" notation="LaTeX"><![CDATA[$85 \,{\rm k}$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0079" notation="LaTeX"><![CDATA[$108 \,{\rm k}$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0080" notation="LaTeX"><![CDATA[$425 \,{\rm k}$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                </tr>
+                <tr>
+                  <td>FF</td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0081" notation="LaTeX"><![CDATA[$18.5\%$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0082" notation="LaTeX"><![CDATA[$20.7\%$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0083" notation="LaTeX"><![CDATA[$157 \,{\rm k}$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0084" notation="LaTeX"><![CDATA[$176 \,{\rm k}$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0085" notation="LaTeX"><![CDATA[$851 \,{\rm k}$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                </tr>
+                <tr>
+                  <td>BRAM</td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0086" notation="LaTeX"><![CDATA[$14.5\%$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0087" notation="LaTeX"><![CDATA[$24.8\%$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                  <td>157</td>
+                  <td>268</td>
+                  <td>1080</td>
+                </tr>
+                <tr>
+                  <td>URAM</td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0088" notation="LaTeX"><![CDATA[$77.5\%$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0089" notation="LaTeX"><![CDATA[$80.0\%$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                  <td>62</td>
+                  <td>64</td>
+                  <td>80</td>
+                </tr>
+                <tr>
+                  <td>DSP</td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0090" notation="LaTeX"><![CDATA[$15.8\%$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0091" notation="LaTeX"><![CDATA[$15.9\%$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                  <td>674</td>
+                  <td>678</td>
+                  <td>4272</td>
+                </tr>
+              </tbody>
+            </table>
+          </table-wrap>
+          <table-wrap id="tbl4">
+            <label>Table 4.</label>
+            <caption>
+              <p>Summary of specifications of the developed spectrometer</p>
+            </caption>
+            <table frame="hsides">
+              <thead>
+                <tr>
+                  <th align="left">Item</th>
+                  <th align="center">Performance Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Frequency Bandwidth</td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0092" notation="LaTeX"><![CDATA[$4.096 \,{\rm GHz}$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Input</td>
+                  <td>Complex (IQ)</td>
+                </tr>
+                <tr>
+                  <td>FFT Size</td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0093" notation="LaTeX"><![CDATA[$2^{17}$]]></tex-math>
+                    </inline-formula> / <inline-formula><tex-math id="TM0094" notation="LaTeX"><![CDATA[$2^{18}$]]></tex-math></inline-formula></td>
+                </tr>
+                <tr>
+                  <td>Frequency Resolution</td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0095" notation="LaTeX"><![CDATA[$31.25 \,{\rm kHz}$]]></tex-math>
+                    </inline-formula> / <inline-formula><tex-math id="TM0096" notation="LaTeX"><![CDATA[$15.625 \,{\rm kHz}$]]></tex-math></inline-formula></td>
+                </tr>
+                <tr>
+                  <td>ADC Resolution</td>
+                  <td>12 bit</td>
+                </tr>
+                <tr>
+                  <td>ADC Sampling Rate</td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0097" notation="LaTeX"><![CDATA[$4.096 \,{\rm GSPS}$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                </tr>
+                <tr>
+                  <td>FFT Circuit Throughput</td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0098" notation="LaTeX"><![CDATA[$4.800 \,{\rm GSPS}$]]></tex-math>
+                    </inline-formula>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Time Averaging Interval</td>
+                  <td>
+                    <inline-formula>
+                      <tex-math id="TM0099" notation="LaTeX"><![CDATA[$32.768 \,{\rm ms}$]]></tex-math>
+                    </inline-formula> / <inline-formula><tex-math id="TM0100" notation="LaTeX"><![CDATA[$65.536 \,{\rm ms}$]]></tex-math></inline-formula></td>
+                </tr>
+              </tbody>
+            </table>
+          </table-wrap>
+          <p>The FFT circuit achieved a throughput of <inline-formula><tex-math id="TM0101" notation="LaTeX"><![CDATA[$4.8 \,{\rm GSPS}$]]></tex-math></inline-formula><xref ref-type="fn" rid="fn2"><sup>2</sup></xref>, enabling the full <inline-formula><tex-math id="TM0102" notation="LaTeX"><![CDATA[$4.096 \,{\rm GHz}$]]></tex-math></inline-formula> bandwidth of the ADC to be utilized. Additionally, a resolution of <inline-formula><tex-math id="TM0103" notation="LaTeX"><![CDATA[$15.6 \,{\rm kHz}$]]></tex-math></inline-formula> was achieved, which is suitable for the target signal at approximately <inline-formula><tex-math id="TM0104" notation="LaTeX"><![CDATA[$30 \,{\rm GHz}$]]></tex-math></inline-formula>.</p>
+        </sec>
+      </sec>
+      <sec id="sec2-4">
+        <label>2.4.</label>
+        <title>Software design</title>
+        <p>An overview of the interface between the firmware and software is shown in Fig. <xref ref-type="fig" rid="fig5">5</xref>. Data were reordered from bit-reverse to natural order after accumulation on the PL and subsequently transferred to the PS’s DRAM through an Advanced eXtensible Interface (AXI) port utilizing Xilinx’s direct memory access (DMA) core. To facilitate physical routing during implementation, the DMA circuit operated at <inline-formula><tex-math id="TM0105" notation="LaTeX"><![CDATA[$100 \,{\rm MHz}$]]></tex-math></inline-formula>.</p>
+        <fig id="fig5">
+          <label>Fig. 5.</label>
+          <caption>
+            <p>Overview of the software component. Python scripts were run on PYNQ to perform the initial setup of the FPGA and ADCs, clock synchronization settings for the two ADCs, and transfer of the spectrum obtained by the FPGA to the PC.</p>
+          </caption>
+          <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ptaf065fig5.jpeg" mimetype="image" />
+        </fig>
+        <p>Subsequently, the data were time-averaged in the PS and transmitted to an external PC through a gigabit Ethernet cable on the PS side using the ZeroMQ library [<xref ref-type="bibr" rid="bib15">15</xref>]. The PYNQ framework [<xref ref-type="bibr" rid="bib16">16</xref>] was employed for PL reconfiguration, data transmission, and post-processing.</p>
+        <p>On the external PC, a standard Python script was utilized to communicate with the RFSoC and to store the received data.</p>
+      </sec>
+    </sec>
+    <sec id="sec3">
+      <label>3.</label>
+      <title>Resource-efficient implementation of the FFT circuit on FPGA</title>
+      <p>This section describes our resource-efficient implementation methods for pipelined FFT circuits. These methods were utilized in the design of our spectrometer to minimize circuit area, ensuring compatibility with the limited resources available in the PL of the RFSoC chip. In the implementation of the FFT circuit, the rotation circuit must be efficient, as it demands significant circuit resources and consumes a substantial amount of memory (e.g., for complex multiplication with several coefficients). To reduce memory consumption, we divided the rotation process into two stages and employed a Radix-<inline-formula><tex-math id="TM0106" notation="LaTeX"><![CDATA[$2^4$]]></tex-math></inline-formula> architecture [<xref ref-type="bibr" rid="bib17">17</xref>,<xref ref-type="bibr" rid="bib18">18</xref>].</p>
+      <sec id="sec3-1">
+        <label>3.1.</label>
+        <title>Basics of the pipelined FFT and the terminology</title>
+        <p>In an FFT-based spectrometer, the time-series input data, <inline-formula><tex-math id="TM0107" notation="LaTeX"><![CDATA[$x(t)$]]></tex-math></inline-formula>, are converted into a frequency spectrum, <inline-formula><tex-math id="TM0108" notation="LaTeX"><![CDATA[$\tilde{x}(k)$]]></tex-math></inline-formula>, through a discrete Fourier transform (DFT):</p>
+        <disp-formula id="equ1">
+          <label>(1)</label>
+          <tex-math id="TM0109" notation="LaTeX"><![CDATA[$$\begin{eqnarray}
+\tilde{x}(k) = \sum _{t = 0}^{N - 1} W_N^{kt} x(t),
+\end{eqnarray}$$]]></tex-math>
+        </disp-formula>
+        <p>where <inline-formula><tex-math id="TM0110" notation="LaTeX"><![CDATA[$N$]]></tex-math></inline-formula> represents the length of the DFT, and <inline-formula><tex-math id="TM0111" notation="LaTeX"><![CDATA[$k, t$]]></tex-math></inline-formula> assume integer values from 0 to <inline-formula><tex-math id="TM0112" notation="LaTeX"><![CDATA[$N - 1$]]></tex-math></inline-formula>. <inline-formula><tex-math id="TM0113" notation="LaTeX"><![CDATA[$W_N$]]></tex-math></inline-formula> is defined as <inline-formula><tex-math id="TM0114" notation="LaTeX"><![CDATA[$W_N = e^{-2\pi i \frac{1}{N}}$]]></tex-math></inline-formula>, representing the <inline-formula><tex-math id="TM0115" notation="LaTeX"><![CDATA[$N$]]></tex-math></inline-formula>th primitive root of unity. The Cooley-Tukey algorithm [<xref ref-type="bibr" rid="bib19">19</xref>], generally referred to as the FFT, reduces the computational cost of DFT from <inline-formula><tex-math id="TM0116" notation="LaTeX"><![CDATA[$O(N^2)$]]></tex-math></inline-formula> to <inline-formula><tex-math id="TM0117" notation="LaTeX"><![CDATA[$O(N\log N)$]]></tex-math></inline-formula> by recursively breaking down the DFT into smaller components. For <inline-formula><tex-math id="TM0118" notation="LaTeX"><![CDATA[$N = 2^n$]]></tex-math></inline-formula>, <inline-formula><tex-math id="TM0119" notation="LaTeX"><![CDATA[$\tilde{x}(k)$]]></tex-math></inline-formula> is described as follows:</p>
+        <disp-formula id="equ2">
+          <label>(2)</label>
+          <tex-math id="TM0120" notation="LaTeX"><![CDATA[$$\begin{eqnarray}
+\tilde{x}(k) &= & \sum _{t_0 = 0}^1 W_2^{k_{n - 1}t_0} W_{2^n}^{k_{0:n-2} t_0} \sum _{t_1 = 0}^1 W_2^{k_{n - 2}t_1} W_{2^{n - 1}}^{k_{0:n-3} t_1} \\
+&&\cdots \sum _{t_{n - 2} = 0}^1 W_2^{k_1t_{n-2}} W_{2^2}^{k_{0} t_{n - 2}} \sum _{t_{n-1} = 0}^{1} W_2^{k_0t_{n-1}} x(t).
+\end{eqnarray}$$]]></tex-math>
+        </disp-formula>
+        <p>Here, for a non-negative integer <inline-formula><tex-math id="TM0121" notation="LaTeX"><![CDATA[$x$]]></tex-math></inline-formula> represented in binary notation, <inline-formula><tex-math id="TM0122" notation="LaTeX"><![CDATA[$x_i$]]></tex-math></inline-formula> denotes its <inline-formula><tex-math id="TM0123" notation="LaTeX"><![CDATA[$i$]]></tex-math></inline-formula>th digit from the right, whereas <inline-formula><tex-math id="TM0124" notation="LaTeX"><![CDATA[$x_{i:j}$]]></tex-math></inline-formula> represents the number from the <inline-formula><tex-math id="TM0125" notation="LaTeX"><![CDATA[$i$]]></tex-math></inline-formula>th to <inline-formula><tex-math id="TM0126" notation="LaTeX"><![CDATA[$j$]]></tex-math></inline-formula>th digits. For example, if <inline-formula><tex-math id="TM0127" notation="LaTeX"><![CDATA[$x = 6$]]></tex-math></inline-formula> (binary: <inline-formula><tex-math id="TM0128" notation="LaTeX"><![CDATA[$110^{(2)}$]]></tex-math></inline-formula>), then <inline-formula><tex-math id="TM0129" notation="LaTeX"><![CDATA[$x_0 = 0, x_{1:2} = 3$]]></tex-math></inline-formula>.</p>
+        <p>The concept of pipelined FFT, which implements FFT as a continuous pipelined flow in a circuit, was proposed [<xref ref-type="bibr" rid="bib20">20</xref>,<xref ref-type="bibr" rid="bib21">21</xref>] and has been widely utilized in achieving high throughput. Various circuit architectures have been proposed to cater to a wide range of applications [<xref ref-type="bibr" rid="bib22">22</xref>].</p>
+        <p>The schematic of the single-path delay feedback (SDF) architecture of the pipelined FFT is shown in Fig. <xref ref-type="fig" rid="fig6">6</xref>, whereas the multi-path delay feedback (MDF) architecture, which can achieve twice or even higher throughput, is shown in Fig. <xref ref-type="fig" rid="fig7">7</xref>. By examining the twiddle factors <inline-formula><tex-math id="TM0130" notation="LaTeX"><![CDATA[$W_2(=-1)$]]></tex-math></inline-formula> and <inline-formula><tex-math id="TM0131" notation="LaTeX"><![CDATA[$W_{2^{k}}$]]></tex-math></inline-formula> in Eq. (<xref ref-type="disp-formula" rid="equ2">2</xref>), the FFT can be expressed as a combination of 2-point FFT, which transforms input <inline-formula><tex-math id="TM0132" notation="LaTeX"><![CDATA[$A$]]></tex-math></inline-formula> and <inline-formula><tex-math id="TM0133" notation="LaTeX"><![CDATA[$B$]]></tex-math></inline-formula> into <inline-formula><tex-math id="TM0134" notation="LaTeX"><![CDATA[$A+B$]]></tex-math></inline-formula> and <inline-formula><tex-math id="TM0135" notation="LaTeX"><![CDATA[$A-B$]]></tex-math></inline-formula>, along with a general rotation by the power of <inline-formula><tex-math id="TM0136" notation="LaTeX"><![CDATA[$W_{2^{k}}$]]></tex-math></inline-formula>. The former process is known as a (Radix-2) butterfly operation (“R2” in the figures). The latter is typically implemented using a look-up table (LUT), where pre-computed twiddle factors are stored and retrieved for multiplication at runtime. Although this approach requires <inline-formula><tex-math id="TM0137" notation="LaTeX"><![CDATA[$O(2^k)$]]></tex-math></inline-formula> memory size for computing powers of <inline-formula><tex-math id="TM0138" notation="LaTeX"><![CDATA[$W_{2^k}$]]></tex-math></inline-formula>, it can be implemented using a single complex multiplier. In the SDF architecture, which processes one input per clock cycle, temporary memory is utilized to store input data so that the butterfly operation can be executed using subsequent inputs. The 2-parallel MDF architecture shown in Fig. <xref ref-type="fig" rid="fig7">7</xref> features two SDF circuits in parallel, each handling even- and odd-indexed data input. These circuits merge their outputs at the end to produce the upper and lower halves of the frequency domain data simultaneously.</p>
+        <fig id="fig6">
+          <label>Fig. 6.</label>
+          <caption>
+            <p>Structure of the SDF pipeline circuit. “R2” denotes a Radix-2 butterfly operation, and “Mem” represents a memory for temporary data storage or a table for rotation operation.</p>
+          </caption>
+          <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ptaf065fig6.jpeg" mimetype="image" />
+        </fig>
+        <fig id="fig7">
+          <label>Fig. 7.</label>
+          <caption>
+            <p>Two-parallel MDF architecture comprising two SDF circuits and a Radix-2 butterfly unit, achieving doubled throughput.</p>
+          </caption>
+          <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ptaf065fig7.jpeg" mimetype="image" />
+        </fig>
+      </sec>
+      <sec id="sec3-2">
+        <label>3.2.</label>
+        <title>Resource reduction techniques for pipelined FFT</title>
+        <p>To minimize resource utilization and ensure the design fits within the FPGA constraints, we implemented two key strategies: reducing the memory footprint required for rotation units and adopting an architecture that minimizes the number of rotations necessary for FFT processing.</p>
+        <sec id="sec3-2-1">
+          <label>3.2.1.</label>
+          <title>Memory reduction of the rotation unit by splitting the twiddle factor table</title>
+          <p>The memory requirements for the rotation process, shown in Eq. (<xref ref-type="disp-formula" rid="equ2">2</xref>) and Fig. <xref ref-type="fig" rid="fig6">6</xref>, are directly proportional to the FFT length. For an FFT length of <inline-formula><tex-math id="TM0139" notation="LaTeX"><![CDATA[$N = 2^n \quad (n = 17 \text{ or } 18)$]]></tex-math></inline-formula>, approximately <inline-formula><tex-math id="TM0140" notation="LaTeX"><![CDATA[$10 \,{\rm Mbit}$]]></tex-math></inline-formula> of memory is required to implement a rotation. To facilitate simultaneous access to the twiddle factor table at each stage, distributed memory resources, such as block RAM (BRAM) on FPGA are used to enable high-bandwidth random access. Given the limited availability of BRAM resources, we optimized memory utilization for the rotation unit by partitioning the twiddle factor table.</p>
+          <p>First, the size of the twiddle factor table was reduced by factoring <inline-formula><tex-math id="TM0141" notation="LaTeX"><![CDATA[$W_{4}$]]></tex-math></inline-formula> from general <inline-formula><tex-math id="TM0142" notation="LaTeX"><![CDATA[$W_N$]]></tex-math></inline-formula>:</p>
+          <disp-formula>
+            <tex-math id="TM0143" notation="LaTeX"><![CDATA[$$\begin{eqnarray}
+W_N^m = W_4^{m_{n-2:n-1}} W_N^{m_{0:n-3}},
+\end{eqnarray}$$]]></tex-math>
+          </disp-formula>
+          <p>because multiplication of <inline-formula><tex-math id="TM0144" notation="LaTeX"><![CDATA[$W_{4} = i$]]></tex-math></inline-formula> or its power can be easily performed using a sign flip and swapping real and imaginary components.</p>
+          <p>To further minimize memory utilization, we set <inline-formula><tex-math id="TM0145" notation="LaTeX"><![CDATA[$L = 2^l (< N)$]]></tex-math></inline-formula> and decomposed it into a product of three twiddle factors:</p>
+          <disp-formula id="equ3">
+            <label>(3)</label>
+            <tex-math id="TM0146" notation="LaTeX"><![CDATA[$$\begin{eqnarray}
+W_N^m = W_4^{m_{n-2:n-1}} W_\frac{N}{L}^{m_{l:n-3}} W_N^{m_{0:l-1}},
+\end{eqnarray}$$]]></tex-math>
+          </disp-formula>
+          <p>where <inline-formula><tex-math id="TM0147" notation="LaTeX"><![CDATA[$W_\frac{N}{L}^{m_{l:n-3}}$]]></tex-math></inline-formula> represents a coarse rotation and <inline-formula><tex-math id="TM0148" notation="LaTeX"><![CDATA[$W_N^{m_{0:l-1}}$]]></tex-math></inline-formula> represents a fine rotation. Because <inline-formula><tex-math id="TM0149" notation="LaTeX"><![CDATA[$m_{0:l-1}$]]></tex-math></inline-formula> is an integer in the range <inline-formula><tex-math id="TM0150" notation="LaTeX"><![CDATA[$[0, L)$]]></tex-math></inline-formula>, <inline-formula><tex-math id="TM0151" notation="LaTeX"><![CDATA[$2L$]]></tex-math></inline-formula> real numbers are required to store <inline-formula><tex-math id="TM0152" notation="LaTeX"><![CDATA[$W_N^{m_{0:l-1}}$]]></tex-math></inline-formula>. Similarly, because <inline-formula><tex-math id="TM0153" notation="LaTeX"><![CDATA[$m_{l:n-3}$]]></tex-math></inline-formula> is an integer in the range [0, <inline-formula><tex-math id="TM0154" notation="LaTeX"><![CDATA[$\frac{N}{4L})$]]></tex-math></inline-formula>, <inline-formula><tex-math id="TM0155" notation="LaTeX"><![CDATA[$2 \times \frac{N}{4L}$]]></tex-math></inline-formula> real numbers are sufficient for storing <inline-formula><tex-math id="TM0156" notation="LaTeX"><![CDATA[$W_\frac{N}{L}^{m_{l:n-3}}$]]></tex-math></inline-formula>. Moreover, by leveraging the symmetry inherent in cosine and sine functions, the memory requirement for <inline-formula><tex-math id="TM0157" notation="LaTeX"><![CDATA[$W_\frac{N}{L}^{m_{l:n-3}}$]]></tex-math></inline-formula> can be reduced to <inline-formula><tex-math id="TM0158" notation="LaTeX"><![CDATA[$\frac{N}{4L}$]]></tex-math></inline-formula> real numbers. Hence, through the computation of Eq. (<xref ref-type="disp-formula" rid="equ3">3</xref>) using the circuit depicted in Fig. <xref ref-type="fig" rid="fig8">8</xref>, the rotation operation can be executed utilizing a total memory of only <inline-formula><tex-math id="TM0159" notation="LaTeX"><![CDATA[$2L + \frac{N}{4L}$]]></tex-math></inline-formula> real numbers. This rotation unit configuration is henceforth referred to as a “split LUT rotation unit.”</p>
+          <fig id="fig8">
+            <label>Fig. 8.</label>
+            <caption>
+              <p>Overview of the developed split LUT rotation unit. By splitting the rotation into two components, the number of complex multiplications doubled compared with those of the conventional LUT rotation unit; however, the rotation memory utilization was significantly reduced from <inline-formula><tex-math id="TM0160" notation="LaTeX"><![CDATA[$O(N)$]]></tex-math></inline-formula> to <inline-formula><tex-math id="TM0161" notation="LaTeX"><![CDATA[$O(\sqrt{N})$]]></tex-math></inline-formula>.</p>
+            </caption>
+            <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ptaf065fig8.jpeg" mimetype="image" />
+          </fig>
+          <p>The memory usage of the split LUT rotation unit is minimized when, for <inline-formula><tex-math id="TM0162" notation="LaTeX"><![CDATA[$N = 2^n$]]></tex-math></inline-formula>, <inline-formula><tex-math id="TM0163" notation="LaTeX"><![CDATA[$L = 2^\frac{n - 3}{2}$]]></tex-math></inline-formula> if <inline-formula><tex-math id="TM0164" notation="LaTeX"><![CDATA[$n$]]></tex-math></inline-formula> is odd, or <inline-formula><tex-math id="TM0165" notation="LaTeX"><![CDATA[$L = 2^\frac{n - 4}{2}, 2^\frac{n - 2}{2}$]]></tex-math></inline-formula> if <inline-formula><tex-math id="TM0166" notation="LaTeX"><![CDATA[$n$]]></tex-math></inline-formula> is even. This memory requires <inline-formula><tex-math id="TM0167" notation="LaTeX"><![CDATA[$\sqrt{2N}$]]></tex-math></inline-formula> real numbers for odd <inline-formula><tex-math id="TM0168" notation="LaTeX"><![CDATA[$n$]]></tex-math></inline-formula>, and <inline-formula><tex-math id="TM0169" notation="LaTeX"><![CDATA[$\frac{3}{2} \sqrt{N}$]]></tex-math></inline-formula> real numbers for even <inline-formula><tex-math id="TM0170" notation="LaTeX"><![CDATA[$n$]]></tex-math></inline-formula>. Because the required memory for a conventional rotation unit is <inline-formula><tex-math id="TM0171" notation="LaTeX"><![CDATA[$N / 4$]]></tex-math></inline-formula> real numbers, our memory usage is reduced by an order of magnitude. For example, <inline-formula><tex-math id="TM0172" notation="LaTeX"><![CDATA[$N = 2^{17}$]]></tex-math></inline-formula> can be reduced to <inline-formula><tex-math id="TM0173" notation="LaTeX"><![CDATA[$1 / 64$]]></tex-math></inline-formula>. Alternatively, the number of required arithmetic units (e.g., multipliers) is approximately doubled because the rotation operation must be performed twice. To address this tradeoff, we used the split LUT rotation only for the rotation units requiring the largest LUT size. These units require sixteen times more LUT size than the second largest ones.</p>
+        </sec>
+        <sec id="sec3-2-2">
+          <label>3.2.2.</label>
+          <title>Radix-<inline-formula><tex-math id="TM0174" notation="LaTeX"><![CDATA[$2^4$]]></tex-math></inline-formula> MDF architecture</title>
+          <p>As demonstrated, LUT splitting reduces the memory consumption in the general rotation units. Furthermore, the number of general rotation units can be reduced by optimizing the architecture. Hence, we adopted the Radix-<inline-formula><tex-math id="TM0175" notation="LaTeX"><![CDATA[$2^4$]]></tex-math></inline-formula> MDF architecture [<xref ref-type="bibr" rid="bib17">17</xref>,<xref ref-type="bibr" rid="bib18">18</xref>], characterized by the fewest general rotation units for a 16-parallel FFT circuit.</p>
+          <p>We split <inline-formula><tex-math id="TM0176" notation="LaTeX"><![CDATA[$k$]]></tex-math></inline-formula> and <inline-formula><tex-math id="TM0177" notation="LaTeX"><![CDATA[$t$]]></tex-math></inline-formula> as <inline-formula><tex-math id="TM0178" notation="LaTeX"><![CDATA[$k = k_{0:n-5} + 2^{n-4} k_{n-4:n-1},~ t = t_{0:3} + 2^4 t_{4:n-1}$]]></tex-math></inline-formula> and computed the results as follows:</p>
+          <disp-formula id="equ4">
+            <label>(4)</label>
+            <tex-math id="TM0179" notation="LaTeX"><![CDATA[$$\begin{eqnarray}
+\tilde{x}(k) = \sum _{t_{0:3} = 0}^{15}\sum _{t_{4:n-1} = 0}^{2^{n-4} - 1} W_N^{\left(k_{0:n-5} + 2^{n-4}k_{n-4:n-1}\right)(t_{0:3} + 2^4t_{4:n-1})} x(t)
+\end{eqnarray}$$]]></tex-math>
+          </disp-formula>
+          <disp-formula id="equ5">
+            <label>(5)</label>
+            <tex-math id="TM0180" notation="LaTeX"><![CDATA[$$\begin{eqnarray}
+= \sum _{t_{0:3} = 0}^{15} W_{2^4}^{k_{n-4:n-1}t_{0:3}} W_N^{k_{0:n-5}t_{0:3}} \sum _{t_{4:n-1} = 0}^{2^{n-4} - 1} W_{2^{n-4}}^{k_{0:n-5}t_{4:n-1}} x(t).
+\end{eqnarray}$$]]></tex-math>
+          </disp-formula>
+          <p>The inner sum comprises isolated DFTs of size <inline-formula><tex-math id="TM0181" notation="LaTeX"><![CDATA[$\frac{N}{16}$]]></tex-math></inline-formula> and the outer sum involves a combination of rotation operations and a size-16 DFT, processed using 15 rotation units and a fully parallelized 16-parallel FFT circuit. Within this circuit, we split <inline-formula><tex-math id="TM0182" notation="LaTeX"><![CDATA[$k_{n-4:n-1}$]]></tex-math></inline-formula> and <inline-formula><tex-math id="TM0183" notation="LaTeX"><![CDATA[$t_{0:3}$]]></tex-math></inline-formula>, and computed the results as follows:</p>
+          <disp-formula id="equ6">
+            <label>(6)</label>
+            <tex-math id="TM0184" notation="LaTeX"><![CDATA[$$\begin{eqnarray}
+\sum _{t_{0:3} = 0}^{15} W_{2^4}^{k_{n-4:n-1}t_{0:3}} &=& \sum _{t_0 = 0}^{1} W_2^{k_{n-1}t_0} W_{4}^{k_{n-2}t_0} \sum _{t_1 = 0}^{1} W_2^{k_{n-2}t_1} W_{16}^{k_{n-4:n-3}t_{0:1}} \\
+&&\qquad \sum _{t_2 = 0}^{1} W_2^{k_{n-3}t_2} W_{4}^{k_{n-4}t_2} \sum _{t_3 = 0}^{1} W_2^{k_{n-4}t_3}.
+\end{eqnarray}$$]]></tex-math>
+          </disp-formula>
+          <p>Among the rotation operations performed in Eq. (<xref ref-type="disp-formula" rid="equ6">6</xref>), the components represented by <inline-formula><tex-math id="TM0185" notation="LaTeX"><![CDATA[$W_2^m$]]></tex-math></inline-formula> and <inline-formula><tex-math id="TM0186" notation="LaTeX"><![CDATA[$W_4^m$]]></tex-math></inline-formula> can be expressed through sign inversion, including swapping the real and imaginary parts, which eliminates the need for multipliers. Moreover, as the values of <inline-formula><tex-math id="TM0187" notation="LaTeX"><![CDATA[$k_{n-4:n-3}$]]></tex-math></inline-formula> and <inline-formula><tex-math id="TM0188" notation="LaTeX"><![CDATA[$t_{0:1}$]]></tex-math></inline-formula> are predetermined, the rotation operation <inline-formula><tex-math id="TM0189" notation="LaTeX"><![CDATA[$W_{16}^{k_{n-4:n-3}t_{0:1}}$]]></tex-math></inline-formula> can be executed using a constant multiplier. Although <inline-formula><tex-math id="TM0190" notation="LaTeX"><![CDATA[$W_{16}$]]></tex-math></inline-formula> cannot reduce the number of multiplications, unlike <inline-formula><tex-math id="TM0191" notation="LaTeX"><![CDATA[$W_2$]]></tex-math></inline-formula> or <inline-formula><tex-math id="TM0192" notation="LaTeX"><![CDATA[$W_4$]]></tex-math></inline-formula>, the cost of constant multiplication is minimal, and no rotation memory is required as the rotation angle is known.</p>
+          <p>The configuration shown in Fig. <xref ref-type="fig" rid="fig9">9</xref> can be obtained by constructing the circuit from Eqs. (<xref ref-type="disp-formula" rid="equ5">5</xref>) end (<xref ref-type="disp-formula" rid="equ6">6</xref>). We adopted Xilinx’s FFT core for the 16 SDF circuits and a split LUT rotation unit for general rotation following each circuit. The Radix-<inline-formula><tex-math id="TM0193" notation="LaTeX"><![CDATA[$2^4$]]></tex-math></inline-formula> architecture reduced the number of general rotation units to 15. For comparison, the original Radix-2 architecture utilized 32 units, whereas the Radix-<inline-formula><tex-math id="TM0194" notation="LaTeX"><![CDATA[$2^2$]]></tex-math></inline-formula> architecture, which is widely utilized, requires 24 units.</p>
+          <fig id="fig9">
+            <label>Fig. 9.</label>
+            <caption>
+              <p>FFT circuit configuration. The calculation was divided into 16 SDF circuits and a 16-parallel MDF FFT circuit. The latter was further divided into a Radix-<inline-formula><tex-math id="TM0195" notation="LaTeX"><![CDATA[$2^4$]]></tex-math></inline-formula> circuit based on Eq. (<xref ref-type="disp-formula" rid="equ6">6</xref>), comprising Radix-2 butterfly units (R2), <inline-formula><tex-math id="TM0196" notation="LaTeX"><![CDATA[$-i$]]></tex-math></inline-formula> multipliers (diamond), constant rotation units (hexagon), and general rotation units (circle). The general rotation units employ the split LUT method to reduce memory utilization.</p>
+            </caption>
+            <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ptaf065fig9.jpeg" mimetype="image" />
+          </fig>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="sec4">
+      <label>4.</label>
+      <title>Performance evaluation</title>
+      <p>We evaluated the performance and linearity of our spectroscopy method using a monotone RF source as input to the spectrometer. Additionally, we assessed the time efficiency of the spectrometer using a blackbody radiation source.</p>
+      <p>We conducted a basic operational check by observing a monotone RF signal with the developed spectrometer. Input and LO signals were generated using a signal generator (NATIONAL INSTRUMENTS FSL-0020), as shown in Fig. <xref ref-type="fig" rid="fig10">10</xref>. The input signal was set to <inline-formula><tex-math id="TM0197" notation="LaTeX"><![CDATA[$16 \,{\rm GHz}$]]></tex-math></inline-formula>, whereas the LO frequency was set to <inline-formula><tex-math id="TM0198" notation="LaTeX"><![CDATA[$15 \,{\rm GHz}$]]></tex-math></inline-formula>, resulting in an intermediate frequency (IF) signal of <inline-formula><tex-math id="TM0199" notation="LaTeX"><![CDATA[$1 \,{\rm GHz}$]]></tex-math></inline-formula> input to the RFSoC.</p>
+      <fig id="fig10">
+        <label>Fig. 10.</label>
+        <caption>
+          <p>Test setup for spectroscopy and linearity measurement. The input signal (RF) (<inline-formula><tex-math id="TM0200" notation="LaTeX"><![CDATA[$16 \,{\rm GHz}$]]></tex-math></inline-formula>) and LO signal (<inline-formula><tex-math id="TM0201" notation="LaTeX"><![CDATA[$15 \,{\rm GHz}$]]></tex-math></inline-formula>) were generated using signal generators, and attenuated by <inline-formula><tex-math id="TM0202" notation="LaTeX"><![CDATA[$12 \,{\rm dB}$]]></tex-math></inline-formula>.</p>
+        </caption>
+        <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ptaf065fig10.jpeg" mimetype="image" />
+      </fig>
+      <sec id="sec4-1">
+        <label>4.1.</label>
+        <title>Demonstration of spectrometry operation using a monotone RF source</title>
+        <p>The observed spectrum is shown in Fig. <xref ref-type="fig" rid="fig11">11</xref>, where the peak was accurately observed in the single bin at <inline-formula><tex-math id="TM0203" notation="LaTeX"><![CDATA[$16 \,{\rm GHz}$]]></tex-math></inline-formula>. The leakage from the IQ mixer imbalance and harmonics was at least <inline-formula><tex-math id="TM0204" notation="LaTeX"><![CDATA[$20 \,{\rm dB}$]]></tex-math></inline-formula> compared with the signal, aligning with the catalog values of the IQ mixer. The noise floor was approximately <inline-formula><tex-math id="TM0205" notation="LaTeX"><![CDATA[$\sim 150 \,{dB_{\rm fs} / Hz}$]]></tex-math></inline-formula>, also consistent with ADC catalog specifications, thus validating the absence of additional noise in the FFT circuit on the FPGA.</p>
+        <fig id="fig11">
+          <label>Fig. 11.</label>
+          <caption>
+            <p>Power spectrum when a <inline-formula><tex-math id="TM0206" notation="LaTeX"><![CDATA[$16 \,{\rm GHz}$]]></tex-math></inline-formula> signal was input. (a) Complete power spectrum. The peak was accurately observed at <inline-formula><tex-math id="TM0207" notation="LaTeX"><![CDATA[$16 \,{\rm GHz}$]]></tex-math></inline-formula>, with all other peaks being at least <inline-formula><tex-math id="TM0208" notation="LaTeX"><![CDATA[$20 \,{\rm dB}$]]></tex-math></inline-formula> lower. The noise floor was approximately <inline-formula><tex-math id="TM0209" notation="LaTeX"><![CDATA[$\sim -150 \,{\rm dB}_{\rm fs} / Hz$]]></tex-math></inline-formula>. (b) Power spectrum near the peak. The peak was accurately located at <inline-formula><tex-math id="TM0210" notation="LaTeX"><![CDATA[$16 \,{\rm GHz}$]]></tex-math></inline-formula>, and the leakage was at least <inline-formula><tex-math id="TM0211" notation="LaTeX"><![CDATA[$30 \,{\rm dB}$]]></tex-math></inline-formula> lower.</p>
+          </caption>
+          <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ptaf065fig11.jpeg" mimetype="image" />
+        </fig>
+        <p>In Fig. <xref ref-type="fig" rid="fig11">11</xref>b, an enlarged view of the <inline-formula><tex-math id="TM0212" notation="LaTeX"><![CDATA[$16 \,{\rm GHz}$]]></tex-math></inline-formula> signal reveals symmetric sidelobes around the center, attributable to the DFT calculated within a finite interval and several data points. This observation aligns with expectations when utilizing a rectangular window (i.e., no window function).</p>
+        <p>The spectrum exhibits spurious peaks originating from the following sources:</p>
+        <list list-type="roman-lower">
+          <list-item>
+            <p>Components originating from <inline-formula><tex-math id="TM0213" notation="LaTeX"><![CDATA[$1/f$]]></tex-math></inline-formula> noise near DC (<inline-formula><tex-math id="TM0214" notation="LaTeX"><![CDATA[$0 \,{\rm MHz}$]]></tex-math></inline-formula> and <inline-formula><tex-math id="TM0215" notation="LaTeX"><![CDATA[$2048 \,{\rm MHz}$]]></tex-math></inline-formula>)</p>
+          </list-item>
+          <list-item>
+            <p>Leakage of (i) into parallel-computed components (<inline-formula><tex-math id="TM0216" notation="LaTeX"><![CDATA[$512 \,{\rm MHz}$]]></tex-math></inline-formula>, <inline-formula><tex-math id="TM0217" notation="LaTeX"><![CDATA[$1024 \,{\rm MHz}$]]></tex-math></inline-formula>, <inline-formula><tex-math id="TM0218" notation="LaTeX"><![CDATA[$1536 \,{\rm MHz}$]]></tex-math></inline-formula>,...)</p>
+          </list-item>
+          <list-item>
+            <p>Clock frequency <inline-formula><tex-math id="TM0219" notation="LaTeX"><![CDATA[$40.96 \,{\rm MHz}$]]></tex-math></inline-formula> and its harmonics</p>
+          </list-item>
+        </list>
+        <p>The spurious results from (i) are shown in Fig. <xref ref-type="fig" rid="fig11">11</xref>a. To mitigate the impact of these spurious peaks, dark matter search experiments should be conducted using multiple LO frequencies.</p>
+        <p>For the evaluations conducted, a total bandwidth of <inline-formula><tex-math id="TM0220" notation="LaTeX"><![CDATA[$50 \,{\rm MHz}$]]></tex-math></inline-formula> was excluded: <inline-formula><tex-math id="TM0221" notation="LaTeX"><![CDATA[$10 \,{\rm MHz}$]]></tex-math></inline-formula> width for each (i), <inline-formula><tex-math id="TM0222" notation="LaTeX"><![CDATA[$1 \,{\rm MHz}$]]></tex-math></inline-formula> width for each (ii), and <inline-formula><tex-math id="TM0223" notation="LaTeX"><![CDATA[$0.25 \,{\rm MHz}$]]></tex-math></inline-formula> width for each (iii).</p>
+      </sec>
+      <sec id="sec4-2">
+        <label>4.2.</label>
+        <title>Linearity</title>
+        <p>Subsequently, the linearity of the spectrometer response was assessed. A monotone signal at <inline-formula><tex-math id="TM0224" notation="LaTeX"><![CDATA[$14 \,{\rm GHz}$]]></tex-math></inline-formula> was generated using a signal generator (KEYSIGHT E8257D) at <inline-formula><tex-math id="TM0225" notation="LaTeX"><![CDATA[$0.05 \text{--} 2.00 \ {\rm mW}$]]></tex-math></inline-formula>, which was then attenuated by <inline-formula><tex-math id="TM0226" notation="LaTeX"><![CDATA[$-60 \,{\rm dB}$]]></tex-math></inline-formula>. This power level was adjusted to match that of the previous experiment [<xref ref-type="bibr" rid="bib7">7</xref>], and the LO frequency was set to <inline-formula><tex-math id="TM0227" notation="LaTeX"><![CDATA[$13 \,{\rm GHz}$]]></tex-math></inline-formula>.</p>
+        <p>The relationship between the input and observed power values is shown in Fig. <xref ref-type="fig" rid="fig12">12</xref>. The obtained power values were fitted to a linear function with an offset and the residuals were calculated from the linear line. We validated the linearity with an accuracy within 0.5%. The coupling constant, <inline-formula><tex-math id="TM0228" notation="LaTeX"><![CDATA[$\chi$]]></tex-math></inline-formula> or <inline-formula><tex-math id="TM0229" notation="LaTeX"><![CDATA[$g_{a\gamma }$]]></tex-math></inline-formula>, is directly proportional to the square root of the observed power. Consequently, the impact of the non-linearity on the coupling constant is less than 0.25%.</p>
+        <fig id="fig12">
+          <label>Fig. 12.</label>
+          <caption>
+            <p>Relationship between input and observed power. The linearity was validated with an accuracy within 0.5%.</p>
+          </caption>
+          <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ptaf065fig12.jpeg" mimetype="image" />
+        </fig>
+      </sec>
+      <sec id="sec4-3">
+        <label>4.3.</label>
+        <title>Stability and time efficiency</title>
+        <p>To assess the stability of the developed system, we conducted a 24-h continuous operation test. Data were set to be transmitted from the FPGA every <inline-formula><tex-math id="TM0230" notation="LaTeX"><![CDATA[$65.536 \,{\rm ms}$]]></tex-math></inline-formula>, and the system was configured to receive data continuously for 1,318,360 cycles, equivalent to precisely 24 h. The total time required was 24 h, 44 s, demonstrating that data acquisition was successful more than 99.94% of the time. The stable data acquisition at <inline-formula><tex-math id="TM0231" notation="LaTeX"><![CDATA[$65.536 \,{\rm ms}$]]></tex-math></inline-formula> intervals enables distinction between stationary dark matter signals and transient external noise, which is considered the dominant background source.</p>
+        <p>Furthermore, we conducted tests to ensure that each <inline-formula><tex-math id="TM0232" notation="LaTeX"><![CDATA[$65.536 \,{\rm ms}$]]></tex-math></inline-formula> measurement interval was executed with no inefficiencies. This was achieved by analyzing the power fluctuations. The power <inline-formula><tex-math id="TM0233" notation="LaTeX"><![CDATA[$P$]]></tex-math></inline-formula> and power fluctuation <inline-formula><tex-math id="TM0234" notation="LaTeX"><![CDATA[$\Delta P$]]></tex-math></inline-formula> observed when measuring blackbody radiation with a radio-wave receiver connected to the developed spectrometer in the Rayleigh-Jeans regime can be as follows [<xref ref-type="bibr" rid="bib23">23</xref>]:</p>
+        <disp-formula id="equ7">
+          <label>(7)</label>
+          <tex-math id="TM0235" notation="LaTeX"><![CDATA[$$\begin{eqnarray}
+P = Gk_B T_{\mathrm{sys}} \Delta \nu ,
+\end{eqnarray}$$]]></tex-math>
+        </disp-formula>
+        <disp-formula id="equ8">
+          <label>(8)</label>
+          <tex-math id="TM0236" notation="LaTeX"><![CDATA[$$\begin{eqnarray}
+\Delta P = \frac{Gk_B T_\mathrm{sys} \Delta \nu }{\sqrt{\epsilon \Delta t\Delta \nu }},
+\end{eqnarray}$$]]></tex-math>
+        </disp-formula>
+        <p>where <inline-formula><tex-math id="TM0237" notation="LaTeX"><![CDATA[$G$]]></tex-math></inline-formula> denotes the system gain, <inline-formula><tex-math id="TM0238" notation="LaTeX"><![CDATA[$T_\mathrm{sys}$]]></tex-math></inline-formula> represents the system temperature primarily determined from the blackbody temperature and thermal noise from the amplifier, <inline-formula><tex-math id="TM0239" notation="LaTeX"><![CDATA[$\Delta \nu$]]></tex-math></inline-formula> represents the width of the observed frequency band, <inline-formula><tex-math id="TM0240" notation="LaTeX"><![CDATA[$\Delta t$]]></tex-math></inline-formula> represents the measurement time, and <inline-formula><tex-math id="TM0241" notation="LaTeX"><![CDATA[$\epsilon$]]></tex-math></inline-formula> represents the time efficiency of the observation. This property enables the calculation of <inline-formula><tex-math id="TM0242" notation="LaTeX"><![CDATA[$\epsilon$]]></tex-math></inline-formula> as follows:</p>
+        <disp-formula id="equ9">
+          <label>(9)</label>
+          <tex-math id="TM0243" notation="LaTeX"><![CDATA[$$\begin{eqnarray}
+\epsilon = \frac{1}{\Delta \nu \Delta t} \left( \frac{P}{\Delta P} \right)^2.
+\end{eqnarray}$$]]></tex-math>
+        </disp-formula>
+        <p>The measurement setup is shown in Fig. <xref ref-type="fig" rid="fig13">13</xref>. We received radiation from a blackbody radiator at room temperature (<inline-formula><tex-math id="TM0244" notation="LaTeX"><![CDATA[$13 \,\mathrm{^{\circ }C}$]]></tex-math></inline-formula>) and at <inline-formula><tex-math id="TM0245" notation="LaTeX"><![CDATA[$77 \,{\rm K}$]]></tex-math></inline-formula>, achieved by immersing it in liquid nitrogen. The power spectra were then measured using our spectrometer. The CV-3 model from E&amp;C Engineering was utilized for the blackbody radiator, whereas the PE9856/SF-20 model from PASTERNACK was utilized for the horn antenna. An isolator (PASTERNACK PE8304) was inserted between the horn antenna and the first amplifier (low noise factory LNF-LNR6_20A), followed by the second amplifier (Mini-Circuits ZVA-18G-S+). An attenuator was inserted between the first and second amplifiers for gain adjustments. The spectrometer was configured with an LO frequency of <inline-formula><tex-math id="TM0246" notation="LaTeX"><![CDATA[$13 \,{\rm GHz}$]]></tex-math></inline-formula>, and each measurement lasted for <inline-formula><tex-math id="TM0247" notation="LaTeX"><![CDATA[$65.5 \,{\rm s}$]]></tex-math></inline-formula>, with intervals of <inline-formula><tex-math id="TM0248" notation="LaTeX"><![CDATA[$65.5 \,{\rm ms}$]]></tex-math></inline-formula> repeated 1000 times at both temperatures. Frequency bands affected by external noise from the folding of the Wi-Fi were excluded from the analysis.</p>
+        <fig id="fig13">
+          <label>Fig. 13.</label>
+          <caption>
+            <p>Setup for measuring time efficiency. The radiation from the blackbody was received by the horn antenna. The signal was amplified using two amplifiers, downconverted by an IQ mixer with an LO frequency of <inline-formula><tex-math id="TM0249" notation="LaTeX"><![CDATA[$13 \,{\rm GHz}$]]></tex-math></inline-formula>, and then spectrometered on the RFSoC 2x2 board ranging from <inline-formula><tex-math id="TM0250" notation="LaTeX"><![CDATA[$11 \text{--} 15 \ {\rm GHz}$]]></tex-math></inline-formula>. Power spectra were measured for the blackbody at room temperature and the blackbody at <inline-formula><tex-math id="TM0251" notation="LaTeX"><![CDATA[$77 \,{\rm K}$]]></tex-math></inline-formula> immersed in liquid nitrogen.</p>
+          </caption>
+          <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ptaf065fig13.jpeg" mimetype="image" />
+        </fig>
+        <p>When <inline-formula><tex-math id="TM0252" notation="LaTeX"><![CDATA[$\Delta P$]]></tex-math></inline-formula> was assumed to be Gaussian white noise, <inline-formula><tex-math id="TM0253" notation="LaTeX"><![CDATA[$1 / \epsilon$]]></tex-math></inline-formula> followed a chi-squared distribution from Eq. (<xref ref-type="disp-formula" rid="equ9">9</xref>). Instead of directly calculating <inline-formula><tex-math id="TM0254" notation="LaTeX"><![CDATA[$\epsilon$]]></tex-math></inline-formula>, the unbiased <inline-formula><tex-math id="TM0255" notation="LaTeX"><![CDATA[$1 / \epsilon$]]></tex-math></inline-formula> must be calculated first, followed by the computation of <inline-formula><tex-math id="TM0256" notation="LaTeX"><![CDATA[$\epsilon$]]></tex-math></inline-formula> from the outcome (Appendix <xref ref-type="app" rid="sec7">A</xref>). Therefore, for each frequency, we calculated the time average of the power spectrum, fluctuation of the measured values, and subsequently computed <inline-formula><tex-math id="TM0257" notation="LaTeX"><![CDATA[$1 / \epsilon (\nu )$]]></tex-math></inline-formula>. Next, <inline-formula><tex-math id="TM0258" notation="LaTeX"><![CDATA[$1 / \epsilon$]]></tex-math></inline-formula> was obtained from the average of these values. The values of <inline-formula><tex-math id="TM0259" notation="LaTeX"><![CDATA[$1 / \epsilon$]]></tex-math></inline-formula> obtained for each frequency and its histogram are shown in Fig. <xref ref-type="fig" rid="fig14">14</xref>. From the measurement of room-temperature blackbody radiation, we obtained <inline-formula><tex-math id="TM0260" notation="LaTeX"><![CDATA[$1 / \epsilon = 1.002 57(13)$]]></tex-math></inline-formula>, and from the measurement of the <inline-formula><tex-math id="TM0261" notation="LaTeX"><![CDATA[$77 \,{\rm K}$]]></tex-math></inline-formula> blackbody, we obtained <inline-formula><tex-math id="TM0262" notation="LaTeX"><![CDATA[$1 / \epsilon = 1.001 69(13)$]]></tex-math></inline-formula>. Both measurements ensured that <inline-formula><tex-math id="TM0263" notation="LaTeX"><![CDATA[$\epsilon$]]></tex-math></inline-formula> exceeded 99.7%, thus validating the spectrometer’s capability to perform spectrometry with better than 99.6% time efficiency.</p>
+        <fig id="fig14">
+          <label>Fig. 14.</label>
+          <caption>
+            <p>(Left) Measured values of <inline-formula><tex-math id="TM0264" notation="LaTeX"><![CDATA[$1 / \epsilon$]]></tex-math></inline-formula> at each frequency for room-temperature blackbody radiation. The frequency bands impacted by the folding noise of the Wi-Fi (represented by the thick gray lines) were excluded. (Right) Histogram of the measured <inline-formula><tex-math id="TM0265" notation="LaTeX"><![CDATA[$1/\epsilon$]]></tex-math></inline-formula>. The distribution was closely centered around unity, indicating a spectrometer efficiency of approximately 100%. Similar outcomes were observed during the blackbody measurement at <inline-formula><tex-math id="TM0266" notation="LaTeX"><![CDATA[$77 \,{\rm K}$]]></tex-math></inline-formula>.</p>
+          </caption>
+          <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ptaf065fig14.jpeg" mimetype="image" />
+        </fig>
+        <p>Using the measurement results at both <inline-formula><tex-math id="TM0267" notation="LaTeX"><![CDATA[$77 \,{\rm K}$]]></tex-math></inline-formula> and <inline-formula><tex-math id="TM0268" notation="LaTeX"><![CDATA[$300 \,{\rm K}$]]></tex-math></inline-formula>, the entire system, including the ADC and amplifiers, can be fully calibrated [<xref ref-type="bibr" rid="bib8">8</xref>], thereby allowing an accurate estimation of the signal strength that could arise from dark matter.</p>
+      </sec>
+    </sec>
+    <sec id="sec5" sec-type="conclusions">
+      <label>5.</label>
+      <title>Conclusion</title>
+      <p>This study developed a wide-band spectrometer that enabled spectrometry across a <inline-formula><tex-math id="TM0269" notation="LaTeX"><![CDATA[$4 \,{\rm GHz}$]]></tex-math></inline-formula> bandwidth, focusing on the need to search for axions and dark photons. Additionally, a frequency resolution of <inline-formula><tex-math id="TM0270" notation="LaTeX"><![CDATA[$16 \,{\rm kHz}$]]></tex-math></inline-formula> was achieved to detect the extremely narrow spectral peak of the conversion photon, typically <inline-formula><tex-math id="TM0271" notation="LaTeX"><![CDATA[$\Delta \nu / \nu \sim 10^{-6}$]]></tex-math></inline-formula>. With this spectrometer, we anticipate conducting an efficient search and expect an enhancement in the sensitivity of <inline-formula><tex-math id="TM0272" notation="LaTeX"><![CDATA[$\chi$]]></tex-math></inline-formula> or <inline-formula><tex-math id="TM0273" notation="LaTeX"><![CDATA[$g_{a\gamma \gamma }$]]></tex-math></inline-formula> owing to increased data statistics.</p>
+      <p>To achieve these performances, we designed the hardware and firmware components, including the logic circuits on the FPGA. To digitize IQ signals, we utilized two ADCs and an IQ mixer, and by incorporating two <inline-formula><tex-math id="TM0274" notation="LaTeX"><![CDATA[$4 \,{\rm GSPS}$]]></tex-math></inline-formula> ADCs within the RFSoC, we secured a bandwidth of <inline-formula><tex-math id="TM0275" notation="LaTeX"><![CDATA[$4 \,{\rm GHz}$]]></tex-math></inline-formula>. Furthermore, on the built-in FPGA, we implemented FFT conversions through 16-parallel FFT circuits and utilized an accumulator circuit to compress the data, allowing for signal analysis from the ADC with no loss. To minimize the increase in resource consumption of FPGA, resulting from parallelization, we developed a memory-efficient rotation method and implemented a Radix-<inline-formula><tex-math id="TM0276" notation="LaTeX"><![CDATA[$2^4$]]></tex-math></inline-formula> architecture that required fewer general rotation units. These enhancements resulted in the development of a spectrometer with the required performance.</p>
+      <p>Performance evaluation tests were conducted on the developed spectrometer, which included obtaining the desired spectrum by inputting a monotone RF source and validating linearity at an accuracy within 0.5%. Additionally, we validated the stability of the spectrometer for continuous operation over 24 h and demonstrated its ability to perform spectrometry with greater than 99.6% time efficiency.</p>
+      <p>Our spectrometer allows for a <inline-formula><tex-math id="TM0277" notation="LaTeX"><![CDATA[$4 \,{\rm GHz}$]]></tex-math></inline-formula> search range, resulting in a time efficiency improvement of over 2000 times than the previous studies [<xref ref-type="bibr" rid="bib7">7</xref>,<xref ref-type="bibr" rid="bib8">8</xref>]. Additionally, our approach achieves approximately twice the search efficiency compared to conventional approaches [<xref ref-type="bibr" rid="bib9">9</xref>,<xref ref-type="bibr" rid="bib12">12</xref>]. Moreover, the developed spectrometer has potential in various fields, including radio astronomy and industry.</p>
+    </sec>
+  </body>
+  <back>
+    <ack id="ack1">
+      <title>Acknowledgements</title>
+      <p>This research was supported by JSPS KAKENHI under grant numbers 21H05460, 22K18713, 23H00111, 24KK0066, and 24KJ1452, as well as support from JST, CREST under grant number JPMJCR23I3. Additionally, this research was supported by grants from the Murata and Sumitomo Foundations. SA acknowledges the Hakubi Project Program of Kyoto University.</p>
+    </ack>
+    <sec id="sec6" sec-type="data-availability">
+      <title>Data availability</title>
+      <p>The data underlying this article will be shared on reasonable request to the corresponding author.</p>
+    </sec>
+    <app-group>
+      <app id="sec7">
+        <title>A. Estimation method for time efficiency <inline-formula><tex-math id="TM0278" notation="LaTeX"><![CDATA[$\epsilon$]]></tex-math></inline-formula></title>
+        <p>Section <xref ref-type="sec" rid="sec4-3">4.3</xref> delves into time efficiency <inline-formula><tex-math id="TM0279" notation="LaTeX"><![CDATA[$\epsilon$]]></tex-math></inline-formula>, which does not adhere to a normal distribution. Therefore, the precise estimation of <inline-formula><tex-math id="TM0280" notation="LaTeX"><![CDATA[$\epsilon$]]></tex-math></inline-formula> requires care. Hence, this section explains the method of its estimation.</p>
+        <p>As shown in Section <xref ref-type="sec" rid="sec4-3">4.3</xref>, the measured value <inline-formula><tex-math id="TM0281" notation="LaTeX"><![CDATA[$P_\mathrm{obs} (\nu , t)$]]></tex-math></inline-formula>, of the thermal noise, <inline-formula><tex-math id="TM0282" notation="LaTeX"><![CDATA[$P$]]></tex-math></inline-formula>, measured within the frequency range <inline-formula><tex-math id="TM0283" notation="LaTeX"><![CDATA[$\nu$]]></tex-math></inline-formula> to <inline-formula><tex-math id="TM0284" notation="LaTeX"><![CDATA[$\nu + \Delta \nu$]]></tex-math></inline-formula> and time range <inline-formula><tex-math id="TM0285" notation="LaTeX"><![CDATA[$t$]]></tex-math></inline-formula> to <inline-formula><tex-math id="TM0286" notation="LaTeX"><![CDATA[$t + \Delta t$]]></tex-math></inline-formula>, conforms to a normal distribution with a mean and standard deviation of <inline-formula><tex-math id="TM0287" notation="LaTeX"><![CDATA[$P$]]></tex-math></inline-formula> and <inline-formula><tex-math id="TM0288" notation="LaTeX"><![CDATA[$\Delta P$]]></tex-math></inline-formula>, respectively. Additionally, <inline-formula><tex-math id="TM0289" notation="LaTeX"><![CDATA[$P$]]></tex-math></inline-formula> and <inline-formula><tex-math id="TM0290" notation="LaTeX"><![CDATA[$\Delta P$]]></tex-math></inline-formula> are theoretically expected to follow Eqs. (<xref ref-type="disp-formula" rid="equ7">7</xref>) and (<xref ref-type="disp-formula" rid="equ8">8</xref>).</p>
+        <p>When <inline-formula><tex-math id="TM0291" notation="LaTeX"><![CDATA[$P_\mathrm{obs} (\nu , t)$]]></tex-math></inline-formula> is measured <inline-formula><tex-math id="TM0292" notation="LaTeX"><![CDATA[$n_t$]]></tex-math></inline-formula> times with respect to <inline-formula><tex-math id="TM0293" notation="LaTeX"><![CDATA[$t$]]></tex-math></inline-formula>, <inline-formula><tex-math id="TM0294" notation="LaTeX"><![CDATA[$P(\nu )$]]></tex-math></inline-formula> can be estimated through the (time) average <inline-formula><tex-math id="TM0295" notation="LaTeX"><![CDATA[$\overline{P_\mathrm{obs}} (\nu )$]]></tex-math></inline-formula> of <inline-formula><tex-math id="TM0296" notation="LaTeX"><![CDATA[$P_\mathrm{obs} (\nu , t)$]]></tex-math></inline-formula>, whereas <inline-formula><tex-math id="TM0297" notation="LaTeX"><![CDATA[$\Delta P(\nu )^2$]]></tex-math></inline-formula> can be estimated using the unbiased variance, <inline-formula><tex-math id="TM0298" notation="LaTeX"><![CDATA[$V(P_\mathrm{obs})(\nu )$]]></tex-math></inline-formula>, of <inline-formula><tex-math id="TM0299" notation="LaTeX"><![CDATA[$P_\mathrm{obs} (\nu , t)$]]></tex-math></inline-formula> with respect to <inline-formula><tex-math id="TM0300" notation="LaTeX"><![CDATA[$t$]]></tex-math></inline-formula>. Given that <inline-formula><tex-math id="TM0301" notation="LaTeX"><![CDATA[$P_\mathrm{obs} (\nu , t)$]]></tex-math></inline-formula> adheres to a normal distribution with variance <inline-formula><tex-math id="TM0302" notation="LaTeX"><![CDATA[$P(\nu )^2 / (\Delta \nu \epsilon \Delta t)$]]></tex-math></inline-formula>, <inline-formula><tex-math id="TM0303" notation="LaTeX"><![CDATA[$V(P_\mathrm{obs})(\nu )^2 \cdot \Delta \nu \epsilon \Delta t / P(\nu )^2$]]></tex-math></inline-formula> conforms to a chi-squared distribution with <inline-formula><tex-math id="TM0304" notation="LaTeX"><![CDATA[$n_t - 1$]]></tex-math></inline-formula> degrees of freedom. Therefore, defining a random variable, <inline-formula><tex-math id="TM0305" notation="LaTeX"><![CDATA[$X_\mathrm{obs}(\nu )$]]></tex-math></inline-formula>, as <inline-formula><tex-math id="TM0306" notation="LaTeX"><![CDATA[$X_\mathrm{obs}(\nu ) = V(P_\mathrm{obs})(\nu )^2 \cdot \Delta \nu \Delta t / (P(\nu )^2 \cdot (n_t - 1))$]]></tex-math></inline-formula>, the expectation <inline-formula><tex-math id="TM0307" notation="LaTeX"><![CDATA[$E$]]></tex-math></inline-formula> and the unbiased variance, <inline-formula><tex-math id="TM0308" notation="LaTeX"><![CDATA[$V$]]></tex-math></inline-formula>, of <inline-formula><tex-math id="TM0309" notation="LaTeX"><![CDATA[$X_\mathrm{obs}(\nu )$]]></tex-math></inline-formula> can be expressed as follows:</p>
+        <disp-formula id="equ10">
+          <label>(A1)</label>
+          <tex-math id="TM0310" notation="LaTeX"><![CDATA[$$\begin{eqnarray}
+E(X_\mathrm{obs}) = \frac{1}{\epsilon }
+\end{eqnarray}$$]]></tex-math>
+        </disp-formula>
+        <disp-formula id="equ11">
+          <label>(A2)</label>
+          <tex-math id="TM0311" notation="LaTeX"><![CDATA[$$\begin{eqnarray}
+V(X_\mathrm{obs}) = \frac{2}{(n_t-1)\epsilon ^2}
+\end{eqnarray}$$]]></tex-math>
+        </disp-formula>
+        <p>Therefore, <inline-formula><tex-math id="TM0312" notation="LaTeX"><![CDATA[$1 / \epsilon$]]></tex-math></inline-formula> can be estimated from the measurement of <inline-formula><tex-math id="TM0313" notation="LaTeX"><![CDATA[$X_\mathrm{obs}$]]></tex-math></inline-formula>.</p>
+      </app>
+    </app-group>
+    <fn-group>
+      <title>Footnotes</title>
+      <fn id="fn1">
+        <label>1</label>
+        <p>
+          <inline-formula>
+            <tex-math id="TM0314" notation="LaTeX"><![CDATA[$4.096 \,{\rm GHz}$]]></tex-math>
+          </inline-formula> bandwidth <inline-formula><tex-math id="TM0315" notation="LaTeX"><![CDATA[$/ 2^{17} = 31.25 \,{\rm kHz}$]]></tex-math></inline-formula></p>
+      </fn>
+      <fn id="fn2">
+        <label>2</label>
+        <p>The FFT circuit was implemented to operate at <inline-formula><tex-math id="TM0316" notation="LaTeX"><![CDATA[$300 \,{\rm MHz}$]]></tex-math></inline-formula> and in 16 parallel channels, resulting in a throughput of <inline-formula><tex-math id="TM0317" notation="LaTeX"><![CDATA[$300 \,{\rm MHz} \times 16 \,\text{samples / clock} = 4.8 \,{\rm GSPS}.$]]></tex-math></inline-formula></p>
+      </fn>
+    </fn-group>
+    <ref-list id="ref1">
+      <title>References</title>
+      <ref id="bib1">
+        <label>[1]</label>
+        <mixed-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <string-name>
+              <given-names>N.</given-names>  <surname>Aghanim</surname></string-name>  <etal>et al</etal>.</person-group>, <source>Astron. Astrophys.</source>  <volume>641</volume>, <fpage>A6</fpage> (<year>2020</year>).<pub-id pub-id-type="doi">10.1051/0004-6361/201833910</pub-id></mixed-citation>
+      </ref>
+      <ref id="bib2">
+        <label>[2]</label>
+        <mixed-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <string-name>
+              <given-names>P.</given-names>  <surname>Arias</surname></string-name>, <string-name><given-names>D.</given-names>  <surname>Cadamuro</surname></string-name>, <string-name><given-names>M.</given-names>  <surname>Goodsell</surname></string-name>, <string-name><given-names>J.</given-names>  <surname>Jaeckel</surname></string-name>, <string-name><given-names>J.</given-names>  <surname>Redondo</surname></string-name>, <string-name><given-names>A.</given-names>  <surname>Ringwald</surname></string-name></person-group>, <source>J. Cosmol. Astropart. P.</source>  <volume>2012</volume>, <fpage>013</fpage> (<year>2012</year>).<pub-id pub-id-type="doi">10.1088/1475-7516/2012/06/013</pub-id></mixed-citation>
+      </ref>
+      <ref id="bib3">
+        <label>[3]</label>
+        <mixed-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <string-name>
+              <given-names>J.</given-names>  <surname>Jaeckel</surname></string-name>, <string-name><given-names>A.</given-names>  <surname>Ringwald</surname></string-name></person-group>, <source>Annu. Rev. Nucl. Part. Sci.</source>  <volume>60</volume>, <fpage>405</fpage> (<year>2010</year>).<pub-id pub-id-type="doi">10.1146/annurev.nucl.012809.104433</pub-id></mixed-citation>
+      </ref>
+      <ref id="bib4">
+        <label>[4]</label>
+        <mixed-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <string-name>
+              <given-names>D.</given-names>  <surname>Horns</surname></string-name>, <string-name><given-names>J.</given-names>  <surname>Jaeckel</surname></string-name>, <string-name><given-names>A.</given-names>  <surname>Lindner</surname></string-name>, <string-name><given-names>A.</given-names>  <surname>Lobanov</surname></string-name>, <string-name><given-names>J.</given-names>  <surname>Redondo</surname></string-name>, <string-name><given-names>A.</given-names>  <surname>Ringwald</surname></string-name></person-group>, <source>J. Cosmol. Astropart. P.</source>  <volume>2013</volume>, <fpage>016</fpage> (<year>2013</year>).<pub-id pub-id-type="doi">10.1088/1475-7516/2013/04/016</pub-id></mixed-citation>
+      </ref>
+      <ref id="bib5">
+        <label>[5]</label>
+        <mixed-citation publication-type="book">
+          <person-group person-group-type="author">
+            <string-name>
+              <given-names>J.</given-names>  <surname>Suzuki</surname></string-name>, <string-name><given-names>Y.</given-names>  <surname>Inoue</surname></string-name>, <string-name><given-names>T.</given-names>  <surname>Horie</surname></string-name>, <string-name><given-names>M.</given-names>  <surname>Minowa</surname></string-name></person-group>, <article-title>Hidden photon cdm search at tokyo</article-title>, In <source>”11th Patras Workshop on Axions, WIMPs and WISPs (Axion-WIMP 2015)</source>. <publisher-name>Deutsches Elektronen-Synchrotron, DESY</publisher-name>, <publisher-loc>Hamburg</publisher-loc> <comment>(September</comment>  <year>2015</year>).</mixed-citation>
+      </ref>
+      <ref id="bib6">
+        <label>[6]</label>
+        <mixed-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <string-name>
+              <given-names>N.</given-names>  <surname>Tomita</surname></string-name>, <string-name><given-names>S.</given-names>  <surname>Oguri</surname></string-name>, <string-name><given-names>Y.</given-names>  <surname>Inoue</surname></string-name>, <string-name><given-names>M.</given-names>  <surname>Minowa</surname></string-name>, <string-name><given-names>T.</given-names>  <surname>Nagasaki</surname></string-name>, <string-name><given-names>J.</given-names>  <surname>Suzuki</surname></string-name>, <string-name><given-names>O.</given-names>  <surname>Tajima</surname></string-name></person-group>, <source>J. Cosmol. Astropart. P.</source>  <volume>2020</volume>, <fpage>012</fpage> (<year>2020</year>).<pub-id pub-id-type="doi">10.1088/1475-7516/2020/09/012</pub-id></mixed-citation>
+      </ref>
+      <ref id="bib7">
+        <label>[7]</label>
+        <mixed-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <string-name>
+              <given-names>S.</given-names>  <surname>Kotaka</surname></string-name>  <etal>et al</etal>.</person-group>, <source>Phys. Rev. Lett.</source>  <volume>130</volume> (<year>2023</year>).<pub-id pub-id-type="doi">10.1103/PhysRevLett.130.071805</pub-id></mixed-citation>
+      </ref>
+      <ref id="bib8">
+        <label>[8]</label>
+        <mixed-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <string-name>
+              <given-names>S.</given-names>  <surname>Adachi</surname></string-name>, <string-name><given-names>R.</given-names>  <surname>Fujinaka</surname></string-name>, <string-name><given-names>Y.</given-names>  <surname>Muto</surname></string-name>, <string-name><given-names>H.</given-names>  <surname>Nakata</surname></string-name>, <string-name><given-names>Y.</given-names>  <surname>Sueno</surname></string-name>, <string-name><given-names>T.</given-names>  <surname>Sumida</surname></string-name>, <string-name><given-names>J.</given-names>  <surname>Suzuki</surname></string-name>, <string-name><given-names>O.</given-names>  <surname>Tajima</surname></string-name>, <string-name><given-names>H.</given-names>  <surname>Takeuchi</surname></string-name>, <string-name><given-names>S.</given-names>  <surname>Honda</surname></string-name></person-group>, <source>Phys. Rev. D</source>  <volume>109</volume> (<year>2024</year>).</mixed-citation>
+      </ref>
+      <ref id="bib9">
+        <label>[9]</label>
+        <mixed-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <string-name>
+              <given-names>F.</given-names>  <surname>Bajjali</surname></string-name>  <etal>et al</etal>.</person-group>, <source>J. Cosmol. Astropart. P.</source>  <volume>2023</volume>, <fpage>077</fpage> (<year>2023</year>).<pub-id pub-id-type="doi">10.1088/1475-7516/2023/08/077</pub-id></mixed-citation>
+      </ref>
+      <ref id="bib10">
+        <label>[10]</label>
+        <mixed-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <string-name>
+              <given-names>S.</given-names>  <surname>Knirck</surname></string-name>  <etal>et al</etal>.</person-group>, <source>Phys. Rev. Lett.</source>  <volume>132</volume>, (<year>2024</year>).<pub-id pub-id-type="doi">10.1103/PhysRevLett.132.131004</pub-id></mixed-citation>
+      </ref>
+      <ref id="bib11">
+        <label>[11]</label>
+        <mixed-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <string-name>
+              <given-names>S. J.</given-names>  <surname>Witte</surname></string-name>, <string-name><given-names>S.</given-names>  <surname>Rosauro-Alcaraz</surname></string-name>, <string-name><given-names>S. D.</given-names>  <surname>McDermott</surname></string-name>, <string-name><given-names>V.</given-names>  <surname>Poulin</surname></string-name></person-group>, <source>J. High Energy Phys.</source>  <volume>2020</volume> <comment>(June</comment>  <year>2020</year>).<pub-id pub-id-type="doi">10.1007/JHEP06(2020)132</pub-id></mixed-citation>
+      </ref>
+      <ref id="bib12">
+        <label>[12]</label>
+        <mixed-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <string-name>
+              <given-names>B.</given-names>  <surname>Klein</surname></string-name>, <string-name><given-names>S.</given-names>  <surname>Hochgürtel</surname></string-name>, <string-name><given-names>I.</given-names>  <surname>Krämer</surname></string-name>, <string-name><given-names>A.</given-names>  <surname>Bell</surname></string-name>, <string-name><given-names>K.</given-names>  <surname>Meyer</surname></string-name>, <string-name><given-names>R.</given-names>  <surname>Güsten</surname></string-name></person-group>, <source>Astron. Astrophys.</source>  <volume>542</volume>, <fpage>L3</fpage> (<year>2012</year>).<pub-id pub-id-type="doi">10.1051/0004-6361/201218864</pub-id></mixed-citation>
+      </ref>
+      <ref id="bib13">
+        <label>[13]</label>
+        <mixed-citation publication-type="other">
+          <person-group person-group-type="author">
+            <collab>RFSoC (AMD)</collab>
+          </person-group>, <comment>(Available at: <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://www.amd.com/en/products/adaptive-socs-and-fpgas/soc/zynq-ultrascale-plus-rfsoc.html">https://www.amd.com/en/products/adaptive-socs-and-fpgas/soc/zynq-ultrascale-plus-rfsoc.html</ext-link>, date last accessed January 10</comment>, <year>2025</year>).</mixed-citation>
+      </ref>
+      <ref id="bib14">
+        <label>[14]</label>
+        <mixed-citation publication-type="other">
+          <person-group person-group-type="author">
+            <collab>RFSoC 2x2 board (AMD and Hitech Global)</collab>
+          </person-group>, <comment>(Available at: <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://www.amd.com/en/corporate/university-program/aup-boards/rfsoc2x2.html">https://www.amd.com/en/corporate/university-program/aup-boards/rfsoc2x2.html</ext-link>, date last accessed January 10</comment>, <year>2025</year>).</mixed-citation>
+      </ref>
+      <ref id="bib15">
+        <label>[15]</label>
+        <mixed-citation publication-type="other">
+          <person-group person-group-type="author">
+            <collab>ZeroMQ</collab>
+          </person-group>, <comment>(Available at: <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://zeromq.org/">https://zeromq.org/</ext-link>, date last accessed January 10</comment>, <year>2025</year>).</mixed-citation>
+      </ref>
+      <ref id="bib16">
+        <label>[16]</label>
+        <mixed-citation publication-type="other">
+          <person-group person-group-type="author">
+            <collab>PYNQ (AMD)</collab>
+          </person-group>, <comment>(Available at: <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://www.pynq.io/">https://www.pynq.io/</ext-link>, date last accessed January 10</comment>, <year>2025</year>).</mixed-citation>
+      </ref>
+      <ref id="bib17">
+        <label>[17]</label>
+        <mixed-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <string-name>
+              <given-names>J.-Y.</given-names>  <surname>OH</surname></string-name>
+          </person-group>, <source>IEICE T. Electron.</source>  <volume>E88-C</volume>, <fpage>1740</fpage> (<year>2005</year>).<pub-id pub-id-type="doi">10.1093/ietele/e88-c.8.1740</pub-id></mixed-citation>
+      </ref>
+      <ref id="bib18">
+        <label>[18]</label>
+        <mixed-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <string-name>
+              <given-names>M.</given-names>  <surname>Garrido</surname></string-name>, <string-name><given-names>J.</given-names>  <surname>Grajal</surname></string-name>, <string-name><given-names>M. A.</given-names>  <surname>Sanchez</surname></string-name>, <string-name><given-names>O.</given-names>  <surname>Gustafsson</surname></string-name></person-group>, <source>IEEE Trans. Very Large Scale Integr. (VLSI) Syst.</source>  <volume>21</volume>, <fpage>23</fpage> (<year>2013</year>).<pub-id pub-id-type="doi">10.1109/TVLSI.2011.2178275</pub-id></mixed-citation>
+      </ref>
+      <ref id="bib19">
+        <label>[19]</label>
+        <mixed-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <string-name>
+              <given-names>J. W.</given-names>  <surname>Cooley</surname></string-name>, <string-name><given-names>J. W.</given-names>  <surname>Tukey</surname></string-name></person-group>, <source>Math. Comput.</source>  <volume>19</volume>, <fpage>297</fpage> (<year>1965</year>).<pub-id pub-id-type="doi">10.1090/S0025-5718-1965-0178586-1</pub-id></mixed-citation>
+      </ref>
+      <ref id="bib20">
+        <label>[20]</label>
+        <mixed-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <string-name>
+              <given-names>G.</given-names>  <surname>O’Leary</surname></string-name>
+          </person-group>, <source>IEEE Trans. Audio Electroacoust.</source>  <volume>18</volume>, <fpage>177</fpage> (<year>1970</year>).<pub-id pub-id-type="doi">10.1109/TAU.1970.1162087</pub-id></mixed-citation>
+      </ref>
+      <ref id="bib21">
+        <label>[21]</label>
+        <mixed-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <string-name>
+              <given-names>H. L.</given-names>  <surname>Groginsky</surname></string-name>, <string-name><given-names>G. A.</given-names>  <surname>Works</surname></string-name></person-group>, <source>IEEE Trans. Comput.</source>  <volume>C-19</volume>, <fpage>1015</fpage> (<year>1970</year>).<pub-id pub-id-type="doi">10.1109/T-C.1970.222826</pub-id></mixed-citation>
+      </ref>
+      <ref id="bib22">
+        <label>[22]</label>
+        <mixed-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <string-name>
+              <given-names>M.</given-names>  <surname>Garrido</surname></string-name>
+          </person-group>, <source>J. Signal Process. Sys.</source>  <volume>94</volume>, <fpage>1345</fpage> (<year>2021</year>).<pub-id pub-id-type="doi">10.1007/s11265-021-01655-1</pub-id></mixed-citation>
+      </ref>
+      <ref id="bib23">
+        <label>[23]</label>
+        <mixed-citation publication-type="book">
+          <person-group person-group-type="author">
+            <string-name>
+              <given-names>T. L.</given-names>  <surname>Wilson</surname></string-name>, <string-name><given-names>K.</given-names>  <surname>Rohlfs</surname></string-name>, <string-name><given-names>S.</given-names>  <surname>Hüttemeister</surname></string-name></person-group>, <source>Tools of radio astronomy</source>, vol. <volume>5</volume>, (<publisher-name>Springer</publisher-name>, <year>2009</year>).</mixed-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
