@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Publisher>
+   <PublisherInfo>
+      <PublisherName>Springer Berlin Heidelberg</PublisherName>
+      <PublisherLocation>Berlin/Heidelberg</PublisherLocation>
+      <PublisherImprintName>Springer</PublisherImprintName>
+   </PublisherInfo>
+   <Journal OutputMedium="Online">
+      <JournalInfo JournalProductType="ArchiveJournal" NumberingStyle="Unnumbered" OutputMedium="Online">
+         <JournalID>13130</JournalID>
+         <JournalDOI>10.1007/13130.1029-8479</JournalDOI>
+         <JournalElectronicISSN>1029-8479</JournalElectronicISSN>
+         <JournalSPIN>32745009</JournalSPIN>
+         <JournalTitle>Journal of High Energy Physics</JournalTitle>
+         <JournalAbbreviatedTitle>J. High Energ. Phys.</JournalAbbreviatedTitle>
+         <JournalSubjectGroup>
+            <JournalSubject Code="SCP" Type="Primary">Physics</JournalSubject>
+            <JournalSubject Code="SCP23029" Priority="1" Type="Secondary">Elementary Particles, Quantum Field Theory</JournalSubject>
+            <JournalSubject Code="SCP19048" Priority="2" Type="Secondary">Quantum Field Theories, String Theory</JournalSubject>
+            <JournalSubject Code="SCP19070" Priority="3" Type="Secondary">Classical and Quantum Gravitation, Relativity Theory</JournalSubject>
+            <JournalSubject Code="SCP19080" Priority="4" Type="Secondary">Quantum Physics</JournalSubject>
+            <SubjectCollection Code="SC12">Physics and Astronomy</SubjectCollection>
+         </JournalSubjectGroup>
+      </JournalInfo>
+      <Volume OutputMedium="Online">
+         <VolumeInfo OutputMedium="Online" TocLevels="0" VolumeType="Regular">
+            <VolumeIDStart>2019</VolumeIDStart>
+            <VolumeIDEnd>2019</VolumeIDEnd>
+            <VolumeIssueCount>12</VolumeIssueCount>
+         </VolumeInfo>
+         <Issue IssueType="Regular" OutputMedium="Online">
+            <IssueInfo IssueType="Regular" OutputMedium="Online" TocLevels="0">
+               <IssueIDStart>1</IssueIDStart>
+               <IssueIDEnd>1</IssueIDEnd>
+               <IssueArticleCount>194</IssueArticleCount>
+               <IssueHistory>
+                  <CoverDate>
+                     <Year>2019</Year>
+                     <Month>1</Month>
+                  </CoverDate>
+               </IssueHistory>
+               <IssueCopyright>
+                  <CopyrightHolderName>SISSA, Trieste, Italy</CopyrightHolderName>
+                  <CopyrightYear>2019</CopyrightYear>
+               </IssueCopyright>
+            </IssueInfo>
+            <Article ID="JHEP012019210">
+               <ArticleInfo ArticleType="OriginalPaper" ContainsESM="No" Language="En" NumberingStyle="ContentOnly" OutputMedium="Online" TocLevels="0">
+                  <ArticleID>9848</ArticleID>
+                  <ArticleExternalID Type="arXiv">1811.06048</ArticleExternalID>
+                  <ArticleDOI>10.1007/JHEP01(2019)210</ArticleDOI>
+                  <ArticleCitationID>210</ArticleCitationID>
+                  <ArticleSequenceNumber>210</ArticleSequenceNumber>
+                  <ArticleTitle Language="En">Symmetry breaking in quantum curves and super Chern-Simons matrix models</ArticleTitle>
+                  <ArticleCategory>Regular Article - Theoretical Physics</ArticleCategory>
+                  <ArticleFirstPage>1</ArticleFirstPage>
+                  <ArticleLastPage>29</ArticleLastPage>
+                  <ArticleHistory>
+                     <RegistrationDate>
+                        <Year>2019</Year>
+                        <Month>1</Month>
+                        <Day>28</Day>
+                     </RegistrationDate>
+                     <Received>
+                        <Year>2018</Year>
+                        <Month>11</Month>
+                        <Day>24</Day>
+                     </Received>
+                     <Accepted>
+                        <Year>2019</Year>
+                        <Month>1</Month>
+                        <Day>10</Day>
+                     </Accepted>
+                     <OnlineDate>
+                        <Year>2019</Year>
+                        <Month>1</Month>
+                        <Day>28</Day>
+                     </OnlineDate>
+                  </ArticleHistory>
+                  <ArticleCopyright>
+                     <CopyrightHolderName>SISSA, Trieste, Italy</CopyrightHolderName>
+                     <CopyrightYear>2019</CopyrightYear>
+                  </ArticleCopyright>
+                  <ArticleGrants Type="OpenChoice">
+                     <MetadataGrant Grant="OpenAccess" />
+                     <AbstractGrant Grant="OpenAccess" />
+                     <BodyPDFGrant Grant="OpenAccess" />
+                     <BodyHTMLGrant Grant="OpenAccess" />
+                     <BibliographyGrant Grant="OpenAccess" />
+                     <ESMGrant Grant="OpenAccess" />
+                  </ArticleGrants>
+                  <ArticleContext>
+                     <JournalID>13130</JournalID>
+                     <VolumeIDStart>2019</VolumeIDStart>
+                     <VolumeIDEnd>2019</VolumeIDEnd>
+                     <IssueIDStart>1</IssueIDStart>
+                     <IssueIDEnd>1</IssueIDEnd>
+                  </ArticleContext>
+               </ArticleInfo>
+               <ArticleHeader>
+                  <AuthorGroup>
+                     <Author AffiliationIDS="Aff1">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Naotaka</GivenName>
+                           <FamilyName>Kubo</FamilyName>
+                        </AuthorName>
+                        <Contact>
+                           <Email>naotaka.kubo@yukawa.kyoto-u.ac.jp</Email>
+                        </Contact>
+                     </Author>
+                     <Author AffiliationIDS="Aff2 Aff3 Aff4" CorrespondingAffiliationID="Aff2" ORCID="my-test-orcid">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Sanefumi</GivenName>
+                           <FamilyName>Moriyama</FamilyName>
+                        </AuthorName>
+                        <Contact>
+                           <Email>moriyama@sci.osaka-cu.ac.jp</Email>
+                        </Contact>
+                     </Author>
+                     <Author AffiliationIDS="Aff5">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Tomoki</GivenName>
+                           <FamilyName>Nosaka</FamilyName>
+                        </AuthorName>
+                        <Contact>
+                           <Email>nosaka@yukawa.kyoto-u.ac.jp</Email>
+                        </Contact>
+                     </Author>
+                     <Affiliation ID="Aff1">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 0372 2033</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.258799.8</OrgID>
+                        <OrgDivision>Center for Gravitational Physics, Yukawa Institute for Theoretical Physics</OrgDivision>
+                        <OrgName>Kyoto University</OrgName>
+                        <OrgAddress>
+                           <Street>Sakyo-ku</Street>
+                           <City>Kyoto</City>
+                           <Postcode>606-8502</Postcode>
+                           <Country Code="JP">Japan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff2">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 1009 6411</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.261445.0</OrgID>
+                        <OrgDivision>Department of Physics, Graduate School of Science</OrgDivision>
+                        <OrgName>Osaka City University</OrgName>
+                        <OrgAddress>
+                           <Street>Sumiyoshi-ku</Street>
+                           <City>Osaka</City>
+                           <Postcode>558-8585</Postcode>
+                           <Country Code="JP">Japan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff3">
+                        <OrgName>Nambu Yoichiro Institute of Theoretical and Experimental Physics (NITEP)</OrgName>
+                        <OrgAddress>
+                           <Street>Sumiyoshi-ku</Street>
+                           <City>Osaka</City>
+                           <Postcode>558-8585</Postcode>
+                           <Country Code="JP">Japan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff4">
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 1009 6411</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.261445.0</OrgID>
+                        <OrgName>Osaka City University Advanced Mathematical Institute (OCAMI)</OrgName>
+                        <OrgAddress>
+                           <Street>Sumiyoshi-ku</Street>
+                           <City>Osaka</City>
+                           <Postcode>558-8585</Postcode>
+                           <Country Code="JP">Japan</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff5">
+                        <OrgID Level="Institution" Type="ISNI">0000 0004 0610 5612</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.249961.1</OrgID>
+                        <OrgName>School of Physics, Korea Institute for Advanced Study</OrgName>
+                        <OrgAddress>
+                           <Street>Dongdaemun-gu</Street>
+                           <City>Seoul</City>
+                           <Postcode>02455</Postcode>
+                           <Country Code="KR">Korea</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                  </AuthorGroup>
+                  <Abstract ID="Abs1" Language="En" OutputMedium="All">
+                     <Heading>
+                        A
+                        <Emphasis Type="SmallCaps">bstract</Emphasis>
+                     </Heading>
+                     <Para ID="Par1">It was known that quantum curves and super Chern-Simons matrix models correspond to each other. From the viewpoint of symmetry, the algebraic curve of genus one, called the del Pezzo curve, enjoys symmetry of the exceptional algebra, while the super Chern-Simons matrix model is described by the free energy of topological strings on the del Pezzo background with the symmetry broken. We study the symmetry breaking of the quantum cousin of the algebraic curve and reproduce the results in the super Chern-Simons matrix model.</Para>
+                  </Abstract>
+                  <KeywordGroup Language="En" OutputMedium="All" Source="Author">
+                     <Heading>
+                        K
+                        <Emphasis Type="SmallCaps">eywords</Emphasis>
+                     </Heading>
+                     <Keyword>Chern-Simons Theories</Keyword>
+                     <Keyword>M-Theory</Keyword>
+                     <Keyword>Matrix Models</Keyword>
+                     <Keyword>Topological Strings</Keyword>
+                  </KeywordGroup>
+                  <ArticleNote Type="Misc">
+                     <SimplePara>
+                        A
+                        <Emphasis Type="SmallCaps">r</Emphasis>
+                        X
+                        <Emphasis Type="SmallCaps">iv e</Emphasis>
+                        P
+                        <Emphasis Type="SmallCaps">rint</Emphasis>
+                        :
+                        <ExternalRef>
+                           <RefSource>1811.06048</RefSource>
+                           <RefTarget Address="https://arxiv.org/abs/1811.06048" TargetType="URL" />
+                        </ExternalRef>
+                     </SimplePara>
+                  </ArticleNote>
+               </ArticleHeader>
+               <NoBody />
+               <BodyRef TargetType="sissa.ft.xml" FileRef="http://stheno.sissa.it/scoap/JHEP012019210.ft.xml" />
+            </Article>
+         </Issue>
+      </Volume>
+   </Journal>
+</Publisher>

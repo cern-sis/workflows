@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Publisher
+  PUBLIC "-//Springer-Verlag//DTD A++ V2.4//EN" "http://devel.springer.de/A++/V2.4/DTD/A++V2.4.dtd">
+<Publisher>
+   <PublisherInfo>
+      <PublisherName>Springer Berlin Heidelberg</PublisherName>
+      <PublisherLocation>Berlin/Heidelberg</PublisherLocation>
+      <PublisherImprintName>Springer</PublisherImprintName>
+   </PublisherInfo>
+   <Journal OutputMedium="Online">
+      <JournalInfo JournalProductType="NonStandardArchiveJournal" NumberingStyle="ContentOnly"
+                   OutputMedium="Online">
+         <JournalID>10052</JournalID>
+         <JournalDOI>10.1007/10052.1434-6052</JournalDOI>
+         <JournalElectronicISSN>1434-6052</JournalElectronicISSN>
+         <JournalSPIN>30312819</JournalSPIN>
+         <JournalTitle>The European Physical Journal C</JournalTitle>
+         <JournalSubTitle>Particles and Fields</JournalSubTitle>
+         <JournalAbbreviatedTitle>Eur. Phys. J. C</JournalAbbreviatedTitle>
+         <JournalSubjectGroup>
+            <JournalSubject Code="SCP" Type="Primary">Physics</JournalSubject>
+            <JournalSubject Code="SCP23029" Priority="1" Type="Secondary">Elementary Particles, Quantum Field Theory</JournalSubject>
+            <JournalSubject Code="SCP23010" Priority="2" Type="Secondary">Nuclear Physics, Heavy Ions, Hadrons</JournalSubject>
+            <JournalSubject Code="SCP19048" Priority="3" Type="Secondary">Quantum Field Theories, String Theory</JournalSubject>
+            <JournalSubject Code="SCP31040" Priority="4" Type="Secondary">Measurement Science and Instrumentation</JournalSubject>
+            <JournalSubject Code="SCP22006" Priority="5" Type="Secondary">Astronomy, Astrophysics and Cosmology</JournalSubject>
+            <JournalSubject Code="SC113000" Priority="6" Type="Secondary">Nuclear Energy</JournalSubject>
+            <SubjectCollection Code="SC12">Physics and Astronomy</SubjectCollection>
+         </JournalSubjectGroup>
+      </JournalInfo>
+      <Volume OutputMedium="Online">
+         <VolumeInfo OutputMedium="Online" TocLevels="0" VolumeType="Regular">
+            <VolumeIDStart>84</VolumeIDStart>
+            <VolumeIDEnd>84</VolumeIDEnd>
+            <VolumeIssueCount>12</VolumeIssueCount>
+         </VolumeInfo>
+         <Issue IssueType="Regular" OutputMedium="Online">
+            <IssueInfo IssueType="Regular" OutputMedium="Online" TocLevels="0">
+               <IssueIDStart>9</IssueIDStart>
+               <IssueIDEnd>9</IssueIDEnd>
+               <IssueArticleCount>114</IssueArticleCount>
+               <IssueHistory>
+                  <OnlineDate>
+                     <Year>2024</Year>
+                     <Month>11</Month>
+                     <Day>13</Day>
+                  </OnlineDate>
+                  <CoverDate>
+                     <Year>2024</Year>
+                     <Month>9</Month>
+                  </CoverDate>
+                  <PricelistYear>2024</PricelistYear>
+               </IssueHistory>
+               <IssueCopyright>
+                  <CopyrightHolderName>EDP Sciences, Societa Italiana di Fisica (SIF) and Springer-Verlag GmbH, DE, part of Springer Nature</CopyrightHolderName>
+                  <CopyrightYear>2024</CopyrightYear>
+               </IssueCopyright>
+            </IssueInfo>
+            <Article ID="s10052-024-13229-z">
+               <ArticleInfo ArticleType="OriginalPaper" ContainsESM="No" Language="En"
+                            NumberingStyle="ContentOnly"
+                            OutputMedium="Online"
+                            TocLevels="0">
+                  <ArticleID>13229</ArticleID>
+                  <ArticleDOI>10.1140/epjc/s10052-024-13229-z</ArticleDOI>
+                  <ArticleCitationID>920</ArticleCitationID>
+                  <ArticleSequenceNumber>42</ArticleSequenceNumber>
+                  <ArticleTitle Language="En" OutputMedium="All">
+                     <InlineEquation ID="IEq1">
+                        <EquationSource Format="TEX"><![CDATA[$$\Lambda $$]]></EquationSource>
+                        <EquationSource Format="MATHML">
+                           <math xmlns:xlink="http://www.w3.org/1999/xlink">
+                              <mi mathvariant="normal">Λ</mi>
+                           </math>
+                        </EquationSource>
+                     </InlineEquation> polarization in very high energy heavy ion collisions as a probe of the quark–gluon plasma formation and properties</ArticleTitle>
+                  <ArticleCategory>Regular Article –Theoretical Physics </ArticleCategory>
+                  <ArticleFirstPage>1</ArticleFirstPage>
+                  <ArticleLastPage>14</ArticleLastPage>
+                  <ArticleHistory>
+                     <RegistrationDate>
+                        <Year>2024</Year>
+                        <Month>8</Month>
+                        <Day>14</Day>
+                     </RegistrationDate>
+                     <Received>
+                        <Year>2024</Year>
+                        <Month>4</Month>
+                        <Day>29</Day>
+                     </Received>
+                     <Accepted>
+                        <Year>2024</Year>
+                        <Month>8</Month>
+                        <Day>10</Day>
+                     </Accepted>
+                     <OnlineDate>
+                        <Year>2024</Year>
+                        <Month>9</Month>
+                        <Day>11</Day>
+                     </OnlineDate>
+                  </ArticleHistory>
+                  <ArticleFundingInformation>
+                     <Fund>
+                        <FunderName FundRefID="http://dx.doi.org/10.13039/501100021856">Ministero dell’Università e della Ricerca</FunderName>
+                        <GrantNumber Type="FundRef">Advanced Probes of the Quark Gluon Plasma</GrantNumber>
+                     </Fund>
+                     <Fund>
+                        <FunderName FundRefID="http://dx.doi.org/10.13039/100006151">Basic Energy Sciences</FunderName>
+                        <GrantNumber Type="FundRef">DE-FG88ER40388</GrantNumber>
+                     </Fund>
+                     <Fund>
+                        <FunderName FundRefID="http://dx.doi.org/10.13039/501100000780">European Commission</FunderName>
+                        <GrantNumber Type="FundRef">NextGenerationEU</GrantNumber>
+                     </Fund>
+                     <Fund>
+                        <FunderName FundRefID="http://dx.doi.org/10.13039/501100001824">Grantová Agentura České Republiky</FunderName>
+                        <GrantNumber Type="FundRef">22-25026S</GrantNumber>
+                     </Fund>
+                  </ArticleFundingInformation>
+                  <ArticleCopyright>
+                     <CopyrightHolderName>The Author(s)</CopyrightHolderName>
+                     <CopyrightYear>2024</CopyrightYear>
+                     <License SubType="CC BY" Type="OpenAccess" Version="4.0">
+                        <SimplePara>
+                           <Emphasis Type="Bold">Open Access</Emphasis> This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit <ExternalRef>
+                              <RefSource>http://creativecommons.org/licenses/by/4.0/</RefSource>
+                              <RefTarget Address="http://creativecommons.org/licenses/by/4.0/" TargetType="URL"/>
+                           </ExternalRef>.</SimplePara>
+                        <SimplePara>Funded by SCOAP<Superscript>3</Superscript>.</SimplePara>
+                     </License>
+                  </ArticleCopyright>
+                  <ArticleGrants Type="OpenChoice">
+                     <MetadataGrant Grant="OpenAccess"/>
+                     <AbstractGrant Grant="OpenAccess"/>
+                     <BodyPDFGrant Grant="OpenAccess"/>
+                     <BodyHTMLGrant Grant="OpenAccess"/>
+                     <BibliographyGrant Grant="OpenAccess"/>
+                     <ESMGrant Grant="OpenAccess"/>
+                  </ArticleGrants>
+                  <ArticleContext>
+                     <JournalID>10052</JournalID>
+                     <VolumeIDStart>84</VolumeIDStart>
+                     <VolumeIDEnd>84</VolumeIDEnd>
+                     <IssueIDStart>9</IssueIDStart>
+                     <IssueIDEnd>9</IssueIDEnd>
+                  </ArticleContext>
+               </ArticleInfo>
+               <ArticleHeader>
+                  <AuthorGroup>
+                     <Author AffiliationIDS="Aff1" CorrespondingAffiliationID="Aff1" ID="Au1"
+                             ORCID="http://orcid.org/0000-0001-7218-9568">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Andrea</GivenName>
+                           <FamilyName>Palermo</FamilyName>
+                        </AuthorName>
+                        <Contact>
+                           <Email>andrea.palermo@stonybrook.edu</Email>
+                        </Contact>
+                     </Author>
+                     <Author AffiliationIDS="Aff2" ID="Au2">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Eduardo</GivenName>
+                           <FamilyName>Grossi</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author AffiliationIDS="Aff3" ID="Au3">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Iurii</GivenName>
+                           <FamilyName>Karpenko</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author AffiliationIDS="Aff2" ID="Au4">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Francesco</GivenName>
+                           <FamilyName>Becattini</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Affiliation ID="Aff1">
+                        <OrgID Level="Institution" Type="ROR">https://ror.org/05qghxh33</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.36425.36</OrgID>
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2216 9681</OrgID>
+                        <OrgDivision>Department of Physics and Astronomy, Center for Nuclear Theory</OrgDivision>
+                        <OrgName>Stony Brook University</OrgName>
+                        <OrgAddress>
+                           <City>Stony Brook</City>
+                           <State>NY</State>
+                           <Postcode>11794-3800</Postcode>
+                           <Country Code="US">USA</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff2">
+                        <OrgID Level="Institution" Type="GRID">grid.470204.5</OrgID>
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2231 4148</OrgID>
+                        <OrgName>Università di Firenze and INFN Sezione di Firenze</OrgName>
+                        <OrgAddress>
+                           <Street>Via G. Sansone 1</Street>
+                           <Postcode>50019</Postcode>
+                           <City>Sesto Fiorentino</City>
+                           <State>Florence</State>
+                           <Country Code="IT">Italy</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                     <Affiliation ID="Aff3">
+                        <OrgID Level="Institution" Type="ROR">https://ror.org/03kqpb082</OrgID>
+                        <OrgID Level="Institution" Type="GRID">grid.6652.7</OrgID>
+                        <OrgID Level="Institution" Type="ISNI">0000 0001 2173 8213</OrgID>
+                        <OrgDivision>Faculty of Nuclear Sciences and Physical Engineering</OrgDivision>
+                        <OrgName>Czech Technical University in Prague</OrgName>
+                        <OrgAddress>
+                           <Street>Břehová 7</Street>
+                           <Postcode>11519</Postcode>
+                           <City>Prague 1</City>
+                           <Country Code="CZ">Czech Republic</Country>
+                        </OrgAddress>
+                     </Affiliation>
+                  </AuthorGroup>
+               </ArticleHeader>
+               <NoBody/>
+            </Article>
+         </Issue>
+      </Volume>
+   </Journal>
+</Publisher>

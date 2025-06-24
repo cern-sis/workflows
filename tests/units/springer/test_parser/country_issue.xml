@@ -1,0 +1,2976 @@
+<?xml version="1.0" encoding="UTF-8"?><Publisher>
+   <PublisherInfo>
+      <PublisherName>Springer Berlin Heidelberg</PublisherName>
+      <PublisherLocation>Berlin/Heidelberg</PublisherLocation>
+      <PublisherImprintName>Springer</PublisherImprintName>
+   </PublisherInfo>
+   <Journal OutputMedium="Online">
+      <JournalInfo JournalProductType="ArchiveJournal" NumberingStyle="Unnumbered" OutputMedium="Online">
+         <JournalID>13130</JournalID>
+         <JournalDOI>10.1007/13130.1029-8479</JournalDOI>
+         <JournalElectronicISSN>1029-8479</JournalElectronicISSN>
+         <JournalSPIN>32745009</JournalSPIN>
+         <JournalTitle>Journal of High Energy Physics</JournalTitle>
+         <JournalAbbreviatedTitle>J. High Energ. Phys.</JournalAbbreviatedTitle>
+         <JournalSubjectGroup>
+            <JournalSubject Code="SCP" Type="Primary">Physics</JournalSubject>
+            <JournalSubject Code="SCP23029" Priority="1" Type="Secondary">Elementary Particles, Quantum Field Theory</JournalSubject>
+            <JournalSubject Code="SCP19048" Priority="2" Type="Secondary">Quantum Field Theories, String Theory</JournalSubject>
+            <JournalSubject Code="SCP19070" Priority="3" Type="Secondary">Classical and Quantum Gravitation, Relativity Theory</JournalSubject>
+            <JournalSubject Code="SCP19080" Priority="4" Type="Secondary">Quantum Physics</JournalSubject>
+            <SubjectCollection Code="SC12">Physics and Astronomy</SubjectCollection>
+         </JournalSubjectGroup>
+      </JournalInfo>
+      <Volume OutputMedium="Online">
+         <VolumeInfo OutputMedium="Online" TocLevels="0" VolumeType="Regular">
+            <VolumeIDStart>2025</VolumeIDStart>
+            <VolumeIDEnd>2025</VolumeIDEnd>
+            <VolumeIssueCount>12</VolumeIssueCount>
+         </VolumeInfo>
+         <Issue IssueType="Regular" OutputMedium="Online">
+            <IssueInfo IssueType="Regular" OutputMedium="Online" TocLevels="0">
+               <IssueIDStart>4</IssueIDStart>
+               <IssueIDEnd>4</IssueIDEnd>
+               <IssueArticleCount>103</IssueArticleCount>
+               <IssueHistory>
+                  <CoverDate>
+                     <Year>2025</Year>
+                     <Month>4</Month>
+                  </CoverDate>
+                  <PricelistYear>2025</PricelistYear>
+               </IssueHistory>
+               <IssueCopyright>
+                  <CopyrightHolderName>SISSA, Trieste, Italy</CopyrightHolderName>
+                  <CopyrightYear>2021</CopyrightYear>
+               </IssueCopyright>
+            </IssueInfo>
+            <Article ID="JHEP04(2025)114">
+               <ArticleInfo ArticleType="OriginalPaper" ContainsESM="No" Language="En" NumberingStyle="ContentOnly" OutputMedium="Online" TocLevels="0">
+                  <ArticleID>25988</ArticleID>
+                  <ArticleExternalID Type="arXiv">2411.14032</ArticleExternalID>
+                  <ArticleDOI>10.1007/JHEP04(2025)114</ArticleDOI>
+                  <ArticleCitationID>114</ArticleCitationID>
+                  <ArticleSequenceNumber>114</ArticleSequenceNumber>
+                  <ArticleTitle Language="En" OutputMedium="All">Measurement of the inclusive branching fractions for <InlineEquation ID="IEq1">
+                        <EquationSource Format="TEX">$${B}_{s}^{0}$$</EquationSource>
+                     </InlineEquation> decays into <Emphasis Type="Italic">D</Emphasis> mesons via hadronic tagging</ArticleTitle>
+                  <ArticleCategory>Regular Article - Experimental Physics</ArticleCategory>
+                  <ArticleFirstPage>1</ArticleFirstPage>
+                  <ArticleLastPage>25</ArticleLastPage>
+                  <ArticleHistory>
+                     <RegistrationDate>
+                        <Year>2025</Year>
+                        <Month>4</Month>
+                        <Day>15</Day>
+                     </RegistrationDate>
+                     <Received>
+                        <Year>2024</Year>
+                        <Month>11</Month>
+                        <Day>22</Day>
+                     </Received>
+                     <Accepted>
+                        <Year>2025</Year>
+                        <Month>3</Month>
+                        <Day>14</Day>
+                     </Accepted>
+                     <OnlineDate>
+                        <Year>2025</Year>
+                        <Month>4</Month>
+                        <Day>15</Day>
+                     </OnlineDate>
+                  </ArticleHistory>
+                  <ArticleCopyright>
+                     <CopyrightHolderName>The Author(s)</CopyrightHolderName>
+                     <CopyrightYear>2025</CopyrightYear>
+                     <License SubType="CC BY" Type="OpenAccess" Version="4.0">
+                        <SimplePara>
+                           <Emphasis Type="Bold">Open Access</Emphasis>. This article is distributed under the terms of the Creative Commons Attribution License (<ExternalRef>
+                              <RefSource>CC-BY 4.0</RefSource>
+                              <RefTarget Address="http://creativecommons.org/licenses/by/4.0/" TargetType="URL"/>
+                           </ExternalRef>), which permits any use, distribution and reproduction in any medium, provided the original author(s) and source are credited.</SimplePara>
+                     </License>
+                  </ArticleCopyright>
+                  <ArticleGrants Type="OpenChoice">
+                     <MetadataGrant Grant="OpenAccess"/>
+                     <AbstractGrant Grant="OpenAccess"/>
+                     <BodyPDFGrant Grant="OpenAccess"/>
+                     <BodyHTMLGrant Grant="OpenAccess"/>
+                     <BibliographyGrant Grant="OpenAccess"/>
+                     <ESMGrant Grant="OpenAccess"/>
+                  </ArticleGrants>
+                  <ArticleContext>
+                     <JournalID>13130</JournalID>
+                     <VolumeIDStart>2025</VolumeIDStart>
+                     <VolumeIDEnd>2025</VolumeIDEnd>
+                     <IssueIDStart>4</IssueIDStart>
+                     <IssueIDEnd>4</IssueIDEnd>
+                  </ArticleContext>
+               </ArticleInfo>
+               <ArticleHeader>
+                  <AuthorGroup>
+                     <InstitutionalAuthor AffiliationIDS="Aff1 Aff2" ID="IAu1">
+                        <InstitutionalAuthorName>The Belle and Belle II collaborations</InstitutionalAuthorName>
+                        <Contact>
+                           <Email>coll-publications@belle2.org</Email>
+                        </Contact>
+                     </InstitutionalAuthor>
+                     <Author ID="Au3" ORCID="https://orcid.org/0000-0003-2287-0173">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>I.</GivenName>
+                           <FamilyName>Adachi</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au4" ORCID="https://orcid.org/0000-0002-0909-7537">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>L.</GivenName>
+                           <FamilyName>Aggarwal</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au5" ORCID="https://orcid.org/0000-0003-3976-7498">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>H.</GivenName>
+                           <FamilyName>Ahmed</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au6" ORCID="https://orcid.org/0000-0002-1907-5964">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>H.</GivenName>
+                           <FamilyName>Aihara</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au7" ORCID="https://orcid.org/0000-0002-4425-2096">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>N.</GivenName>
+                           <FamilyName>Akopov</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au8" ORCID="https://orcid.org/0000-0002-3883-6693">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Aloisio</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au9" ORCID="http://orcid.org/0000-0002-4895-3869">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <Particle>Al</Particle>
+                           <FamilyName>Said</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au10" ORCID="https://orcid.org/0000-0003-1513-0409">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>N.</GivenName>
+                           <FamilyName>Althubiti</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au11" ORCID="https://orcid.org/0000-0003-0471-197X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>N.</GivenName>
+                           <FamilyName>Anh Ky</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au12" ORCID="https://orcid.org/0000-0002-1586-5790">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>D.</GivenName>
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Asner</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au13" ORCID="https://orcid.org/0000-0003-2435-501X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>H.</GivenName>
+                           <FamilyName>Atmacan</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au14" ORCID="https://orcid.org/0000-0002-6347-7055">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Aushev</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au15" ORCID="https://orcid.org/0000-0002-8588-5308">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>V.</GivenName>
+                           <FamilyName>Aushev</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au16" ORCID="https://orcid.org/0000-0001-9980-0953">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Aversano</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au17" ORCID="https://orcid.org/0000-0003-3466-9290">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Ayad</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au18" ORCID="https://orcid.org/0000-0003-0419-6912">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>V.</GivenName>
+                           <FamilyName>Babu</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au19" ORCID="https://orcid.org/0000-0003-1393-8631">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>H.</GivenName>
+                           <FamilyName>Bae</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au20" ORCID="https://orcid.org/0009-0008-7806-4422">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>N.</GivenName>
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Baghel</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au21" ORCID="https://orcid.org/0000-0002-3744-5332">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Bahinipati</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au22" ORCID="https://orcid.org/0000-0001-7378-4852">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Bambade</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au23" ORCID="https://orcid.org/0000-0001-8852-2409">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Sw.</GivenName>
+                           <FamilyName>Banerjee</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au24" ORCID="https://orcid.org/0000-0003-1992-0336">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Bansal</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au25" ORCID="https://orcid.org/0000-0002-2095-603X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Barrett</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au26" ORCID="https://orcid.org/0009-0002-7835-0855">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Bartl</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au27" ORCID="https://orcid.org/0000-0001-5585-0991">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <FamilyName>Baudot</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au28" ORCID="https://orcid.org/0000-0003-1360-3292">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Baur</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au29" ORCID="https://orcid.org/0000-0001-9438-089X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Beaubien</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au30" ORCID="https://orcid.org/0000-0003-0562-4616">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>F.</GivenName>
+                           <FamilyName>Becherer</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au31" ORCID="https://orcid.org/0000-0002-5082-5487">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <FamilyName>Becker</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au32" ORCID="https://orcid.org/0000-0003-0014-2589">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Belous</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au33" ORCID="https://orcid.org/0000-0002-5440-2668">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <GivenName>V.</GivenName>
+                           <FamilyName>Bennett</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au34" ORCID="https://orcid.org/0000-0001-8153-2719">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>F.</GivenName>
+                           <GivenName>U.</GivenName>
+                           <FamilyName>Bernlochner</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au35" ORCID="https://orcid.org/0000-0001-9971-1176">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>V.</GivenName>
+                           <FamilyName>Bertacchi</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au36" ORCID="https://orcid.org/0000-0001-5038-360X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Bertemes</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au37" ORCID="https://orcid.org/0000-0002-3792-2450">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>E.</GivenName>
+                           <FamilyName>Bertholet</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au38" ORCID="https://orcid.org/0000-0003-1776-0439">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Bessner</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au39" ORCID="https://orcid.org/0000-0001-7742-2998">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Bettarini</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au40" ORCID="https://orcid.org/0000-0001-8857-8621">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>V.</GivenName>
+                           <FamilyName>Bhardwaj</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au41" ORCID="https://orcid.org/0000-0001-6254-3594">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>B.</GivenName>
+                           <FamilyName>Bhuyan</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au42" ORCID="https://orcid.org/0000-0002-1524-6236">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>F.</GivenName>
+                           <FamilyName>Bianchi</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au43" ORCID="https://orcid.org/0009-0003-0192-9073">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>L.</GivenName>
+                           <FamilyName>Bierwirth</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au44" ORCID="https://orcid.org/0000-0003-1449-6986">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Bilka</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au45" ORCID="https://orcid.org/0000-0002-7543-3471">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>D.</GivenName>
+                           <FamilyName>Biswas</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au46" ORCID="https://orcid.org/0000-0001-5735-8386">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Bobrov</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au47" ORCID="https://orcid.org/0000-0001-5279-4787">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>D.</GivenName>
+                           <FamilyName>Bodrov</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au48" ORCID="https://orcid.org/0000-0002-4033-9223">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Bolz</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au49" ORCID="https://orcid.org/0000-0002-5089-5338">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Bondar</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au50" ORCID="https://orcid.org/0000-0003-2990-1913">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <FamilyName>Borah</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au51" ORCID="https://orcid.org/0000-0001-6030-3087">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Boschetti</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au52" ORCID="https://orcid.org/0000-0002-5915-1319">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Bozek</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au53" ORCID="https://orcid.org/0000-0002-2495-0524">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Bračko</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au54" ORCID="https://orcid.org/0000-0002-2270-9673">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Branchini</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au55" ORCID="https://orcid.org/0000-0001-5229-1039">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Briere</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au56" ORCID="https://orcid.org/0000-0001-7357-9007">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <GivenName>E.</GivenName>
+                           <FamilyName>Browder</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au57" ORCID="https://orcid.org/0000-0002-0856-1131">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Budano</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au58" ORCID="https://orcid.org/0000-0002-3829-9592">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Bussino</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au59" ORCID="https://orcid.org/0000-0002-3109-2046">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Q.</GivenName>
+                           <FamilyName>Campagna</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au60" ORCID="https://orcid.org/0000-0003-2518-7134">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Campajola</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au61" ORCID="https://orcid.org/0000-0001-8332-5668">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>L.</GivenName>
+                           <FamilyName>Cao</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au62" ORCID="https://orcid.org/0000-0003-4137-938X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>G.</GivenName>
+                           <FamilyName>Casarosa</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au63" ORCID="https://orcid.org/0000-0002-2192-8233">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.</GivenName>
+                           <FamilyName>Cecchi</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au64" ORCID="https://orcid.org/0000-0001-9777-881X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <FamilyName>Cerasoli</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au65" ORCID="https://orcid.org/0000-0002-8650-6058">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.-C.</GivenName>
+                           <FamilyName>Chang</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au66" ORCID="https://orcid.org/0000-0003-4064-388X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Chang</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au67" ORCID="https://orcid.org/0000-0001-5729-8926">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Cheaib</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au68" ORCID="https://orcid.org/0000-0001-8472-5727">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Cheema</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au69" ORCID="https://orcid.org/0000-0002-8803-4429">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>B.</GivenName>
+                           <GivenName>G.</GivenName>
+                           <FamilyName>Cheon</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au70" ORCID="https://orcid.org/0000-0001-7620-2053">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Chilikin</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au71" ORCID="https://orcid.org/0000-0003-2099-7760">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Chirapatpimol</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au72" ORCID="https://orcid.org/0000-0002-7008-3759">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>H.-E.</GivenName>
+                           <FamilyName>Cho</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au73" ORCID="https://orcid.org/0000-0003-1705-7399">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Cho</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au74" ORCID="https://orcid.org/0000-0002-1673-5664">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.-J.</GivenName>
+                           <FamilyName>Cho</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au75" ORCID="https://orcid.org/0000-0003-2747-8277">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.-K.</GivenName>
+                           <FamilyName>Choi</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au76" ORCID="https://orcid.org/0000-0001-9841-0216">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Choudhury</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au77" ORCID="https://orcid.org/0000-0002-1492-914X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <FamilyName>Cochran</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au78" ORCID="https://orcid.org/0000-0002-2577-9909">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>L.</GivenName>
+                           <FamilyName>Corona</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au79" ORCID="https://orcid.org/0000-0002-2398-3754">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <GivenName>X.</GivenName>
+                           <FamilyName>Cui</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au80" ORCID="https://orcid.org/0000-0003-3316-8574">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>F.</GivenName>
+                           <FamilyName>Dattola</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au81" ORCID="http://orcid.org/0000-0002-7469-6974">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>E.</GivenName>
+                           <Particle>De La</Particle>
+                           <FamilyName>Cruz-Burelo</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au82" ORCID="http://orcid.org/0000-0003-3905-6805">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <GivenName>A.</GivenName>
+                           <Particle>De La</Particle>
+                           <FamilyName>Motte</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au83" ORCID="http://orcid.org/0000-0002-2047-9675">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>G.</GivenName>
+                           <Particle>De</Particle>
+                           <FamilyName>Nardo</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au84" ORCID="http://orcid.org/0000-0002-0972-9047">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <Particle>De</Particle>
+                           <FamilyName>Nuccio</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au85" ORCID="http://orcid.org/0000-0001-8442-107X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>G.</GivenName>
+                           <Particle>De</Particle>
+                           <FamilyName>Pietro</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au86" ORCID="http://orcid.org/0000-0002-3808-5455">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <Particle>de</Particle>
+                           <FamilyName>Sangro</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au87" ORCID="https://orcid.org/0000-0003-1997-6751">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Destefanis</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au88" ORCID="https://orcid.org/0000-0003-2997-3829">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Dey</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au89" ORCID="https://orcid.org/0000-0001-7052-3163">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Dhamija</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au90" ORCID="http://orcid.org/0000-0003-1233-3876">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <Particle>Di</Particle>
+                           <FamilyName>Canto</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au91" ORCID="http://orcid.org/0000-0001-9076-5936">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>F.</GivenName>
+                           <Particle>Di</Particle>
+                           <FamilyName>Capua</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au92" ORCID="https://orcid.org/0000-0001-5767-2121">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <FamilyName>Dingfelder</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au93" ORCID="https://orcid.org/0000-0002-5662-3675">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Z.</GivenName>
+                           <FamilyName>Doležal</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au94" ORCID="https://orcid.org/0000-0001-6831-3159">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>I.</GivenName>
+                           <FamilyName>Domínguez Jiménez</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au95" ORCID="https://orcid.org/0000-0003-3043-1939">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <GivenName>V.</GivenName>
+                           <FamilyName>Dong</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au96" ORCID="https://orcid.org/0000-0003-3628-9267">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>D.</GivenName>
+                           <FamilyName>Dorner</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au97" ORCID="https://orcid.org/0000-0003-0849-8774">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Dort</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au98" ORCID="https://orcid.org/0000-0002-5670-5582">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>D.</GivenName>
+                           <FamilyName>Dossett</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au99" ORCID="https://orcid.org/0000-0002-6295-100X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Dreyer</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au100" ORCID="https://orcid.org/0000-0002-1345-0970">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Dubey</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au101" ORCID="https://orcid.org/0009-0006-6056-546X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Dugic</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au102" ORCID="https://orcid.org/0000-0002-1345-8163">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>G.</GivenName>
+                           <FamilyName>Dujany</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au103" ORCID="https://orcid.org/0000-0002-6817-6868">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Ecker</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au104" ORCID="https://orcid.org/0000-0003-2033-537X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Eliachevitch</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au105" ORCID="https://orcid.org/0000-0001-8656-2693">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>D.</GivenName>
+                           <FamilyName>Epifanov</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au106" ORCID="https://orcid.org/0000-0003-3966-7497">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Feichtinger</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au107" ORCID="https://orcid.org/0000-0002-6849-0427">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Ferber</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au108" ORCID="https://orcid.org/0000-0001-9795-7412">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Fillinger</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au109" ORCID="https://orcid.org/0000-0002-5068-5453">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.</GivenName>
+                           <FamilyName>Finck</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au110" ORCID="https://orcid.org/0000-0002-3936-2151">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>G.</GivenName>
+                           <FamilyName>Finocchiaro</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au111" ORCID="https://orcid.org/0000-0002-2821-759X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Fodor</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au112" ORCID="https://orcid.org/0000-0001-6535-7965">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>F.</GivenName>
+                           <FamilyName>Forti</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au113" ORCID="https://orcid.org/0000-0001-7470-3874">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Frey</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au114" ORCID="https://orcid.org/0000-0002-5862-9739">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>B.</GivenName>
+                           <GivenName>G.</GivenName>
+                           <FamilyName>Fulsom</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au115" ORCID="https://orcid.org/0000-0001-7695-0537">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Gabrielli</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au116" ORCID="https://orcid.org/0000-0001-8346-8597">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>E.</GivenName>
+                           <FamilyName>Ganiev</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au117" ORCID="https://orcid.org/0000-0003-2393-3367">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Garcia-Hernandez</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au118" ORCID="https://orcid.org/0000-0002-7406-4707">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Garg</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au119" ORCID="https://orcid.org/0000-0001-5983-1552">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>G.</GivenName>
+                           <FamilyName>Gaudino</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au120" ORCID="https://orcid.org/0000-0002-8880-6134">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>V.</GivenName>
+                           <FamilyName>Gaur</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au121" ORCID="https://orcid.org/0000-0003-0974-6231">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Gellrich</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au122" ORCID="https://orcid.org/0000-0003-0096-3555">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>G.</GivenName>
+                           <FamilyName>Ghevondyan</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au123" ORCID="https://orcid.org/0000-0002-3458-9824">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>D.</GivenName>
+                           <FamilyName>Ghosh</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au124" ORCID="https://orcid.org/0000-0001-6775-8893">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>H.</GivenName>
+                           <FamilyName>Ghumaryan</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au125" ORCID="https://orcid.org/0000-0001-5982-1784">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>G.</GivenName>
+                           <FamilyName>Giakoustidis</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au126" ORCID="https://orcid.org/0000-0002-5496-7247">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Giordano</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au127" ORCID="https://orcid.org/0000-0002-8895-0128">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Giri</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au128" ORCID="https://orcid.org/0000-0001-5603-4750">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Gironella Gironell</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au129" ORCID="https://orcid.org/0000-0002-8553-7338">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Glazov</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au130" ORCID="https://orcid.org/0000-0002-3147-4562">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>B.</GivenName>
+                           <FamilyName>Gobbo</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au131" ORCID="https://orcid.org/0000-0002-8317-0579">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Godang</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au132" ORCID="https://orcid.org/0000-0001-8785-847X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Goldenzweig</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au133" ORCID="https://orcid.org/0000-0001-8602-5652">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>E.</GivenName>
+                           <FamilyName>Graziani</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au134" ORCID="https://orcid.org/0000-0001-6964-8399">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>D.</GivenName>
+                           <FamilyName>Greenwald</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au135" ORCID="https://orcid.org/0000-0002-5691-1044">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Z.</GivenName>
+                           <FamilyName>Gruberová</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au136" ORCID="https://orcid.org/0000-0002-1470-6536">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Gu</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au137" ORCID="https://orcid.org/0000-0002-5541-2278">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.</GivenName>
+                           <FamilyName>Guan</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au138" ORCID="https://orcid.org/0000-0002-5858-3187">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Gudkova</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au139" ORCID="https://orcid.org/0000-0003-0962-6344">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>I.</GivenName>
+                           <FamilyName>Haide</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au140" ORCID="https://orcid.org/0000-0002-6280-494X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Halder</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au141" ORCID="https://orcid.org/0000-0001-6775-5932">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.</GivenName>
+                           <FamilyName>Han</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au142" ORCID="https://orcid.org/0000-0002-4321-0417">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Hara</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au143" ORCID="https://orcid.org/0000-0003-0448-4244">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.</GivenName>
+                           <FamilyName>Harris</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au144" ORCID="https://orcid.org/0000-0002-6347-433X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Hayasaka</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au145" ORCID="https://orcid.org/0000-0002-5138-5903">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>H.</GivenName>
+                           <FamilyName>Hayashii</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au146" ORCID="https://orcid.org/0000-0001-6954-9593">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Hazra</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au147" ORCID="https://orcid.org/0000-0001-6504-1872">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Hedges</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au148" ORCID="https://orcid.org/0000-0002-6663-5469">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Heidelbach</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au149" ORCID="http://orcid.org/0000-0002-8133-6467">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>I.</GivenName>
+                           <FamilyName>Heredia de la Cruz</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au150" ORCID="https://orcid.org/0000-0002-6322-5587">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Hernández Villanueva</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au151" ORCID="https://orcid.org/0000-0002-7761-3505">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Higuchi</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au152" ORCID="https://orcid.org/0000-0002-1893-8764">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Hoek</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au153" ORCID="https://orcid.org/0000-0001-5147-4781">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Hohmann</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au154" ORCID="https://orcid.org/0009-0005-8881-8935">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Hoppe</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au155" ORCID="https://orcid.org/0000-0001-9979-6501">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Horak</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au156" ORCID="https://orcid.org/0000-0002-1641-430X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.-L.</GivenName>
+                           <FamilyName>Hsu</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au157" ORCID="https://orcid.org/0000-0002-2922-9779">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Humair</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au158" ORCID="https://orcid.org/0000-0002-4271-711X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Iijima</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au159" ORCID="https://orcid.org/0000-0003-2765-7072">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Inami</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au160" ORCID="https://orcid.org/0000-0002-2927-3366">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>N.</GivenName>
+                           <FamilyName>Ipsita</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au161" ORCID="https://orcid.org/0000-0002-3561-5633">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Ishikawa</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au162" ORCID="https://orcid.org/0000-0003-1590-0266">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Itoh</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au163" ORCID="https://orcid.org/0000-0002-9402-7559">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Iwasaki</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au164" ORCID="https://orcid.org/0000-0002-0847-402X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Jackson</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au165" ORCID="https://orcid.org/0000-0002-9996-6336">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>W.</GivenName>
+                           <GivenName>W.</GivenName>
+                           <FamilyName>Jacobs</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au166" ORCID="https://orcid.org/0000-0002-1935-9887">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>E.-J.</GivenName>
+                           <FamilyName>Jang</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au167" ORCID="https://orcid.org/0000-0003-2963-2565">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Q.</GivenName>
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Ji</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au168" ORCID="https://orcid.org/0000-0001-8176-8545">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Jia</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au169" ORCID="https://orcid.org/0000-0002-7323-0830">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.</GivenName>
+                           <FamilyName>Jin</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au170" ORCID="https://orcid.org/0000-0002-8366-1749">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Johnson</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au171" ORCID="https://orcid.org/0000-0002-5515-0087">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Joo</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au172" ORCID="https://orcid.org/0000-0003-3987-9895">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>H.</GivenName>
+                           <FamilyName>Junkerkalefeld</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au173" ORCID="https://orcid.org/0000-0002-2863-5476">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Kaleta</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au174" ORCID="https://orcid.org/0000-0003-3054-1222">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>D.</GivenName>
+                           <FamilyName>Kalita</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au175" ORCID="https://orcid.org/0000-0002-2211-619X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <GivenName>B.</GivenName>
+                           <FamilyName>Kaliyar</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au176" ORCID="https://orcid.org/0000-0001-5635-1000">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <FamilyName>Kandra</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au177" ORCID="https://orcid.org/0000-0002-6816-0751">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <GivenName>H.</GivenName>
+                           <FamilyName>Kang</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au178" ORCID="https://orcid.org/0000-0002-5320-7043">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Kang</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au179" ORCID="https://orcid.org/0000-0001-5365-3716">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>G.</GivenName>
+                           <FamilyName>Karyan</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au180" ORCID="https://orcid.org/0000-0002-4089-5238">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Kawasaki</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au181" ORCID="https://orcid.org/0000-0002-7278-2860">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>F.</GivenName>
+                           <FamilyName>Keil</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au182" ORCID="https://orcid.org/0000-0002-5161-9722">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.</GivenName>
+                           <FamilyName>Ketter</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au183" ORCID="https://orcid.org/0000-0002-2209-535X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.</GivenName>
+                           <FamilyName>Kiesling</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au184" ORCID="https://orcid.org/0000-0002-5743-7698">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.-H.</GivenName>
+                           <FamilyName>Kim</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au185" ORCID="https://orcid.org/0000-0001-8125-9070">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>D.</GivenName>
+                           <GivenName>Y.</GivenName>
+                           <FamilyName>Kim</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au186" ORCID="https://orcid.org/0000-0001-7593-843X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.-Y.</GivenName>
+                           <FamilyName>Kim</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au187" ORCID="https://orcid.org/0000-0002-4659-1112">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.-H.</GivenName>
+                           <FamilyName>Kim</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au188" ORCID="https://orcid.org/0000-0002-9695-8103">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.-K.</GivenName>
+                           <FamilyName>Kim</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au189" ORCID="https://orcid.org/0000-0001-9511-9634">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.</GivenName>
+                           <GivenName>J.</GivenName>
+                           <FamilyName>Kim</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au190" ORCID="https://orcid.org/0000-0002-6756-3591">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>H.</GivenName>
+                           <FamilyName>Kindo</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au191" ORCID="https://orcid.org/0000-0001-7175-4182">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Kinoshita</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au192" ORCID="https://orcid.org/0000-0002-8644-2349">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Kodyš</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au193" ORCID="https://orcid.org/0000-0002-1644-2001">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Koga</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au194" ORCID="https://orcid.org/0000-0003-3869-6552">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Kohani</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au195" ORCID="https://orcid.org/0000-0002-3638-0266">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Kojima</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au196" ORCID="https://orcid.org/0000-0001-5959-8172">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Korobov</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au197" ORCID="https://orcid.org/0000-0003-0971-0968">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Korpar</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au198" ORCID="https://orcid.org/0000-0001-8084-1931">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>E.</GivenName>
+                           <FamilyName>Kovalenko</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au199" ORCID="https://orcid.org/0000-0002-4967-7675">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Križan</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au200" ORCID="https://orcid.org/0000-0002-1236-4667">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Krokovny</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au201" ORCID="https://orcid.org/0000-0001-6251-8049">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Kuhr</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au202" ORCID="https://orcid.org/0000-0001-6217-5162">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.</GivenName>
+                           <FamilyName>Kulii</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au203" ORCID="https://orcid.org/0000-0001-6585-7767">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>D.</GivenName>
+                           <FamilyName>Kumar</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au204" ORCID="https://orcid.org/0000-0002-8465-433X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <FamilyName>Kumar</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au205" ORCID="https://orcid.org/0000-0002-6627-9708">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Kumar</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au206" ORCID="https://orcid.org/0000-0002-6277-2626">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Kumar</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au207" ORCID="https://orcid.org/0000-0003-1572-5365">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Kumara</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au208" ORCID="https://orcid.org/0000-0001-9613-2849">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Kunigo</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au209" ORCID="https://orcid.org/0000-0002-7011-5044">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Kuzmin</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au210" ORCID="https://orcid.org/0000-0001-9448-5691">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.-J.</GivenName>
+                           <FamilyName>Kwon</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au211" ORCID="https://orcid.org/0000-0002-0551-7696">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Lacaprara</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au212" ORCID="https://orcid.org/0000-0002-7294-396X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Lalwani</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au213" ORCID="https://orcid.org/0000-0001-9128-6806">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Lam</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au214" ORCID="https://orcid.org/0000-0001-8220-3095">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>L.</GivenName>
+                           <FamilyName>Lanceri</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au215" ORCID="https://orcid.org/0000-0003-0234-0474">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Lange</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au216" ORCID="https://orcid.org/0000-0001-7110-7823">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Lau</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au217" ORCID="https://orcid.org/0000-0002-7400-6013">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Laurenza</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au218" ORCID="https://orcid.org/0000-0003-3762-694X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Lautenbach</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au219" ORCID="https://orcid.org/0000-0003-3097-6613">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Leboucher</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au220" ORCID="http://orcid.org/0000-0002-9073-5689">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>F.</GivenName>
+                           <GivenName>R.</GivenName>
+                           <Particle>Le</Particle>
+                           <FamilyName>Diberder</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au221" ORCID="https://orcid.org/0000-0003-4528-4601">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <GivenName>J.</GivenName>
+                           <FamilyName>Lee</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au222" ORCID="https://orcid.org/0009-0008-5394-5100">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.</GivenName>
+                           <FamilyName>Lemettais</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au223" ORCID="https://orcid.org/0000-0003-3833-2900">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Leo</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au224" ORCID="https://orcid.org/0000-0001-5789-6205">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>D.</GivenName>
+                           <FamilyName>Levit</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au225" ORCID="https://orcid.org/0000-0002-5991-622X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>P.</GivenName>
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Lewis</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au226" ORCID="https://orcid.org/0000-0002-7366-1307">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>L.</GivenName>
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Li</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au227" ORCID="https://orcid.org/0009-0004-9425-2678">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Q.</GivenName>
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Li</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au228" ORCID="https://orcid.org/0000-0003-4669-1495">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <GivenName>X.</GivenName>
+                           <FamilyName>Li</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au229" ORCID="https://orcid.org/0009-0002-8040-2546">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>W.</GivenName>
+                           <GivenName>Z.</GivenName>
+                           <FamilyName>Li</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au230" ORCID="https://orcid.org/0000-0002-4413-6247">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.</GivenName>
+                           <FamilyName>Li</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au231" ORCID="https://orcid.org/0000-0002-9909-2851">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.</GivenName>
+                           <GivenName>B.</GivenName>
+                           <FamilyName>Li</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au232" ORCID="https://orcid.org/0009-0000-1981-0044">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.</GivenName>
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Liao</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au233" ORCID="https://orcid.org/0000-0002-1219-3247">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <FamilyName>Libby</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au234" ORCID="https://orcid.org/0000-0002-3653-2899">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <FamilyName>Lin</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au235" ORCID="https://orcid.org/0000-0002-6491-8131">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Z.</GivenName>
+                           <FamilyName>Liptak</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au236" ORCID="https://orcid.org/0000-0002-9376-1487">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <GivenName>H.</GivenName>
+                           <FamilyName>Liu</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au237" ORCID="https://orcid.org/0000-0002-7684-0415">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Q.</GivenName>
+                           <GivenName>Y.</GivenName>
+                           <FamilyName>Liu</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au238" ORCID="https://orcid.org/0000-0002-8374-3947">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.</GivenName>
+                           <FamilyName>Liu</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au239" ORCID="https://orcid.org/0000-0002-0290-3022">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Z.</GivenName>
+                           <GivenName>Q.</GivenName>
+                           <FamilyName>Liu</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au240" ORCID="https://orcid.org/0000-0003-3416-0056">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>D.</GivenName>
+                           <FamilyName>Liventsev</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au241" ORCID="https://orcid.org/0000-0002-8124-8969">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Longo</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au242" ORCID="https://orcid.org/0000-0003-3915-2506">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Lueck</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au243" ORCID="https://orcid.org/0000-0002-2275-0473">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.</GivenName>
+                           <FamilyName>Lyu</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au244" ORCID="https://orcid.org/0000-0001-8412-8308">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.</GivenName>
+                           <FamilyName>Ma</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au245" ORCID="https://orcid.org/0009-0004-1205-5700">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.</GivenName>
+                           <FamilyName>Madaan</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au246" ORCID="https://orcid.org/0000-0003-4143-9127">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Maggiora</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au247" ORCID="https://orcid.org/0000-0002-1746-4683">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Maharana</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au248" ORCID="https://orcid.org/0000-0001-5534-7149">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Maiti</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au249" ORCID="https://orcid.org/0000-0003-3076-9243">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Maity</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au250" ORCID="https://orcid.org/0000-0003-1144-3678">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>G.</GivenName>
+                           <FamilyName>Mancinelli</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au251" ORCID="https://orcid.org/0000-0002-8552-6276">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Manfredi</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au252" ORCID="https://orcid.org/0000-0002-9826-7947">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>E.</GivenName>
+                           <FamilyName>Manoni</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au253" ORCID="https://orcid.org/0000-0002-5979-5050">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Mantovano</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au254" ORCID="https://orcid.org/0000-0002-1315-8646">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>D.</GivenName>
+                           <FamilyName>Marcantonio</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au255" ORCID="https://orcid.org/0000-0003-4144-863X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Marcello</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au256" ORCID="https://orcid.org/0000-0003-1903-3251">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.</GivenName>
+                           <FamilyName>Marinas</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au257" ORCID="https://orcid.org/0000-0002-7189-8343">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.</GivenName>
+                           <FamilyName>Martellini</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au258" ORCID="https://orcid.org/0000-0003-1544-4053">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Martens</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au259" ORCID="https://orcid.org/0000-0003-1161-4983">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Martini</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au260" ORCID="https://orcid.org/0000-0001-7846-1913">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Martinov</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au261" ORCID="https://orcid.org/0000-0003-1762-4699">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>L.</GivenName>
+                           <FamilyName>Massaccesi</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au262" ORCID="https://orcid.org/0000-0002-7109-5583">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Masuda</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au263" ORCID="https://orcid.org/0000-0002-2698-5448">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>D.</GivenName>
+                           <FamilyName>Matvienko</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au264" ORCID="https://orcid.org/0000-0002-7764-5777">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Maurya</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au265" ORCID="https://orcid.org/0009-0004-1020-7299">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Maushart</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au266" ORCID="https://orcid.org/0000-0001-9871-9002">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <GivenName>A.</GivenName>
+                           <FamilyName>McKenna</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au267" ORCID="https://orcid.org/0000-0002-6088-0412">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>F.</GivenName>
+                           <FamilyName>Meier</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au268" ORCID="https://orcid.org/0000-0002-7082-8108">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Merola</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au269" ORCID="https://orcid.org/0000-0002-0128-264X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>F.</GivenName>
+                           <FamilyName>Metzner</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au270" ORCID="https://orcid.org/0000-0003-2631-1790">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.</GivenName>
+                           <FamilyName>Miller</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au271" ORCID="https://orcid.org/0000-0002-1190-2961">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Mirra</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au272" ORCID="https://orcid.org/0000-0002-1118-6344">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Mitra</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au273" ORCID="https://orcid.org/0000-0003-4352-734X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Miyabayashi</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au274" ORCID="https://orcid.org/0000-0002-2209-6969">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Mizuk</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au275" ORCID="https://orcid.org/0000-0001-6850-7666">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>G.</GivenName>
+                           <GivenName>B.</GivenName>
+                           <FamilyName>Mohanty</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au276" ORCID="https://orcid.org/0000-0002-3054-8400">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Mondal</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au277" ORCID="https://orcid.org/0000-0003-2184-7510">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Moneta</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au278" ORCID="https://orcid.org/0000-0003-3579-9951">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>H.-G.</GivenName>
+                           <FamilyName>Moser</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au279" ORCID="https://orcid.org/0000-0001-6388-3005">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Mrvar</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au280" ORCID="https://orcid.org/0000-0002-0294-9071">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Mussa</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au281" ORCID="https://orcid.org/0000-0002-7640-5456">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>I.</GivenName>
+                           <FamilyName>Nakamura</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au282" ORCID="https://orcid.org/0000-0001-8424-7075">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Nakao</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au283" ORCID="https://orcid.org/0000-0002-6271-5808">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.</GivenName>
+                           <FamilyName>Nakazawa</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au284" ORCID="https://orcid.org/0000-0003-1773-2999">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Naruki</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au285" ORCID="https://orcid.org/0000-0003-0486-9291">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Z.</GivenName>
+                           <FamilyName>Natkaniec</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au286" ORCID="https://orcid.org/0000-0002-1076-814X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Natochii</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au287" ORCID="https://orcid.org/0000-0002-2572-4692">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Nayak</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au288" ORCID="https://orcid.org/0000-0002-9434-6197">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>G.</GivenName>
+                           <FamilyName>Nazaryan</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au289" ORCID="https://orcid.org/0000-0002-4564-8009">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Neu</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au290" ORCID="https://orcid.org/0000-0002-4375-9741">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.</GivenName>
+                           <FamilyName>Niebuhr</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au291" ORCID="https://orcid.org/0000-0003-1746-586X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Niiyama</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au292" ORCID="https://orcid.org/0000-0001-6373-2346">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Nishida</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au293" ORCID="https://orcid.org/0000-0002-7310-5079">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Ogawa</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au294" ORCID="https://orcid.org/0000-0002-8261-7543">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.</GivenName>
+                           <FamilyName>Onishchuk</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au295" ORCID="https://orcid.org/0000-0003-4486-0064">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>H.</GivenName>
+                           <FamilyName>Ono</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au296" ORCID="https://orcid.org/0000-0002-1646-6847">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.</GivenName>
+                           <FamilyName>Onuki</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au297" ORCID="https://orcid.org/0000-0001-6016-219X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>F.</GivenName>
+                           <FamilyName>Otani</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au298" ORCID="https://orcid.org/0000-0001-7426-4824">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Pakhlov</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au299" ORCID="https://orcid.org/0000-0001-7518-3022">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>G.</GivenName>
+                           <FamilyName>Pakhlova</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au300" ORCID="https://orcid.org/0000-0001-5969-8712">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>E.</GivenName>
+                           <FamilyName>Paoloni</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au301" ORCID="https://orcid.org/0000-0001-7994-0537">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Pardi</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au302" ORCID="https://orcid.org/0000-0001-9556-2433">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Parham</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au303" ORCID="https://orcid.org/0000-0001-6087-2052">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>H.</GivenName>
+                           <FamilyName>Park</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au304" ORCID="https://orcid.org/0000-0001-6520-0028">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <FamilyName>Park</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au305" ORCID="https://orcid.org/0000-0003-0567-3493">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Park</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au306" ORCID="https://orcid.org/0000-0001-6019-6218">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.-H.</GivenName>
+                           <FamilyName>Park</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au307" ORCID="https://orcid.org/0000-0003-1546-4548">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>B.</GivenName>
+                           <FamilyName>Paschen</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au308" ORCID="https://orcid.org/0000-0003-4864-3411">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Passeri</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au309" ORCID="https://orcid.org/0000-0002-4114-1091">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Patra</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au310" ORCID="https://orcid.org/0000-0002-8813-0437">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Paul</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au311" ORCID="https://orcid.org/0000-0001-9839-7373">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Pedlar</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au312" ORCID="https://orcid.org/0000-0002-2529-8515">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Peschke</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au313" ORCID="https://orcid.org/0000-0003-1804-9470">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Pestotnik</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au314" ORCID="https://orcid.org/0000-0001-9750-0551">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Piccolo</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au315" ORCID="https://orcid.org/0000-0001-6836-0748">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>L.</GivenName>
+                           <GivenName>E.</GivenName>
+                           <FamilyName>Piilonen</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au316" ORCID="https://orcid.org/0000-0003-0808-8281">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>G.</GivenName>
+                           <FamilyName>Pinna Angioni</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au317" ORCID="https://orcid.org/0000-0002-8152-9605">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>P.</GivenName>
+                           <GivenName>L.</GivenName>
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Podesta-Lerma</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au318" ORCID="https://orcid.org/0000-0002-6131-819X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Podobnik</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au319" ORCID="https://orcid.org/0000-0002-3367-738X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Pokharel</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au320" ORCID="https://orcid.org/0000-0002-6154-885X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.</GivenName>
+                           <FamilyName>Praz</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au321" ORCID="https://orcid.org/0000-0002-0195-8005">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Prell</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au322" ORCID="https://orcid.org/0000-0002-9465-2493">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>E.</GivenName>
+                           <FamilyName>Prencipe</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au323" ORCID="https://orcid.org/0000-0002-1407-7450">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Prim</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au324" ORCID="https://orcid.org/0000-0002-0819-284X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>I.</GivenName>
+                           <FamilyName>Prudiiev</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au325" ORCID="https://orcid.org/0000-0002-3876-7069">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>H.</GivenName>
+                           <FamilyName>Purwar</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au326" ORCID="https://orcid.org/0000-0003-0690-8100">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Rados</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au327" ORCID="https://orcid.org/0000-0003-2948-5155">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>G.</GivenName>
+                           <FamilyName>Raeuber</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au328" ORCID="https://orcid.org/0000-0001-7010-8066">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Raiz</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au329" ORCID="https://orcid.org/0000-0002-6583-4888">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>N.</GivenName>
+                           <FamilyName>Rauls</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au330" ORCID="https://orcid.org/0000-0002-5584-2614">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Ravindran</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au331" ORCID="https://orcid.org/0000-0002-2673-1982">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <GivenName>U.</GivenName>
+                           <FamilyName>Rehman</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au332" ORCID="https://orcid.org/0000-0002-0706-0247">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Reif</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au333" ORCID="https://orcid.org/0000-0002-6542-9954">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Reiter</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au334" ORCID="https://orcid.org/0000-0001-6975-1724">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Remnev</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au335" ORCID="https://orcid.org/0000-0002-5930-6237">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>L.</GivenName>
+                           <FamilyName>Reuter</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au336" ORCID="https://orcid.org/0000-0001-9772-9989">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>D.</GivenName>
+                           <FamilyName>Ricalde Herrmann</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au337" ORCID="https://orcid.org/0000-0002-1897-8272">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>I.</GivenName>
+                           <FamilyName>Ripp-Baudot</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au338" ORCID="https://orcid.org/0000-0003-1788-2866">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>G.</GivenName>
+                           <FamilyName>Rizzo</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au339" ORCID="https://orcid.org/0000-0003-0654-2866">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Roehrken</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au340" ORCID="https://orcid.org/0000-0001-7802-4617">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Roney</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au341" ORCID="https://orcid.org/0000-0003-1839-8152">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Rostomyan</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au342" ORCID="https://orcid.org/0000-0002-4310-3638">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>N.</GivenName>
+                           <FamilyName>Rout</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au343" ORCID="https://orcid.org/0000-0002-4902-966X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>D.</GivenName>
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Sanders</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au344" ORCID="https://orcid.org/0000-0002-4199-4369">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Sandilya</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au345" ORCID="https://orcid.org/0000-0003-3904-2956">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>L.</GivenName>
+                           <FamilyName>Santelj</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au346" ORCID="https://orcid.org/0000-0003-3751-2803">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.</GivenName>
+                           <FamilyName>Sato</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au347" ORCID="https://orcid.org/0000-0002-9184-2830">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>V.</GivenName>
+                           <FamilyName>Savinov</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au348" ORCID="https://orcid.org/0000-0003-1771-9161">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>B.</GivenName>
+                           <FamilyName>Scavino</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au349" ORCID="https://orcid.org/0000-0002-3787-687X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.</GivenName>
+                           <FamilyName>Schmitt</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au350" ORCID="https://orcid.org/0009-0002-5899-0353">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Schneider</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au351" ORCID="https://orcid.org/0000-0002-7336-3246">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>G.</GivenName>
+                           <FamilyName>Schnell</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au352" ORCID="https://orcid.org/0000-0003-0623-0184">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Schnepf</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au353" ORCID="https://orcid.org/0000-0003-4844-5028">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.</GivenName>
+                           <FamilyName>Schwanda</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au354" ORCID="https://orcid.org/0000-0002-7310-1983">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <GivenName>J.</GivenName>
+                           <FamilyName>Schwartz</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au355" ORCID="https://orcid.org/0000-0002-8378-4255">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.</GivenName>
+                           <FamilyName>Seino</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au356" ORCID="https://orcid.org/0000-0001-8228-9781">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Selce</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au357" ORCID="https://orcid.org/0000-0002-1615-9118">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Senyo</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au358" ORCID="https://orcid.org/0000-0003-2489-7812">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <FamilyName>Serrano</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au359" ORCID="https://orcid.org/0000-0002-4824-101X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <GivenName>E.</GivenName>
+                           <FamilyName>Sevior</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au360" ORCID="https://orcid.org/0000-0002-5921-8819">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.</GivenName>
+                           <FamilyName>Sfienti</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au361" ORCID="https://orcid.org/0000-0003-2811-2218">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>W.</GivenName>
+                           <FamilyName>Shan</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au362" ORCID="https://orcid.org/0000-0002-1312-0429">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.</GivenName>
+                           <FamilyName>Sharma</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au363" ORCID="https://orcid.org/0000-0002-9012-4618">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.</GivenName>
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Shen</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au364" ORCID="https://orcid.org/0000-0002-7006-6107">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>X.</GivenName>
+                           <GivenName>D.</GivenName>
+                           <FamilyName>Shi</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au365" ORCID="https://orcid.org/0000-0003-3862-4380">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Shillington</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au366" ORCID="https://orcid.org/0000-0003-3291-9532">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Shimasaki</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au367" ORCID="https://orcid.org/0000-0002-8478-5639">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.-G.</GivenName>
+                           <FamilyName>Shiu</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au368" ORCID="https://orcid.org/0000-0002-0622-6065">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>D.</GivenName>
+                           <FamilyName>Shtol</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au369" ORCID="https://orcid.org/0000-0001-8805-4895">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Sibidanov</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au370" ORCID="https://orcid.org/0000-0002-5978-0289">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>F.</GivenName>
+                           <FamilyName>Simon</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au371" ORCID="https://orcid.org/0000-0001-9029-2462">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <GivenName>B.</GivenName>
+                           <FamilyName>Singh</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au372" ORCID="https://orcid.org/0000-0002-8566-621X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <FamilyName>Skorupa</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au373" ORCID="https://orcid.org/0000-0002-1773-5455">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Sobotzik</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au374" ORCID="https://orcid.org/0000-0002-0749-2146">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Soffer</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au375" ORCID="https://orcid.org/0000-0002-9420-0091">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Sokolov</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au376" ORCID="https://orcid.org/0000-0002-5735-4059">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>E.</GivenName>
+                           <FamilyName>Solovieva</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au377" ORCID="https://orcid.org/0000-0003-1376-2293">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>W.</GivenName>
+                           <FamilyName>Song</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au378" ORCID="https://orcid.org/0000-0001-9601-405X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Spataro</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au379" ORCID="https://orcid.org/0000-0002-3060-2729">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>B.</GivenName>
+                           <FamilyName>Spruck</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au380" ORCID="https://orcid.org/0000-0001-8751-5944">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Starič</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au381" ORCID="https://orcid.org/0000-0001-9914-7261">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Stavroulakis</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au382" ORCID="https://orcid.org/0000-0003-2628-530X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Stefkova</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au383" ORCID="https://orcid.org/0000-0002-3453-142X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Stroili</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au384" ORCID="https://orcid.org/0000-0001-7470-9301">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <FamilyName>Strube</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au385" ORCID="https://orcid.org/0000-0003-2430-8707">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.</GivenName>
+                           <FamilyName>Sue</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au386" ORCID="https://orcid.org/0000-0002-8954-0585">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Sumihama</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au387" ORCID="https://orcid.org/0000-0001-7003-7210">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Sumisawa</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au388" ORCID="https://orcid.org/0000-0002-9795-3582">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>W.</GivenName>
+                           <FamilyName>Sutcliffe</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au389" ORCID="https://orcid.org/0009-0000-2819-5020">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>N.</GivenName>
+                           <FamilyName>Suwonjandee</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au390" ORCID="https://orcid.org/0000-0003-4198-2517">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>H.</GivenName>
+                           <FamilyName>Svidras</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au391" ORCID="https://orcid.org/0000-0003-1171-5960">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Takahashi</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au392" ORCID="https://orcid.org/0000-0001-8225-3973">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Takizawa</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au393" ORCID="https://orcid.org/0000-0001-6651-0706">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>U.</GivenName>
+                           <FamilyName>Tamponi</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au394" ORCID="https://orcid.org/0000-0002-6029-6216">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Tanaka</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au395" ORCID="https://orcid.org/0000-0002-8255-3746">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Tanida</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au396" ORCID="https://orcid.org/0000-0003-3469-9377">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>F.</GivenName>
+                           <FamilyName>Tenchini</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au397" ORCID="https://orcid.org/0000-0003-4171-6219">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Thaller</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au398" ORCID="https://orcid.org/0000-0001-9128-6240">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>O.</GivenName>
+                           <FamilyName>Tittel</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au399" ORCID="https://orcid.org/0000-0002-5887-1883">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Tiwary</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au400" ORCID="https://orcid.org/0000-0003-2321-0599">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>E.</GivenName>
+                           <FamilyName>Torassa</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au401" ORCID="https://orcid.org/0000-0001-6567-3036">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Trabelsi</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au402" ORCID="https://orcid.org/0000-0003-3584-4484">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>I.</GivenName>
+                           <FamilyName>Tsaklidis</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au403" ORCID="https://orcid.org/0000-0002-6833-4344">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>I.</GivenName>
+                           <FamilyName>Ueda</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au404" ORCID="https://orcid.org/0000-0002-4944-1830">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>T.</GivenName>
+                           <FamilyName>Uglov</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au405" ORCID="https://orcid.org/0000-0001-7378-6671">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Unger</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au406" ORCID="https://orcid.org/0000-0003-3355-765X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.</GivenName>
+                           <FamilyName>Unno</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au407" ORCID="https://orcid.org/0000-0002-2209-8198">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Uno</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au408" ORCID="https://orcid.org/0000-0002-3401-0480">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Uno</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au409" ORCID="https://orcid.org/0000-0002-0887-7953">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Urquijo</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au410" ORCID="https://orcid.org/0000-0003-3174-403X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.</GivenName>
+                           <FamilyName>Ushiroda</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au411" ORCID="https://orcid.org/0000-0003-1685-9824">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <GivenName>E.</GivenName>
+                           <FamilyName>Vahsen</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au412" ORCID="http://orcid.org/0000-0002-7448-4816">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <Particle>van</Particle>
+                           <FamilyName>Tonder</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au413" ORCID="https://orcid.org/0000-0003-1017-1295">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <GivenName>E.</GivenName>
+                           <FamilyName>Varvell</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au414" ORCID="https://orcid.org/0000-0002-1916-3884">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Veronesi</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au415" ORCID="https://orcid.org/0000-0003-4220-8056">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Vinokurova</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au416" ORCID="https://orcid.org/0000-0002-1606-5349">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>V.</GivenName>
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Vismaya</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au417" ORCID="https://orcid.org/0000-0003-3354-2300">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>L.</GivenName>
+                           <FamilyName>Vitale</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au418" ORCID="https://orcid.org/0000-0002-4399-5082">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>V.</GivenName>
+                           <FamilyName>Vobbilisetti</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au419" ORCID="https://orcid.org/0000-0003-1782-2978">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Volpe</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au420" ORCID="https://orcid.org/0000-0003-0983-4936">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Vossen</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au421" ORCID="https://orcid.org/0000-0003-3533-7669">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>B.</GivenName>
+                           <FamilyName>Wach</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au422" ORCID="https://orcid.org/0000-0003-2818-3155">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Wakai</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au423" ORCID="https://orcid.org/0000-0002-9105-1625">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Wallner</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au424" ORCID="https://orcid.org/0000-0001-6136-6952">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>B.</GivenName>
+                           <FamilyName>Wang</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au425" ORCID="https://orcid.org/0000-0001-6391-5118">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>E.</GivenName>
+                           <FamilyName>Wang</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au426" ORCID="https://orcid.org/0000-0002-0979-8341">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.-Z.</GivenName>
+                           <FamilyName>Wang</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au427" ORCID="https://orcid.org/0000-0001-5805-1255">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>X.</GivenName>
+                           <GivenName>L.</GivenName>
+                           <FamilyName>Wang</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au428" ORCID="https://orcid.org/0000-0002-3536-4950">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Z.</GivenName>
+                           <FamilyName>Wang</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au429" ORCID="https://orcid.org/0000-0002-2298-7315">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>A.</GivenName>
+                           <FamilyName>Warburton</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au430" ORCID="https://orcid.org/0000-0001-6917-6694">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Watanabe</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au431" ORCID="https://orcid.org/0000-0002-5241-6628">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Watanuki</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au432" ORCID="https://orcid.org/0000-0003-0959-4784">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.</GivenName>
+                           <FamilyName>Wessel</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au433" ORCID="https://orcid.org/0000-0002-3151-6072">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <FamilyName>Wiechczynski</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au434" ORCID="https://orcid.org/0000-0002-4245-7442">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>E.</GivenName>
+                           <FamilyName>Won</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au435" ORCID="https://orcid.org/0000-0001-5096-1182">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>X.</GivenName>
+                           <GivenName>P.</GivenName>
+                           <FamilyName>Xu</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au436" ORCID="https://orcid.org/0000-0002-2680-0474">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>B.</GivenName>
+                           <GivenName>D.</GivenName>
+                           <FamilyName>Yabsley</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au437" ORCID="https://orcid.org/0000-0002-8858-9336">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Yamada</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au438" ORCID="https://orcid.org/0000-0002-9543-7971">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>S.</GivenName>
+                           <GivenName>B.</GivenName>
+                           <FamilyName>Yang</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author AffiliationIDS="Aff1 Aff2" CorrespondingAffiliationID="Aff1" ID="Au439" ORCID="https://orcid.org/0000-0002-0818-1550">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Yasaveev</FamilyName>
+                        </AuthorName>
+                        <Contact>
+                           <Email>murad.yasaveyev@gmail.com</Email>
+                        </Contact>
+                     </Author>
+                     <Author ID="Au440" ORCID="https://orcid.org/0000-0001-8840-3346">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <FamilyName>Yelton</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au441" ORCID="https://orcid.org/0000-0002-1479-9349">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <GivenName>H.</GivenName>
+                           <FamilyName>Yin</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au442" ORCID="https://orcid.org/0000-0002-4912-048X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.</GivenName>
+                           <GivenName>M.</GivenName>
+                           <FamilyName>Yook</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au443" ORCID="https://orcid.org/0000-0002-3656-2326">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>K.</GivenName>
+                           <FamilyName>Yoshihara</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au444" ORCID="https://orcid.org/0000-0002-1652-6686">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>C.</GivenName>
+                           <GivenName>Z.</GivenName>
+                           <FamilyName>Yuan</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au445" ORCID="https://orcid.org/0009-0005-0799-1630">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <FamilyName>Yuan</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au446" ORCID="https://orcid.org/0000-0002-4001-9748">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Y.</GivenName>
+                           <FamilyName>Yusa</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au447" ORCID="https://orcid.org/0000-0003-4957-805X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>L.</GivenName>
+                           <FamilyName>Zani</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au448" ORCID="https://orcid.org/0009-0003-6474-3508">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>F.</GivenName>
+                           <FamilyName>Zeng</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au449" ORCID="https://orcid.org/0000-0002-5065-8762">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>B.</GivenName>
+                           <FamilyName>Zhang</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au450" ORCID="https://orcid.org/0000-0002-0907-5565">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>V.</GivenName>
+                           <FamilyName>Zhilich</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au451" ORCID="https://orcid.org/0000-0002-6413-4687">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>J.</GivenName>
+                           <GivenName>S.</GivenName>
+                           <FamilyName>Zhou</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au452" ORCID="https://orcid.org/0000-0001-5968-6359">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>Q.</GivenName>
+                           <GivenName>D.</GivenName>
+                           <FamilyName>Zhou</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au453" ORCID="https://orcid.org/0000-0002-8253-641X">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>V.</GivenName>
+                           <GivenName>I.</GivenName>
+                           <FamilyName>Zhukova</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Author ID="Au454" ORCID="https://orcid.org/0000-0003-1644-8523">
+                        <AuthorName DisplayOrder="Western">
+                           <GivenName>R.</GivenName>
+                           <FamilyName>Žlebčík</FamilyName>
+                        </AuthorName>
+                     </Author>
+                     <Affiliation ID="Aff1">
+                        <URL>https://belle.kek.jp/</URL>
+                     </Affiliation>
+                     <Affiliation ID="Aff2">
+                        <URL>https://www.belle2.org/</URL>
+                     </Affiliation>
+                  </AuthorGroup>
+                  <Abstract ID="Abs1" Language="En" OutputMedium="All">
+                     <Heading>A<Emphasis Type="SmallCaps">bstract</Emphasis>
+                     </Heading>
+                     <Para ID="Par1">We report measurements of the absolute branching fractions <InlineEquation ID="IEq2">
+                           <EquationSource Format="TEX">$$\mathcal{B}\left({B}_{s}^{0}\to {D}_{s}^{\pm }X\right)$$</EquationSource>
+                        </InlineEquation>, <InlineEquation ID="IEq3">
+                           <EquationSource Format="TEX">$$\mathcal{B}\left({B}_{s}^{0}\to {D}^{0}/{\overline{D} }^{0}X\right)$$</EquationSource>
+                        </InlineEquation>, and <InlineEquation ID="IEq4">
+                           <EquationSource Format="TEX">$$\mathcal{B}\left({B}_{s}^{0}\to {D}^{\pm }X\right)$$</EquationSource>
+                        </InlineEquation>, where the latter is measured for the first time. The results are based on a 121.4 fb<Superscript>
+                           <Emphasis Type="Italic">−</Emphasis>1</Superscript> data sample collected at the Υ(10860) resonance by the Belle detector at the KEKB asymmetric-energy <Emphasis Type="Italic">e</Emphasis>
+                        <Superscript>+</Superscript>
+                        <Emphasis Type="Italic">e</Emphasis>
+                        <Superscript>
+                           <Emphasis Type="Italic">−</Emphasis>
+                        </Superscript> collider. We reconstruct one <InlineEquation ID="IEq5">
+                           <EquationSource Format="TEX">$${B}_{s}^{0}$$</EquationSource>
+                        </InlineEquation> meson in <InlineEquation ID="IEq6">
+                           <EquationSource Format="TEX">$${e}^{+}{e}^{-}\to \Upsilon\left(10860\right)\to {B}_{s}^{*}{\overline{B} }_{s}^{*}$$</EquationSource>
+                        </InlineEquation> events and measure yields of <InlineEquation ID="IEq7">
+                           <EquationSource Format="TEX">$${D}_{s}^{+}$$</EquationSource>
+                        </InlineEquation>, <Emphasis Type="Italic">D</Emphasis>
+                        <Superscript>0</Superscript>, and <Emphasis Type="Italic">D</Emphasis>
+                        <Superscript>+</Superscript> mesons in the rest of the event. We obtain <InlineEquation ID="IEq8">
+                           <EquationSource Format="TEX">$$\mathcal{B}\left({B}_{s}^{0}\to {D}_{s}^{\pm }X\right)=\left(68.6\pm 7.2\pm 4.0\right)\%$$</EquationSource>
+                        </InlineEquation>, <InlineEquation ID="IEq9">
+                           <EquationSource Format="TEX">$$\mathcal{B}\left({B}_{s}^{0}\to {D}^{0}/{\overline{D} }^{0}X\right)=\left(21.5\pm 6.1\pm 1.8\right)\%$$</EquationSource>
+                        </InlineEquation>, and <InlineEquation ID="IEq10">
+                           <EquationSource Format="TEX">$$\mathcal{B}\left({B}_{s}^{0}\to {D}^{\pm }X\right)=\left(12.6\pm 4.6\pm 1.3\right)\%$$</EquationSource>
+                        </InlineEquation>, where the first uncertainty is statistical and the second is systematic. Averaging with previous Belle measurements gives <InlineEquation ID="IEq11">
+                           <EquationSource Format="TEX">$$\mathcal{B}\left({B}_{s}^{0}\to {D}_{s}^{\pm }X\right)=\left(63.4\pm 4.5\pm 2.2\right)\%$$</EquationSource>
+                        </InlineEquation> and <InlineEquation ID="IEq12">
+                           <EquationSource Format="TEX">$$\mathcal{B}\left({B}_{s}^{0}\to {D}^{0}/{\overline{D} }^{0}X\right)=\left(23.9\pm 4.1\pm 1.8\right)\%$$</EquationSource>
+                        </InlineEquation>. For the <InlineEquation ID="IEq13">
+                           <EquationSource Format="TEX">$${B}_{s}^{0}$$</EquationSource>
+                        </InlineEquation> production fraction at the Υ(10860), we find <InlineEquation ID="IEq14">
+                           <EquationSource Format="TEX">$${f}_{s}=\left({21.4}_{-1.7}^{+1.5}\right)\%$$</EquationSource>
+                        </InlineEquation>.</Para>
+                  </Abstract>
+                  <KeywordGroup Language="En" OutputMedium="All" Source="Author">
+                     <Heading>K<Emphasis Type="SmallCaps">eywords</Emphasis>
+                     </Heading>
+                     <Keyword>B Physics</Keyword>
+                     <Keyword>
+                        <Emphasis Type="Italic">e</Emphasis>
+                        <Superscript>+</Superscript>-<Emphasis Type="Italic">e</Emphasis>
+                        <Superscript>
+                           <Emphasis Type="Italic">−</Emphasis>
+                        </Superscript> Experiments</Keyword>
+                  </KeywordGroup>
+                  <ArticleNote Type="Misc">
+                     <SimplePara>A<Emphasis Type="SmallCaps">r</Emphasis>X<Emphasis Type="SmallCaps">iv e</Emphasis>P<Emphasis Type="SmallCaps">rint</Emphasis>: <ExternalRef>
+                           <RefSource>2411.14032</RefSource>
+                           <RefTarget Address="https://arxiv.org/abs/2411.14032" TargetType="URL"/>
+                        </ExternalRef>
+                     </SimplePara>
+                  </ArticleNote>
+               </ArticleHeader>
+               <NoBody/><BodyRef TargetType="sissa.ft.xml" FileRef="http://stheno.sissa.it/scoap/JHEP042025114.ft.xml"/>
+            </Article>
+         </Issue>
+      </Volume>
+   </Journal>
+</Publisher>

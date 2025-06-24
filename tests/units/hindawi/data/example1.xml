@@ -1,0 +1,68 @@
+<ns0:record xmlns:ns0="http://www.openarchives.org/OAI/2.0/" xmlns:ns1="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ns0:header>
+		<ns0:identifier>oai:hindawi.com: 10.1155/2019/3465159</ns0:identifier>
+		<ns0:datestamp>2022-06-02T15: 17: 27Z</ns0:datestamp>
+		<ns0:setSpec>HINDAWI.AHEP: 2019</ns0:setSpec>
+	</ns0:header>
+	<ns0:metadata>
+		<ns1:record xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+			<ns0:datafield tag="024" ind1="7" ind2=" ">
+				<ns0:subfield code="a">10.1155/2019/3465159</ns0:subfield>
+				<ns0:subfield code="2">DOI</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="037" ind1=" " ind2=" ">
+				<ns0:subfield code="9">arXiv</ns0:subfield>
+				<ns0:subfield code="a">arXiv: 1901.02484</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="100" ind1=" " ind2=" ">
+				<ns0:subfield code="a">Entem, David R.</ns0:subfield>
+				<ns0:subfield code="u">Grupo de F&#237;sica Nuclear and Instituto Universitario de F&#237;sica Fundamental y Matem&#225;ticas (IUFFyM), Universidad de Salamanca, E-37008 Salamanca, Spain</ns0:subfield>
+				<ns0:subfield code="j">ORCID-0000-0003-2376-6255</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="245" ind1=" " ind2=" ">
+				<ns0:subfield code="a">Unquenching the <italic>Quark <b>Model</b></italic> in a Nonperturbative Scheme</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="260" ind1=" " ind2=" ">
+				<ns0:subfield code="b">Hindawi</ns0:subfield>
+				<ns0:subfield code="c">2019-05-02</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="300" ind1=" " ind2=" ">
+				<ns0:subfield code="a">7</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="520" ind1=" " ind2=" ">
+				<ns0:subfield code="a">In recent years, the discovery in quarkonium spectrum of several states not predicted by the naive quark model has awakened a lot of interest. A possible description of such states requires the enlargement of the quark model by introducing quark-antiquark pair creation or continuum coupling effects. The unquenching of the quark models is a way to take these new components into account. In the spirit of the Cornell Model, this is usually done by coupling perturbatively a quark-antiquark state with definite quantum numbers to the meson-meson channel with the closest threshold. In this work we present a method to coupled quark-antiquark states with meson-meson channels, taking into account effectively the nonperturbative coupling to all quark-antiquark states with the same quantum numbers. The method will be applied to the study of the X(3872) resonance and a comparison with the perturbative calculation will be performed.</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="540" ind1=" " ind2=" ">
+				<ns0:subfield code="a">CC-BY-3.0</ns0:subfield>
+				<ns0:subfield code="u">http://creativecommons.org/licenses/by/3.0/</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="542" ind1=" " ind2=" ">
+				<ns0:subfield code="f">Copyright &#169; 2019 Pablo G. Ortega et al.</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="700" ind1=" " ind2=" ">
+				<ns0:subfield code="a">Ortega, Pablo G.</ns0:subfield>
+				<ns0:subfield code="u">Grupo de F&#237;sica Nuclear and Instituto Universitario de F&#237;sica Fundamental y Matem&#225;ticas (IUFFyM), Universidad de Salamanca, E-37008 Salamanca, Spain</ns0:subfield>
+				<ns0:subfield code="j" />
+			</ns0:datafield>
+			<ns0:datafield tag="700" ind1=" " ind2=" ">
+				<ns0:subfield code="a">Fern&#225;ndez, Francisco</ns0:subfield>
+				<ns0:subfield code="u">Grupo de F&#237;sica Nuclear and Instituto Universitario de F&#237;sica Fundamental y Matem&#225;ticas (IUFFyM), Universidad de Salamanca, E-37008 Salamanca, Spain</ns0:subfield>
+				<ns0:subfield code="j" />
+			</ns0:datafield>
+			<ns0:datafield tag="773" ind1=" " ind2=" ">
+				<ns0:subfield code="p">Advances in High Energy Physics</ns0:subfield>
+				<ns0:subfield code="v">2019</ns0:subfield>
+				<ns0:subfield code="c">3465159</ns0:subfield>
+				<ns0:subfield code="y">2019</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="980" ind1=" " ind2=" ">
+				<ns0:subfield code="a">SCOAP3</ns0:subfield>
+				<ns0:subfield code="b">Hindawi</ns0:subfield>
+			</ns0:datafield>
+			<ns0:datafield tag="856" ind1="4" ind2="0">
+				<ns0:subfield code="u">https: //doi.org/10.1155/2019/3465159</ns0:subfield>
+				<ns0:subfield code="z">Full text URL</ns0:subfield>
+			</ns0:datafield>
+		</ns1:record>
+	</ns0:metadata>
+</ns0:record>

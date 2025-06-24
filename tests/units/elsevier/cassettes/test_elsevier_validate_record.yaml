@@ -1,0 +1,542 @@
+interactions:
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.31.0
+      method: GET
+      uri: http://repo.qa.scoap3.org/schemas/hep.json
+    response:
+      body:
+        string: ""
+      headers:
+        cache-control:
+          - no-cache
+        content-length:
+          - "0"
+        location:
+          - https://repo.qa.scoap3.org:443/schemas/hep.json
+      status:
+        code: 302
+        message: Found
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.31.0
+      method: GET
+      uri: https://repo.qa.scoap3.org/schemas/hep.json
+    response:
+      body:
+        string:
+          "{\n    \"description\": \"An article or thesis or book or...\",\n    \"title\":
+          \"Publication\",\n    \"$schema\": \"http://json-schema.org/schema#\",\n    \"type\":
+          \"object\",\n    \"additionalProperties\": false,\n    \"required\": [\n        \"$schema\",\n
+          \       \"abstracts\",\n        \"authors\",\n        \"copyright\",\n        \"dois\",\n
+          \       \"imprints\",\n        \"license\",\n        \"publication_info\",\n
+          \       \"titles\"\n    ],\n    \"properties\": {\n        \"self\": {\n          \"description\":
+          \"Url of the record itself\",\n          \"title\": \"Url of the record\",\n
+          \         \"$ref\": \"http://repo.scoap3.org/schemas/json_reference.json\"\n
+          \       },\n        \"$schema\": {\n            \"type\": \"string\",\n            \"format\":
+          \"uri\"\n        },\n        \"acquisition_source\": {\n            \"type\":
+          \"object\",\n            \"title\": \"Origin of the metadata in the record\",\n
+          \           \"properties\": {\n                \"date\": {\n                    \"type\":
+          \"string\",\n                    \"format\": \"date-time\",\n                    \"title\":
+          \"Date on which the metadata was obtained\"\n                },\n                \"method\":
+          {\n                    \"type\": \"string\",\n                    \"title\":
+          \"How the medata was obtained\"\n                },\n                \"source\":
+          {\n                    \"type\": \"string\",\n                    \"title\":
+          \"Source of the information in this field.\"\n                },\n                \"submission_number\":
+          {\n                    \"type\": \"string\"\n                }\n            }\n
+          \       },\n        \"collaborations\": {\n            \"items\": {\n                \"additionalProperties\":
+          false,\n                \"properties\": {\n                    \"value\":
+          {\n                        \"description\": \":MARC: ``710__g``\\n\\nCollaboration
+          name as it appears on the paper\",\n                        \"minLength\":
+          1,\n                        \"title\": \"Collaboration name\",\n                        \"type\":
+          \"string\"\n                    }\n                },\n                \"required\":
+          [\n                    \"value\"\n                ],\n                \"type\":
+          \"object\"\n            },\n            \"minItems\": 1,\n            \"required\":
+          [\n                \"value\"\n            ],\n            \"title\": \"List
+          of collaborations\",\n            \"type\": \"array\",\n            \"uniqueItems\":
+          true\n        },\n        \"control_number\": {\n            \"title\": \"ID
+          of record\",\n            \"type\": \"string\"\n        },\n        \"_oai\":
+          {\n            \"type\": \"object\",\n            \"properties\": {\n                \"id\":
+          {\n                    \"type\": \"string\"\n                }\n            }\n
+          \       },\n        \"record_creation_date\": {\n            \"type\": \"string\",\n
+          \           \"format\": \"date-time\"\n        },\n        \"_files\": {\n
+          \           \"title\": \"File schema\",\n            \"type\": \"array\",\n
+          \           \"properties\": {\n                \"key\": {\n                    \"minLength\":
+          1,\n                    \"type\": \"string\"\n                },\n                \"checksum\":
+          {\n                    \"minLength\": 1,\n                    \"type\": \"string\"\n
+          \               },\n                \"size\": {\n                    \"type\":
+          \"integer\"\n                },\n                \"bucket\": {\n                    \"minLength\":
+          1,\n                    \"type\": \"string\"\n                },\n                \"version_id\":
+          {\n                    \"minLength\": 1,\n                    \"type\": \"string\"\n
+          \               },\n                \"filetype\": {\n                    \"minLength\":
+          1,\n                    \"type\": \"string\"\n                }\n            }\n
+          \       },\n        \"abstracts\": {\n            \"uniqueItems\": true,\n
+          \           \"items\": {\n                \"type\": \"object\",\n                \"properties\":
+          {\n                    \"source\": {\n                        \"enum\": [\n
+          \                           \"arXiv\",\n                            \"AIP\",\n
+          \                           \"APS\",\n                            \"Annual
+          Reviews\",\n                            \"Astronomical Society of the Pacific\",\n
+          \                           \"Author\",\n                            \"Bulgarian
+          Academy of Sciences\",\n                            \"CERN\",\n                            \"CERN/SLAC\",\n
+          \                           \"Cambridge University Press\",\n                            \"Canadian
+          Center of Science and Education\",\n                            \"DESY\",\n
+          \                           \"DESY/SLAC\",\n                            \"EDP
+          Sciences\",\n                            \"ELSEVIER\",\n                            \"Education
+          and Upbringing\",\n                            \"Elsevier\",\n                            \"European
+          Astronomical Society\",\n                            \"HEPDATA\",\n                            \"HINDAWI\",\n
+          \                           \"Hindawi Publishing Corporation\",\n                            \"Hindawi\",\n
+          \                           \"IEEE\",\n                            \"INDICO\",\n
+          \                           \"INSPIRE\",\n                            \"IOP\",\n
+          \                           \"Institute of Physics Publishing/Chinese Academy
+          of Sciences\",\n                            \"Institute of Physics Publishing/Deutsche
+          Physikalische Gesellschaft\",\n                            \"Institute of
+          Physics Publishing/SISSA\",\n                            \"IOS Press\",\n
+          \                           \"IPAP\",\n                            \"Indian
+          National Science Academy\",\n                            \"International Press\",\n
+          \                           \"International Society for Optics and Photonics\",\n
+          \                           \"Internet Academy\",\n                            \"JACoW\",\n
+          \                           \"Jagiellonian University\",\n                            \"Kharkov
+          Institute of Physics and Technology\",\n                            \"MDPI\",\n
+          \                           \"MPI Grav. Phys., Potsdam\",\n                            \"NRC
+          Research Press\",\n                            \"National Academy of Sciences
+          of Armenia\",\n                            \"Niscair\",\n                            \"Oxford
+          Journals\",\n                            \"OUP\",\n                            \"Oxford
+          University Press\",\n                            \"Oxford University Press/Physical
+          Society of Japan\",\n                            \"Physical Society of Japan\",\n
+          \                           \"Polish Physical Society\",\n                            \"Publisher\",\n
+          \                           \"Royal Society\",\n                            \"SIGMA\",\n
+          \                           \"Springer\",\n                            \"Springer/SISSA\",\n
+          \                           \"Springer/SIF\",\n                            \"Springer/Societ\xC3
+          \ Italiana di Fisica\",\n                            \"Springer/Societ\xE0
+          Italiana di Fisica\",\n                            \"Springer/Societ\\\\xc3\\\\xa0
+          Italiana di Fisica\",\n                            \"Tomsk State Pedagogical
+          University\",\n                            \"T\\u00dcB\\u0130TAK\",\n                            \"WILEY\",\n
+          \                           \"WS\",\n                            \"WSP\",\n
+          \                           \"World Scientific\"\n                        ],\n
+          \                       \"type\": \"string\",\n                        \"description\":
+          \"FIXME: is there an enumerable list of sources?\"\n                    },\n
+          \                   \"value\": {\n                        \"type\": \"string\"\n
+          \                   }\n                }\n            },\n            \"type\":
+          \"array\"\n        },\n        \"imprints\": {\n            \"uniqueItems\":
+          true,\n            \"items\": {\n                \"type\": \"object\",\n                \"properties\":
+          {\n                    \"date\": {\n                        \"type\": \"string\",\n
+          \                       \"format\": \"date\"\n                    },\n                    \"publisher\":
+          {\n                        \"type\": \"string\"\n                    },\n
+          \                   \"place\": {\n                        \"type\": \"string\"\n
+          \                   }\n                }\n            },\n            \"type\":
+          \"array\"\n        },\n        \"titles\": {\n            \"$ref\": \"http://repo.scoap3.org/schemas/elements/titles.json\"\n
+          \       },\n        \"publication_info\": {\n            \"uniqueItems\":
+          true,\n            \"required\": [\n                \"journal_title\",\n                \"year\"\n
+          \           ],\n            \"items\": {\n                \"type\": \"object\",\n
+          \               \"properties\": {\n                    \"journal_title\":
+          {\n                        \"type\": \"string\"\n                    },\n
+          \                   \"pubinfo_freetext\": {\n                        \"type\":
+          \"string\"\n                    },\n                    \"journal_volume\":
+          {\n                        \"type\": \"string\"\n                    },\n
+          \                   \"cnum\": {\n                        \"type\": \"array\"\n
+          \                   },\n                    \"note\": {\n                        \"type\":
+          \"string\"\n                    },\n                    \"parent_record\":
+          {\n                        \"$ref\": \"http://repo.scoap3.org/schemas/json_reference.json\",\n
+          \                       \"description\": \"URI for the parent this record
+          is part of\"\n                    },\n                    \"journal_record\":
+          {\n                        \"$ref\": \"http://repo.scoap3.org/schemas/json_reference.json\",\n
+          \                       \"description\": \"URI for corresponding Journal\"\n
+          \                   },\n                    \"conference_record\": {\n                        \"$ref\":
+          \"http://repo.scoap3.org/schemas/json_reference.json\",\n                        \"description\":
+          \"URI for corresponding Conference\"\n                    },\n                    \"reportnumber\":
+          {\n                        \"type\": \"string\"\n                    },\n
+          \                   \"year\": {\n                        \"minimum\": 1000,\n
+          \                       \"type\": \"integer\",\n                        \"maximum\":
+          2050\n                    },\n                    \"curated_relation\": {\n
+          \                       \"type\": \"boolean\"\n                    },\n                    \"journal_issue\":
+          {\n                        \"type\": \"string\"\n                    },\n
+          \                   \"page_artid\": {\n                        \"type\": \"string\",\n
+          \                       \"description\": \"FIXME: for ejournals this could
+          be the page index, but there is no realiable way to know whether something
+          is a page index or a first page, does it?\"\n                    },\n                    \"conf_acronym\":
+          {\n                        \"type\": \"string\"\n                    },\n
+          \                   \"confpaper_info\": {\n                        \"type\":
+          \"string\"\n                    },\n                    \"isbn\": {\n                        \"type\":
+          \"string\"\n                    },\n                    \"material\": {\n
+          \                       \"type\": \"string\"\n                    }\n                }\n
+          \           },\n            \"type\": \"array\"\n        },\n        \"references\":
+          {\n            \"uniqueItems\": true,\n            \"items\": {\n                \"type\":
+          \"object\",\n                \"properties\": {\n                    \"publisher\":
+          {\n                        \"type\": \"array\"\n                    },\n                    \"doi\":
+          {\n                        \"pattern\": \"(10\\\\.\\\\d+(\\\\.\\\\d+)?/.+)|(\\\\w+\\\\:\\\\d+\\\\/\\\\d+)\",\n
+          \                       \"type\": \"string\"\n                    },\n                    \"isbn\":
+          {\n                        \"type\": \"string\",\n                        \"format\":
+          \"isbn\"\n                    },\n                    \"texkey\": {\n                        \"type\":
+          \"string\"\n                    },\n                    \"report_number\":
+          {\n                        \"type\": \"array\"\n                    },\n                    \"url\":
+          {\n                        \"type\": \"array\",\n                        \"format\":
+          \"url\"\n                    },\n                    \"collaboration\": {\n
+          \                       \"type\": \"array\"\n                    },\n                    \"title\":
+          {\n                        \"type\": \"array\"\n                    },\n                    \"misc\":
+          {\n                        \"type\": \"array\"\n                    },\n                    \"editors\":
+          {\n                        \"type\": \"array\",\n                        \"items\":
+          {\n                            \"type\": \"string\"\n                        }\n
+          \                   },\n                    \"number\": {\n                        \"type\":
+          \"integer\"\n                    },\n                    \"curated_relation\":
+          {\n                        \"type\": \"boolean\"\n                    },\n
+          \                   \"maintitle\": {\n                        \"type\": \"string\"\n
+          \                   },\n                    \"raw_reference\": {\n                        \"type\":
+          \"array\"\n                    },\n                    \"year\": {\n                        \"type\":
+          \"integer\"\n                    },\n                    \"authors\": {\n
+          \                       \"type\": \"array\"\n                    },\n                    \"journal_pubnote\":
+          {\n                        \"pattern\": \".*,.*,.*\",\n                        \"type\":
+          \"array\"\n                    },\n                    \"record\": {\n                        \"$ref\":
+          \"http://repo.scoap3.org/schemas/json_reference.json\"\n                    }\n
+          \               }\n            },\n            \"type\": \"array\"\n        },\n
+          \       \"copyright\": {\n            \"items\": {\n                \"type\":
+          \"object\",\n                \"properties\": {\n                    \"url\":
+          {\n                        \"type\": \"string\",\n                        \"format\":
+          \"url\"\n                    },\n                    \"material\": {\n                        \"type\":
+          \"string\"\n                    },\n                    \"holder\": {\n                        \"type\":
+          \"string\",\n                        \"description\": \"Copyright holder.\"\n
+          \                   },\n                    \"statement\": {\n                        \"type\":
+          \"string\",\n                        \"description\": \"Copyright statement.\"\n
+          \                   }\n                }\n            },\n            \"type\":
+          \"array\"\n        },\n        \"field_categories\": {\n            \"$ref\":
+          \"http://repo.scoap3.org/schemas/elements/fields.json\"\n        },\n        \"accelerator_experiments\":
+          {\n            \"uniqueItems\": true,\n            \"items\": {\n                \"type\":
+          \"object\",\n                \"properties\": {\n                    \"curated_relation\":
+          {\n                        \"default\": false,\n                        \"type\":
+          \"boolean\",\n                        \"description\": \"Was the experiment
+          actually proofchecked by a cataloguer?\"\n                    },\n                    \"experiment\":
+          {\n                        \"type\": \"string\"\n                    },\n
+          \                   \"facets_experiment\": {\n                        \"type\":
+          \"string\",\n                        \"description\": \"Experiment name to
+          be used on facets.\"\n                    },\n                    \"accelerator\":
+          {\n                        \"type\": \"string\"\n                    },\n
+          \                   \"institution\": {\n                        \"type\":
+          \"string\"\n                    },\n                    \"record\": {\n                        \"description\":
+          \"URI for the corresponding experiment record.\",\n                        \"$ref\":
+          \"http://repo.scoap3.org/schemas/json_reference.json\"\n                    }\n
+          \               }\n            },\n            \"type\": \"array\"\n        },\n
+          \       \"arxiv_eprints\": {\n            \"uniqueItems\": true,\n            \"items\":
+          {\n                \"properties\": {\n                    \"value\": {\n                        \"type\":
+          \"string\",\n                        \"pattern\": \"\\\\d{4}.\\\\d{4,5}|\\\\w+-\\\\w+/\\\\d+|\\\\w+/\\\\d+\"\n
+          \                   },\n                    \"categories\": {\n                        \"items\":
+          {\n                            \"type\": \"string\"\n                        },\n
+          \                       \"type\": \"array\"\n                    }\n                }\n
+          \           },\n            \"type\": \"array\"\n        },\n        \"title_variations\":
+          {\n            \"$ref\": \"http://repo.scoap3.org/schemas/elements/titles.json\"\n
+          \       },\n        \"free_keywords\": {\n            \"uniqueItems\": true,\n
+          \           \"items\": {\n                \"type\": \"object\",\n                \"properties\":
+          {\n                    \"source\": {\n                        \"type\": \"string\"\n
+          \                   },\n                    \"value\": {\n                        \"type\":
+          \"string\"\n                    }\n                }\n            },\n            \"type\":
+          \"array\"\n        },\n        \"refextract\": {\n            \"items\": {\n
+          \               \"type\": \"object\",\n                \"properties\": {\n
+          \                   \"comment\": {\n                        \"type\": \"string\"\n
+          \                   },\n                    \"time\": {\n                        \"type\":
+          \"string\"\n                    },\n                    \"version\": {\n                        \"type\":
+          \"array\"\n                    },\n                    \"source\": {\n                        \"type\":
+          \"string\"\n                    }\n                }\n            },\n            \"description\":
+          \"Technical information from a refextract run\",\n            \"type\": \"array\"\n
+          \       },\n        \"oai_pmh\": {\n            \"items\": {\n                \"type\":
+          \"object\",\n                \"properties\": {\n                    \"id\":
+          {\n                        \"type\": \"string\"\n                    },\n
+          \                   \"previous_set\": {\n                        \"type\":
+          \"string\"\n                    }\n                },\n                \"description\":
+          \"Local OAI-PMH information\"\n            },\n            \"type\": \"array\"\n
+          \       },\n        \"succeeding_entry\": {\n            \"items\": {\n            \"type\":
+          \"object\",\n                \"properties\": {\n                    \"relationship_code\":
+          {\n                        \"type\": \"string\"\n                    },\n
+          \                   \"isbn\": {\n                        \"type\": \"string\"\n
+          \                   },\n                    \"record\": {\n                        \"$ref\":
+          \"http://repo.scoap3.org/schemas/json_reference.json\"\n                    }\n
+          \               },\n                \"description\": \"Reference to previously
+          merged records.\"\n            }\n        },\n        \"collaboration\": {\n
+          \           \"uniqueItems\": true,\n            \"items\": {\n                \"type\":
+          \"object\",\n                \"properties\": {\n                    \"value\":
+          {\n                        \"type\": \"string\"\n                    },\n
+          \                   \"record\": {\n                        \"$ref\": \"http://repo.scoap3.org/schemas/json_reference.json\"\n
+          \                   }\n                }\n            },\n            \"type\":
+          \"array\"\n        },\n        \"authors\": {\n            \"uniqueItems\":
+          false,\n            \"items\": {\n                \"type\": \"object\",\n
+          \               \"properties\": {\n                    \"other_ids\": {\n
+          \                       \"items\": {\n                            \"type\":
+          \"object\",\n                            \"properties\": {\n                                \"source\":
+          {\n                                    \"type\": \"string\",\n                                    \"title\":
+          \"Source of ID\"\n                                },\n                                \"value\":
+          {\n                                    \"type\": \"string\",\n                                    \"title\":
+          \"ID\"\n                                }\n                            },\n
+          \                           \"title\": \"ID\"\n                        },\n
+          \                       \"type\": \"array\",\n                        \"description\":
+          \"Just in case...\",\n                        \"title\": \"Other IDs\"\n                    },\n
+          \                   \"uuid\": {\n                        \"title\": \"UUID\",\n
+          \                       \"description\": \"Universally unique identifier of
+          the author.\",\n                        \"type\": \"string\",\n                        \"pattern\":
+          \"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\"\n                    },\n
+          \                   \"full_name\": {\n                        \"title\": \"Author
+          name\",\n                        \"type\": \"string\",\n                        \"description\":
+          \"author name as it appears in the paper\",\n                        \"format\":
+          \".+, .+\"\n                    },\n                    \"alternative_name\":
+          {\n                        \"title\": \"Alternative author name\",\n                        \"type\":
+          \"string\",\n                        \"description\": \"FIXME: needed for
+          import only\",\n                        \"format\": \".+, .+\"\n                    },\n
+          \                   \"name_variations\": {\n                        \"title\":
+          \"Author name variations\",\n                        \"type\": \"string\",\n
+          \                       \"description\": \"All possible variations of the
+          authors full name.\"\n                    },\n                    \"affiliations\":
+          {\n                        \"uniqueItems\": true,\n                        \"items\":
+          {\n                            \"type\": \"object\",\n                            \"properties\":
+          {\n                                \"curated_relation\": {\n                                    \"type\":
+          \"boolean\",\n                                    \"description\": \"Did a
+          cataloguer proof-checked the recid?\",\n                                    \"title\":
+          \"The affiliation is curated?\"\n                                },\n                                \"value\":
+          {\n                                    \"type\": \"string\",\n                                    \"description\":
+          \"The affiliation as it appears on the paper\",\n                                    \"title\":
+          \"Name of institution\"\n                                },\n                                \"country\":
+          {\n                                    \"type\": \"string\",\n                                    \"description\":
+          \"Te country of affiliation\",\n                                    \"title\":
+          \"Country\"\n                                },\n                                \"record\":
+          {\n                                    \"description\": \"URI for the Institution
+          collection record\",\n                                    \"title\": \"URI
+          for the Institution collection record\",\n                                    \"$ref\":
+          \"http://repo.scoap3.org/schemas/json_reference.json\"\n                                }\n
+          \                           },\n                            \"title\": \"Affiliation\"\n
+          \                       },\n                        \"type\": \"array\",\n
+          \                       \"title\": \"Affiliations\"\n                    },\n
+          \                   \"inspire_id\": {\n                        \"pattern\":
+          \"INSPIRE-\\\\d+\",\n                        \"type\": \"string\",\n                        \"description\":
+          \"Legacy INSPIRE ID when available\",\n                        \"title\":
+          \"INSPIRE ID\"\n                    },\n                    \"inspire_bai\":
+          {\n                        \"pattern\": \"(\\\\w+\\\\.)+\\\\d+\",\n                        \"type\":
+          \"string\",\n                        \"description\": \"INSPIRE BAI when available\",\n
+          \                       \"title\": \"INSPIRE BibAuthorID\"\n                    },\n
+          \                   \"curated_relation\": {\n                        \"default\":
+          false,\n                        \"type\": \"boolean\",\n                        \"description\":
+          \"Was this signature actually claimed or proof-checked by cataloguer?\",\n
+          \                       \"title\": \"The relation is curated?\"\n                    },\n
+          \                   \"orcid\": {\n                        \"pattern\": \"\\\\d{4}-\\\\d{4}-\\\\d{4}-\\\\d{3}[\\\\dX]\",\n
+          \                       \"title\": \"ORCID ID\",\n                        \"type\":
+          \"string\",\n                        \"description\": \"ORCID Id when available\",\n
+          \                       \"format\": \"orcid\"\n                    },\n                    \"role\":
+          {\n                        \"enum\": [\n                            \"\",\n
+          \                           \"ed.\",\n                            \"Technical
+          Associate\"\n                        ],\n                        \"type\":
+          \"string\",\n                        \"description\": \"Role of the author
+          within the paper. So far only Editor was captured.\",\n                        \"title\":
+          \"Role of the person\"\n                    },\n                    \"email\":
+          {\n                        \"title\": \"Email\",\n                        \"type\":
+          \"string\",\n                        \"format\": \"email\"\n                    },\n
+          \                   \"signature_block\": {\n                        \"title\":
+          \"Phonetic name\",\n                        \"description\": \"Phonetic notation
+          of the author's name.\",\n                        \"type\": \"string\"\n                    },\n
+          \                   \"record\": {\n                        \"description\":
+          \"URI for the person record\",\n                        \"title\": \"URI for
+          the person record\",\n                        \"$ref\": \"http://repo.scoap3.org/schemas/json_reference.json\"\n
+          \                   }\n                },\n                \"title\": \"Author\"\n
+          \           },\n            \"type\": \"array\",\n            \"description\":
+          \"List with all the authors\",\n            \"title\": \"Authors\"\n        },\n
+          \       \"classification_number\": {\n            \"uniqueItems\": true,\n
+          \           \"items\": {\n                \"type\": \"object\",\n                \"properties\":
+          {\n                    \"value\": {\n                        \"type\": \"string\",\n
+          \                       \"description\": \"PACS or PDG codes. FIXME: What
+          about better separating these into a PACS field and a PDG field?\",\n                        \"title\":
+          \"Number\"\n                    },\n                    \"standard\": {\n
+          \                       \"enum\": [\n                            \"PACS\",\n
+          \                           \"PDG\"\n                        ],\n                        \"type\":
+          \"string\",\n                        \"title\": \"Standard\"\n                    },\n
+          \                   \"source\": {\n                        \"type\": \"string\",\n
+          \                       \"title\": \"Source\"\n                    }\n                },\n
+          \               \"title\": \"Classification number\"\n            },\n            \"type\":
+          \"array\",\n            \"title\": \"Classification numbers\"\n        },\n
+          \       \"dois\": {\n            \"uniqueItems\": true,\n            \"items\":
+          {\n                \"type\": \"object\",\n                \"required\": [\"value\"],\n
+          \               \"properties\": {\n                    \"source\": {\n                        \"type\":
+          [\"string\",\"null\"],\n                        \"description\": \"Issuing
+          of DOI. FIXME: should we have an enum\",\n                        \"title\":
+          \"DOI registrant\"\n                    },\n                    \"value\":
+          {\n                        \"pattern\": \"10\\\\.\\\\d+(\\\\.\\\\d+)?/.+\",\n
+          \                       \"type\": \"string\",\n                        \"title\":
+          \"DOI\"\n                    }\n                },\n                \"title\":
+          \"DOI\"\n            },\n            \"type\": \"array\",\n            \"title\":
+          \"DOIs\"\n        },\n        \"document_type\": {\n            \"minItems\":
+          1,\n            \"items\": {\n                \"enum\": [\n                    \"Published\",\n
+          \                   \"arXiv\",\n                    \"ConferencePaper\",\n
+          \                   \"Thesis\",\n                    \"Review\",\n                    \"Lectures\",\n
+          \                   \"Note\",\n                    \"Proceedings\",\n                    \"Introductory\",\n
+          \                   \"Book\",\n                    \"BookChapter\",\n                    \"Report\"\n
+          \               ],\n                \"type\": \"string\"\n            },\n
+          \           \"uniqueItems\": true,\n            \"type\": \"array\",\n            \"title\":
+          \"Document type\"\n        },\n        \"collections\": {\n            \"minItems\":
+          1,\n            \"items\": {\n                \"type\": \"object\",\n                \"properties\":
+          {\n                    \"primary\": {\n                        \"type\": \"string\"\n
+          \                   }\n                }\n            },\n            \"uniqueItems\":
+          true,\n            \"type\": \"array\",\n            \"title\": \"Collection\"\n
+          \       },\n        \"deleted_records\": {\n            \"type\": \"array\",\n
+          \           \"items\": {\n                \"$ref\": \"http://repo.scoap3.org/schemas/json_reference.json\"\n
+          \           },\n            \"description\": \"List of deleted records referring
+          to this record\",\n            \"title\": \"Deleted Records\"\n        },\n
+          \       \"new_record\": {\n            \"$ref\": \"http://repo.scoap3.org/schemas/json_reference.json\",\n
+          \           \"description\": \"Master record that replaces this record\",\n
+          \           \"title\": \"New record\"\n        },\n        \"license\": {\n
+          \           \"uniqueItems\": true,\n            \"items\": {\n                \"type\":
+          \"object\",\n                \"properties\": {\n                    \"imposing\":
+          {\n                        \"type\": \"string\",\n                        \"description\":
+          \"FIXME: what is this!?\",\n                        \"title\": \"Imposing\"\n
+          \                   },\n                    \"url\": {\n                        \"title\":
+          \"URL of the license\",\n                        \"type\": \"string\",\n                        \"format\":
+          \"url\"\n                    },\n                    \"material\": {\n                        \"type\":
+          \"string\",\n                        \"title\": \"Material referred by the
+          license\"\n                    },\n                    \"license\": {\n                        \"type\":
+          \"string\",\n                        \"title\": \"License name\"\n                    }\n
+          \               },\n                \"title\": \"License\"\n            },\n
+          \           \"type\": \"array\",\n            \"title\": \"License information\"\n
+          \       },\n        \"languages\": {\n            \"type\": \"array\",\n            \"items\":
+          {\n                \"type\": \"string\",\n                \"description\":
+          \"FIXME: we shall provide the ISO enum\",\n                \"title\": \"Language\"\n
+          \           }\n        },\n        \"page_nr\": {\n            \"type\": \"array\",\n
+          \           \"items\": {\n                \"type\": \"integer\",\n                \"title\":
+          \"Number of pages\"\n            }\n        },\n        \"urls\": {\n            \"$ref\":
+          \"http://repo.scoap3.org/schemas/elements/urls.json\"\n        },\n        \"title_translations\":
+          {\n            \"$ref\": \"http://repo.scoap3.org/schemas/elements/titles.json\"\n
+          \       },\n        \"corporate_author\": {\n            \"uniqueItems\":
+          true,\n            \"items\": {\n                \"type\": \"string\",\n                \"title\":
+          \"Corporate author\"\n            },\n            \"type\": \"array\",\n            \"title\":
+          \"Corporate authors\"\n        },\n        \"external_system_numbers\": {\n
+          \           \"uniqueItems\": true,\n            \"items\": {\n                \"type\":
+          \"object\",\n                \"properties\": {\n                    \"institute\":
+          {\n                        \"type\": \"string\",\n                        \"title\":
+          \"Institute\"\n                    },\n                    \"obsolete\": {\n
+          \                       \"type\": \"boolean\",\n                        \"title\":
+          \"Obsolete?\"\n                    },\n                    \"value\": {\n
+          \                       \"type\": \"string\",\n                        \"title\":
+          \"Number\"\n                    }\n                },\n                \"title\":
+          \"External system number\"\n            },\n            \"type\": \"array\",\n
+          \           \"title\": \"External system numbers\"\n        },\n        \"persistent_identifiers\":
+          {\n            \"uniqueItems\": true,\n            \"items\": {\n                \"type\":
+          \"object\",\n                \"properties\": {\n                    \"source\":
+          {\n                        \"type\": \"string\",\n                        \"description\":
+          \"Provenance of the persistent identifier\"\n                    },\n                    \"type\":
+          {\n                        \"type\": \"string\",\n                        \"title\":
+          \"Type of persistent identifier\"\n                    },\n                    \"value\":
+          {\n                        \"type\": \"string\",\n                        \"title\":
+          \"Value of the persistent identifier\"\n                    }\n                },\n
+          \               \"title\": \"Persistent Identifier\"\n            },\n            \"type\":
+          \"array\",\n            \"title\": \"Persistent Identifiers\"\n        }\n
+          \   }\n}\n"
+      headers:
+        accept-ranges:
+          - bytes
+        cache-control:
+          - public, max-age=43200
+        content-length:
+          - "31231"
+        content-type:
+          - application/json
+        date:
+          - Tue, 07 Nov 2023 08:46:32 GMT
+        etag:
+          - '"1689603451.0-31231-3384283821"'
+        expires:
+          - Tue, 07 Nov 2023 20:46:32 GMT
+        last-modified:
+          - Mon, 17 Jul 2023 14:17:31 GMT
+        server:
+          - gunicorn/19.6.0
+        set-cookie:
+          - session=1e3084177167145b_6549f968.NsHfocebJgPUrVrq1X7GdmXWtxw; Domain=.repo.qa.scoap3.org;
+            Expires=Fri, 08-Dec-2023 08:46:32 GMT; HttpOnly; Path=/
+        x-proxy-backend:
+          - scoap3-qa_scoap3-web_http
+      status:
+        code: 200
+        message: OK
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.31.0
+      method: GET
+      uri: http://repo.scoap3.org/schemas/elements/titles.json
+    response:
+      body:
+        string: ""
+      headers:
+        cache-control:
+          - no-cache
+        content-length:
+          - "0"
+        location:
+          - https://repo.scoap3.org:443/schemas/elements/titles.json
+      status:
+        code: 302
+        message: Found
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.31.0
+      method: GET
+      uri: https://repo.scoap3.org/schemas/elements/titles.json
+    response:
+      body:
+        string:
+          "{\n    \"$schema\": \"http://json-schema.org/schema#\",\n    \"uniqueItems\":
+          true,\n    \"items\": {\n        \"type\": \"object\",\n        \"required\":
+          [\"title\"],\n        \"properties\": {\n            \"source\": {\n                \"type\":
+          [\"string\",\"null\"]\n            },\n            \"subtitle\": {\n                \"type\":
+          [\"string\",\"null\"]\n            },\n            \"title\": {\n                \"type\":
+          \"string\"\n            }\n        },\n        \"title\": \"Title (and subtitle)\"\n
+          \   },\n    \"type\": \"array\"\n}\n"
+      headers:
+        accept-ranges:
+          - bytes
+        cache-control:
+          - public, max-age=43200
+        content-length:
+          - "486"
+        content-type:
+          - application/json
+        date:
+          - Tue, 07 Nov 2023 08:46:32 GMT
+        etag:
+          - '"1689598543.0-486-3404142481"'
+        expires:
+          - Tue, 07 Nov 2023 20:46:32 GMT
+        last-modified:
+          - Mon, 17 Jul 2023 12:55:43 GMT
+        server:
+          - gunicorn/19.6.0
+        set-cookie:
+          - session=49b39f243a2583bd_6549f968.JSAbIjtqh4XPf0EkjY7YeGBRiV8; Domain=.repo.scoap3.org;
+            Expires=Fri, 08-Dec-2023 08:46:32 GMT; HttpOnly; Path=/
+        x-proxy-backend:
+          - scoap3-prod_scoap3-web_http
+      status:
+        code: 200
+        message: OK
+version: 1

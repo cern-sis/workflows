@@ -1,0 +1,115 @@
+{
+  "data": [
+    {
+      "abstract": {
+        "value": "<p>Recently a novel perturbative continuum limit for quantum gravity has been proposed and demonstrated to work at first order. Every interaction monomial <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mi>σ</mi></math> is dressed with a coefficient function <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><msubsup><mi>f</mi><mi mathvariant=\"normal\">Λ</mi><mi>σ</mi></msubsup><mo stretchy=\"false\">(</mo><mi>φ</mi><mo stretchy=\"false\">)</mo></math> of the conformal factor field, <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mi>φ</mi></math>. Each coefficient function is parametrized by an infinite number of underlying couplings, and decays at large <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mi>φ</mi></math> with a characteristic amplitude suppression scale which can be chosen to be at a common value, <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><msub><mi mathvariant=\"normal\">Λ</mi><mi mathvariant=\"normal\">p</mi></msub></math>. Although the theory is perturbative in couplings it is nonperturbative in <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mi>ℏ</mi></math>. At second order in perturbation theory, one must sum over all melonic Feynman diagrams to obtain the particular integral. We show that it leads to a well-defined renormalized trajectory and thus continuum limit, provided it is solved by starting at an arbitrary cutoff scale <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mi mathvariant=\"normal\">Λ</mi><mo>=</mo><mi>μ</mi></math> which lies in the range <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mn>0</mn><mo>&lt;</mo><mi>μ</mi><mo>&lt;</mo><mi>a</mi><msub><mi mathvariant=\"normal\">Λ</mi><mi mathvariant=\"normal\">p</mi></msub></math> (<math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mi>a</mi></math> some nonuniversal number). If <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><mi>μ</mi></math> lies above this range the resulting coefficient functions become singular, and the flow ceases to exist, before the physical limit is reached. To this one must add a well-behaved complementary solution, containing irrelevant couplings determined uniquely by the first-order interactions, and renormalized relevant couplings. Even though some irrelevant couplings diverge in the limit <math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"><msub><mi mathvariant=\"normal\">Λ</mi><mi mathvariant=\"normal\">p</mi></msub><mo stretchy=\"false\">→</mo><mi>∞</mi></math>, domains for the underlying relevant couplings can be chosen such that diffeomorphism invariance will be recovered in this limit, and where the underlying couplings disappear to be replaced by effective diffeomorphism invariant couplings.</p>",
+        "format": "html"
+      },
+      "articleType": "article",
+      "authors": [
+        {
+          "type": "Person",
+          "name": "Tim R. Morris",
+          "firstname": "Tim R.",
+          "surname": "Morris",
+          "affiliationIds": ["a1"]
+        }
+      ],
+      "affiliations": [
+        {
+          "name": "STAG Research Centre & Department of Physics and Astronomy, University of Southampton, Highfield, Southampton SO17 1BJ, United Kingdom",
+          "id": "a1"
+        }
+      ],
+      "notes": [
+        {
+          "format": "html",
+          "value": "<p>T.R.Morris@soton.ac.uk</p>",
+          "label": "*",
+          "id": "n1",
+          "type": "contrib"
+        }
+      ],
+      "date": "2021-04-12",
+      "fundings": [
+        {
+          "funderId": "http://dx.doi.org/10.13039/501100000271",
+          "funderName": "Science and Technology Facilities Council",
+          "awards": ["ST/P000711/1"]
+        }
+      ],
+      "type": "article",
+      "metadata_last_modified_at": "2021-04-12T14:07:52+0000",
+      "last_modified_at": "2021-04-12T14:07:52+0000",
+      "id": "10.1103/PhysRevD.103.086007",
+      "identifiers": {
+        "doi": "10.1103/PhysRevD.103.086007",
+        "arxiv": "arXiv:2006.05185"
+      },
+      "issue": {
+        "number": "8"
+      },
+      "pageStart": "086007",
+      "hasArticleId": true,
+      "numPages": 35,
+      "classificationSchemes": {
+        "physh": {
+          "concepts": [
+            {
+              "id": "6d5b9a32-cad0-4d9f-a837-b0f239f5cdc6",
+              "facet": {
+                "id": "bdb1ef91-b776-4e36-8f8f-3e93666bac1e"
+              },
+              "primary": true
+            },
+            {
+              "id": "c7e6d548-0586-4dee-93e0-0a26c19baa8c",
+              "facet": {
+                "id": "bdb1ef91-b776-4e36-8f8f-3e93666bac1e"
+              },
+              "primary": false
+            },
+            {
+              "id": "50ba3f74-7f31-4857-8a75-b2b007348981",
+              "facet": {
+                "id": "bdb1ef91-b776-4e36-8f8f-3e93666bac1e"
+              },
+              "primary": false
+            }
+          ],
+          "disciplines": ["9f5c878e-b7b7-4030-bdb9-21a24ad97422"]
+        }
+      },
+      "publisher": {
+        "name": "APS"
+      },
+      "rights": {
+        "rightsStatement": "Published by the American Physical Society",
+        "copyrightYear": 2021,
+        "copyrightHolders": [],
+        "creativeCommons": true,
+        "licenses": [
+          {
+            "url": "https://creativecommons.org/licenses/by/4.0/",
+            "licenseStatement": "Published by the American Physical Society under the terms of the <a href=\"https://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution 4.0 International</a> license. Further distribution of this work must maintain attribution to the author(s) and the published article’s title, journal citation, and DOI. Funded by SCOAP<sup>3</sup>."
+          }
+        ]
+      },
+      "journal": {
+        "id": "PRD",
+        "abbreviatedName": "Phys. Rev. D",
+        "name": "Physical Review D"
+      },
+      "title": {
+        "value": "Continuum limit of the conformal sector at second order in perturbation theory",
+        "format": "html"
+      },
+      "tocSection": {
+        "label": "String theory, quantum gravity, gauge/gravity duality"
+      },
+      "volume": {
+        "number": "103"
+      }
+    }
+  ]
+}

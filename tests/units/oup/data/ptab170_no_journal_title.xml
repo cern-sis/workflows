@@ -1,0 +1,1469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article article-type="letter" xml:lang="en"
+    xmlns="http://specifications.silverchair.com/xsd/1/24/SCJATS-journalpublishing.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://specifications.silverchair.com/xsd/1/24/SCJATS-journalpublishing.xsd 1/24/SCJATS-journalpublishing.xsd"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML">
+    <front>
+        <journal-meta>
+            <journal-id journal-id-type="publisher-id">ptep</journal-id>
+            <journal-title-group>
+                <abbrev-journal-title abbrev-type="pubmed">Prog. Theor. Exp. Phys.</abbrev-journal-title>
+                <abbrev-journal-title abbrev-type="publisher">PTEPHY</abbrev-journal-title>
+            </journal-title-group>
+            <issn pub-type="epub">2050-3911</issn>
+            <publisher>
+                <publisher-name>Oxford University Press</publisher-name>
+            </publisher>
+        </journal-meta>
+        <article-meta>
+            <article-id pub-id-type="doi">10.1093/ptep/ptab170</article-id>
+            <article-id pub-id-type="publisher-id">ptab170</article-id>
+            <article-id pub-id-type="arxiv">arXiv:2111.09468</article-id>
+            <article-categories>
+                <subj-group subj-group-type="category-toc-heading">
+                    <subject>Letter</subject>
+                    <subj-group subj-group-type="category-toc-heading">
+                        <subject>Theoretical Particle Physics</subject>
+                    </subj-group>
+                </subj-group>
+                <subj-group subj-group-type="category-taxonomy-collection">
+                    <subject>AcademicSubjects/SCI01970</subject>
+                </subj-group>
+                <subj-group subj-group-type="category-taxonomy-collection">
+                    <subject>PTEP/B40</subject>
+                    <subject>PTEP/B71</subject>
+                </subj-group>
+            </article-categories>
+            <title-group>
+                <article-title>Detectable electric current induced by the dark matter axion in a
+                    conductor</article-title>
+            </title-group>
+            <contrib-group>
+                <contrib contrib-type="author" corresp="yes">
+                    <name>
+                        <surname>Iwazaki</surname>
+                        <given-names>Aiichi</given-names>
+                    </name>
+                    <email xlink:type="simple">a_iwazaki@hotmail.com</email>
+                    <aff><institution>International Economics and Politics, Nishogakusha University</institution>,
+                        6-16 3-bantyo, Chiyoda, Tokyo 102-8336, <country country="JP">Japan</country></aff>
+                    <xref ref-type="corresp" rid="cor1" />
+                </contrib>
+            </contrib-group>
+            <author-notes>
+                <corresp id="cor1">E-mail: <email xlink:type="simple">a_iwazaki@hotmail.com</email></corresp>
+            </author-notes>
+            <pub-date pub-type="cover">
+                <month>02</month>
+                <year>2022</year>
+            </pub-date>
+            <pub-date pub-type="collection" iso-8601-date="2022-02-25">
+                <day>25</day>
+                <month>02</month>
+                <year>2022</year>
+            </pub-date>
+            <pub-date pub-type="epub" iso-8601-date="2022-01-12">
+                <day>12</day>
+                <month>01</month>
+                <year>2022</year>
+            </pub-date>
+            <volume>2022</volume>
+            <issue>2</issue>
+            <elocation-id>021B01</elocation-id>
+            <history>
+                <date date-type="received">
+                    <day>22</day>
+                    <month>11</month>
+                    <year>2021</year>
+                </date>
+                <date date-type="rev-recd">
+                    <day>12</day>
+                    <month>12</month>
+                    <year>2021</year>
+                </date>
+                <date date-type="accepted">
+                    <day>10</day>
+                    <month>01</month>
+                    <year>2022</year>
+                </date>
+            </history>
+            <permissions>
+                <copyright-statement>&#x00A9; The Author(s) 2022. Published by Oxford University
+                    Press on behalf of the Physical Society of Japan.</copyright-statement>
+                <copyright-year>2022</copyright-year>
+                <license license-type="cc-by" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="https://creativecommons.org/licenses/by/4.0/">
+                    <license-p>This is an Open Access article distributed under the terms of the
+                        Creative Commons Attribution License (<ext-link ext-link-type="uri"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xlink:href="https://creativecommons.org/licenses/by/4.0/">
+                        https://creativecommons.org/licenses/by/4.0/</ext-link>), which permits
+                        unrestricted reuse, distribution, and reproduction in any medium, provided
+                        the original work is properly cited.</license-p>
+                    <license-p>Funded by SCOAP<sup>3</sup></license-p>
+                </license>
+            </permissions>
+            <self-uri xlink:href="ptab170.pdf" />
+            <abstract abstract-type="abstract">
+                <title>Abstract</title>
+                <p>We propose a method of detecting the dark matter axion by using two slabs of a
+                    conductor. The flat surfaces are set face to face, parallel to each other. An
+                    external magnetic field <italic>B</italic> parallel to the surfaces is applied.
+                    Radiation converted from the axion arises between the two slabs. When we tune
+                    the spacing <italic>l</italic> between the two surfaces such that <italic>l</italic>
+                    &#x003D; &#x03C0;/<italic>m</italic><sub>
+                        <italic>a</italic>
+                    </sub> with axion mass <italic>m</italic><sub>
+                        <italic>a</italic>
+                    </sub>, a resonance occurs so that the
+                    radiation becomes strong. Furthermore, the electric current flowing on the
+                    surface of the slabs is enhanced. We show that the electric current is large
+                    enough to be detectable at the resonance. It reaches 0.7 &#x00D7; 10<sup>
+                    &#x2212;9</sup>&#x2009;A&#x2009;<inline-formula>
+                        <tex-math id="TM0001" notation="LaTeX"><![CDATA[$(10^{-5}\, \mbox{eV}/m_a)^{1/2} \, (B/5\, \mbox{T}) \, (L/10\, \mbox{cm}) \, (\sigma /3.3\times 10^7 \, \rm eV)$]]></tex-math>
+                    </inline-formula>
+                    using 6N copper for the square slabs with side length <italic>L</italic> and
+                    high electrical conductivity &#x03C3; at temperature <italic>T</italic> &#x223C;
+                    1&#x2009;K. The power of the Joule heating is <inline-formula>
+                        <tex-math id="TM0002" notation="LaTeX"><![CDATA[$0.3\times 10^{-22} \, \mbox{W} \, (B/5 \, \mbox{T})^2 \, (10^{-5} \, \mbox{eV}/m_a)^{1/2} \, (L/10 \, \mbox{cm})^2 \, (\sigma /3.3\times 10^7 \, \rm eV)$]]></tex-math>
+                    </inline-formula>.
+                    When we amplify the power using an LC circuit with factor <italic>Q</italic><sub>
+                    LC</sub>, the signal-to-noise ratio is <inline-formula>
+                        <tex-math id="TM0003" notation="LaTeX"><![CDATA[$4.5\times 10^{4} \, (Q_\mathrm{LC}/10^6) \, (B/5 \, \mbox{T})^2 \, (t_\mathrm{obs}/1\, \mathrm{s})^{1/2}\, (10^{-5} \, \mbox{eV}/m_a) \, (L/10 \, \mbox{cm})^2 \, (\sigma /3.3\times 10^7 \, \rm eV)$]]></tex-math>
+                    </inline-formula>
+                    with an observation time of <italic>t</italic><sub>obs</sub>.</p>
+            </abstract>
+            <kwd-group kwd-group-type="jel">
+                <kwd>B40</kwd>
+                <kwd>B71</kwd>
+            </kwd-group>
+            <funding-group>
+                <award-group award-type="grant">
+                    <funding-source>
+                        <institution-wrap>
+                            <institution>SCOAP</institution>
+                        </institution-wrap>
+                    </funding-source>
+                </award-group>
+            </funding-group>
+            <counts>
+                <page-count count="10" />
+            </counts>
+        </article-meta>
+    </front>
+    <body>
+        <p>The axion [<xref ref-type="bibr" rid="bib1 bib2 bib3 bib4 bib5 bib6">1&#x2013;6</xref>]
+            is one of the most important candidates for dark matter. In particular, it appears that
+            it stands above other candidates because the quantum chromodynamics (QCD) axion gives
+            natural solutions for the strong charge&#x2013;parity (CP) problem as well as the dark
+            matter problem. Other dark matter candidates, e.g. WIMPs (weakly interacting massive
+            particles) have not been detected in spite of extensive and protracted searches.</p>
+        <p>The axion has recently been sought in various ways. Most of the experiments [<xref
+                ref-type="bibr" rid="bib7 bib8 bib9 bib10 bib11 bib12 bib13 bib14 bib15">7&#x2013;15</xref>]
+            exploit the Primakoff effect. That is, they detect photons directly produced by the dark
+            matter axion <italic>a</italic>(<italic>t</italic>) under a strong magnetic field <italic>
+            B</italic>. But, the axion&#x2013;photon coupling <italic>g</italic><sub><italic>a</italic>
+            &#x03B3;&#x03B3;</sub><italic>a</italic>(<italic>t</italic>) &#x223C; 10<sup>&#x2212;19</sup>
+            is so tiny that direct photon production is hard to detect. So, we need, for instance, a
+            very sensitive radio receiver using technology such as superconducting quantum
+            interference devices.</p>
+        <p>In this letter we propose a new detection method for the dark matter axion, performed by
+            observing the electric current flowing in a conductor with high electrical conductivity.
+            The current is induced by the axion under a strong magnetic field <inline-formula>
+                <tex-math id="TM0004" notation="LaTeX"><![CDATA[$\vec{B}$]]></tex-math>
+            </inline-formula>. We
+            use two parallel slabs [<xref ref-type="bibr" rid="bib16">16</xref>], see Fig.&#x00A0;<xref
+                ref-type="fig" rid="fig1">1</xref>, which are set face to face. When we apply a
+            magnetic field between the slabs, the axion is converted to radiation between the slabs.
+            Simultaneously, an electric current <italic>I</italic><sub>
+                <italic>a</italic>
+            </sub> flows in the surfces of the slabs in the
+            direction parallel to the magnetic field <inline-formula>
+                <tex-math id="TM0005" notation="LaTeX"><![CDATA[$\vec{B}$]]></tex-math>
+            </inline-formula>.
+            When we appropriately tune the spacing <italic>l</italic> between the parallel slabs, a
+            resonance occurs and the radiation is enhanced. At the resonance, the electric current
+            is also enhanced. We find that the electric current reaches &#x223C;10<sup>&#x2212;10</sup>
+            &#x2009;A&#x2009;<inline-formula>
+                <tex-math id="TM0006" notation="LaTeX"><![CDATA[$(10^{-5} \, \mbox{eV}/m_a)^{1/2} \, (B/5 \, \mbox{T})(L/10 \, \mbox{cm})^2 \, (\sigma /3.3\times 10^7 \, \rm eV)$]]></tex-math>
+            </inline-formula>
+            using high-quality 6N copper for the square slabs with side length <italic>L</italic>
+            &#x003D; 10&#x2009;cm and high electrical conductivity &#x03C3; &#x2243; 3.3 &#x00D7; 10<sup>
+            7</sup>&#x2009;eV at <italic>T</italic> &#x003D; 1&#x2009;K. This system resembles the
+            system used in the Axion Dark Matter Experiment, where a cylindrical conductor is used
+            to obtain the resonance. In addition to amplification of the radiation by tuning the
+            spacing, we also amplify the electric current with an LC circuit [<xref ref-type="bibr"
+                rid="bib17">17</xref>,<xref ref-type="bibr" rid="bib18">18</xref>] by tuning the
+            circuit parameters. Consequently, we can obtain sufficient power, <inline-formula>
+                <tex-math id="TM0007" notation="LaTeX"><![CDATA[${\sim } 10^{-17} \, \mbox{W} \, (Q_\mathrm{LC}/10^6) \, (10^{-5} \, \mbox{eV}/m_a)^{1/2} \, (B/5 \, \mbox{T})^2 \, (L/10 \, \mbox{cm})^2 \, (\sigma /3.3\times 10^7 \, \rm eV)$]]></tex-math>
+            </inline-formula>, to
+            be detected by a circuit with factor <italic>Q</italic><sub>LC</sub>.</p>
+        <fig id="fig1" position="float">
+            <label>Fig. 1.</label>
+            <caption>
+                <p>Rectangular flat conductors of size <italic>L</italic> &#x00D7; <italic>R</italic>
+                    and spacing <italic>l</italic>. An electric current <italic>I</italic><sub>
+                        <italic>a</italic>
+                    </sub> flows on the surface.</p>
+            </caption>
+            <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ptab170fig1.jpg"
+                mimetype="image" />
+        </fig>
+        <p>Before we discuss the radiation in the space between the two slabs of normal conductors,
+            we briefly explain the axion&#x2013;photon coupling. The axion <inline-formula>
+                <tex-math id="TM0008" notation="LaTeX"><![CDATA[$a(\vec{x},t)$]]></tex-math>
+            </inline-formula>
+            couples with both electric <inline-formula>
+                <tex-math id="TM0009" notation="LaTeX"><![CDATA[$\vec{E}$]]></tex-math>
+            </inline-formula> and
+            magnetic fields <inline-formula>
+                <tex-math id="TM0010" notation="LaTeX"><![CDATA[$\vec{B}$]]></tex-math>
+            </inline-formula> in
+            the following way, <disp-formula id="equ1">
+                <label>(1)</label>
+                <tex-math id="TM0011" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+L_{aEB}= g_{\gamma }\alpha \frac{a(\vec{x},t)\vec{E}\cdot \vec{B}}{f_a\pi }\equiv g_{a\gamma \gamma } a(\vec{x},t)\vec{E}\cdot \vec{B} ,
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>with
+            the decay constant <italic>f</italic><sub>
+                <italic>a</italic>
+            </sub> of the axion and the fine structure constant
+            &#x03B1; &#x2243; 1/137, where the numerical constant <italic>g</italic><sub>&#x03B3;</sub>
+            depends on the axion model; typically it is of the order of one. The standard notation <italic>
+            g</italic><sub><italic>a</italic>&#x03B3;&#x03B3;</sub> is such that <inline-formula>
+                <tex-math id="TM0012" notation="LaTeX"><![CDATA[$g_{a\gamma \gamma }=g_{\gamma }\alpha /f_a\pi \simeq 0.14 \, (m_a/\rm GeV^2)$]]></tex-math>
+            </inline-formula> for
+            the Dine&#x2013;Fischler&#x2013;Srednicki&#x2013;Zhitnitsky (DFSZ) model [<xref
+                ref-type="bibr" rid="bib19">19</xref>,<xref ref-type="bibr" rid="bib20">20</xref>]
+            and <inline-formula>
+                <tex-math id="TM0013" notation="LaTeX"><![CDATA[$g_{a\gamma \gamma }\simeq -0.39 \, (m_a/\rm GeV^2)$]]></tex-math>
+            </inline-formula> for
+            the Kim&#x2013;Shifman&#x2013;Vainshtein&#x2013;Zakharov (KSVZ) model [<xref
+                ref-type="bibr" rid="bib21">21</xref>,<xref ref-type="bibr" rid="bib22">22</xref>].
+            In other words, <italic>g</italic><sub>&#x03B3;</sub> &#x2243; 0.37 for DFSZ and <italic>
+            g</italic><sub>&#x03B3;</sub> &#x2243; &#x2212;0.96 for KSVZ. The axion decay constant <italic>
+            f</italic><sub>
+                <italic>a</italic>
+            </sub> is related to the axion mass <italic>m</italic><sub>
+                <italic>a</italic>
+            </sub> in the QCD axion: <inline-formula>
+                <tex-math id="TM0014" notation="LaTeX"><![CDATA[$m_af_a\simeq 6\times 10^{-6} \, \rm eV\times 10^{12}$]]></tex-math>
+            </inline-formula>&#x2009;GeV.
+            We only consider the QCD axion in this paper.</p>
+        <p>Because the de Broglie wavelength of the axion inside our galaxy is 10<sup>3</sup> times
+            larger than <inline-formula>
+                <tex-math id="TM0015" notation="LaTeX"><![CDATA[$m_a^{-1}$]]></tex-math>
+            </inline-formula>, we
+            may neglect the spatial dependence of the axion field in experiments: <inline-formula>
+                <tex-math id="TM0016" notation="LaTeX"><![CDATA[$a(\vec{x},t)=a(t)$]]></tex-math>
+            </inline-formula>. We
+            can see that the coupling parameter <italic>g</italic><sub><italic>a</italic>
+            &#x03B3;&#x03B3;</sub><italic>a</italic>(<italic>t</italic>) in the Lagrangian,
+            Eq.&#x00A0;(<xref ref-type="disp-formula" rid="equ1">1</xref>), is extremely small for
+            the dark matter axion <italic>a</italic>(<italic>t</italic>). We note that the energy
+            density of the dark matter axion taken by time average is given by <disp-formula
+                id="equ2">
+                <label>(2)</label>
+                <tex-math id="TM0017" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+\rho _a= \frac{1}{2}\overline{\left(\dot{a}^2+(\vec{\partial } a)^2+m_a^2a^2\right)}\simeq \frac{m_a^2a_0^2}{2} ,
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>where <inline-formula>
+                <tex-math id="TM0018" notation="LaTeX"><![CDATA[$a(t)=a_0\cos \big (t\sqrt{m_a^2+k^2} \big )\simeq a_0\cos (m_a t)$]]></tex-math>
+            </inline-formula>,
+            because the velocity <italic>k</italic>/<italic>m</italic><sub>
+                <italic>a</italic>
+            </sub> of the axion is about 10<sup>&#x2212;3</sup> in
+            our galaxy.</p>
+        <p>The local energy density &#x03C1; of dark matter in our galaxy is <inline-formula>
+                <tex-math id="TM0019" notation="LaTeX"><![CDATA[$\rho \simeq 0.3 \, \rm GeV\, \rm cm^{-3}\simeq 2.4\times 10^{-42} \, \rm GeV^4$]]></tex-math>
+            </inline-formula>.
+            Assuming that the density is equal to that of the dark matter axion, i.e. &#x03C1;
+            &#x003D; &#x03C1;<sub>
+                <italic>a</italic>
+            </sub>, we find an extremely small parameter <italic>g</italic><sub><italic>
+            a</italic>&#x03B3;&#x03B3;</sub><italic>a</italic> &#x223C; 10<sup>&#x2212;19</sup>. The
+            energy density also gives a large number density for the axions of <inline-formula>
+                <tex-math id="TM0020" notation="LaTeX"><![CDATA[$\rho _a/m_a\sim 10^{15} \, \mbox{cm}^{-3} \, (10^{-6} \, \mbox{eV}/m_a)$]]></tex-math>
+            </inline-formula>,
+            which gives rise to their coherence. This allows us to treat the axions as the classical
+            axion field <italic>a</italic>(<italic>t</italic>)&#x221D;cos&#x2009;(<italic>m</italic><sub>
+                <italic>a</italic>
+            </sub><italic>t</italic>), smoothly varying spatially.
+            The parameter <italic>g</italic><sub><italic>a</italic>&#x03B3;&#x03B3;</sub><italic>a</italic>
+            (<italic>t</italic>) is extremely small, so perturbative analysis is valid.</p>
+        <p>The interaction term in Eq.&#x00A0;(<xref ref-type="disp-formula" rid="equ1">1</xref>)
+            between the axion and the electromagnetic field slightly modifies the Maxwell equations
+            in the vacuum between the two slabs, <disp-formula id="equ3">
+                <label>(3)</label>
+                <tex-math id="TM0021" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+\begin{array}{rllc}\vec{\partial }\cdot \vec{E}+g_{a\gamma \gamma }\vec{\partial }\cdot (a(t)\vec{B}) & = 0, & \quad \vec{\partial }\times \big (\vec{B}-g_{a\gamma \gamma }a(t)\vec{E}\big )- \partial _t\big (\vec{E}+g_{a\gamma \gamma }a(t)\vec{B}\big ) & = 0, \\
+\vec{\partial }\cdot \vec{B} & = 0, & \quad \vec{\partial }\times \vec{E}+\partial _t \vec{B} & = 0.\end{array}
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>From
+            the equations, we obtain approximately the electric field <inline-formula>
+                <tex-math id="TM0022" notation="LaTeX"><![CDATA[$\vec{E}$]]></tex-math>
+            </inline-formula>
+            generated by the axion <italic>a</italic>(<italic>t</italic>) under a static and
+            spatially homogeneous background magnetic field <inline-formula>
+                <tex-math id="TM0023" notation="LaTeX"><![CDATA[$\vec{B}$]]></tex-math>
+            </inline-formula>. It
+            is assumed to be of the order of <italic>g</italic><sub><italic>a</italic>
+            &#x03B3;&#x03B3;</sub><italic>a</italic>(<italic>t</italic>)<italic>B</italic>, <disp-formula
+                id="equ4">
+                <label>(4)</label>
+                <tex-math id="TM0024" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+\vec{E}_a(t)=-g_{a\gamma \gamma }a(t)\vec{B}.
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>Other
+            solutions are those of standard electromagnetic waves in vacuum.</p>
+        <p>Now, we discuss [<xref ref-type="bibr" rid="bib16">16</xref>] the radiation arising
+            between the two slabs, and the electric currents flowing in the slabs. In order to
+            discuss the electric and magnetic fields in slabs composed of a normal conductor, we
+            suppose the conductor to have trivial permeability &#x03BC; &#x003D; 1, dielectric
+            permittivity &#x03F5; &#x003D; 1, and large electrical conductivity &#x03C3;.</p>
+        <p>The configuration of the conductors, shown in Fig.&#x00A0;<xref ref-type="fig" rid="fig1">
+            1</xref>, are as follows. Conductors with flat surfaces are placed parallel to each
+            other. They occupy the regions <italic>x</italic> &#x2265; 0 and <italic>x</italic>
+            &#x2264; &#x2212;<italic>l</italic>. Their surfaces are at <italic>x</italic> &#x003D; 0
+            and <italic>x</italic> &#x003D; &#x2212;<italic>l</italic>, respectively. They are
+            uniform in the <italic>y</italic> and <italic>z</italic> directions. We impose a
+            spatially uniform static magnetic field <inline-formula>
+                <tex-math id="TM0025" notation="LaTeX"><![CDATA[$\vec{B}=(0,0,B)$]]></tex-math>
+            </inline-formula>
+            parallel to the surfaces of the conductors. We denote the magnetic field induced in the
+            conductor as <inline-formula>
+                <tex-math id="TM0026" notation="LaTeX"><![CDATA[$\vec{B}(\mbox{inside})+\vec{B}$]]></tex-math>
+            </inline-formula>. The
+            term <inline-formula>
+                <tex-math id="TM0027" notation="LaTeX"><![CDATA[$\vec{B}$]]></tex-math>
+            </inline-formula>
+            corresponds to the external magnetic field <inline-formula>
+                <tex-math id="TM0028" notation="LaTeX"><![CDATA[$\vec{B}$]]></tex-math>
+            </inline-formula>
+            because the component of the field <inline-formula>
+                <tex-math id="TM0029" notation="LaTeX"><![CDATA[$\vec{B}(\mbox{inside})+\vec{B}$]]></tex-math>
+            </inline-formula>
+            parallel to the surface (at <italic>x</italic> &#x003D; 0 and <italic>x</italic>
+            &#x003D; &#x2212;<italic>l</italic>) must be continuous at the surface. Although we
+            assume the two slabs extend indefinitely in the <italic>y</italic> and <italic>z</italic>
+            directions, the results obtained below are valid as long as the wavelength of the
+            radiation is much smaller than the actual length of the conductors.</p>
+        <p>The electromagnetic fields in the conductor are described by the modified Maxwell
+            equations, <disp-formula id="equ5">
+                <label>(5)</label>
+                <tex-math id="TM0030" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+&&\vec{\partial }\cdot \vec{E}(\mbox{inside})+g_{a\gamma \gamma }\vec{\partial }\cdot \big (a(t)\vec{B}(\mbox{inside})\big )=0, \\
+&&\vec{\partial }\times \big (\vec{B}(\mbox{inside})-g_{a\gamma \gamma } a(t)\vec{E}(\mbox{inside})\big )- \partial _t\big (\vec{E}(\mbox{inside})+g_{a\gamma \gamma } a(t)\big (\vec{B}(\mbox{inside})+\vec{B}\big )\big )=\vec{J}_e, \\
+&&\vec{\partial }\cdot \vec{B}(\mbox{inside})=0, \qquad \vec{\partial }\times \vec{E}(\mbox{inside})+\partial _t \vec{B}(\mbox{inside})=0,
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>where
+            we denote the electric field induced in the conductors as <inline-formula>
+                <tex-math id="TM0031" notation="LaTeX"><![CDATA[$\vec{E}(\mbox{inside})$]]></tex-math>
+            </inline-formula>.</p>
+        <p>In Eq.&#x00A0;(<xref ref-type="disp-formula" rid="equ5">5</xref>) we have included the
+            current <inline-formula>
+                <tex-math id="TM0032" notation="LaTeX"><![CDATA[$\vec{J}_e=\sigma \vec{E}(\mbox{inside})$]]></tex-math>
+            </inline-formula>
+            induced by the electric field <inline-formula>
+                <tex-math id="TM0033" notation="LaTeX"><![CDATA[$\vec{E}(\mbox{inside})$]]></tex-math>
+            </inline-formula>, but
+            have neglected the external current <inline-formula>
+                <tex-math id="TM0034" notation="LaTeX"><![CDATA[$\vec{J}_\mathrm{ext}$]]></tex-math>
+            </inline-formula>
+            generating the background static magnetic field <inline-formula>
+                <tex-math id="TM0035" notation="LaTeX"><![CDATA[$\vec{B}$]]></tex-math>
+            </inline-formula> (<inline-formula>
+                <tex-math id="TM0036" notation="LaTeX"><![CDATA[$\vec{\partial }\times \vec{B}=\vec{J}_\mathrm{ext}$]]></tex-math>
+            </inline-formula>).
+            This current is outside the system. Here we have assumed Ohm&#x2019;s law, <inline-formula>
+                <tex-math id="TM0037" notation="LaTeX"><![CDATA[$\vec{J}_e=\sigma \vec{E}(\mbox{inside})$]]></tex-math>
+            </inline-formula>.
+            Only the presence of the current <inline-formula>
+                <tex-math id="TM0038" notation="LaTeX"><![CDATA[$\vec{J}_e$]]></tex-math>
+            </inline-formula>
+            distinguishes the Maxwell equations in the conductor from those in the vacuum.</p>
+        <p>When we neglect the axion contribution, we obtain the magnetic field <inline-formula>
+                <tex-math id="TM0039" notation="LaTeX"><![CDATA[$\vec{B}$]]></tex-math>
+            </inline-formula>
+            inside the conductor. Obviously, there is no electric field inside the conductor. Once
+            we take into account the axion contribution, the oscillating electric field <inline-formula>
+                <tex-math id="TM0040" notation="LaTeX"><![CDATA[$\vec{E}(\mbox{inside})$]]></tex-math>
+            </inline-formula> is
+            induced as well as the magnetic field <inline-formula>
+                <tex-math id="TM0041" notation="LaTeX"><![CDATA[$\vec{B}(\mbox{inside})$]]></tex-math>
+            </inline-formula> in
+            addition to <inline-formula>
+                <tex-math id="TM0042" notation="LaTeX"><![CDATA[$\vec{B}$]]></tex-math>
+            </inline-formula>.</p>
+        <p>Assuming that the parameter <italic>g</italic><sub><italic>a</italic>&#x03B3;&#x03B3;</sub><italic>
+            a</italic>(<italic>t</italic>) is small, and noting that the fields <inline-formula>
+                <tex-math id="TM0043" notation="LaTeX"><![CDATA[$\vec{E}(\mbox{inside})$]]></tex-math>
+            </inline-formula> and <inline-formula>
+                <tex-math id="TM0044" notation="LaTeX"><![CDATA[$\vec{B}(\mbox{inside})$]]></tex-math>
+            </inline-formula> are
+            of the order of <italic>g</italic><sub><italic>a</italic>&#x03B3;&#x03B3;</sub><italic>a</italic>
+            (<italic>t</italic>), we derive the equations <disp-formula id="equ6">
+                <label>(6)</label>
+                <tex-math id="TM0045" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+\begin{array}{rl}\vec{\partial }\cdot \vec{E}(\mbox{inside}) = 0, & \qquad \vec{\partial }\times \vec{B}(\mbox{inside}) = \vec{J}_e+\partial _t(\vec{E}(\mbox{inside})-\vec{E}_a), \\
+\vec{\partial }\cdot \vec{B}(\mbox{inside}) = 0, & \qquad \vec{\partial }\times \vec{E}(\mbox{inside})+\partial _t \vec{B}(\mbox{inside}) = 0,\end{array}
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>where
+            we have used the relation <inline-formula>
+                <tex-math id="TM0046" notation="LaTeX"><![CDATA[$\vec{\partial }\times \vec{E}_a=0$]]></tex-math>
+            </inline-formula>
+            because <inline-formula>
+                <tex-math id="TM0047" notation="LaTeX"><![CDATA[$\vec{\partial }\times \vec{B}=0$]]></tex-math>
+            </inline-formula>
+            inside the conductor.</p>
+        <p>Using Ohm&#x2019;s law, <inline-formula>
+                <tex-math id="TM0048" notation="LaTeX"><![CDATA[$\vec{J}_e=\sigma \vec{E}(\mbox{inside})$]]></tex-math>
+            </inline-formula>, in
+            Eq.&#x00A0;(<xref ref-type="disp-formula" rid="equ6">6</xref>), we derive the equation
+            for <inline-formula>
+                <tex-math id="TM0049" notation="LaTeX"><![CDATA[$\vec{E}(\mbox{inside})$]]></tex-math>
+            </inline-formula>, <disp-formula
+                id="equ7">
+                <label>(7)</label>
+                <tex-math id="TM0050" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+\left(\vec{\partial }^2-\partial _t^2\right)\vec{E}(\mbox{inside})=\sigma \partial _t\vec{E}(\mbox{inside})-\partial _t^2\vec{E}_a ,
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>where
+            we note that <inline-formula>
+                <tex-math id="TM0051" notation="LaTeX"><![CDATA[$\vec{E}_a\propto \cos (m_at)$]]></tex-math>
+            </inline-formula>.
+            Then, we find a solution for <italic>x</italic> &#x003E; 0 (later, we discuss the
+            solution for <italic>x</italic> &#x003C; &#x2212;<italic>l</italic>), <disp-formula
+                id="equ8">
+                <label>(8)</label>
+                <tex-math id="TM0052" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+\vec{E}(\mbox{inside})\simeq \vec{E}_1\exp \bigg (-\frac{x}{\delta _e}\bigg )\bigg (\cos \bigg (\omega t-\frac{x}{\delta _e}\bigg )+A\sin \bigg (\omega t-\frac{x}{\delta _e}\bigg )\bigg ) +\frac{1}{\sigma }\partial _t \vec{E}_a,
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>with
+            arbitrary field strength <inline-formula>
+                <tex-math id="TM0053" notation="LaTeX"><![CDATA[$\vec{E}_1$]]></tex-math>
+            </inline-formula>,
+            parameter <italic>A</italic>, and frequency &#x03C9;. The skin depth &#x03B4;<sub>
+                <italic>e</italic>
+            </sub> is given by <inline-formula>
+                <tex-math id="TM0054" notation="LaTeX"><![CDATA[$\delta _e=\sqrt{2/\sigma \omega }$]]></tex-math>
+            </inline-formula>. In
+            the derivation, we have neglected the term <inline-formula>
+                <tex-math id="TM0055" notation="LaTeX"><![CDATA[$\partial _t^2\vec{E}(\mbox{inside})$]]></tex-math>
+            </inline-formula> on
+            the left-hand side of Eq.&#x00A0;(<xref ref-type="disp-formula" rid="equ7">7</xref>),
+            which is much smaller than the term <inline-formula>
+                <tex-math id="TM0056" notation="LaTeX"><![CDATA[$\sigma \partial _t\vec{E}(\mbox{inside})$]]></tex-math>
+            </inline-formula> on
+            the right-hand side. Namely, we have used the inequality &#x03C3; &#x226B;
+            &#x03C9;&#x2009;( &#x223C; <italic>m</italic><sub>
+                <italic>a</italic>
+            </sub>) because the electric conductivity &#x03C3;
+            &#x223C; 10<sup>4</sup>&#x2009;eV of copper is much larger than the axion mass <italic>m</italic><sub>
+                <italic>a</italic>
+            </sub> &#x003D; 10<sup>&#x2212;6</sup>&#x2009;eV
+            &#x223C;10<sup>&#x2212;3</sup>&#x2009;eV under consideration. We note that the parameter <inline-formula>
+                <tex-math id="TM0057" notation="LaTeX"><![CDATA[$m_a\delta _e=\sqrt{2m_a/\sigma }$]]></tex-math>
+            </inline-formula> is
+            very small, such as <italic>m</italic><sub>
+                <italic>a</italic>
+            </sub>&#x03B4;<sub>
+                <italic>e</italic>
+            </sub> &#x223C; 10<sup>&#x2212;4</sup> for <inline-formula>
+                <tex-math id="TM0058" notation="LaTeX"><![CDATA[$m_a\sim 10^{-5} \, \rm eV$]]></tex-math>
+            </inline-formula> and
+            &#x03C3; &#x223C; 10<sup>3</sup>&#x2009;eV.</p>
+        <p>The first term of the solution represents radiation not propagating in the <italic>z</italic>
+            and <italic>y</italic> directions. It is only present in the surface of the conductor
+            due to the skin effect. It induces an electric current <inline-formula>
+                <tex-math id="TM0059" notation="LaTeX"><![CDATA[$\sigma \vec{E}(\mbox{inside})$]]></tex-math>
+            </inline-formula> on
+            the surface. Although &#x03C9; is arbitrary at this stage, it turns out from the
+            boundary conditions at <italic>x</italic> &#x003D; 0, &#x2212;<italic>l</italic> that it
+            is equal to <italic>m</italic><sub>
+                <italic>a</italic>
+            </sub>. Hence, we put &#x03C9; &#x003D; <italic>m</italic><sub>
+                <italic>a</italic>
+            </sub> hereafter. Furthermore, the boundary conditions
+            make the electric field <inline-formula>
+                <tex-math id="TM0060" notation="LaTeX"><![CDATA[$\vec{E}(\mbox{inside})$]]></tex-math>
+            </inline-formula>
+            parallel to <inline-formula>
+                <tex-math id="TM0061" notation="LaTeX"><![CDATA[$\vec{B}$]]></tex-math>
+            </inline-formula>: <inline-formula>
+                <tex-math id="TM0062" notation="LaTeX"><![CDATA[$\vec{E}_1=(0,0,E_1)$]]></tex-math>
+            </inline-formula>,
+            just as <inline-formula>
+                <tex-math id="TM0063" notation="LaTeX"><![CDATA[$\vec{E}_a=-g_{a\gamma \gamma }a(t)\vec{B}$]]></tex-math>
+            </inline-formula>.</p>
+        <p>The second term represents the oscillating electric field <inline-formula>
+                <tex-math id="TM0064" notation="LaTeX"><![CDATA[$\frac{1}{\sigma }\partial _t \vec{E}_a$]]></tex-math>
+            </inline-formula>
+            present uniformly inside the conductor. This term is absent when we consider a conductor
+            with finite length in the <italic>z</italic> direction because the electric charges on
+            the two ends of the upper and lower surfaces induced by the electric field screen the
+            field <inline-formula>
+                <tex-math id="TM0065" notation="LaTeX"><![CDATA[$\frac{1}{\sigma }\partial _t \vec{E}_a$]]></tex-math>
+            </inline-formula>.
+            Hereafter, we neglect the term <inline-formula>
+                <tex-math id="TM0066" notation="LaTeX"><![CDATA[$\frac{1}{\sigma }\partial _t \vec{E}_a$]]></tex-math>
+            </inline-formula>.</p>
+        <p>We also have the magnetic field <inline-formula>
+                <tex-math id="TM0067" notation="LaTeX"><![CDATA[$\vec{B}(\mbox{inside})=(0,B_y(\mbox{inside}),0)$]]></tex-math>
+            </inline-formula>,
+            corresponding to the electric field <inline-formula>
+                <tex-math id="TM0068" notation="LaTeX"><![CDATA[$\vec{E}(\mbox{inside})=(0,0,E_z(\mbox{inside}))$]]></tex-math>
+            </inline-formula>,
+            because <inline-formula>
+                <tex-math id="TM0069" notation="LaTeX"><![CDATA[$\vec{\partial }\times \vec{E}(\mbox{inside})=-\partial _t \vec{B}(\mbox{inside})$]]></tex-math>
+            </inline-formula>, <disp-formula
+                id="equ9">
+                <label>(9)</label>
+                <tex-math id="TM0070" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+B_y(\mbox{inside}) & =& -\frac{E_1}{\delta _e m_a}\exp \bigg (-\frac{x}{\delta _e}\bigg )\bigg (\sin \bigg (m_a t-\frac{x}{\delta _e}\bigg ) + \cos \bigg (m_a t-\frac{x}{\delta _e}\bigg )\bigg ) \\
+&&-\; \frac{AE_1}{\delta _e m_a}\exp \bigg (-\frac{x}{\delta _e}\bigg )\bigg (\sin \bigg (m_a t-\frac{x}{\delta _e}\bigg ) -\cos \bigg (m_a t-\frac{x}{\delta _e}\bigg )\bigg ).
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>As a
+            whole, we find the magnetic field <inline-formula>
+                <tex-math id="TM0071" notation="LaTeX"><![CDATA[$\vec{B}(\mbox{inside})+\vec{B}$]]></tex-math>
+            </inline-formula> as
+            well as the electric field <inline-formula>
+                <tex-math id="TM0072" notation="LaTeX"><![CDATA[$\vec{E}(\mbox{inside})$]]></tex-math>
+            </inline-formula>
+            inside the conductor (<italic>x</italic> &#x003E; 0).</p>
+        <p>The strength <inline-formula>
+                <tex-math id="TM0073" notation="LaTeX"><![CDATA[$\vec{E}_1$]]></tex-math>
+            </inline-formula>
+            (frequency &#x03C9; and parameter <italic>A</italic>) is determined by the boundary
+            conditions at the surfaces <italic>x</italic> &#x003D; 0 and <italic>x</italic> &#x003D;
+            &#x2212;<italic>l</italic>. The boundary conditions we impose demand that the parallel
+            components of the electric and magnetic fields on both sides of the boundary must be
+            continuous. That is, <inline-formula>
+                <tex-math id="TM0074" notation="LaTeX"><![CDATA[$\vec{E}(\mbox{inside})=\vec{E}_a+\vec{E}(\mbox{outside})$]]></tex-math>
+            </inline-formula> and <inline-formula>
+                <tex-math id="TM0075" notation="LaTeX"><![CDATA[$\vec{B}(\mbox{inside})=\vec{B}(\mbox{outside})$]]></tex-math>
+            </inline-formula>,
+            where the fields <inline-formula>
+                <tex-math id="TM0076" notation="LaTeX"><![CDATA[$\vec{E}(\mbox{outside})$]]></tex-math>
+            </inline-formula> and <inline-formula>
+                <tex-math id="TM0077" notation="LaTeX"><![CDATA[$\vec{B}(\mbox{outside})$]]></tex-math>
+            </inline-formula>
+            represent standing waves arising in the space between the two slabs. This implies that
+            we only consider the mode of the electric field <inline-formula>
+                <tex-math id="TM0078" notation="LaTeX"><![CDATA[$\vec{E}(\mbox{outside})=(0,0,E_z(\mbox{outside}))$]]></tex-math>
+            </inline-formula> and
+            magnetic field <inline-formula>
+                <tex-math id="TM0079" notation="LaTeX"><![CDATA[$\vec{B}(\mbox{outside})=(0,B_y(\mbox{outside}),0)$]]></tex-math>
+            </inline-formula>
+            arising between the two slabs. They represent the lowest transverse mode not propagating
+            in the <italic>z</italic> and <italic>y</italic> directions. They depend only on the
+            coordinate <italic>x</italic> and <italic>t</italic>. Then, the solutions of the Maxwell
+            equations in a vacuum representing the mode are <disp-formula id="equ10">
+                <label>(10)</label>
+                <tex-math id="TM0080" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+E_z(\mbox{outside}) &=& -b_1\cos (m_ax+\delta _1)\cos (m_at)+b_2\cos (m_ax+\delta _2)\sin (m_at) , \\
+B_y(\mbox{outside}) &=& b_1\sin (m_ax+\delta _1)\sin (m_at)+b_2\sin (m_ax+\delta _2)\cos (m_at) ,
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>with
+            constants <italic>b</italic><sub>1, 2</sub> and &#x03B4;<sub>1, 2</sub>. Additionally,
+            we have the electric field <inline-formula>
+                <tex-math id="TM0081" notation="LaTeX"><![CDATA[$\vec{E}_a=-g_{a\gamma \gamma }a(t)\vec{B}= \big (0,0,-g_{a\gamma \gamma }a_0\cos (m_at) B\big )\equiv \big (0,0,E_a\cos (m_at)\big )$]]></tex-math>
+            </inline-formula>
+            induced by the axion between the slabs, <italic>E</italic><sub>
+                <italic>a</italic>
+            </sub> &#x2261; &#x2212;<italic>g</italic><sub><italic>
+            a</italic>&#x03B3;&#x03B3;</sub><italic>a</italic><sub>0</sub><italic>B</italic>.</p>
+        <p>We determine the constants <italic>E</italic><sub>1</sub>, <italic>A</italic>, <italic>b</italic><sub>1,
+            2</sub>, and &#x03B4;<sub>1, 2</sub> by imposing the boundary conditions <italic>E</italic><sub>
+                <italic>z</italic>
+            </sub>(inside) &#x003D; <italic>E</italic><sub>
+                <italic>z</italic>
+            </sub>(outside) &#x002B; <italic>E</italic><sub>
+                <italic>a</italic>
+            </sub>, <italic>B</italic><sub>
+                <italic>y</italic>
+            </sub>(inside) &#x003D; <italic>B</italic><sub>
+                <italic>y</italic>
+            </sub>(outside) at <italic>x</italic> &#x003D; 0: <disp-formula
+                id="equ11">
+                <label>(11)</label>
+                <tex-math id="TM0082" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+\begin{array}{rlrl}b_1\sin \delta _1 & = -\frac{E_1(1+A)}{m_a\delta _e}, &\qquad b_2\sin \delta _2 & = -\frac{E_1(1-A)}{m_a\delta _e} , \\
+E_a-b_1\cos \delta _1 & = E_1, & \qquad b_2\cos \delta _2 & = A E_1.\end{array}
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>Additionally,
+            by imposing the boundary condition at <italic>x</italic> &#x003D; &#x2212;<italic>l</italic>,
+            we obtain <disp-formula id="equ12">
+                <label>(12)</label>
+                <tex-math id="TM0083" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+\begin{array}{rlrl}b_1\sin (\delta _1-m_al) & = +\frac{E_1(1+A)}{m_a\delta _e} , &\quad b_2\sin (\delta _2-m_al) & = +\frac{E_1(1-A)}{m_a\delta _e} , \\
+E_a-b_1\cos (\delta _1-m_al) & = E_1 , & \quad b_2\cos (\delta _2-m_al) & = AE_1 .\end{array}
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>In
+            order to obtain the relations from the boundary condition at <italic>x</italic> &#x003D;
+            &#x2212;<italic>l</italic>, we note that the solutions of the electric and magnetic
+            fields inside the conductor, <italic>x</italic> &#x2264; &#x2212;<italic>l</italic>, are
+            given by <disp-formula id="equ13">
+                <label>(13)</label>
+                <tex-math id="TM0084" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+E_z(\mbox{inside},l) & =& +E_1\exp \bigg (\frac{x+l}{\delta _e}\bigg )\bigg (\cos \bigg (\omega t+\frac{x+l}{\delta _e}\bigg )+A\sin \bigg (\omega t+\frac{x+l}{\delta _e}\bigg )\bigg ) , \\
+B_y(\mbox{inside},l) & =& +\frac{E_1}{\delta _e m_a}\exp \bigg (\frac{x+l}{\delta _e}\bigg )\bigg (\sin \bigg (m_a t+\frac{x+l}{\delta _e}\bigg ) +\cos \bigg (m_a t+\frac{x+l}{\delta _e}\bigg )\bigg ) \\
+&&+\; \frac{AE_1}{\delta _e m_a}\exp \bigg (\frac{x+l}{\delta _e}\bigg )\bigg (\sin \bigg (m_a t+\frac{x+l}{\delta _e}\bigg ) -\cos \bigg (m_a t+\frac{x+l}{\delta _e}\bigg )\bigg ) .
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula></p>
+        <p>Therefore, we find that the coefficients <italic>E</italic><sub>1</sub> and <italic>AE</italic><sub>
+            1</sub>, as well as <italic>b</italic><sub>1, 2</sub>, are such that <disp-formula
+                id="equ14">
+                <label>(14)</label>
+                <tex-math id="TM0085" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+\begin{array}{rlrl}E_1 & = E_a \displaystyle\frac{(m_a\delta _e\tan \delta )^2-m_a\delta _e\tan \delta }{1+(m_a\delta _e\tan \delta -1)^2} , \qquad & E_1A & = -E_a \displaystyle\frac{m_a\delta _e\tan \delta }{1+(m_a\delta _e\tan \delta -1)^2} , \\[5pt]
+b_1 & = \displaystyle\frac{E_a}{\cos \delta }\, \displaystyle\frac{2-m_a\delta _e\tan \delta }{1+(m_a\delta _e\tan \delta -1)^2}, & \qquad b_2 & = - \displaystyle\frac{E_a}{\cos \delta }\, \displaystyle\frac{m_a\delta _e\tan \delta }{1+(m_a\delta _e\tan \delta -1)^2},\end{array}
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>and the
+            phases &#x03B4;<sub>1, 2</sub> &#x003D; &#x03B4; satisfying the identical equation <disp-formula
+                id="equ15">
+                <label>(15)</label>
+                <tex-math id="TM0086" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+\tan \delta =\frac{\sin (m_al)}{1+\cos (m_al)}.
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>Therefore,
+            the coefficients behave in the limit of large electrical conductivity &#x03C3; (small
+            skin depth <italic>m</italic><sub>
+                <italic>a</italic>
+            </sub>&#x03B4;<sub>
+                <italic>e</italic>
+            </sub> &#x226A; 1) such that <disp-formula id="equ16">
+                <label>(16)</label>
+                <tex-math id="TM0087" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+\begin{array}{rlrl}E_1 & = E_a\times O(m_a\delta _e), & \qquad A & = -1+O(m_a\delta _e), \\
+b_1 & = \displaystyle\frac{E_a}{\cos \delta _1}\big (1+O(m_a\delta _e)\big ), &\qquad b_2 & = -\displaystyle\frac{E_a}{\cos \delta _1}O(m_a\delta _e).\end{array}
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>We find
+            that the standing waves in Eq.&#x00A0;(<xref ref-type="disp-formula" rid="equ10">10</xref>)
+            of the electromagnetic fields in the space between the two slabs are given, in the limit <italic>
+            m</italic><sub>
+                <italic>a</italic>
+            </sub>&#x03B4;<sub>
+                <italic>e</italic>
+            </sub> &#x2192; 0 (<inline-formula>
+                <tex-math id="TM0088" notation="LaTeX"><![CDATA[$\delta _e=\sqrt{2/m_a\sigma }$]]></tex-math>
+            </inline-formula>) for
+            &#x03C3; &#x2192; &#x221E;, by <disp-formula id="equ17">
+                <label>(17)</label>
+                <tex-math id="TM0089" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+E_z(\mbox{outside}) &=& -\frac{E_a}{\cos \delta }\cos (m_ax+\delta )\cos (m_at) , \\
+B_y(\mbox{outside}) &=& \frac{E_a}{\cos \delta }\sin (m_ax+\delta )\sin (m_at).
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula></p>
+        <p>In addition to the standing waves, we have electric field <italic>E</italic><sub>
+                <italic>z</italic>
+            </sub>(inside) in the conductor, <disp-formula
+                id="equ18">
+                <label>(18)</label>
+                <tex-math id="TM0090" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+\vec{E}(\mbox{inside})=(0,0,E_z), \qquad E_z=-\frac{E_am_a\delta _e\tan \delta }{\sqrt{2}}\exp \bigg (-\frac{x}{\delta _e}\bigg )\sin \bigg (m_at-\frac{x}{\delta _e}+\frac{\pi }{4}\bigg ) ,
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>which
+            generates an electric current <italic>J</italic> &#x003D; &#x03C3;<italic>E</italic><sub>
+                <italic>z</italic>
+            </sub>(inside) in the surface of the conductor. These
+            are solutions in the limit of a perfect conductor.</p>
+        <p>Because cos&#x2009;&#x03B4;<sub>1</sub> is of the order of 1, we find that the strengths
+            of the standing waves in the space between the two slabs are identical to the electric
+            field <italic>E</italic><sub>
+                <italic>a</italic>
+            </sub> generated by the axion in vacuum. This is
+            similar to the case in a resonant cavity, as pointed out in Ref.&#x00A0;[<xref
+                ref-type="bibr" rid="bib16">16</xref>].</p>
+        <p>We note that in the limit of a perfect conductor with &#x03C3; &#x2192; &#x221E;, the
+            electric field <italic>E</italic><sub>
+                <italic>a</italic>
+            </sub> &#x002B; <italic>E</italic><sub>
+                <italic>z</italic>
+            </sub>(outside) present between the slabs vanishes at
+            the boundaries at <italic>x</italic> &#x003D; 0 and <italic>x</italic> &#x003D; &#x2212;<italic>
+            l</italic>. Similarly, we find that the electric field <italic>E</italic>(inside)
+            &#x223C; <italic>E</italic><sub>
+                <italic>a</italic>
+            </sub> &#x00D7; <italic>m</italic><sub>
+                <italic>a</italic>
+            </sub>&#x03B4;<sub>
+                <italic>e</italic>
+            </sub> inside the conductors vanishes in the perfect
+            conductor limit. The magnetic field <italic>B</italic><sub>
+                <italic>y</italic>
+            </sub>(inside) &#x221D; exp&#x2009;( &#x2212; <italic>
+            x</italic>/&#x03B4;<sub>
+                <italic>e</italic>
+            </sub>) also vanishes. On the other hand, the magnetic
+            field <italic>B</italic><sub>
+                <italic>y</italic>
+            </sub>(outside) does not vanish at the boundaries, <italic>
+            B</italic><sub>
+                <italic>y</italic>
+            </sub>(outside) &#x003D; <italic>E</italic><sub>
+                <italic>a</italic>
+            </sub>tan&#x2009;&#x03B4; sin&#x2009;(<italic>m</italic><sub>
+                <italic>a</italic>
+            </sub><italic>t</italic>) at <italic>x</italic>
+            &#x003D; 0 and <italic>x</italic> &#x003D; &#x2212;<italic>l</italic>. The discontinuity
+            occurs because of the presence of the surface current. For instance, the surface current
+            at <italic>x</italic> &#x003D; 0 is given by <disp-formula id="equ19">
+                <label>(19)</label>
+                <tex-math id="TM0091" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+J_a=\sigma E(\mbox{inside}) \rightarrow -E_a\tan \delta \sin (m_at)\delta (x) \qquad \mbox{for } \sigma \rightarrow \infty .
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>This
+            surface current generates the discontinuity &#x0394;<italic>B</italic> &#x2261; <italic>
+            B</italic><sub>
+                <italic>y</italic>
+            </sub>(outside) &#x2212; <italic>B</italic><sub>
+                <italic>y</italic>
+            </sub>(inside) &#x003D; <italic>E</italic><sub>
+                <italic>a</italic>
+            </sub>tan&#x2009;&#x03B4;sin&#x2009;(<italic>m</italic><sub>
+                <italic>a</italic>
+            </sub><italic>t</italic>) at the surface.</p>
+        <p>We would like to make a comment on the results in our previous papers [<xref
+                ref-type="bibr" rid="bib23">23</xref>,<xref ref-type="bibr" rid="bib24">24</xref>],
+            in which electromagnetic radiation from a cylindrical conductor converted from the dark
+            matter axion was discussed. There, we naively derived the electric current flowing at
+            the surface induced by the axion without imposing appropriate boundary conditions; the
+            boundary conditions are carefully treated here and in Ref.&#x00A0;[<xref ref-type="bibr"
+                rid="bib16">16</xref>]. As a result, the radiation from the conductor was
+            overestimated, as indicated in Ref.&#x00A0;[<xref ref-type="bibr" rid="bib16">16</xref>].
+            The electric fields did not vanish at the surface, even in the limit of a perfect
+            conductor. Careful treatment [<xref ref-type="bibr" rid="bib25">25</xref>] of the
+            boundary conditions leads to a physically reasonable view: the radiation <inline-formula>
+                <tex-math id="TM0092" notation="LaTeX"><![CDATA[$\vec{E}_a$]]></tex-math>
+            </inline-formula>
+            arising in a vacuum from the axion under the magnetic field collides with the conductor
+            and reflected radiation is just that emitted from the conductor. The reflected radiation
+            is never enhanced compared with the incident radiation <inline-formula>
+                <tex-math id="TM0093" notation="LaTeX"><![CDATA[$\vec{E}_a$]]></tex-math>
+            </inline-formula>. An
+            identical conclusion was also reached in Ref.&#x00A0;[<xref ref-type="bibr" rid="bib18">
+            18</xref>].</p>
+        <p>Now we show that a resonance occurs when we adjust the spacing <italic>l</italic> just as <italic>
+            l</italic> &#x003D; &#x03C0;/<italic>m</italic><sub>
+                <italic>a</italic>
+            </sub> in the case of finite &#x03C3;. (The results
+            shown below hold even for <italic>l</italic> &#x003D; &#x03C0;(2<italic>n</italic>
+            &#x002B; 1)/<italic>m</italic><sub>
+                <italic>a</italic>
+            </sub> for a non-negative integer <italic>n</italic>.)
+            The resonance implies that the electric and magnetic fields of radiation are enhanced
+            compared with the radiation in Eq.&#x00A0;(<xref ref-type="disp-formula" rid="equ17">17</xref>).
+            With the choice of <italic>l</italic> &#x003D; &#x03C0;/<italic>m</italic><sub>
+                <italic>a</italic>
+            </sub> we obtain &#x03B4; &#x003D; &#x03C0;/2, so that <italic>
+            A</italic> &#x003D; 0, <italic>E</italic><sub>1</sub> &#x003D; <italic>E</italic><sub>
+                <italic>a</italic>
+            </sub>, and <inline-formula>
+                <tex-math id="TM0094" notation="LaTeX"><![CDATA[$b_{1,2}=-\frac{E_a}{m_a\delta _e}$]]></tex-math>
+            </inline-formula>.
+            Therefore, the radiation fields <italic>E</italic><sub>
+                <italic>z</italic>
+            </sub>(outside) and <italic>B</italic><sub>
+                <italic>y</italic>
+            </sub>(outside) are enhanced with the enhancement
+            factor 1/<italic>m</italic><sub>
+                <italic>a</italic>
+            </sub>&#x03B4;<sub>
+                <italic>e</italic>
+            </sub>, <disp-formula id="equ20">
+                <label>(20)</label>
+                <tex-math id="TM0095" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+E_z(\mbox{outside}) &=& \frac{\sqrt{2}E_a}{m_a\delta _e}\sin (m_ax)\sin \bigg (m_at-\frac{\pi }{4}\bigg ) , \\
+B_y(\mbox{outside}) &=& -\frac{\sqrt{2}E_a}{m_a\delta _e}\cos (m_ax)\sin \bigg (m_at+\frac{\pi }{4}\bigg ).
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>We also
+            have the electric field inside the conductor <italic>x</italic> &#x003E; 0, <disp-formula
+                id="equ21">
+                <label>(21)</label>
+                <tex-math id="TM0096" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+E_z(\mbox{inside})=E_a\exp \bigg ({-}\frac{x}{\delta _e}\bigg )\cos \bigg (m_at-\frac{x}{\delta _e}\bigg ),
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>which
+            induces a large oscillating electric current <inline-formula>
+                <tex-math id="TM0097" notation="LaTeX"><![CDATA[$\sigma E_a\exp \big ({-}\frac{x}{\delta _e}\big )\cos \big (m_at-\frac{x}{\delta _e}\big )$]]></tex-math>
+            </inline-formula> in
+            the surface.</p>
+        <p>We estimate the electric current <inline-formula>
+                <tex-math id="TM0098" notation="LaTeX"><![CDATA[$I_a(m_at)=L\int _0^{\infty } dx \sigma E_a \exp (-x/\delta _e)\cos (m_at-x/\delta _e)= L\sigma \delta _e E_a\sin (m_at+\pi /4)/\sqrt{2}\equiv I_a\sin (m_at+\pi /4)$]]></tex-math>
+            </inline-formula> with
+            the length <italic>L</italic> of the slab in the <italic>y</italic> direction, <disp-formula
+                id="equ22">
+                <label>(22)</label>
+                <tex-math id="TM0099" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+I_a&=&\frac{\sigma \delta _e E_aL}{\sqrt{2}} = \frac{\sigma \delta _e g_{a\gamma \gamma }a_0BL}{\sqrt{2}} \\
+&=& 0.7\times 10^{-9} \, \mbox{A} \, \bigg (\frac{10^{-5} \, \rm eV}{m_a}\bigg )^{1/2} \, \bigg (\frac{B}{5 \, \rm T}\bigg ) \, \bigg (\frac{L}{10 \, \rm cm}\bigg )\bigg (\frac{\sigma }{3.3\times 10^7 \, \rm eV}\bigg ) ,
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>where
+            we have adopted high-quality 6N copper with electrical conductivity &#x03C3; &#x2243;
+            3.3 &#x00D7; 10<sup>7</sup>&#x2009;eV at a low temperature of the order of 1&#x2009;K.
+            We have used the parameters for the dark matter axion energy density <inline-formula>
+                <tex-math id="TM0100" notation="LaTeX"><![CDATA[$\rho _a = 0.3 \, \mbox{GeV}\, \mbox{cm}^{-3} = m_a^2a_0^2/2$]]></tex-math>
+            </inline-formula> and
+            the axion model <italic>g</italic><sub>&#x03B3;</sub> &#x003D; 1 (<italic>g</italic><sub><italic>
+            a</italic>&#x03B3;&#x03B3;</sub> &#x003D; <italic>g</italic><sub>&#x03B3;</sub>
+            &#x03B1;/&#x03C0;<italic>f</italic><sub>
+                <italic>a</italic>
+            </sub>). These values are used throughout the paper.</p>
+        <p>The power of the Joule heating by the electric current <italic>I</italic><sub>
+                <italic>a</italic>
+            </sub> is given by <disp-formula id="equ23">
+                <label>(23)</label>
+                <tex-math id="TM0101" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+P_a & =& LR\sigma E_a^2\int _0^{\infty }dx \exp \bigg (-\frac{2x}{\delta _e}\bigg )\, \overline{\cos ^2(m_at-x/\delta _e)}=\frac{LR\delta _e\sigma E_a^2}{4} \\
+&\simeq& 0.3\times 10^{-22} \, \mbox{W} \, \bigg (\frac{10^{-5} \, \rm eV}{m_a}\bigg )^{1/2} \, \bigg (\frac{B}{5 \, \rm T}\bigg )^2 \, \bigg (\frac{\sigma }{3.3\times 10^7 \, \rm eV}\bigg ) \bigg (\frac{L}{10 \, \rm cm}\bigg ) \, \bigg (\frac{R}{10 \, \rm cm}\bigg ) ,
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>where <italic>
+            R</italic> denotes the side length of the slab (the surface area is <italic>R</italic>
+            &#x00D7; <italic>L</italic>), <italic>LR</italic>&#x03B4;<sub>
+                <italic>e</italic>
+            </sub> is the volume of the conductor in which the
+            electric current flows, and <inline-formula>
+                <tex-math id="TM0102" notation="LaTeX"><![CDATA[$\overline{O}$]]></tex-math>
+            </inline-formula> is
+            the time average of <italic>O</italic>. In order to detect the electric current, we
+            amplify the power <italic>P</italic><sub>
+                <italic>a</italic>
+            </sub> using the LC circuit [<xref ref-type="bibr"
+                rid="bib17">17</xref>,<xref ref-type="bibr" rid="bib18">18</xref>].</p>
+        <p>Because the thermal noise of the system at a temperature of <italic>T</italic> &#x003D;
+            1&#x2009;K is given by <disp-formula id="equ24">
+                <label>(24)</label>
+                <tex-math id="TM0103" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+P_T=\frac{T\delta \omega }{2\pi }\simeq 3.3\times 10^{-20} \, \mbox{W} \, \bigg (\frac{T}{1 \, \rm K}\bigg ) \, \bigg (\frac{\delta \omega }{10^{-6}m_a}\bigg ) \, \bigg (\frac{m_a}{10^{-5} \, \rm eV}\bigg ),
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>the
+            signal-to-noise ratio (<italic>S</italic>/<italic>N</italic>) is given by <disp-formula
+                id="equ25">
+                <label>(25)</label>
+                <tex-math id="TM0104" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+\frac{S}{N} &=& \frac{P_a}{P_T}Q_{LC}\sqrt{\frac{\delta \omega t_{obs}}{2\pi }} \\
+&\simeq& 4.5\times 10^{-2} Q_\mathrm{LC}\sqrt{\frac{t_\mathrm{obs}}{1 \, \rm s}} \, \bigg (\frac{10^{-5} \, \rm eV}{m_a}\bigg ) \, \bigg (\frac{B}{5 \, \rm T}\bigg )^2 \, \bigg (\frac{\sigma }{3.3\times 10^7 \, \rm eV}\bigg ) \, \bigg (\frac{L}{10 \, \rm cm}\bigg )\\
+&&\times\,\bigg (\frac{R}{10 \, \rm cm}\bigg ) \, \bigg (\frac{1 \, \rm K}{T}\bigg ) \, \bigg (\frac{10^{-6}m_a}{\delta \omega }\bigg )^{1/2} ,
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>where <italic>
+            Q</italic><sub>LC</sub> denotes the <italic>Q</italic> factor in the LC circuit used to
+            amplify the power <italic>P</italic><sub>
+                <italic>a</italic>
+            </sub>, and <italic>t</italic><sub>obs</sub> is the
+            observation time. <italic>Q</italic><sub>LC</sub> is given such that <inline-formula>
+                <tex-math id="TM0105" notation="LaTeX"><![CDATA[$Q_\mathrm{LC}=\frac{1}{R_\mathrm{LC}}\sqrt{L_i/C}$]]></tex-math>
+            </inline-formula>,
+            with inductance <italic>L</italic><sub>
+                <italic>i</italic>
+            </sub> of the coil, capacitance <italic>C</italic> of
+            the condenser, and resistance <italic>R</italic><sub>LC</sub> of the circuit. In
+            particular, <italic>R</italic><sub>LC</sub> &#x003D; <italic>R</italic>/(&#x03C3;<italic>
+            L</italic>&#x03B4;<sub>
+                <italic>e</italic>
+            </sub>). Thus, we find <disp-formula id="equ26">
+                <label>(26)</label>
+                <tex-math id="TM0106" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+Q_\mathrm{LC}=\sqrt{\frac{2\sigma }{m_a}}\times \sqrt{\frac{L_i}{C}}\bigg (\frac{L}{R}\bigg )\simeq 2.5\times 10^6\sqrt{\frac{10^{-5} \, \mbox{eV}}{m_a}} \sqrt{\frac{L_i}{C}}\bigg (\frac{L}{R}\bigg ) .
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>Therefore,
+            we obtain a sufficiently large signal-to-noise ratio to detect the electric current
+            induced by the dark matter axion, even if the observational time <italic>t</italic><sub>
+            obs</sub> is 1&#x2009;s.</p>
+        <p>We would like to point out that the <italic>Q</italic> value associated with the
+            absorption by the flat conductors is derived using the definition <italic>Q</italic>
+            &#x003D; <italic>m</italic><sub>
+                <italic>a</italic>
+            </sub><italic>U</italic>/2<italic>P</italic><sub>
+                <italic>a</italic>
+            </sub>, with the energy <italic>U</italic> of the
+            radiation in the space between the two slabs, <disp-formula id="equ27">
+                <label>(27)</label>
+                <tex-math id="TM0107" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+U\equiv \frac{1}{2}\int \big (\overline{E_z^2(\mbox{outside})}+\overline{B_y^2(\mbox{outside})}\big ) dV=\frac{LRE_a^2l}{2(m_a\delta _e)^2} ,
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>with <italic>
+            l</italic> &#x003D; &#x03C0;/<italic>m</italic><sub>
+                <italic>a</italic>
+            </sub>. We find that <disp-formula id="equ28">
+                <label>(28)</label>
+                <tex-math id="TM0108" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+Q=\frac{m_al}{\delta _e\sigma (m_a\delta _e)^2}=\frac{\pi }{4}\sqrt{\frac{2\sigma }{m_a}}\simeq 2\times 10^6 \sqrt{\frac{10^{-5} \, \mbox{eV}}{m_a}} .
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>This
+            formula is almost identical to the <italic>Q</italic><sub>LC</sub> factor in the LC
+            circuit.</p>
+        <p>In order to obtain a high value of the electric current <italic>I</italic><sub>
+                <italic>a</italic>
+            </sub>, we need to exactly tune the spacing <italic>l</italic>
+            &#x003D; &#x03C0;/<italic>m</italic><sub>
+                <italic>a</italic>
+            </sub> between the two slabs. But, such an exact
+            tuning is not possible because <inline-formula>
+                <tex-math id="TM0109" notation="LaTeX"><![CDATA[$\delta _e=\sqrt{2/m_a\sigma }\simeq 1.6\times 10^{-6} \, \mbox{cm} \, \sqrt{10^{-5} \, \mbox{eV}/m_a}$]]></tex-math>
+            </inline-formula>. In
+            an actual experiment we tune it approximately. Thus, we need to see the electric current
+            and its power in the approximate tuning.</p>
+        <p>We note that, in general, the electric current <italic>I</italic><sub>
+                <italic>a</italic>
+            </sub>(<italic>l</italic>) flowing in the slab is
+            given by <disp-formula id="equ29">
+                <label>(29)</label>
+                <tex-math id="TM0110" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+I_a(l) & =& L\sigma E_1\int _0^{\infty }dx\exp \bigg ({-}\frac{x}{\delta _e}\bigg )\big (\cos (m_at-x/\delta _e)+A\sin (m_a t-x/\delta _e)\big ) \\
+&=& \frac{L\sigma \delta _e E_1}{\sqrt{2}}\bigg (\sin \bigg (m_at+\frac{\pi }{4}\bigg )+A\sin \bigg (m_at-\frac{\pi }{4}\bigg )\bigg ),
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>and the
+            power of the Joule heating <italic>P</italic><sub>
+                <italic>a</italic>
+            </sub>(<italic>l</italic>) is <disp-formula id="equ30">
+                <label>(30)</label>
+                <tex-math id="TM0111" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+P_a(l) &=& LR\sigma E_1^2\int _0^{\infty }dx \exp \bigg ({-}\frac{2x}{\delta _e}\bigg )\overline{\big (\cos (m_at-x/\delta _e)+A\sin (m_a t-x/\delta _e)\big )^2} \\
+&=& \frac{LR\delta _e\sigma (E_1^2+(E_1A)^2)}{4},
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>where
+            the parameters <italic>E</italic><sub>1</sub> and <italic>A</italic> depend on the
+            spacing <italic>l</italic> between the two slabs.</p>
+        <p>When we take the spacing <italic>l</italic> &#x003D; &#x03C0;/<italic>m</italic><sub>
+                <italic>a</italic>
+            </sub> &#x002B; &#x03B4;<italic>l</italic> with
+            &#x03B4;<italic>l</italic> &#x226A; &#x03C0;/<italic>m</italic><sub>
+                <italic>a</italic>
+            </sub> (then, tan&#x2009;&#x03B4; &#x2243; &#x2212;2/(<italic>
+            m</italic><sub>
+                <italic>a</italic>
+            </sub>&#x03B4;<italic>l</italic>)), the parameters <italic>
+            E</italic><sub>1</sub> and <italic>E</italic><sub>1</sub><italic>A</italic> are found
+            such that <disp-formula id="equ31">
+                <label>(31)</label>
+                <tex-math id="TM0112" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+E_1=-\frac{E_a(y+1)}{2y^2+2y+1}, \quad E_1A=\frac{E_a y}{2y^2+2y+1} \qquad \mbox{with } y\equiv \delta l/2\delta _e.
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>The
+            tuning <italic>y</italic> &#x226A; 1 would be very difficult because <inline-formula>
+                <tex-math id="TM0113" notation="LaTeX"><![CDATA[$\delta _e\simeq 1.6\times 10^{-6} \, \mbox{cm} \, \sqrt{10^{-5} \, \mbox{eV}/m_a}$]]></tex-math>
+            </inline-formula>. But
+            even if we tune <italic>y</italic> such that <italic>y</italic> &#x223C; 10<sup>2</sup>,
+            i.e. &#x03B4;<italic>l</italic> &#x223C; 10<sup>&#x2212;4</sup>&#x2009;cm, we obtain the
+            electric current, <italic>I</italic><sub>
+                <italic>a</italic>
+            </sub>(<italic>l</italic> &#x003D; &#x03C0;/<italic>m</italic><sub>
+                <italic>a</italic>
+            </sub> &#x002B; &#x03B4;<italic>l</italic>) &#x003D;
+            &#x2212;<italic>I</italic><sub>
+                <italic>a</italic>
+            </sub>(&#x03B4;<italic>l</italic>)cos&#x2009;(<italic>
+            m</italic><sub>
+                <italic>a</italic>
+            </sub><italic>t</italic>), <disp-formula id="equ32">
+                <label>(32)</label>
+                <tex-math id="TM0114" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+I_a(\delta l) &=& \frac{\sigma \delta _e E_aL}{2y} \\
+&\simeq& 1.4\times 10^{-11} \, \mbox{A} \, \bigg (\frac{10^{-4} \, \rm cm}{\delta l}\bigg ) \, \bigg (\frac{10^{-5} \, \rm eV}{m_a}\bigg ) \bigg (\frac{B}{5 \, \rm T}\bigg ) \, \bigg (\frac{L}{10 \, \rm cm}\bigg ) \, \bigg (\frac{\sigma }{3.3\times 10^7 \, \rm eV}\bigg ),
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>and the
+            corresponding power, <italic>P</italic><sub>
+                <italic>a</italic>
+            </sub>(&#x03B4;<italic>l</italic>) &#x2261; <italic>P</italic><sub>
+                <italic>a</italic>
+            </sub>(<italic>l</italic> &#x003D; &#x03C0;/<italic>m</italic><sub>
+                <italic>a</italic>
+            </sub> &#x002B; &#x03B4;<italic>l</italic>), <disp-formula
+                id="equ33">
+                <label>(33)</label>
+                <tex-math id="TM0115" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+P_a(\delta l) &=& \frac{LR\delta _e \sigma E_a^2}{8y^2} \\
+&\simeq& 1.5\times 10^{-26} \, \mbox{W} \, \bigg (\frac{10^{-4} \, \rm cm}{\delta l}\bigg )^2 \, \bigg (\frac{10^{-5} \, \rm eV}{m_a}\bigg )^{3/2} \, \bigg (\frac{B}{5 \, \rm T}\bigg )^2\\
+&&\times\,\bigg (\frac{\sigma }{3.3\times 10^7 \, \rm eV}\bigg ) \, \bigg (\frac{L}{10 \, \rm cm}\bigg ) \, \bigg (\frac{R}{10 \, \rm cm}\bigg ) .
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>Then,
+            we find the signal-to-noise ratio, <italic>S</italic>(&#x03B4;<italic>l</italic>)/<italic>
+            N</italic>, <disp-formula id="equ34">
+                <label>(34)</label>
+                <tex-math id="TM0116" notation="LaTeX"><![CDATA[$$
+\begin{eqnarray*}
+\frac{S(\delta l)}{N} &=& \frac{P_a(\delta l)}{P_T}Q_\mathrm{LC}\sqrt{\frac{\delta \omega t_\mathrm{obs}}{2\pi }} \\
+&\simeq& 2.3\times 10^{-5}Q_\mathrm{LC}\sqrt{\frac{t_\mathrm{obs}}{1 \, \rm s}} \, \bigg (\frac{10^{-4} \, \rm cm}{\delta l}\bigg )^2 \, \bigg (\frac{10^{-5} \, \rm eV}{m_a}\bigg )^2 \, \bigg (\frac{B}{5 \, \rm T}\bigg )^2 \\
+&&\times\, \bigg (\frac{\sigma }{3.3\times 10^7 \, \rm eV}\bigg ) \, \bigg (\frac{L}{10 \, \rm cm}\bigg ) \, \bigg (\frac{R}{10 \, \rm cm}\bigg ) \, \bigg (\frac{1 \, \rm K}{T}\bigg ) \, \bigg (\frac{10^{-6}m_a}{\delta \omega }\bigg )^{1/2} ,
+\end{eqnarray*}
+$$]]></tex-math>
+            </disp-formula>where <inline-formula>
+                <tex-math id="TM0117" notation="LaTeX"><![CDATA[$Q_\mathrm{LC}=\frac{1}{R_\mathrm{LC}}\sqrt{L_i/C}\sim 10^6\sqrt{L_i/C}\sqrt{10^{-5} \, \mbox{eV}/m_a}$]]></tex-math>
+            </inline-formula>,
+            using <italic>L</italic> &#x003D; 10&#x2009;cm and <italic>R</italic> &#x003D;
+            10&#x2009;cm.</p>
+        <p>In an actual experiment using <italic>Q</italic><sub>LC</sub> &#x003D; 10<sup>6</sup>, we
+            can search the spacing &#x0394;<italic>l</italic> &#x223C; 6&#x2009;cm within one day if
+            we tune the spacing with the speed <inline-formula>
+                <tex-math id="TM0118" notation="LaTeX"><![CDATA[$\partial _t\delta l \sim 10^{-4} \, \rm cm/s$]]></tex-math>
+            </inline-formula> (<italic>
+            t</italic><sub>obs</sub> &#x003D; 1&#x2009;s for <italic>S</italic>/<italic>N</italic>
+            &#x003E; 1). This covers the range of the QCD axion mass <inline-formula>
+                <tex-math id="TM0119" notation="LaTeX"><![CDATA[$m_a\sim 10^{-5} \, \mbox{eV}$]]></tex-math>
+            </inline-formula>
+            because &#x03C0;/<italic>m</italic><sub>
+                <italic>a</italic>
+            </sub> &#x223C; 6&#x2009;cm. On the other hand, in
+            order to cover the range of the axion mass &#x223C;10<sup>&#x2212;4</sup>&#x2009;eV
+            (&#x03C0;/<italic>m</italic><sub>
+                <italic>a</italic>
+            </sub> &#x223C; 6 &#x00D7; 10<sup>&#x2212;1</sup>&#x2009;cm),
+            we can search it for 10&#x00A0;days if we tune the spacing with the speed <inline-formula>
+                <tex-math id="TM0120" notation="LaTeX"><![CDATA[$\partial _t\delta l \sim 10^{-4} \, \rm cm/(10^2 \, s)$]]></tex-math>
+            </inline-formula> (<italic>
+            t</italic><sub>obs</sub> &#x003D; 10<sup>2</sup>&#x2009;s for <italic>S</italic>/<italic>
+            N</italic> &#x003E; 1). But, to cover the range of <italic>m</italic><sub>
+                <italic>a</italic>
+            </sub> &#x003D; 10<sup>&#x2212;3</sup>&#x2009;eV, we
+            need <italic>t</italic><sub>obs</sub> &#x003D; 10<sup>6</sup>&#x2009;s for <italic>S</italic>
+            /<italic>N</italic> &#x003E; 1, so it takes more than 10&#x00A0;years to search the
+            spacing &#x0394;<italic>l</italic> &#x223C; 0.06&#x2009;cm. However, if we can tune the
+            spacing &#x03B4;<italic>l</italic> &#x003D; 10<sup>&#x2212;5</sup>&#x2009;cm, by taking <inline-formula>
+                <tex-math id="TM0121" notation="LaTeX"><![CDATA[$\partial _t\delta l \sim 10^{-5} \, \rm cm/(10^2 \, s)$]]></tex-math>
+            </inline-formula> (<italic>
+            t</italic><sub>obs</sub> &#x003D; 10<sup>2</sup>&#x2009;s for <italic>S</italic>/<italic>
+            N</italic> &#x003E; 1), we can search the spacing &#x0394;<italic>l</italic> &#x223C;
+            0.06&#x2009;cm within 10&#x00A0;days even for <italic>m</italic><sub>
+                <italic>a</italic>
+            </sub> &#x003D; 10<sup>&#x2212;3</sup>&#x2009;eV.</p>
+        <p>On the other hand, when we search the mass &#x223C;3 &#x00D7; 10<sup>&#x2212;6</sup>&#x2009;eV
+            (&#x03C0;/<italic>m</italic><sub>
+                <italic>a</italic>
+            </sub> &#x223C; 20&#x2009;cm), we need larger slabs,
+            such as <italic>L</italic> &#x003D; <italic>R</italic> &#x003D; 40&#x2009;cm for our
+            approximation of an infinitely extending conductor to hold. Then, the power of the Joule
+            heating or the <italic>S</italic>/<italic>N</italic> ratio is much bigger so that
+            detection is much easier because we can take &#x03B4;<italic>l</italic> &#x003D; 10<sup>
+            &#x2212;3</sup>&#x2009;cm and <italic>t</italic><sub>obs</sub> &#x003D; 1&#x2009;s, as
+            we can see from Eq.&#x00A0;(<xref ref-type="disp-formula" rid="equ34">34</xref>). In
+            this way, it turns out that the new method of axion detection is very effective for the
+            QCD axion search.</p>
+        <sec id="sec1">
+            <title>FUNDING</title>
+            <p>Open Access funding: SCOAP<sup>3</sup>.</p>
+        </sec>
+    </body>
+    <back>
+        <ack id="ack1">
+            <title>ACKNOWLEDGEMENTS</title>
+            <p>The author expresses thanks to Yasuhiro Kishimoto and Kazunori Nakayama for useful
+                comments and discussions. He also expresses thanks to Le Hoang Nguyen for useful
+                suggestions. This work is supported in part by Grant-in-Aid for Scientific Research
+                (KAKENHI) No. 19K03832.</p>
+        </ack>
+        <ref-list id="ref1">
+            <title>REFERENCES</title>
+            <ref id="bib1">
+                <label>[1]</label>
+                <mixed-citation publication-type="journal"><person-group person-group-type="author"><string-name
+                            name-style="western">
+                            <given-names>R. D.</given-names>
+                            <surname>Peccei</surname>
+                        </string-name>, <string-name
+                            name-style="western">
+                            <given-names>H. R.</given-names>
+                            <surname>Quinn</surname>
+                        </string-name></person-group>
+                    , <source>Phys. Rev. Lett.</source> <volume>38</volume>, <fpage>1440</fpage> (<year>
+                    1977</year>).<pub-id pub-id-type="doi">10.1103/PhysRevLett.38.1440</pub-id></mixed-citation>
+            </ref>
+            <ref id="bib2">
+                <label>[2]</label>
+                <mixed-citation publication-type="journal"><person-group person-group-type="author">
+                        <string-name name-style="western">
+                            <given-names>S.</given-names>
+                            <surname>Weinberg</surname>
+                        </string-name>
+                    </person-group>
+                    , <source>Phys. Rev. Lett.</source> <volume>40</volume>, <fpage>223</fpage> (<year>
+                    1978</year>).<pub-id pub-id-type="doi">10.1103/PhysRevLett.40.223</pub-id></mixed-citation>
+            </ref>
+            <ref id="bib3">
+                <label>[3]</label>
+                <mixed-citation publication-type="journal"><person-group person-group-type="author">
+                        <string-name name-style="western">
+                            <given-names>F.</given-names>
+                            <surname>Wilczek</surname>
+                        </string-name>
+                    </person-group>
+                    , <source>Phys. Rev. Lett.</source> <volume>40</volume>, <fpage>279</fpage> (<year>
+                    1978</year>).<pub-id pub-id-type="doi">10.1103/PhysRevLett.40.279</pub-id></mixed-citation>
+            </ref>
+            <ref id="bib4">
+                <label>[4]</label>
+                <mixed-citation publication-type="journal"><person-group person-group-type="author"><string-name
+                            name-style="western">
+                            <given-names>J.</given-names>
+                            <surname>Preskill</surname>
+                        </string-name>, <string-name
+                            name-style="western">
+                            <given-names>M. B.</given-names>
+                            <surname>Wise</surname>
+                        </string-name>, <string-name
+                            name-style="western">
+                            <given-names>F.</given-names>
+                            <surname>Wilczek</surname>
+                        </string-name></person-group>
+                    , <source>Phys. Lett. B</source>. <volume>120</volume>, <fpage>127</fpage> (<year>
+                    1983</year>).<pub-id pub-id-type="doi">10.1016/0370-2693(83)90637-8</pub-id></mixed-citation>
+            </ref>
+            <ref id="bib5">
+                <label>[5]</label>
+                <mixed-citation publication-type="journal"><person-group person-group-type="author"><string-name
+                            name-style="western">
+                            <given-names>L. F.</given-names>
+                            <surname>Abbott</surname>
+                        </string-name>, <string-name
+                            name-style="western">
+                            <given-names>P.</given-names>
+                            <surname>Sikivie</surname>
+                        </string-name></person-group>
+                    , <source>Phys. Lett. B</source>. <volume>120</volume>, <fpage>133</fpage> (<year>
+                    1983</year>).<pub-id pub-id-type="doi">10.1016/0370-2693(83)90638-X</pub-id></mixed-citation>
+            </ref>
+            <ref id="bib6">
+                <label>[6]</label>
+                <mixed-citation publication-type="journal"><person-group person-group-type="author"><string-name
+                            name-style="western">
+                            <given-names>M.</given-names>
+                            <surname>Dine</surname>
+                        </string-name>, <string-name
+                            name-style="western">
+                            <given-names>W.</given-names>
+                            <surname>Fischler</surname>
+                        </string-name></person-group>
+                    , <source>Phys. Lett. B</source>. <volume>120</volume>, <fpage>137</fpage> (<year>
+                    1983</year>).<pub-id pub-id-type="doi">10.1016/0370-2693(83)90639-1</pub-id></mixed-citation>
+            </ref>
+            <ref id="bib7">
+                <label>[7]</label>
+                <mixed-citation publication-type="journal"><person-group person-group-type="author">
+                        <string-name name-style="western">
+                            <given-names>T.</given-names>
+                            <surname>Braine</surname>
+                        </string-name>
+                        <etal>et al.</etal>
+                    </person-group> <source>Phys. Rev.
+                    Lett.</source> <volume>124</volume>, <fpage>101303</fpage> (<year>2020</year>).<pub-id
+                        pub-id-type="doi">10.1103/PhysRevLett.124.101303</pub-id></mixed-citation>
+            </ref>
+            <ref id="bib8">
+                <label>[8]</label>
+                <mixed-citation publication-type="other"><person-group person-group-type="author">
+                        <string-name name-style="western">
+                            <given-names>K.</given-names>
+                            <surname>Yamamoto</surname>
+                        </string-name>
+                        <etal>et al.</etal>
+                    </person-group> <source>&#x00A0;DARK</source>
+                    , <fpage>639</fpage> (<year>2000</year>), <comment>available at: <ext-link
+                            ext-link-type="uri" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xlink:href="https://arxiv.org/abs/hep-ph/0101200">
+                    https://arxiv.org/abs/hep-ph/0101200</ext-link></comment>.</mixed-citation>
+            </ref>
+            <ref id="bib9">
+                <label>[9]</label>
+                <mixed-citation publication-type="journal"><person-group person-group-type="author">
+                        <string-name name-style="western">
+                            <given-names>L.</given-names>
+                            <surname>Zhong</surname>
+                        </string-name>
+                        <etal>et al.</etal>
+                    </person-group> <source>Phys. Rev. D</source>
+                    . <volume>97</volume>, <fpage>092001</fpage> (<year>2018</year>).<pub-id
+                        pub-id-type="doi">10.1103/PhysRevD.97.092001</pub-id></mixed-citation>
+            </ref>
+            <ref id="bib10">
+                <label>[10]</label>
+                <mixed-citation publication-type="journal"><person-group person-group-type="author">
+                        <string-name name-style="western">
+                            <given-names>J. L.</given-names>
+                            <surname>Ouellet</surname>
+                        </string-name>
+                        <etal>et al.</etal>
+                    </person-group> <source>Phys. Rev.
+                    Lett.</source> <volume>122</volume>, <fpage>121802</fpage> (<year>2020</year>).</mixed-citation>
+            </ref>
+            <ref id="bib11">
+                <label>[11]</label>
+                <mixed-citation publication-type="journal"><person-group person-group-type="author">
+                        <string-name name-style="western">
+                            <given-names>B. T.</given-names>
+                            <surname>McAllister</surname>
+                        </string-name>
+                    </person-group> <source>Phys.
+                    Dark Univ.</source> <volume>18</volume>, <fpage>67</fpage> (<year>2017</year>).<pub-id
+                        pub-id-type="doi">10.1016/j.dark.2017.09.010</pub-id></mixed-citation>
+            </ref>
+            <ref id="bib12">
+                <label>[12]</label>
+                <mixed-citation publication-type="other"><person-group person-group-type="author">
+                        <string-name name-style="western">
+                            <given-names>X.</given-names>
+                            <surname>Li</surname>
+                        </string-name>
+                        <etal>et al.</etal>
+                    </person-group>, <comment>PoS <bold>
+                    ICHEP2020</bold></comment>, <fpage>645</fpage> (<year>2021</year>).</mixed-citation>
+            </ref>
+            <ref id="bib13">
+                <label>[13]</label>
+                <mixed-citation publication-type="journal"><person-group person-group-type="author"><string-name
+                            name-style="western">
+                            <given-names>D.</given-names>
+                            <surname>Horns</surname>
+                        </string-name>, <string-name
+                            name-style="western">
+                            <given-names>J.</given-names>
+                            <surname>Jaeckel</surname>
+                        </string-name>, <string-name
+                            name-style="western">
+                            <given-names>A.</given-names>
+                            <surname>Lindner</surname>
+                        </string-name>, <string-name
+                            name-style="western">
+                            <given-names>A.</given-names>
+                            <surname>Lobanov</surname>
+                        </string-name>, <string-name
+                            name-style="western">
+                            <given-names>J.</given-names>
+                            <surname>Redondo</surname>
+                        </string-name>, <string-name
+                            name-style="western">
+                            <given-names>A.</given-names>
+                            <surname>Ringwald</surname>
+                        </string-name></person-group>
+                    , <source>J. Cosmol. Astropart. Phys.</source> <volume>04</volume>, <fpage>016</fpage>
+                    (<year>2013</year>).<pub-id pub-id-type="doi">10.1088/1475-7516/2013/04/016</pub-id></mixed-citation>
+            </ref>
+            <ref id="bib14">
+                <label>[14]</label>
+                <mixed-citation publication-type="journal"><person-group person-group-type="author">
+                        <string-name name-style="western">
+                            <given-names>V.</given-names>
+                            <surname>Anastassopoulos</surname>
+                        </string-name>
+                        <etal>et al.</etal>
+                    </person-group> <source>Nature Phys.</source> <volume>
+                    13</volume>, <fpage>584</fpage> (<year>2017</year>).<pub-id pub-id-type="doi">
+                    10.1038/nphys4109</pub-id></mixed-citation>
+            </ref>
+            <ref id="bib15">
+                <label>[15]</label>
+                <mixed-citation publication-type="journal"><person-group person-group-type="author">
+                        <string-name name-style="western">
+                            <given-names>R.</given-names>
+                            <surname>Ohta</surname>
+                        </string-name>
+                        <etal>et al.</etal>
+                    </person-group> <source>Nucl. Instr.
+                    Meth. A</source>. <volume>670</volume>, <fpage>73</fpage> (<year>2012</year>).<pub-id
+                        pub-id-type="doi">10.1016/j.nima.2011.12.027</pub-id></mixed-citation>
+            </ref>
+            <ref id="bib16">
+                <label>[16]</label>
+                <mixed-citation publication-type="other"><person-group person-group-type="author">
+                        <string-name name-style="western">
+                            <given-names>A.</given-names>
+                            <surname>Iwazaki</surname>
+                        </string-name>
+                    </person-group>
+                    , <pub-id pub-id-type="arxiv">arXiv:2107:06514</pub-id> <comment>[hep-ph] [<ext-link
+                            ext-link-type="uri" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xlink:href="https://inspirehep.net/literature?q=find%20EPRINT%202107:06514">Search
+                    inSPIRE</ext-link>].</comment></mixed-citation>
+            </ref>
+            <ref id="bib17">
+                <label>[17]</label>
+                <mixed-citation publication-type="journal"><person-group person-group-type="author"><string-name
+                            name-style="western">
+                            <given-names>P.</given-names>
+                            <surname>Sikivie</surname>
+                        </string-name>, <string-name
+                            name-style="western">
+                            <given-names>N.</given-names>
+                            <surname>Sullivan</surname>
+                        </string-name>, <string-name
+                            name-style="western">
+                            <given-names>D. B.</given-names>
+                            <surname>Tanner</surname>
+                        </string-name></person-group>
+                    , <source>Phys. Rev. Lett.</source> <volume>112</volume>, <fpage>13</fpage> (<year>
+                    2014</year>).<pub-id pub-id-type="doi">10.1103/PhysRevLett.112.131301</pub-id></mixed-citation>
+            </ref>
+            <ref id="bib18">
+                <label>[18]</label>
+                <mixed-citation publication-type="other"><person-group person-group-type="author"><string-name
+                            name-style="western">
+                            <given-names>Y.</given-names>
+                            <surname>Kishimoto</surname>
+                        </string-name>, <string-name
+                            name-style="western">
+                            <given-names>K.</given-names>
+                            <surname>Nakayama</surname>
+                        </string-name></person-group>
+                    , <pub-id pub-id-type="arxiv">arXiv:2111.02728</pub-id> <comment>[hep-ph] [<ext-link
+                            ext-link-type="uri" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xlink:href="https://inspirehep.net/literature?q=find%20EPRINT%202111.02728">Search
+                    inSPIRE</ext-link>].</comment></mixed-citation>
+            </ref>
+            <ref id="bib19">
+                <label>[19]</label>
+                <mixed-citation publication-type="journal"><person-group person-group-type="author"><string-name
+                            name-style="western">
+                            <given-names>M.</given-names>
+                            <surname>Dine</surname>
+                        </string-name>, <string-name
+                            name-style="western">
+                            <given-names>W.</given-names>
+                            <surname>Fischler</surname>
+                        </string-name></person-group>M.
+                    Srednicki,<source>Phys. Lett. B</source>. <volume>104</volume>, <fpage>199</fpage>
+                    (<year>1981</year>).<pub-id pub-id-type="doi">10.1016/0370-2693(81)90590-6</pub-id></mixed-citation>
+            </ref>
+            <ref id="bib20">
+                <label>[20]</label>
+                <mixed-citation publication-type="journal"><person-group person-group-type="author">
+                        <string-name name-style="western">
+                            <given-names>A. R.</given-names>
+                            <surname>Zhitnitsky</surname>
+                        </string-name>
+                    </person-group>
+                    , <source>Sov. J. Nucl. Phys.</source> <volume>31</volume>, <fpage>260</fpage> (<year>
+                    1980</year>).</mixed-citation>
+            </ref>
+            <ref id="bib21">
+                <label>[21]</label>
+                <mixed-citation publication-type="journal"><person-group person-group-type="author">
+                        <string-name name-style="western">
+                            <given-names>J. E.</given-names>
+                            <surname>Kim</surname>
+                        </string-name>
+                    </person-group>
+                    , <source>Phys. Rev. Lett.</source> <volume>43</volume>, <fpage>103</fpage> (<year>
+                    1979</year>).<pub-id pub-id-type="doi">10.1103/PhysRevLett.43.103</pub-id></mixed-citation>
+            </ref>
+            <ref id="bib22">
+                <label>[22]</label>
+                <mixed-citation publication-type="journal"><person-group person-group-type="author"><string-name
+                            name-style="western">
+                            <given-names>M. A.</given-names>
+                            <surname>Shifman</surname>
+                        </string-name>, <string-name
+                            name-style="western">
+                            <given-names>A. I.</given-names>
+                            <surname>Vainshtein</surname>
+                        </string-name>, <string-name
+                            name-style="western">
+                            <given-names>V. I.</given-names>
+                            <surname>Zakharov</surname>
+                        </string-name></person-group>
+                    , <source>Nucl. Phys. B</source>. <volume>166</volume>, <fpage>493</fpage> (<year>
+                    1980</year>).<pub-id pub-id-type="doi">10.1016/0550-3213(80)90209-6</pub-id></mixed-citation>
+            </ref>
+            <ref id="bib23">
+                <label>[23]</label>
+                <mixed-citation publication-type="journal"><person-group person-group-type="author">
+                        <string-name name-style="western">
+                            <given-names>A.</given-names>
+                            <surname>Iwazaki</surname>
+                        </string-name>
+                    </person-group>
+                    , <source>Phys. Lett. B</source>. <volume>811</volume>, <fpage>135861</fpage> (<year>
+                    2020</year>).<pub-id pub-id-type="doi">10.1016/j.physletb.2020.135861</pub-id></mixed-citation>
+            </ref>
+            <ref id="bib24">
+                <label>[24]</label>
+                <mixed-citation publication-type="journal"><person-group person-group-type="author">
+                        <string-name name-style="western">
+                            <given-names>A.</given-names>
+                            <surname>Iwazaki</surname>
+                        </string-name>
+                    </person-group>
+                    , <source>Nucl. Phys. B</source>. <volume>963</volume>, <fpage>115298</fpage> (<year>
+                    2021</year>).<pub-id pub-id-type="doi">10.1016/j.nuclphysb.2020.115298</pub-id></mixed-citation>
+            </ref>
+            <ref id="bib25">
+                <label>[25]</label>
+                <mixed-citation publication-type="other"><person-group person-group-type="author">
+                        <string-name name-style="western">
+                            <given-names>A.</given-names>
+                            <surname>Iwazaki</surname>
+                        </string-name>
+                    </person-group>
+                    , <pub-id pub-id-type="arxiv">arXiv:2111.02564</pub-id> <comment>[hep-ph] [<ext-link
+                            ext-link-type="uri" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xlink:href="https://inspirehep.net/literature?q=find%20EPRINT%202111.02564">Search
+                    inSPIRE</ext-link>].</comment></mixed-citation>
+            </ref>
+        </ref-list>
+    </back>
+</article>

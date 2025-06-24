@@ -1,0 +1,1371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" "JATS-journalpublishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="1.1" xml:lang="en"><front><journal-meta><journal-id journal-id-type="publisher-id">cpc</journal-id><journal-title-group><journal-title xml:lang="en">Chinese Physics C</journal-title></journal-title-group><issn pub-type="ppub">1674-1137</issn><publisher><publisher-name>Chinese Physical Society and the Institute of High Energy Physics of the Chinese Academy of Sciences and the Institute of Modern Physics of the Chinese Academy of Sciences and IOP Publishing Ltd
+                        </publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="publisher-id">cpc_47_4_043105</article-id><article-id pub-id-type="doi">10.1088/1674-1137/aca95c</article-id><article-id pub-id-type="manuscript">aca95c</article-id><article-categories><subj-group subj-group-type="display-article-type"><subject>Paper</subject></subj-group><subj-group subj-group-type="section"><subject> </subject></subj-group></article-categories><title-group><article-title>
+               <italic toggle="yes">R</italic>-Symmetric NMSSM<xref ref-type="fn" rid="cpc_47_4_043105_fn1">*</xref>
+				           <fn id="cpc_47_4_043105_fn1"><label>*</label><p>Supported in part by the National Natural Science Foundation of China (11775039), the High-level Talents Research and Startup Foundation Projects for Doctors of Zhoukou Normal University (ZKNUC2021006), and Scientific research projects of universities in Henan Province, China (23A140027).</p></fn>
+							     </article-title></title-group><contrib-group><contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Xu</surname><given-names>Shuai</given-names></name><name content-type="non-latin-no-space" name-style="eastern"><surname>徐</surname><given-names>帅</given-names></name><xref ref-type="aff" rid="affiliation01">1</xref><xref ref-type="aff" rid="affiliation02">2</xref></contrib><contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Zheng</surname><given-names>Sibo</given-names></name><name content-type="non-latin-no-space" name-style="eastern"><surname>郑</surname><given-names>思波</given-names></name><xref ref-type="aff" rid="affiliation02">2</xref><email>sibozheng.zju@gmail.com</email></contrib><aff id="affiliation01">
+               <label>1</label>
+				           <institution xlink:type="simple">School of Physics and Telecommunications Engineering, Zhoukou Normal University</institution>, Zhoukou 466001, <country>China</country>
+							     </aff><aff id="affiliation02">
+               <label>2</label>
+				           <institution xlink:type="simple">Department of Physics, Chongqing University</institution>, Chongqing 401331, <country>China</country>
+							     </aff></contrib-group><pub-date pub-type="ppub"><day>01</day><month>4</month><year>2023</year></pub-date><pub-date pub-type="open-access"><day>8</day><month>12</month><year>2022</year></pub-date><volume>47</volume><issue>4</issue><elocation-id content-type="artnum">043105</elocation-id><history><date date-type="received"><day>11</day><month>10</month><year>2022</year></date><date date-type="published-online"><day>8</day><month>12</month><year>2022</year></date><date date-type="oa-requested"><day>11</day><month>10</month><year>2022</year></date></history><permissions><copyright-statement>© 2023 Chinese Physical Society and the Institute of High Energy Physics of the Chinese Academy of Sciences and the Institute of Modern Physics of the Chinese Academy of Sciences and IOP Publishing Ltd</copyright-statement><copyright-year>2023</copyright-year><license license-type="cc-by" xlink:href="http://creativecommons.org/licenses/by/3.0/" xlink:type="simple"><license-p>
+                  <graphic content-type="online" orientation="portrait" position="float" xlink:href="cpc_47_4_043105_ccby.tif" xlink:type="simple"/>Content from this work may be used under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/3.0" xlink:type="simple">Creative Commons Attribution 3.0 licence</ext-link>. Any further distribution of this work must maintain attribution to the author(s) and the title of the work, journal citation and DOI. Article funded by SCOAP<sup>3</sup> and published under licence by Chinese Physical Society and the Institute of High Energy Physics of the Chinese Academy of Sciences and the Institute of Modern Physics of the Chinese Academy of Sciences and IOP Publishing Ltd
+</license-p></license></permissions><self-uri content-type="pdf" xlink:href="cpc_47_4_043105.pdf" xlink:type="simple"/><abstract><title>Abstract</title><p>It is well known that the observed Higgs mass is more naturally explained in the next-to-minimal supersymmetric standard model (NMSSM) than in the minimal supersymmetric standard model. Without any violation of this success, there are variants of the NMSSM that can lead to new phenomenologies. In this study, we propose a new variant of the NMSSM by imposing an unbroken <italic toggle="yes">R</italic> symmetry. We first identify the minimal structure of such a scenario from the perspective of both simplicity and viability, then compare the model predictions to current experimental limits, and finally highlight the main features that differ from those of well-known scenarios.</p></abstract><kwd-group kwd-group-type="author"><kwd>
+               <italic toggle="yes">R </italic>symmetry</kwd><kwd>NMSSM</kwd><kwd>MSSM</kwd></kwd-group><funding-group><open-access><p content-type="scoap3">Article funded by SCOAP<sup>3</sup>
+               </p></open-access></funding-group><counts><page-count count="8"/></counts><custom-meta-group><custom-meta xlink:type="simple"><meta-name>arxivppt</meta-name><meta-value>1906.06486</meta-value></custom-meta></custom-meta-group></article-meta></front><body><sec id="cpc_47_4_043105_s01"><label>I.</label><title>INTRODUCTION</title><p>In the context of supersymmetry (SUSY), the minimal supersymmetric standard model (MSSM) is not favored by the observed Higgs mass [<xref ref-type="bibr" rid="cpc_47_4_043105_bib1">1</xref>, <xref ref-type="bibr" rid="cpc_47_4_043105_bib2">2</xref>] if naturalness is considered. The naturalness problem can be relieved by the addition of a standard model (SM) singlet, which directly couples to two Higgs doublets in the MSSM. Compared to the MSSM, in this singlet extended model known as the next-to-minimal supersymmetric standard model (NMSSM), the observed Higgs mass [<xref ref-type="bibr" rid="cpc_47_4_043105_bib3">3</xref>–<xref ref-type="bibr" rid="cpc_47_4_043105_bib8">8</xref>] is easily explained in terms of new tree-level contributions instead of large loop corrections. Apart from the Higgs mass issue, the conventional NMSSM has distinctive features, such as a relaxed constraint on neutralino dark matter from dark matter direct detection [<xref ref-type="bibr" rid="cpc_47_4_043105_bib9">9</xref>–<xref ref-type="bibr" rid="cpc_47_4_043105_bib11">11</xref>], and even enables us to address baryon asymmetry by means of strong first-order phase transition [<xref ref-type="bibr" rid="cpc_47_4_043105_bib12">12</xref>–<xref ref-type="bibr" rid="cpc_47_4_043105_bib14">14</xref>].</p><p>In fact, without any violation of the success of Higgs mass naturalness, the conventional NMSSM can be modified in several well-motivated ways, the new phenomenological outcomes of which may be more favored by current experiments. Recently, Ref. [<xref ref-type="bibr" rid="cpc_47_4_043105_bib15">15</xref>] considered the NMSSM extended by gauged <inline-formula>
+               <tex-math><?CDATA $ U(1)_{B-L} $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M1.jpg" xlink:type="simple"/>
+            </inline-formula> symmetry, where gluinos and neutralinos are still Majorana fermions. As in earlier studies [<xref ref-type="bibr" rid="cpc_47_4_043105_bib16">16</xref>, <xref ref-type="bibr" rid="cpc_47_4_043105_bib17">17</xref>], in this study, we focus on the NMSSM extended by an unbroken <inline-formula>
+               <tex-math><?CDATA $ U(1)_R $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M2.jpg" xlink:type="simple"/>
+            </inline-formula> global symmetry, referred to as the RNMSSM, where gluinos and neutralinos are instead Dirac fermions. Because of <inline-formula>
+               <tex-math><?CDATA $ U(1)_R $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M3.jpg" xlink:type="simple"/>
+            </inline-formula> symmetry, we show that the Kahler potential and superpotential in the RNMSSM change as follows:</p><p>
+            <disp-formula>
+               <label>1</label>
+               <tex-math id="cpc_47_4_043105_E1"> <?CDATA $ K=K_{{\rm{MSSM}}} + N^{\dagger}N+\delta K, $?> </tex-math>
+               <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E1.jpg" xlink:type="simple"/>
+            </disp-formula>
+         </p><p>
+            <disp-formula>
+               <label>2</label>
+               <tex-math id="cpc_47_4_043105_E2"> <?CDATA $ W=W_{{\rm{MSSM}}}+\lambda NH_{u}H_{d}+\delta W, $?> </tex-math>
+               <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E2.jpg" xlink:type="simple"/>
+            </disp-formula>
+         </p><p>where <inline-formula>
+               <tex-math><?CDATA $ K_{{\rm{MSSM}}} $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M4.jpg" xlink:type="simple"/>
+            </inline-formula> and <inline-formula>
+               <tex-math><?CDATA $ W_{{\rm{MSSM}}} $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M5.jpg" xlink:type="simple"/>
+            </inline-formula> denote the Kahler potential and superpotential in the MSSM, respectively, <italic toggle="yes">N</italic> is the singlet, and <inline-formula>
+               <tex-math><?CDATA $ H_{u} $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M6.jpg" xlink:type="simple"/>
+            </inline-formula>and <inline-formula>
+               <tex-math><?CDATA $ H_d $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M7.jpg" xlink:type="simple"/>
+            </inline-formula> are two Higgs doublets. Accordingly, we also expect the soft terms in <inline-formula>
+               <tex-math><?CDATA $ \mathcal{L}_{{\rm{soft}}} $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M8.jpg" xlink:type="simple"/>
+            </inline-formula> to be altered.</p><p>The main goal of this study is to uncover the explicit forms of <inline-formula>
+               <tex-math><?CDATA $ \delta K $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M9.jpg" xlink:type="simple"/>
+            </inline-formula> and <inline-formula>
+               <tex-math><?CDATA $ \delta W $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M10.jpg" xlink:type="simple"/>
+            </inline-formula>  from the perspective of both simplicity and viability, where "simplicity" means that we seek a minimal extension on the matter content, whereas "viability" requires that the RNMSSM be consistent with current experimental bounds. In Sec. II, we highlight the <italic toggle="yes">R</italic> charge assignments to accommodate <inline-formula>
+               <tex-math><?CDATA $ U(1)_R $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M11.jpg" xlink:type="simple"/>
+            </inline-formula> symmetry. In Sec. III, we first infer the structure of the minimal RNMSSM and then discuss the main features of the supersymmetric mass spectrum and phenomenological implications to gauginos, charginos, neutralinos, and sfermions. Finally, we conclude with Sec. IV.</p></sec><sec id="cpc_47_4_043105_s02"><label>II.</label><title>
+            <italic toggle="yes">R</italic> SYMMETRY</title><p>To be consistent with <inline-formula>
+               <tex-math><?CDATA $ U(1)_R $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M12.jpg" xlink:type="simple"/>
+            </inline-formula> symmetry, the <italic toggle="yes">R</italic> charges of several matter fields should be assigned as follows:</p><p>● The <italic toggle="yes">R</italic> charges of Higgs doublets must be zero to ensure an unbroken <italic toggle="yes">R</italic> symmetry after electroweak symmetry breaking. This <italic toggle="yes">R</italic> charge assignment makes our model different from that in Ref. [<xref ref-type="bibr" rid="cpc_47_4_043105_bib16">16</xref>], where <italic toggle="yes">R</italic> symmetry is broken by the vacuum expectation values (vevs) of the Higgs doublets.</p><p>● The <italic toggle="yes">R</italic> charge of <italic toggle="yes">N</italic> should be two from the Yukawa interaction <inline-formula>
+               <tex-math><?CDATA $ W\supset NH_{u}H_{d} $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M13.jpg" xlink:type="simple"/>
+            </inline-formula> in Eq. (2), and the vev of this scalar field should also be zero, that is, <inline-formula>
+               <tex-math><?CDATA $ \left \lt N\right \gt =0 $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M14.jpg" xlink:type="simple"/>
+            </inline-formula>.</p><p>● The <italic toggle="yes">R</italic> charges of SM gauge superfields <inline-formula>
+               <tex-math><?CDATA $ W^{i}_{\alpha} $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M15.jpg" xlink:type="simple"/>
+            </inline-formula>  (<inline-formula>
+               <tex-math><?CDATA $ i=1-3 $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M16.jpg" xlink:type="simple"/>
+            </inline-formula>) must be one<sup>
+               <xref ref-type="fn" rid="cpc_47_4_043105_pn1">①</xref>
+            </sup>, which ensures that all of the SM gauge fields are neutral under <inline-formula>
+               <tex-math><?CDATA $ U(1)_R $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M17.jpg" xlink:type="simple"/>
+            </inline-formula>.</p><p>From the <italic toggle="yes">R</italic> charge assignments above, one can infer the <italic toggle="yes">R</italic> charges of all matter superfields from Eq. (2), which are explicitly shown in <xref ref-type="table" rid="cpc_47_4_043105_t1">Table 1</xref>. They imply that none of the SM fields carry the <italic toggle="yes">R</italic> charge.</p><table-wrap id="cpc_47_4_043105_t1" orientation="portrait" position="float"><label>Table 1</label><caption id="cpc_47_4_043105_tc1"><p>Matter content and <italic toggle="yes">R</italic> charge assignments in the minimal RNMSSM, where <inline-formula>
+                     <tex-math><?CDATA $ \sigma_1 $?></tex-math>
+                     <inline-graphic xlink:href="cpc_47_4_043105_M169.jpg" xlink:type="simple"/>
+                  </inline-formula>, <inline-formula>
+                     <tex-math><?CDATA $ \sigma_{3} $?></tex-math>
+                     <inline-graphic xlink:href="cpc_47_4_043105_M170.jpg" xlink:type="simple"/>
+                  </inline-formula>, <italic toggle="yes">T</italic>, and <inline-formula>
+                     <tex-math><?CDATA $ \sigma_8 $?></tex-math>
+                     <inline-graphic xlink:href="cpc_47_4_043105_M171.jpg" xlink:type="simple"/>
+                  </inline-formula> refer to an <inline-formula>
+                     <tex-math><?CDATA $S U(2)_L$?></tex-math>
+                     <inline-graphic xlink:href="cpc_47_4_043105_M172.jpg" xlink:type="simple"/>
+                  </inline-formula> singlet, two <inline-formula>
+                     <tex-math><?CDATA $S U(2)_L$?></tex-math>
+                     <inline-graphic xlink:href="cpc_47_4_043105_M173.jpg" xlink:type="simple"/>
+                  </inline-formula> triplets, and an <inline-formula>
+                     <tex-math><?CDATA $S U(3)_c$?></tex-math>
+                     <inline-graphic xlink:href="cpc_47_4_043105_M174.jpg" xlink:type="simple"/>
+                  </inline-formula> octet states, respectively. The triplets (octet) make the charginos and neutralinos (gluino) Dirac fermions. See Sec. III for details.</p></caption><table><thead><tr><th align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{Field}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M175.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </th><th align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $({S U}(3)_{c}, {S U}(2)_{L})_{U(1)_{Y}}$?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M176.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </th><th align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA ${U}(1)_{R}$?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M177.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </th></tr></thead><tbody><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <italic toggle="yes">Q</italic>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ (3,2)_{1/6} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M178.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ 1 $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M179.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ \bar{u} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M180.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ (\bar{3},1)_{-2/3} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M181.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ 1 $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M182.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ \bar{d} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M183.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ (\bar{3},1)_{1/3} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M184.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ 1 $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M185.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <italic toggle="yes">L</italic>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ (1,2)_{-1/2} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M186.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ 1 $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M187.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ \bar{e} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M188.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ (1,1)_{1} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M189.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ 1 $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M190.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ H_{u} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M191.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ (1,2)_{1/2} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M192.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ 0 $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M193.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ H_{d} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M194.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ (1,2)_{-1/2} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M195.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ 0 $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M196.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <italic toggle="yes">N</italic>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ (1,1)_{0} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M197.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ 2 $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M198.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ \sigma_{1} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M199.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ (1, 1)_{0} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M200.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ 0 $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M201.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ \sigma_{3} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M202.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ (1, 3)_{0} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M203.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ 0 $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M204.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <italic toggle="yes">T</italic>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ (1,3)_{0} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M205.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ 2 $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M206.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ \sigma_{8} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M207.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ (8,1)_{0} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M208.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ 0 $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M209.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td></tr></tbody></table></table-wrap></sec><sec id="cpc_47_4_043105_s03"><label>III.</label><title>PHENOMENOLOGY OF THE MINIMAL RNMSSM</title><p>In this section, we discuss the phenomenological features in the minimal RNMSSM.</p><sec id="cpc_47_4_043105_s03-01"><label>A.</label><title>Gluino</title><p>With unbroken <italic toggle="yes">R</italic> symmetry, gauginos such as binos <inline-formula>
+                  <tex-math><?CDATA $ \tilde{B} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M18.jpg" xlink:type="simple"/>
+               </inline-formula>, winos <inline-formula>
+                  <tex-math><?CDATA $ \tilde{W} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M19.jpg" xlink:type="simple"/>
+               </inline-formula>, and gluinos <inline-formula>
+                  <tex-math><?CDATA $ \tilde{g} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M20.jpg" xlink:type="simple"/>
+               </inline-formula> must be Dirac fermions [<xref ref-type="bibr" rid="cpc_47_4_043105_bib18">18</xref>, <xref ref-type="bibr" rid="cpc_47_4_043105_bib19">19</xref>] instead of Majorana fermions, which couple to the fermion components <inline-formula>
+                  <tex-math><?CDATA $ \tilde{\sigma}_{i} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M21.jpg" xlink:type="simple"/>
+               </inline-formula> in the chiral adjoint superfields <inline-formula>
+                  <tex-math><?CDATA $ \sigma_i $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M22.jpg" xlink:type="simple"/>
+               </inline-formula> as</p><p>
+               <disp-formula>
+                  <label>3</label>
+                  <tex-math id="cpc_47_4_043105_E3"> <?CDATA $ \begin{array}{*{20}{l}} { } \mathcal{L}_{{\rm{soft}}} \supset m_{1}\tilde{\sigma}_{1}\tilde{B}+ m_{2}\tilde{\sigma}_{3}\tilde{W}+m_{3}\tilde{\sigma}_{8}\tilde{g}. \end{array} $?> </tex-math>
+                  <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E3.jpg" xlink:type="simple"/>
+               </disp-formula>
+            </p><p>From Eq. (3), the <italic toggle="yes">R</italic> charges of these chiral superfields are found to be zero, as shown in <xref ref-type="table" rid="cpc_47_4_043105_t1">Table 1</xref>. The input values of the gaugino masses <inline-formula>
+                  <tex-math><?CDATA $ m_i $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M23.jpg" xlink:type="simple"/>
+               </inline-formula> in Eq. (3) are read from soft SUSY-breaking operators such as</p><p>
+               <disp-formula>
+                  <label>4</label>
+                  <tex-math id="cpc_47_4_043105_E4"> <?CDATA $ \int {\rm d}^{2}\theta \frac{D_{\alpha}X}{M} W^{\alpha}_{i}\sigma^{i}+\int {\rm d}^{4}\theta \frac{X^{\dagger}X}{M^{2}}\sigma^{\dagger}_{i}\sigma_{i}, $?> </tex-math>
+                  <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E4.jpg" xlink:type="simple"/>
+               </disp-formula>
+            </p><p>where <italic toggle="yes">X</italic> represents the SUSY-breaking sector<sup>
+                  <xref ref-type="fn" rid="cpc_47_4_043105_pn2">②</xref>
+               </sup>, and <italic toggle="yes">M</italic> denotes the scale at which the SUSY-breaking effect is mediated to the RNMSSM. Eq. (4) is consistent with the SM gauge symmetries and <italic toggle="yes">R</italic> symmetry shown in <xref ref-type="table" rid="cpc_47_4_043105_t1">Table 1</xref>, where the first and second yield the one-loop Dirac gaugino masses <inline-formula>
+                  <tex-math><?CDATA $ m_{i}\sim F/M $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M24.jpg" xlink:type="simple"/>
+               </inline-formula> and the two-loop scalar soft mass squared <inline-formula>
+                  <tex-math><?CDATA $ m^{2}_{\sigma_{i}}\sim F^{2}/M^{2} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M25.jpg" xlink:type="simple"/>
+               </inline-formula> at the input scale <italic toggle="yes">M</italic>, respectively.</p><p>Similar to a Majorana analogy, the Dirac gluino can be directly produced at hadron colliders. Because the production cross section of the Dirac gluino not only depends on the gluino mass <inline-formula>
+                  <tex-math><?CDATA $ m_3 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M26.jpg" xlink:type="simple"/>
+               </inline-formula> but also squark mass parameters, we are unable to constrain <inline-formula>
+                  <tex-math><?CDATA $ m_3 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M27.jpg" xlink:type="simple"/>
+               </inline-formula> in model-independent ways. For discussions on the constraints from current LHC and future collider experiments, see Refs. [<xref ref-type="bibr" rid="cpc_47_4_043105_bib23">23</xref>–<xref ref-type="bibr" rid="cpc_47_4_043105_bib25">25</xref>, <xref ref-type="bibr" rid="cpc_47_4_043105_bib26">26</xref>], respectively.</p></sec><sec id="cpc_47_4_043105_s03-02"><label>B.</label><title>Charginos and neutralinos</title><p>Without the <inline-formula>
+                  <tex-math><?CDATA $S U(2)_L$?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M28.jpg" xlink:type="simple"/>
+               </inline-formula> triplet <italic toggle="yes">T</italic> shown in <xref ref-type="table" rid="cpc_47_4_043105_t1">Table 1</xref>, the determinant of the charged chargino mass matrix vanishes owing to the unbroken <italic toggle="yes">R</italic> symmetry. This mass issue can be resolved by an extension of the matter content. The simplest way to achieve this is via the addition of the triplet <italic toggle="yes">T</italic> [<xref ref-type="bibr" rid="cpc_47_4_043105_bib16">16</xref>], which couples to the Higgs doublets as</p><p>
+               <disp-formula>
+                  <label>5</label>
+                  <tex-math id="cpc_47_4_043105_E5"> <?CDATA $ \delta W=\int {\rm d}^{2}\theta \; y_{T}H_{d}TH_{u}. $?> </tex-math>
+                  <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E5.jpg" xlink:type="simple"/>
+               </disp-formula>
+            </p><p>Equation (5) suggests that <italic toggle="yes">T</italic> has an <italic toggle="yes">R</italic> charge of <inline-formula>
+                  <tex-math><?CDATA $ +2 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M29.jpg" xlink:type="simple"/>
+               </inline-formula>. With the quantum numbers of <italic toggle="yes">T</italic>, one can infer its soft masses from the SUSY-breaking operators,</p><p>
+               <disp-formula>
+                  <label>6</label>
+                  <tex-math id="cpc_47_4_043105_E6"> <?CDATA $ \int {\rm d}^{4}\theta \frac{X^{\dagger}X}{M^{2}} T^{\dagger}T+ \int {\rm d}^{2}\theta \frac{D^{2}X}{M}{\rm{tr}}\left(T\sigma_{3}\right), $?> </tex-math>
+                  <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E6.jpg" xlink:type="simple"/>
+               </disp-formula>
+            </p><p>where the first and second terms give rise to the triplet scalar mass squared <inline-formula>
+                  <tex-math><?CDATA $ m^{2}_{T}\sim F^{2}/M^{2} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M30.jpg" xlink:type="simple"/>
+               </inline-formula> and a new Dirac mass parameter <inline-formula>
+                  <tex-math><?CDATA $ m'_{2} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M31.jpg" xlink:type="simple"/>
+               </inline-formula> similar to <inline-formula>
+                  <tex-math><?CDATA $ m_2 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M32.jpg" xlink:type="simple"/>
+               </inline-formula> in Eq. (3), respectively.</p><p>To explicitly write the Dirac chargino and neutralino mass matrices, it is convenient to divide the triplet fields <inline-formula>
+                  <tex-math><?CDATA $ \sigma_{3} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M39.jpg" xlink:type="simple"/>
+               </inline-formula> in Eq. (3) and <italic toggle="yes">T</italic> in Eq. (5) into the neutral fields <inline-formula>
+                  <tex-math><?CDATA $ \sigma^{0}_{3} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M40.jpg" xlink:type="simple"/>
+               </inline-formula> and <inline-formula>
+                  <tex-math><?CDATA $ T^{0} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M41.jpg" xlink:type="simple"/>
+               </inline-formula> and the charged fields <inline-formula>
+                  <tex-math><?CDATA $ \sigma^{\pm}_{3} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M42.jpg" xlink:type="simple"/>
+               </inline-formula> and <inline-formula>
+                  <tex-math><?CDATA $ T^{\pm} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M43.jpg" xlink:type="simple"/>
+               </inline-formula>, respectively. With the new superpotential term in Eq. (5) taken into account, the chargino and neutralino mass matrices are now given as</p><p>
+               <disp-formula>
+                  <label>7</label>
+                  <tex-math id="cpc_47_4_043105_E7"> <?CDATA $ \begin{array}{*{20}{l}} \left(\begin{array}{cccc} \tilde{\sigma}^-_{3} & \tilde{T}^- & \tilde{W}^- & \tilde{H}_{d}^-\end{array}\right) \left( \begin{array}{cccc} 0 & m'_{2} & m_{2} & 0 \\ m'_{2} & 0 & 0 & y_{T}\upsilon_{d} \\ m_{2} & 0 & 0 & \sqrt{2}m_{W}\sin\beta \\ 0 & -y_{T}\upsilon_{u} & \sqrt{2}m_{W}\cos\beta & 0 \\ \end{array}\right) \left(\begin{array}{c} \tilde{\sigma}^+_{3}\\ \tilde{T}^+\\ \tilde{W}^+ \\ \tilde{H}_{u}^+ \\ \end{array}\right), \end{array} $?> </tex-math>
+                  <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E7.jpg" xlink:type="simple"/>
+               </disp-formula>
+            </p><p>
+               <disp-formula>
+                  <label>8</label>
+                  <tex-math id="cpc_47_4_043105_E8"> <?CDATA $ \begin{array}{*{20}{l}} \left(\begin{array}{cccc} \tilde{\sigma}^{0}_{1} & \tilde{\sigma}^{0}_{3} & \tilde{H}_{u}^{0} & \tilde{H}_{d}^{0}\end{array}\right) \left( \begin{array}{cccc} m_{1 } & 0 & 0 & 0\\ 0 & m_{2} & 0 & m'_{2} \\ m_{Z}\sin\theta_{W} \cos\beta & -m_{Z}\cos\theta_{W} \sin\beta & -\lambda\upsilon_{d} & -y_{T}\upsilon_{d}\\ -m_{Z}\sin\theta_{W} \cos\beta & m_{Z}\cos\theta_{W} \cos\beta & -\lambda\upsilon_{u} & -y_{T}\upsilon_{u} \\ \end{array}\right) \left(\begin{array}{c} \tilde{B}^{0}\\ \tilde{W}^{0} \\ \tilde{N}^{0} \\ \tilde{T}^{0} \\ \end{array}\right), \end{array} $?> </tex-math>
+                  <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E8.jpg" xlink:type="simple"/>
+               </disp-formula>
+            </p><p>respectively, where <inline-formula>
+                  <tex-math><?CDATA $ \theta_W $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M44.jpg" xlink:type="simple"/>
+               </inline-formula> is the weak mixing angle, the vevs of the two Higgs doublets satisfy <inline-formula>
+                  <tex-math><?CDATA $\upsilon^{2}_{u}+\upsilon^{2}_{d}=\upsilon^{2}= (174\; {\rm{GeV}})^{2}$?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M45.jpg" xlink:type="simple"/>
+               </inline-formula> with <inline-formula>
+                  <tex-math><?CDATA $ \tan\beta=\upsilon_{u}/\upsilon_{d} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M46.jpg" xlink:type="simple"/>
+               </inline-formula>, and we simply assume the singlet vevs</p><p>
+               <disp-formula>
+                  <label>9</label>
+                  <tex-math id="cpc_47_4_043105_E9"> <?CDATA $ \begin{array}{*{20}{l}} { } \left \lt \sigma^{0}_{1}\right \gt =\left \lt \sigma^{0}_{3}\right \gt =0. \end{array} $?> </tex-math>
+                  <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E9.jpg" xlink:type="simple"/>
+               </disp-formula>
+            </p><p>Although nonzero <inline-formula>
+                  <tex-math><?CDATA $ \left \lt \sigma^{0}_{1}\right \gt $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M47.jpg" xlink:type="simple"/>
+               </inline-formula> and <inline-formula>
+                  <tex-math><?CDATA $ \left \lt \sigma^{0}_{3}\right \gt $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M48.jpg" xlink:type="simple"/>
+               </inline-formula> are allowed by <italic toggle="yes">R</italic> symmetry, they make the analysis of electroweak symmetry breaking more complicated than with the values we choose.</p><p>In the Dirac chargino mass spectrum given by Eq. (7), the lightest mass <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{\pm}_{1}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M49.jpg" xlink:type="simple"/>
+               </inline-formula> is sensitive to the triplet <italic toggle="yes">T</italic> in the sense that it vanishes as <italic toggle="yes">T</italic> disappears, that is, <inline-formula>
+                  <tex-math><?CDATA $ y_{T}\rightarrow 0 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M50.jpg" xlink:type="simple"/>
+               </inline-formula> and <inline-formula>
+                  <tex-math><?CDATA $ m'_{2}\rightarrow 0 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M51.jpg" xlink:type="simple"/>
+               </inline-formula>. This must be avoided because <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{\pm}_{1}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M52.jpg" xlink:type="simple"/>
+               </inline-formula> must be larger than <inline-formula>
+                  <tex-math><?CDATA $ \sim 103.5 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M53.jpg" xlink:type="simple"/>
+               </inline-formula> GeV from the previous LEP-2 limit [<xref ref-type="bibr" rid="cpc_47_4_043105_bib27">27</xref>, <xref ref-type="bibr" rid="cpc_47_4_043105_bib28">28</xref>]. Improved bounds on <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{\pm}_{1}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M54.jpg" xlink:type="simple"/>
+               </inline-formula> inferred from current LHC data [<xref ref-type="bibr" rid="cpc_47_4_043105_bib29">29</xref>, <xref ref-type="bibr" rid="cpc_47_4_043105_bib30">30</xref>] are sensitive to the <inline-formula>
+                  <tex-math><?CDATA $ \chi^{\pm}_{1} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M55.jpg" xlink:type="simple"/>
+               </inline-formula> decay pattern because many choices exist owing to the wide range of the lightest neutralino mass <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{0}_{1}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M56.jpg" xlink:type="simple"/>
+               </inline-formula> in Eq. (8). In the case of <inline-formula>
+                  <tex-math><?CDATA $ \chi^{\pm}_{1}\rightarrow \chi^{0}_{1}+W^{\pm} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M57.jpg" xlink:type="simple"/>
+               </inline-formula>, <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{\pm}_{1}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M58.jpg" xlink:type="simple"/>
+               </inline-formula> is excluded up to <inline-formula>
+                  <tex-math><?CDATA $ 600-700 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M59.jpg" xlink:type="simple"/>
+               </inline-formula> GeV for massless <inline-formula>
+                  <tex-math><?CDATA $ \chi^{0}_{1} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M60.jpg" xlink:type="simple"/>
+               </inline-formula> [<xref ref-type="bibr" rid="cpc_47_4_043105_bib29">29</xref>]. If the mass difference between <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{\pm}_{1}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M61.jpg" xlink:type="simple"/>
+               </inline-formula> and <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{0}_{1}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M62.jpg" xlink:type="simple"/>
+               </inline-formula> is small, <inline-formula>
+                  <tex-math><?CDATA $ \chi^{\pm}_{1} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M63.jpg" xlink:type="simple"/>
+               </inline-formula> decay is dominated by either <inline-formula>
+                  <tex-math><?CDATA $\chi^{\pm}_{1}\rightarrow \chi^{0}_{1}W^{*}\rightarrow \chi^{0}_{1} f\bar{f}'$?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M64.jpg" xlink:type="simple"/>
+               </inline-formula> or <inline-formula>
+                  <tex-math><?CDATA $ \chi^{\pm}_{1}\rightarrow W\tilde{G} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M65.jpg" xlink:type="simple"/>
+               </inline-formula>, where <italic toggle="yes">f</italic> and <inline-formula>
+                  <tex-math><?CDATA $ f' $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M66.jpg" xlink:type="simple"/>
+               </inline-formula> refer to SM fermions. In the former situation, the chargino mass bound is greatly relaxed, whereas in the latter case, <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{\pm}_{1}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M67.jpg" xlink:type="simple"/>
+               </inline-formula> must be larger than <inline-formula>
+                  <tex-math><?CDATA $ \sim 200 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M68.jpg" xlink:type="simple"/>
+               </inline-formula> GeV [<xref ref-type="bibr" rid="cpc_47_4_043105_bib31">31</xref>] for a light gravitino with a mass of the order of <inline-formula>
+                  <tex-math><?CDATA $ \sim 10 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M69.jpg" xlink:type="simple"/>
+               </inline-formula> eV as the lightest supersymmetric particle (LSP). To summarize, because <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{\pm}_{1}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M70.jpg" xlink:type="simple"/>
+               </inline-formula> in our model is less than <inline-formula>
+                  <tex-math><?CDATA $ \sim 200 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M71.jpg" xlink:type="simple"/>
+               </inline-formula> GeV owing to a moderate value of <inline-formula>
+                  <tex-math><?CDATA $ y_T $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M72.jpg" xlink:type="simple"/>
+               </inline-formula>, the small mass splitting between <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{\pm}_{1}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M73.jpg" xlink:type="simple"/>
+               </inline-formula> and <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{0}_{1}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M74.jpg" xlink:type="simple"/>
+               </inline-formula>, with <inline-formula>
+                  <tex-math><?CDATA $ \chi^{0}_{1} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M75.jpg" xlink:type="simple"/>
+               </inline-formula> as the LSP, is favored in light of current collider limits.</p><p>To illustrate the viability of <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{0}_{1}} \lt m_{\chi^{\pm}_{1}} \lt m_{\chi^{0}_{1}}+m_{W} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M76.jpg" xlink:type="simple"/>
+               </inline-formula> in Eqs. (7) and (8), we show in <xref ref-type="fig" rid="cpc_47_4_043105_f1">Fig. 1</xref> the samples that yield the required mass spectrum with the parameter ranges shown in <xref ref-type="table" rid="cpc_47_4_043105_t2">Table 2</xref> in comparison with regions excluded by the LEP-2 limit (in gray) and disfavored by current LHC data (in red). We show the explicit dependences of the mass spectrum on the model parameters <inline-formula>
+                  <tex-math><?CDATA $ \tan\beta $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M77.jpg" xlink:type="simple"/>
+               </inline-formula> (left), <inline-formula>
+                  <tex-math><?CDATA $ y_T $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M78.jpg" xlink:type="simple"/>
+               </inline-formula> (middle), and <inline-formula>
+                  <tex-math><?CDATA $ m_1 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M79.jpg" xlink:type="simple"/>
+               </inline-formula> (right). This indicates that small <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{0}_{1}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M80.jpg" xlink:type="simple"/>
+               </inline-formula> of the order of less than <inline-formula>
+                  <tex-math><?CDATA $ \sim 40 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M81.jpg" xlink:type="simple"/>
+               </inline-formula> GeV favors both large <inline-formula>
+                  <tex-math><?CDATA $ y_{T}\geq 0.9 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M82.jpg" xlink:type="simple"/>
+               </inline-formula> and small <inline-formula>
+                  <tex-math><?CDATA $ \tan\beta \leq 5 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M83.jpg" xlink:type="simple"/>
+               </inline-formula>, whereas moderate <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{0}_{1}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M84.jpg" xlink:type="simple"/>
+               </inline-formula> of the order of <inline-formula>
+                  <tex-math><?CDATA $ \sim 80-100 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M85.jpg" xlink:type="simple"/>
+               </inline-formula> GeV has no specific preferences. In particular, the right plot in <xref ref-type="fig" rid="cpc_47_4_043105_f1">Fig. 1</xref> implies that bino-like neutralino dark matter (with small <inline-formula>
+                  <tex-math><?CDATA $ \mid m_1\mid $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M86.jpg" xlink:type="simple"/>
+               </inline-formula>) can be achieved in the case of either small or moderate <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{0}_{1}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M87.jpg" xlink:type="simple"/>
+               </inline-formula>.</p><fig id="cpc_47_4_043105_f1" orientation="portrait" position="float"><label>Fig. 1</label><caption id="cpc_47_4_043105_fc1"><p>(color online) Mass spectrum of <inline-formula>
+                        <tex-math><?CDATA $ m_{\chi^{\pm}_{1}} $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M33.jpg" xlink:type="simple"/>
+                     </inline-formula> and <inline-formula>
+                        <tex-math><?CDATA $ m_{\chi^{0}_{1}} $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M34.jpg" xlink:type="simple"/>
+                     </inline-formula> with <inline-formula>
+                        <tex-math><?CDATA $ m_{\chi^{0}_{1}}\lt{m}_{\chi^{\pm}_{1}} \lt{m}_{\chi^{0}_{1}}+m_{W} $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M35.jpg" xlink:type="simple"/>
+                     </inline-formula> in the parameter ranges shown in <xref ref-type="table" rid="cpc_47_4_043105_t2">Table 2</xref>, where the dependences of the mass spectrum on <inline-formula>
+                        <tex-math><?CDATA $ \tan\beta $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M36.jpg" xlink:type="simple"/>
+                     </inline-formula>, <inline-formula>
+                        <tex-math><?CDATA $ y_T $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M37.jpg" xlink:type="simple"/>
+                     </inline-formula>, and <inline-formula>
+                        <tex-math><?CDATA $ m_1 $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M38.jpg" xlink:type="simple"/>
+                     </inline-formula> are highlighted in the left, middle, and right plots, respectively. Regions excluded by the LEP-2 limit (in gray) and disfavored by current LHC data (in red) are also shown.</p></caption><graphic content-type="print" id="cpc_47_4_043105_f1_eps" orientation="portrait" position="float" xlink:href="cpc_47_4_043105_f1.eps" xlink:type="simple"/><graphic content-type="online" id="cpc_47_4_043105_f1_online" orientation="portrait" position="float" xlink:href="cpc_47_4_043105_f1.jpg" xlink:type="simple"/></fig><table-wrap id="cpc_47_4_043105_t2" orientation="portrait" position="float"><label>Table 2</label><caption id="cpc_47_4_043105_tc2"><p>Parameter ranges in the Dirac chargino-neutralino sector, which are consistent with the LEP-2 bound on <inline-formula>
+                        <tex-math><?CDATA $ m_{\chi^{\pm}_{1}} $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M210.jpg" xlink:type="simple"/>
+                     </inline-formula> and favored by current LHC data. Masses are in units of GeV.</p></caption><table><thead><tr><th align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA ${\rm{Parameter} }$?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M211.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </th><th align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA ${\rm{Range} }$?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M212.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </th></tr></thead><tbody><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA $ m_1 $?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M213.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA $ [-490.8, 490.3] $?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M214.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA $ m_2 $?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M215.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA $ [-137.6, 157.1] $?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M216.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA $ m'_2 $?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M217.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA $ [-430, 409] $?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M218.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA $ \tan\beta $?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M219.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA $ (1, 10] $?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M220.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                           <italic toggle="yes">λ</italic>
+                        </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA $ [0.5, 0.7] $?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M221.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA $ y_T $?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M222.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA $ [0.49, 1.0] $?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M223.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </td></tr></tbody></table></table-wrap><p>Now, we turn to the subject of Dirac neutralino dark matter <inline-formula>
+                  <tex-math><?CDATA $ \chi^{0}_1 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M88.jpg" xlink:type="simple"/>
+               </inline-formula>. Because <inline-formula>
+                  <tex-math><?CDATA $ \chi^{0}_1 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M89.jpg" xlink:type="simple"/>
+               </inline-formula> in Eq. (8) can be either bino- or singlino-like, we discuss them separately. If <inline-formula>
+                  <tex-math><?CDATA $ \chi^{0}_1 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M90.jpg" xlink:type="simple"/>
+               </inline-formula> is singlino-like, the annihilation cross section of a <inline-formula>
+                  <tex-math><?CDATA $ \chi^{0}_1 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M91.jpg" xlink:type="simple"/>
+               </inline-formula> pair is mainly through an exchange of Higgs and heavier neutralino states in Eq. (8). Because <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{0}_{1}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M92.jpg" xlink:type="simple"/>
+               </inline-formula> in <xref ref-type="fig" rid="cpc_47_4_043105_f1">Fig. 1</xref> is less than the Higgs mass <inline-formula>
+                  <tex-math><?CDATA $ m_h $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M93.jpg" xlink:type="simple"/>
+               </inline-formula>, the latter annihilation channel is kinetically forbidden. Such Higgs-portal dark matter [<xref ref-type="bibr" rid="cpc_47_4_043105_bib32">32</xref>] is excluded by a combination of invisible Higgs decay in the mass region <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{0}_{1}} \lt m_{h}/2 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M94.jpg" xlink:type="simple"/>
+               </inline-formula> and spin-independent direct detection limits in the mass region <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{0}_{1}} \gt m_{h}/2 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M95.jpg" xlink:type="simple"/>
+               </inline-formula>, except a narrow resonant region <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{0}_{1}}\approx m_{h}/2 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M96.jpg" xlink:type="simple"/>
+               </inline-formula>.</p><p>Unlike a Majorana neutralino or Higgs-portal dark matter as above, the annihilation cross sections of a bino-like <inline-formula>
+                  <tex-math><?CDATA $ \chi^{0}_1 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M97.jpg" xlink:type="simple"/>
+               </inline-formula> (namely the <inline-formula>
+                  <tex-math><?CDATA $ \tilde{B}^0-\tilde{\sigma}_{1}^{0} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M98.jpg" xlink:type="simple"/>
+               </inline-formula> state) pair into SM fermions is no longer suppressed by the SM fermion masses [<xref ref-type="bibr" rid="cpc_47_4_043105_bib33">33</xref>–<xref ref-type="bibr" rid="cpc_47_4_043105_bib36">36</xref>], which makes the lightest Dirac neutralino a natural realization of leptophilic dark matter [<xref ref-type="bibr" rid="cpc_47_4_043105_bib37">37</xref>]. In the situation with squark masses larger than slepton masses, the annihilation of the <inline-formula>
+                  <tex-math><?CDATA $ \chi^{0}_1 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M99.jpg" xlink:type="simple"/>
+               </inline-formula> pair is dominated by lepton final states [<xref ref-type="bibr" rid="cpc_47_4_043105_bib36">36</xref>]</p><p>
+               <disp-formula>
+                  <label>10</label>
+                  <tex-math id="cpc_47_4_043105_E10"> <?CDATA $ \sigma_{\ell\bar{\ell}}\upsilon_{{\rm{rel}}}\approx \frac{g'^{4}m^{2}_{\chi^{0}_{1}}}{8\pi}\left[\frac{1}{16(m^{2}_{\chi^{0}_{1}}+m^{2}_{\tilde{\ell}_{L}})^{2}}+ \frac{1}{(m^{2}_{\chi^{0}_{1}}+m^{2}_{\tilde{\ell}_{R}})^{2}}\right],\\ $?> </tex-math>
+                  <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E10.jpg" xlink:type="simple"/>
+               </disp-formula>
+            </p><p>where <inline-formula>
+                  <tex-math><?CDATA $ g' $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M100.jpg" xlink:type="simple"/>
+               </inline-formula> is the <inline-formula>
+                  <tex-math><?CDATA $ U(1)_Y $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M101.jpg" xlink:type="simple"/>
+               </inline-formula> gauge coupling constant, <inline-formula>
+                  <tex-math><?CDATA $ \upsilon_{{\rm{rel}}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M102.jpg" xlink:type="simple"/>
+               </inline-formula> is the dark matter relative velocity, <inline-formula>
+                  <tex-math><?CDATA $ \ell=\{\tau,\mu, e\} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M103.jpg" xlink:type="simple"/>
+               </inline-formula>, and <inline-formula>
+                  <tex-math><?CDATA $ m_{\tilde{l}_{L}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M104.jpg" xlink:type="simple"/>
+               </inline-formula> and <inline-formula>
+                  <tex-math><?CDATA $ m_{\tilde{l}_{R}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M105.jpg" xlink:type="simple"/>
+               </inline-formula> refer to the left- and right-hand slepton masses, respectively. Note that <italic toggle="yes">R</italic> symmetry forbids mixing effects between the left- and right-hand sleptons.</p><p>
+               <xref ref-type="fig" rid="cpc_47_4_043105_f2">Figure 2</xref> shows the contour (in black) of the bino-like <inline-formula>
+                  <tex-math><?CDATA $ \chi^{0}_{1} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M106.jpg" xlink:type="simple"/>
+               </inline-formula> projected onto the two-parameter plane of <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{0}_{1}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M107.jpg" xlink:type="simple"/>
+               </inline-formula> and the right-hand smuon and stau mass <inline-formula>
+                  <tex-math><?CDATA $ m_{\tilde{\ell}_{R}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M108.jpg" xlink:type="simple"/>
+               </inline-formula> with <inline-formula>
+                  <tex-math><?CDATA $ \ell=\{\mu,\tau\} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M109.jpg" xlink:type="simple"/>
+               </inline-formula>, which satisfies the dark matter annihilation cross section <inline-formula>
+                  <tex-math><?CDATA $\sigma\upsilon_{{\rm{rel}}}\approx 3\times 10^{-26}\;{\rm{cm}}^{3}{\rm{s}}^{-1}$?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M110.jpg" xlink:type="simple"/>
+               </inline-formula> from the observed thermal dark matter relic density. We take the selectron masses <inline-formula>
+                  <tex-math><?CDATA $ m_{\tilde{e}_{L}}=m_{\tilde{e}_{R}}=300 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M111.jpg" xlink:type="simple"/>
+               </inline-formula> GeV, consistent with the AMS limit on <inline-formula>
+                  <tex-math><?CDATA $ \sigma_{e^{+}e^{-}}\upsilon_{{\rm{rel}}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M112.jpg" xlink:type="simple"/>
+               </inline-formula> [<xref ref-type="bibr" rid="cpc_47_4_043105_bib38">38</xref>] in the mass range <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{0}_{1}}\leq 100 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M113.jpg" xlink:type="simple"/>
+               </inline-formula> GeV, and adopt the left-hand smuon and stau masses <inline-formula>
+                  <tex-math><?CDATA $ m_{\tilde{\mu}_{L}}=m_{\tilde{\tau}_{L}}=400 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M114.jpg" xlink:type="simple"/>
+               </inline-formula> GeV in light of LEP [<xref ref-type="bibr" rid="cpc_47_4_043105_bib39">39</xref>] and current LHC [<xref ref-type="bibr" rid="cpc_47_4_043105_bib30">30</xref>, <xref ref-type="bibr" rid="cpc_47_4_043105_bib40">40</xref>] bounds.<sup>
+                  <xref ref-type="fn" rid="cpc_47_4_043105_pn3">③</xref>
+               </sup> This figure shows that in comparison with the LHC bounds and the AMS limits on <inline-formula>
+                  <tex-math><?CDATA $ \sigma_{\mu^{+}\mu^{-}}\upsilon_{{\rm{rel}}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M115.jpg" xlink:type="simple"/>
+               </inline-formula> and <inline-formula>
+                  <tex-math><?CDATA $ \sigma_{\tau^{+}\tau^{-}}\upsilon_{{\rm{rel}}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M116.jpg" xlink:type="simple"/>
+               </inline-formula> [<xref ref-type="bibr" rid="cpc_47_4_043105_bib38">38</xref>, <xref ref-type="bibr" rid="cpc_47_4_043105_bib42">42</xref>],  <inline-formula>
+                  <tex-math><?CDATA $ m_{\chi^{0}_{1}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M117.jpg" xlink:type="simple"/>
+               </inline-formula> between <inline-formula>
+                  <tex-math><?CDATA $ 70 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M118.jpg" xlink:type="simple"/>
+               </inline-formula> GeV and <inline-formula>
+                  <tex-math><?CDATA $ 100 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M119.jpg" xlink:type="simple"/>
+               </inline-formula> GeV survives with <inline-formula>
+                  <tex-math><?CDATA $ m_{\tilde{\ell}_{R}}\geq 250 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M120.jpg" xlink:type="simple"/>
+               </inline-formula> GeV.</p><fig id="cpc_47_4_043105_f2" orientation="portrait" position="float"><label>Fig. 2</label><caption id="cpc_47_4_043105_fc2"><p>(color online) Contour (in black) of bino-like neutralino dark matter is projected onto the two-parameter plane of <inline-formula>
+                        <tex-math><?CDATA $ m_{\chi^{0}_1} $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M121.jpg" xlink:type="simple"/>
+                     </inline-formula> and the right-hand slepton masses <inline-formula>
+                        <tex-math><?CDATA $ m_{\tilde{\ell}_{R}} $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M122.jpg" xlink:type="simple"/>
+                     </inline-formula> with <inline-formula>
+                        <tex-math><?CDATA $ \ell=\{\mu,\tau\} $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M123.jpg" xlink:type="simple"/>
+                     </inline-formula> for selectron masses <inline-formula>
+                        <tex-math><?CDATA $ m_{\tilde{e}_{L}}=m_{\tilde{e}_{R}}=300 $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M124.jpg" xlink:type="simple"/>
+                     </inline-formula> GeV and left-hand smuon and stau masses <inline-formula>
+                        <tex-math><?CDATA $ m_{\tilde{\mu}_{L}}=m_{\tilde{\tau}_{L}}=400 $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M125.jpg" xlink:type="simple"/>
+                     </inline-formula> GeV, in comparison with regions excluded by the 8-TeV LHC limit (in red), AMS limits on <inline-formula>
+                        <tex-math><?CDATA $ \sigma_{e^{+}e^{-}}\upsilon_{{\rm{rel}}} $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M126.jpg" xlink:type="simple"/>
+                     </inline-formula> and <inline-formula>
+                        <tex-math><?CDATA $ \sigma_{\mu^{+}\mu^{-}}\upsilon_{{\rm{rel}}} $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M127.jpg" xlink:type="simple"/>
+                     </inline-formula> (in orange), and Fermi-LAT limit on <inline-formula>
+                        <tex-math><?CDATA $ \sigma_{\tau^{+}\tau^{-}}\upsilon_{{\rm{rel}}} $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M128.jpg" xlink:type="simple"/>
+                     </inline-formula> (in purple).</p></caption><graphic content-type="print" id="cpc_47_4_043105_f2_eps" orientation="portrait" position="float" xlink:href="cpc_47_4_043105_f2.eps" xlink:type="simple"/><graphic content-type="online" id="cpc_47_4_043105_f2_online" orientation="portrait" position="float" xlink:href="cpc_47_4_043105_f2.jpg" xlink:type="simple"/></fig></sec><sec id="cpc_47_4_043105_s03-03"><label>C.</label><title>Higgs</title><p>Compared to the <italic toggle="yes">R</italic>-symmetric MSSM (RMSSM) [<xref ref-type="bibr" rid="cpc_47_4_043105_bib43">43</xref>–<xref ref-type="bibr" rid="cpc_47_4_043105_bib47">47</xref>] or conventional NMSSM, the scalar mass spectrum of the Higgs sector in the minimal RNMSSM is different. Let us begin with relevant soft masses in our model.</p><p>
+               <disp-formula>
+                  <label>11</label>
+                  <tex-math id="cpc_47_4_043105_E11"> <?CDATA $ \begin{array}{*{20}{l}} { } \mathcal{L}_{{\rm{soft}}}\supset m^{2}_{H_{u}}H^{\dagger}_{u}H_{u}+m^{2}_{H_{d}}H^{\dagger}_{d}H_{d}+m^{2}_{N}N^{\dagger}N+b H_{u}H_{d} + m^{2}_{T}T^{\dagger}T, \end{array} $?> </tex-math>
+                  <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E11.jpg" xlink:type="simple"/>
+               </disp-formula>
+            </p><p>where the first three terms arise from the following soft SUSY-breaking operators:</p><p>
+               <disp-formula>
+                  <label>12</label>
+                  <tex-math id="cpc_47_4_043105_E12"> <?CDATA $ \int {\rm d}^{4}\theta \frac{X^{\dagger}X}{M^{2}}\left[N^{\dagger}N+H_{u}^{\dagger}H_{u}+H_{d}^{\dagger}H_{d}\right]. $?> </tex-math>
+                  <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E12.jpg" xlink:type="simple"/>
+               </disp-formula>
+            </p><p>In Eq. (12), two-loop <inline-formula>
+                  <tex-math><?CDATA $ m^{2}_{N}\sim m^{2}_{H_{u}}\sim m^{2}_{H_{d}} \sim F^{2}/M^{2} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M135.jpg" xlink:type="simple"/>
+               </inline-formula> are produced at the input scale <italic toggle="yes">M</italic>. Combining the gauge interactions in Eq. (1), the <italic toggle="yes">F</italic> terms in Eq. (2), and the soft masses in Eq. (11) gives rise to the scalar mass spectrum in this sector as shown below.</p><p>First, the mass squared matrices for <italic toggle="yes">CP</italic>-even scalars with <italic toggle="yes">R</italic> charges of <inline-formula>
+                  <tex-math><?CDATA $ 0 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M136.jpg" xlink:type="simple"/>
+               </inline-formula> and <inline-formula>
+                  <tex-math><?CDATA $ 2 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M137.jpg" xlink:type="simple"/>
+               </inline-formula> are given by</p><p>
+               <disp-formula>
+                  <label>13</label>
+                  <tex-math id="cpc_47_4_043105_E13"> <?CDATA $ \begin{array}{*{20}{l}} \left(\begin{array}{cc} H^{0}_{uR} & H^{0}_{dR} \end{array}\right) \left( \begin{array}{cc} m_{Z}^{2}\cos^{2}\beta+b\tan\beta & \left[\left(\lambda^{2}+y_{T}^{2}\right)\upsilon^{2}-\dfrac{m^{2}_{Z}}{2}\right]\sin2\beta-b \\ * & m_{Z}^{2}\sin^{2}\beta+b\cot\beta \\ \end{array}\right) \left(\begin{array}{c} H^{0}_{uR}\\ H^{0}_{dR} \\ \end{array}\right), \end{array} $?> </tex-math>
+                  <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E13.jpg" xlink:type="simple"/>
+               </disp-formula>
+            </p><p>and</p><p>
+               <disp-formula>
+                  <label>14</label>
+                  <tex-math id="cpc_47_4_043105_E14"> <?CDATA $ \begin{array}{*{20}{l}} \left(\begin{array}{cc} N_{R} & T^{0}_{R} \end{array}\right) \left( \begin{array}{cc} m^{2}_{N}+\lambda^{2}\upsilon^{2} & \lambda y_{T}\upsilon^{2} \\ * & m^{2}_{T}+m'^{2}_{2}+y_{T}^{2}\upsilon^{2} \\ \end{array}\right) \left(\begin{array}{c} N_{R}\\ T^{0}_{R} \\ \end{array}\right), \\ \end{array} $?> </tex-math>
+                  <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E14.jpg" xlink:type="simple"/>
+               </disp-formula>
+            </p><p>respectively, where the soft masses <inline-formula>
+                  <tex-math><?CDATA $ m^{2}_{H_{u}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M138.jpg" xlink:type="simple"/>
+               </inline-formula> and <inline-formula>
+                  <tex-math><?CDATA $ m^{2}_{H_{d}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M139.jpg" xlink:type="simple"/>
+               </inline-formula> are eliminated by the <italic toggle="yes">b</italic> term because of the conditions of electroweak symmetry breaking.</p><p>Second, the mass squared matrices for the <italic toggle="yes">CP</italic>-odd scalars are</p><p>
+               <disp-formula>
+                  <label>15</label>
+                  <tex-math id="cpc_47_4_043105_E15"> <?CDATA $ \begin{array}{*{20}{l}} \left(\begin{array}{cc} H^{0}_{uI} & H^{0}_{dI} \end{array}\right) \left( \begin{array}{cc} b\tan\beta & b \\ * & b\cot\beta \\ \end{array}\right) \left(\begin{array}{c} H^{0}_{uI} \\ H^{0}_{dI} \\ \end{array}\right), \end{array} $?> </tex-math>
+                  <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E15.jpg" xlink:type="simple"/>
+               </disp-formula>
+            </p><p>which contain a massless Goldstone mode, and</p><p>
+               <disp-formula>
+                  <label>16</label>
+                  <tex-math id="cpc_47_4_043105_E16"> <?CDATA $ \begin{array}{*{20}{l}} \left(\begin{array}{cc} N_{I} & T^{0}_{I} \end{array}\right) \left( \begin{array}{cc} m^{2}_{N}+\lambda^{2}\upsilon^{2} & y_{T}\lambda\upsilon^{2} \\ * & m^{2}_{T}+m'^{2}_{2}+y_{T}^{2}\upsilon^{2} \\ \end{array}\right) \left(\begin{array}{c} N_{I} \\ T^{0}_{I} \\ \end{array}\right). \\ \end{array} $?> </tex-math>
+                  <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E16.jpg" xlink:type="simple"/>
+               </disp-formula>
+            </p><p>Third, the mass squared matrix for <italic toggle="yes">CP</italic>-charged scalars under the basis <inline-formula>
+                  <tex-math><?CDATA $ (H^{+}_{u}, H^{-*}_{d}) $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M140.jpg" xlink:type="simple"/>
+               </inline-formula> is given by</p><p>
+               <disp-formula>
+                  <label>17</label>
+                  <tex-math id="cpc_47_4_043105_E17"> <?CDATA $ \mathcal{M}^{2}_{H^{\pm}}=\left[b+\left(\frac{g^{2}_{2}}{2}+y^{2}_{T}-\lambda^{2}\right)\upsilon_{u}\upsilon_{d}\right] \left(\begin{array}{cc} \cot\beta & 1 \\ 1 & \tan\beta \\ \end{array} \right), $?> </tex-math>
+                  <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E17.jpg" xlink:type="simple"/>
+               </disp-formula>
+            </p><p>with <inline-formula>
+                  <tex-math><?CDATA $ m^{2}_{T^{\pm}}\approx m^{2}_{T}+m'^{2}_{2}+y^{2}_{T}\upsilon^{2} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M141.jpg" xlink:type="simple"/>
+               </inline-formula>, where <inline-formula>
+                  <tex-math><?CDATA $ g_{2} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M142.jpg" xlink:type="simple"/>
+               </inline-formula> is the <inline-formula>
+                  <tex-math><?CDATA $S U(2)_L$?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M143.jpg" xlink:type="simple"/>
+               </inline-formula> gauge coupling constant. From Eq. (17), one obtains a massless Goldstone mode and a massive charged state <inline-formula>
+                  <tex-math><?CDATA $ H^{\pm} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M144.jpg" xlink:type="simple"/>
+               </inline-formula>. Compared to the NMSSM, the new <inline-formula>
+                  <tex-math><?CDATA $ y_T $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M145.jpg" xlink:type="simple"/>
+               </inline-formula> term in Eq. (17) is useful in uplifting the charged Higgs scalar mass.</p><p>The scalars in Eqs. (13)–(16) can be classified into two sets, one set similar to type-II Higgs doublets in the MSSM and the other set controlled by free parameters, such as <inline-formula>
+                  <tex-math><?CDATA $ m_N $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M146.jpg" xlink:type="simple"/>
+               </inline-formula> and <inline-formula>
+                  <tex-math><?CDATA $ m_{T} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M147.jpg" xlink:type="simple"/>
+               </inline-formula>. In the former set, the mass relations are altered; at the tree level, these rely on four input parameters, <italic toggle="yes">b</italic>, <italic toggle="yes">λ</italic>, <inline-formula>
+                  <tex-math><?CDATA $ y_T $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M148.jpg" xlink:type="simple"/>
+               </inline-formula>, and <inline-formula>
+                  <tex-math><?CDATA $ \tan\beta $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M149.jpg" xlink:type="simple"/>
+               </inline-formula>. One can replace the dimensional parameter <italic toggle="yes">b</italic> by imposing the constraint <inline-formula>
+                  <tex-math><?CDATA $ m_{h_{1}}=125 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M150.jpg" xlink:type="simple"/>
+               </inline-formula> GeV and then uncover other masses such as <inline-formula>
+                  <tex-math><?CDATA $ m_{h_{2}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M151.jpg" xlink:type="simple"/>
+               </inline-formula>, <inline-formula>
+                  <tex-math><?CDATA $ m_A $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M152.jpg" xlink:type="simple"/>
+               </inline-formula>, and <inline-formula>
+                  <tex-math><?CDATA $ m_{H^{\pm}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M153.jpg" xlink:type="simple"/>
+               </inline-formula> by adjusting the three dimensionless parameters.</p><p>To date, the most stringent constraint on these scalars arose from precision measurements of <inline-formula>
+                  <tex-math><?CDATA $ B\rightarrow X_{s}\gamma $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M154.jpg" xlink:type="simple"/>
+               </inline-formula> [<xref ref-type="bibr" rid="cpc_47_4_043105_bib48">48</xref>–<xref ref-type="bibr" rid="cpc_47_4_043105_bib50">50</xref>]. <xref ref-type="fig" rid="cpc_47_4_043105_f3">Figure 3</xref> shows the masses <inline-formula>
+                  <tex-math><?CDATA $ m_{h_{2}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M155.jpg" xlink:type="simple"/>
+               </inline-formula> (hollow) and <inline-formula>
+                  <tex-math><?CDATA $ m_A $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M156.jpg" xlink:type="simple"/>
+               </inline-formula> (solid) as functions of the <italic toggle="yes">CP</italic>-charged scalar mass <inline-formula>
+                  <tex-math><?CDATA $ m_{H^{\pm}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M157.jpg" xlink:type="simple"/>
+               </inline-formula> for the parameter ranges shown in <xref ref-type="table" rid="cpc_47_4_043105_t3">Table 3</xref>, which satisfy the observed Higgs mass and excess the conservative mass bound <inline-formula>
+                  <tex-math><?CDATA $ m_{H^{\pm}}\geq 480 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M158.jpg" xlink:type="simple"/>
+               </inline-formula> GeV [<xref ref-type="bibr" rid="cpc_47_4_043105_bib49">49</xref>] simultaneously.<sup>
+                  <xref ref-type="fn" rid="cpc_47_4_043105_pn4">④</xref>
+               </sup> The explicit dependences of the mass spectrum on <inline-formula>
+                  <tex-math><?CDATA $ \tan\beta $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M159.jpg" xlink:type="simple"/>
+               </inline-formula>, <inline-formula>
+                  <tex-math><?CDATA $ y_T $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M160.jpg" xlink:type="simple"/>
+               </inline-formula>, and <italic toggle="yes">b</italic> are shown in the left, middle, and right plots, respectively. The lower mass bound implies that both <inline-formula>
+                  <tex-math><?CDATA $ m_{h_{2}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M161.jpg" xlink:type="simple"/>
+               </inline-formula> and <inline-formula>
+                  <tex-math><?CDATA $ m_{A} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M162.jpg" xlink:type="simple"/>
+               </inline-formula> must exceed <inline-formula>
+                  <tex-math><?CDATA $ \sim 450 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M163.jpg" xlink:type="simple"/>
+               </inline-formula> GeV. For future prospects regarding the detection of these scalars at the LHC, see, for example, Ref. [<xref ref-type="bibr" rid="cpc_47_4_043105_bib51">51</xref>]. Note that Eq. (13) is a tree-level estimate for the observed Higgs mass <inline-formula>
+                  <tex-math><?CDATA $ m_{h_{1}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M164.jpg" xlink:type="simple"/>
+               </inline-formula>. It is valid when the loop correction is small, which is a natural assumption in our case.</p><fig id="cpc_47_4_043105_f3" orientation="portrait" position="float"><label>Fig. 3</label><caption id="cpc_47_4_043105_fc3"><p>(color online) Masses <inline-formula>
+                        <tex-math><?CDATA $ m_{h_{2}} $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M129.jpg" xlink:type="simple"/>
+                     </inline-formula> (hollow) and <inline-formula>
+                        <tex-math><?CDATA $ m_A $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M130.jpg" xlink:type="simple"/>
+                     </inline-formula> (solid) as functions of the <italic toggle="yes">CP</italic>-charged scalar mass <inline-formula>
+                        <tex-math><?CDATA $ m_{H^{\pm}} $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M131.jpg" xlink:type="simple"/>
+                     </inline-formula>, with <inline-formula>
+                        <tex-math><?CDATA $ m_{h_{1}}=125 $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M132.jpg" xlink:type="simple"/>
+                     </inline-formula> GeV in the parameter ranges shown in <xref ref-type="table" rid="cpc_47_4_043105_t3">Table 3</xref>, where the explicit dependences of the mass spectrum on <inline-formula>
+                        <tex-math><?CDATA $ \tan\beta $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M133.jpg" xlink:type="simple"/>
+                     </inline-formula>, <inline-formula>
+                        <tex-math><?CDATA $ y_T $?></tex-math>
+                        <inline-graphic xlink:href="cpc_47_4_043105_M134.jpg" xlink:type="simple"/>
+                     </inline-formula>, and <italic toggle="yes">b</italic> are shown in the left, middle, and right plots, respectively.</p></caption><graphic content-type="print" id="cpc_47_4_043105_f3_eps" orientation="portrait" position="float" xlink:href="cpc_47_4_043105_f3.eps" xlink:type="simple"/><graphic content-type="online" id="cpc_47_4_043105_f3_online" orientation="portrait" position="float" xlink:href="cpc_47_4_043105_f3.jpg" xlink:type="simple"/></fig><table-wrap id="cpc_47_4_043105_t3" orientation="portrait" position="float"><label>Table 3</label><caption id="cpc_47_4_043105_tc3"><p>Adopted parameter ranges for the numerical analysis in <xref ref-type="fig" rid="cpc_47_4_043105_f3">Fig. 3</xref>.</p></caption><table><thead><tr><th align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA ${\rm{Parameter} }$?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M224.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </th><th align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA ${\rm{Range} }$?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M225.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </th></tr></thead><tbody><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                           <italic toggle="yes">b</italic>
+                        </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA $[5\times 10^{4}, 10^{5}] \; {\rm{GeV} }^{2}$?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M226.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA $ \tan\beta $?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M227.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA $ [1.6, 4.0] $?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M228.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                           <italic toggle="yes">λ</italic>
+                        </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA $ [0.5, 0.7] $?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M229.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA $ y_{T} $?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M230.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                           <inline-formula>
+                              <tex-math><?CDATA $ [0.42, 1.0] $?></tex-math>
+                              <inline-graphic xlink:href="cpc_47_4_043105_M231.jpg" xlink:type="simple"/>
+                           </inline-formula>
+                        </td></tr></tbody></table></table-wrap><p>Let us now estimate the fine tuning related to the natural argument of Higgs mass. We take the measure of the fine tuning as <inline-formula>
+                  <tex-math><?CDATA $ \Delta=\max\{\Delta_P\} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M165.jpg" xlink:type="simple"/>
+               </inline-formula>, with</p><p>
+               <disp-formula>
+                  <label>18</label>
+                  <tex-math id="cpc_47_4_043105_E18"> <?CDATA $ \Delta_{P}=\bigg|\frac{\partial \ln m^{2}_{Z}}{\partial \ln P}\bigg|, $?> </tex-math>
+                  <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E18.jpg" xlink:type="simple"/>
+               </disp-formula>
+            </p><p>where the soft mass squared <inline-formula>
+                  <tex-math><?CDATA $ P=\{m^{2}_{i}, b, \cdots\} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M166.jpg" xlink:type="simple"/>
+               </inline-formula>. Among the aforementioned soft masses, the dimensional <italic toggle="yes">b</italic> in <xref ref-type="table" rid="cpc_47_4_043105_t3">Table 3</xref> contributes to <inline-formula>
+                  <tex-math><?CDATA $ \Delta_{b}\sim \tan\beta(b/ 4m^{2}_{Z}) \leq 12.5 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M167.jpg" xlink:type="simple"/>
+               </inline-formula>.</p></sec><sec id="cpc_47_4_043105_s03-04"><label>D.</label><title>Sfermions</title><p>Apart from Majorana gaugino masses, <italic toggle="yes">R</italic> symmetry also prohibits holomorphic soft masses, such as <italic toggle="yes">A</italic> terms related to sfermions. It only allows scalar soft masses</p><p>
+               <disp-formula>
+                  <label>19</label>
+                  <tex-math id="cpc_47_4_043105_E19"> <?CDATA $ \begin{array}{*{20}{l}} { } \mathcal{L}_{{\rm{soft}}}\supset m^{2}_{\tilde{f}} f^{\dagger}f,\; \; { {f}}=Q,\bar{u},\cdots \end{array} $?> </tex-math>
+                  <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E19.jpg" xlink:type="simple"/>
+               </disp-formula>
+            </p><p>which arise from soft SUSY-breaking operators such as</p><p>
+               <disp-formula>
+                  <label>20</label>
+                  <tex-math id="cpc_47_4_043105_E20"> <?CDATA $ \int {\rm d}^{4}\theta \frac{X^{\dagger}X}{M^{2}}f^{\dagger}f. $?> </tex-math>
+                  <graphic orientation="portrait" position="float" xlink:href="cpc_47_4_043105_E20.jpg" xlink:type="simple"/>
+               </disp-formula>
+            </p><p>From Eq. (20), the two-loop <inline-formula>
+                  <tex-math><?CDATA $ m^{2}_{\tilde{f}}\sim F^{2}/M^{2} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M168.jpg" xlink:type="simple"/>
+               </inline-formula> is generated at the scale <italic toggle="yes">M</italic>.</p><p>The absence of <italic toggle="yes">A</italic> terms earns us a few advantages. The vanishing <italic toggle="yes">A</italic> term associated with the top quark suggests that the observed Higgs mass cannot be explained without a violation of naturalness, which is true for the typical RMSSM but does not stand in the context of the RNMSSM. This is because, similar to the NMSSM, there is a large tree-level correction to the Higgs mass in this model. Moreover, flavor violations, which are too large to violate stringent experimental bounds on the MSSM with large top-related <italic toggle="yes">A</italic> terms, are naturally small in the RNMSSM.</p></sec></sec><sec id="cpc_47_4_043105_s04"><label>IV.</label><title>CONCLUSIONS</title><p>In this study, we propose a new variant of the NMSSM by imposing unbroken <italic toggle="yes">R</italic> symmetry. Compared to well-known SUSY models such as the MSSM, NMSSM, and RMSSM, the RNMSSM introduces distinctive phenomenological features, as shown in <xref ref-type="table" rid="cpc_47_4_043105_t4">Table 4</xref>. These features make it a high-motivation scenario that deserves investigation. We identify the minimal version of the RNMSSM from the principles of both simplicity and viability. Our example, which contains an SM singlet, two <inline-formula>
+               <tex-math><?CDATA $S U(2)_L$?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M257.jpg" xlink:type="simple"/>
+            </inline-formula> triplets, and an <inline-formula>
+               <tex-math><?CDATA $S U(3)_c$?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M258.jpg" xlink:type="simple"/>
+            </inline-formula> octet beyond the matter content of the NMSSM, indicates the following:</p><table-wrap id="cpc_47_4_043105_t4" orientation="portrait" position="float"><label>Table 4</label><caption id="cpc_47_4_043105_tc4"><p>Summary of the main phenomenological features in the RNMSSM compared to those of the MSSM, NMSSM, and RMSSM.</p></caption><table><thead><tr><th align="center" colspan="1" rowspan="1" valign="middle">Model</th><th align="center" colspan="1" rowspan="1" valign="middle">Higgs naturalness problem</th><th align="center" colspan="1" rowspan="1" valign="middle">
+                        <italic toggle="yes">µ</italic>
+                        <break/> problem</th><th align="center" colspan="1" rowspan="1" valign="middle">Flavor violation</th><th align="center" colspan="1" rowspan="1" valign="middle">Neutralino dark matter</th></tr></thead><tbody><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{MSSM}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M237.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{yes}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M238.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{yes}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M239.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{yes}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M240.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{Majorana}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M241.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{NMSSM}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M242.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{no}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M243.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{no}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M244.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{yes}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M245.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{Majorana}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M246.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{RMSSM}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M247.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{yes}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M248.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{no}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M249.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{no}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M250.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{Dirac}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M251.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td></tr><tr><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{RNMSSM}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M252.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{no}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M253.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{no}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M254.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{no}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M255.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td><td align="center" colspan="1" rowspan="1" valign="middle">
+                        <inline-formula>
+                           <tex-math><?CDATA $ {\rm{Dirac}} $?></tex-math>
+                           <inline-graphic xlink:href="cpc_47_4_043105_M256.jpg" xlink:type="simple"/>
+                        </inline-formula>
+                     </td></tr></tbody></table></table-wrap><p>● The <italic toggle="yes">μ</italic> problem is resolved by identifying the neutralinos as Dirac fermions. In this model, two <inline-formula>
+               <tex-math><?CDATA $ SU(2)_L $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M259.jpg" xlink:type="simple"/>
+            </inline-formula> triplets are introduced to illustrate the viability of the idea.</p><p>● The lightest neutralino mass is typically less than <inline-formula>
+               <tex-math><?CDATA $ \sim 100 $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M260.jpg" xlink:type="simple"/>
+            </inline-formula> GeV, which can realize bino-like dark matter with the main annihilations dominated by <inline-formula>
+               <tex-math><?CDATA $ \tau^{+}\tau^{-} $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M261.jpg" xlink:type="simple"/>
+            </inline-formula> and <inline-formula>
+               <tex-math><?CDATA $ \mu^{+}\mu^{-} $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M262.jpg" xlink:type="simple"/>
+            </inline-formula>. Much of the surviving parameter space in <xref ref-type="fig" rid="cpc_47_4_043105_f2">Fig. 2</xref> can be probed in future LHC experiments via <inline-formula>
+               <tex-math><?CDATA $ pp\rightarrow $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M263.jpg" xlink:type="simple"/>
+            </inline-formula>  multi – leptons + missing energy, dark matter direct detection, such as LZ [<xref ref-type="bibr" rid="cpc_47_4_043105_bib52">52</xref>], or dark matter indirect detection, such as Planck [<xref ref-type="bibr" rid="cpc_47_4_043105_bib53">53</xref>].</p><p>● The Higgs mass naturalness is resolved in terms of both the singlet and triplet, which simultaneously contribute to the tree-level Higgs mass. Meanwhile, they help the charged Higgs mass exceed the lower bound value from the stringent <inline-formula>
+               <tex-math><?CDATA $ B\rightarrow X_{s}\gamma $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M264.jpg" xlink:type="simple"/>
+            </inline-formula> limit.</p><p>● Owing to the absence of <italic toggle="yes">A</italic> terms, flavor violations are naturally small.</p><p>Finally, although not addressed here, there is no obstacle to finding an explicit SUSY-breaking sector<sup>
+               <xref ref-type="fn" rid="cpc_47_4_043105_pn5">⑤</xref>
+            </sup> that yields the soft Lagrangian <inline-formula>
+               <tex-math><?CDATA $ \mathcal{L}_{{\rm{soft}}} $?></tex-math>
+               <inline-graphic xlink:href="cpc_47_4_043105_M265.jpg" xlink:type="simple"/>
+            </inline-formula>, as we show above.</p></sec></body><back><fn-group><fn id="cpc_47_4_043105_pn1"><p>Spinor <italic toggle="yes">θ</italic> has mass dimension <inline-formula>
+                  <tex-math><?CDATA $ -1/2 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M266.jpg" xlink:type="simple"/>
+               </inline-formula> and <italic toggle="yes">R</italic> charge <inline-formula>
+                  <tex-math><?CDATA $ +1 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M267.jpg" xlink:type="simple"/>
+               </inline-formula>. So, for a chiral superfield with <italic toggle="yes">R</italic> charge <italic toggle="yes">q</italic>, the scalar and fermion  field have <italic toggle="yes">R</italic> charge <italic toggle="yes">q</italic> and <inline-formula>
+                  <tex-math><?CDATA $ q-1 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M268.jpg" xlink:type="simple"/>
+               </inline-formula>, respectively. Likewise, for spinor gauge superfield with <italic toggle="yes">R</italic> charge <italic toggle="yes">q</italic>, the fermion and gauge  field have <italic toggle="yes">R</italic> charge <italic toggle="yes">q</italic> and <inline-formula>
+                  <tex-math><?CDATA $ q-1 $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M269.jpg" xlink:type="simple"/>
+               </inline-formula>, respectively.</p></fn><fn id="cpc_47_4_043105_pn2"><p>For discussions about SUSY-breaking sector with <italic toggle="yes">R</italic> symmetry, see e.g., Refs. [<xref ref-type="bibr" rid="cpc_47_4_043105_bib20">20</xref>–<xref ref-type="bibr" rid="cpc_47_4_043105_bib22">22</xref>].</p></fn><fn id="cpc_47_4_043105_pn3"><p>These mass bounds are mainly based on the slepton pair productions at the LEP and LHC, which are dominated by the electroweak processes via s-channel <italic toggle="yes">γ</italic>, <italic toggle="yes">Z</italic> or <italic toggle="yes">W</italic>.  Unlike the Dirac gluino, charginos or neutralinos pair productions [<xref ref-type="bibr" rid="cpc_47_4_043105_bib23">23</xref>, <xref ref-type="bibr" rid="cpc_47_4_043105_bib33">33</xref>, <xref ref-type="bibr" rid="cpc_47_4_043105_bib41">41</xref>] which obviously differ from those of Majorana analogies due to new fermion freedoms, the slepton pair productions  are only altered due to sub-dominant processes.</p></fn><fn id="cpc_47_4_043105_pn4"><p>The main contribution to <inline-formula>
+                  <tex-math><?CDATA $ B\rightarrow X_{s}\gamma $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M270.jpg" xlink:type="simple"/>
+               </inline-formula> is dominated by the charged Higgs loop diagram, from which the inferred lower mass bound on <inline-formula>
+                  <tex-math><?CDATA $ m_{H^{\pm}} $?></tex-math>
+                  <inline-graphic xlink:href="cpc_47_4_043105_M271.jpg" xlink:type="simple"/>
+               </inline-formula> in the context of type-II Higgs doublet model is valid regardless of whether <italic toggle="yes">R</italic> symmetry is broken or not.</p></fn><fn id="cpc_47_4_043105_pn5"><p>
+               <italic toggle="yes">R</italic> axion from the <italic toggle="yes">R</italic> symmetry, has a mass induced by a constant superpotential necessary to obtain fine-tuned cosmological constant in hidden sector.  Depending on the hidden sector, one is able to derive strong cosmological constraint [<xref ref-type="bibr" rid="cpc_47_4_043105_bib54">54</xref>] through the decay of axion to gravitinos.</p></fn></fn-group><ref-list><title>References</title><ref id="cpc_47_4_043105_bib1"><label>[1]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Aad . (ATLAS Collaboration)</surname><given-names>G.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Phys. Lett. B</source><year>2012</year><volume>716</volume><fpage>1</fpage><pub-id pub-id-type="doi">10.1016/j.physletb.2012.08.020</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1207.7214" xlink:type="simple">1207.7214</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib2"><label>[2]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Chatrchyan . (CMS Collaboration)</surname><given-names>S.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Phys. Lett. B</source><year>2012</year><volume>716</volume><fpage>30</fpage><pub-id pub-id-type="doi">10.1016/j.physletb.2012.08.021</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1207.7235" xlink:type="simple">1207.7235</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib3"><label>[3]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>J. Hall</surname><given-names>L.</given-names></name>
+                  <name name-style="western"><surname>Pinner</surname><given-names>D.</given-names></name>
+                  <name name-style="western"><surname>T. Ruderman</surname><given-names>J.</given-names></name>
+               </person-group><source>JHEP</source><year>2012</year><volume>2012</volume><issue>04</issue><fpage>131</fpage><pub-id pub-id-type="doi">10.1007/JHEP04(2012)131</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1112.2703" xlink:type="simple">1112.2703</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib4"><label>[4]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>F. King</surname><given-names>S.</given-names></name>
+                  <name name-style="western"><surname>Muhlleitner</surname><given-names>M.</given-names></name>
+                  <name name-style="western"><surname>Nevzorov</surname><given-names>R.</given-names></name>
+               </person-group><source>Nucl. Phys. B</source><year>2012</year><volume>860</volume><fpage>207</fpage><pub-id pub-id-type="doi">10.1016/j.nuclphysb.2012.02.010</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1201.2671" xlink:type="simple">1201.2671</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib5"><label>[5]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>J. Cao</surname><given-names>J.</given-names></name>
+                  <name name-style="western"><surname>X. Heng</surname><given-names>Z.</given-names></name>
+                  <name name-style="western"><surname>M. Yang</surname><given-names>J.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>JHEP</source><year>2012</year><volume>2012</volume><issue>03</issue><fpage>086</fpage><pub-id pub-id-type="doi">10.1007/JHEP03(2012)086</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1202.5821" xlink:type="simple">1202.5821</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib6"><label>[6]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>G. Ross</surname><given-names>G.</given-names></name>
+                  <name name-style="western"><surname>Schmidt-Hoberg</surname><given-names>K.</given-names></name>
+               </person-group><source>Nucl. Phys. B</source><year>2012</year><volume>862</volume><fpage>710</fpage><pub-id pub-id-type="doi">10.1016/j.nuclphysb.2012.05.007</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1108.1284" xlink:type="simple">1108.1284</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib7"><label>[7]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Bastero-Gil</surname><given-names>M.</given-names></name>
+                  <name name-style="western"><surname>Hugonie</surname><given-names>C.</given-names></name>
+                  <name name-style="western"><surname>F. King</surname><given-names>S.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Phys. Lett. B</source><year>2000</year><volume>489</volume><fpage>359</fpage><pub-id pub-id-type="doi">10.1016/S0370-2693(00)00930-8</pub-id></element-citation></ref><ref id="cpc_47_4_043105_bib8"><label>[8]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Delgado</surname><given-names>A.</given-names></name>
+                  <name name-style="western"><surname>Kolda</surname><given-names>C.</given-names></name>
+                  <name name-style="western"><surname>P. Olson</surname><given-names>J.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Phys. Rev. Lett.</source><year>2010</year><volume>105</volume><fpage>091802</fpage><pub-id pub-id-type="doi">10.1103/PhysRevLett.105.091802</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1005.1282" xlink:type="simple">1005.1282</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib9"><label>[9]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Aprile . (XENON Collaboration)</surname><given-names>E.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Phys. Rev. Lett.</source><year>2018</year><volume>121</volume><issue>11</issue><fpage>111302</fpage><pub-id pub-id-type="doi">10.1103/PhysRevLett.121.111302</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1805.12562[astro-ph.CO]" xlink:type="simple">1805.12562[astro-ph.CO]</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib10"><label>[10]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Cui . (PandaX-Ⅱ Collaboration)</surname><given-names>X.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Phys. Rev. Lett.</source><year>2017</year><volume>119</volume><issue>18</issue><fpage>181302</fpage><pub-id pub-id-type="doi">10.1103/PhysRevLett.119.181302</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1708.06917[astro-ph.CO]" xlink:type="simple">1708.06917[astro-ph.CO]</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib11"><label>[11]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>S. Akerib . (LUX Collaboration)</surname><given-names>D.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Phys. Rev. Lett.</source><year>2017</year><volume>118</volume><issue>25</issue><fpage>251302</fpage><pub-id pub-id-type="doi">10.1103/PhysRevLett.118.251302</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1705.03380[astro-ph.CO]" xlink:type="simple">1705.03380[astro-ph.CO]</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib12"><label>[12]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>J. Huber</surname><given-names>S.</given-names></name>
+                  <name name-style="western"><surname>Konstandin</surname><given-names>T.</given-names></name>
+                  <name name-style="western"><surname>Prokopec</surname><given-names>T.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Nucl. Phys. B</source><year>2006</year><volume>757</volume><fpage>172</fpage><pub-id pub-id-type="doi">10.1016/j.nuclphysb.2006.09.003</pub-id></element-citation></ref><ref id="cpc_47_4_043105_bib13"><label>[13]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Carena</surname><given-names>M.</given-names></name>
+                  <name name-style="western"><surname>R. Shah</surname><given-names>N.</given-names></name>
+                  <name name-style="western"><surname>E. M. Wagner</surname><given-names>C.</given-names></name>
+               </person-group><source>Phys. Rev. D</source><year>2012</year><volume>85</volume><fpage>036003</fpage><pub-id pub-id-type="doi">10.1103/PhysRevD.85.036003</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1110.4378" xlink:type="simple">1110.4378</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib14"><label>[14]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Kozaczuk</surname><given-names>J.</given-names></name>
+                  <name name-style="western"><surname>Profumo</surname><given-names>S.</given-names></name>
+                  <name name-style="western"><surname>S. Haskins</surname><given-names>L.</given-names></name>
+                  <name name-style="western"><surname>L. Wainwright</surname><given-names>C.</given-names></name>
+               </person-group><source>JHEP</source><year>2015</year><volume>2015</volume><fpage>144</fpage><pub-id pub-id-type="doi">10.1007/JHEP01(2015)144</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1407.4134" xlink:type="simple">1407.4134</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib15"><label>[15]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Ahmed</surname><given-names>W.</given-names></name>
+                  <name name-style="western"><surname>Raza</surname><given-names>S.</given-names></name>
+                  <name name-style="western"><surname>Shafi</surname><given-names>Q.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>JHEP</source><year>2021</year><volume>2021</volume><issue>01</issue><fpage>161</fpage><pub-id pub-id-type="doi">10.1007/JHEP01(2021)161</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/2008.01568" xlink:type="simple">2008.01568</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib16"><label>[16]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>E. Nelson</surname><given-names>A.</given-names></name>
+                  <name name-style="western"><surname>Rius</surname><given-names>N.</given-names></name>
+                  <name name-style="western"><surname>Sanz</surname><given-names>V.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>JHEP</source><year>2002</year><volume>2020</volume><issue>08</issue><fpage>039</fpage><pub-id pub-id-type="doi">10.1088/1126-6708/2002/08/039</pub-id></element-citation></ref><ref id="cpc_47_4_043105_bib17"><label>[17]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>D. Kribs</surname><given-names>G.</given-names></name>
+                  <name name-style="western"><surname>Poppitz</surname><given-names>E.</given-names></name>
+                  <name name-style="western"><surname>Weiner</surname><given-names>N.</given-names></name>
+               </person-group><source>Phys. Rev. D</source><year>2008</year><volume>78</volume><fpage>055010</fpage><pub-id pub-id-type="doi">10.1103/PhysRevD.78.055010</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/0712.2039" xlink:type="simple">0712.2039</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib18"><label>[18]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Fayet</surname><given-names>P.</given-names></name>
+               </person-group><source>Phys. Lett. B</source><year>1978</year><volume>78</volume><fpage>417</fpage><lpage>420</lpage><pub-id pub-id-type="doi">10.1016/0370-2693(78)90474-4</pub-id></element-citation></ref><ref id="cpc_47_4_043105_bib19"><label>[19]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Benakli</surname><given-names>K.</given-names></name>
+               </person-group><source>Fortsch. Phys.</source><year>2011</year><volume>59</volume><fpage>1079</fpage><pub-id pub-id-type="doi">10.1002/prop.201100071</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1106.1649" xlink:type="simple">1106.1649</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib20"><label>[20]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>D. L. Amigo</surname><given-names>S.</given-names></name>
+                  <name name-style="western"><surname>E. Blechman</surname><given-names>A.</given-names></name>
+                  <name name-style="western"><surname>J. Fox</surname><given-names>P.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>JHEP</source><year>2009</year><volume>2009</volume><issue>01</issue><fpage>018</fpage><pub-id pub-id-type="doi">10.1088/1126-6708/2009/01/018</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/0809.1112" xlink:type="simple">0809.1112</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib21"><label>[21]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Benakli</surname><given-names>K.</given-names></name>
+                  <name name-style="western"><surname>D. Goodsell</surname><given-names>M.</given-names></name>
+               </person-group><source>Nucl. Phys. B</source><year>2009</year><volume>816</volume><fpage>185</fpage><lpage>203</lpage><pub-id pub-id-type="doi">10.1016/j.nuclphysb.2009.03.002</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/0811.4409" xlink:type="simple">0811.4409</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib22"><label>[22]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Luo</surname><given-names>M.</given-names></name>
+                  <name name-style="western"><surname>Zheng</surname><given-names>S.</given-names></name>
+               </person-group><source>JHEP</source><year>2009</year><volume>2009</volume><issue>01</issue><fpage>004</fpage><pub-id pub-id-type="doi">10.1088/1126-6708/2009/01/004</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/0812.4600" xlink:type="simple">0812.4600</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib23"><label>[23]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Heikinheimo</surname><given-names>M.</given-names></name>
+                  <name name-style="western"><surname>Kellerstein</surname><given-names>M.</given-names></name>
+                  <name name-style="western"><surname>Sanz</surname><given-names>V.</given-names></name>
+               </person-group><source>JHEP</source><year>2012</year><volume>2012</volume><issue>04</issue><fpage>043</fpage><pub-id pub-id-type="doi">10.1007/JHEP04(2012)043</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1111.4322" xlink:type="simple">1111.4322</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib24"><label>[24]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>D. Kribs</surname><given-names>G.</given-names></name>
+                  <name name-style="western"><surname>Martin</surname><given-names>A.</given-names></name>
+               </person-group><source>Phys. Rev. D</source><year>2012</year><volume>85</volume><fpage>115014</fpage><pub-id pub-id-type="doi">10.1103/PhysRevD.85.115014</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1203.4821" xlink:type="simple">1203.4821</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib25"><label>[25]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Chalons</surname><given-names>G.</given-names></name>
+                  <name name-style="western"><surname>D. Goodsell</surname><given-names>M.</given-names></name>
+                  <name name-style="western"><surname>Kraml</surname><given-names>S.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>JHEP</source><year>2019</year><volume>2019</volume><issue>04</issue><fpage>113</fpage><pub-id pub-id-type="doi">10.1007/JHEP04(2019)113</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1812.09293" xlink:type="simple">1812.09293</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib26"><label>[26]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Grilli di Cortona</surname><given-names>G.</given-names></name>
+                  <name name-style="western"><surname>Hardy</surname><given-names>E.</given-names></name>
+                  <name name-style="western"><surname>J. Powell</surname><given-names>A.</given-names></name>
+               </person-group><source>JHEP</source><year>2016</year><volume>2016</volume><issue>08</issue><fpage>014</fpage><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1606.07090" xlink:type="simple">1606.07090</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib27"><label>[27]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Abdallah . (DELPHI)</surname><given-names>J.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Eur. Phys. J. C</source><year>2003</year><volume>31</volume><fpage>421</fpage><lpage>479</lpage><pub-id pub-id-type="doi">10.1140/epjc/s2003-01355-5</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/hep-ex/0311019" xlink:type="simple">hep-ex/0311019</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib28"><label>[28]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Abbiendi . (OPAL)</surname><given-names>G.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Eur. Phys. J. C</source><year>2004</year><volume>35</volume><fpage>1</fpage><lpage>20</lpage><pub-id pub-id-type="doi">10.1140/epjc/s2004-01758-8</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/hep-ex/0401026" xlink:type="simple">hep-ex/0401026</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib29"><label>[29]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Aaboud . (ATLAS)</surname><given-names>M.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Phys. Rev. D</source><year>2018</year><volume>98</volume><issue>9</issue><fpage>092012</fpage><pub-id pub-id-type="doi">10.1103/PhysRevD.98.092012</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1806.02293" xlink:type="simple">1806.02293</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib30"><label>[30]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Aad . (ATLAS)</surname><given-names>G.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>JHEP</source><year>2014</year><volume>2014</volume><issue>05</issue><fpage>071</fpage><pub-id pub-id-type="doi">10.1007/JHEP05(2014)071</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1403.5294" xlink:type="simple">1403.5294</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib31"><label>[31]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Alvarado</surname><given-names>C.</given-names></name>
+                  <name name-style="western"><surname>Delgado</surname><given-names>A.</given-names></name>
+                  <name name-style="western"><surname>Martin</surname><given-names>A.</given-names></name>
+               </person-group><source>Phys. Rev. D</source><year>2018</year><volume>97</volume><issue>11</issue><fpage>115044</fpage><pub-id pub-id-type="doi">10.1103/PhysRevD.97.115044</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1803.00624" xlink:type="simple">1803.00624</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib32"><label>[32]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>De Simone</surname><given-names>A.</given-names></name>
+                  <name name-style="western"><surname>F. Giudice</surname><given-names>G.</given-names></name>
+                  <name name-style="western"><surname>Strumia</surname><given-names>A.</given-names></name>
+               </person-group><source>JHEP</source><year>2014</year><volume>06</volume><fpage>081</fpage><pub-id pub-id-type="doi">10.1007/JHEP06(2014)081</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1402.6287" xlink:type="simple">1402.6287</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib33"><label>[33]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Y. Choi</surname><given-names>S.</given-names></name>
+                  <name name-style="western"><surname>Drees</surname><given-names>M.</given-names></name>
+                  <name name-style="western"><surname>Freitas</surname><given-names>A.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Phys. Rev. D</source><year>2008</year><volume>78</volume><fpage>095007</fpage><pub-id pub-id-type="doi">10.1103/PhysRevD.78.095007</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/0808.2410" xlink:type="simple">0808.2410</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib34"><label>[34]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Belanger</surname><given-names>G.</given-names></name>
+                  <name name-style="western"><surname>Benakli</surname><given-names>K.</given-names></name>
+                  <name name-style="western"><surname>Goodsell</surname><given-names>M.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>JCAP</source><year>2009</year><volume>08</volume><fpage>027</fpage><pub-id pub-id-type="doi">10.1088/1475-7516/2009/08/027</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/0905.1043" xlink:type="simple">0905.1043</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib35"><label>[35]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>J. Chun</surname><given-names>E.</given-names></name>
+                  <name name-style="western"><surname>C. Park</surname><given-names>J.</given-names></name>
+                  <name name-style="western"><surname>Scopel</surname><given-names>S.</given-names></name>
+               </person-group><source>JCAP</source><year>2010</year><volume>02</volume><fpage>015</fpage><pub-id pub-id-type="doi">10.1088/1475-7516/2010/02/015</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/0911.5273" xlink:type="simple">0911.5273</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib36"><label>[36]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>R. Buckley</surname><given-names>M.</given-names></name>
+                  <name name-style="western"><surname>Hooper</surname><given-names>D.</given-names></name>
+                  <name name-style="western"><surname>Kumar</surname><given-names>J.</given-names></name>
+               </person-group><source>Phys. Rev. D</source><year>2013</year><volume>88</volume><fpage>063532</fpage><pub-id pub-id-type="doi">10.1103/PhysRevD.88.063532</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1307.3561" xlink:type="simple">1307.3561</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib37"><label>[37]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>A. Baltz</surname><given-names>E.</given-names></name>
+                  <name name-style="western"><surname>Bergstrom</surname><given-names>L.</given-names></name>
+               </person-group><source>Phys. Rev. D</source><year>2003</year><volume>67</volume><fpage>043516</fpage><pub-id pub-id-type="doi">10.1103/PhysRevD.67.043516</pub-id></element-citation></ref><ref id="cpc_47_4_043105_bib38"><label>[38]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Bergstrom</surname><given-names>L.</given-names></name>
+                  <name name-style="western"><surname>Bringmann</surname><given-names>T.</given-names></name>
+                  <name name-style="western"><surname>Cholis</surname><given-names>I.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Phys. Rev. Lett.</source><year>2013</year><volume>111</volume><fpage>171101</fpage><pub-id pub-id-type="doi">10.1103/PhysRevLett.111.171101</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1306.3983[astro-ph.HE]" xlink:type="simple">1306.3983[astro-ph.HE]</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib39"><label>[39]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Amsler . (Particle Data Group)</surname><given-names>C.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Phys. Lett. B</source><year>2008</year><volume>667</volume><fpage>1</fpage><lpage>1340</lpage><pub-id pub-id-type="doi">10.1016/j.physletb.2008.07.018</pub-id></element-citation></ref><ref id="cpc_47_4_043105_bib40"><label>[40]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Aad . (ATLAS)</surname><given-names>G.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Phys. Lett. B</source><year>2013</year><volume>718</volume><fpage>879</fpage><lpage>901</lpage><pub-id pub-id-type="doi">10.1016/j.physletb.2012.11.058</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1208.2884" xlink:type="simple">1208.2884</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib41"><label>[41]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Y. Choi</surname><given-names>S.</given-names></name>
+                  <name name-style="western"><surname>Choudhury</surname><given-names>D.</given-names></name>
+                  <name name-style="western"><surname>Freitas</surname><given-names>A.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>JHEP</source><year>2010</year><volume>08</volume><fpage>025</fpage><pub-id pub-id-type="doi">10.1007/JHEP08(2010)025</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1005.0818" xlink:type="simple">1005.0818</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib42"><label>[42]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Ackermann . (Fermi-LAT)</surname><given-names>M.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Phys. Rev. Lett.</source><year>2015</year><volume>115</volume><issue>23</issue><fpage>231301</fpage><pub-id pub-id-type="doi">10.1103/PhysRevLett.115.231301</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1503.02641[astro-ph.HE]" xlink:type="simple">1503.02641[astro-ph.HE]</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib43"><label>[43]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Y. Choi</surname><given-names>S.</given-names></name>
+                  <name name-style="western"><surname>Choudhury</surname><given-names>D.</given-names></name>
+                  <name name-style="western"><surname>Freitas</surname><given-names>A.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Phys. Lett. B</source><year>2011</year><volume>697</volume><fpage>215</fpage><lpage>221</lpage><pub-id pub-id-type="doi">10.1016/j.physletb.2011.01.059</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1012.2688" xlink:type="simple">1012.2688</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib44"><label>[44]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Benakli</surname><given-names>K.</given-names></name>
+                  <name name-style="western"><surname>D. Goodsell</surname><given-names>M.</given-names></name>
+                  <name name-style="western"><surname>Staub</surname><given-names>F.</given-names></name>
+               </person-group><source>JHEP</source><year>2013</year><volume>06</volume><fpage>073</fpage><pub-id pub-id-type="doi">10.1007/JHEP06(2013)073</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1211.0552" xlink:type="simple">1211.0552</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib45"><label>[45]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Bertuzzo</surname><given-names>E.</given-names></name>
+                  <name name-style="western"><surname>Frugiuele</surname><given-names>C.</given-names></name>
+                  <name name-style="western"><surname>Gregoire</surname><given-names>T.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>JHEP</source><year>2015</year><volume>04</volume><fpage>089</fpage><pub-id pub-id-type="doi">10.1007/JHEP04(2015)089</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1402.5432" xlink:type="simple">1402.5432</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib46"><label>[46]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Dießner</surname><given-names>P.</given-names></name>
+                  <name name-style="western"><surname>Kalinowski</surname><given-names>J.</given-names></name>
+                  <name name-style="western"><surname>Kotlarski</surname><given-names>W.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>JHEP</source><year>2014</year><volume>12</volume><fpage>124</fpage><pub-id pub-id-type="doi">10.1007/JHEP12(2014)124</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1410.4791" xlink:type="simple">1410.4791</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib47"><label>[47]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Diessner</surname><given-names>P.</given-names></name>
+                  <name name-style="western"><surname>Kalinowski</surname><given-names>J.</given-names></name>
+                  <name name-style="western"><surname>Kotlarski</surname><given-names>W.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>JHEP</source><year>2016</year><volume>03</volume><fpage>007</fpage><pub-id pub-id-type="doi">10.1007/JHEP03(2016)007</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1511.09334" xlink:type="simple">1511.09334</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib48"><label>[48]</label><element-citation publication-type="other" xlink:type="simple"><comment>H. Flacher, M. Goebel, J. Haller et al., <italic toggle="yes">Revisiting the Global Electroweak Fit of the Standard Model and Beyond with Gfitter</italic>, <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1140/epjc/s10052-009-0966-6" xlink:type="simple">Eur. Phys. J. C <bold>60</bold>, 543-583 (2009)</ext-link> [Erratum: <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1140/epjc/s10052-011-1718-y" xlink:type="simple">Eur. Phys. J. C <bold>71</bold>, 1718 (2011)</ext-link>], arXiv: <ext-link ext-link-type="uri" xlink:href="http://arxiv.org/abs/0811.0009[hep-ph]" xlink:type="simple">0811.0009[hep-ph]</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib49"><label>[49]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Misiak</surname><given-names>M.</given-names></name>
+                  <name name-style="western"><surname>M. Asatrian</surname><given-names>H.</given-names></name>
+                  <name name-style="western"><surname>Boughezal</surname><given-names>R.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Phys. Rev. Lett.</source><year>2015</year><volume>114</volume><issue>22</issue><fpage>221801</fpage><pub-id pub-id-type="doi">10.1103/PhysRevLett.114.221801</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1503.01789" xlink:type="simple">1503.01789</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib50"><label>[50]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Misiak</surname><given-names>M.</given-names></name>
+                  <name name-style="western"><surname>Steinhauser</surname><given-names>M.</given-names></name>
+               </person-group><source>Eur. Phys. J. C</source><year>2017</year><volume>77</volume><issue>3</issue><fpage>201</fpage><pub-id pub-id-type="doi">10.1140/epjc/s10052-017-4776-y</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1702.04571" xlink:type="simple">1702.04571</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib51"><label>[51]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>G. Akeroyd</surname><given-names>A.</given-names></name>
+                  <name name-style="western"><surname>Aoki</surname><given-names>M.</given-names></name>
+                  <name name-style="western"><surname>Arhrib</surname><given-names>A.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Eur. Phys. J. C</source><year>2017</year><volume>77</volume><issue>5</issue><fpage>276</fpage><pub-id pub-id-type="doi">10.1140/epjc/s10052-017-4829-2</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1607.01320" xlink:type="simple">1607.01320</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib52"><label>[52]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>S. Akerib . (LZ)</surname><given-names>D.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Nucl. Instrum. Meth. A</source><year>2020</year><volume>953</volume><fpage>163047</fpage><pub-id pub-id-type="doi">10.1016/j.nima.2019.163047</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1910.09124[physics.ins-det]" xlink:type="simple">1910.09124[physics.ins-det]</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib53"><label>[53]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>A. R. Ade . (Planck)</surname><given-names>P.</given-names></name>
+                  <etal>et al</etal>
+               </person-group><source>Astron. Astrophys.</source><year>2016</year><volume>594</volume><fpage>A13</fpage><pub-id pub-id-type="doi">10.1051/0004-6361/201525830</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/1502.01589[astro-ph.CO]" xlink:type="simple">1502.01589[astro-ph.CO]</ext-link>
+               </comment></element-citation></ref><ref id="cpc_47_4_043105_bib54"><label>[54]</label><element-citation publication-type="journal" xlink:type="simple"><person-group person-group-type="author">
+                  <name name-style="western"><surname>Bagger</surname><given-names>J.</given-names></name>
+                  <name name-style="western"><surname>Poppitz</surname><given-names>E.</given-names></name>
+                  <name name-style="western"><surname>Randall</surname><given-names>L.</given-names></name>
+               </person-group><source>Nucl. Phys. B</source><year>1994</year><volume>426</volume><fpage>3</fpage><lpage>18</lpage><pub-id pub-id-type="doi">10.1016/0550-3213(94)90123-6</pub-id><comment>arXiv: <ext-link ext-link-type="arxiv" xlink:href="http://arxiv.org/abs/hep-ph/9405345" xlink:type="simple">hep-ph/9405345</ext-link>
+               </comment></element-citation></ref></ref-list></back></article>

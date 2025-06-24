@@ -1,0 +1,85 @@
+interactions:
+  - request:
+      body: null
+      headers:
+        Accept:
+          - "*/*"
+        Accept-Encoding:
+          - gzip, deflate
+        Connection:
+          - keep-alive
+        User-Agent:
+          - python-requests/2.27.1
+      method: GET
+      uri: http://export.arxiv.org/api/query?search_query=ti%3A%22A+strategy+for+a+general+search+for+new+phenomena+using+data%3Fderived+signal+regions+and+its+application+within+the+ATLAS+experiment%22
+    response:
+      body:
+        string:
+          "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\"\
+          >\n  <link href=\"http://arxiv.org/api/query?search_query%3Dti%3A%22A%20strategy%20for%20a%20general%20search%20for%20new%20phenomena%20using%20data%3Fderived%20signal%20regions%20and%20its%20application%20within%20the%20ATLAS%20experiment%22%26id_list%3D%26start%3D0%26max_results%3D10\"\
+          \ rel=\"self\" type=\"application/atom+xml\"/>\n  <title type=\"html\">ArXiv\
+          \ Query: search_query=ti:\"A strategy for a general search for new phenomena\
+          \ using data?derived signal regions and its application within the ATLAS experiment\"\
+          &amp;id_list=&amp;start=0&amp;max_results=10</title>\n  <id>http://arxiv.org/api/54S/5Ba8iBIov3izbyLLUd3nhjA</id>\n\
+          \  <updated>2022-06-01T00:00:00-04:00</updated>\n  <opensearch:totalResults\
+          \ xmlns:opensearch=\"http://a9.com/-/spec/opensearch/1.1/\">1</opensearch:totalResults>\n\
+          \  <opensearch:startIndex xmlns:opensearch=\"http://a9.com/-/spec/opensearch/1.1/\"\
+          >0</opensearch:startIndex>\n  <opensearch:itemsPerPage xmlns:opensearch=\"\
+          http://a9.com/-/spec/opensearch/1.1/\">10</opensearch:itemsPerPage>\n  <entry>\n\
+          \    <id>http://arxiv.org/abs/1807.07447v2</id>\n    <updated>2019-02-18T13:51:22Z</updated>\n\
+          \    <published>2018-07-19T14:04:12Z</published>\n    <title>A strategy for\
+          \ a general search for new phenomena using data-derived\n  signal regions\
+          \ and its application within the ATLAS experiment</title>\n    <summary> \
+          \ This paper describes a strategy for a general search used by the ATLAS\n\
+          Collaboration to find potential indications of new physics. Events are\nclassified\
+          \ according to their final state into many event classes. For each\nevent\
+          \ class an automated search algorithm tests whether the data are compatible\n\
+          with the Monte Carlo simulated expectation in various distributions sensitive\n\
+          to the effects of new physics. The significance of a deviation is quantified\n\
+          using pseudo-experiments. A data selection with a significant deviation defines\n\
+          a signal region for a dedicated follow-up analysis with an improved background\n\
+          expectation. The analysis of the data-derived signal regions on a new dataset\n\
+          allows a statistical interpretation without the large look-elsewhere effect.\n\
+          The sensitivity of the approach is discussed using Standard Model processes\
+          \ and\nbenchmark signals of new physics. As an example, results are shown\
+          \ for 3.2\nfb$^{-1}$ of proton-proton collision data at a centre-of-mass energy\
+          \ of 13 TeV\ncollected with the ATLAS detector at the LHC in 2015, in which\
+          \ more than 700\nevent classes and more than 10$^5$ regions have been analysed.\
+          \ No significant\ndeviations are found and consequently no data-derived signal\
+          \ regions for a\nfollow-up analysis have been defined.\n</summary>\n    <author>\n\
+          \      <name> ATLAS Collaboration</name>\n    </author>\n    <arxiv:doi xmlns:arxiv=\"\
+          http://arxiv.org/schemas/atom\">10.1140/epjc/s10052-019-6540-y</arxiv:doi>\n\
+          \    <link title=\"doi\" href=\"http://dx.doi.org/10.1140/epjc/s10052-019-6540-y\"\
+          \ rel=\"related\"/>\n    <arxiv:comment xmlns:arxiv=\"http://arxiv.org/schemas/atom\"\
+          >63 pages in total, author list starting page 47, 23 figures, 5\n  tables,\
+          \ final version published in Eur. Phys. J. C. All figures including\n  auxiliary\
+          \ figures are available at\n  http://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/EXOT-2016-38/</arxiv:comment>\n\
+          \    <arxiv:journal_ref xmlns:arxiv=\"http://arxiv.org/schemas/atom\">Eur.\
+          \ Phys. J. C 79 (2019) 120</arxiv:journal_ref>\n    <link href=\"http://arxiv.org/abs/1807.07447v2\"\
+          \ rel=\"alternate\" type=\"text/html\"/>\n    <link title=\"pdf\" href=\"\
+          http://arxiv.org/pdf/1807.07447v2\" rel=\"related\" type=\"application/pdf\"\
+          />\n    <arxiv:primary_category xmlns:arxiv=\"http://arxiv.org/schemas/atom\"\
+          \ term=\"hep-ex\" scheme=\"http://arxiv.org/schemas/atom\"/>\n    <category\
+          \ term=\"hep-ex\" scheme=\"http://arxiv.org/schemas/atom\"/>\n  </entry>\n\
+          </feed>\n"
+      headers:
+        Access-control-allow-origin:
+          - "*"
+        Connection:
+          - Keep-Alive
+        Content-Type:
+          - application/atom+xml; charset=UTF-8
+        Date:
+          - Wed, 01 Jun 2022 07:48:14 GMT
+        Keep-Alive:
+          - timeout=5, max=100
+        Server:
+          - Apache
+        Vary:
+          - Accept-Encoding,User-Agent
+        content-length:
+          - "3784"
+      status:
+        code: 200
+        message: OK
+version: 1
