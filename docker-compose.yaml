@@ -57,7 +57,6 @@ x-airflow-common: &airflow-common
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
-    _AIRFLOW__OPENSEARCH__HOST: https://scoap3-qa:xsRVHmBencJZW323@os-scoap3-qa1.cern.ch/os
     # AIRFLOW__API__SECRET_KEY: CAHNGEME
     # AIRFLOW__WORKER__SECRET_KEY: CAHNGEME
     # AIRFLOW__SECRET_KEY: CAHNGEME
