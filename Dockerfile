@@ -1,21 +1,27 @@
-FROM registry.cern.ch/cern-sis/airflow-base:2.8.3
+FROM apache/airflow:3.0.2-python3.11
 
-ENV AIRFLOW_HOME=/opt/airflow
-WORKDIR /opt/airflow
+COPY requirements.txt /requirements.txt
+COPY requirements-test.txt /requirements-test.txt
+COPY requirements-airflow.txt /requirements-airflow.txt
 
-ENV PYTHONBUFFERED=0
-ENV AIRFLOW__LOGGING__LOGGING_LEVEL=INFO
+# Install apt packages for 'leveldb'
+USER root
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libleveldb-dev \
+    python3-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+USER airflow
 
-COPY requirements.txt ./requirements.txt
-COPY requirements-test.txt ./requirements-test.txt
-COPY requirements-airflow.txt ./requirements-airflow.txt
+RUN pip install --no-cache-dir \
+    "apache-airflow[celery,postgres,redis,cncf.kubernetes,sentry,amazon,opensearch]==${AIRFLOW_VERSION}" \
+    -r /requirements.txt \
+    -r /requirements-test.txt \
+    --constraint https://raw.githubusercontent.com/apache/airflow/constraints-3.0.2/constraints-3.11.txt
 
-COPY dags ./dags
-COPY airflow.cfg ./airflow.cfg
+RUN pip install apache-airflow-providers-elasticsearch==6.3.0
 
-RUN pip install --upgrade pip &&\
-    pip install --no-cache-dir --upgrade setuptools==59.1.1 &&\
-    pip install --no-cache-dir --upgrade wheel &&\
-    pip install --no-cache-dir --user -r requirements-airflow.txt &&\
-    pip install --no-cache-dir --user -r requirements.txt &&\
-    pip install --no-cache-dir --user -r requirements-test.txt
+COPY dags /opt/airflow/dags
+COPY plugins /opt/airflow/plugins
+COPY airflow.cfg /opt/airflow/airflow.cfg
