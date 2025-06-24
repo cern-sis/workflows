@@ -23,8 +23,8 @@ buckets:
 	docker compose up -d create_buckets
 
 airflow:
-	airflow db init
-	airflow webserver -D
+	airflow db migrate
+	airflow api-server -D
 	airflow triggerer -D
 	airflow scheduler -D
 	airflow celery worker -D
