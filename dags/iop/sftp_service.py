@@ -8,7 +8,8 @@ class IOPSFTPService(SFTPService):
         super().__init__(
             host=os.getenv("IOP_FTP_HOST", "localhost"),
             username=os.getenv("IOP_FTP_USERNAME", "airflow"),
-            password=os.getenv("IOP_FTP_PASSWORD", "airflow"),
+            password=None,
             port=int(os.getenv("IOP_FTP_PORT", "2222")),
             dir=os.getenv("IOP_FTP_DIR", "upload/iop"),
+            private_key_content=os.getenv("IOP_FTP_SSH_PRIVATE_KEY"),
         )

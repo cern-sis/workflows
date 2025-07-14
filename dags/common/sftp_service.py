@@ -1,3 +1,4 @@
+import io
 import os
 import re
 import traceback
@@ -16,25 +17,40 @@ class SFTPService:
         password="airflow",
         port=2222,
         dir="/upload",
+        private_key_content=None,
     ):
         self.connection = None
         self.host = host
         self.username = username
         self.password = password
         self.port = port
+        self.private_key_content = private_key_content
         self.logger = get_logger().bind(class_name=type(self).__name__)
         self.dir = dir
 
     def __connect(self):
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        client.connect(
-            banner_timeout=200,
-            hostname=self.host,
-            username=self.username,
-            password=self.password,
-            port=self.port,
-        )
+
+        connect_kwargs = {
+            "banner_timeout": 200,
+            "hostname": self.host,
+            "username": self.username,
+            "port": self.port,
+        }
+
+        if self.private_key_content:
+            private_key_file = io.StringIO(self.private_key_content)
+            connect_kwargs["pkey"] = paramiko.RSAKey.from_private_key(private_key_file)
+        elif self.password:
+            connect_kwargs["password"] = self.password
+        else:
+            raise ValueError(
+                "No authentication method provided (private key or password)"
+            )
+
+        client.connect(**connect_kwargs)
+
         connection = client.open_sftp()
         try:
             connection.stat(self.dir)
