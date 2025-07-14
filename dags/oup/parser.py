@@ -1,5 +1,6 @@
 import datetime
 import os
+import re
 
 from common.parsing.parser import IParser
 from common.parsing.xml_extractors import (
@@ -157,6 +158,17 @@ class OUPParser(IParser):
                 arxiv_eprints.append({"value": arxiv_eprint})
         return arxiv_eprints
 
+    def _extract_ror_from_text(self, text):
+        if not text:
+            return None
+
+        ror_pattern = r"https://ror\.org/([a-z0-9]+)"
+        match = re.search(ror_pattern, text, re.IGNORECASE)
+
+        if match:
+            return match.group(1)
+        return None
+
     def _get_authors(self, article):
         contributions = article.findall(
             "front/article-meta/contrib-group/contrib[@contrib-type='author']"
@@ -182,10 +194,17 @@ class OUPParser(IParser):
                         "institution",
                     )
                 )
+
+                addr_line = get_text_value(affiliation.find("addr-line"))
+                ror_id = self._extract_ror_from_text(addr_line)
+
                 _aff = {"organization": institution}
                 if country:
                     country = country.capitalize()
                     _aff["country"] = country
+                if ror_id:
+                    _aff["ror"] = ror_id
+
                 full_affiliation.append(_aff)
 
             if not all([surname, given_names, email]) and not full_affiliation:
