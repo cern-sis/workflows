@@ -71,6 +71,7 @@ jobs:
           --name workflows
           --network=host
           -e S3_ENDPOINT=http://localhost:9000
+          -e IOP_FTP_SSH_PRIVATE_KEY="${IOP_FTP_SSH_PRIVATE_KEY}"
           -v "$(pwd)"/tests:/opt/airflow/tests
           -v "$(pwd)"/data:/opt/airflow/data
           --entrypoint pytest
