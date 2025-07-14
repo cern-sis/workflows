@@ -6,6 +6,7 @@ import pendulum
 from airflow.decorators import dag, task
 from airflow.providers.amazon.aws.hooks.s3 import S3Hook
 from airflow.providers.amazon.aws.transfers.http_to_s3 import HttpToS3Operator
+from common.enhancer import Enhancer
 from common.enricher import Enricher
 from common.utils import create_or_update_article
 from jagiellonian.parser import JagiellonianParser
@@ -87,6 +88,10 @@ def jagiellonian_process_file():
 
         return parsed_file
 
+    @task(task_id="jagiellonian-enhance")
+    def enhance(enhanced_file):
+        return Enhancer()("Jagiellonian", enhanced_file)
+
     @task(task_id="jagiellonian-enrich")
     def enrich(enhanced_file):
         return Enricher()(enhanced_file)
@@ -114,7 +119,8 @@ def jagiellonian_process_file():
 
     parsed_file = parse()
     parsed_file_with_files = populate_files(parsed_file)
-    enriched_file = enrich(parsed_file_with_files)
+    enhanced_file = enhance(parsed_file_with_files)
+    enriched_file = enrich(enhanced_file)
     save_to_s3(enriched_file=enriched_file)
     create_or_update(enriched_file)
 

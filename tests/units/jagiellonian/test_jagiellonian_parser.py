@@ -36,6 +36,7 @@ def test_parsed_articles(parser, article):
                         "value": "Theory Center, Jefferson Lab",
                         "organization": "Theory Center, Jefferson Lab",
                         "ror": "https://ror.org/02vwzrd76",
+                        "country": "US",
                     }
                 ],
             }
