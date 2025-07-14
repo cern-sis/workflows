@@ -16,6 +16,8 @@ jobs:
   build_test:
     name: Build and Test
     runs-on: ubuntu-latest
+    env:
+      IOP_FTP_SSH_PRIVATE_KEY: ${{ secrets.IOP_FTP_SSH_PRIVATE_KEY }}
     steps:
       - name: Checkout
         if: ${{ github.event_name == 'push' }}
