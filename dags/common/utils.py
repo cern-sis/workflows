@@ -12,6 +12,7 @@ from stat import S_ISDIR, S_ISREG
 
 import backoff
 import country_converter as coco
+import pycountry
 import requests
 from airflow.models.dagrun import DagRun
 from airflow.utils.state import DagRunState
@@ -20,14 +21,10 @@ from common.constants import (
     CDATA_PATTERN,
     COUNTRIES_DEFAULT_MAPPING,
     CREATIVE_COMMONS_PATTERN,
-    INSTITUTIONS_AND_COUNTRIES_MAPPING,
     LICENSE_PATTERN,
+    SPECIAL_CASES,
 )
-from common.exceptions import (
-    FoundMoreThanOneMatchOrNone,
-    UnknownFileExtension,
-    UnknownLicense,
-)
+from common.exceptions import UnknownFileExtension, UnknownLicense
 from inspire_utils.record import get_value
 from structlog import get_logger
 
@@ -321,37 +318,31 @@ def create_or_update_article(data):
         raise
 
 
-def parse_country_from_value(affiliation_value):
-    for key, val in INSTITUTIONS_AND_COUNTRIES_MAPPING.items():
-        if re.search(r"\b%s\b" % key, affiliation_value, flags=re.IGNORECASE):
-            return val
-    country = affiliation_value.split(",")[-1].strip()
-    for key, val in COUNTRIES_DEFAULT_MAPPING.items():
-        if re.search(r"\b%s\b" % key, country, flags=re.IGNORECASE):
-            return val
+def parse_country_from_value(value):
+    sorted_special_keys = sorted(SPECIAL_CASES.keys(), key=len, reverse=True)
 
-    try:
-        country_code = cc.convert(country, to="iso2")
-        mapped_countries = []
-        if country_code != "not found":
-            mapped_countries = [
-                {
-                    "code": country_code,
-                    "name": cc.convert(country, to="name_short"),
-                }
-            ]
+    normalized = re.sub(r"[,-]", " ", value.lower())
 
-        if len(mapped_countries) > 1 or len(mapped_countries) == 0:
-            raise FoundMoreThanOneMatchOrNone(affiliation_value)
-        return mapped_countries[0].get("name", "")
-    except (LookupError, FoundMoreThanOneMatchOrNone):
-        return find_country_match_from_mapping(affiliation_value)
+    for key in sorted_special_keys:
+        pattern = re.compile(rf"\b{re.escape(key)}\b")
+        if pattern.search(normalized):
+            return SPECIAL_CASES[key]
 
+    parts = normalized.split()
+    max_len = min(6, len(parts))
+    for i in range(len(parts)):
+        for n in range(max_len, 0, -1):
+            if i + n <= len(parts):
+                phrase = " ".join(parts[-(i + n) : len(parts) - i])
+                try:
+                    country = pycountry.countries.search_fuzzy(phrase)
+                    if country:
+                        code = country[0].alpha_2
+                        return coco.convert(names=code, to="name_short")
+                except LookupError:
+                    continue
 
-def find_country_match_from_mapping(affiliation_value):
-    for key in COUNTRIES_DEFAULT_MAPPING:
-        if re.search(r"\b%s\b" % key, affiliation_value, flags=re.IGNORECASE):
-            return COUNTRIES_DEFAULT_MAPPING[key]
+    return None
 
 
 def get_country_ISO_name(country):
