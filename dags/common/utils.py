@@ -12,22 +12,21 @@ from stat import S_ISDIR, S_ISREG
 
 import backoff
 import country_converter as coco
+import pycountry
 import requests
 from airflow.models.dagrun import DagRun
 from airflow.utils.state import DagRunState
 from common.constants import (
     BY_PATTERN,
     CDATA_PATTERN,
+    CHAR_REPLACEMENTS,
     COUNTRIES_DEFAULT_MAPPING,
     CREATIVE_COMMONS_PATTERN,
-    INSTITUTIONS_AND_COUNTRIES_MAPPING,
     LICENSE_PATTERN,
+    SPECIAL_CASES,
+    SPECIAL_PATTERNS,
 )
-from common.exceptions import (
-    FoundMoreThanOneMatchOrNone,
-    UnknownFileExtension,
-    UnknownLicense,
-)
+from common.exceptions import UnknownFileExtension, UnknownLicense
 from inspire_utils.record import get_value
 from structlog import get_logger
 
@@ -321,37 +320,65 @@ def create_or_update_article(data):
         raise
 
 
-def parse_country_from_value(affiliation_value):
-    for key, val in INSTITUTIONS_AND_COUNTRIES_MAPPING.items():
-        if re.search(r"\b%s\b" % key, affiliation_value, flags=re.IGNORECASE):
-            return val
-    country = affiliation_value.split(",")[-1].strip()
-    for key, val in COUNTRIES_DEFAULT_MAPPING.items():
-        if re.search(r"\b%s\b" % key, country, flags=re.IGNORECASE):
-            return val
+def unwrap_coco_result(res):
+    if isinstance(res, (list, tuple)):
+        for item in res:
+            if isinstance(item, str) and item.lower() != "not found":
+                return item
+        return None
 
-    try:
-        country_code = cc.convert(country, to="iso2")
-        mapped_countries = []
-        if country_code != "not found":
-            mapped_countries = [
-                {
-                    "code": country_code,
-                    "name": cc.convert(country, to="name_short"),
-                }
-            ]
+    if not res or str(res).lower() == "not found":
+        return None
 
-        if len(mapped_countries) > 1 or len(mapped_countries) == 0:
-            raise FoundMoreThanOneMatchOrNone(affiliation_value)
-        return mapped_countries[0].get("name", "")
-    except (LookupError, FoundMoreThanOneMatchOrNone):
-        return find_country_match_from_mapping(affiliation_value)
+    return res
 
 
-def find_country_match_from_mapping(affiliation_value):
-    for key in COUNTRIES_DEFAULT_MAPPING:
-        if re.search(r"\b%s\b" % key, affiliation_value, flags=re.IGNORECASE):
-            return COUNTRIES_DEFAULT_MAPPING[key]
+def initialize_special_cases():
+    global SPECIAL_PATTERNS
+    sorted_keys = sorted(SPECIAL_CASES.keys(), key=len, reverse=True)
+    SPECIAL_PATTERNS = [
+        (re.compile(rf"\b{re.escape(key)}\b"), SPECIAL_CASES[key])
+        for key in sorted_keys
+    ]
+
+
+def parse_country_from_value(value):
+    if not SPECIAL_PATTERNS:
+        initialize_special_cases()
+
+    norm = value.lower().translate(CHAR_REPLACEMENTS)
+
+    for pattern, country in SPECIAL_PATTERNS:
+        if pattern.search(norm):
+            return country
+
+    raw_iso2 = cc.convert(names=norm, to="ISO2")
+    iso2 = unwrap_coco_result(raw_iso2)
+    if iso2:
+        raw_short = cc.convert(names=iso2, to="name_short")
+        short = unwrap_coco_result(raw_short)
+        if short:
+            return short
+
+    parts = norm.split()
+    plen = len(parts)
+    max_len = min(4, plen)
+    for i in range(plen):
+        for n in range(max_len, 0, -1):
+            start = plen - i - n
+            if start < 0:
+                continue
+            phrase = " ".join(parts[start : plen - i])
+            try:
+                matches = pycountry.countries.search_fuzzy(phrase)
+                if matches:
+                    return unwrap_coco_result(
+                        cc.convert(names=matches[0].alpha_2, to="name_short")
+                    )
+            except LookupError:
+                continue
+
+    return None
 
 
 def get_country_ISO_name(country):
