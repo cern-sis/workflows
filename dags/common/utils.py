@@ -19,10 +19,12 @@ from airflow.utils.state import DagRunState
 from common.constants import (
     BY_PATTERN,
     CDATA_PATTERN,
+    CHAR_REPLACEMENTS,
     COUNTRIES_DEFAULT_MAPPING,
     CREATIVE_COMMONS_PATTERN,
     LICENSE_PATTERN,
     SPECIAL_CASES,
+    SPECIAL_PATTERNS,
 )
 from common.exceptions import UnknownFileExtension, UnknownLicense
 from inspire_utils.record import get_value
@@ -318,29 +320,63 @@ def create_or_update_article(data):
         raise
 
 
+def unwrap_coco_result(res):
+    if isinstance(res, (list, tuple)):
+        for item in res:
+            if isinstance(item, str) and item.lower() != "not found":
+                return item
+        return None
+
+    if not res or str(res).lower() == "not found":
+        return None
+
+    return res
+
+
+def initialize_special_cases():
+    global SPECIAL_PATTERNS
+    sorted_keys = sorted(SPECIAL_CASES.keys(), key=len, reverse=True)
+    SPECIAL_PATTERNS = [
+        (re.compile(rf"\b{re.escape(key)}\b"), SPECIAL_CASES[key])
+        for key in sorted_keys
+    ]
+
+
 def parse_country_from_value(value):
-    sorted_special_keys = sorted(SPECIAL_CASES.keys(), key=len, reverse=True)
+    if not SPECIAL_PATTERNS:
+        initialize_special_cases()
 
-    normalized = re.sub(r"[,-]", " ", value.lower())
+    norm = value.lower().translate(CHAR_REPLACEMENTS)
 
-    for key in sorted_special_keys:
-        pattern = re.compile(rf"\b{re.escape(key)}\b")
-        if pattern.search(normalized):
-            return SPECIAL_CASES[key]
+    for pattern, country in SPECIAL_PATTERNS:
+        if pattern.search(norm):
+            return country
 
-    parts = normalized.split()
-    max_len = min(6, len(parts))
-    for i in range(len(parts)):
+    raw_iso2 = cc.convert(names=norm, to="ISO2")
+    iso2 = unwrap_coco_result(raw_iso2)
+    if iso2:
+        raw_short = cc.convert(names=iso2, to="name_short")
+        short = unwrap_coco_result(raw_short)
+        if short:
+            return short
+
+    parts = norm.split()
+    plen = len(parts)
+    max_len = min(4, plen)
+    for i in range(plen):
         for n in range(max_len, 0, -1):
-            if i + n <= len(parts):
-                phrase = " ".join(parts[-(i + n) : len(parts) - i])
-                try:
-                    country = pycountry.countries.search_fuzzy(phrase)
-                    if country:
-                        code = country[0].alpha_2
-                        return coco.convert(names=code, to="name_short")
-                except LookupError:
-                    continue
+            start = plen - i - n
+            if start < 0:
+                continue
+            phrase = " ".join(parts[start : plen - i])
+            try:
+                matches = pycountry.countries.search_fuzzy(phrase)
+                if matches:
+                    return unwrap_coco_result(
+                        cc.convert(names=matches[0].alpha_2, to="name_short")
+                    )
+            except LookupError:
+                continue
 
     return None
 

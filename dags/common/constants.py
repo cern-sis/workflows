@@ -292,3 +292,7 @@ SPECIAL_CASES = {
     "belgrade": "Serbia",
     "philipines": "Philippines",
 }
+
+SPECIAL_PATTERNS = []
+
+CHAR_REPLACEMENTS = str.maketrans(",-", "  ")
